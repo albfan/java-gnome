@@ -1433,7 +1433,7 @@ if ($os eq "gentoo") {
 		$vendor = "Specified";
 	} else {
 		$vendor = "System";
-		$jdk_home = $ENV{"JAVA_HOME"};
+		$jdk_home = $ENV{"JDK_HOME"};
 	}
 
 	$javac_candidate = "$jdk_home/bin/javac";
