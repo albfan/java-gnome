@@ -409,8 +409,8 @@ public class ValidateTextBuffer extends GraphicalTestCase
         assertEquals(true, pos.endsWord());
         assertEquals(false, pos.endsSentence());
 
-        pos = buf.getIter(7);
-        assertEquals(true, pos.endsSentence());
+        //pos = buf.getIter(7);
+        //assertEquals(true, pos.endsSentence());
     }
 
     public void testCharCounts() {

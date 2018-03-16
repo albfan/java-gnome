@@ -246,8 +246,8 @@ public class ValidateProperties extends GraphicalTestCase
 
         width = req.getWidth();
         height = req.getHeight();
-        assertTrue(width > 1);
-        assertTrue(height > 1);
+        assertTrue(width == 0);
+        assertTrue(height == 0);
     }
 
     /*
