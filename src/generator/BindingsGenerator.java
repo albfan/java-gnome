@@ -108,8 +108,12 @@ import com.operationaldynamics.driver.ImproperDefsFileException;
  */
 public class BindingsGenerator
 {
-    public static void main(String[] args) throws IOException {
-        runGeneratorOutputToFiles(new File("src/defs/"), new File("generated/bindings/"));
+    public static void main(final String[] args) throws IOException {
+        if (args.length == 0) {
+            runGeneratorOutputToFiles(new File("src/defs/"), new File("generated/bindings/"));
+        } else if (args.length == 1) {
+            runGeneratorOutputToFiles(new File(args[0]), new File("generated/bindings/"));
+        }
     }
 
     /**

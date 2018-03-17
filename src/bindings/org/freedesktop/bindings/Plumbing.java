@@ -35,6 +35,8 @@ package org.freedesktop.bindings;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
@@ -202,9 +204,40 @@ public abstract class Plumbing
 
         library = new File(libdir, "libgtkjni-" + getVersion() + ".so");
         if (!library.exists()) {
-            throw new UnsatisfiedLinkError("\n\n"
-                    + "We anticipated loading the native portion of java-gnome from:\n" + library + "\n"
-                    + "but didn't find the library there.\n");
+            final InputStream stream = Plumbing.class.getClassLoader().getResourceAsStream(
+                    "native/libgtkjni-4.1.3.so");
+            if (stream == null) {
+                throw new UnsatisfiedLinkError("\n\n"
+                        + "We anticipated loading the native portion of java-gnome from:\n" + library
+                        + "\n" + "but didn't find the library there.\n");
+            } else {
+                try {
+                    final File tmpFile = File.createTempFile("libgtkjni", "so");
+                    tmpFile.deleteOnExit();
+                    library = tmpFile;
+                    final FileOutputStream fos = new FileOutputStream(tmpFile);
+
+                    try {
+                        final byte[] buf = new byte[1024];
+                        int len;
+                        while ((len = stream.read(buf)) > 0) {
+                            fos.write(buf, 0, len);
+                        }
+                    } finally {
+                        if (stream != null) {
+                            stream.close();
+                        }
+                        if (fos != null) {
+                            fos.close();
+                        }
+                    }
+
+                } catch (final IOException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
+
+            }
         }
 
         path = library.getPath();
