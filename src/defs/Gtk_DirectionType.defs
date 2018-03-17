@@ -1,0 +1,13 @@
+(define-enum DirectionType
+  (in-module "Gtk")
+  (c-name "GtkDirectionType")
+  (values
+    '("tab_forward" "GTK_DIR_TAB_FORWARD")
+    '("tab_backward" "GTK_DIR_TAB_BACKWARD")
+    '("up" "GTK_DIR_UP")
+    '("down" "GTK_DIR_DOWN")
+    '("left" "GTK_DIR_LEFT")
+    '("right" "GTK_DIR_RIGHT")
+  )
+)
+

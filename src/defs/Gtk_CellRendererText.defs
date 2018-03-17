@@ -1,0 +1,33 @@
+(define-object CellRendererText
+  (in-module "Gtk")
+  (parent "CellRenderer")
+  (c-name "GtkCellRendererText")
+)
+
+(define-function CellRendererText_new
+  (is-constructor-of "GtkCellRendererText")
+  (c-name "gtk_cell_renderer_text_new")
+  (return-type "GtkCellRenderer*")
+  (parameters
+  )
+)
+
+(define-method edited
+  (of-object "GtkCellRendererText")
+  (c-name "edited")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "ppath")
+    '("const gchar*" "pnew_text")
+  )
+)
+
+(define-method set_fixed_height_from_font
+  (of-object "GtkCellRendererText")
+  (c-name "gtk_cell_renderer_text_set_fixed_height_from_font")
+  (return-type "none")
+  (parameters
+    '("gint" "pnumber_of_rows")
+  )
+)
+

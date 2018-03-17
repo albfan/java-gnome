@@ -1,0 +1,6 @@
+(define-object PrintOperationClass
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkPrintOperationClass")
+)
+

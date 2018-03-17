@@ -1,0 +1,58 @@
+(define-object WebInspector
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "WebKitWebInspector")
+)
+
+(define-method close
+  (of-object "WebKitWebInspector")
+  (c-name "webkit_web_inspector_close")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method get_inspected_uri
+  (of-object "WebKitWebInspector")
+  (c-name "webkit_web_inspector_get_inspected_uri")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_web_view
+  (of-object "WebKitWebInspector")
+  (c-name "webkit_web_inspector_get_web_view")
+  (return-type "WebKitWebView*")
+  (parameters
+  )
+)
+
+(define-method inspect_coordinates
+  (of-object "WebKitWebInspector")
+  (c-name "webkit_web_inspector_inspect_coordinates")
+  (return-type "none")
+  (parameters
+    '("gdouble" "px")
+    '("gdouble" "py")
+  )
+)
+
+(define-method inspect_node
+  (of-object "WebKitWebInspector")
+  (c-name "webkit_web_inspector_inspect_node")
+  (return-type "none")
+  (parameters
+    '("WebKitDOMNode*" "pnode")
+  )
+)
+
+(define-method show
+  (of-object "WebKitWebInspector")
+  (c-name "webkit_web_inspector_show")
+  (return-type "none")
+  (parameters
+  )
+)
+

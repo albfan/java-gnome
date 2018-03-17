@@ -1,0 +1,477 @@
+(define-object TreeViewColumn
+  (in-module "Gtk")
+  (parent "GObject.InitiallyUnowned")
+  (c-name "GtkTreeViewColumn")
+)
+
+(define-function TreeViewColumn_new
+  (is-constructor-of "GtkTreeViewColumn")
+  (c-name "gtk_tree_view_column_new")
+  (return-type "GtkTreeViewColumn*")
+  (parameters
+  )
+)
+
+(define-function TreeViewColumn_new_with_area
+  (is-constructor-of "GtkTreeViewColumn")
+  (c-name "gtk_tree_view_column_new_with_area")
+  (return-type "GtkTreeViewColumn*")
+  (parameters
+    '("GtkCellArea*" "parea")
+  )
+)
+
+(define-function TreeViewColumn_new_with_attributes
+  (is-constructor-of "GtkTreeViewColumn")
+  (c-name "gtk_tree_view_column_new_with_attributes")
+  (return-type "GtkTreeViewColumn*")
+  (parameters
+    '("const gchar*" "ptitle")
+    '("GtkCellRenderer*" "pcell")
+    '("null" "p...")
+  )
+)
+
+(define-method clicked
+  (of-object "GtkTreeViewColumn")
+  (c-name "clicked")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method add_attribute
+  (of-object "GtkTreeViewColumn")
+  (c-name "gtk_tree_view_column_add_attribute")
+  (return-type "none")
+  (parameters
+    '("GtkCellRenderer*" "pcell_renderer")
+    '("const gchar*" "pattribute")
+    '("gint" "pcolumn")
+  )
+)
+
+(define-method cell_get_position
+  (of-object "GtkTreeViewColumn")
+  (c-name "gtk_tree_view_column_cell_get_position")
+  (return-type "gboolean")
+  (parameters
+    '("GtkCellRenderer*" "pcell_renderer")
+    '("gint*" "px_offset")
+    '("gint*" "pwidth")
+  )
+)
+
+(define-method cell_get_size
+  (of-object "GtkTreeViewColumn")
+  (c-name "gtk_tree_view_column_cell_get_size")
+  (return-type "none")
+  (parameters
+    '("const GdkRectangle*" "pcell_area")
+    '("gint*" "px_offset")
+    '("gint*" "py_offset")
+    '("gint*" "pwidth")
+    '("gint*" "pheight")
+  )
+)
+
+(define-method cell_is_visible
+  (of-object "GtkTreeViewColumn")
+  (c-name "gtk_tree_view_column_cell_is_visible")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method cell_set_cell_data
+  (of-object "GtkTreeViewColumn")
+  (c-name "gtk_tree_view_column_cell_set_cell_data")
+  (return-type "none")
+  (parameters
+    '("GtkTreeModel*" "ptree_model")
+    '("GtkTreeIter*" "piter")
+    '("gboolean" "pis_expander")
+    '("gboolean" "pis_expanded")
+  )
+)
+
+(define-method clear
+  (of-object "GtkTreeViewColumn")
+  (c-name "gtk_tree_view_column_clear")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method clear_attributes
+  (of-object "GtkTreeViewColumn")
+  (c-name "gtk_tree_view_column_clear_attributes")
+  (return-type "none")
+  (parameters
+    '("GtkCellRenderer*" "pcell_renderer")
+  )
+)
+
+(define-method focus_cell
+  (of-object "GtkTreeViewColumn")
+  (c-name "gtk_tree_view_column_focus_cell")
+  (return-type "none")
+  (parameters
+    '("GtkCellRenderer*" "pcell")
+  )
+)
+
+(define-method get_alignment
+  (of-object "GtkTreeViewColumn")
+  (c-name "gtk_tree_view_column_get_alignment")
+  (return-type "gfloat")
+  (parameters
+  )
+)
+
+(define-method get_button
+  (of-object "GtkTreeViewColumn")
+  (c-name "gtk_tree_view_column_get_button")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method get_clickable
+  (of-object "GtkTreeViewColumn")
+  (c-name "gtk_tree_view_column_get_clickable")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_expand
+  (of-object "GtkTreeViewColumn")
+  (c-name "gtk_tree_view_column_get_expand")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_fixed_width
+  (of-object "GtkTreeViewColumn")
+  (c-name "gtk_tree_view_column_get_fixed_width")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_max_width
+  (of-object "GtkTreeViewColumn")
+  (c-name "gtk_tree_view_column_get_max_width")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_min_width
+  (of-object "GtkTreeViewColumn")
+  (c-name "gtk_tree_view_column_get_min_width")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_reorderable
+  (of-object "GtkTreeViewColumn")
+  (c-name "gtk_tree_view_column_get_reorderable")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_resizable
+  (of-object "GtkTreeViewColumn")
+  (c-name "gtk_tree_view_column_get_resizable")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_sizing
+  (of-object "GtkTreeViewColumn")
+  (c-name "gtk_tree_view_column_get_sizing")
+  (return-type "GtkTreeViewColumnSizing")
+  (parameters
+  )
+)
+
+(define-method get_sort_column_id
+  (of-object "GtkTreeViewColumn")
+  (c-name "gtk_tree_view_column_get_sort_column_id")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_sort_indicator
+  (of-object "GtkTreeViewColumn")
+  (c-name "gtk_tree_view_column_get_sort_indicator")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_sort_order
+  (of-object "GtkTreeViewColumn")
+  (c-name "gtk_tree_view_column_get_sort_order")
+  (return-type "GtkSortType")
+  (parameters
+  )
+)
+
+(define-method get_spacing
+  (of-object "GtkTreeViewColumn")
+  (c-name "gtk_tree_view_column_get_spacing")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_title
+  (of-object "GtkTreeViewColumn")
+  (c-name "gtk_tree_view_column_get_title")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_tree_view
+  (of-object "GtkTreeViewColumn")
+  (c-name "gtk_tree_view_column_get_tree_view")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method get_visible
+  (of-object "GtkTreeViewColumn")
+  (c-name "gtk_tree_view_column_get_visible")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_widget
+  (of-object "GtkTreeViewColumn")
+  (c-name "gtk_tree_view_column_get_widget")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method get_width
+  (of-object "GtkTreeViewColumn")
+  (c-name "gtk_tree_view_column_get_width")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_x_offset
+  (of-object "GtkTreeViewColumn")
+  (c-name "gtk_tree_view_column_get_x_offset")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method pack_end
+  (of-object "GtkTreeViewColumn")
+  (c-name "gtk_tree_view_column_pack_end")
+  (return-type "none")
+  (parameters
+    '("GtkCellRenderer*" "pcell")
+    '("gboolean" "pexpand")
+  )
+)
+
+(define-method pack_start
+  (of-object "GtkTreeViewColumn")
+  (c-name "gtk_tree_view_column_pack_start")
+  (return-type "none")
+  (parameters
+    '("GtkCellRenderer*" "pcell")
+    '("gboolean" "pexpand")
+  )
+)
+
+(define-method queue_resize
+  (of-object "GtkTreeViewColumn")
+  (c-name "gtk_tree_view_column_queue_resize")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method set_alignment
+  (of-object "GtkTreeViewColumn")
+  (c-name "gtk_tree_view_column_set_alignment")
+  (return-type "none")
+  (parameters
+    '("gfloat" "pxalign")
+  )
+)
+
+(define-method set_attributes
+  (of-object "GtkTreeViewColumn")
+  (c-name "gtk_tree_view_column_set_attributes")
+  (return-type "none")
+  (parameters
+    '("GtkCellRenderer*" "pcell_renderer")
+    '("null" "p...")
+  )
+)
+
+(define-method set_cell_data_func
+  (of-object "GtkTreeViewColumn")
+  (c-name "gtk_tree_view_column_set_cell_data_func")
+  (return-type "none")
+  (parameters
+    '("GtkCellRenderer*" "pcell_renderer")
+    '("GtkTreeCellDataFunc" "pfunc")
+    '("gpointer" "pfunc_data")
+    '("GDestroyNotify" "pdestroy")
+  )
+)
+
+(define-method set_clickable
+  (of-object "GtkTreeViewColumn")
+  (c-name "gtk_tree_view_column_set_clickable")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pclickable")
+  )
+)
+
+(define-method set_expand
+  (of-object "GtkTreeViewColumn")
+  (c-name "gtk_tree_view_column_set_expand")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pexpand")
+  )
+)
+
+(define-method set_fixed_width
+  (of-object "GtkTreeViewColumn")
+  (c-name "gtk_tree_view_column_set_fixed_width")
+  (return-type "none")
+  (parameters
+    '("gint" "pfixed_width")
+  )
+)
+
+(define-method set_max_width
+  (of-object "GtkTreeViewColumn")
+  (c-name "gtk_tree_view_column_set_max_width")
+  (return-type "none")
+  (parameters
+    '("gint" "pmax_width")
+  )
+)
+
+(define-method set_min_width
+  (of-object "GtkTreeViewColumn")
+  (c-name "gtk_tree_view_column_set_min_width")
+  (return-type "none")
+  (parameters
+    '("gint" "pmin_width")
+  )
+)
+
+(define-method set_reorderable
+  (of-object "GtkTreeViewColumn")
+  (c-name "gtk_tree_view_column_set_reorderable")
+  (return-type "none")
+  (parameters
+    '("gboolean" "preorderable")
+  )
+)
+
+(define-method set_resizable
+  (of-object "GtkTreeViewColumn")
+  (c-name "gtk_tree_view_column_set_resizable")
+  (return-type "none")
+  (parameters
+    '("gboolean" "presizable")
+  )
+)
+
+(define-method set_sizing
+  (of-object "GtkTreeViewColumn")
+  (c-name "gtk_tree_view_column_set_sizing")
+  (return-type "none")
+  (parameters
+    '("GtkTreeViewColumnSizing" "ptype")
+  )
+)
+
+(define-method set_sort_column_id
+  (of-object "GtkTreeViewColumn")
+  (c-name "gtk_tree_view_column_set_sort_column_id")
+  (return-type "none")
+  (parameters
+    '("gint" "psort_column_id")
+  )
+)
+
+(define-method set_sort_indicator
+  (of-object "GtkTreeViewColumn")
+  (c-name "gtk_tree_view_column_set_sort_indicator")
+  (return-type "none")
+  (parameters
+    '("gboolean" "psetting")
+  )
+)
+
+(define-method set_sort_order
+  (of-object "GtkTreeViewColumn")
+  (c-name "gtk_tree_view_column_set_sort_order")
+  (return-type "none")
+  (parameters
+    '("GtkSortType" "porder")
+  )
+)
+
+(define-method set_spacing
+  (of-object "GtkTreeViewColumn")
+  (c-name "gtk_tree_view_column_set_spacing")
+  (return-type "none")
+  (parameters
+    '("gint" "pspacing")
+  )
+)
+
+(define-method set_title
+  (of-object "GtkTreeViewColumn")
+  (c-name "gtk_tree_view_column_set_title")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "ptitle")
+  )
+)
+
+(define-method set_visible
+  (of-object "GtkTreeViewColumn")
+  (c-name "gtk_tree_view_column_set_visible")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pvisible")
+  )
+)
+
+(define-method set_widget
+  (of-object "GtkTreeViewColumn")
+  (c-name "gtk_tree_view_column_set_widget")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pwidget")
+  )
+)
+

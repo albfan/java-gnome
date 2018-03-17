@@ -1,0 +1,33 @@
+(define-object DOMDOMNamedFlowCollection
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "DOMObject")
+  (c-name "WebKitDOMDOMNamedFlowCollection")
+)
+
+(define-method get_length
+  (of-object "WebKitDOMDOMNamedFlowCollection")
+  (c-name "webkit_dom_dom_named_flow_collection_get_length")
+  (return-type "gulong")
+  (parameters
+  )
+)
+
+(define-method item
+  (of-object "WebKitDOMDOMNamedFlowCollection")
+  (c-name "webkit_dom_dom_named_flow_collection_item")
+  (return-type "WebKitDOMWebKitNamedFlow*")
+  (parameters
+    '("gulong" "pindex")
+  )
+)
+
+(define-method named_item
+  (of-object "WebKitDOMDOMNamedFlowCollection")
+  (c-name "webkit_dom_dom_named_flow_collection_named_item")
+  (return-type "WebKitDOMWebKitNamedFlow*")
+  (parameters
+    '("const gchar*" "pname")
+  )
+)
+

@@ -1,0 +1,75 @@
+(define-object TestDBus
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GTestDBus")
+)
+
+(define-function TestDBus_new
+  (is-constructor-of "GTestDBus")
+  (c-name "g_test_dbus_new")
+  (return-type "GTestDBus*")
+  (parameters
+    '("GTestDBusFlags" "pflags")
+  )
+)
+
+(define-method add_service_dir
+  (of-object "GTestDBus")
+  (c-name "g_test_dbus_add_service_dir")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "ppath")
+  )
+)
+
+(define-method down
+  (of-object "GTestDBus")
+  (c-name "g_test_dbus_down")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method get_bus_address
+  (of-object "GTestDBus")
+  (c-name "g_test_dbus_get_bus_address")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_flags
+  (of-object "GTestDBus")
+  (c-name "g_test_dbus_get_flags")
+  (return-type "GTestDBusFlags")
+  (parameters
+  )
+)
+
+(define-method stop
+  (of-object "GTestDBus")
+  (c-name "g_test_dbus_stop")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method up
+  (of-object "GTestDBus")
+  (c-name "g_test_dbus_up")
+  (return-type "none")
+  (parameters
+  )
+)
+

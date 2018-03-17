@@ -1,0 +1,13 @@
+(define-enum SliceConfig
+  (in-module "GLib")
+  (c-name "GSliceConfig")
+  (values
+    '("always_malloc" "G_SLICE_CONFIG_ALWAYS_MALLOC")
+    '("bypass_magazines" "G_SLICE_CONFIG_BYPASS_MAGAZINES")
+    '("working_set_msecs" "G_SLICE_CONFIG_WORKING_SET_MSECS")
+    '("color_increment" "G_SLICE_CONFIG_COLOR_INCREMENT")
+    '("chunk_sizes" "G_SLICE_CONFIG_CHUNK_SIZES")
+    '("contention_counter" "G_SLICE_CONFIG_CONTENTION_COUNTER")
+  )
+)
+

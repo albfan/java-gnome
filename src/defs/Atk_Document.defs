@@ -1,0 +1,109 @@
+(define-object Document
+  (in-module "Atk")
+  (import-header "atk/atk.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "AtkDocument")
+)
+
+(define-method get_current_page_number
+  (of-object "AtkDocument")
+  (c-name "get_current_page_number")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_document
+  (of-object "AtkDocument")
+  (c-name "get_document")
+  (return-type "gpointer")
+  (parameters
+  )
+)
+
+(define-method get_document_attribute_value
+  (of-object "AtkDocument")
+  (c-name "get_document_attribute_value")
+  (return-type "const gchar*")
+  (parameters
+    '("const gchar*" "pattribute_name")
+  )
+)
+
+(define-method get_document_attributes
+  (of-object "AtkDocument")
+  (c-name "get_document_attributes")
+  (return-type "AtkAttributeSet*")
+  (parameters
+  )
+)
+
+(define-method get_document_locale
+  (of-object "AtkDocument")
+  (c-name "get_document_locale")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_document_type
+  (of-object "AtkDocument")
+  (c-name "get_document_type")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_page_count
+  (of-object "AtkDocument")
+  (c-name "get_page_count")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method set_document_attribute
+  (of-object "AtkDocument")
+  (c-name "set_document_attribute")
+  (return-type "gboolean")
+  (parameters
+    '("const gchar*" "pattribute_name")
+    '("const gchar*" "pattribute_value")
+  )
+)
+
+(define-method get_attribute_value
+  (of-object "AtkDocument")
+  (c-name "atk_document_get_attribute_value")
+  (return-type "const gchar*")
+  (parameters
+    '("const gchar*" "pattribute_name")
+  )
+)
+
+(define-method get_attributes
+  (of-object "AtkDocument")
+  (c-name "atk_document_get_attributes")
+  (return-type "AtkAttributeSet*")
+  (parameters
+  )
+)
+
+(define-method get_locale
+  (of-object "AtkDocument")
+  (c-name "atk_document_get_locale")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method set_attribute_value
+  (of-object "AtkDocument")
+  (c-name "atk_document_set_attribute_value")
+  (return-type "gboolean")
+  (parameters
+    '("const gchar*" "pattribute_name")
+    '("const gchar*" "pattribute_value")
+  )
+)
+

@@ -1,0 +1,6 @@
+(define-object WindowAccessiblePrivate
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkWindowAccessiblePrivate")
+)
+

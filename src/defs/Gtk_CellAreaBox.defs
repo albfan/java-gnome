@@ -1,0 +1,55 @@
+(define-object CellAreaBox
+  (in-module "Gtk")
+  (parent "CellArea")
+  (c-name "GtkCellAreaBox")
+)
+
+(define-function CellAreaBox_new
+  (is-constructor-of "GtkCellAreaBox")
+  (c-name "gtk_cell_area_box_new")
+  (return-type "GtkCellArea*")
+  (parameters
+  )
+)
+
+(define-method get_spacing
+  (of-object "GtkCellAreaBox")
+  (c-name "gtk_cell_area_box_get_spacing")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method pack_end
+  (of-object "GtkCellAreaBox")
+  (c-name "gtk_cell_area_box_pack_end")
+  (return-type "none")
+  (parameters
+    '("GtkCellRenderer*" "prenderer")
+    '("gboolean" "pexpand")
+    '("gboolean" "palign")
+    '("gboolean" "pfixed")
+  )
+)
+
+(define-method pack_start
+  (of-object "GtkCellAreaBox")
+  (c-name "gtk_cell_area_box_pack_start")
+  (return-type "none")
+  (parameters
+    '("GtkCellRenderer*" "prenderer")
+    '("gboolean" "pexpand")
+    '("gboolean" "palign")
+    '("gboolean" "pfixed")
+  )
+)
+
+(define-method set_spacing
+  (of-object "GtkCellAreaBox")
+  (c-name "gtk_cell_area_box_set_spacing")
+  (return-type "none")
+  (parameters
+    '("gint" "pspacing")
+  )
+)
+

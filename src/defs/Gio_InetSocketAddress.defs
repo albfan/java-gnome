@@ -1,0 +1,69 @@
+(define-object InetSocketAddress
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "SocketAddress")
+  (c-name "GInetSocketAddress")
+)
+
+(define-function InetSocketAddress_new
+  (is-constructor-of "GInetSocketAddress")
+  (c-name "g_inet_socket_address_new")
+  (return-type "GSocketAddress*")
+  (parameters
+    '("GInetAddress*" "paddress")
+    '("guint16" "pport")
+  )
+)
+
+(define-function InetSocketAddress_new_from_string
+  (is-constructor-of "GInetSocketAddress")
+  (c-name "g_inet_socket_address_new_from_string")
+  (return-type "GSocketAddress*")
+  (parameters
+    '("const char*" "paddress")
+    '("guint" "pport")
+  )
+)
+
+(define-method get_address
+  (of-object "GInetSocketAddress")
+  (c-name "g_inet_socket_address_get_address")
+  (return-type "GInetAddress*")
+  (parameters
+  )
+)
+
+(define-method get_flowinfo
+  (of-object "GInetSocketAddress")
+  (c-name "g_inet_socket_address_get_flowinfo")
+  (return-type "guint32")
+  (parameters
+  )
+)
+
+(define-method get_port
+  (of-object "GInetSocketAddress")
+  (c-name "g_inet_socket_address_get_port")
+  (return-type "guint16")
+  (parameters
+  )
+)
+
+(define-method get_scope_id
+  (of-object "GInetSocketAddress")
+  (c-name "g_inet_socket_address_get_scope_id")
+  (return-type "guint32")
+  (parameters
+  )
+)
+

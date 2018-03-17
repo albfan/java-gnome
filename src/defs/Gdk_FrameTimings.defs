@@ -1,0 +1,71 @@
+(define-object FrameTimings
+  (in-module "Gdk")
+  (import-header "gdk/gdk.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GdkFrameTimings")
+)
+
+(define-method get_complete
+  (of-object "GdkFrameTimings")
+  (c-name "gdk_frame_timings_get_complete")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_frame_counter
+  (of-object "GdkFrameTimings")
+  (c-name "gdk_frame_timings_get_frame_counter")
+  (return-type "gint64")
+  (parameters
+  )
+)
+
+(define-method get_frame_time
+  (of-object "GdkFrameTimings")
+  (c-name "gdk_frame_timings_get_frame_time")
+  (return-type "gint64")
+  (parameters
+  )
+)
+
+(define-method get_predicted_presentation_time
+  (of-object "GdkFrameTimings")
+  (c-name "gdk_frame_timings_get_predicted_presentation_time")
+  (return-type "gint64")
+  (parameters
+  )
+)
+
+(define-method get_presentation_time
+  (of-object "GdkFrameTimings")
+  (c-name "gdk_frame_timings_get_presentation_time")
+  (return-type "gint64")
+  (parameters
+  )
+)
+
+(define-method get_refresh_interval
+  (of-object "GdkFrameTimings")
+  (c-name "gdk_frame_timings_get_refresh_interval")
+  (return-type "gint64")
+  (parameters
+  )
+)
+
+(define-method ref
+  (of-object "GdkFrameTimings")
+  (c-name "gdk_frame_timings_ref")
+  (return-type "GdkFrameTimings*")
+  (parameters
+  )
+)
+
+(define-method unref
+  (of-object "GdkFrameTimings")
+  (c-name "gdk_frame_timings_unref")
+  (return-type "none")
+  (parameters
+  )
+)
+

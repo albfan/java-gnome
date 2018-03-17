@@ -1,0 +1,14 @@
+(define-object DrawingArea
+  (in-module "Gtk")
+  (parent "Widget")
+  (c-name "GtkDrawingArea")
+)
+
+(define-function DrawingArea_new
+  (is-constructor-of "GtkDrawingArea")
+  (c-name "gtk_drawing_area_new")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+

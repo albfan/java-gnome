@@ -1,0 +1,6 @@
+(define-object AlignmentClass
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkAlignmentClass")
+)
+

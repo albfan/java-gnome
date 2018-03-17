@@ -1,0 +1,134 @@
+(define-object HeaderBar
+  (in-module "Gtk")
+  (parent "Container")
+  (c-name "GtkHeaderBar")
+)
+
+(define-function HeaderBar_new
+  (is-constructor-of "GtkHeaderBar")
+  (c-name "gtk_header_bar_new")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method get_custom_title
+  (of-object "GtkHeaderBar")
+  (c-name "gtk_header_bar_get_custom_title")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method get_decoration_layout
+  (of-object "GtkHeaderBar")
+  (c-name "gtk_header_bar_get_decoration_layout")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_has_subtitle
+  (of-object "GtkHeaderBar")
+  (c-name "gtk_header_bar_get_has_subtitle")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_show_close_button
+  (of-object "GtkHeaderBar")
+  (c-name "gtk_header_bar_get_show_close_button")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_subtitle
+  (of-object "GtkHeaderBar")
+  (c-name "gtk_header_bar_get_subtitle")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_title
+  (of-object "GtkHeaderBar")
+  (c-name "gtk_header_bar_get_title")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method pack_end
+  (of-object "GtkHeaderBar")
+  (c-name "gtk_header_bar_pack_end")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pchild")
+  )
+)
+
+(define-method pack_start
+  (of-object "GtkHeaderBar")
+  (c-name "gtk_header_bar_pack_start")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pchild")
+  )
+)
+
+(define-method set_custom_title
+  (of-object "GtkHeaderBar")
+  (c-name "gtk_header_bar_set_custom_title")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "ptitle_widget")
+  )
+)
+
+(define-method set_decoration_layout
+  (of-object "GtkHeaderBar")
+  (c-name "gtk_header_bar_set_decoration_layout")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "playout")
+  )
+)
+
+(define-method set_has_subtitle
+  (of-object "GtkHeaderBar")
+  (c-name "gtk_header_bar_set_has_subtitle")
+  (return-type "none")
+  (parameters
+    '("gboolean" "psetting")
+  )
+)
+
+(define-method set_show_close_button
+  (of-object "GtkHeaderBar")
+  (c-name "gtk_header_bar_set_show_close_button")
+  (return-type "none")
+  (parameters
+    '("gboolean" "psetting")
+  )
+)
+
+(define-method set_subtitle
+  (of-object "GtkHeaderBar")
+  (c-name "gtk_header_bar_set_subtitle")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "psubtitle")
+  )
+)
+
+(define-method set_title
+  (of-object "GtkHeaderBar")
+  (c-name "gtk_header_bar_set_title")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "ptitle")
+  )
+)
+

@@ -1,0 +1,7 @@
+(define-object DOMCDATASection
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "DOMText")
+  (c-name "WebKitDOMCDATASection")
+)
+

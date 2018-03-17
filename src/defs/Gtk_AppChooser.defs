@@ -1,0 +1,30 @@
+(define-object AppChooser
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkAppChooser")
+)
+
+(define-method get_app_info
+  (of-object "GtkAppChooser")
+  (c-name "gtk_app_chooser_get_app_info")
+  (return-type "GAppInfo*")
+  (parameters
+  )
+)
+
+(define-method get_content_type
+  (of-object "GtkAppChooser")
+  (c-name "gtk_app_chooser_get_content_type")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+
+(define-method refresh
+  (of-object "GtkAppChooser")
+  (c-name "gtk_app_chooser_refresh")
+  (return-type "none")
+  (parameters
+  )
+)
+

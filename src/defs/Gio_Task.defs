@@ -1,0 +1,267 @@
+(define-object Task
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GTask")
+)
+
+(define-function Task_new
+  (is-constructor-of "GTask")
+  (c-name "g_task_new")
+  (return-type "GTask*")
+  (parameters
+    '("gpointer" "psource_object")
+    '("GCancellable*" "pcancellable")
+    '("GAsyncReadyCallback" "pcallback")
+    '("gpointer" "pcallback_data")
+  )
+)
+
+(define-method attach_source
+  (of-object "GTask")
+  (c-name "g_task_attach_source")
+  (return-type "none")
+  (parameters
+    '("GSource*" "psource")
+    '("GSourceFunc" "pcallback")
+  )
+)
+
+(define-method get_cancellable
+  (of-object "GTask")
+  (c-name "g_task_get_cancellable")
+  (return-type "GCancellable*")
+  (parameters
+  )
+)
+
+(define-method get_check_cancellable
+  (of-object "GTask")
+  (c-name "g_task_get_check_cancellable")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_completed
+  (of-object "GTask")
+  (c-name "g_task_get_completed")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_context
+  (of-object "GTask")
+  (c-name "g_task_get_context")
+  (return-type "GMainContext*")
+  (parameters
+  )
+)
+
+(define-method get_priority
+  (of-object "GTask")
+  (c-name "g_task_get_priority")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_return_on_cancel
+  (of-object "GTask")
+  (c-name "g_task_get_return_on_cancel")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_source_object
+  (of-object "GTask")
+  (c-name "g_task_get_source_object")
+  (return-type "gpointer")
+  (parameters
+  )
+)
+
+(define-method get_source_tag
+  (of-object "GTask")
+  (c-name "g_task_get_source_tag")
+  (return-type "gpointer")
+  (parameters
+  )
+)
+
+(define-method get_task_data
+  (of-object "GTask")
+  (c-name "g_task_get_task_data")
+  (return-type "gpointer")
+  (parameters
+  )
+)
+
+(define-method had_error
+  (of-object "GTask")
+  (c-name "g_task_had_error")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method propagate_boolean
+  (of-object "GTask")
+  (c-name "g_task_propagate_boolean")
+  (return-type "gboolean")
+  (parameters
+    '("GError**" "error")
+  )
+)
+
+(define-method propagate_int
+  (of-object "GTask")
+  (c-name "g_task_propagate_int")
+  (return-type "gssize")
+  (parameters
+    '("GError**" "error")
+  )
+)
+
+(define-method propagate_pointer
+  (of-object "GTask")
+  (c-name "g_task_propagate_pointer")
+  (return-type "gpointer")
+  (parameters
+    '("GError**" "error")
+  )
+)
+
+(define-method return_boolean
+  (of-object "GTask")
+  (c-name "g_task_return_boolean")
+  (return-type "none")
+  (parameters
+    '("gboolean" "presult")
+  )
+)
+
+(define-method return_error
+  (of-object "GTask")
+  (c-name "g_task_return_error")
+  (return-type "none")
+  (parameters
+    '("GError*" "perror")
+  )
+)
+
+(define-method return_error_if_cancelled
+  (of-object "GTask")
+  (c-name "g_task_return_error_if_cancelled")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method return_int
+  (of-object "GTask")
+  (c-name "g_task_return_int")
+  (return-type "none")
+  (parameters
+    '("gssize" "presult")
+  )
+)
+
+(define-method return_new_error
+  (of-object "GTask")
+  (c-name "g_task_return_new_error")
+  (return-type "none")
+  (parameters
+    '("GQuark" "pdomain")
+    '("gint" "pcode")
+    '("const char*" "pformat")
+    '("null" "p...")
+  )
+)
+
+(define-method return_pointer
+  (of-object "GTask")
+  (c-name "g_task_return_pointer")
+  (return-type "none")
+  (parameters
+    '("gpointer" "presult")
+    '("GDestroyNotify" "presult_destroy")
+  )
+)
+
+(define-method run_in_thread
+  (of-object "GTask")
+  (c-name "g_task_run_in_thread")
+  (return-type "none")
+  (parameters
+    '("GTaskThreadFunc" "ptask_func")
+  )
+)
+
+(define-method run_in_thread_sync
+  (of-object "GTask")
+  (c-name "g_task_run_in_thread_sync")
+  (return-type "none")
+  (parameters
+    '("GTaskThreadFunc" "ptask_func")
+  )
+)
+
+(define-method set_check_cancellable
+  (of-object "GTask")
+  (c-name "g_task_set_check_cancellable")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pcheck_cancellable")
+  )
+)
+
+(define-method set_priority
+  (of-object "GTask")
+  (c-name "g_task_set_priority")
+  (return-type "none")
+  (parameters
+    '("gint" "ppriority")
+  )
+)
+
+(define-method set_return_on_cancel
+  (of-object "GTask")
+  (c-name "g_task_set_return_on_cancel")
+  (return-type "gboolean")
+  (parameters
+    '("gboolean" "preturn_on_cancel")
+  )
+)
+
+(define-method set_source_tag
+  (of-object "GTask")
+  (c-name "g_task_set_source_tag")
+  (return-type "none")
+  (parameters
+    '("gpointer" "psource_tag")
+  )
+)
+
+(define-method set_task_data
+  (of-object "GTask")
+  (c-name "g_task_set_task_data")
+  (return-type "none")
+  (parameters
+    '("gpointer" "ptask_data")
+    '("GDestroyNotify" "ptask_data_destroy")
+  )
+)
+

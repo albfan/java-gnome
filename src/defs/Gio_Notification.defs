@@ -1,0 +1,134 @@
+(define-object Notification
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GNotification")
+)
+
+(define-function Notification_new
+  (is-constructor-of "GNotification")
+  (c-name "g_notification_new")
+  (return-type "GNotification*")
+  (parameters
+    '("const gchar*" "ptitle")
+  )
+)
+
+(define-method add_button
+  (of-object "GNotification")
+  (c-name "g_notification_add_button")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "plabel")
+    '("const gchar*" "pdetailed_action")
+  )
+)
+
+(define-method add_button_with_target
+  (of-object "GNotification")
+  (c-name "g_notification_add_button_with_target")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "plabel")
+    '("const gchar*" "paction")
+    '("const gchar*" "ptarget_format")
+    '("null" "p...")
+  )
+)
+
+(define-method add_button_with_target_value
+  (of-object "GNotification")
+  (c-name "g_notification_add_button_with_target_value")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "plabel")
+    '("const gchar*" "paction")
+    '("GVariant*" "ptarget")
+  )
+)
+
+(define-method set_body
+  (of-object "GNotification")
+  (c-name "g_notification_set_body")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pbody")
+  )
+)
+
+(define-method set_default_action
+  (of-object "GNotification")
+  (c-name "g_notification_set_default_action")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pdetailed_action")
+  )
+)
+
+(define-method set_default_action_and_target
+  (of-object "GNotification")
+  (c-name "g_notification_set_default_action_and_target")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "paction")
+    '("const gchar*" "ptarget_format")
+    '("null" "p...")
+  )
+)
+
+(define-method set_default_action_and_target_value
+  (of-object "GNotification")
+  (c-name "g_notification_set_default_action_and_target_value")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "paction")
+    '("GVariant*" "ptarget")
+  )
+)
+
+(define-method set_icon
+  (of-object "GNotification")
+  (c-name "g_notification_set_icon")
+  (return-type "none")
+  (parameters
+    '("GIcon*" "picon")
+  )
+)
+
+(define-method set_priority
+  (of-object "GNotification")
+  (c-name "g_notification_set_priority")
+  (return-type "none")
+  (parameters
+    '("GNotificationPriority" "ppriority")
+  )
+)
+
+(define-method set_title
+  (of-object "GNotification")
+  (c-name "g_notification_set_title")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "ptitle")
+  )
+)
+
+(define-method set_urgent
+  (of-object "GNotification")
+  (c-name "g_notification_set_urgent")
+  (return-type "none")
+  (parameters
+    '("gboolean" "purgent")
+  )
+)
+

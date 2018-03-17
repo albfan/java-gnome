@@ -1,0 +1,172 @@
+(define-object SettingsBackend
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GSettingsBackend")
+)
+
+(define-method get_permission
+  (of-object "GSettingsBackend")
+  (c-name "get_permission")
+  (return-type "GPermission*")
+  (parameters
+    '("const gchar*" "ppath")
+  )
+)
+
+(define-method get_writable
+  (of-object "GSettingsBackend")
+  (c-name "get_writable")
+  (return-type "gboolean")
+  (parameters
+    '("const gchar*" "pkey")
+  )
+)
+
+(define-method read
+  (of-object "GSettingsBackend")
+  (c-name "read")
+  (return-type "GVariant*")
+  (parameters
+    '("const gchar*" "pkey")
+    '("const GVariantType*" "pexpected_type")
+    '("gboolean" "pdefault_value")
+  )
+)
+
+(define-method read_user_value
+  (of-object "GSettingsBackend")
+  (c-name "read_user_value")
+  (return-type "GVariant*")
+  (parameters
+    '("const gchar*" "pkey")
+    '("const GVariantType*" "pexpected_type")
+  )
+)
+
+(define-method reset
+  (of-object "GSettingsBackend")
+  (c-name "reset")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pkey")
+    '("gpointer" "porigin_tag")
+  )
+)
+
+(define-method subscribe
+  (of-object "GSettingsBackend")
+  (c-name "subscribe")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pname")
+  )
+)
+
+(define-method sync
+  (of-object "GSettingsBackend")
+  (c-name "sync")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method unsubscribe
+  (of-object "GSettingsBackend")
+  (c-name "unsubscribe")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pname")
+  )
+)
+
+(define-method write
+  (of-object "GSettingsBackend")
+  (c-name "write")
+  (return-type "gboolean")
+  (parameters
+    '("const gchar*" "pkey")
+    '("GVariant*" "pvalue")
+    '("gpointer" "porigin_tag")
+  )
+)
+
+(define-method write_tree
+  (of-object "GSettingsBackend")
+  (c-name "write_tree")
+  (return-type "gboolean")
+  (parameters
+    '("GTree*" "ptree")
+    '("gpointer" "porigin_tag")
+  )
+)
+
+(define-method changed
+  (of-object "GSettingsBackend")
+  (c-name "g_settings_backend_changed")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pkey")
+    '("gpointer" "porigin_tag")
+  )
+)
+
+(define-method changed_tree
+  (of-object "GSettingsBackend")
+  (c-name "g_settings_backend_changed_tree")
+  (return-type "none")
+  (parameters
+    '("GTree*" "ptree")
+    '("gpointer" "porigin_tag")
+  )
+)
+
+(define-method keys_changed
+  (of-object "GSettingsBackend")
+  (c-name "g_settings_backend_keys_changed")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "ppath")
+    '("null" "pitems")
+    '("gpointer" "porigin_tag")
+  )
+)
+
+(define-method path_changed
+  (of-object "GSettingsBackend")
+  (c-name "g_settings_backend_path_changed")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "ppath")
+    '("gpointer" "porigin_tag")
+  )
+)
+
+(define-method path_writable_changed
+  (of-object "GSettingsBackend")
+  (c-name "g_settings_backend_path_writable_changed")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "ppath")
+  )
+)
+
+(define-method writable_changed
+  (of-object "GSettingsBackend")
+  (c-name "g_settings_backend_writable_changed")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pkey")
+  )
+)
+

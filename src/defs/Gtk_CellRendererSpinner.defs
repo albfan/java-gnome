@@ -1,0 +1,14 @@
+(define-object CellRendererSpinner
+  (in-module "Gtk")
+  (parent "CellRenderer")
+  (c-name "GtkCellRendererSpinner")
+)
+
+(define-function CellRendererSpinner_new
+  (is-constructor-of "GtkCellRendererSpinner")
+  (c-name "gtk_cell_renderer_spinner_new")
+  (return-type "GtkCellRenderer*")
+  (parameters
+  )
+)
+

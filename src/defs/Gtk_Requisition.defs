@@ -1,0 +1,30 @@
+(define-object Requisition
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkRequisition")
+)
+
+(define-function Requisition_new
+  (is-constructor-of "GtkRequisition")
+  (c-name "gtk_requisition_new")
+  (return-type "GtkRequisition*")
+  (parameters
+  )
+)
+
+(define-method copy
+  (of-object "GtkRequisition")
+  (c-name "gtk_requisition_copy")
+  (return-type "GtkRequisition*")
+  (parameters
+  )
+)
+
+(define-method free
+  (of-object "GtkRequisition")
+  (c-name "gtk_requisition_free")
+  (return-type "none")
+  (parameters
+  )
+)
+

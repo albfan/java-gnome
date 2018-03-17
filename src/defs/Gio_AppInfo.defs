@@ -1,0 +1,226 @@
+(define-object AppInfo
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GAppInfo")
+)
+
+(define-method add_supports_type
+  (of-object "GAppInfo")
+  (c-name "add_supports_type")
+  (return-type "gboolean")
+  (parameters
+    '("const char*" "pcontent_type")
+    '("GError**" "error")
+  )
+)
+
+(define-method can_delete
+  (of-object "GAppInfo")
+  (c-name "can_delete")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method can_remove_supports_type
+  (of-object "GAppInfo")
+  (c-name "can_remove_supports_type")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method do_delete
+  (of-object "GAppInfo")
+  (c-name "do_delete")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method dup
+  (of-object "GAppInfo")
+  (c-name "dup")
+  (return-type "GAppInfo*")
+  (parameters
+  )
+)
+
+(define-method equal
+  (of-object "GAppInfo")
+  (c-name "equal")
+  (return-type "gboolean")
+  (parameters
+    '("GAppInfo*" "pappinfo2")
+  )
+)
+
+(define-method get_commandline
+  (of-object "GAppInfo")
+  (c-name "get_commandline")
+  (return-type "const char*")
+  (parameters
+  )
+)
+
+(define-method get_description
+  (of-object "GAppInfo")
+  (c-name "get_description")
+  (return-type "const char*")
+  (parameters
+  )
+)
+
+(define-method get_display_name
+  (of-object "GAppInfo")
+  (c-name "get_display_name")
+  (return-type "const char*")
+  (parameters
+  )
+)
+
+(define-method get_executable
+  (of-object "GAppInfo")
+  (c-name "get_executable")
+  (return-type "const char*")
+  (parameters
+  )
+)
+
+(define-method get_icon
+  (of-object "GAppInfo")
+  (c-name "get_icon")
+  (return-type "GIcon*")
+  (parameters
+  )
+)
+
+(define-method get_id
+  (of-object "GAppInfo")
+  (c-name "get_id")
+  (return-type "const char*")
+  (parameters
+  )
+)
+
+(define-method get_name
+  (of-object "GAppInfo")
+  (c-name "get_name")
+  (return-type "const char*")
+  (parameters
+  )
+)
+
+(define-method get_supported_types
+  (of-object "GAppInfo")
+  (c-name "get_supported_types")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method launch
+  (of-object "GAppInfo")
+  (c-name "launch")
+  (return-type "gboolean")
+  (parameters
+    '("GList*" "pfiles")
+    '("GAppLaunchContext*" "plaunch_context")
+    '("GError**" "error")
+  )
+)
+
+(define-method launch_uris
+  (of-object "GAppInfo")
+  (c-name "launch_uris")
+  (return-type "gboolean")
+  (parameters
+    '("GList*" "puris")
+    '("GAppLaunchContext*" "plaunch_context")
+    '("GError**" "error")
+  )
+)
+
+(define-method remove_supports_type
+  (of-object "GAppInfo")
+  (c-name "remove_supports_type")
+  (return-type "gboolean")
+  (parameters
+    '("const char*" "pcontent_type")
+    '("GError**" "error")
+  )
+)
+
+(define-method set_as_default_for_extension
+  (of-object "GAppInfo")
+  (c-name "set_as_default_for_extension")
+  (return-type "gboolean")
+  (parameters
+    '("char*" "pextension")
+    '("GError**" "error")
+  )
+)
+
+(define-method set_as_default_for_type
+  (of-object "GAppInfo")
+  (c-name "set_as_default_for_type")
+  (return-type "gboolean")
+  (parameters
+    '("const char*" "pcontent_type")
+    '("GError**" "error")
+  )
+)
+
+(define-method set_as_last_used_for_type
+  (of-object "GAppInfo")
+  (c-name "set_as_last_used_for_type")
+  (return-type "gboolean")
+  (parameters
+    '("const char*" "pcontent_type")
+    '("GError**" "error")
+  )
+)
+
+(define-method should_show
+  (of-object "GAppInfo")
+  (c-name "should_show")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method supports_files
+  (of-object "GAppInfo")
+  (c-name "supports_files")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method supports_uris
+  (of-object "GAppInfo")
+  (c-name "supports_uris")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method delete
+  (of-object "GAppInfo")
+  (c-name "g_app_info_delete")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+

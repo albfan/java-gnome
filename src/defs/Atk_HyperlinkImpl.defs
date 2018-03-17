@@ -1,0 +1,15 @@
+(define-object HyperlinkImpl
+  (in-module "Atk")
+  (import-header "atk/atk.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "AtkHyperlinkImpl")
+)
+
+(define-method get_hyperlink
+  (of-object "AtkHyperlinkImpl")
+  (c-name "get_hyperlink")
+  (return-type "AtkHyperlink*")
+  (parameters
+  )
+)
+

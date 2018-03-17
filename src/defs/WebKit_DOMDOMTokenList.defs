@@ -1,0 +1,65 @@
+(define-object DOMDOMTokenList
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "DOMObject")
+  (c-name "WebKitDOMDOMTokenList")
+)
+
+(define-method add
+  (of-object "WebKitDOMDOMTokenList")
+  (c-name "webkit_dom_dom_token_list_add")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "ptokens")
+    '("GError**" "error")
+  )
+)
+
+(define-method contains
+  (of-object "WebKitDOMDOMTokenList")
+  (c-name "webkit_dom_dom_token_list_contains")
+  (return-type "gboolean")
+  (parameters
+    '("const gchar*" "ptoken")
+    '("GError**" "error")
+  )
+)
+
+(define-method get_length
+  (of-object "WebKitDOMDOMTokenList")
+  (c-name "webkit_dom_dom_token_list_get_length")
+  (return-type "gulong")
+  (parameters
+  )
+)
+
+(define-method item
+  (of-object "WebKitDOMDOMTokenList")
+  (c-name "webkit_dom_dom_token_list_item")
+  (return-type "gchar*")
+  (parameters
+    '("gulong" "pindex")
+  )
+)
+
+(define-method remove
+  (of-object "WebKitDOMDOMTokenList")
+  (c-name "webkit_dom_dom_token_list_remove")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "ptokens")
+    '("GError**" "error")
+  )
+)
+
+(define-method toggle
+  (of-object "WebKitDOMDOMTokenList")
+  (c-name "webkit_dom_dom_token_list_toggle")
+  (return-type "gboolean")
+  (parameters
+    '("const gchar*" "ptoken")
+    '("gboolean" "pforce")
+    '("GError**" "error")
+  )
+)
+

@@ -1,0 +1,793 @@
+(define-object Entry
+  (in-module "Gtk")
+  (parent "Widget")
+  (c-name "GtkEntry")
+)
+
+(define-function Entry_new
+  (is-constructor-of "GtkEntry")
+  (c-name "gtk_entry_new")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-function Entry_new_with_buffer
+  (is-constructor-of "GtkEntry")
+  (c-name "gtk_entry_new_with_buffer")
+  (return-type "GtkWidget*")
+  (parameters
+    '("GtkEntryBuffer*" "pbuffer")
+  )
+)
+
+(define-method activate
+  (of-object "GtkEntry")
+  (c-name "activate")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method backspace
+  (of-object "GtkEntry")
+  (c-name "backspace")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method copy_clipboard
+  (of-object "GtkEntry")
+  (c-name "copy_clipboard")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method cut_clipboard
+  (of-object "GtkEntry")
+  (c-name "cut_clipboard")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method delete_from_cursor
+  (of-object "GtkEntry")
+  (c-name "delete_from_cursor")
+  (return-type "none")
+  (parameters
+    '("GtkDeleteType" "ptype")
+    '("gint" "pcount")
+  )
+)
+
+(define-method get_frame_size
+  (of-object "GtkEntry")
+  (c-name "get_frame_size")
+  (return-type "none")
+  (parameters
+    '("gint*" "px")
+    '("gint*" "py")
+    '("gint*" "pwidth")
+    '("gint*" "pheight")
+  )
+)
+
+(define-method get_text_area_size
+  (of-object "GtkEntry")
+  (c-name "get_text_area_size")
+  (return-type "none")
+  (parameters
+    '("gint*" "px")
+    '("gint*" "py")
+    '("gint*" "pwidth")
+    '("gint*" "pheight")
+  )
+)
+
+(define-method insert_at_cursor
+  (of-object "GtkEntry")
+  (c-name "insert_at_cursor")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pstr")
+  )
+)
+
+(define-method insert_emoji
+  (of-object "GtkEntry")
+  (c-name "insert_emoji")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method move_cursor
+  (of-object "GtkEntry")
+  (c-name "move_cursor")
+  (return-type "none")
+  (parameters
+    '("GtkMovementStep" "pstep")
+    '("gint" "pcount")
+    '("gboolean" "pextend_selection")
+  )
+)
+
+(define-method paste_clipboard
+  (of-object "GtkEntry")
+  (c-name "paste_clipboard")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method populate_popup
+  (of-object "GtkEntry")
+  (c-name "populate_popup")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "ppopup")
+  )
+)
+
+(define-method toggle_overwrite
+  (of-object "GtkEntry")
+  (c-name "toggle_overwrite")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method get_activates_default
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_get_activates_default")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_alignment
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_get_alignment")
+  (return-type "gfloat")
+  (parameters
+  )
+)
+
+(define-method get_attributes
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_get_attributes")
+  (return-type "PangoAttrList*")
+  (parameters
+  )
+)
+
+(define-method get_buffer
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_get_buffer")
+  (return-type "GtkEntryBuffer*")
+  (parameters
+  )
+)
+
+(define-method get_completion
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_get_completion")
+  (return-type "GtkEntryCompletion*")
+  (parameters
+  )
+)
+
+(define-method get_current_icon_drag_source
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_get_current_icon_drag_source")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_cursor_hadjustment
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_get_cursor_hadjustment")
+  (return-type "GtkAdjustment*")
+  (parameters
+  )
+)
+
+(define-method get_has_frame
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_get_has_frame")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_icon_activatable
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_get_icon_activatable")
+  (return-type "gboolean")
+  (parameters
+    '("GtkEntryIconPosition" "picon_pos")
+  )
+)
+
+(define-method get_icon_area
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_get_icon_area")
+  (return-type "none")
+  (parameters
+    '("GtkEntryIconPosition" "picon_pos")
+    '("GdkRectangle*" "picon_area")
+  )
+)
+
+(define-method get_icon_at_pos
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_get_icon_at_pos")
+  (return-type "gint")
+  (parameters
+    '("gint" "px")
+    '("gint" "py")
+  )
+)
+
+(define-method get_icon_gicon
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_get_icon_gicon")
+  (return-type "GIcon*")
+  (parameters
+    '("GtkEntryIconPosition" "picon_pos")
+  )
+)
+
+(define-method get_icon_name
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_get_icon_name")
+  (return-type "const gchar*")
+  (parameters
+    '("GtkEntryIconPosition" "picon_pos")
+  )
+)
+
+(define-method get_icon_pixbuf
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_get_icon_pixbuf")
+  (return-type "GdkPixbuf*")
+  (parameters
+    '("GtkEntryIconPosition" "picon_pos")
+  )
+)
+
+(define-method get_icon_sensitive
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_get_icon_sensitive")
+  (return-type "gboolean")
+  (parameters
+    '("GtkEntryIconPosition" "picon_pos")
+  )
+)
+
+(define-method get_icon_stock
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_get_icon_stock")
+  (return-type "const gchar*")
+  (parameters
+    '("GtkEntryIconPosition" "picon_pos")
+  )
+)
+
+(define-method get_icon_storage_type
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_get_icon_storage_type")
+  (return-type "GtkImageType")
+  (parameters
+    '("GtkEntryIconPosition" "picon_pos")
+  )
+)
+
+(define-method get_icon_tooltip_markup
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_get_icon_tooltip_markup")
+  (return-type "gchar*")
+  (parameters
+    '("GtkEntryIconPosition" "picon_pos")
+  )
+)
+
+(define-method get_icon_tooltip_text
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_get_icon_tooltip_text")
+  (return-type "gchar*")
+  (parameters
+    '("GtkEntryIconPosition" "picon_pos")
+  )
+)
+
+(define-method get_inner_border
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_get_inner_border")
+  (return-type "const GtkBorder*")
+  (parameters
+  )
+)
+
+(define-method get_input_hints
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_get_input_hints")
+  (return-type "GtkInputHints")
+  (parameters
+  )
+)
+
+(define-method get_input_purpose
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_get_input_purpose")
+  (return-type "GtkInputPurpose")
+  (parameters
+  )
+)
+
+(define-method get_invisible_char
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_get_invisible_char")
+  (return-type "gunichar")
+  (parameters
+  )
+)
+
+(define-method get_layout
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_get_layout")
+  (return-type "PangoLayout*")
+  (parameters
+  )
+)
+
+(define-method get_layout_offsets
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_get_layout_offsets")
+  (return-type "none")
+  (parameters
+    '("gint*" "px")
+    '("gint*" "py")
+  )
+)
+
+(define-method get_max_length
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_get_max_length")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_max_width_chars
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_get_max_width_chars")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_overwrite_mode
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_get_overwrite_mode")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_placeholder_text
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_get_placeholder_text")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_progress_fraction
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_get_progress_fraction")
+  (return-type "gdouble")
+  (parameters
+  )
+)
+
+(define-method get_progress_pulse_step
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_get_progress_pulse_step")
+  (return-type "gdouble")
+  (parameters
+  )
+)
+
+(define-method get_tabs
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_get_tabs")
+  (return-type "PangoTabArray*")
+  (parameters
+  )
+)
+
+(define-method get_text
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_get_text")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_text_area
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_get_text_area")
+  (return-type "none")
+  (parameters
+    '("GdkRectangle*" "ptext_area")
+  )
+)
+
+(define-method get_text_length
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_get_text_length")
+  (return-type "guint16")
+  (parameters
+  )
+)
+
+(define-method get_visibility
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_get_visibility")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_width_chars
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_get_width_chars")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method grab_focus_without_selecting
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_grab_focus_without_selecting")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method im_context_filter_keypress
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_im_context_filter_keypress")
+  (return-type "gboolean")
+  (parameters
+    '("GdkEventKey*" "pevent")
+  )
+)
+
+(define-method layout_index_to_text_index
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_layout_index_to_text_index")
+  (return-type "gint")
+  (parameters
+    '("gint" "playout_index")
+  )
+)
+
+(define-method progress_pulse
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_progress_pulse")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method reset_im_context
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_reset_im_context")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method set_activates_default
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_set_activates_default")
+  (return-type "none")
+  (parameters
+    '("gboolean" "psetting")
+  )
+)
+
+(define-method set_alignment
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_set_alignment")
+  (return-type "none")
+  (parameters
+    '("gfloat" "pxalign")
+  )
+)
+
+(define-method set_attributes
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_set_attributes")
+  (return-type "none")
+  (parameters
+    '("PangoAttrList*" "pattrs")
+  )
+)
+
+(define-method set_buffer
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_set_buffer")
+  (return-type "none")
+  (parameters
+    '("GtkEntryBuffer*" "pbuffer")
+  )
+)
+
+(define-method set_completion
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_set_completion")
+  (return-type "none")
+  (parameters
+    '("GtkEntryCompletion*" "pcompletion")
+  )
+)
+
+(define-method set_cursor_hadjustment
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_set_cursor_hadjustment")
+  (return-type "none")
+  (parameters
+    '("GtkAdjustment*" "padjustment")
+  )
+)
+
+(define-method set_has_frame
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_set_has_frame")
+  (return-type "none")
+  (parameters
+    '("gboolean" "psetting")
+  )
+)
+
+(define-method set_icon_activatable
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_set_icon_activatable")
+  (return-type "none")
+  (parameters
+    '("GtkEntryIconPosition" "picon_pos")
+    '("gboolean" "pactivatable")
+  )
+)
+
+(define-method set_icon_drag_source
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_set_icon_drag_source")
+  (return-type "none")
+  (parameters
+    '("GtkEntryIconPosition" "picon_pos")
+    '("GtkTargetList*" "ptarget_list")
+    '("GdkDragAction" "pactions")
+  )
+)
+
+(define-method set_icon_from_gicon
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_set_icon_from_gicon")
+  (return-type "none")
+  (parameters
+    '("GtkEntryIconPosition" "picon_pos")
+    '("GIcon*" "picon")
+  )
+)
+
+(define-method set_icon_from_icon_name
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_set_icon_from_icon_name")
+  (return-type "none")
+  (parameters
+    '("GtkEntryIconPosition" "picon_pos")
+    '("const gchar*" "picon_name")
+  )
+)
+
+(define-method set_icon_from_pixbuf
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_set_icon_from_pixbuf")
+  (return-type "none")
+  (parameters
+    '("GtkEntryIconPosition" "picon_pos")
+    '("GdkPixbuf*" "ppixbuf")
+  )
+)
+
+(define-method set_icon_from_stock
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_set_icon_from_stock")
+  (return-type "none")
+  (parameters
+    '("GtkEntryIconPosition" "picon_pos")
+    '("const gchar*" "pstock_id")
+  )
+)
+
+(define-method set_icon_sensitive
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_set_icon_sensitive")
+  (return-type "none")
+  (parameters
+    '("GtkEntryIconPosition" "picon_pos")
+    '("gboolean" "psensitive")
+  )
+)
+
+(define-method set_icon_tooltip_markup
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_set_icon_tooltip_markup")
+  (return-type "none")
+  (parameters
+    '("GtkEntryIconPosition" "picon_pos")
+    '("const gchar*" "ptooltip")
+  )
+)
+
+(define-method set_icon_tooltip_text
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_set_icon_tooltip_text")
+  (return-type "none")
+  (parameters
+    '("GtkEntryIconPosition" "picon_pos")
+    '("const gchar*" "ptooltip")
+  )
+)
+
+(define-method set_inner_border
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_set_inner_border")
+  (return-type "none")
+  (parameters
+    '("const GtkBorder*" "pborder")
+  )
+)
+
+(define-method set_input_hints
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_set_input_hints")
+  (return-type "none")
+  (parameters
+    '("GtkInputHints" "phints")
+  )
+)
+
+(define-method set_input_purpose
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_set_input_purpose")
+  (return-type "none")
+  (parameters
+    '("GtkInputPurpose" "ppurpose")
+  )
+)
+
+(define-method set_invisible_char
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_set_invisible_char")
+  (return-type "none")
+  (parameters
+    '("gunichar" "pch")
+  )
+)
+
+(define-method set_max_length
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_set_max_length")
+  (return-type "none")
+  (parameters
+    '("gint" "pmax")
+  )
+)
+
+(define-method set_max_width_chars
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_set_max_width_chars")
+  (return-type "none")
+  (parameters
+    '("gint" "pn_chars")
+  )
+)
+
+(define-method set_overwrite_mode
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_set_overwrite_mode")
+  (return-type "none")
+  (parameters
+    '("gboolean" "poverwrite")
+  )
+)
+
+(define-method set_placeholder_text
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_set_placeholder_text")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "ptext")
+  )
+)
+
+(define-method set_progress_fraction
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_set_progress_fraction")
+  (return-type "none")
+  (parameters
+    '("gdouble" "pfraction")
+  )
+)
+
+(define-method set_progress_pulse_step
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_set_progress_pulse_step")
+  (return-type "none")
+  (parameters
+    '("gdouble" "pfraction")
+  )
+)
+
+(define-method set_tabs
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_set_tabs")
+  (return-type "none")
+  (parameters
+    '("PangoTabArray*" "ptabs")
+  )
+)
+
+(define-method set_text
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_set_text")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "ptext")
+  )
+)
+
+(define-method set_visibility
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_set_visibility")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pvisible")
+  )
+)
+
+(define-method set_width_chars
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_set_width_chars")
+  (return-type "none")
+  (parameters
+    '("gint" "pn_chars")
+  )
+)
+
+(define-method text_index_to_layout_index
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_text_index_to_layout_index")
+  (return-type "gint")
+  (parameters
+    '("gint" "ptext_index")
+  )
+)
+
+(define-method unset_invisible_char
+  (of-object "GtkEntry")
+  (c-name "gtk_entry_unset_invisible_char")
+  (return-type "none")
+  (parameters
+  )
+)
+

@@ -1,0 +1,88 @@
+(define-object RelationSet
+  (in-module "Atk")
+  (import-header "atk/atk.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "AtkRelationSet")
+)
+
+(define-function RelationSet_new
+  (is-constructor-of "AtkRelationSet")
+  (c-name "atk_relation_set_new")
+  (return-type "AtkRelationSet*")
+  (parameters
+  )
+)
+
+(define-method add
+  (of-object "AtkRelationSet")
+  (c-name "atk_relation_set_add")
+  (return-type "none")
+  (parameters
+    '("AtkRelation*" "prelation")
+  )
+)
+
+(define-method add_relation_by_type
+  (of-object "AtkRelationSet")
+  (c-name "atk_relation_set_add_relation_by_type")
+  (return-type "none")
+  (parameters
+    '("AtkRelationType" "prelationship")
+    '("AtkObject*" "ptarget")
+  )
+)
+
+(define-method contains
+  (of-object "AtkRelationSet")
+  (c-name "atk_relation_set_contains")
+  (return-type "gboolean")
+  (parameters
+    '("AtkRelationType" "prelationship")
+  )
+)
+
+(define-method contains_target
+  (of-object "AtkRelationSet")
+  (c-name "atk_relation_set_contains_target")
+  (return-type "gboolean")
+  (parameters
+    '("AtkRelationType" "prelationship")
+    '("AtkObject*" "ptarget")
+  )
+)
+
+(define-method get_n_relations
+  (of-object "AtkRelationSet")
+  (c-name "atk_relation_set_get_n_relations")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_relation
+  (of-object "AtkRelationSet")
+  (c-name "atk_relation_set_get_relation")
+  (return-type "AtkRelation*")
+  (parameters
+    '("gint" "pi")
+  )
+)
+
+(define-method get_relation_by_type
+  (of-object "AtkRelationSet")
+  (c-name "atk_relation_set_get_relation_by_type")
+  (return-type "AtkRelation*")
+  (parameters
+    '("AtkRelationType" "prelationship")
+  )
+)
+
+(define-method remove
+  (of-object "AtkRelationSet")
+  (c-name "atk_relation_set_remove")
+  (return-type "none")
+  (parameters
+    '("AtkRelation*" "prelation")
+  )
+)
+

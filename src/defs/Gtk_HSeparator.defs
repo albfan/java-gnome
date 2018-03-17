@@ -1,0 +1,14 @@
+(define-object HSeparator
+  (in-module "Gtk")
+  (parent "Separator")
+  (c-name "GtkHSeparator")
+)
+
+(define-function HSeparator_new
+  (is-constructor-of "GtkHSeparator")
+  (c-name "gtk_hseparator_new")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+

@@ -1,0 +1,9 @@
+(define-enum TestFileType
+  (in-module "GLib")
+  (c-name "GTestFileType")
+  (values
+    '("dist" "G_TEST_DIST")
+    '("built" "G_TEST_BUILT")
+  )
+)
+

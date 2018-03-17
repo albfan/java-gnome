@@ -1,0 +1,6 @@
+(define-object WindowAccessibleClass
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkWindowAccessibleClass")
+)
+

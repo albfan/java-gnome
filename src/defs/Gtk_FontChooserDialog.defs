@@ -1,0 +1,16 @@
+(define-object FontChooserDialog
+  (in-module "Gtk")
+  (parent "Dialog")
+  (c-name "GtkFontChooserDialog")
+)
+
+(define-function FontChooserDialog_new
+  (is-constructor-of "GtkFontChooserDialog")
+  (c-name "gtk_font_chooser_dialog_new")
+  (return-type "GtkWidget*")
+  (parameters
+    '("const gchar*" "ptitle")
+    '("GtkWindow*" "pparent")
+  )
+)
+

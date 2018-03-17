@@ -1,0 +1,10 @@
+(define-enum DragCancelReason
+  (in-module "Gdk")
+  (c-name "GdkDragCancelReason")
+  (values
+    '("no_target" "GDK_DRAG_CANCEL_NO_TARGET")
+    '("user_cancelled" "GDK_DRAG_CANCEL_USER_CANCELLED")
+    '("error" "GDK_DRAG_CANCEL_ERROR")
+  )
+)
+

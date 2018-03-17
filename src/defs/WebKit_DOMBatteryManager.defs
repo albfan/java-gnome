@@ -1,0 +1,49 @@
+(define-object DOMBatteryManager
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "DOMObject")
+  (c-name "WebKitDOMBatteryManager")
+)
+
+(define-method dispatch_event
+  (of-object "WebKitDOMBatteryManager")
+  (c-name "webkit_dom_battery_manager_dispatch_event")
+  (return-type "gboolean")
+  (parameters
+    '("WebKitDOMEvent*" "pevent")
+    '("GError**" "error")
+  )
+)
+
+(define-method get_charging
+  (of-object "WebKitDOMBatteryManager")
+  (c-name "webkit_dom_battery_manager_get_charging")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_charging_time
+  (of-object "WebKitDOMBatteryManager")
+  (c-name "webkit_dom_battery_manager_get_charging_time")
+  (return-type "gdouble")
+  (parameters
+  )
+)
+
+(define-method get_discharging_time
+  (of-object "WebKitDOMBatteryManager")
+  (c-name "webkit_dom_battery_manager_get_discharging_time")
+  (return-type "gdouble")
+  (parameters
+  )
+)
+
+(define-method get_level
+  (of-object "WebKitDOMBatteryManager")
+  (c-name "webkit_dom_battery_manager_get_level")
+  (return-type "gdouble")
+  (parameters
+  )
+)
+

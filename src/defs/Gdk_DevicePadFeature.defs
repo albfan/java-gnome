@@ -1,0 +1,10 @@
+(define-enum DevicePadFeature
+  (in-module "Gdk")
+  (c-name "GdkDevicePadFeature")
+  (values
+    '("button" "GDK_DEVICE_PAD_FEATURE_BUTTON")
+    '("ring" "GDK_DEVICE_PAD_FEATURE_RING")
+    '("strip" "GDK_DEVICE_PAD_FEATURE_STRIP")
+  )
+)
+

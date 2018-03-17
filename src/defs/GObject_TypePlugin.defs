@@ -1,0 +1,45 @@
+(define-object TypePlugin
+  (in-module "GObject")
+  (import-header "glib-object.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GTypePlugin")
+)
+
+(define-method complete_interface_info
+  (of-object "GTypePlugin")
+  (c-name "g_type_plugin_complete_interface_info")
+  (return-type "none")
+  (parameters
+    '("GType" "pinstance_type")
+    '("GType" "pinterface_type")
+    '("GInterfaceInfo*" "pinfo")
+  )
+)
+
+(define-method complete_type_info
+  (of-object "GTypePlugin")
+  (c-name "g_type_plugin_complete_type_info")
+  (return-type "none")
+  (parameters
+    '("GType" "pg_type")
+    '("GTypeInfo*" "pinfo")
+    '("GTypeValueTable*" "pvalue_table")
+  )
+)
+
+(define-method unuse
+  (of-object "GTypePlugin")
+  (c-name "g_type_plugin_unuse")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method use
+  (of-object "GTypePlugin")
+  (c-name "g_type_plugin_use")
+  (return-type "none")
+  (parameters
+  )
+)
+

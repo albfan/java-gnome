@@ -1,0 +1,6 @@
+(define-object RadioButtonAccessiblePrivate
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkRadioButtonAccessiblePrivate")
+)
+

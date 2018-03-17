@@ -1,0 +1,12 @@
+(define-enum ScrollDirection
+  (in-module "Gdk")
+  (c-name "GdkScrollDirection")
+  (values
+    '("up" "GDK_SCROLL_UP")
+    '("down" "GDK_SCROLL_DOWN")
+    '("left" "GDK_SCROLL_LEFT")
+    '("right" "GDK_SCROLL_RIGHT")
+    '("smooth" "GDK_SCROLL_SMOOTH")
+  )
+)
+

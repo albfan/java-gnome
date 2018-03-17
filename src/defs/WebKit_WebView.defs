@@ -1,0 +1,778 @@
+(define-object WebView
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "org.gnome.gtk.Container")
+  (c-name "WebKitWebView")
+)
+
+(define-function WebView_new
+  (is-constructor-of "WebKitWebView")
+  (c-name "webkit_web_view_new")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method choose_file
+  (of-object "WebKitWebView")
+  (c-name "choose_file")
+  (return-type "gchar*")
+  (parameters
+    '("WebKitWebFrame*" "pframe")
+    '("const gchar*" "pold_file")
+  )
+)
+
+(define-method close_web_view
+  (of-object "WebKitWebView")
+  (c-name "close_web_view")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method console_message
+  (of-object "WebKitWebView")
+  (c-name "console_message")
+  (return-type "gboolean")
+  (parameters
+    '("const gchar*" "pmessage")
+    '("guint" "pline_number")
+    '("const gchar*" "psource_id")
+  )
+)
+
+(define-method copy_clipboard
+  (of-object "WebKitWebView")
+  (c-name "copy_clipboard")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method create_web_view
+  (of-object "WebKitWebView")
+  (c-name "create_web_view")
+  (return-type "WebKitWebView*")
+  (parameters
+    '("WebKitWebFrame*" "pweb_frame")
+  )
+)
+
+(define-method cut_clipboard
+  (of-object "WebKitWebView")
+  (c-name "cut_clipboard")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method entering_fullscreen
+  (of-object "WebKitWebView")
+  (c-name "entering_fullscreen")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method leaving_fullscreen
+  (of-object "WebKitWebView")
+  (c-name "leaving_fullscreen")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method move_cursor
+  (of-object "WebKitWebView")
+  (c-name "move_cursor")
+  (return-type "gboolean")
+  (parameters
+    '("GtkMovementStep" "pstep")
+    '("gint" "pcount")
+  )
+)
+
+(define-method navigation_requested
+  (of-object "WebKitWebView")
+  (c-name "navigation_requested")
+  (return-type "WebKitNavigationResponse")
+  (parameters
+    '("WebKitWebFrame*" "pframe")
+    '("WebKitNetworkRequest*" "prequest")
+  )
+)
+
+(define-method paste_clipboard
+  (of-object "WebKitWebView")
+  (c-name "paste_clipboard")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method redo
+  (of-object "WebKitWebView")
+  (c-name "redo")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method run_file_chooser
+  (of-object "WebKitWebView")
+  (c-name "run_file_chooser")
+  (return-type "gboolean")
+  (parameters
+    '("WebKitFileChooserRequest*" "prequest")
+  )
+)
+
+(define-method script_alert
+  (of-object "WebKitWebView")
+  (c-name "script_alert")
+  (return-type "gboolean")
+  (parameters
+    '("WebKitWebFrame*" "pframe")
+    '("const gchar*" "palert_message")
+  )
+)
+
+(define-method script_confirm
+  (of-object "WebKitWebView")
+  (c-name "script_confirm")
+  (return-type "gboolean")
+  (parameters
+    '("WebKitWebFrame*" "pframe")
+    '("const gchar*" "pconfirm_message")
+    '("gboolean*" "pdid_confirm")
+  )
+)
+
+(define-method script_prompt
+  (of-object "WebKitWebView")
+  (c-name "script_prompt")
+  (return-type "gboolean")
+  (parameters
+    '("WebKitWebFrame*" "pframe")
+    '("const gchar*" "pmessage")
+    '("const gchar*" "pdefault_value")
+    '("gchar**" "pvalue")
+  )
+)
+
+(define-method select_all
+  (of-object "WebKitWebView")
+  (c-name "select_all")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method set_scroll_adjustments
+  (of-object "WebKitWebView")
+  (c-name "set_scroll_adjustments")
+  (return-type "none")
+  (parameters
+    '("GtkAdjustment*" "phadjustment")
+    '("GtkAdjustment*" "pvadjustment")
+  )
+)
+
+(define-method should_allow_editing_action
+  (of-object "WebKitWebView")
+  (c-name "should_allow_editing_action")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method undo
+  (of-object "WebKitWebView")
+  (c-name "undo")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method web_view_ready
+  (of-object "WebKitWebView")
+  (c-name "web_view_ready")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method window_object_cleared
+  (of-object "WebKitWebView")
+  (c-name "window_object_cleared")
+  (return-type "none")
+  (parameters
+    '("WebKitWebFrame*" "pframe")
+    '("JSGlobalContextRef" "pcontext")
+    '("JSObjectRef" "pwindow_object")
+  )
+)
+
+(define-method can_copy_clipboard
+  (of-object "WebKitWebView")
+  (c-name "webkit_web_view_can_copy_clipboard")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method can_cut_clipboard
+  (of-object "WebKitWebView")
+  (c-name "webkit_web_view_can_cut_clipboard")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method can_go_back
+  (of-object "WebKitWebView")
+  (c-name "webkit_web_view_can_go_back")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method can_go_back_or_forward
+  (of-object "WebKitWebView")
+  (c-name "webkit_web_view_can_go_back_or_forward")
+  (return-type "gboolean")
+  (parameters
+    '("gint" "psteps")
+  )
+)
+
+(define-method can_go_forward
+  (of-object "WebKitWebView")
+  (c-name "webkit_web_view_can_go_forward")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method can_paste_clipboard
+  (of-object "WebKitWebView")
+  (c-name "webkit_web_view_can_paste_clipboard")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method can_redo
+  (of-object "WebKitWebView")
+  (c-name "webkit_web_view_can_redo")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method can_show_mime_type
+  (of-object "WebKitWebView")
+  (c-name "webkit_web_view_can_show_mime_type")
+  (return-type "gboolean")
+  (parameters
+    '("const gchar*" "pmime_type")
+  )
+)
+
+(define-method can_undo
+  (of-object "WebKitWebView")
+  (c-name "webkit_web_view_can_undo")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method delete_selection
+  (of-object "WebKitWebView")
+  (c-name "webkit_web_view_delete_selection")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method execute_script
+  (of-object "WebKitWebView")
+  (c-name "webkit_web_view_execute_script")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pscript")
+  )
+)
+
+(define-method get_back_forward_list
+  (of-object "WebKitWebView")
+  (c-name "webkit_web_view_get_back_forward_list")
+  (return-type "WebKitWebBackForwardList*")
+  (parameters
+  )
+)
+
+(define-method get_copy_target_list
+  (of-object "WebKitWebView")
+  (c-name "webkit_web_view_get_copy_target_list")
+  (return-type "GtkTargetList*")
+  (parameters
+  )
+)
+
+(define-method get_custom_encoding
+  (of-object "WebKitWebView")
+  (c-name "webkit_web_view_get_custom_encoding")
+  (return-type "const char*")
+  (parameters
+  )
+)
+
+(define-method get_dom_document
+  (of-object "WebKitWebView")
+  (c-name "webkit_web_view_get_dom_document")
+  (return-type "WebKitDOMDocument*")
+  (parameters
+  )
+)
+
+(define-method get_editable
+  (of-object "WebKitWebView")
+  (c-name "webkit_web_view_get_editable")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_encoding
+  (of-object "WebKitWebView")
+  (c-name "webkit_web_view_get_encoding")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_focused_frame
+  (of-object "WebKitWebView")
+  (c-name "webkit_web_view_get_focused_frame")
+  (return-type "WebKitWebFrame*")
+  (parameters
+  )
+)
+
+(define-method get_full_content_zoom
+  (of-object "WebKitWebView")
+  (c-name "webkit_web_view_get_full_content_zoom")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_hit_test_result
+  (of-object "WebKitWebView")
+  (c-name "webkit_web_view_get_hit_test_result")
+  (return-type "WebKitHitTestResult*")
+  (parameters
+    '("GdkEventButton*" "pevent")
+  )
+)
+
+(define-method get_icon_pixbuf
+  (of-object "WebKitWebView")
+  (c-name "webkit_web_view_get_icon_pixbuf")
+  (return-type "GdkPixbuf*")
+  (parameters
+  )
+)
+
+(define-method get_icon_uri
+  (of-object "WebKitWebView")
+  (c-name "webkit_web_view_get_icon_uri")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_inspector
+  (of-object "WebKitWebView")
+  (c-name "webkit_web_view_get_inspector")
+  (return-type "WebKitWebInspector*")
+  (parameters
+  )
+)
+
+(define-method get_load_status
+  (of-object "WebKitWebView")
+  (c-name "webkit_web_view_get_load_status")
+  (return-type "WebKitLoadStatus")
+  (parameters
+  )
+)
+
+(define-method get_main_frame
+  (of-object "WebKitWebView")
+  (c-name "webkit_web_view_get_main_frame")
+  (return-type "WebKitWebFrame*")
+  (parameters
+  )
+)
+
+(define-method get_paste_target_list
+  (of-object "WebKitWebView")
+  (c-name "webkit_web_view_get_paste_target_list")
+  (return-type "GtkTargetList*")
+  (parameters
+  )
+)
+
+(define-method get_progress
+  (of-object "WebKitWebView")
+  (c-name "webkit_web_view_get_progress")
+  (return-type "gdouble")
+  (parameters
+  )
+)
+
+(define-method get_settings
+  (of-object "WebKitWebView")
+  (c-name "webkit_web_view_get_settings")
+  (return-type "WebKitWebSettings*")
+  (parameters
+  )
+)
+
+(define-method get_snapshot
+  (of-object "WebKitWebView")
+  (c-name "webkit_web_view_get_snapshot")
+  (return-type "cairo_surface_t*")
+  (parameters
+  )
+)
+
+(define-method get_title
+  (of-object "WebKitWebView")
+  (c-name "webkit_web_view_get_title")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_transparent
+  (of-object "WebKitWebView")
+  (c-name "webkit_web_view_get_transparent")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_uri
+  (of-object "WebKitWebView")
+  (c-name "webkit_web_view_get_uri")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_view_mode
+  (of-object "WebKitWebView")
+  (c-name "webkit_web_view_get_view_mode")
+  (return-type "WebKitWebViewViewMode")
+  (parameters
+  )
+)
+
+(define-method get_view_source_mode
+  (of-object "WebKitWebView")
+  (c-name "webkit_web_view_get_view_source_mode")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_viewport_attributes
+  (of-object "WebKitWebView")
+  (c-name "webkit_web_view_get_viewport_attributes")
+  (return-type "WebKitViewportAttributes*")
+  (parameters
+  )
+)
+
+(define-method get_window_features
+  (of-object "WebKitWebView")
+  (c-name "webkit_web_view_get_window_features")
+  (return-type "WebKitWebWindowFeatures*")
+  (parameters
+  )
+)
+
+(define-method get_zoom_level
+  (of-object "WebKitWebView")
+  (c-name "webkit_web_view_get_zoom_level")
+  (return-type "gfloat")
+  (parameters
+  )
+)
+
+(define-method go_back
+  (of-object "WebKitWebView")
+  (c-name "webkit_web_view_go_back")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method go_back_or_forward
+  (of-object "WebKitWebView")
+  (c-name "webkit_web_view_go_back_or_forward")
+  (return-type "none")
+  (parameters
+    '("gint" "psteps")
+  )
+)
+
+(define-method go_forward
+  (of-object "WebKitWebView")
+  (c-name "webkit_web_view_go_forward")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method go_to_back_forward_item
+  (of-object "WebKitWebView")
+  (c-name "webkit_web_view_go_to_back_forward_item")
+  (return-type "gboolean")
+  (parameters
+    '("WebKitWebHistoryItem*" "pitem")
+  )
+)
+
+(define-method has_selection
+  (of-object "WebKitWebView")
+  (c-name "webkit_web_view_has_selection")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method load_html_string
+  (of-object "WebKitWebView")
+  (c-name "webkit_web_view_load_html_string")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pcontent")
+    '("const gchar*" "pbase_uri")
+  )
+)
+
+(define-method load_request
+  (of-object "WebKitWebView")
+  (c-name "webkit_web_view_load_request")
+  (return-type "none")
+  (parameters
+    '("WebKitNetworkRequest*" "prequest")
+  )
+)
+
+(define-method load_string
+  (of-object "WebKitWebView")
+  (c-name "webkit_web_view_load_string")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pcontent")
+    '("const gchar*" "pmime_type")
+    '("const gchar*" "pencoding")
+    '("const gchar*" "pbase_uri")
+  )
+)
+
+(define-method load_uri
+  (of-object "WebKitWebView")
+  (c-name "webkit_web_view_load_uri")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "puri")
+  )
+)
+
+(define-method mark_text_matches
+  (of-object "WebKitWebView")
+  (c-name "webkit_web_view_mark_text_matches")
+  (return-type "guint")
+  (parameters
+    '("const gchar*" "pstring")
+    '("gboolean" "pcase_sensitive")
+    '("guint" "plimit")
+  )
+)
+
+(define-method open
+  (of-object "WebKitWebView")
+  (c-name "webkit_web_view_open")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "puri")
+  )
+)
+
+(define-method reload
+  (of-object "WebKitWebView")
+  (c-name "webkit_web_view_reload")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method reload_bypass_cache
+  (of-object "WebKitWebView")
+  (c-name "webkit_web_view_reload_bypass_cache")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method search_text
+  (of-object "WebKitWebView")
+  (c-name "webkit_web_view_search_text")
+  (return-type "gboolean")
+  (parameters
+    '("const gchar*" "ptext")
+    '("gboolean" "pcase_sensitive")
+    '("gboolean" "pforward")
+    '("gboolean" "pwrap")
+  )
+)
+
+(define-method set_custom_encoding
+  (of-object "WebKitWebView")
+  (c-name "webkit_web_view_set_custom_encoding")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pencoding")
+  )
+)
+
+(define-method set_editable
+  (of-object "WebKitWebView")
+  (c-name "webkit_web_view_set_editable")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pflag")
+  )
+)
+
+(define-method set_full_content_zoom
+  (of-object "WebKitWebView")
+  (c-name "webkit_web_view_set_full_content_zoom")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pfull_content_zoom")
+  )
+)
+
+(define-method set_highlight_text_matches
+  (of-object "WebKitWebView")
+  (c-name "webkit_web_view_set_highlight_text_matches")
+  (return-type "none")
+  (parameters
+    '("gboolean" "phighlight")
+  )
+)
+
+(define-method set_maintains_back_forward_list
+  (of-object "WebKitWebView")
+  (c-name "webkit_web_view_set_maintains_back_forward_list")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pflag")
+  )
+)
+
+(define-method set_settings
+  (of-object "WebKitWebView")
+  (c-name "webkit_web_view_set_settings")
+  (return-type "none")
+  (parameters
+    '("WebKitWebSettings*" "psettings")
+  )
+)
+
+(define-method set_transparent
+  (of-object "WebKitWebView")
+  (c-name "webkit_web_view_set_transparent")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pflag")
+  )
+)
+
+(define-method set_view_mode
+  (of-object "WebKitWebView")
+  (c-name "webkit_web_view_set_view_mode")
+  (return-type "none")
+  (parameters
+    '("WebKitWebViewViewMode" "pmode")
+  )
+)
+
+(define-method set_view_source_mode
+  (of-object "WebKitWebView")
+  (c-name "webkit_web_view_set_view_source_mode")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pview_source_mode")
+  )
+)
+
+(define-method set_zoom_level
+  (of-object "WebKitWebView")
+  (c-name "webkit_web_view_set_zoom_level")
+  (return-type "none")
+  (parameters
+    '("gfloat" "pzoom_level")
+  )
+)
+
+(define-method stop_loading
+  (of-object "WebKitWebView")
+  (c-name "webkit_web_view_stop_loading")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method try_get_favicon_pixbuf
+  (of-object "WebKitWebView")
+  (c-name "webkit_web_view_try_get_favicon_pixbuf")
+  (return-type "GdkPixbuf*")
+  (parameters
+    '("guint" "pwidth")
+    '("guint" "pheight")
+  )
+)
+
+(define-method unmark_text_matches
+  (of-object "WebKitWebView")
+  (c-name "webkit_web_view_unmark_text_matches")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method zoom_in
+  (of-object "WebKitWebView")
+  (c-name "webkit_web_view_zoom_in")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method zoom_out
+  (of-object "WebKitWebView")
+  (c-name "webkit_web_view_zoom_out")
+  (return-type "none")
+  (parameters
+  )
+)
+

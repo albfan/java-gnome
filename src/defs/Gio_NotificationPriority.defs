@@ -1,0 +1,11 @@
+(define-enum NotificationPriority
+  (in-module "Gio")
+  (c-name "GNotificationPriority")
+  (values
+    '("normal" "G_NOTIFICATION_PRIORITY_NORMAL")
+    '("low" "G_NOTIFICATION_PRIORITY_LOW")
+    '("high" "G_NOTIFICATION_PRIORITY_HIGH")
+    '("urgent" "G_NOTIFICATION_PRIORITY_URGENT")
+  )
+)
+

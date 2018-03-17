@@ -1,0 +1,27 @@
+(define-object DOMDocumentFragment
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "DOMNode")
+  (c-name "WebKitDOMDocumentFragment")
+)
+
+(define-method query_selector
+  (of-object "WebKitDOMDocumentFragment")
+  (c-name "webkit_dom_document_fragment_query_selector")
+  (return-type "WebKitDOMElement*")
+  (parameters
+    '("const gchar*" "pselectors")
+    '("GError**" "error")
+  )
+)
+
+(define-method query_selector_all
+  (of-object "WebKitDOMDocumentFragment")
+  (c-name "webkit_dom_document_fragment_query_selector_all")
+  (return-type "WebKitDOMNodeList*")
+  (parameters
+    '("const gchar*" "pselectors")
+    '("GError**" "error")
+  )
+)
+

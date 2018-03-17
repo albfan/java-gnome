@@ -1,0 +1,60 @@
+(define-object NetworkAddress
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GNetworkAddress")
+)
+
+(define-function NetworkAddress_new
+  (is-constructor-of "GNetworkAddress")
+  (c-name "g_network_address_new")
+  (return-type "GSocketConnectable*")
+  (parameters
+    '("const gchar*" "phostname")
+    '("guint16" "pport")
+  )
+)
+
+(define-function NetworkAddress_new_loopback
+  (is-constructor-of "GNetworkAddress")
+  (c-name "g_network_address_new_loopback")
+  (return-type "GSocketConnectable*")
+  (parameters
+    '("guint16" "pport")
+  )
+)
+
+(define-method get_hostname
+  (of-object "GNetworkAddress")
+  (c-name "g_network_address_get_hostname")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_port
+  (of-object "GNetworkAddress")
+  (c-name "g_network_address_get_port")
+  (return-type "guint16")
+  (parameters
+  )
+)
+
+(define-method get_scheme
+  (of-object "GNetworkAddress")
+  (c-name "g_network_address_get_scheme")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+

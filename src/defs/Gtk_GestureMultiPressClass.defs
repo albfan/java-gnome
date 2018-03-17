@@ -1,0 +1,6 @@
+(define-object GestureMultiPressClass
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkGestureMultiPressClass")
+)
+

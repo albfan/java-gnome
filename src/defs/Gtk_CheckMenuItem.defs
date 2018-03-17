@@ -1,0 +1,100 @@
+(define-object CheckMenuItem
+  (in-module "Gtk")
+  (parent "MenuItem")
+  (c-name "GtkCheckMenuItem")
+)
+
+(define-function CheckMenuItem_new
+  (is-constructor-of "GtkCheckMenuItem")
+  (c-name "gtk_check_menu_item_new")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-function CheckMenuItem_new_with_label
+  (is-constructor-of "GtkCheckMenuItem")
+  (c-name "gtk_check_menu_item_new_with_label")
+  (return-type "GtkWidget*")
+  (parameters
+    '("const gchar*" "plabel")
+  )
+)
+
+(define-function CheckMenuItem_new_with_mnemonic
+  (is-constructor-of "GtkCheckMenuItem")
+  (c-name "gtk_check_menu_item_new_with_mnemonic")
+  (return-type "GtkWidget*")
+  (parameters
+    '("const gchar*" "plabel")
+  )
+)
+
+(define-method draw_indicator
+  (of-object "GtkCheckMenuItem")
+  (c-name "draw_indicator")
+  (return-type "none")
+  (parameters
+    '("cairo_t*" "pcr")
+  )
+)
+
+(define-method toggled
+  (of-object "GtkCheckMenuItem")
+  (c-name "toggled")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method get_active
+  (of-object "GtkCheckMenuItem")
+  (c-name "gtk_check_menu_item_get_active")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_draw_as_radio
+  (of-object "GtkCheckMenuItem")
+  (c-name "gtk_check_menu_item_get_draw_as_radio")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_inconsistent
+  (of-object "GtkCheckMenuItem")
+  (c-name "gtk_check_menu_item_get_inconsistent")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method set_active
+  (of-object "GtkCheckMenuItem")
+  (c-name "gtk_check_menu_item_set_active")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pis_active")
+  )
+)
+
+(define-method set_draw_as_radio
+  (of-object "GtkCheckMenuItem")
+  (c-name "gtk_check_menu_item_set_draw_as_radio")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pdraw_as_radio")
+  )
+)
+
+(define-method set_inconsistent
+  (of-object "GtkCheckMenuItem")
+  (c-name "gtk_check_menu_item_set_inconsistent")
+  (return-type "none")
+  (parameters
+    '("gboolean" "psetting")
+  )
+)
+

@@ -1,0 +1,78 @@
+(define-object CssSection
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkCssSection")
+)
+
+(define-method get_end_line
+  (of-object "GtkCssSection")
+  (c-name "gtk_css_section_get_end_line")
+  (return-type "guint")
+  (parameters
+  )
+)
+
+(define-method get_end_position
+  (of-object "GtkCssSection")
+  (c-name "gtk_css_section_get_end_position")
+  (return-type "guint")
+  (parameters
+  )
+)
+
+(define-method get_file
+  (of-object "GtkCssSection")
+  (c-name "gtk_css_section_get_file")
+  (return-type "GFile*")
+  (parameters
+  )
+)
+
+(define-method get_parent
+  (of-object "GtkCssSection")
+  (c-name "gtk_css_section_get_parent")
+  (return-type "GtkCssSection*")
+  (parameters
+  )
+)
+
+(define-method get_section_type
+  (of-object "GtkCssSection")
+  (c-name "gtk_css_section_get_section_type")
+  (return-type "GtkCssSectionType")
+  (parameters
+  )
+)
+
+(define-method get_start_line
+  (of-object "GtkCssSection")
+  (c-name "gtk_css_section_get_start_line")
+  (return-type "guint")
+  (parameters
+  )
+)
+
+(define-method get_start_position
+  (of-object "GtkCssSection")
+  (c-name "gtk_css_section_get_start_position")
+  (return-type "guint")
+  (parameters
+  )
+)
+
+(define-method ref
+  (of-object "GtkCssSection")
+  (c-name "gtk_css_section_ref")
+  (return-type "GtkCssSection*")
+  (parameters
+  )
+)
+
+(define-method unref
+  (of-object "GtkCssSection")
+  (c-name "gtk_css_section_unref")
+  (return-type "none")
+  (parameters
+  )
+)
+

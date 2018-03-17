@@ -1,0 +1,76 @@
+(define-object Plug
+  (in-module "Gtk")
+  (parent "Window")
+  (c-name "GtkPlug")
+)
+
+(define-function Plug_new
+  (is-constructor-of "GtkPlug")
+  (c-name "gtk_plug_new")
+  (return-type "GtkWidget*")
+  (parameters
+    '("Window" "psocket_id")
+  )
+)
+
+(define-function Plug_new_for_display
+  (is-constructor-of "GtkPlug")
+  (c-name "gtk_plug_new_for_display")
+  (return-type "GtkWidget*")
+  (parameters
+    '("GdkDisplay*" "pdisplay")
+    '("Window" "psocket_id")
+  )
+)
+
+(define-method embedded
+  (of-object "GtkPlug")
+  (c-name "embedded")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method construct
+  (of-object "GtkPlug")
+  (c-name "gtk_plug_construct")
+  (return-type "none")
+  (parameters
+    '("Window" "psocket_id")
+  )
+)
+
+(define-method construct_for_display
+  (of-object "GtkPlug")
+  (c-name "gtk_plug_construct_for_display")
+  (return-type "none")
+  (parameters
+    '("GdkDisplay*" "pdisplay")
+    '("Window" "psocket_id")
+  )
+)
+
+(define-method get_embedded
+  (of-object "GtkPlug")
+  (c-name "gtk_plug_get_embedded")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_id
+  (of-object "GtkPlug")
+  (c-name "gtk_plug_get_id")
+  (return-type "Window")
+  (parameters
+  )
+)
+
+(define-method get_socket_window
+  (of-object "GtkPlug")
+  (c-name "gtk_plug_get_socket_window")
+  (return-type "GdkWindow*")
+  (parameters
+  )
+)
+

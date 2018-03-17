@@ -1,0 +1,108 @@
+(define-object DragContext
+  (in-module "Gdk")
+  (import-header "gdk/gdk.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GdkDragContext")
+)
+
+(define-method get_actions
+  (of-object "GdkDragContext")
+  (c-name "gdk_drag_context_get_actions")
+  (return-type "GdkDragAction")
+  (parameters
+  )
+)
+
+(define-method get_dest_window
+  (of-object "GdkDragContext")
+  (c-name "gdk_drag_context_get_dest_window")
+  (return-type "GdkWindow*")
+  (parameters
+  )
+)
+
+(define-method get_device
+  (of-object "GdkDragContext")
+  (c-name "gdk_drag_context_get_device")
+  (return-type "GdkDevice*")
+  (parameters
+  )
+)
+
+(define-method get_drag_window
+  (of-object "GdkDragContext")
+  (c-name "gdk_drag_context_get_drag_window")
+  (return-type "GdkWindow*")
+  (parameters
+  )
+)
+
+(define-method get_protocol
+  (of-object "GdkDragContext")
+  (c-name "gdk_drag_context_get_protocol")
+  (return-type "GdkDragProtocol")
+  (parameters
+  )
+)
+
+(define-method get_selected_action
+  (of-object "GdkDragContext")
+  (c-name "gdk_drag_context_get_selected_action")
+  (return-type "GdkDragAction")
+  (parameters
+  )
+)
+
+(define-method get_source_window
+  (of-object "GdkDragContext")
+  (c-name "gdk_drag_context_get_source_window")
+  (return-type "GdkWindow*")
+  (parameters
+  )
+)
+
+(define-method get_suggested_action
+  (of-object "GdkDragContext")
+  (c-name "gdk_drag_context_get_suggested_action")
+  (return-type "GdkDragAction")
+  (parameters
+  )
+)
+
+(define-method list_targets
+  (of-object "GdkDragContext")
+  (c-name "gdk_drag_context_list_targets")
+  (return-type "GList*")
+  (parameters
+  )
+)
+
+(define-method manage_dnd
+  (of-object "GdkDragContext")
+  (c-name "gdk_drag_context_manage_dnd")
+  (return-type "gboolean")
+  (parameters
+    '("GdkWindow*" "pipc_window")
+    '("GdkDragAction" "pactions")
+  )
+)
+
+(define-method set_device
+  (of-object "GdkDragContext")
+  (c-name "gdk_drag_context_set_device")
+  (return-type "none")
+  (parameters
+    '("GdkDevice*" "pdevice")
+  )
+)
+
+(define-method set_hotspot
+  (of-object "GdkDragContext")
+  (c-name "gdk_drag_context_set_hotspot")
+  (return-type "none")
+  (parameters
+    '("gint" "phot_x")
+    '("gint" "phot_y")
+  )
+)
+

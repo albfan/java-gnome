@@ -1,0 +1,73 @@
+(define-object Revealer
+  (in-module "Gtk")
+  (parent "Bin")
+  (c-name "GtkRevealer")
+)
+
+(define-function Revealer_new
+  (is-constructor-of "GtkRevealer")
+  (c-name "gtk_revealer_new")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method get_child_revealed
+  (of-object "GtkRevealer")
+  (c-name "gtk_revealer_get_child_revealed")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_reveal_child
+  (of-object "GtkRevealer")
+  (c-name "gtk_revealer_get_reveal_child")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_transition_duration
+  (of-object "GtkRevealer")
+  (c-name "gtk_revealer_get_transition_duration")
+  (return-type "guint")
+  (parameters
+  )
+)
+
+(define-method get_transition_type
+  (of-object "GtkRevealer")
+  (c-name "gtk_revealer_get_transition_type")
+  (return-type "GtkRevealerTransitionType")
+  (parameters
+  )
+)
+
+(define-method set_reveal_child
+  (of-object "GtkRevealer")
+  (c-name "gtk_revealer_set_reveal_child")
+  (return-type "none")
+  (parameters
+    '("gboolean" "preveal_child")
+  )
+)
+
+(define-method set_transition_duration
+  (of-object "GtkRevealer")
+  (c-name "gtk_revealer_set_transition_duration")
+  (return-type "none")
+  (parameters
+    '("guint" "pduration")
+  )
+)
+
+(define-method set_transition_type
+  (of-object "GtkRevealer")
+  (c-name "gtk_revealer_set_transition_type")
+  (return-type "none")
+  (parameters
+    '("GtkRevealerTransitionType" "ptransition")
+  )
+)
+

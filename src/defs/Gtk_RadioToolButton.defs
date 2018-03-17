@@ -1,0 +1,61 @@
+(define-object RadioToolButton
+  (in-module "Gtk")
+  (parent "ToggleToolButton")
+  (c-name "GtkRadioToolButton")
+)
+
+(define-function RadioToolButton_new
+  (is-constructor-of "GtkRadioToolButton")
+  (c-name "gtk_radio_tool_button_new")
+  (return-type "GtkToolItem*")
+  (parameters
+    '("GSList*" "pgroup")
+  )
+)
+
+(define-function RadioToolButton_new_from_stock
+  (is-constructor-of "GtkRadioToolButton")
+  (c-name "gtk_radio_tool_button_new_from_stock")
+  (return-type "GtkToolItem*")
+  (parameters
+    '("GSList*" "pgroup")
+    '("const gchar*" "pstock_id")
+  )
+)
+
+(define-function RadioToolButton_new_from_widget
+  (is-constructor-of "GtkRadioToolButton")
+  (c-name "gtk_radio_tool_button_new_from_widget")
+  (return-type "GtkToolItem*")
+  (parameters
+    '("GtkRadioToolButton*" "pgroup")
+  )
+)
+
+(define-function RadioToolButton_new_with_stock_from_widget
+  (is-constructor-of "GtkRadioToolButton")
+  (c-name "gtk_radio_tool_button_new_with_stock_from_widget")
+  (return-type "GtkToolItem*")
+  (parameters
+    '("GtkRadioToolButton*" "pgroup")
+    '("const gchar*" "pstock_id")
+  )
+)
+
+(define-method get_group
+  (of-object "GtkRadioToolButton")
+  (c-name "gtk_radio_tool_button_get_group")
+  (return-type "GSList*")
+  (parameters
+  )
+)
+
+(define-method set_group
+  (of-object "GtkRadioToolButton")
+  (c-name "gtk_radio_tool_button_set_group")
+  (return-type "none")
+  (parameters
+    '("GSList*" "pgroup")
+  )
+)
+

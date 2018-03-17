@@ -1,0 +1,31 @@
+(define-object SeparatorToolItem
+  (in-module "Gtk")
+  (parent "ToolItem")
+  (c-name "GtkSeparatorToolItem")
+)
+
+(define-function SeparatorToolItem_new
+  (is-constructor-of "GtkSeparatorToolItem")
+  (c-name "gtk_separator_tool_item_new")
+  (return-type "GtkToolItem*")
+  (parameters
+  )
+)
+
+(define-method get_draw
+  (of-object "GtkSeparatorToolItem")
+  (c-name "gtk_separator_tool_item_get_draw")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method set_draw
+  (of-object "GtkSeparatorToolItem")
+  (c-name "gtk_separator_tool_item_set_draw")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pdraw")
+  )
+)
+

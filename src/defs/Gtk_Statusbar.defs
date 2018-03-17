@@ -1,0 +1,89 @@
+(define-object Statusbar
+  (in-module "Gtk")
+  (parent "Box")
+  (c-name "GtkStatusbar")
+)
+
+(define-function Statusbar_new
+  (is-constructor-of "GtkStatusbar")
+  (c-name "gtk_statusbar_new")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method text_popped
+  (of-object "GtkStatusbar")
+  (c-name "text_popped")
+  (return-type "none")
+  (parameters
+    '("guint" "pcontext_id")
+    '("const gchar*" "ptext")
+  )
+)
+
+(define-method text_pushed
+  (of-object "GtkStatusbar")
+  (c-name "text_pushed")
+  (return-type "none")
+  (parameters
+    '("guint" "pcontext_id")
+    '("const gchar*" "ptext")
+  )
+)
+
+(define-method get_context_id
+  (of-object "GtkStatusbar")
+  (c-name "gtk_statusbar_get_context_id")
+  (return-type "guint")
+  (parameters
+    '("const gchar*" "pcontext_description")
+  )
+)
+
+(define-method get_message_area
+  (of-object "GtkStatusbar")
+  (c-name "gtk_statusbar_get_message_area")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method pop
+  (of-object "GtkStatusbar")
+  (c-name "gtk_statusbar_pop")
+  (return-type "none")
+  (parameters
+    '("guint" "pcontext_id")
+  )
+)
+
+(define-method push
+  (of-object "GtkStatusbar")
+  (c-name "gtk_statusbar_push")
+  (return-type "guint")
+  (parameters
+    '("guint" "pcontext_id")
+    '("const gchar*" "ptext")
+  )
+)
+
+(define-method remove
+  (of-object "GtkStatusbar")
+  (c-name "gtk_statusbar_remove")
+  (return-type "none")
+  (parameters
+    '("guint" "pcontext_id")
+    '("guint" "pmessage_id")
+  )
+)
+
+(define-method remove_all
+  (of-object "GtkStatusbar")
+  (c-name "gtk_statusbar_remove_all")
+  (return-type "none")
+  (parameters
+    '("guint" "pcontext_id")
+  )
+)
+

@@ -1,0 +1,16 @@
+(define-object SoupAuthDialog
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "WebKitSoupAuthDialog")
+)
+
+(define-method current_toplevel
+  (of-object "WebKitSoupAuthDialog")
+  (c-name "current_toplevel")
+  (return-type "GtkWidget*")
+  (parameters
+    '("SoupMessage*" "pmessage")
+  )
+)
+

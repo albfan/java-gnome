@@ -1,0 +1,11 @@
+(define-enum IOStatus
+  (in-module "GLib")
+  (c-name "GIOStatus")
+  (values
+    '("error" "G_IO_STATUS_ERROR")
+    '("normal" "G_IO_STATUS_NORMAL")
+    '("eof" "G_IO_STATUS_EOF")
+    '("again" "G_IO_STATUS_AGAIN")
+  )
+)
+

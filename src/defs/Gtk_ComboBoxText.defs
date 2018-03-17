@@ -1,0 +1,106 @@
+(define-object ComboBoxText
+  (in-module "Gtk")
+  (parent "ComboBox")
+  (c-name "GtkComboBoxText")
+)
+
+(define-function ComboBoxText_new
+  (is-constructor-of "GtkComboBoxText")
+  (c-name "gtk_combo_box_text_new")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-function ComboBoxText_new_with_entry
+  (is-constructor-of "GtkComboBoxText")
+  (c-name "gtk_combo_box_text_new_with_entry")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method append
+  (of-object "GtkComboBoxText")
+  (c-name "gtk_combo_box_text_append")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pid")
+    '("const gchar*" "ptext")
+  )
+)
+
+(define-method append_text
+  (of-object "GtkComboBoxText")
+  (c-name "gtk_combo_box_text_append_text")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "ptext")
+  )
+)
+
+(define-method get_active_text
+  (of-object "GtkComboBoxText")
+  (c-name "gtk_combo_box_text_get_active_text")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+
+(define-method insert
+  (of-object "GtkComboBoxText")
+  (c-name "gtk_combo_box_text_insert")
+  (return-type "none")
+  (parameters
+    '("gint" "pposition")
+    '("const gchar*" "pid")
+    '("const gchar*" "ptext")
+  )
+)
+
+(define-method insert_text
+  (of-object "GtkComboBoxText")
+  (c-name "gtk_combo_box_text_insert_text")
+  (return-type "none")
+  (parameters
+    '("gint" "pposition")
+    '("const gchar*" "ptext")
+  )
+)
+
+(define-method prepend
+  (of-object "GtkComboBoxText")
+  (c-name "gtk_combo_box_text_prepend")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pid")
+    '("const gchar*" "ptext")
+  )
+)
+
+(define-method prepend_text
+  (of-object "GtkComboBoxText")
+  (c-name "gtk_combo_box_text_prepend_text")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "ptext")
+  )
+)
+
+(define-method remove
+  (of-object "GtkComboBoxText")
+  (c-name "gtk_combo_box_text_remove")
+  (return-type "none")
+  (parameters
+    '("gint" "pposition")
+  )
+)
+
+(define-method remove_all
+  (of-object "GtkComboBoxText")
+  (c-name "gtk_combo_box_text_remove_all")
+  (return-type "none")
+  (parameters
+  )
+)
+

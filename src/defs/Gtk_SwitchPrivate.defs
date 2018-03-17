@@ -1,0 +1,6 @@
+(define-object SwitchPrivate
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkSwitchPrivate")
+)
+

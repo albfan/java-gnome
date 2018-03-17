@@ -1,0 +1,6 @@
+(define-object FlowBoxChildAccessible
+  (in-module "Gtk")
+  (parent "ContainerAccessible")
+  (c-name "GtkFlowBoxChildAccessible")
+)
+

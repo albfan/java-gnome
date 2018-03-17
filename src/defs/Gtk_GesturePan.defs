@@ -1,0 +1,33 @@
+(define-object GesturePan
+  (in-module "Gtk")
+  (parent "GestureDrag")
+  (c-name "GtkGesturePan")
+)
+
+(define-function GesturePan_new
+  (is-constructor-of "GtkGesturePan")
+  (c-name "gtk_gesture_pan_new")
+  (return-type "GtkGesture*")
+  (parameters
+    '("GtkWidget*" "pwidget")
+    '("GtkOrientation" "porientation")
+  )
+)
+
+(define-method get_orientation
+  (of-object "GtkGesturePan")
+  (c-name "gtk_gesture_pan_get_orientation")
+  (return-type "GtkOrientation")
+  (parameters
+  )
+)
+
+(define-method set_orientation
+  (of-object "GtkGesturePan")
+  (c-name "gtk_gesture_pan_set_orientation")
+  (return-type "none")
+  (parameters
+    '("GtkOrientation" "porientation")
+  )
+)
+

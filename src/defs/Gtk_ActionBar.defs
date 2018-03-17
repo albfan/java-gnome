@@ -1,0 +1,49 @@
+(define-object ActionBar
+  (in-module "Gtk")
+  (parent "Bin")
+  (c-name "GtkActionBar")
+)
+
+(define-function ActionBar_new
+  (is-constructor-of "GtkActionBar")
+  (c-name "gtk_action_bar_new")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method get_center_widget
+  (of-object "GtkActionBar")
+  (c-name "gtk_action_bar_get_center_widget")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method pack_end
+  (of-object "GtkActionBar")
+  (c-name "gtk_action_bar_pack_end")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pchild")
+  )
+)
+
+(define-method pack_start
+  (of-object "GtkActionBar")
+  (c-name "gtk_action_bar_pack_start")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pchild")
+  )
+)
+
+(define-method set_center_widget
+  (of-object "GtkActionBar")
+  (c-name "gtk_action_bar_set_center_widget")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pcenter_widget")
+  )
+)
+

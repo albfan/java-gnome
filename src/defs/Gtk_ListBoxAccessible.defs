@@ -1,0 +1,6 @@
+(define-object ListBoxAccessible
+  (in-module "Gtk")
+  (parent "ContainerAccessible")
+  (c-name "GtkListBoxAccessible")
+)
+

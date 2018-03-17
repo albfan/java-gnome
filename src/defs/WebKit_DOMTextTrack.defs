@@ -1,0 +1,101 @@
+(define-object DOMTextTrack
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "DOMObject")
+  (c-name "WebKitDOMTextTrack")
+)
+
+(define-method add_cue
+  (of-object "WebKitDOMTextTrack")
+  (c-name "webkit_dom_text_track_add_cue")
+  (return-type "none")
+  (parameters
+    '("WebKitDOMTextTrackCue*" "pcue")
+  )
+)
+
+(define-method dispatch_event
+  (of-object "WebKitDOMTextTrack")
+  (c-name "webkit_dom_text_track_dispatch_event")
+  (return-type "gboolean")
+  (parameters
+    '("WebKitDOMEvent*" "pevt")
+    '("GError**" "error")
+  )
+)
+
+(define-method get_active_cues
+  (of-object "WebKitDOMTextTrack")
+  (c-name "webkit_dom_text_track_get_active_cues")
+  (return-type "WebKitDOMTextTrackCueList*")
+  (parameters
+  )
+)
+
+(define-method get_cues
+  (of-object "WebKitDOMTextTrack")
+  (c-name "webkit_dom_text_track_get_cues")
+  (return-type "WebKitDOMTextTrackCueList*")
+  (parameters
+  )
+)
+
+(define-method get_id
+  (of-object "WebKitDOMTextTrack")
+  (c-name "webkit_dom_text_track_get_id")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+
+(define-method get_kind
+  (of-object "WebKitDOMTextTrack")
+  (c-name "webkit_dom_text_track_get_kind")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+
+(define-method get_label
+  (of-object "WebKitDOMTextTrack")
+  (c-name "webkit_dom_text_track_get_label")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+
+(define-method get_language
+  (of-object "WebKitDOMTextTrack")
+  (c-name "webkit_dom_text_track_get_language")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+
+(define-method get_mode
+  (of-object "WebKitDOMTextTrack")
+  (c-name "webkit_dom_text_track_get_mode")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+
+(define-method remove_cue
+  (of-object "WebKitDOMTextTrack")
+  (c-name "webkit_dom_text_track_remove_cue")
+  (return-type "none")
+  (parameters
+    '("WebKitDOMTextTrackCue*" "pcue")
+    '("GError**" "error")
+  )
+)
+
+(define-method set_mode
+  (of-object "WebKitDOMTextTrack")
+  (c-name "webkit_dom_text_track_set_mode")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pvalue")
+  )
+)
+

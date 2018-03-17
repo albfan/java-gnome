@@ -1,0 +1,102 @@
+(define-object IconSet
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkIconSet")
+)
+
+(define-function IconSet_new
+  (is-constructor-of "GtkIconSet")
+  (c-name "gtk_icon_set_new")
+  (return-type "GtkIconSet*")
+  (parameters
+  )
+)
+
+(define-function IconSet_new_from_pixbuf
+  (is-constructor-of "GtkIconSet")
+  (c-name "gtk_icon_set_new_from_pixbuf")
+  (return-type "GtkIconSet*")
+  (parameters
+    '("GdkPixbuf*" "ppixbuf")
+  )
+)
+
+(define-method add_source
+  (of-object "GtkIconSet")
+  (c-name "gtk_icon_set_add_source")
+  (return-type "none")
+  (parameters
+    '("const GtkIconSource*" "psource")
+  )
+)
+
+(define-method copy
+  (of-object "GtkIconSet")
+  (c-name "gtk_icon_set_copy")
+  (return-type "GtkIconSet*")
+  (parameters
+  )
+)
+
+(define-method get_sizes
+  (of-object "GtkIconSet")
+  (c-name "gtk_icon_set_get_sizes")
+  (return-type "none")
+  (parameters
+    '("null" "psizes")
+    '("gint*" "pn_sizes")
+  )
+)
+
+(define-method ref
+  (of-object "GtkIconSet")
+  (c-name "gtk_icon_set_ref")
+  (return-type "GtkIconSet*")
+  (parameters
+  )
+)
+
+(define-method render_icon
+  (of-object "GtkIconSet")
+  (c-name "gtk_icon_set_render_icon")
+  (return-type "GdkPixbuf*")
+  (parameters
+    '("GtkStyle*" "pstyle")
+    '("GtkTextDirection" "pdirection")
+    '("GtkStateType" "pstate")
+    '("GtkIconSize" "psize")
+    '("GtkWidget*" "pwidget")
+    '("const gchar*" "pdetail")
+  )
+)
+
+(define-method render_icon_pixbuf
+  (of-object "GtkIconSet")
+  (c-name "gtk_icon_set_render_icon_pixbuf")
+  (return-type "GdkPixbuf*")
+  (parameters
+    '("GtkStyleContext*" "pcontext")
+    '("GtkIconSize" "psize")
+  )
+)
+
+(define-method render_icon_surface
+  (of-object "GtkIconSet")
+  (c-name "gtk_icon_set_render_icon_surface")
+  (return-type "cairo_surface_t*")
+  (parameters
+    '("GtkStyleContext*" "pcontext")
+    '("GtkIconSize" "psize")
+    '("int" "pscale")
+    '("GdkWindow*" "pfor_window")
+  )
+)
+
+(define-method unref
+  (of-object "GtkIconSet")
+  (c-name "gtk_icon_set_unref")
+  (return-type "none")
+  (parameters
+  )
+)
+

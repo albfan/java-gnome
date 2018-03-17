@@ -1,0 +1,10 @@
+(define-enum IMStatusStyle
+  (in-module "Gtk")
+  (c-name "GtkIMStatusStyle")
+  (values
+    '("nothing" "GTK_IM_STATUS_NOTHING")
+    '("callback" "GTK_IM_STATUS_CALLBACK")
+    '("none" "GTK_IM_STATUS_NONE")
+  )
+)
+

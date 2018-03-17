@@ -1,0 +1,43 @@
+(define-object DOMVideoTrackList
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "DOMObject")
+  (c-name "WebKitDOMVideoTrackList")
+)
+
+(define-method dispatch_event
+  (of-object "WebKitDOMVideoTrackList")
+  (c-name "webkit_dom_video_track_list_dispatch_event")
+  (return-type "gboolean")
+  (parameters
+    '("WebKitDOMEvent*" "pevt")
+    '("GError**" "error")
+  )
+)
+
+(define-method get_length
+  (of-object "WebKitDOMVideoTrackList")
+  (c-name "webkit_dom_video_track_list_get_length")
+  (return-type "gulong")
+  (parameters
+  )
+)
+
+(define-method get_track_by_id
+  (of-object "WebKitDOMVideoTrackList")
+  (c-name "webkit_dom_video_track_list_get_track_by_id")
+  (return-type "WebKitDOMVideoTrack*")
+  (parameters
+    '("const gchar*" "pid")
+  )
+)
+
+(define-method item
+  (of-object "WebKitDOMVideoTrackList")
+  (c-name "webkit_dom_video_track_list_item")
+  (return-type "WebKitDOMVideoTrack*")
+  (parameters
+    '("gulong" "pindex")
+  )
+)
+

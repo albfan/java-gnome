@@ -1,0 +1,76 @@
+(define-object DatagramBased
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GDatagramBased")
+)
+
+(define-method condition_check
+  (of-object "GDatagramBased")
+  (c-name "condition_check")
+  (return-type "GIOCondition")
+  (parameters
+    '("GIOCondition" "pcondition")
+  )
+)
+
+(define-method condition_wait
+  (of-object "GDatagramBased")
+  (c-name "condition_wait")
+  (return-type "gboolean")
+  (parameters
+    '("GIOCondition" "pcondition")
+    '("gint64" "ptimeout")
+    '("GCancellable*" "pcancellable")
+    '("GError**" "error")
+  )
+)
+
+(define-method create_source
+  (of-object "GDatagramBased")
+  (c-name "create_source")
+  (return-type "GSource*")
+  (parameters
+    '("GIOCondition" "pcondition")
+    '("GCancellable*" "pcancellable")
+  )
+)
+
+(define-method receive_messages
+  (of-object "GDatagramBased")
+  (c-name "receive_messages")
+  (return-type "gint")
+  (parameters
+    '("null" "pmessages")
+    '("guint" "pnum_messages")
+    '("gint" "pflags")
+    '("gint64" "ptimeout")
+    '("GCancellable*" "pcancellable")
+    '("GError**" "error")
+  )
+)
+
+(define-method send_messages
+  (of-object "GDatagramBased")
+  (c-name "send_messages")
+  (return-type "gint")
+  (parameters
+    '("null" "pmessages")
+    '("guint" "pnum_messages")
+    '("gint" "pflags")
+    '("gint64" "ptimeout")
+    '("GCancellable*" "pcancellable")
+    '("GError**" "error")
+  )
+)
+

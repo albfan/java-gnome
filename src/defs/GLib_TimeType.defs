@@ -1,0 +1,10 @@
+(define-enum TimeType
+  (in-module "GLib")
+  (c-name "GTimeType")
+  (values
+    '("standard" "G_TIME_TYPE_STANDARD")
+    '("daylight" "G_TIME_TYPE_DAYLIGHT")
+    '("universal" "G_TIME_TYPE_UNIVERSAL")
+  )
+)
+

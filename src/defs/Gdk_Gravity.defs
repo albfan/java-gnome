@@ -1,0 +1,17 @@
+(define-enum Gravity
+  (in-module "Gdk")
+  (c-name "GdkGravity")
+  (values
+    '("north_west" "GDK_GRAVITY_NORTH_WEST")
+    '("north" "GDK_GRAVITY_NORTH")
+    '("north_east" "GDK_GRAVITY_NORTH_EAST")
+    '("west" "GDK_GRAVITY_WEST")
+    '("center" "GDK_GRAVITY_CENTER")
+    '("east" "GDK_GRAVITY_EAST")
+    '("south_west" "GDK_GRAVITY_SOUTH_WEST")
+    '("south" "GDK_GRAVITY_SOUTH")
+    '("south_east" "GDK_GRAVITY_SOUTH_EAST")
+    '("static" "GDK_GRAVITY_STATIC")
+  )
+)
+

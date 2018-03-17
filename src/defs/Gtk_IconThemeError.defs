@@ -1,0 +1,9 @@
+(define-enum IconThemeError
+  (in-module "Gtk")
+  (c-name "GtkIconThemeError")
+  (values
+    '("not_found" "GTK_ICON_THEME_NOT_FOUND")
+    '("failed" "GTK_ICON_THEME_FAILED")
+  )
+)
+

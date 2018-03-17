@@ -1,0 +1,43 @@
+(define-object DevicePad
+  (in-module "Gdk")
+  (import-header "gdk/gdk.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GdkDevicePad")
+)
+
+(define-method get_feature_group
+  (of-object "GdkDevicePad")
+  (c-name "gdk_device_pad_get_feature_group")
+  (return-type "gint")
+  (parameters
+    '("GdkDevicePadFeature" "pfeature")
+    '("gint" "pfeature_idx")
+  )
+)
+
+(define-method get_group_n_modes
+  (of-object "GdkDevicePad")
+  (c-name "gdk_device_pad_get_group_n_modes")
+  (return-type "gint")
+  (parameters
+    '("gint" "pgroup_idx")
+  )
+)
+
+(define-method get_n_features
+  (of-object "GdkDevicePad")
+  (c-name "gdk_device_pad_get_n_features")
+  (return-type "gint")
+  (parameters
+    '("GdkDevicePadFeature" "pfeature")
+  )
+)
+
+(define-method get_n_groups
+  (of-object "GdkDevicePad")
+  (c-name "gdk_device_pad_get_n_groups")
+  (return-type "gint")
+  (parameters
+  )
+)
+

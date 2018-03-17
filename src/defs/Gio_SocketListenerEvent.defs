@@ -1,0 +1,11 @@
+(define-enum SocketListenerEvent
+  (in-module "Gio")
+  (c-name "GSocketListenerEvent")
+  (values
+    '("binding" "G_SOCKET_LISTENER_BINDING")
+    '("bound" "G_SOCKET_LISTENER_BOUND")
+    '("listening" "G_SOCKET_LISTENER_LISTENING")
+    '("listened" "G_SOCKET_LISTENER_LISTENED")
+  )
+)
+

@@ -1,0 +1,497 @@
+(define-object CellArea
+  (in-module "Gtk")
+  (parent "GObject.InitiallyUnowned")
+  (c-name "GtkCellArea")
+)
+
+(define-method activate
+  (of-object "GtkCellArea")
+  (c-name "activate")
+  (return-type "gboolean")
+  (parameters
+    '("GtkCellAreaContext*" "pcontext")
+    '("GtkWidget*" "pwidget")
+    '("const GdkRectangle*" "pcell_area")
+    '("GtkCellRendererState" "pflags")
+    '("gboolean" "pedit_only")
+  )
+)
+
+(define-method add
+  (of-object "GtkCellArea")
+  (c-name "add")
+  (return-type "none")
+  (parameters
+    '("GtkCellRenderer*" "prenderer")
+  )
+)
+
+(define-method apply_attributes
+  (of-object "GtkCellArea")
+  (c-name "apply_attributes")
+  (return-type "none")
+  (parameters
+    '("GtkTreeModel*" "ptree_model")
+    '("GtkTreeIter*" "piter")
+    '("gboolean" "pis_expander")
+    '("gboolean" "pis_expanded")
+  )
+)
+
+(define-method copy_context
+  (of-object "GtkCellArea")
+  (c-name "copy_context")
+  (return-type "GtkCellAreaContext*")
+  (parameters
+    '("GtkCellAreaContext*" "pcontext")
+  )
+)
+
+(define-method create_context
+  (of-object "GtkCellArea")
+  (c-name "create_context")
+  (return-type "GtkCellAreaContext*")
+  (parameters
+  )
+)
+
+(define-method event
+  (of-object "GtkCellArea")
+  (c-name "event")
+  (return-type "gint")
+  (parameters
+    '("GtkCellAreaContext*" "pcontext")
+    '("GtkWidget*" "pwidget")
+    '("GdkEvent*" "pevent")
+    '("const GdkRectangle*" "pcell_area")
+    '("GtkCellRendererState" "pflags")
+  )
+)
+
+(define-method focus
+  (of-object "GtkCellArea")
+  (c-name "focus")
+  (return-type "gboolean")
+  (parameters
+    '("GtkDirectionType" "pdirection")
+  )
+)
+
+(define-method foreach
+  (of-object "GtkCellArea")
+  (c-name "foreach")
+  (return-type "none")
+  (parameters
+    '("GtkCellCallback" "pcallback")
+    '("gpointer" "pcallback_data")
+  )
+)
+
+(define-method foreach_alloc
+  (of-object "GtkCellArea")
+  (c-name "foreach_alloc")
+  (return-type "none")
+  (parameters
+    '("GtkCellAreaContext*" "pcontext")
+    '("GtkWidget*" "pwidget")
+    '("const GdkRectangle*" "pcell_area")
+    '("const GdkRectangle*" "pbackground_area")
+    '("GtkCellAllocCallback" "pcallback")
+    '("gpointer" "pcallback_data")
+  )
+)
+
+(define-method get_cell_property
+  (of-object "GtkCellArea")
+  (c-name "get_cell_property")
+  (return-type "none")
+  (parameters
+    '("GtkCellRenderer*" "prenderer")
+    '("guint" "pproperty_id")
+    '("GValue*" "pvalue")
+    '("GParamSpec*" "ppspec")
+  )
+)
+
+(define-method get_preferred_height
+  (of-object "GtkCellArea")
+  (c-name "get_preferred_height")
+  (return-type "none")
+  (parameters
+    '("GtkCellAreaContext*" "pcontext")
+    '("GtkWidget*" "pwidget")
+    '("gint*" "pminimum_height")
+    '("gint*" "pnatural_height")
+  )
+)
+
+(define-method get_preferred_height_for_width
+  (of-object "GtkCellArea")
+  (c-name "get_preferred_height_for_width")
+  (return-type "none")
+  (parameters
+    '("GtkCellAreaContext*" "pcontext")
+    '("GtkWidget*" "pwidget")
+    '("gint" "pwidth")
+    '("gint*" "pminimum_height")
+    '("gint*" "pnatural_height")
+  )
+)
+
+(define-method get_preferred_width
+  (of-object "GtkCellArea")
+  (c-name "get_preferred_width")
+  (return-type "none")
+  (parameters
+    '("GtkCellAreaContext*" "pcontext")
+    '("GtkWidget*" "pwidget")
+    '("gint*" "pminimum_width")
+    '("gint*" "pnatural_width")
+  )
+)
+
+(define-method get_preferred_width_for_height
+  (of-object "GtkCellArea")
+  (c-name "get_preferred_width_for_height")
+  (return-type "none")
+  (parameters
+    '("GtkCellAreaContext*" "pcontext")
+    '("GtkWidget*" "pwidget")
+    '("gint" "pheight")
+    '("gint*" "pminimum_width")
+    '("gint*" "pnatural_width")
+  )
+)
+
+(define-method get_request_mode
+  (of-object "GtkCellArea")
+  (c-name "get_request_mode")
+  (return-type "GtkSizeRequestMode")
+  (parameters
+  )
+)
+
+(define-method is_activatable
+  (of-object "GtkCellArea")
+  (c-name "is_activatable")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method remove
+  (of-object "GtkCellArea")
+  (c-name "remove")
+  (return-type "none")
+  (parameters
+    '("GtkCellRenderer*" "prenderer")
+  )
+)
+
+(define-method render
+  (of-object "GtkCellArea")
+  (c-name "render")
+  (return-type "none")
+  (parameters
+    '("GtkCellAreaContext*" "pcontext")
+    '("GtkWidget*" "pwidget")
+    '("cairo_t*" "pcr")
+    '("const GdkRectangle*" "pbackground_area")
+    '("const GdkRectangle*" "pcell_area")
+    '("GtkCellRendererState" "pflags")
+    '("gboolean" "ppaint_focus")
+  )
+)
+
+(define-method set_cell_property
+  (of-object "GtkCellArea")
+  (c-name "set_cell_property")
+  (return-type "none")
+  (parameters
+    '("GtkCellRenderer*" "prenderer")
+    '("guint" "pproperty_id")
+    '("const GValue*" "pvalue")
+    '("GParamSpec*" "ppspec")
+  )
+)
+
+(define-method activate_cell
+  (of-object "GtkCellArea")
+  (c-name "gtk_cell_area_activate_cell")
+  (return-type "gboolean")
+  (parameters
+    '("GtkWidget*" "pwidget")
+    '("GtkCellRenderer*" "prenderer")
+    '("GdkEvent*" "pevent")
+    '("const GdkRectangle*" "pcell_area")
+    '("GtkCellRendererState" "pflags")
+  )
+)
+
+(define-method add_focus_sibling
+  (of-object "GtkCellArea")
+  (c-name "gtk_cell_area_add_focus_sibling")
+  (return-type "none")
+  (parameters
+    '("GtkCellRenderer*" "prenderer")
+    '("GtkCellRenderer*" "psibling")
+  )
+)
+
+(define-method add_with_properties
+  (of-object "GtkCellArea")
+  (c-name "gtk_cell_area_add_with_properties")
+  (return-type "none")
+  (parameters
+    '("GtkCellRenderer*" "prenderer")
+    '("const gchar*" "pfirst_prop_name")
+    '("null" "p...")
+  )
+)
+
+(define-method attribute_connect
+  (of-object "GtkCellArea")
+  (c-name "gtk_cell_area_attribute_connect")
+  (return-type "none")
+  (parameters
+    '("GtkCellRenderer*" "prenderer")
+    '("const gchar*" "pattribute")
+    '("gint" "pcolumn")
+  )
+)
+
+(define-method attribute_disconnect
+  (of-object "GtkCellArea")
+  (c-name "gtk_cell_area_attribute_disconnect")
+  (return-type "none")
+  (parameters
+    '("GtkCellRenderer*" "prenderer")
+    '("const gchar*" "pattribute")
+  )
+)
+
+(define-method attribute_get_column
+  (of-object "GtkCellArea")
+  (c-name "gtk_cell_area_attribute_get_column")
+  (return-type "gint")
+  (parameters
+    '("GtkCellRenderer*" "prenderer")
+    '("const gchar*" "pattribute")
+  )
+)
+
+(define-method cell_get
+  (of-object "GtkCellArea")
+  (c-name "gtk_cell_area_cell_get")
+  (return-type "none")
+  (parameters
+    '("GtkCellRenderer*" "prenderer")
+    '("const gchar*" "pfirst_prop_name")
+    '("null" "p...")
+  )
+)
+
+(define-method cell_get_property
+  (of-object "GtkCellArea")
+  (c-name "gtk_cell_area_cell_get_property")
+  (return-type "none")
+  (parameters
+    '("GtkCellRenderer*" "prenderer")
+    '("const gchar*" "pproperty_name")
+    '("GValue*" "pvalue")
+  )
+)
+
+(define-method cell_get_valist
+  (of-object "GtkCellArea")
+  (c-name "gtk_cell_area_cell_get_valist")
+  (return-type "none")
+  (parameters
+    '("GtkCellRenderer*" "prenderer")
+    '("const gchar*" "pfirst_property_name")
+    '("va_list" "pvar_args")
+  )
+)
+
+(define-method cell_set
+  (of-object "GtkCellArea")
+  (c-name "gtk_cell_area_cell_set")
+  (return-type "none")
+  (parameters
+    '("GtkCellRenderer*" "prenderer")
+    '("const gchar*" "pfirst_prop_name")
+    '("null" "p...")
+  )
+)
+
+(define-method cell_set_property
+  (of-object "GtkCellArea")
+  (c-name "gtk_cell_area_cell_set_property")
+  (return-type "none")
+  (parameters
+    '("GtkCellRenderer*" "prenderer")
+    '("const gchar*" "pproperty_name")
+    '("const GValue*" "pvalue")
+  )
+)
+
+(define-method cell_set_valist
+  (of-object "GtkCellArea")
+  (c-name "gtk_cell_area_cell_set_valist")
+  (return-type "none")
+  (parameters
+    '("GtkCellRenderer*" "prenderer")
+    '("const gchar*" "pfirst_property_name")
+    '("va_list" "pvar_args")
+  )
+)
+
+(define-method get_cell_allocation
+  (of-object "GtkCellArea")
+  (c-name "gtk_cell_area_get_cell_allocation")
+  (return-type "none")
+  (parameters
+    '("GtkCellAreaContext*" "pcontext")
+    '("GtkWidget*" "pwidget")
+    '("GtkCellRenderer*" "prenderer")
+    '("const GdkRectangle*" "pcell_area")
+    '("GdkRectangle*" "pallocation")
+  )
+)
+
+(define-method get_cell_at_position
+  (of-object "GtkCellArea")
+  (c-name "gtk_cell_area_get_cell_at_position")
+  (return-type "GtkCellRenderer*")
+  (parameters
+    '("GtkCellAreaContext*" "pcontext")
+    '("GtkWidget*" "pwidget")
+    '("const GdkRectangle*" "pcell_area")
+    '("gint" "px")
+    '("gint" "py")
+    '("GdkRectangle*" "palloc_area")
+  )
+)
+
+(define-method get_current_path_string
+  (of-object "GtkCellArea")
+  (c-name "gtk_cell_area_get_current_path_string")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_edit_widget
+  (of-object "GtkCellArea")
+  (c-name "gtk_cell_area_get_edit_widget")
+  (return-type "GtkCellEditable*")
+  (parameters
+  )
+)
+
+(define-method get_edited_cell
+  (of-object "GtkCellArea")
+  (c-name "gtk_cell_area_get_edited_cell")
+  (return-type "GtkCellRenderer*")
+  (parameters
+  )
+)
+
+(define-method get_focus_cell
+  (of-object "GtkCellArea")
+  (c-name "gtk_cell_area_get_focus_cell")
+  (return-type "GtkCellRenderer*")
+  (parameters
+  )
+)
+
+(define-method get_focus_from_sibling
+  (of-object "GtkCellArea")
+  (c-name "gtk_cell_area_get_focus_from_sibling")
+  (return-type "GtkCellRenderer*")
+  (parameters
+    '("GtkCellRenderer*" "prenderer")
+  )
+)
+
+(define-method get_focus_siblings
+  (of-object "GtkCellArea")
+  (c-name "gtk_cell_area_get_focus_siblings")
+  (return-type "const GList*")
+  (parameters
+    '("GtkCellRenderer*" "prenderer")
+  )
+)
+
+(define-method has_renderer
+  (of-object "GtkCellArea")
+  (c-name "gtk_cell_area_has_renderer")
+  (return-type "gboolean")
+  (parameters
+    '("GtkCellRenderer*" "prenderer")
+  )
+)
+
+(define-method inner_cell_area
+  (of-object "GtkCellArea")
+  (c-name "gtk_cell_area_inner_cell_area")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pwidget")
+    '("const GdkRectangle*" "pcell_area")
+    '("GdkRectangle*" "pinner_area")
+  )
+)
+
+(define-method is_focus_sibling
+  (of-object "GtkCellArea")
+  (c-name "gtk_cell_area_is_focus_sibling")
+  (return-type "gboolean")
+  (parameters
+    '("GtkCellRenderer*" "prenderer")
+    '("GtkCellRenderer*" "psibling")
+  )
+)
+
+(define-method remove_focus_sibling
+  (of-object "GtkCellArea")
+  (c-name "gtk_cell_area_remove_focus_sibling")
+  (return-type "none")
+  (parameters
+    '("GtkCellRenderer*" "prenderer")
+    '("GtkCellRenderer*" "psibling")
+  )
+)
+
+(define-method request_renderer
+  (of-object "GtkCellArea")
+  (c-name "gtk_cell_area_request_renderer")
+  (return-type "none")
+  (parameters
+    '("GtkCellRenderer*" "prenderer")
+    '("GtkOrientation" "porientation")
+    '("GtkWidget*" "pwidget")
+    '("gint" "pfor_size")
+    '("gint*" "pminimum_size")
+    '("gint*" "pnatural_size")
+  )
+)
+
+(define-method set_focus_cell
+  (of-object "GtkCellArea")
+  (c-name "gtk_cell_area_set_focus_cell")
+  (return-type "none")
+  (parameters
+    '("GtkCellRenderer*" "prenderer")
+  )
+)
+
+(define-method stop_editing
+  (of-object "GtkCellArea")
+  (c-name "gtk_cell_area_stop_editing")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pcanceled")
+  )
+)
+

@@ -1,0 +1,85 @@
+(define-object Gradient
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkGradient")
+)
+
+(define-function Gradient_new_linear
+  (is-constructor-of "GtkGradient")
+  (c-name "gtk_gradient_new_linear")
+  (return-type "GtkGradient*")
+  (parameters
+    '("gdouble" "px0")
+    '("gdouble" "py0")
+    '("gdouble" "px1")
+    '("gdouble" "py1")
+  )
+)
+
+(define-function Gradient_new_radial
+  (is-constructor-of "GtkGradient")
+  (c-name "gtk_gradient_new_radial")
+  (return-type "GtkGradient*")
+  (parameters
+    '("gdouble" "px0")
+    '("gdouble" "py0")
+    '("gdouble" "pradius0")
+    '("gdouble" "px1")
+    '("gdouble" "py1")
+    '("gdouble" "pradius1")
+  )
+)
+
+(define-method add_color_stop
+  (of-object "GtkGradient")
+  (c-name "gtk_gradient_add_color_stop")
+  (return-type "none")
+  (parameters
+    '("gdouble" "poffset")
+    '("GtkSymbolicColor*" "pcolor")
+  )
+)
+
+(define-method ref
+  (of-object "GtkGradient")
+  (c-name "gtk_gradient_ref")
+  (return-type "GtkGradient*")
+  (parameters
+  )
+)
+
+(define-method resolve
+  (of-object "GtkGradient")
+  (c-name "gtk_gradient_resolve")
+  (return-type "gboolean")
+  (parameters
+    '("GtkStyleProperties*" "pprops")
+    '("cairo_pattern_t**" "presolved_gradient")
+  )
+)
+
+(define-method resolve_for_context
+  (of-object "GtkGradient")
+  (c-name "gtk_gradient_resolve_for_context")
+  (return-type "cairo_pattern_t*")
+  (parameters
+    '("GtkStyleContext*" "pcontext")
+  )
+)
+
+(define-method to_string
+  (of-object "GtkGradient")
+  (c-name "gtk_gradient_to_string")
+  (return-type "char*")
+  (parameters
+  )
+)
+
+(define-method unref
+  (of-object "GtkGradient")
+  (c-name "gtk_gradient_unref")
+  (return-type "none")
+  (parameters
+  )
+)
+

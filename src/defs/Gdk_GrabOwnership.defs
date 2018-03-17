@@ -1,0 +1,10 @@
+(define-enum GrabOwnership
+  (in-module "Gdk")
+  (c-name "GdkGrabOwnership")
+  (values
+    '("none" "GDK_OWNERSHIP_NONE")
+    '("window" "GDK_OWNERSHIP_WINDOW")
+    '("application" "GDK_OWNERSHIP_APPLICATION")
+  )
+)
+

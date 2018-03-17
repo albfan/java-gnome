@@ -1,0 +1,71 @@
+(define-object Seat
+  (in-module "Gdk")
+  (import-header "gdk/gdk.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GdkSeat")
+)
+
+(define-method get_capabilities
+  (of-object "GdkSeat")
+  (c-name "gdk_seat_get_capabilities")
+  (return-type "GdkSeatCapabilities")
+  (parameters
+  )
+)
+
+(define-method get_display
+  (of-object "GdkSeat")
+  (c-name "gdk_seat_get_display")
+  (return-type "GdkDisplay*")
+  (parameters
+  )
+)
+
+(define-method get_keyboard
+  (of-object "GdkSeat")
+  (c-name "gdk_seat_get_keyboard")
+  (return-type "GdkDevice*")
+  (parameters
+  )
+)
+
+(define-method get_pointer
+  (of-object "GdkSeat")
+  (c-name "gdk_seat_get_pointer")
+  (return-type "GdkDevice*")
+  (parameters
+  )
+)
+
+(define-method get_slaves
+  (of-object "GdkSeat")
+  (c-name "gdk_seat_get_slaves")
+  (return-type "GList*")
+  (parameters
+    '("GdkSeatCapabilities" "pcapabilities")
+  )
+)
+
+(define-method grab
+  (of-object "GdkSeat")
+  (c-name "gdk_seat_grab")
+  (return-type "GdkGrabStatus")
+  (parameters
+    '("GdkWindow*" "pwindow")
+    '("GdkSeatCapabilities" "pcapabilities")
+    '("gboolean" "powner_events")
+    '("GdkCursor*" "pcursor")
+    '("const GdkEvent*" "pevent")
+    '("GdkSeatGrabPrepareFunc" "pprepare_func")
+    '("gpointer" "pprepare_func_data")
+  )
+)
+
+(define-method ungrab
+  (of-object "GdkSeat")
+  (c-name "gdk_seat_ungrab")
+  (return-type "none")
+  (parameters
+  )
+)
+

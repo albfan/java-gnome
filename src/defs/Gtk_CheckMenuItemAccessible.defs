@@ -1,0 +1,6 @@
+(define-object CheckMenuItemAccessible
+  (in-module "Gtk")
+  (parent "MenuItemAccessible")
+  (c-name "GtkCheckMenuItemAccessible")
+)
+

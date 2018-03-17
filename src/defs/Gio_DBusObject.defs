@@ -1,0 +1,60 @@
+(define-object DBusObject
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GDBusObject")
+)
+
+(define-method get_interface
+  (of-object "GDBusObject")
+  (c-name "get_interface")
+  (return-type "GDBusInterface*")
+  (parameters
+    '("const gchar*" "pinterface_name")
+  )
+)
+
+(define-method get_interfaces
+  (of-object "GDBusObject")
+  (c-name "get_interfaces")
+  (return-type "GList*")
+  (parameters
+  )
+)
+
+(define-method get_object_path
+  (of-object "GDBusObject")
+  (c-name "get_object_path")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method interface_added
+  (of-object "GDBusObject")
+  (c-name "interface_added")
+  (return-type "none")
+  (parameters
+    '("GDBusInterface*" "pinterface_")
+  )
+)
+
+(define-method interface_removed
+  (of-object "GDBusObject")
+  (c-name "interface_removed")
+  (return-type "none")
+  (parameters
+    '("GDBusInterface*" "pinterface_")
+  )
+)
+

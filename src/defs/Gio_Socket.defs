@@ -1,0 +1,568 @@
+(define-object Socket
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GSocket")
+)
+
+(define-function Socket_new
+  (is-constructor-of "GSocket")
+  (c-name "g_socket_new")
+  (return-type "GSocket*")
+  (parameters
+    '("GSocketFamily" "pfamily")
+    '("GSocketType" "ptype")
+    '("GSocketProtocol" "pprotocol")
+    '("GError**" "error")
+  )
+)
+
+(define-function Socket_new_from_fd
+  (is-constructor-of "GSocket")
+  (c-name "g_socket_new_from_fd")
+  (return-type "GSocket*")
+  (parameters
+    '("gint" "pfd")
+    '("GError**" "error")
+  )
+)
+
+(define-method accept
+  (of-object "GSocket")
+  (c-name "g_socket_accept")
+  (return-type "GSocket*")
+  (parameters
+    '("GCancellable*" "pcancellable")
+    '("GError**" "error")
+  )
+)
+
+(define-method bind
+  (of-object "GSocket")
+  (c-name "g_socket_bind")
+  (return-type "gboolean")
+  (parameters
+    '("GSocketAddress*" "paddress")
+    '("gboolean" "pallow_reuse")
+    '("GError**" "error")
+  )
+)
+
+(define-method check_connect_result
+  (of-object "GSocket")
+  (c-name "g_socket_check_connect_result")
+  (return-type "gboolean")
+  (parameters
+    '("GError**" "error")
+  )
+)
+
+(define-method close
+  (of-object "GSocket")
+  (c-name "g_socket_close")
+  (return-type "gboolean")
+  (parameters
+    '("GError**" "error")
+  )
+)
+
+(define-method condition_check
+  (of-object "GSocket")
+  (c-name "g_socket_condition_check")
+  (return-type "GIOCondition")
+  (parameters
+    '("GIOCondition" "pcondition")
+  )
+)
+
+(define-method condition_timed_wait
+  (of-object "GSocket")
+  (c-name "g_socket_condition_timed_wait")
+  (return-type "gboolean")
+  (parameters
+    '("GIOCondition" "pcondition")
+    '("gint64" "ptimeout")
+    '("GCancellable*" "pcancellable")
+    '("GError**" "error")
+  )
+)
+
+(define-method condition_wait
+  (of-object "GSocket")
+  (c-name "g_socket_condition_wait")
+  (return-type "gboolean")
+  (parameters
+    '("GIOCondition" "pcondition")
+    '("GCancellable*" "pcancellable")
+    '("GError**" "error")
+  )
+)
+
+(define-method connect
+  (of-object "GSocket")
+  (c-name "g_socket_connect")
+  (return-type "gboolean")
+  (parameters
+    '("GSocketAddress*" "paddress")
+    '("GCancellable*" "pcancellable")
+    '("GError**" "error")
+  )
+)
+
+(define-method connection_factory_create_connection
+  (of-object "GSocket")
+  (c-name "g_socket_connection_factory_create_connection")
+  (return-type "GSocketConnection*")
+  (parameters
+  )
+)
+
+(define-method create_source
+  (of-object "GSocket")
+  (c-name "g_socket_create_source")
+  (return-type "GSource*")
+  (parameters
+    '("GIOCondition" "pcondition")
+    '("GCancellable*" "pcancellable")
+  )
+)
+
+(define-method get_available_bytes
+  (of-object "GSocket")
+  (c-name "g_socket_get_available_bytes")
+  (return-type "gssize")
+  (parameters
+  )
+)
+
+(define-method get_blocking
+  (of-object "GSocket")
+  (c-name "g_socket_get_blocking")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_broadcast
+  (of-object "GSocket")
+  (c-name "g_socket_get_broadcast")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_credentials
+  (of-object "GSocket")
+  (c-name "g_socket_get_credentials")
+  (return-type "GCredentials*")
+  (parameters
+    '("GError**" "error")
+  )
+)
+
+(define-method get_family
+  (of-object "GSocket")
+  (c-name "g_socket_get_family")
+  (return-type "GSocketFamily")
+  (parameters
+  )
+)
+
+(define-method get_fd
+  (of-object "GSocket")
+  (c-name "g_socket_get_fd")
+  (return-type "int")
+  (parameters
+  )
+)
+
+(define-method get_keepalive
+  (of-object "GSocket")
+  (c-name "g_socket_get_keepalive")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_listen_backlog
+  (of-object "GSocket")
+  (c-name "g_socket_get_listen_backlog")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_local_address
+  (of-object "GSocket")
+  (c-name "g_socket_get_local_address")
+  (return-type "GSocketAddress*")
+  (parameters
+    '("GError**" "error")
+  )
+)
+
+(define-method get_multicast_loopback
+  (of-object "GSocket")
+  (c-name "g_socket_get_multicast_loopback")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_multicast_ttl
+  (of-object "GSocket")
+  (c-name "g_socket_get_multicast_ttl")
+  (return-type "guint")
+  (parameters
+  )
+)
+
+(define-method get_option
+  (of-object "GSocket")
+  (c-name "g_socket_get_option")
+  (return-type "gboolean")
+  (parameters
+    '("gint" "plevel")
+    '("gint" "poptname")
+    '("gint*" "pvalue")
+    '("GError**" "error")
+  )
+)
+
+(define-method get_protocol
+  (of-object "GSocket")
+  (c-name "g_socket_get_protocol")
+  (return-type "GSocketProtocol")
+  (parameters
+  )
+)
+
+(define-method get_remote_address
+  (of-object "GSocket")
+  (c-name "g_socket_get_remote_address")
+  (return-type "GSocketAddress*")
+  (parameters
+    '("GError**" "error")
+  )
+)
+
+(define-method get_socket_type
+  (of-object "GSocket")
+  (c-name "g_socket_get_socket_type")
+  (return-type "GSocketType")
+  (parameters
+  )
+)
+
+(define-method get_timeout
+  (of-object "GSocket")
+  (c-name "g_socket_get_timeout")
+  (return-type "guint")
+  (parameters
+  )
+)
+
+(define-method get_ttl
+  (of-object "GSocket")
+  (c-name "g_socket_get_ttl")
+  (return-type "guint")
+  (parameters
+  )
+)
+
+(define-method is_closed
+  (of-object "GSocket")
+  (c-name "g_socket_is_closed")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method is_connected
+  (of-object "GSocket")
+  (c-name "g_socket_is_connected")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method join_multicast_group
+  (of-object "GSocket")
+  (c-name "g_socket_join_multicast_group")
+  (return-type "gboolean")
+  (parameters
+    '("GInetAddress*" "pgroup")
+    '("gboolean" "psource_specific")
+    '("const gchar*" "piface")
+    '("GError**" "error")
+  )
+)
+
+(define-method leave_multicast_group
+  (of-object "GSocket")
+  (c-name "g_socket_leave_multicast_group")
+  (return-type "gboolean")
+  (parameters
+    '("GInetAddress*" "pgroup")
+    '("gboolean" "psource_specific")
+    '("const gchar*" "piface")
+    '("GError**" "error")
+  )
+)
+
+(define-method listen
+  (of-object "GSocket")
+  (c-name "g_socket_listen")
+  (return-type "gboolean")
+  (parameters
+    '("GError**" "error")
+  )
+)
+
+(define-method receive
+  (of-object "GSocket")
+  (c-name "g_socket_receive")
+  (return-type "gssize")
+  (parameters
+    '("null" "pbuffer")
+    '("gsize" "psize")
+    '("GCancellable*" "pcancellable")
+    '("GError**" "error")
+  )
+)
+
+(define-method receive_from
+  (of-object "GSocket")
+  (c-name "g_socket_receive_from")
+  (return-type "gssize")
+  (parameters
+    '("GSocketAddress**" "paddress")
+    '("null" "pbuffer")
+    '("gsize" "psize")
+    '("GCancellable*" "pcancellable")
+    '("GError**" "error")
+  )
+)
+
+(define-method receive_message
+  (of-object "GSocket")
+  (c-name "g_socket_receive_message")
+  (return-type "gssize")
+  (parameters
+    '("GSocketAddress**" "paddress")
+    '("null" "pvectors")
+    '("gint" "pnum_vectors")
+    '("null" "pmessages")
+    '("gint*" "pnum_messages")
+    '("gint*" "pflags")
+    '("GCancellable*" "pcancellable")
+    '("GError**" "error")
+  )
+)
+
+(define-method receive_messages
+  (of-object "GSocket")
+  (c-name "g_socket_receive_messages")
+  (return-type "gint")
+  (parameters
+    '("null" "pmessages")
+    '("guint" "pnum_messages")
+    '("gint" "pflags")
+    '("GCancellable*" "pcancellable")
+    '("GError**" "error")
+  )
+)
+
+(define-method receive_with_blocking
+  (of-object "GSocket")
+  (c-name "g_socket_receive_with_blocking")
+  (return-type "gssize")
+  (parameters
+    '("null" "pbuffer")
+    '("gsize" "psize")
+    '("gboolean" "pblocking")
+    '("GCancellable*" "pcancellable")
+    '("GError**" "error")
+  )
+)
+
+(define-method send
+  (of-object "GSocket")
+  (c-name "g_socket_send")
+  (return-type "gssize")
+  (parameters
+    '("null" "pbuffer")
+    '("gsize" "psize")
+    '("GCancellable*" "pcancellable")
+    '("GError**" "error")
+  )
+)
+
+(define-method send_message
+  (of-object "GSocket")
+  (c-name "g_socket_send_message")
+  (return-type "gssize")
+  (parameters
+    '("GSocketAddress*" "paddress")
+    '("null" "pvectors")
+    '("gint" "pnum_vectors")
+    '("null" "pmessages")
+    '("gint" "pnum_messages")
+    '("gint" "pflags")
+    '("GCancellable*" "pcancellable")
+    '("GError**" "error")
+  )
+)
+
+(define-method send_messages
+  (of-object "GSocket")
+  (c-name "g_socket_send_messages")
+  (return-type "gint")
+  (parameters
+    '("null" "pmessages")
+    '("guint" "pnum_messages")
+    '("gint" "pflags")
+    '("GCancellable*" "pcancellable")
+    '("GError**" "error")
+  )
+)
+
+(define-method send_to
+  (of-object "GSocket")
+  (c-name "g_socket_send_to")
+  (return-type "gssize")
+  (parameters
+    '("GSocketAddress*" "paddress")
+    '("null" "pbuffer")
+    '("gsize" "psize")
+    '("GCancellable*" "pcancellable")
+    '("GError**" "error")
+  )
+)
+
+(define-method send_with_blocking
+  (of-object "GSocket")
+  (c-name "g_socket_send_with_blocking")
+  (return-type "gssize")
+  (parameters
+    '("null" "pbuffer")
+    '("gsize" "psize")
+    '("gboolean" "pblocking")
+    '("GCancellable*" "pcancellable")
+    '("GError**" "error")
+  )
+)
+
+(define-method set_blocking
+  (of-object "GSocket")
+  (c-name "g_socket_set_blocking")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pblocking")
+  )
+)
+
+(define-method set_broadcast
+  (of-object "GSocket")
+  (c-name "g_socket_set_broadcast")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pbroadcast")
+  )
+)
+
+(define-method set_keepalive
+  (of-object "GSocket")
+  (c-name "g_socket_set_keepalive")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pkeepalive")
+  )
+)
+
+(define-method set_listen_backlog
+  (of-object "GSocket")
+  (c-name "g_socket_set_listen_backlog")
+  (return-type "none")
+  (parameters
+    '("gint" "pbacklog")
+  )
+)
+
+(define-method set_multicast_loopback
+  (of-object "GSocket")
+  (c-name "g_socket_set_multicast_loopback")
+  (return-type "none")
+  (parameters
+    '("gboolean" "ploopback")
+  )
+)
+
+(define-method set_multicast_ttl
+  (of-object "GSocket")
+  (c-name "g_socket_set_multicast_ttl")
+  (return-type "none")
+  (parameters
+    '("guint" "pttl")
+  )
+)
+
+(define-method set_option
+  (of-object "GSocket")
+  (c-name "g_socket_set_option")
+  (return-type "gboolean")
+  (parameters
+    '("gint" "plevel")
+    '("gint" "poptname")
+    '("gint" "pvalue")
+    '("GError**" "error")
+  )
+)
+
+(define-method set_timeout
+  (of-object "GSocket")
+  (c-name "g_socket_set_timeout")
+  (return-type "none")
+  (parameters
+    '("guint" "ptimeout")
+  )
+)
+
+(define-method set_ttl
+  (of-object "GSocket")
+  (c-name "g_socket_set_ttl")
+  (return-type "none")
+  (parameters
+    '("guint" "pttl")
+  )
+)
+
+(define-method shutdown
+  (of-object "GSocket")
+  (c-name "g_socket_shutdown")
+  (return-type "gboolean")
+  (parameters
+    '("gboolean" "pshutdown_read")
+    '("gboolean" "pshutdown_write")
+    '("GError**" "error")
+  )
+)
+
+(define-method speaks_ipv4
+  (of-object "GSocket")
+  (c-name "g_socket_speaks_ipv4")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+

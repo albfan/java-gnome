@@ -1,0 +1,13 @@
+(define-enum GrabStatus
+  (in-module "Gdk")
+  (c-name "GdkGrabStatus")
+  (values
+    '("success" "GDK_GRAB_SUCCESS")
+    '("already_grabbed" "GDK_GRAB_ALREADY_GRABBED")
+    '("invalid_time" "GDK_GRAB_INVALID_TIME")
+    '("not_viewable" "GDK_GRAB_NOT_VIEWABLE")
+    '("frozen" "GDK_GRAB_FROZEN")
+    '("failed" "GDK_GRAB_FAILED")
+  )
+)
+

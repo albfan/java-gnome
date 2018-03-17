@@ -1,0 +1,15 @@
+(define-enum ImageType
+  (in-module "Gtk")
+  (c-name "GtkImageType")
+  (values
+    '("empty" "GTK_IMAGE_EMPTY")
+    '("pixbuf" "GTK_IMAGE_PIXBUF")
+    '("stock" "GTK_IMAGE_STOCK")
+    '("icon_set" "GTK_IMAGE_ICON_SET")
+    '("animation" "GTK_IMAGE_ANIMATION")
+    '("icon_name" "GTK_IMAGE_ICON_NAME")
+    '("gicon" "GTK_IMAGE_GICON")
+    '("surface" "GTK_IMAGE_SURFACE")
+  )
+)
+

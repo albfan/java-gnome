@@ -1,0 +1,66 @@
+(define-object SearchBar
+  (in-module "Gtk")
+  (parent "Bin")
+  (c-name "GtkSearchBar")
+)
+
+(define-function SearchBar_new
+  (is-constructor-of "GtkSearchBar")
+  (c-name "gtk_search_bar_new")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method connect_entry
+  (of-object "GtkSearchBar")
+  (c-name "gtk_search_bar_connect_entry")
+  (return-type "none")
+  (parameters
+    '("GtkEntry*" "pentry")
+  )
+)
+
+(define-method get_search_mode
+  (of-object "GtkSearchBar")
+  (c-name "gtk_search_bar_get_search_mode")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_show_close_button
+  (of-object "GtkSearchBar")
+  (c-name "gtk_search_bar_get_show_close_button")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method handle_event
+  (of-object "GtkSearchBar")
+  (c-name "gtk_search_bar_handle_event")
+  (return-type "gboolean")
+  (parameters
+    '("GdkEvent*" "pevent")
+  )
+)
+
+(define-method set_search_mode
+  (of-object "GtkSearchBar")
+  (c-name "gtk_search_bar_set_search_mode")
+  (return-type "none")
+  (parameters
+    '("gboolean" "psearch_mode")
+  )
+)
+
+(define-method set_show_close_button
+  (of-object "GtkSearchBar")
+  (c-name "gtk_search_bar_set_show_close_button")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pvisible")
+  )
+)
+

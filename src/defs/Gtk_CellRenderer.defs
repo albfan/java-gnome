@@ -1,0 +1,277 @@
+(define-object CellRenderer
+  (in-module "Gtk")
+  (parent "GObject.InitiallyUnowned")
+  (c-name "GtkCellRenderer")
+)
+
+(define-method activate
+  (of-object "GtkCellRenderer")
+  (c-name "activate")
+  (return-type "gboolean")
+  (parameters
+    '("GdkEvent*" "pevent")
+    '("GtkWidget*" "pwidget")
+    '("const gchar*" "ppath")
+    '("const GdkRectangle*" "pbackground_area")
+    '("const GdkRectangle*" "pcell_area")
+    '("GtkCellRendererState" "pflags")
+  )
+)
+
+(define-method editing_canceled
+  (of-object "GtkCellRenderer")
+  (c-name "editing_canceled")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method editing_started
+  (of-object "GtkCellRenderer")
+  (c-name "editing_started")
+  (return-type "none")
+  (parameters
+    '("GtkCellEditable*" "peditable")
+    '("const gchar*" "ppath")
+  )
+)
+
+(define-method get_aligned_area
+  (of-object "GtkCellRenderer")
+  (c-name "get_aligned_area")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pwidget")
+    '("GtkCellRendererState" "pflags")
+    '("const GdkRectangle*" "pcell_area")
+    '("GdkRectangle*" "paligned_area")
+  )
+)
+
+(define-method get_preferred_height
+  (of-object "GtkCellRenderer")
+  (c-name "get_preferred_height")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pwidget")
+    '("gint*" "pminimum_size")
+    '("gint*" "pnatural_size")
+  )
+)
+
+(define-method get_preferred_height_for_width
+  (of-object "GtkCellRenderer")
+  (c-name "get_preferred_height_for_width")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pwidget")
+    '("gint" "pwidth")
+    '("gint*" "pminimum_height")
+    '("gint*" "pnatural_height")
+  )
+)
+
+(define-method get_preferred_width
+  (of-object "GtkCellRenderer")
+  (c-name "get_preferred_width")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pwidget")
+    '("gint*" "pminimum_size")
+    '("gint*" "pnatural_size")
+  )
+)
+
+(define-method get_preferred_width_for_height
+  (of-object "GtkCellRenderer")
+  (c-name "get_preferred_width_for_height")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pwidget")
+    '("gint" "pheight")
+    '("gint*" "pminimum_width")
+    '("gint*" "pnatural_width")
+  )
+)
+
+(define-method get_request_mode
+  (of-object "GtkCellRenderer")
+  (c-name "get_request_mode")
+  (return-type "GtkSizeRequestMode")
+  (parameters
+  )
+)
+
+(define-method get_size
+  (of-object "GtkCellRenderer")
+  (c-name "get_size")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pwidget")
+    '("const GdkRectangle*" "pcell_area")
+    '("gint*" "px_offset")
+    '("gint*" "py_offset")
+    '("gint*" "pwidth")
+    '("gint*" "pheight")
+  )
+)
+
+(define-method render
+  (of-object "GtkCellRenderer")
+  (c-name "render")
+  (return-type "none")
+  (parameters
+    '("cairo_t*" "pcr")
+    '("GtkWidget*" "pwidget")
+    '("const GdkRectangle*" "pbackground_area")
+    '("const GdkRectangle*" "pcell_area")
+    '("GtkCellRendererState" "pflags")
+  )
+)
+
+(define-method start_editing
+  (of-object "GtkCellRenderer")
+  (c-name "start_editing")
+  (return-type "GtkCellEditable*")
+  (parameters
+    '("GdkEvent*" "pevent")
+    '("GtkWidget*" "pwidget")
+    '("const gchar*" "ppath")
+    '("const GdkRectangle*" "pbackground_area")
+    '("const GdkRectangle*" "pcell_area")
+    '("GtkCellRendererState" "pflags")
+  )
+)
+
+(define-method get_alignment
+  (of-object "GtkCellRenderer")
+  (c-name "gtk_cell_renderer_get_alignment")
+  (return-type "none")
+  (parameters
+    '("gfloat*" "pxalign")
+    '("gfloat*" "pyalign")
+  )
+)
+
+(define-method get_fixed_size
+  (of-object "GtkCellRenderer")
+  (c-name "gtk_cell_renderer_get_fixed_size")
+  (return-type "none")
+  (parameters
+    '("gint*" "pwidth")
+    '("gint*" "pheight")
+  )
+)
+
+(define-method get_padding
+  (of-object "GtkCellRenderer")
+  (c-name "gtk_cell_renderer_get_padding")
+  (return-type "none")
+  (parameters
+    '("gint*" "pxpad")
+    '("gint*" "pypad")
+  )
+)
+
+(define-method get_preferred_size
+  (of-object "GtkCellRenderer")
+  (c-name "gtk_cell_renderer_get_preferred_size")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pwidget")
+    '("GtkRequisition*" "pminimum_size")
+    '("GtkRequisition*" "pnatural_size")
+  )
+)
+
+(define-method get_sensitive
+  (of-object "GtkCellRenderer")
+  (c-name "gtk_cell_renderer_get_sensitive")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_state
+  (of-object "GtkCellRenderer")
+  (c-name "gtk_cell_renderer_get_state")
+  (return-type "GtkStateFlags")
+  (parameters
+    '("GtkWidget*" "pwidget")
+    '("GtkCellRendererState" "pcell_state")
+  )
+)
+
+(define-method get_visible
+  (of-object "GtkCellRenderer")
+  (c-name "gtk_cell_renderer_get_visible")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method is_activatable
+  (of-object "GtkCellRenderer")
+  (c-name "gtk_cell_renderer_is_activatable")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method set_alignment
+  (of-object "GtkCellRenderer")
+  (c-name "gtk_cell_renderer_set_alignment")
+  (return-type "none")
+  (parameters
+    '("gfloat" "pxalign")
+    '("gfloat" "pyalign")
+  )
+)
+
+(define-method set_fixed_size
+  (of-object "GtkCellRenderer")
+  (c-name "gtk_cell_renderer_set_fixed_size")
+  (return-type "none")
+  (parameters
+    '("gint" "pwidth")
+    '("gint" "pheight")
+  )
+)
+
+(define-method set_padding
+  (of-object "GtkCellRenderer")
+  (c-name "gtk_cell_renderer_set_padding")
+  (return-type "none")
+  (parameters
+    '("gint" "pxpad")
+    '("gint" "pypad")
+  )
+)
+
+(define-method set_sensitive
+  (of-object "GtkCellRenderer")
+  (c-name "gtk_cell_renderer_set_sensitive")
+  (return-type "none")
+  (parameters
+    '("gboolean" "psensitive")
+  )
+)
+
+(define-method set_visible
+  (of-object "GtkCellRenderer")
+  (c-name "gtk_cell_renderer_set_visible")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pvisible")
+  )
+)
+
+(define-method stop_editing
+  (of-object "GtkCellRenderer")
+  (c-name "gtk_cell_renderer_stop_editing")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pcanceled")
+  )
+)
+

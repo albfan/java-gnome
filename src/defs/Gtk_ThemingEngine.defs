@@ -1,0 +1,433 @@
+(define-object ThemingEngine
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkThemingEngine")
+)
+
+(define-method render_activity
+  (of-object "GtkThemingEngine")
+  (c-name "render_activity")
+  (return-type "none")
+  (parameters
+    '("cairo_t*" "pcr")
+    '("gdouble" "px")
+    '("gdouble" "py")
+    '("gdouble" "pwidth")
+    '("gdouble" "pheight")
+  )
+)
+
+(define-method render_arrow
+  (of-object "GtkThemingEngine")
+  (c-name "render_arrow")
+  (return-type "none")
+  (parameters
+    '("cairo_t*" "pcr")
+    '("gdouble" "pangle")
+    '("gdouble" "px")
+    '("gdouble" "py")
+    '("gdouble" "psize")
+  )
+)
+
+(define-method render_background
+  (of-object "GtkThemingEngine")
+  (c-name "render_background")
+  (return-type "none")
+  (parameters
+    '("cairo_t*" "pcr")
+    '("gdouble" "px")
+    '("gdouble" "py")
+    '("gdouble" "pwidth")
+    '("gdouble" "pheight")
+  )
+)
+
+(define-method render_check
+  (of-object "GtkThemingEngine")
+  (c-name "render_check")
+  (return-type "none")
+  (parameters
+    '("cairo_t*" "pcr")
+    '("gdouble" "px")
+    '("gdouble" "py")
+    '("gdouble" "pwidth")
+    '("gdouble" "pheight")
+  )
+)
+
+(define-method render_expander
+  (of-object "GtkThemingEngine")
+  (c-name "render_expander")
+  (return-type "none")
+  (parameters
+    '("cairo_t*" "pcr")
+    '("gdouble" "px")
+    '("gdouble" "py")
+    '("gdouble" "pwidth")
+    '("gdouble" "pheight")
+  )
+)
+
+(define-method render_extension
+  (of-object "GtkThemingEngine")
+  (c-name "render_extension")
+  (return-type "none")
+  (parameters
+    '("cairo_t*" "pcr")
+    '("gdouble" "px")
+    '("gdouble" "py")
+    '("gdouble" "pwidth")
+    '("gdouble" "pheight")
+    '("GtkPositionType" "pgap_side")
+  )
+)
+
+(define-method render_focus
+  (of-object "GtkThemingEngine")
+  (c-name "render_focus")
+  (return-type "none")
+  (parameters
+    '("cairo_t*" "pcr")
+    '("gdouble" "px")
+    '("gdouble" "py")
+    '("gdouble" "pwidth")
+    '("gdouble" "pheight")
+  )
+)
+
+(define-method render_frame
+  (of-object "GtkThemingEngine")
+  (c-name "render_frame")
+  (return-type "none")
+  (parameters
+    '("cairo_t*" "pcr")
+    '("gdouble" "px")
+    '("gdouble" "py")
+    '("gdouble" "pwidth")
+    '("gdouble" "pheight")
+  )
+)
+
+(define-method render_frame_gap
+  (of-object "GtkThemingEngine")
+  (c-name "render_frame_gap")
+  (return-type "none")
+  (parameters
+    '("cairo_t*" "pcr")
+    '("gdouble" "px")
+    '("gdouble" "py")
+    '("gdouble" "pwidth")
+    '("gdouble" "pheight")
+    '("GtkPositionType" "pgap_side")
+    '("gdouble" "pxy0_gap")
+    '("gdouble" "pxy1_gap")
+  )
+)
+
+(define-method render_handle
+  (of-object "GtkThemingEngine")
+  (c-name "render_handle")
+  (return-type "none")
+  (parameters
+    '("cairo_t*" "pcr")
+    '("gdouble" "px")
+    '("gdouble" "py")
+    '("gdouble" "pwidth")
+    '("gdouble" "pheight")
+  )
+)
+
+(define-method render_icon
+  (of-object "GtkThemingEngine")
+  (c-name "render_icon")
+  (return-type "none")
+  (parameters
+    '("cairo_t*" "pcr")
+    '("GdkPixbuf*" "ppixbuf")
+    '("gdouble" "px")
+    '("gdouble" "py")
+  )
+)
+
+(define-method render_icon_pixbuf
+  (of-object "GtkThemingEngine")
+  (c-name "render_icon_pixbuf")
+  (return-type "GdkPixbuf*")
+  (parameters
+    '("const GtkIconSource*" "psource")
+    '("GtkIconSize" "psize")
+  )
+)
+
+(define-method render_icon_surface
+  (of-object "GtkThemingEngine")
+  (c-name "render_icon_surface")
+  (return-type "none")
+  (parameters
+    '("cairo_t*" "pcr")
+    '("cairo_surface_t*" "psurface")
+    '("gdouble" "px")
+    '("gdouble" "py")
+  )
+)
+
+(define-method render_layout
+  (of-object "GtkThemingEngine")
+  (c-name "render_layout")
+  (return-type "none")
+  (parameters
+    '("cairo_t*" "pcr")
+    '("gdouble" "px")
+    '("gdouble" "py")
+    '("PangoLayout*" "playout")
+  )
+)
+
+(define-method render_line
+  (of-object "GtkThemingEngine")
+  (c-name "render_line")
+  (return-type "none")
+  (parameters
+    '("cairo_t*" "pcr")
+    '("gdouble" "px0")
+    '("gdouble" "py0")
+    '("gdouble" "px1")
+    '("gdouble" "py1")
+  )
+)
+
+(define-method render_option
+  (of-object "GtkThemingEngine")
+  (c-name "render_option")
+  (return-type "none")
+  (parameters
+    '("cairo_t*" "pcr")
+    '("gdouble" "px")
+    '("gdouble" "py")
+    '("gdouble" "pwidth")
+    '("gdouble" "pheight")
+  )
+)
+
+(define-method render_slider
+  (of-object "GtkThemingEngine")
+  (c-name "render_slider")
+  (return-type "none")
+  (parameters
+    '("cairo_t*" "pcr")
+    '("gdouble" "px")
+    '("gdouble" "py")
+    '("gdouble" "pwidth")
+    '("gdouble" "pheight")
+    '("GtkOrientation" "porientation")
+  )
+)
+
+(define-method get
+  (of-object "GtkThemingEngine")
+  (c-name "gtk_theming_engine_get")
+  (return-type "none")
+  (parameters
+    '("GtkStateFlags" "pstate")
+    '("null" "p...")
+  )
+)
+
+(define-method get_background_color
+  (of-object "GtkThemingEngine")
+  (c-name "gtk_theming_engine_get_background_color")
+  (return-type "none")
+  (parameters
+    '("GtkStateFlags" "pstate")
+    '("GdkRGBA*" "pcolor")
+  )
+)
+
+(define-method get_border
+  (of-object "GtkThemingEngine")
+  (c-name "gtk_theming_engine_get_border")
+  (return-type "none")
+  (parameters
+    '("GtkStateFlags" "pstate")
+    '("GtkBorder*" "pborder")
+  )
+)
+
+(define-method get_border_color
+  (of-object "GtkThemingEngine")
+  (c-name "gtk_theming_engine_get_border_color")
+  (return-type "none")
+  (parameters
+    '("GtkStateFlags" "pstate")
+    '("GdkRGBA*" "pcolor")
+  )
+)
+
+(define-method get_color
+  (of-object "GtkThemingEngine")
+  (c-name "gtk_theming_engine_get_color")
+  (return-type "none")
+  (parameters
+    '("GtkStateFlags" "pstate")
+    '("GdkRGBA*" "pcolor")
+  )
+)
+
+(define-method get_direction
+  (of-object "GtkThemingEngine")
+  (c-name "gtk_theming_engine_get_direction")
+  (return-type "GtkTextDirection")
+  (parameters
+  )
+)
+
+(define-method get_font
+  (of-object "GtkThemingEngine")
+  (c-name "gtk_theming_engine_get_font")
+  (return-type "const PangoFontDescription*")
+  (parameters
+    '("GtkStateFlags" "pstate")
+  )
+)
+
+(define-method get_junction_sides
+  (of-object "GtkThemingEngine")
+  (c-name "gtk_theming_engine_get_junction_sides")
+  (return-type "GtkJunctionSides")
+  (parameters
+  )
+)
+
+(define-method get_margin
+  (of-object "GtkThemingEngine")
+  (c-name "gtk_theming_engine_get_margin")
+  (return-type "none")
+  (parameters
+    '("GtkStateFlags" "pstate")
+    '("GtkBorder*" "pmargin")
+  )
+)
+
+(define-method get_padding
+  (of-object "GtkThemingEngine")
+  (c-name "gtk_theming_engine_get_padding")
+  (return-type "none")
+  (parameters
+    '("GtkStateFlags" "pstate")
+    '("GtkBorder*" "ppadding")
+  )
+)
+
+(define-method get_path
+  (of-object "GtkThemingEngine")
+  (c-name "gtk_theming_engine_get_path")
+  (return-type "const GtkWidgetPath*")
+  (parameters
+  )
+)
+
+(define-method get_property
+  (of-object "GtkThemingEngine")
+  (c-name "gtk_theming_engine_get_property")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pproperty")
+    '("GtkStateFlags" "pstate")
+    '("GValue*" "pvalue")
+  )
+)
+
+(define-method get_screen
+  (of-object "GtkThemingEngine")
+  (c-name "gtk_theming_engine_get_screen")
+  (return-type "GdkScreen*")
+  (parameters
+  )
+)
+
+(define-method get_state
+  (of-object "GtkThemingEngine")
+  (c-name "gtk_theming_engine_get_state")
+  (return-type "GtkStateFlags")
+  (parameters
+  )
+)
+
+(define-method get_style
+  (of-object "GtkThemingEngine")
+  (c-name "gtk_theming_engine_get_style")
+  (return-type "none")
+  (parameters
+    '("null" "p...")
+  )
+)
+
+(define-method get_style_property
+  (of-object "GtkThemingEngine")
+  (c-name "gtk_theming_engine_get_style_property")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pproperty_name")
+    '("GValue*" "pvalue")
+  )
+)
+
+(define-method get_style_valist
+  (of-object "GtkThemingEngine")
+  (c-name "gtk_theming_engine_get_style_valist")
+  (return-type "none")
+  (parameters
+    '("va_list" "pargs")
+  )
+)
+
+(define-method get_valist
+  (of-object "GtkThemingEngine")
+  (c-name "gtk_theming_engine_get_valist")
+  (return-type "none")
+  (parameters
+    '("GtkStateFlags" "pstate")
+    '("va_list" "pargs")
+  )
+)
+
+(define-method has_class
+  (of-object "GtkThemingEngine")
+  (c-name "gtk_theming_engine_has_class")
+  (return-type "gboolean")
+  (parameters
+    '("const gchar*" "pstyle_class")
+  )
+)
+
+(define-method has_region
+  (of-object "GtkThemingEngine")
+  (c-name "gtk_theming_engine_has_region")
+  (return-type "gboolean")
+  (parameters
+    '("const gchar*" "pstyle_region")
+    '("GtkRegionFlags*" "pflags")
+  )
+)
+
+(define-method lookup_color
+  (of-object "GtkThemingEngine")
+  (c-name "gtk_theming_engine_lookup_color")
+  (return-type "gboolean")
+  (parameters
+    '("const gchar*" "pcolor_name")
+    '("GdkRGBA*" "pcolor")
+  )
+)
+
+(define-method state_is_running
+  (of-object "GtkThemingEngine")
+  (c-name "gtk_theming_engine_state_is_running")
+  (return-type "gboolean")
+  (parameters
+    '("GtkStateType" "pstate")
+    '("gdouble*" "pprogress")
+  )
+)
+

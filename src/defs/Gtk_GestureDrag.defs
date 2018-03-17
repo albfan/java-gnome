@@ -1,0 +1,35 @@
+(define-object GestureDrag
+  (in-module "Gtk")
+  (parent "GestureSingle")
+  (c-name "GtkGestureDrag")
+)
+
+(define-function GestureDrag_new
+  (is-constructor-of "GtkGestureDrag")
+  (c-name "gtk_gesture_drag_new")
+  (return-type "GtkGesture*")
+  (parameters
+    '("GtkWidget*" "pwidget")
+  )
+)
+
+(define-method get_offset
+  (of-object "GtkGestureDrag")
+  (c-name "gtk_gesture_drag_get_offset")
+  (return-type "gboolean")
+  (parameters
+    '("gdouble*" "px")
+    '("gdouble*" "py")
+  )
+)
+
+(define-method get_start_point
+  (of-object "GtkGestureDrag")
+  (c-name "gtk_gesture_drag_get_start_point")
+  (return-type "gboolean")
+  (parameters
+    '("gdouble*" "px")
+    '("gdouble*" "py")
+  )
+)
+

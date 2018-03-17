@@ -1,0 +1,6 @@
+(define-object ScrolledWindowAccessible
+  (in-module "Gtk")
+  (parent "ContainerAccessible")
+  (c-name "GtkScrolledWindowAccessible")
+)
+

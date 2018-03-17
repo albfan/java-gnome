@@ -1,0 +1,81 @@
+(define-object HSV
+  (in-module "Gtk")
+  (parent "Widget")
+  (c-name "GtkHSV")
+)
+
+(define-function HSV_new
+  (is-constructor-of "GtkHSV")
+  (c-name "gtk_hsv_new")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method changed
+  (of-object "GtkHSV")
+  (c-name "changed")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method move
+  (of-object "GtkHSV")
+  (c-name "move")
+  (return-type "none")
+  (parameters
+    '("GtkDirectionType" "ptype")
+  )
+)
+
+(define-method get_color
+  (of-object "GtkHSV")
+  (c-name "gtk_hsv_get_color")
+  (return-type "none")
+  (parameters
+    '("gdouble*" "ph")
+    '("gdouble*" "ps")
+    '("gdouble*" "pv")
+  )
+)
+
+(define-method get_metrics
+  (of-object "GtkHSV")
+  (c-name "gtk_hsv_get_metrics")
+  (return-type "none")
+  (parameters
+    '("gint*" "psize")
+    '("gint*" "pring_width")
+  )
+)
+
+(define-method is_adjusting
+  (of-object "GtkHSV")
+  (c-name "gtk_hsv_is_adjusting")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method set_color
+  (of-object "GtkHSV")
+  (c-name "gtk_hsv_set_color")
+  (return-type "none")
+  (parameters
+    '("double" "ph")
+    '("double" "ps")
+    '("double" "pv")
+  )
+)
+
+(define-method set_metrics
+  (of-object "GtkHSV")
+  (c-name "gtk_hsv_set_metrics")
+  (return-type "none")
+  (parameters
+    '("gint" "psize")
+    '("gint" "pring_width")
+  )
+)
+

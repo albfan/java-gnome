@@ -1,0 +1,41 @@
+(define-object DisplayManager
+  (in-module "Gdk")
+  (import-header "gdk/gdk.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GdkDisplayManager")
+)
+
+(define-method get_default_display
+  (of-object "GdkDisplayManager")
+  (c-name "gdk_display_manager_get_default_display")
+  (return-type "GdkDisplay*")
+  (parameters
+  )
+)
+
+(define-method list_displays
+  (of-object "GdkDisplayManager")
+  (c-name "gdk_display_manager_list_displays")
+  (return-type "GSList*")
+  (parameters
+  )
+)
+
+(define-method open_display
+  (of-object "GdkDisplayManager")
+  (c-name "gdk_display_manager_open_display")
+  (return-type "GdkDisplay*")
+  (parameters
+    '("const gchar*" "pname")
+  )
+)
+
+(define-method set_default_display
+  (of-object "GdkDisplayManager")
+  (c-name "gdk_display_manager_set_default_display")
+  (return-type "none")
+  (parameters
+    '("GdkDisplay*" "pdisplay")
+  )
+)
+

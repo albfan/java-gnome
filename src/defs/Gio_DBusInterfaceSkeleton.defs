@@ -1,0 +1,136 @@
+(define-object DBusInterfaceSkeleton
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GDBusInterfaceSkeleton")
+)
+
+(define-method flush
+  (of-object "GDBusInterfaceSkeleton")
+  (c-name "flush")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method g_authorize_method
+  (of-object "GDBusInterfaceSkeleton")
+  (c-name "g_authorize_method")
+  (return-type "gboolean")
+  (parameters
+    '("GDBusMethodInvocation*" "pinvocation")
+  )
+)
+
+(define-method get_info
+  (of-object "GDBusInterfaceSkeleton")
+  (c-name "get_info")
+  (return-type "GDBusInterfaceInfo*")
+  (parameters
+  )
+)
+
+(define-method get_properties
+  (of-object "GDBusInterfaceSkeleton")
+  (c-name "get_properties")
+  (return-type "GVariant*")
+  (parameters
+  )
+)
+
+(define-method get_vtable
+  (of-object "GDBusInterfaceSkeleton")
+  (c-name "get_vtable")
+  (return-type "GDBusInterfaceVTable*")
+  (parameters
+  )
+)
+
+(define-method export
+  (of-object "GDBusInterfaceSkeleton")
+  (c-name "g_dbus_interface_skeleton_export")
+  (return-type "gboolean")
+  (parameters
+    '("GDBusConnection*" "pconnection")
+    '("const gchar*" "pobject_path")
+    '("GError**" "error")
+  )
+)
+
+(define-method get_connection
+  (of-object "GDBusInterfaceSkeleton")
+  (c-name "g_dbus_interface_skeleton_get_connection")
+  (return-type "GDBusConnection*")
+  (parameters
+  )
+)
+
+(define-method get_connections
+  (of-object "GDBusInterfaceSkeleton")
+  (c-name "g_dbus_interface_skeleton_get_connections")
+  (return-type "GList*")
+  (parameters
+  )
+)
+
+(define-method get_flags
+  (of-object "GDBusInterfaceSkeleton")
+  (c-name "g_dbus_interface_skeleton_get_flags")
+  (return-type "GDBusInterfaceSkeletonFlags")
+  (parameters
+  )
+)
+
+(define-method get_object_path
+  (of-object "GDBusInterfaceSkeleton")
+  (c-name "g_dbus_interface_skeleton_get_object_path")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method has_connection
+  (of-object "GDBusInterfaceSkeleton")
+  (c-name "g_dbus_interface_skeleton_has_connection")
+  (return-type "gboolean")
+  (parameters
+    '("GDBusConnection*" "pconnection")
+  )
+)
+
+(define-method set_flags
+  (of-object "GDBusInterfaceSkeleton")
+  (c-name "g_dbus_interface_skeleton_set_flags")
+  (return-type "none")
+  (parameters
+    '("GDBusInterfaceSkeletonFlags" "pflags")
+  )
+)
+
+(define-method unexport
+  (of-object "GDBusInterfaceSkeleton")
+  (c-name "g_dbus_interface_skeleton_unexport")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method unexport_from_connection
+  (of-object "GDBusInterfaceSkeleton")
+  (c-name "g_dbus_interface_skeleton_unexport_from_connection")
+  (return-type "none")
+  (parameters
+    '("GDBusConnection*" "pconnection")
+  )
+)
+

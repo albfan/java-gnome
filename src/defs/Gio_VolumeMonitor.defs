@@ -1,0 +1,167 @@
+(define-object VolumeMonitor
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GVolumeMonitor")
+)
+
+(define-method drive_changed
+  (of-object "GVolumeMonitor")
+  (c-name "drive_changed")
+  (return-type "none")
+  (parameters
+    '("GDrive*" "pdrive")
+  )
+)
+
+(define-method drive_connected
+  (of-object "GVolumeMonitor")
+  (c-name "drive_connected")
+  (return-type "none")
+  (parameters
+    '("GDrive*" "pdrive")
+  )
+)
+
+(define-method drive_disconnected
+  (of-object "GVolumeMonitor")
+  (c-name "drive_disconnected")
+  (return-type "none")
+  (parameters
+    '("GDrive*" "pdrive")
+  )
+)
+
+(define-method drive_eject_button
+  (of-object "GVolumeMonitor")
+  (c-name "drive_eject_button")
+  (return-type "none")
+  (parameters
+    '("GDrive*" "pdrive")
+  )
+)
+
+(define-method drive_stop_button
+  (of-object "GVolumeMonitor")
+  (c-name "drive_stop_button")
+  (return-type "none")
+  (parameters
+    '("GDrive*" "pdrive")
+  )
+)
+
+(define-method get_connected_drives
+  (of-object "GVolumeMonitor")
+  (c-name "get_connected_drives")
+  (return-type "GList*")
+  (parameters
+  )
+)
+
+(define-method get_mount_for_uuid
+  (of-object "GVolumeMonitor")
+  (c-name "get_mount_for_uuid")
+  (return-type "GMount*")
+  (parameters
+    '("const char*" "puuid")
+  )
+)
+
+(define-method get_mounts
+  (of-object "GVolumeMonitor")
+  (c-name "get_mounts")
+  (return-type "GList*")
+  (parameters
+  )
+)
+
+(define-method get_volume_for_uuid
+  (of-object "GVolumeMonitor")
+  (c-name "get_volume_for_uuid")
+  (return-type "GVolume*")
+  (parameters
+    '("const char*" "puuid")
+  )
+)
+
+(define-method get_volumes
+  (of-object "GVolumeMonitor")
+  (c-name "get_volumes")
+  (return-type "GList*")
+  (parameters
+  )
+)
+
+(define-method mount_added
+  (of-object "GVolumeMonitor")
+  (c-name "mount_added")
+  (return-type "none")
+  (parameters
+    '("GMount*" "pmount")
+  )
+)
+
+(define-method mount_changed
+  (of-object "GVolumeMonitor")
+  (c-name "mount_changed")
+  (return-type "none")
+  (parameters
+    '("GMount*" "pmount")
+  )
+)
+
+(define-method mount_pre_unmount
+  (of-object "GVolumeMonitor")
+  (c-name "mount_pre_unmount")
+  (return-type "none")
+  (parameters
+    '("GMount*" "pmount")
+  )
+)
+
+(define-method mount_removed
+  (of-object "GVolumeMonitor")
+  (c-name "mount_removed")
+  (return-type "none")
+  (parameters
+    '("GMount*" "pmount")
+  )
+)
+
+(define-method volume_added
+  (of-object "GVolumeMonitor")
+  (c-name "volume_added")
+  (return-type "none")
+  (parameters
+    '("GVolume*" "pvolume")
+  )
+)
+
+(define-method volume_changed
+  (of-object "GVolumeMonitor")
+  (c-name "volume_changed")
+  (return-type "none")
+  (parameters
+    '("GVolume*" "pvolume")
+  )
+)
+
+(define-method volume_removed
+  (of-object "GVolumeMonitor")
+  (c-name "volume_removed")
+  (return-type "none")
+  (parameters
+    '("GVolume*" "pvolume")
+  )
+)
+

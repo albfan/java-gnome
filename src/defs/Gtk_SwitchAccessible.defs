@@ -1,0 +1,6 @@
+(define-object SwitchAccessible
+  (in-module "Gtk")
+  (parent "WidgetAccessible")
+  (c-name "GtkSwitchAccessible")
+)
+

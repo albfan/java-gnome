@@ -1,0 +1,76 @@
+(define-object FaviconDatabase
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "WebKitFaviconDatabase")
+)
+
+(define-method clear
+  (of-object "WebKitFaviconDatabase")
+  (c-name "webkit_favicon_database_clear")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method get_favicon_pixbuf
+  (of-object "WebKitFaviconDatabase")
+  (c-name "webkit_favicon_database_get_favicon_pixbuf")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "ppage_uri")
+    '("guint" "pwidth")
+    '("guint" "pheight")
+    '("GCancellable*" "pcancellable")
+    '("GAsyncReadyCallback" "pcallback")
+    '("gpointer" "puser_data")
+  )
+)
+
+(define-method get_favicon_pixbuf_finish
+  (of-object "WebKitFaviconDatabase")
+  (c-name "webkit_favicon_database_get_favicon_pixbuf_finish")
+  (return-type "GdkPixbuf*")
+  (parameters
+    '("GAsyncResult*" "presult")
+    '("GError**" "error")
+  )
+)
+
+(define-method get_favicon_uri
+  (of-object "WebKitFaviconDatabase")
+  (c-name "webkit_favicon_database_get_favicon_uri")
+  (return-type "gchar*")
+  (parameters
+    '("const gchar*" "ppage_uri")
+  )
+)
+
+(define-method get_path
+  (of-object "WebKitFaviconDatabase")
+  (c-name "webkit_favicon_database_get_path")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method set_path
+  (of-object "WebKitFaviconDatabase")
+  (c-name "webkit_favicon_database_set_path")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "ppath")
+  )
+)
+
+(define-method try_get_favicon_pixbuf
+  (of-object "WebKitFaviconDatabase")
+  (c-name "webkit_favicon_database_try_get_favicon_pixbuf")
+  (return-type "GdkPixbuf*")
+  (parameters
+    '("const gchar*" "ppage_uri")
+    '("guint" "pwidth")
+    '("guint" "pheight")
+  )
+)
+

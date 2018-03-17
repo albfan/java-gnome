@@ -1,0 +1,369 @@
+(define-object PrintOperation
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkPrintOperation")
+)
+
+(define-function PrintOperation_new
+  (is-constructor-of "GtkPrintOperation")
+  (c-name "gtk_print_operation_new")
+  (return-type "GtkPrintOperation*")
+  (parameters
+  )
+)
+
+(define-method begin_print
+  (of-object "GtkPrintOperation")
+  (c-name "begin_print")
+  (return-type "none")
+  (parameters
+    '("GtkPrintContext*" "pcontext")
+  )
+)
+
+(define-method create_custom_widget
+  (of-object "GtkPrintOperation")
+  (c-name "create_custom_widget")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method custom_widget_apply
+  (of-object "GtkPrintOperation")
+  (c-name "custom_widget_apply")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pwidget")
+  )
+)
+
+(define-method done
+  (of-object "GtkPrintOperation")
+  (c-name "done")
+  (return-type "none")
+  (parameters
+    '("GtkPrintOperationResult" "presult")
+  )
+)
+
+(define-method draw_page
+  (of-object "GtkPrintOperation")
+  (c-name "draw_page")
+  (return-type "none")
+  (parameters
+    '("GtkPrintContext*" "pcontext")
+    '("gint" "ppage_nr")
+  )
+)
+
+(define-method end_print
+  (of-object "GtkPrintOperation")
+  (c-name "end_print")
+  (return-type "none")
+  (parameters
+    '("GtkPrintContext*" "pcontext")
+  )
+)
+
+(define-method paginate
+  (of-object "GtkPrintOperation")
+  (c-name "paginate")
+  (return-type "gboolean")
+  (parameters
+    '("GtkPrintContext*" "pcontext")
+  )
+)
+
+(define-method preview
+  (of-object "GtkPrintOperation")
+  (c-name "preview")
+  (return-type "gboolean")
+  (parameters
+    '("GtkPrintOperationPreview*" "ppreview")
+    '("GtkPrintContext*" "pcontext")
+    '("GtkWindow*" "pparent")
+  )
+)
+
+(define-method request_page_setup
+  (of-object "GtkPrintOperation")
+  (c-name "request_page_setup")
+  (return-type "none")
+  (parameters
+    '("GtkPrintContext*" "pcontext")
+    '("gint" "ppage_nr")
+    '("GtkPageSetup*" "psetup")
+  )
+)
+
+(define-method status_changed
+  (of-object "GtkPrintOperation")
+  (c-name "status_changed")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method update_custom_widget
+  (of-object "GtkPrintOperation")
+  (c-name "update_custom_widget")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pwidget")
+    '("GtkPageSetup*" "psetup")
+    '("GtkPrintSettings*" "psettings")
+  )
+)
+
+(define-method cancel
+  (of-object "GtkPrintOperation")
+  (c-name "gtk_print_operation_cancel")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method draw_page_finish
+  (of-object "GtkPrintOperation")
+  (c-name "gtk_print_operation_draw_page_finish")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method get_default_page_setup
+  (of-object "GtkPrintOperation")
+  (c-name "gtk_print_operation_get_default_page_setup")
+  (return-type "GtkPageSetup*")
+  (parameters
+  )
+)
+
+(define-method get_embed_page_setup
+  (of-object "GtkPrintOperation")
+  (c-name "gtk_print_operation_get_embed_page_setup")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_error
+  (of-object "GtkPrintOperation")
+  (c-name "gtk_print_operation_get_error")
+  (return-type "none")
+  (parameters
+    '("GError**" "error")
+  )
+)
+
+(define-method get_has_selection
+  (of-object "GtkPrintOperation")
+  (c-name "gtk_print_operation_get_has_selection")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_n_pages_to_print
+  (of-object "GtkPrintOperation")
+  (c-name "gtk_print_operation_get_n_pages_to_print")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_print_settings
+  (of-object "GtkPrintOperation")
+  (c-name "gtk_print_operation_get_print_settings")
+  (return-type "GtkPrintSettings*")
+  (parameters
+  )
+)
+
+(define-method get_status
+  (of-object "GtkPrintOperation")
+  (c-name "gtk_print_operation_get_status")
+  (return-type "GtkPrintStatus")
+  (parameters
+  )
+)
+
+(define-method get_status_string
+  (of-object "GtkPrintOperation")
+  (c-name "gtk_print_operation_get_status_string")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_support_selection
+  (of-object "GtkPrintOperation")
+  (c-name "gtk_print_operation_get_support_selection")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method is_finished
+  (of-object "GtkPrintOperation")
+  (c-name "gtk_print_operation_is_finished")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method run
+  (of-object "GtkPrintOperation")
+  (c-name "gtk_print_operation_run")
+  (return-type "GtkPrintOperationResult")
+  (parameters
+    '("GtkPrintOperationAction" "paction")
+    '("GtkWindow*" "pparent")
+    '("GError**" "error")
+  )
+)
+
+(define-method set_allow_async
+  (of-object "GtkPrintOperation")
+  (c-name "gtk_print_operation_set_allow_async")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pallow_async")
+  )
+)
+
+(define-method set_current_page
+  (of-object "GtkPrintOperation")
+  (c-name "gtk_print_operation_set_current_page")
+  (return-type "none")
+  (parameters
+    '("gint" "pcurrent_page")
+  )
+)
+
+(define-method set_custom_tab_label
+  (of-object "GtkPrintOperation")
+  (c-name "gtk_print_operation_set_custom_tab_label")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "plabel")
+  )
+)
+
+(define-method set_default_page_setup
+  (of-object "GtkPrintOperation")
+  (c-name "gtk_print_operation_set_default_page_setup")
+  (return-type "none")
+  (parameters
+    '("GtkPageSetup*" "pdefault_page_setup")
+  )
+)
+
+(define-method set_defer_drawing
+  (of-object "GtkPrintOperation")
+  (c-name "gtk_print_operation_set_defer_drawing")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method set_embed_page_setup
+  (of-object "GtkPrintOperation")
+  (c-name "gtk_print_operation_set_embed_page_setup")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pembed")
+  )
+)
+
+(define-method set_export_filename
+  (of-object "GtkPrintOperation")
+  (c-name "gtk_print_operation_set_export_filename")
+  (return-type "none")
+  (parameters
+    '("gchar*" "pfilename")
+  )
+)
+
+(define-method set_has_selection
+  (of-object "GtkPrintOperation")
+  (c-name "gtk_print_operation_set_has_selection")
+  (return-type "none")
+  (parameters
+    '("gboolean" "phas_selection")
+  )
+)
+
+(define-method set_job_name
+  (of-object "GtkPrintOperation")
+  (c-name "gtk_print_operation_set_job_name")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pjob_name")
+  )
+)
+
+(define-method set_n_pages
+  (of-object "GtkPrintOperation")
+  (c-name "gtk_print_operation_set_n_pages")
+  (return-type "none")
+  (parameters
+    '("gint" "pn_pages")
+  )
+)
+
+(define-method set_print_settings
+  (of-object "GtkPrintOperation")
+  (c-name "gtk_print_operation_set_print_settings")
+  (return-type "none")
+  (parameters
+    '("GtkPrintSettings*" "pprint_settings")
+  )
+)
+
+(define-method set_show_progress
+  (of-object "GtkPrintOperation")
+  (c-name "gtk_print_operation_set_show_progress")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pshow_progress")
+  )
+)
+
+(define-method set_support_selection
+  (of-object "GtkPrintOperation")
+  (c-name "gtk_print_operation_set_support_selection")
+  (return-type "none")
+  (parameters
+    '("gboolean" "psupport_selection")
+  )
+)
+
+(define-method set_track_print_status
+  (of-object "GtkPrintOperation")
+  (c-name "gtk_print_operation_set_track_print_status")
+  (return-type "none")
+  (parameters
+    '("gboolean" "ptrack_status")
+  )
+)
+
+(define-method set_unit
+  (of-object "GtkPrintOperation")
+  (c-name "gtk_print_operation_set_unit")
+  (return-type "none")
+  (parameters
+    '("GtkUnit" "punit")
+  )
+)
+
+(define-method set_use_full_page
+  (of-object "GtkPrintOperation")
+  (c-name "gtk_print_operation_set_use_full_page")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pfull_page")
+  )
+)
+

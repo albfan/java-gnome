@@ -1,0 +1,111 @@
+(define-object Buildable
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkBuildable")
+)
+
+(define-method add_child
+  (of-object "GtkBuildable")
+  (c-name "add_child")
+  (return-type "none")
+  (parameters
+    '("GtkBuilder*" "pbuilder")
+    '("GObject*" "pchild")
+    '("const gchar*" "ptype")
+  )
+)
+
+(define-method construct_child
+  (of-object "GtkBuildable")
+  (c-name "construct_child")
+  (return-type "GObject*")
+  (parameters
+    '("GtkBuilder*" "pbuilder")
+    '("const gchar*" "pname")
+  )
+)
+
+(define-method custom_finished
+  (of-object "GtkBuildable")
+  (c-name "custom_finished")
+  (return-type "none")
+  (parameters
+    '("GtkBuilder*" "pbuilder")
+    '("GObject*" "pchild")
+    '("const gchar*" "ptagname")
+    '("gpointer" "pdata")
+  )
+)
+
+(define-method custom_tag_end
+  (of-object "GtkBuildable")
+  (c-name "custom_tag_end")
+  (return-type "none")
+  (parameters
+    '("GtkBuilder*" "pbuilder")
+    '("GObject*" "pchild")
+    '("const gchar*" "ptagname")
+    '("gpointer*" "pdata")
+  )
+)
+
+(define-method custom_tag_start
+  (of-object "GtkBuildable")
+  (c-name "custom_tag_start")
+  (return-type "gboolean")
+  (parameters
+    '("GtkBuilder*" "pbuilder")
+    '("GObject*" "pchild")
+    '("const gchar*" "ptagname")
+    '("GMarkupParser*" "pparser")
+    '("gpointer*" "pdata")
+  )
+)
+
+(define-method get_internal_child
+  (of-object "GtkBuildable")
+  (c-name "get_internal_child")
+  (return-type "GObject*")
+  (parameters
+    '("GtkBuilder*" "pbuilder")
+    '("const gchar*" "pchildname")
+  )
+)
+
+(define-method get_name
+  (of-object "GtkBuildable")
+  (c-name "get_name")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method parser_finished
+  (of-object "GtkBuildable")
+  (c-name "parser_finished")
+  (return-type "none")
+  (parameters
+    '("GtkBuilder*" "pbuilder")
+  )
+)
+
+(define-method set_buildable_property
+  (of-object "GtkBuildable")
+  (c-name "set_buildable_property")
+  (return-type "none")
+  (parameters
+    '("GtkBuilder*" "pbuilder")
+    '("const gchar*" "pname")
+    '("const GValue*" "pvalue")
+  )
+)
+
+(define-method set_name
+  (of-object "GtkBuildable")
+  (c-name "set_name")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pname")
+  )
+)
+

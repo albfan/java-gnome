@@ -1,0 +1,14 @@
+(define-object ColorChooserWidget
+  (in-module "Gtk")
+  (parent "Box")
+  (c-name "GtkColorChooserWidget")
+)
+
+(define-function ColorChooserWidget_new
+  (is-constructor-of "GtkColorChooserWidget")
+  (c-name "gtk_color_chooser_widget_new")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+

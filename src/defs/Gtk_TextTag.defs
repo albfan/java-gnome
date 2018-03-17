@@ -1,0 +1,52 @@
+(define-object TextTag
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkTextTag")
+)
+
+(define-function TextTag_new
+  (is-constructor-of "GtkTextTag")
+  (c-name "gtk_text_tag_new")
+  (return-type "GtkTextTag*")
+  (parameters
+    '("const gchar*" "pname")
+  )
+)
+
+(define-method event
+  (of-object "GtkTextTag")
+  (c-name "event")
+  (return-type "gboolean")
+  (parameters
+    '("GObject*" "pevent_object")
+    '("GdkEvent*" "pevent")
+    '("const GtkTextIter*" "piter")
+  )
+)
+
+(define-method changed
+  (of-object "GtkTextTag")
+  (c-name "gtk_text_tag_changed")
+  (return-type "none")
+  (parameters
+    '("gboolean" "psize_changed")
+  )
+)
+
+(define-method get_priority
+  (of-object "GtkTextTag")
+  (c-name "gtk_text_tag_get_priority")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method set_priority
+  (of-object "GtkTextTag")
+  (c-name "gtk_text_tag_set_priority")
+  (return-type "none")
+  (parameters
+    '("gint" "ppriority")
+  )
+)
+

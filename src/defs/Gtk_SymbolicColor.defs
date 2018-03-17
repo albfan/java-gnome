@@ -1,0 +1,99 @@
+(define-object SymbolicColor
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkSymbolicColor")
+)
+
+(define-function SymbolicColor_new_alpha
+  (is-constructor-of "GtkSymbolicColor")
+  (c-name "gtk_symbolic_color_new_alpha")
+  (return-type "GtkSymbolicColor*")
+  (parameters
+    '("GtkSymbolicColor*" "pcolor")
+    '("gdouble" "pfactor")
+  )
+)
+
+(define-function SymbolicColor_new_literal
+  (is-constructor-of "GtkSymbolicColor")
+  (c-name "gtk_symbolic_color_new_literal")
+  (return-type "GtkSymbolicColor*")
+  (parameters
+    '("const GdkRGBA*" "pcolor")
+  )
+)
+
+(define-function SymbolicColor_new_mix
+  (is-constructor-of "GtkSymbolicColor")
+  (c-name "gtk_symbolic_color_new_mix")
+  (return-type "GtkSymbolicColor*")
+  (parameters
+    '("GtkSymbolicColor*" "pcolor1")
+    '("GtkSymbolicColor*" "pcolor2")
+    '("gdouble" "pfactor")
+  )
+)
+
+(define-function SymbolicColor_new_name
+  (is-constructor-of "GtkSymbolicColor")
+  (c-name "gtk_symbolic_color_new_name")
+  (return-type "GtkSymbolicColor*")
+  (parameters
+    '("const gchar*" "pname")
+  )
+)
+
+(define-function SymbolicColor_new_shade
+  (is-constructor-of "GtkSymbolicColor")
+  (c-name "gtk_symbolic_color_new_shade")
+  (return-type "GtkSymbolicColor*")
+  (parameters
+    '("GtkSymbolicColor*" "pcolor")
+    '("gdouble" "pfactor")
+  )
+)
+
+(define-function SymbolicColor_new_win32
+  (is-constructor-of "GtkSymbolicColor")
+  (c-name "gtk_symbolic_color_new_win32")
+  (return-type "GtkSymbolicColor*")
+  (parameters
+    '("const gchar*" "ptheme_class")
+    '("gint" "pid")
+  )
+)
+
+(define-method ref
+  (of-object "GtkSymbolicColor")
+  (c-name "gtk_symbolic_color_ref")
+  (return-type "GtkSymbolicColor*")
+  (parameters
+  )
+)
+
+(define-method resolve
+  (of-object "GtkSymbolicColor")
+  (c-name "gtk_symbolic_color_resolve")
+  (return-type "gboolean")
+  (parameters
+    '("GtkStyleProperties*" "pprops")
+    '("GdkRGBA*" "presolved_color")
+  )
+)
+
+(define-method to_string
+  (of-object "GtkSymbolicColor")
+  (c-name "gtk_symbolic_color_to_string")
+  (return-type "char*")
+  (parameters
+  )
+)
+
+(define-method unref
+  (of-object "GtkSymbolicColor")
+  (c-name "gtk_symbolic_color_unref")
+  (return-type "none")
+  (parameters
+  )
+)
+

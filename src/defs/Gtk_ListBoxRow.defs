@@ -1,0 +1,97 @@
+(define-object ListBoxRow
+  (in-module "Gtk")
+  (parent "Bin")
+  (c-name "GtkListBoxRow")
+)
+
+(define-function ListBoxRow_new
+  (is-constructor-of "GtkListBoxRow")
+  (c-name "gtk_list_box_row_new")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method activate
+  (of-object "GtkListBoxRow")
+  (c-name "activate")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method changed
+  (of-object "GtkListBoxRow")
+  (c-name "gtk_list_box_row_changed")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method get_activatable
+  (of-object "GtkListBoxRow")
+  (c-name "gtk_list_box_row_get_activatable")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_header
+  (of-object "GtkListBoxRow")
+  (c-name "gtk_list_box_row_get_header")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method get_index
+  (of-object "GtkListBoxRow")
+  (c-name "gtk_list_box_row_get_index")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_selectable
+  (of-object "GtkListBoxRow")
+  (c-name "gtk_list_box_row_get_selectable")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method is_selected
+  (of-object "GtkListBoxRow")
+  (c-name "gtk_list_box_row_is_selected")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method set_activatable
+  (of-object "GtkListBoxRow")
+  (c-name "gtk_list_box_row_set_activatable")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pactivatable")
+  )
+)
+
+(define-method set_header
+  (of-object "GtkListBoxRow")
+  (c-name "gtk_list_box_row_set_header")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pheader")
+  )
+)
+
+(define-method set_selectable
+  (of-object "GtkListBoxRow")
+  (c-name "gtk_list_box_row_set_selectable")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pselectable")
+  )
+)
+

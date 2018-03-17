@@ -1,0 +1,84 @@
+(define-object SocketConnection
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "IOStream")
+  (c-name "GSocketConnection")
+)
+
+(define-method connect
+  (of-object "GSocketConnection")
+  (c-name "g_socket_connection_connect")
+  (return-type "gboolean")
+  (parameters
+    '("GSocketAddress*" "paddress")
+    '("GCancellable*" "pcancellable")
+    '("GError**" "error")
+  )
+)
+
+(define-method connect_async
+  (of-object "GSocketConnection")
+  (c-name "g_socket_connection_connect_async")
+  (return-type "none")
+  (parameters
+    '("GSocketAddress*" "paddress")
+    '("GCancellable*" "pcancellable")
+    '("GAsyncReadyCallback" "pcallback")
+    '("gpointer" "puser_data")
+  )
+)
+
+(define-method connect_finish
+  (of-object "GSocketConnection")
+  (c-name "g_socket_connection_connect_finish")
+  (return-type "gboolean")
+  (parameters
+    '("GAsyncResult*" "presult")
+    '("GError**" "error")
+  )
+)
+
+(define-method get_local_address
+  (of-object "GSocketConnection")
+  (c-name "g_socket_connection_get_local_address")
+  (return-type "GSocketAddress*")
+  (parameters
+    '("GError**" "error")
+  )
+)
+
+(define-method get_remote_address
+  (of-object "GSocketConnection")
+  (c-name "g_socket_connection_get_remote_address")
+  (return-type "GSocketAddress*")
+  (parameters
+    '("GError**" "error")
+  )
+)
+
+(define-method get_socket
+  (of-object "GSocketConnection")
+  (c-name "g_socket_connection_get_socket")
+  (return-type "GSocket*")
+  (parameters
+  )
+)
+
+(define-method is_connected
+  (of-object "GSocketConnection")
+  (c-name "g_socket_connection_is_connected")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+

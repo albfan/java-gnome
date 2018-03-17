@@ -1,0 +1,46 @@
+(define-object Misc
+  (in-module "Gtk")
+  (parent "Widget")
+  (c-name "GtkMisc")
+)
+
+(define-method get_alignment
+  (of-object "GtkMisc")
+  (c-name "gtk_misc_get_alignment")
+  (return-type "none")
+  (parameters
+    '("gfloat*" "pxalign")
+    '("gfloat*" "pyalign")
+  )
+)
+
+(define-method get_padding
+  (of-object "GtkMisc")
+  (c-name "gtk_misc_get_padding")
+  (return-type "none")
+  (parameters
+    '("gint*" "pxpad")
+    '("gint*" "pypad")
+  )
+)
+
+(define-method set_alignment
+  (of-object "GtkMisc")
+  (c-name "gtk_misc_set_alignment")
+  (return-type "none")
+  (parameters
+    '("gfloat" "pxalign")
+    '("gfloat" "pyalign")
+  )
+)
+
+(define-method set_padding
+  (of-object "GtkMisc")
+  (c-name "gtk_misc_set_padding")
+  (return-type "none")
+  (parameters
+    '("gint" "pxpad")
+    '("gint" "pypad")
+  )
+)
+

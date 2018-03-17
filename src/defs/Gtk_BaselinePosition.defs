@@ -1,0 +1,10 @@
+(define-enum BaselinePosition
+  (in-module "Gtk")
+  (c-name "GtkBaselinePosition")
+  (values
+    '("top" "GTK_BASELINE_POSITION_TOP")
+    '("center" "GTK_BASELINE_POSITION_CENTER")
+    '("bottom" "GTK_BASELINE_POSITION_BOTTOM")
+  )
+)
+

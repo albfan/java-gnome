@@ -1,0 +1,16 @@
+(define-enum IOChannelError
+  (in-module "GLib")
+  (c-name "GIOChannelError")
+  (values
+    '("fbig" "G_IO_CHANNEL_ERROR_FBIG")
+    '("inval" "G_IO_CHANNEL_ERROR_INVAL")
+    '("io" "G_IO_CHANNEL_ERROR_IO")
+    '("isdir" "G_IO_CHANNEL_ERROR_ISDIR")
+    '("nospc" "G_IO_CHANNEL_ERROR_NOSPC")
+    '("nxio" "G_IO_CHANNEL_ERROR_NXIO")
+    '("overflow" "G_IO_CHANNEL_ERROR_OVERFLOW")
+    '("pipe" "G_IO_CHANNEL_ERROR_PIPE")
+    '("failed" "G_IO_CHANNEL_ERROR_FAILED")
+  )
+)
+

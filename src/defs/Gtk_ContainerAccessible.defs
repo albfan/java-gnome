@@ -1,0 +1,6 @@
+(define-object ContainerAccessible
+  (in-module "Gtk")
+  (parent "WidgetAccessible")
+  (c-name "GtkContainerAccessible")
+)
+

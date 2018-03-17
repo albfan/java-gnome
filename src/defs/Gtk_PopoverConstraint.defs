@@ -1,0 +1,9 @@
+(define-enum PopoverConstraint
+  (in-module "Gtk")
+  (c-name "GtkPopoverConstraint")
+  (values
+    '("none" "GTK_POPOVER_CONSTRAINT_NONE")
+    '("window" "GTK_POPOVER_CONSTRAINT_WINDOW")
+  )
+)
+

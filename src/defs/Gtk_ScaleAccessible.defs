@@ -1,0 +1,6 @@
+(define-object ScaleAccessible
+  (in-module "Gtk")
+  (parent "RangeAccessible")
+  (c-name "GtkScaleAccessible")
+)
+

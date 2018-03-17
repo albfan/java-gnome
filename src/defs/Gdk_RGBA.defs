@@ -1,0 +1,57 @@
+(define-object RGBA
+  (in-module "Gdk")
+  (import-header "gdk/gdk.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GdkRGBA")
+)
+
+(define-method copy
+  (of-object "GdkRGBA")
+  (c-name "gdk_rgba_copy")
+  (return-type "GdkRGBA*")
+  (parameters
+  )
+)
+
+(define-method equal
+  (of-object "GdkRGBA")
+  (c-name "gdk_rgba_equal")
+  (return-type "gboolean")
+  (parameters
+    '("gconstpointer" "pp2")
+  )
+)
+
+(define-method free
+  (of-object "GdkRGBA")
+  (c-name "gdk_rgba_free")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method hash
+  (of-object "GdkRGBA")
+  (c-name "gdk_rgba_hash")
+  (return-type "guint")
+  (parameters
+  )
+)
+
+(define-method parse
+  (of-object "GdkRGBA")
+  (c-name "gdk_rgba_parse")
+  (return-type "gboolean")
+  (parameters
+    '("const gchar*" "pspec")
+  )
+)
+
+(define-method to_string
+  (of-object "GdkRGBA")
+  (c-name "gdk_rgba_to_string")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+

@@ -1,0 +1,53 @@
+(define-object CharsetConverter
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GCharsetConverter")
+)
+
+(define-function CharsetConverter_new
+  (is-constructor-of "GCharsetConverter")
+  (c-name "g_charset_converter_new")
+  (return-type "GCharsetConverter*")
+  (parameters
+    '("const gchar*" "pto_charset")
+    '("const gchar*" "pfrom_charset")
+    '("GError**" "error")
+  )
+)
+
+(define-method get_num_fallbacks
+  (of-object "GCharsetConverter")
+  (c-name "g_charset_converter_get_num_fallbacks")
+  (return-type "guint")
+  (parameters
+  )
+)
+
+(define-method get_use_fallback
+  (of-object "GCharsetConverter")
+  (c-name "g_charset_converter_get_use_fallback")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method set_use_fallback
+  (of-object "GCharsetConverter")
+  (c-name "g_charset_converter_set_use_fallback")
+  (return-type "none")
+  (parameters
+    '("gboolean" "puse_fallback")
+  )
+)
+

@@ -1,0 +1,6 @@
+(define-object RadioMenuItemAccessible
+  (in-module "Gtk")
+  (parent "CheckMenuItemAccessible")
+  (c-name "GtkRadioMenuItemAccessible")
+)
+

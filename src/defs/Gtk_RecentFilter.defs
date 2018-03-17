@@ -1,0 +1,113 @@
+(define-object RecentFilter
+  (in-module "Gtk")
+  (parent "GObject.InitiallyUnowned")
+  (c-name "GtkRecentFilter")
+)
+
+(define-function RecentFilter_new
+  (is-constructor-of "GtkRecentFilter")
+  (c-name "gtk_recent_filter_new")
+  (return-type "GtkRecentFilter*")
+  (parameters
+  )
+)
+
+(define-method add_age
+  (of-object "GtkRecentFilter")
+  (c-name "gtk_recent_filter_add_age")
+  (return-type "none")
+  (parameters
+    '("gint" "pdays")
+  )
+)
+
+(define-method add_application
+  (of-object "GtkRecentFilter")
+  (c-name "gtk_recent_filter_add_application")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "papplication")
+  )
+)
+
+(define-method add_custom
+  (of-object "GtkRecentFilter")
+  (c-name "gtk_recent_filter_add_custom")
+  (return-type "none")
+  (parameters
+    '("GtkRecentFilterFlags" "pneeded")
+    '("GtkRecentFilterFunc" "pfunc")
+    '("gpointer" "pdata")
+    '("GDestroyNotify" "pdata_destroy")
+  )
+)
+
+(define-method add_group
+  (of-object "GtkRecentFilter")
+  (c-name "gtk_recent_filter_add_group")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pgroup")
+  )
+)
+
+(define-method add_mime_type
+  (of-object "GtkRecentFilter")
+  (c-name "gtk_recent_filter_add_mime_type")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pmime_type")
+  )
+)
+
+(define-method add_pattern
+  (of-object "GtkRecentFilter")
+  (c-name "gtk_recent_filter_add_pattern")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "ppattern")
+  )
+)
+
+(define-method add_pixbuf_formats
+  (of-object "GtkRecentFilter")
+  (c-name "gtk_recent_filter_add_pixbuf_formats")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method filter
+  (of-object "GtkRecentFilter")
+  (c-name "gtk_recent_filter_filter")
+  (return-type "gboolean")
+  (parameters
+    '("const GtkRecentFilterInfo*" "pfilter_info")
+  )
+)
+
+(define-method get_name
+  (of-object "GtkRecentFilter")
+  (c-name "gtk_recent_filter_get_name")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_needed
+  (of-object "GtkRecentFilter")
+  (c-name "gtk_recent_filter_get_needed")
+  (return-type "GtkRecentFilterFlags")
+  (parameters
+  )
+)
+
+(define-method set_name
+  (of-object "GtkRecentFilter")
+  (c-name "gtk_recent_filter_set_name")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pname")
+  )
+)
+

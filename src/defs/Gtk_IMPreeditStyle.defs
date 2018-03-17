@@ -1,0 +1,10 @@
+(define-enum IMPreeditStyle
+  (in-module "Gtk")
+  (c-name "GtkIMPreeditStyle")
+  (values
+    '("nothing" "GTK_IM_PREEDIT_NOTHING")
+    '("callback" "GTK_IM_PREEDIT_CALLBACK")
+    '("none" "GTK_IM_PREEDIT_NONE")
+  )
+)
+

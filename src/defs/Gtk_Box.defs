@@ -1,0 +1,144 @@
+(define-object Box
+  (in-module "Gtk")
+  (parent "Container")
+  (c-name "GtkBox")
+)
+
+(define-function Box_new
+  (is-constructor-of "GtkBox")
+  (c-name "gtk_box_new")
+  (return-type "GtkWidget*")
+  (parameters
+    '("GtkOrientation" "porientation")
+    '("gint" "pspacing")
+  )
+)
+
+(define-method get_baseline_position
+  (of-object "GtkBox")
+  (c-name "gtk_box_get_baseline_position")
+  (return-type "GtkBaselinePosition")
+  (parameters
+  )
+)
+
+(define-method get_center_widget
+  (of-object "GtkBox")
+  (c-name "gtk_box_get_center_widget")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method get_homogeneous
+  (of-object "GtkBox")
+  (c-name "gtk_box_get_homogeneous")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_spacing
+  (of-object "GtkBox")
+  (c-name "gtk_box_get_spacing")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method pack_end
+  (of-object "GtkBox")
+  (c-name "gtk_box_pack_end")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pchild")
+    '("gboolean" "pexpand")
+    '("gboolean" "pfill")
+    '("guint" "ppadding")
+  )
+)
+
+(define-method pack_start
+  (of-object "GtkBox")
+  (c-name "gtk_box_pack_start")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pchild")
+    '("gboolean" "pexpand")
+    '("gboolean" "pfill")
+    '("guint" "ppadding")
+  )
+)
+
+(define-method query_child_packing
+  (of-object "GtkBox")
+  (c-name "gtk_box_query_child_packing")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pchild")
+    '("gboolean*" "pexpand")
+    '("gboolean*" "pfill")
+    '("guint*" "ppadding")
+    '("GtkPackType*" "ppack_type")
+  )
+)
+
+(define-method reorder_child
+  (of-object "GtkBox")
+  (c-name "gtk_box_reorder_child")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pchild")
+    '("gint" "pposition")
+  )
+)
+
+(define-method set_baseline_position
+  (of-object "GtkBox")
+  (c-name "gtk_box_set_baseline_position")
+  (return-type "none")
+  (parameters
+    '("GtkBaselinePosition" "pposition")
+  )
+)
+
+(define-method set_center_widget
+  (of-object "GtkBox")
+  (c-name "gtk_box_set_center_widget")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pwidget")
+  )
+)
+
+(define-method set_child_packing
+  (of-object "GtkBox")
+  (c-name "gtk_box_set_child_packing")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pchild")
+    '("gboolean" "pexpand")
+    '("gboolean" "pfill")
+    '("guint" "ppadding")
+    '("GtkPackType" "ppack_type")
+  )
+)
+
+(define-method set_homogeneous
+  (of-object "GtkBox")
+  (c-name "gtk_box_set_homogeneous")
+  (return-type "none")
+  (parameters
+    '("gboolean" "phomogeneous")
+  )
+)
+
+(define-method set_spacing
+  (of-object "GtkBox")
+  (c-name "gtk_box_set_spacing")
+  (return-type "none")
+  (parameters
+    '("gint" "pspacing")
+  )
+)
+

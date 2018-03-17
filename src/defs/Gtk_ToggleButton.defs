@@ -1,0 +1,91 @@
+(define-object ToggleButton
+  (in-module "Gtk")
+  (parent "Button")
+  (c-name "GtkToggleButton")
+)
+
+(define-function ToggleButton_new
+  (is-constructor-of "GtkToggleButton")
+  (c-name "gtk_toggle_button_new")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-function ToggleButton_new_with_label
+  (is-constructor-of "GtkToggleButton")
+  (c-name "gtk_toggle_button_new_with_label")
+  (return-type "GtkWidget*")
+  (parameters
+    '("const gchar*" "plabel")
+  )
+)
+
+(define-function ToggleButton_new_with_mnemonic
+  (is-constructor-of "GtkToggleButton")
+  (c-name "gtk_toggle_button_new_with_mnemonic")
+  (return-type "GtkWidget*")
+  (parameters
+    '("const gchar*" "plabel")
+  )
+)
+
+(define-method toggled
+  (of-object "GtkToggleButton")
+  (c-name "toggled")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method get_active
+  (of-object "GtkToggleButton")
+  (c-name "gtk_toggle_button_get_active")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_inconsistent
+  (of-object "GtkToggleButton")
+  (c-name "gtk_toggle_button_get_inconsistent")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_mode
+  (of-object "GtkToggleButton")
+  (c-name "gtk_toggle_button_get_mode")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method set_active
+  (of-object "GtkToggleButton")
+  (c-name "gtk_toggle_button_set_active")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pis_active")
+  )
+)
+
+(define-method set_inconsistent
+  (of-object "GtkToggleButton")
+  (c-name "gtk_toggle_button_set_inconsistent")
+  (return-type "none")
+  (parameters
+    '("gboolean" "psetting")
+  )
+)
+
+(define-method set_mode
+  (of-object "GtkToggleButton")
+  (c-name "gtk_toggle_button_set_mode")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pdraw_indicator")
+  )
+)
+

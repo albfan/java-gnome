@@ -1,0 +1,16 @@
+(define-object DOMXPathNSResolver
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "DOMObject")
+  (c-name "WebKitDOMXPathNSResolver")
+)
+
+(define-method lookup_namespace_uri
+  (of-object "WebKitDOMXPathNSResolver")
+  (c-name "webkit_dom_xpath_ns_resolver_lookup_namespace_uri")
+  (return-type "gchar*")
+  (parameters
+    '("const gchar*" "pprefix")
+  )
+)
+

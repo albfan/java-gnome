@@ -1,0 +1,299 @@
+(define-object Mount
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GMount")
+)
+
+(define-method can_eject
+  (of-object "GMount")
+  (c-name "can_eject")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method can_unmount
+  (of-object "GMount")
+  (c-name "can_unmount")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method changed
+  (of-object "GMount")
+  (c-name "changed")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method eject
+  (of-object "GMount")
+  (c-name "eject")
+  (return-type "none")
+  (parameters
+    '("GMountUnmountFlags" "pflags")
+    '("GCancellable*" "pcancellable")
+    '("GAsyncReadyCallback" "pcallback")
+    '("gpointer" "puser_data")
+  )
+)
+
+(define-method eject_finish
+  (of-object "GMount")
+  (c-name "eject_finish")
+  (return-type "gboolean")
+  (parameters
+    '("GAsyncResult*" "presult")
+    '("GError**" "error")
+  )
+)
+
+(define-method eject_with_operation
+  (of-object "GMount")
+  (c-name "eject_with_operation")
+  (return-type "none")
+  (parameters
+    '("GMountUnmountFlags" "pflags")
+    '("GMountOperation*" "pmount_operation")
+    '("GCancellable*" "pcancellable")
+    '("GAsyncReadyCallback" "pcallback")
+    '("gpointer" "puser_data")
+  )
+)
+
+(define-method eject_with_operation_finish
+  (of-object "GMount")
+  (c-name "eject_with_operation_finish")
+  (return-type "gboolean")
+  (parameters
+    '("GAsyncResult*" "presult")
+    '("GError**" "error")
+  )
+)
+
+(define-method get_default_location
+  (of-object "GMount")
+  (c-name "get_default_location")
+  (return-type "GFile*")
+  (parameters
+  )
+)
+
+(define-method get_drive
+  (of-object "GMount")
+  (c-name "get_drive")
+  (return-type "GDrive*")
+  (parameters
+  )
+)
+
+(define-method get_icon
+  (of-object "GMount")
+  (c-name "get_icon")
+  (return-type "GIcon*")
+  (parameters
+  )
+)
+
+(define-method get_name
+  (of-object "GMount")
+  (c-name "get_name")
+  (return-type "char*")
+  (parameters
+  )
+)
+
+(define-method get_root
+  (of-object "GMount")
+  (c-name "get_root")
+  (return-type "GFile*")
+  (parameters
+  )
+)
+
+(define-method get_sort_key
+  (of-object "GMount")
+  (c-name "get_sort_key")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_symbolic_icon
+  (of-object "GMount")
+  (c-name "get_symbolic_icon")
+  (return-type "GIcon*")
+  (parameters
+  )
+)
+
+(define-method get_uuid
+  (of-object "GMount")
+  (c-name "get_uuid")
+  (return-type "char*")
+  (parameters
+  )
+)
+
+(define-method get_volume
+  (of-object "GMount")
+  (c-name "get_volume")
+  (return-type "GVolume*")
+  (parameters
+  )
+)
+
+(define-method guess_content_type
+  (of-object "GMount")
+  (c-name "guess_content_type")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pforce_rescan")
+    '("GCancellable*" "pcancellable")
+    '("GAsyncReadyCallback" "pcallback")
+    '("gpointer" "puser_data")
+  )
+)
+
+(define-method guess_content_type_finish
+  (of-object "GMount")
+  (c-name "guess_content_type_finish")
+  (return-type "none")
+  (parameters
+    '("GAsyncResult*" "presult")
+    '("GError**" "error")
+  )
+)
+
+(define-method guess_content_type_sync
+  (of-object "GMount")
+  (c-name "guess_content_type_sync")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pforce_rescan")
+    '("GCancellable*" "pcancellable")
+    '("GError**" "error")
+  )
+)
+
+(define-method pre_unmount
+  (of-object "GMount")
+  (c-name "pre_unmount")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method remount
+  (of-object "GMount")
+  (c-name "remount")
+  (return-type "none")
+  (parameters
+    '("GMountMountFlags" "pflags")
+    '("GMountOperation*" "pmount_operation")
+    '("GCancellable*" "pcancellable")
+    '("GAsyncReadyCallback" "pcallback")
+    '("gpointer" "puser_data")
+  )
+)
+
+(define-method remount_finish
+  (of-object "GMount")
+  (c-name "remount_finish")
+  (return-type "gboolean")
+  (parameters
+    '("GAsyncResult*" "presult")
+    '("GError**" "error")
+  )
+)
+
+(define-method unmount
+  (of-object "GMount")
+  (c-name "unmount")
+  (return-type "none")
+  (parameters
+    '("GMountUnmountFlags" "pflags")
+    '("GCancellable*" "pcancellable")
+    '("GAsyncReadyCallback" "pcallback")
+    '("gpointer" "puser_data")
+  )
+)
+
+(define-method unmount_finish
+  (of-object "GMount")
+  (c-name "unmount_finish")
+  (return-type "gboolean")
+  (parameters
+    '("GAsyncResult*" "presult")
+    '("GError**" "error")
+  )
+)
+
+(define-method unmount_with_operation
+  (of-object "GMount")
+  (c-name "unmount_with_operation")
+  (return-type "none")
+  (parameters
+    '("GMountUnmountFlags" "pflags")
+    '("GMountOperation*" "pmount_operation")
+    '("GCancellable*" "pcancellable")
+    '("GAsyncReadyCallback" "pcallback")
+    '("gpointer" "puser_data")
+  )
+)
+
+(define-method unmount_with_operation_finish
+  (of-object "GMount")
+  (c-name "unmount_with_operation_finish")
+  (return-type "gboolean")
+  (parameters
+    '("GAsyncResult*" "presult")
+    '("GError**" "error")
+  )
+)
+
+(define-method unmounted
+  (of-object "GMount")
+  (c-name "unmounted")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method is_shadowed
+  (of-object "GMount")
+  (c-name "g_mount_is_shadowed")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method shadow
+  (of-object "GMount")
+  (c-name "g_mount_shadow")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method unshadow
+  (of-object "GMount")
+  (c-name "g_mount_unshadow")
+  (return-type "none")
+  (parameters
+  )
+)
+

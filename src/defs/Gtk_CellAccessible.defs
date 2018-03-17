@@ -1,0 +1,15 @@
+(define-object CellAccessible
+  (in-module "Gtk")
+  (parent "Accessible")
+  (c-name "GtkCellAccessible")
+)
+
+(define-method update_cache
+  (of-object "GtkCellAccessible")
+  (c-name "update_cache")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pemit_signal")
+  )
+)
+

@@ -1,0 +1,6 @@
+(define-object ScrollableInterface
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkScrollableInterface")
+)
+

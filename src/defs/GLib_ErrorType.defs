@@ -1,0 +1,15 @@
+(define-enum ErrorType
+  (in-module "GLib")
+  (c-name "GErrorType")
+  (values
+    '("unknown" "G_ERR_UNKNOWN")
+    '("unexp_eof" "G_ERR_UNEXP_EOF")
+    '("unexp_eof_in_string" "G_ERR_UNEXP_EOF_IN_STRING")
+    '("unexp_eof_in_comment" "G_ERR_UNEXP_EOF_IN_COMMENT")
+    '("non_digit_in_const" "G_ERR_NON_DIGIT_IN_CONST")
+    '("digit_radix" "G_ERR_DIGIT_RADIX")
+    '("float_radix" "G_ERR_FLOAT_RADIX")
+    '("float_malformed" "G_ERR_FLOAT_MALFORMED")
+  )
+)
+

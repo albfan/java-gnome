@@ -1,0 +1,151 @@
+(define-object ActionGroup
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GActionGroup")
+)
+
+(define-method action_added
+  (of-object "GActionGroup")
+  (c-name "action_added")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "paction_name")
+  )
+)
+
+(define-method action_enabled_changed
+  (of-object "GActionGroup")
+  (c-name "action_enabled_changed")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "paction_name")
+    '("gboolean" "penabled")
+  )
+)
+
+(define-method action_removed
+  (of-object "GActionGroup")
+  (c-name "action_removed")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "paction_name")
+  )
+)
+
+(define-method action_state_changed
+  (of-object "GActionGroup")
+  (c-name "action_state_changed")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "paction_name")
+    '("GVariant*" "pstate")
+  )
+)
+
+(define-method activate_action
+  (of-object "GActionGroup")
+  (c-name "activate_action")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "paction_name")
+    '("GVariant*" "pparameter")
+  )
+)
+
+(define-method change_action_state
+  (of-object "GActionGroup")
+  (c-name "change_action_state")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "paction_name")
+    '("GVariant*" "pvalue")
+  )
+)
+
+(define-method get_action_enabled
+  (of-object "GActionGroup")
+  (c-name "get_action_enabled")
+  (return-type "gboolean")
+  (parameters
+    '("const gchar*" "paction_name")
+  )
+)
+
+(define-method get_action_parameter_type
+  (of-object "GActionGroup")
+  (c-name "get_action_parameter_type")
+  (return-type "const GVariantType*")
+  (parameters
+    '("const gchar*" "paction_name")
+  )
+)
+
+(define-method get_action_state
+  (of-object "GActionGroup")
+  (c-name "get_action_state")
+  (return-type "GVariant*")
+  (parameters
+    '("const gchar*" "paction_name")
+  )
+)
+
+(define-method get_action_state_hint
+  (of-object "GActionGroup")
+  (c-name "get_action_state_hint")
+  (return-type "GVariant*")
+  (parameters
+    '("const gchar*" "paction_name")
+  )
+)
+
+(define-method get_action_state_type
+  (of-object "GActionGroup")
+  (c-name "get_action_state_type")
+  (return-type "const GVariantType*")
+  (parameters
+    '("const gchar*" "paction_name")
+  )
+)
+
+(define-method has_action
+  (of-object "GActionGroup")
+  (c-name "has_action")
+  (return-type "gboolean")
+  (parameters
+    '("const gchar*" "paction_name")
+  )
+)
+
+(define-method list_actions
+  (of-object "GActionGroup")
+  (c-name "list_actions")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method query_action
+  (of-object "GActionGroup")
+  (c-name "query_action")
+  (return-type "gboolean")
+  (parameters
+    '("const gchar*" "paction_name")
+    '("gboolean*" "penabled")
+    '("const GVariantType**" "pparameter_type")
+    '("const GVariantType**" "pstate_type")
+    '("GVariant**" "pstate_hint")
+    '("GVariant**" "pstate")
+  )
+)
+

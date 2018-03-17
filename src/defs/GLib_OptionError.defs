@@ -1,0 +1,10 @@
+(define-enum OptionError
+  (in-module "GLib")
+  (c-name "GOptionError")
+  (values
+    '("unknown_option" "G_OPTION_ERROR_UNKNOWN_OPTION")
+    '("bad_value" "G_OPTION_ERROR_BAD_VALUE")
+    '("failed" "G_OPTION_ERROR_FAILED")
+  )
+)
+

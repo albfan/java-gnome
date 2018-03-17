@@ -1,0 +1,356 @@
+(define-object StatusIcon
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkStatusIcon")
+)
+
+(define-function StatusIcon_new
+  (is-constructor-of "GtkStatusIcon")
+  (c-name "gtk_status_icon_new")
+  (return-type "GtkStatusIcon*")
+  (parameters
+  )
+)
+
+(define-function StatusIcon_new_from_file
+  (is-constructor-of "GtkStatusIcon")
+  (c-name "gtk_status_icon_new_from_file")
+  (return-type "GtkStatusIcon*")
+  (parameters
+    '("gchar*" "pfilename")
+  )
+)
+
+(define-function StatusIcon_new_from_gicon
+  (is-constructor-of "GtkStatusIcon")
+  (c-name "gtk_status_icon_new_from_gicon")
+  (return-type "GtkStatusIcon*")
+  (parameters
+    '("GIcon*" "picon")
+  )
+)
+
+(define-function StatusIcon_new_from_icon_name
+  (is-constructor-of "GtkStatusIcon")
+  (c-name "gtk_status_icon_new_from_icon_name")
+  (return-type "GtkStatusIcon*")
+  (parameters
+    '("const gchar*" "picon_name")
+  )
+)
+
+(define-function StatusIcon_new_from_pixbuf
+  (is-constructor-of "GtkStatusIcon")
+  (c-name "gtk_status_icon_new_from_pixbuf")
+  (return-type "GtkStatusIcon*")
+  (parameters
+    '("GdkPixbuf*" "ppixbuf")
+  )
+)
+
+(define-function StatusIcon_new_from_stock
+  (is-constructor-of "GtkStatusIcon")
+  (c-name "gtk_status_icon_new_from_stock")
+  (return-type "GtkStatusIcon*")
+  (parameters
+    '("const gchar*" "pstock_id")
+  )
+)
+
+(define-method activate
+  (of-object "GtkStatusIcon")
+  (c-name "activate")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method button_press_event
+  (of-object "GtkStatusIcon")
+  (c-name "button_press_event")
+  (return-type "gboolean")
+  (parameters
+    '("GdkEventButton*" "pevent")
+  )
+)
+
+(define-method button_release_event
+  (of-object "GtkStatusIcon")
+  (c-name "button_release_event")
+  (return-type "gboolean")
+  (parameters
+    '("GdkEventButton*" "pevent")
+  )
+)
+
+(define-method popup_menu
+  (of-object "GtkStatusIcon")
+  (c-name "popup_menu")
+  (return-type "none")
+  (parameters
+    '("guint" "pbutton")
+    '("guint32" "pactivate_time")
+  )
+)
+
+(define-method query_tooltip
+  (of-object "GtkStatusIcon")
+  (c-name "query_tooltip")
+  (return-type "gboolean")
+  (parameters
+    '("gint" "px")
+    '("gint" "py")
+    '("gboolean" "pkeyboard_mode")
+    '("GtkTooltip*" "ptooltip")
+  )
+)
+
+(define-method scroll_event
+  (of-object "GtkStatusIcon")
+  (c-name "scroll_event")
+  (return-type "gboolean")
+  (parameters
+    '("GdkEventScroll*" "pevent")
+  )
+)
+
+(define-method size_changed
+  (of-object "GtkStatusIcon")
+  (c-name "size_changed")
+  (return-type "gboolean")
+  (parameters
+    '("gint" "psize")
+  )
+)
+
+(define-method get_geometry
+  (of-object "GtkStatusIcon")
+  (c-name "gtk_status_icon_get_geometry")
+  (return-type "gboolean")
+  (parameters
+    '("GdkScreen**" "pscreen")
+    '("GdkRectangle*" "parea")
+    '("GtkOrientation*" "porientation")
+  )
+)
+
+(define-method get_gicon
+  (of-object "GtkStatusIcon")
+  (c-name "gtk_status_icon_get_gicon")
+  (return-type "GIcon*")
+  (parameters
+  )
+)
+
+(define-method get_has_tooltip
+  (of-object "GtkStatusIcon")
+  (c-name "gtk_status_icon_get_has_tooltip")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_icon_name
+  (of-object "GtkStatusIcon")
+  (c-name "gtk_status_icon_get_icon_name")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_pixbuf
+  (of-object "GtkStatusIcon")
+  (c-name "gtk_status_icon_get_pixbuf")
+  (return-type "GdkPixbuf*")
+  (parameters
+  )
+)
+
+(define-method get_screen
+  (of-object "GtkStatusIcon")
+  (c-name "gtk_status_icon_get_screen")
+  (return-type "GdkScreen*")
+  (parameters
+  )
+)
+
+(define-method get_size
+  (of-object "GtkStatusIcon")
+  (c-name "gtk_status_icon_get_size")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_stock
+  (of-object "GtkStatusIcon")
+  (c-name "gtk_status_icon_get_stock")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_storage_type
+  (of-object "GtkStatusIcon")
+  (c-name "gtk_status_icon_get_storage_type")
+  (return-type "GtkImageType")
+  (parameters
+  )
+)
+
+(define-method get_title
+  (of-object "GtkStatusIcon")
+  (c-name "gtk_status_icon_get_title")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_tooltip_markup
+  (of-object "GtkStatusIcon")
+  (c-name "gtk_status_icon_get_tooltip_markup")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+
+(define-method get_tooltip_text
+  (of-object "GtkStatusIcon")
+  (c-name "gtk_status_icon_get_tooltip_text")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+
+(define-method get_visible
+  (of-object "GtkStatusIcon")
+  (c-name "gtk_status_icon_get_visible")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_x11_window_id
+  (of-object "GtkStatusIcon")
+  (c-name "gtk_status_icon_get_x11_window_id")
+  (return-type "guint32")
+  (parameters
+  )
+)
+
+(define-method is_embedded
+  (of-object "GtkStatusIcon")
+  (c-name "gtk_status_icon_is_embedded")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method set_from_file
+  (of-object "GtkStatusIcon")
+  (c-name "gtk_status_icon_set_from_file")
+  (return-type "none")
+  (parameters
+    '("gchar*" "pfilename")
+  )
+)
+
+(define-method set_from_gicon
+  (of-object "GtkStatusIcon")
+  (c-name "gtk_status_icon_set_from_gicon")
+  (return-type "none")
+  (parameters
+    '("GIcon*" "picon")
+  )
+)
+
+(define-method set_from_icon_name
+  (of-object "GtkStatusIcon")
+  (c-name "gtk_status_icon_set_from_icon_name")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "picon_name")
+  )
+)
+
+(define-method set_from_pixbuf
+  (of-object "GtkStatusIcon")
+  (c-name "gtk_status_icon_set_from_pixbuf")
+  (return-type "none")
+  (parameters
+    '("GdkPixbuf*" "ppixbuf")
+  )
+)
+
+(define-method set_from_stock
+  (of-object "GtkStatusIcon")
+  (c-name "gtk_status_icon_set_from_stock")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pstock_id")
+  )
+)
+
+(define-method set_has_tooltip
+  (of-object "GtkStatusIcon")
+  (c-name "gtk_status_icon_set_has_tooltip")
+  (return-type "none")
+  (parameters
+    '("gboolean" "phas_tooltip")
+  )
+)
+
+(define-method set_name
+  (of-object "GtkStatusIcon")
+  (c-name "gtk_status_icon_set_name")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pname")
+  )
+)
+
+(define-method set_screen
+  (of-object "GtkStatusIcon")
+  (c-name "gtk_status_icon_set_screen")
+  (return-type "none")
+  (parameters
+    '("GdkScreen*" "pscreen")
+  )
+)
+
+(define-method set_title
+  (of-object "GtkStatusIcon")
+  (c-name "gtk_status_icon_set_title")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "ptitle")
+  )
+)
+
+(define-method set_tooltip_markup
+  (of-object "GtkStatusIcon")
+  (c-name "gtk_status_icon_set_tooltip_markup")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pmarkup")
+  )
+)
+
+(define-method set_tooltip_text
+  (of-object "GtkStatusIcon")
+  (c-name "gtk_status_icon_set_tooltip_text")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "ptext")
+  )
+)
+
+(define-method set_visible
+  (of-object "GtkStatusIcon")
+  (c-name "gtk_status_icon_set_visible")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pvisible")
+  )
+)
+

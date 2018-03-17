@@ -1,0 +1,103 @@
+(define-object FileFilter
+  (in-module "Gtk")
+  (parent "GObject.InitiallyUnowned")
+  (c-name "GtkFileFilter")
+)
+
+(define-function FileFilter_new
+  (is-constructor-of "GtkFileFilter")
+  (c-name "gtk_file_filter_new")
+  (return-type "GtkFileFilter*")
+  (parameters
+  )
+)
+
+(define-function FileFilter_new_from_gvariant
+  (is-constructor-of "GtkFileFilter")
+  (c-name "gtk_file_filter_new_from_gvariant")
+  (return-type "GtkFileFilter*")
+  (parameters
+    '("GVariant*" "pvariant")
+  )
+)
+
+(define-method add_custom
+  (of-object "GtkFileFilter")
+  (c-name "gtk_file_filter_add_custom")
+  (return-type "none")
+  (parameters
+    '("GtkFileFilterFlags" "pneeded")
+    '("GtkFileFilterFunc" "pfunc")
+    '("gpointer" "pdata")
+    '("GDestroyNotify" "pnotify")
+  )
+)
+
+(define-method add_mime_type
+  (of-object "GtkFileFilter")
+  (c-name "gtk_file_filter_add_mime_type")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pmime_type")
+  )
+)
+
+(define-method add_pattern
+  (of-object "GtkFileFilter")
+  (c-name "gtk_file_filter_add_pattern")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "ppattern")
+  )
+)
+
+(define-method add_pixbuf_formats
+  (of-object "GtkFileFilter")
+  (c-name "gtk_file_filter_add_pixbuf_formats")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method filter
+  (of-object "GtkFileFilter")
+  (c-name "gtk_file_filter_filter")
+  (return-type "gboolean")
+  (parameters
+    '("const GtkFileFilterInfo*" "pfilter_info")
+  )
+)
+
+(define-method get_name
+  (of-object "GtkFileFilter")
+  (c-name "gtk_file_filter_get_name")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_needed
+  (of-object "GtkFileFilter")
+  (c-name "gtk_file_filter_get_needed")
+  (return-type "GtkFileFilterFlags")
+  (parameters
+  )
+)
+
+(define-method set_name
+  (of-object "GtkFileFilter")
+  (c-name "gtk_file_filter_set_name")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pname")
+  )
+)
+
+(define-method to_gvariant
+  (of-object "GtkFileFilter")
+  (c-name "gtk_file_filter_to_gvariant")
+  (return-type "GVariant*")
+  (parameters
+  )
+)
+

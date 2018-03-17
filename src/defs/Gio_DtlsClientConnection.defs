@@ -1,0 +1,59 @@
+(define-object DtlsClientConnection
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GDtlsClientConnection")
+)
+
+(define-method get_accepted_cas
+  (of-object "GDtlsClientConnection")
+  (c-name "g_dtls_client_connection_get_accepted_cas")
+  (return-type "GList*")
+  (parameters
+  )
+)
+
+(define-method get_server_identity
+  (of-object "GDtlsClientConnection")
+  (c-name "g_dtls_client_connection_get_server_identity")
+  (return-type "GSocketConnectable*")
+  (parameters
+  )
+)
+
+(define-method get_validation_flags
+  (of-object "GDtlsClientConnection")
+  (c-name "g_dtls_client_connection_get_validation_flags")
+  (return-type "GTlsCertificateFlags")
+  (parameters
+  )
+)
+
+(define-method set_server_identity
+  (of-object "GDtlsClientConnection")
+  (c-name "g_dtls_client_connection_set_server_identity")
+  (return-type "none")
+  (parameters
+    '("GSocketConnectable*" "pidentity")
+  )
+)
+
+(define-method set_validation_flags
+  (of-object "GDtlsClientConnection")
+  (c-name "g_dtls_client_connection_set_validation_flags")
+  (return-type "none")
+  (parameters
+    '("GTlsCertificateFlags" "pflags")
+  )
+)
+

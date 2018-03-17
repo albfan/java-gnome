@@ -1,0 +1,10 @@
+(define-enum DeviceType
+  (in-module "Gdk")
+  (c-name "GdkDeviceType")
+  (values
+    '("master" "GDK_DEVICE_TYPE_MASTER")
+    '("slave" "GDK_DEVICE_TYPE_SLAVE")
+    '("floating" "GDK_DEVICE_TYPE_FLOATING")
+  )
+)
+

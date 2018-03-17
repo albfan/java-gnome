@@ -1,0 +1,59 @@
+(define-object Actionable
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkActionable")
+)
+
+(define-method get_action_name
+  (of-object "GtkActionable")
+  (c-name "get_action_name")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_action_target_value
+  (of-object "GtkActionable")
+  (c-name "get_action_target_value")
+  (return-type "GVariant*")
+  (parameters
+  )
+)
+
+(define-method set_action_name
+  (of-object "GtkActionable")
+  (c-name "set_action_name")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "paction_name")
+  )
+)
+
+(define-method set_action_target_value
+  (of-object "GtkActionable")
+  (c-name "set_action_target_value")
+  (return-type "none")
+  (parameters
+    '("GVariant*" "ptarget_value")
+  )
+)
+
+(define-method set_action_target
+  (of-object "GtkActionable")
+  (c-name "gtk_actionable_set_action_target")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pformat_string")
+    '("null" "p...")
+  )
+)
+
+(define-method set_detailed_action_name
+  (of-object "GtkActionable")
+  (c-name "gtk_actionable_set_detailed_action_name")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pdetailed_action_name")
+  )
+)
+

@@ -1,0 +1,6 @@
+(define-object RangeAccessible
+  (in-module "Gtk")
+  (parent "WidgetAccessible")
+  (c-name "GtkRangeAccessible")
+)
+

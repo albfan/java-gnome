@@ -1,0 +1,9 @@
+(define-enum LevelBarMode
+  (in-module "Gtk")
+  (c-name "GtkLevelBarMode")
+  (values
+    '("continuous" "GTK_LEVEL_BAR_MODE_CONTINUOUS")
+    '("discrete" "GTK_LEVEL_BAR_MODE_DISCRETE")
+  )
+)
+

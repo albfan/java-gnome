@@ -1,0 +1,57 @@
+(define-object ApplicationWindow
+  (in-module "Gtk")
+  (parent "Window")
+  (c-name "GtkApplicationWindow")
+)
+
+(define-function ApplicationWindow_new
+  (is-constructor-of "GtkApplicationWindow")
+  (c-name "gtk_application_window_new")
+  (return-type "GtkWidget*")
+  (parameters
+    '("GtkApplication*" "papplication")
+  )
+)
+
+(define-method get_help_overlay
+  (of-object "GtkApplicationWindow")
+  (c-name "gtk_application_window_get_help_overlay")
+  (return-type "GtkShortcutsWindow*")
+  (parameters
+  )
+)
+
+(define-method get_id
+  (of-object "GtkApplicationWindow")
+  (c-name "gtk_application_window_get_id")
+  (return-type "guint")
+  (parameters
+  )
+)
+
+(define-method get_show_menubar
+  (of-object "GtkApplicationWindow")
+  (c-name "gtk_application_window_get_show_menubar")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method set_help_overlay
+  (of-object "GtkApplicationWindow")
+  (c-name "gtk_application_window_set_help_overlay")
+  (return-type "none")
+  (parameters
+    '("GtkShortcutsWindow*" "phelp_overlay")
+  )
+)
+
+(define-method set_show_menubar
+  (of-object "GtkApplicationWindow")
+  (c-name "gtk_application_window_set_show_menubar")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pshow_menubar")
+  )
+)
+

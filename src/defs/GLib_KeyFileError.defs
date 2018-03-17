@@ -1,0 +1,13 @@
+(define-enum KeyFileError
+  (in-module "GLib")
+  (c-name "GKeyFileError")
+  (values
+    '("unknown_encoding" "G_KEY_FILE_ERROR_UNKNOWN_ENCODING")
+    '("parse" "G_KEY_FILE_ERROR_PARSE")
+    '("not_found" "G_KEY_FILE_ERROR_NOT_FOUND")
+    '("key_not_found" "G_KEY_FILE_ERROR_KEY_NOT_FOUND")
+    '("group_not_found" "G_KEY_FILE_ERROR_GROUP_NOT_FOUND")
+    '("invalid_value" "G_KEY_FILE_ERROR_INVALID_VALUE")
+  )
+)
+

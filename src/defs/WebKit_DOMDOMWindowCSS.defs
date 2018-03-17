@@ -1,0 +1,17 @@
+(define-object DOMDOMWindowCSS
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "DOMObject")
+  (c-name "WebKitDOMDOMWindowCSS")
+)
+
+(define-method supports
+  (of-object "WebKitDOMDOMWindowCSS")
+  (c-name "webkit_dom_dom_window_css_supports")
+  (return-type "gboolean")
+  (parameters
+    '("const gchar*" "pproperty")
+    '("const gchar*" "pvalue")
+  )
+)
+

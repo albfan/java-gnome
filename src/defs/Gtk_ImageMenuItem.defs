@@ -1,0 +1,102 @@
+(define-object ImageMenuItem
+  (in-module "Gtk")
+  (parent "MenuItem")
+  (c-name "GtkImageMenuItem")
+)
+
+(define-function ImageMenuItem_new
+  (is-constructor-of "GtkImageMenuItem")
+  (c-name "gtk_image_menu_item_new")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-function ImageMenuItem_new_from_stock
+  (is-constructor-of "GtkImageMenuItem")
+  (c-name "gtk_image_menu_item_new_from_stock")
+  (return-type "GtkWidget*")
+  (parameters
+    '("const gchar*" "pstock_id")
+    '("GtkAccelGroup*" "paccel_group")
+  )
+)
+
+(define-function ImageMenuItem_new_with_label
+  (is-constructor-of "GtkImageMenuItem")
+  (c-name "gtk_image_menu_item_new_with_label")
+  (return-type "GtkWidget*")
+  (parameters
+    '("const gchar*" "plabel")
+  )
+)
+
+(define-function ImageMenuItem_new_with_mnemonic
+  (is-constructor-of "GtkImageMenuItem")
+  (c-name "gtk_image_menu_item_new_with_mnemonic")
+  (return-type "GtkWidget*")
+  (parameters
+    '("const gchar*" "plabel")
+  )
+)
+
+(define-method get_always_show_image
+  (of-object "GtkImageMenuItem")
+  (c-name "gtk_image_menu_item_get_always_show_image")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_image
+  (of-object "GtkImageMenuItem")
+  (c-name "gtk_image_menu_item_get_image")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method get_use_stock
+  (of-object "GtkImageMenuItem")
+  (c-name "gtk_image_menu_item_get_use_stock")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method set_accel_group
+  (of-object "GtkImageMenuItem")
+  (c-name "gtk_image_menu_item_set_accel_group")
+  (return-type "none")
+  (parameters
+    '("GtkAccelGroup*" "paccel_group")
+  )
+)
+
+(define-method set_always_show_image
+  (of-object "GtkImageMenuItem")
+  (c-name "gtk_image_menu_item_set_always_show_image")
+  (return-type "none")
+  (parameters
+    '("gboolean" "palways_show")
+  )
+)
+
+(define-method set_image
+  (of-object "GtkImageMenuItem")
+  (c-name "gtk_image_menu_item_set_image")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pimage")
+  )
+)
+
+(define-method set_use_stock
+  (of-object "GtkImageMenuItem")
+  (c-name "gtk_image_menu_item_set_use_stock")
+  (return-type "none")
+  (parameters
+    '("gboolean" "puse_stock")
+  )
+)
+

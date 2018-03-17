@@ -1,0 +1,13 @@
+(define-enum SubpixelLayout
+  (in-module "Gdk")
+  (c-name "GdkSubpixelLayout")
+  (values
+    '("unknown" "GDK_SUBPIXEL_LAYOUT_UNKNOWN")
+    '("none" "GDK_SUBPIXEL_LAYOUT_NONE")
+    '("horizontal_rgb" "GDK_SUBPIXEL_LAYOUT_HORIZONTAL_RGB")
+    '("horizontal_bgr" "GDK_SUBPIXEL_LAYOUT_HORIZONTAL_BGR")
+    '("vertical_rgb" "GDK_SUBPIXEL_LAYOUT_VERTICAL_RGB")
+    '("vertical_bgr" "GDK_SUBPIXEL_LAYOUT_VERTICAL_BGR")
+  )
+)
+

@@ -1,0 +1,149 @@
+(define-object Vfs
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GVfs")
+)
+
+(define-method add_writable_namespaces
+  (of-object "GVfs")
+  (c-name "add_writable_namespaces")
+  (return-type "none")
+  (parameters
+    '("GFileAttributeInfoList*" "plist")
+  )
+)
+
+(define-method deserialize_icon
+  (of-object "GVfs")
+  (c-name "deserialize_icon")
+  (return-type "GIcon*")
+  (parameters
+    '("GVariant*" "pvalue")
+  )
+)
+
+(define-method get_file_for_path
+  (of-object "GVfs")
+  (c-name "get_file_for_path")
+  (return-type "GFile*")
+  (parameters
+    '("const char*" "ppath")
+  )
+)
+
+(define-method get_file_for_uri
+  (of-object "GVfs")
+  (c-name "get_file_for_uri")
+  (return-type "GFile*")
+  (parameters
+    '("const char*" "puri")
+  )
+)
+
+(define-method get_supported_uri_schemes
+  (of-object "GVfs")
+  (c-name "get_supported_uri_schemes")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method is_active
+  (of-object "GVfs")
+  (c-name "is_active")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method local_file_add_info
+  (of-object "GVfs")
+  (c-name "local_file_add_info")
+  (return-type "none")
+  (parameters
+    '("const char*" "pfilename")
+    '("guint64" "pdevice")
+    '("GFileAttributeMatcher*" "pattribute_matcher")
+    '("GFileInfo*" "pinfo")
+    '("GCancellable*" "pcancellable")
+    '("gpointer*" "pextra_data")
+    '("GDestroyNotify*" "pfree_extra_data")
+  )
+)
+
+(define-method local_file_moved
+  (of-object "GVfs")
+  (c-name "local_file_moved")
+  (return-type "none")
+  (parameters
+    '("const char*" "psource")
+    '("const char*" "pdest")
+  )
+)
+
+(define-method local_file_removed
+  (of-object "GVfs")
+  (c-name "local_file_removed")
+  (return-type "none")
+  (parameters
+    '("const char*" "pfilename")
+  )
+)
+
+(define-method local_file_set_attributes
+  (of-object "GVfs")
+  (c-name "local_file_set_attributes")
+  (return-type "gboolean")
+  (parameters
+    '("const char*" "pfilename")
+    '("GFileInfo*" "pinfo")
+    '("GFileQueryInfoFlags" "pflags")
+    '("GCancellable*" "pcancellable")
+    '("GError**" "error")
+  )
+)
+
+(define-method parse_name
+  (of-object "GVfs")
+  (c-name "parse_name")
+  (return-type "GFile*")
+  (parameters
+    '("const char*" "pparse_name")
+  )
+)
+
+(define-method register_uri_scheme
+  (of-object "GVfs")
+  (c-name "g_vfs_register_uri_scheme")
+  (return-type "gboolean")
+  (parameters
+    '("const char*" "pscheme")
+    '("GVfsFileLookupFunc" "puri_func")
+    '("gpointer" "puri_data")
+    '("GDestroyNotify" "puri_destroy")
+    '("GVfsFileLookupFunc" "pparse_name_func")
+    '("gpointer" "pparse_name_data")
+    '("GDestroyNotify" "pparse_name_destroy")
+  )
+)
+
+(define-method unregister_uri_scheme
+  (of-object "GVfs")
+  (c-name "g_vfs_unregister_uri_scheme")
+  (return-type "gboolean")
+  (parameters
+    '("const char*" "pscheme")
+  )
+)
+

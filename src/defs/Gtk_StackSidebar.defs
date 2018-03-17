@@ -1,0 +1,31 @@
+(define-object StackSidebar
+  (in-module "Gtk")
+  (parent "Bin")
+  (c-name "GtkStackSidebar")
+)
+
+(define-function StackSidebar_new
+  (is-constructor-of "GtkStackSidebar")
+  (c-name "gtk_stack_sidebar_new")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method get_stack
+  (of-object "GtkStackSidebar")
+  (c-name "gtk_stack_sidebar_get_stack")
+  (return-type "GtkStack*")
+  (parameters
+  )
+)
+
+(define-method set_stack
+  (of-object "GtkStackSidebar")
+  (c-name "gtk_stack_sidebar_set_stack")
+  (return-type "none")
+  (parameters
+    '("GtkStack*" "pstack")
+  )
+)
+

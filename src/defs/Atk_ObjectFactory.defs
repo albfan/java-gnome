@@ -1,0 +1,32 @@
+(define-object ObjectFactory
+  (in-module "Atk")
+  (import-header "atk/atk.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "AtkObjectFactory")
+)
+
+(define-method invalidate
+  (of-object "AtkObjectFactory")
+  (c-name "invalidate")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method create_accessible
+  (of-object "AtkObjectFactory")
+  (c-name "atk_object_factory_create_accessible")
+  (return-type "AtkObject*")
+  (parameters
+    '("GObject*" "pobj")
+  )
+)
+
+(define-method get_accessible_type
+  (of-object "AtkObjectFactory")
+  (c-name "atk_object_factory_get_accessible_type")
+  (return-type "GType")
+  (parameters
+  )
+)
+

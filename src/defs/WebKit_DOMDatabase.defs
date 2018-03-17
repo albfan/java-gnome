@@ -1,0 +1,15 @@
+(define-object DOMDatabase
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "DOMObject")
+  (c-name "WebKitDOMDatabase")
+)
+
+(define-method get_version
+  (of-object "WebKitDOMDatabase")
+  (c-name "webkit_dom_database_get_version")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+

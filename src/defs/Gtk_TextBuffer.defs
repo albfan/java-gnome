@@ -1,0 +1,808 @@
+(define-object TextBuffer
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkTextBuffer")
+)
+
+(define-function TextBuffer_new
+  (is-constructor-of "GtkTextBuffer")
+  (c-name "gtk_text_buffer_new")
+  (return-type "GtkTextBuffer*")
+  (parameters
+    '("GtkTextTagTable*" "ptable")
+  )
+)
+
+(define-method apply_tag
+  (of-object "GtkTextBuffer")
+  (c-name "apply_tag")
+  (return-type "none")
+  (parameters
+    '("GtkTextTag*" "ptag")
+    '("const GtkTextIter*" "pstart")
+    '("const GtkTextIter*" "pend")
+  )
+)
+
+(define-method begin_user_action
+  (of-object "GtkTextBuffer")
+  (c-name "begin_user_action")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method changed
+  (of-object "GtkTextBuffer")
+  (c-name "changed")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method delete_range
+  (of-object "GtkTextBuffer")
+  (c-name "delete_range")
+  (return-type "none")
+  (parameters
+    '("GtkTextIter*" "pstart")
+    '("GtkTextIter*" "pend")
+  )
+)
+
+(define-method end_user_action
+  (of-object "GtkTextBuffer")
+  (c-name "end_user_action")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method insert_child_anchor
+  (of-object "GtkTextBuffer")
+  (c-name "insert_child_anchor")
+  (return-type "none")
+  (parameters
+    '("GtkTextIter*" "piter")
+    '("GtkTextChildAnchor*" "panchor")
+  )
+)
+
+(define-method insert_pixbuf
+  (of-object "GtkTextBuffer")
+  (c-name "insert_pixbuf")
+  (return-type "none")
+  (parameters
+    '("GtkTextIter*" "piter")
+    '("GdkPixbuf*" "ppixbuf")
+  )
+)
+
+(define-method insert_text
+  (of-object "GtkTextBuffer")
+  (c-name "insert_text")
+  (return-type "none")
+  (parameters
+    '("GtkTextIter*" "ppos")
+    '("const gchar*" "pnew_text")
+    '("gint" "pnew_text_length")
+  )
+)
+
+(define-method mark_deleted
+  (of-object "GtkTextBuffer")
+  (c-name "mark_deleted")
+  (return-type "none")
+  (parameters
+    '("GtkTextMark*" "pmark")
+  )
+)
+
+(define-method mark_set
+  (of-object "GtkTextBuffer")
+  (c-name "mark_set")
+  (return-type "none")
+  (parameters
+    '("const GtkTextIter*" "plocation")
+    '("GtkTextMark*" "pmark")
+  )
+)
+
+(define-method modified_changed
+  (of-object "GtkTextBuffer")
+  (c-name "modified_changed")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method paste_done
+  (of-object "GtkTextBuffer")
+  (c-name "paste_done")
+  (return-type "none")
+  (parameters
+    '("GtkClipboard*" "pclipboard")
+  )
+)
+
+(define-method remove_tag
+  (of-object "GtkTextBuffer")
+  (c-name "remove_tag")
+  (return-type "none")
+  (parameters
+    '("GtkTextTag*" "ptag")
+    '("const GtkTextIter*" "pstart")
+    '("const GtkTextIter*" "pend")
+  )
+)
+
+(define-method add_mark
+  (of-object "GtkTextBuffer")
+  (c-name "gtk_text_buffer_add_mark")
+  (return-type "none")
+  (parameters
+    '("GtkTextMark*" "pmark")
+    '("const GtkTextIter*" "pwhere")
+  )
+)
+
+(define-method add_selection_clipboard
+  (of-object "GtkTextBuffer")
+  (c-name "gtk_text_buffer_add_selection_clipboard")
+  (return-type "none")
+  (parameters
+    '("GtkClipboard*" "pclipboard")
+  )
+)
+
+(define-method apply_tag_by_name
+  (of-object "GtkTextBuffer")
+  (c-name "gtk_text_buffer_apply_tag_by_name")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pname")
+    '("const GtkTextIter*" "pstart")
+    '("const GtkTextIter*" "pend")
+  )
+)
+
+(define-method backspace
+  (of-object "GtkTextBuffer")
+  (c-name "gtk_text_buffer_backspace")
+  (return-type "gboolean")
+  (parameters
+    '("GtkTextIter*" "piter")
+    '("gboolean" "pinteractive")
+    '("gboolean" "pdefault_editable")
+  )
+)
+
+(define-method copy_clipboard
+  (of-object "GtkTextBuffer")
+  (c-name "gtk_text_buffer_copy_clipboard")
+  (return-type "none")
+  (parameters
+    '("GtkClipboard*" "pclipboard")
+  )
+)
+
+(define-method create_child_anchor
+  (of-object "GtkTextBuffer")
+  (c-name "gtk_text_buffer_create_child_anchor")
+  (return-type "GtkTextChildAnchor*")
+  (parameters
+    '("GtkTextIter*" "piter")
+  )
+)
+
+(define-method create_mark
+  (of-object "GtkTextBuffer")
+  (c-name "gtk_text_buffer_create_mark")
+  (return-type "GtkTextMark*")
+  (parameters
+    '("const gchar*" "pmark_name")
+    '("const GtkTextIter*" "pwhere")
+    '("gboolean" "pleft_gravity")
+  )
+)
+
+(define-method create_tag
+  (of-object "GtkTextBuffer")
+  (c-name "gtk_text_buffer_create_tag")
+  (return-type "GtkTextTag*")
+  (parameters
+    '("const gchar*" "ptag_name")
+    '("const gchar*" "pfirst_property_name")
+    '("null" "p...")
+  )
+)
+
+(define-method cut_clipboard
+  (of-object "GtkTextBuffer")
+  (c-name "gtk_text_buffer_cut_clipboard")
+  (return-type "none")
+  (parameters
+    '("GtkClipboard*" "pclipboard")
+    '("gboolean" "pdefault_editable")
+  )
+)
+
+(define-method delete
+  (of-object "GtkTextBuffer")
+  (c-name "gtk_text_buffer_delete")
+  (return-type "none")
+  (parameters
+    '("GtkTextIter*" "pstart")
+    '("GtkTextIter*" "pend")
+  )
+)
+
+(define-method delete_interactive
+  (of-object "GtkTextBuffer")
+  (c-name "gtk_text_buffer_delete_interactive")
+  (return-type "gboolean")
+  (parameters
+    '("GtkTextIter*" "pstart_iter")
+    '("GtkTextIter*" "pend_iter")
+    '("gboolean" "pdefault_editable")
+  )
+)
+
+(define-method delete_mark
+  (of-object "GtkTextBuffer")
+  (c-name "gtk_text_buffer_delete_mark")
+  (return-type "none")
+  (parameters
+    '("GtkTextMark*" "pmark")
+  )
+)
+
+(define-method delete_mark_by_name
+  (of-object "GtkTextBuffer")
+  (c-name "gtk_text_buffer_delete_mark_by_name")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pname")
+  )
+)
+
+(define-method delete_selection
+  (of-object "GtkTextBuffer")
+  (c-name "gtk_text_buffer_delete_selection")
+  (return-type "gboolean")
+  (parameters
+    '("gboolean" "pinteractive")
+    '("gboolean" "pdefault_editable")
+  )
+)
+
+(define-method deserialize
+  (of-object "GtkTextBuffer")
+  (c-name "gtk_text_buffer_deserialize")
+  (return-type "gboolean")
+  (parameters
+    '("GtkTextBuffer*" "pcontent_buffer")
+    '("GdkAtom" "pformat")
+    '("GtkTextIter*" "piter")
+    '("null" "pdata")
+    '("gsize" "plength")
+    '("GError**" "error")
+  )
+)
+
+(define-method deserialize_get_can_create_tags
+  (of-object "GtkTextBuffer")
+  (c-name "gtk_text_buffer_deserialize_get_can_create_tags")
+  (return-type "gboolean")
+  (parameters
+    '("GdkAtom" "pformat")
+  )
+)
+
+(define-method deserialize_set_can_create_tags
+  (of-object "GtkTextBuffer")
+  (c-name "gtk_text_buffer_deserialize_set_can_create_tags")
+  (return-type "none")
+  (parameters
+    '("GdkAtom" "pformat")
+    '("gboolean" "pcan_create_tags")
+  )
+)
+
+(define-method get_bounds
+  (of-object "GtkTextBuffer")
+  (c-name "gtk_text_buffer_get_bounds")
+  (return-type "none")
+  (parameters
+    '("GtkTextIter*" "pstart")
+    '("GtkTextIter*" "pend")
+  )
+)
+
+(define-method get_char_count
+  (of-object "GtkTextBuffer")
+  (c-name "gtk_text_buffer_get_char_count")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_copy_target_list
+  (of-object "GtkTextBuffer")
+  (c-name "gtk_text_buffer_get_copy_target_list")
+  (return-type "GtkTargetList*")
+  (parameters
+  )
+)
+
+(define-method get_deserialize_formats
+  (of-object "GtkTextBuffer")
+  (c-name "gtk_text_buffer_get_deserialize_formats")
+  (return-type "none")
+  (parameters
+    '("gint*" "pn_formats")
+  )
+)
+
+(define-method get_end_iter
+  (of-object "GtkTextBuffer")
+  (c-name "gtk_text_buffer_get_end_iter")
+  (return-type "none")
+  (parameters
+    '("GtkTextIter*" "piter")
+  )
+)
+
+(define-method get_has_selection
+  (of-object "GtkTextBuffer")
+  (c-name "gtk_text_buffer_get_has_selection")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_insert
+  (of-object "GtkTextBuffer")
+  (c-name "gtk_text_buffer_get_insert")
+  (return-type "GtkTextMark*")
+  (parameters
+  )
+)
+
+(define-method get_iter_at_child_anchor
+  (of-object "GtkTextBuffer")
+  (c-name "gtk_text_buffer_get_iter_at_child_anchor")
+  (return-type "none")
+  (parameters
+    '("GtkTextIter*" "piter")
+    '("GtkTextChildAnchor*" "panchor")
+  )
+)
+
+(define-method get_iter_at_line
+  (of-object "GtkTextBuffer")
+  (c-name "gtk_text_buffer_get_iter_at_line")
+  (return-type "none")
+  (parameters
+    '("GtkTextIter*" "piter")
+    '("gint" "pline_number")
+  )
+)
+
+(define-method get_iter_at_line_index
+  (of-object "GtkTextBuffer")
+  (c-name "gtk_text_buffer_get_iter_at_line_index")
+  (return-type "none")
+  (parameters
+    '("GtkTextIter*" "piter")
+    '("gint" "pline_number")
+    '("gint" "pbyte_index")
+  )
+)
+
+(define-method get_iter_at_line_offset
+  (of-object "GtkTextBuffer")
+  (c-name "gtk_text_buffer_get_iter_at_line_offset")
+  (return-type "none")
+  (parameters
+    '("GtkTextIter*" "piter")
+    '("gint" "pline_number")
+    '("gint" "pchar_offset")
+  )
+)
+
+(define-method get_iter_at_mark
+  (of-object "GtkTextBuffer")
+  (c-name "gtk_text_buffer_get_iter_at_mark")
+  (return-type "none")
+  (parameters
+    '("GtkTextIter*" "piter")
+    '("GtkTextMark*" "pmark")
+  )
+)
+
+(define-method get_iter_at_offset
+  (of-object "GtkTextBuffer")
+  (c-name "gtk_text_buffer_get_iter_at_offset")
+  (return-type "none")
+  (parameters
+    '("GtkTextIter*" "piter")
+    '("gint" "pchar_offset")
+  )
+)
+
+(define-method get_line_count
+  (of-object "GtkTextBuffer")
+  (c-name "gtk_text_buffer_get_line_count")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_mark
+  (of-object "GtkTextBuffer")
+  (c-name "gtk_text_buffer_get_mark")
+  (return-type "GtkTextMark*")
+  (parameters
+    '("const gchar*" "pname")
+  )
+)
+
+(define-method get_modified
+  (of-object "GtkTextBuffer")
+  (c-name "gtk_text_buffer_get_modified")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_paste_target_list
+  (of-object "GtkTextBuffer")
+  (c-name "gtk_text_buffer_get_paste_target_list")
+  (return-type "GtkTargetList*")
+  (parameters
+  )
+)
+
+(define-method get_selection_bound
+  (of-object "GtkTextBuffer")
+  (c-name "gtk_text_buffer_get_selection_bound")
+  (return-type "GtkTextMark*")
+  (parameters
+  )
+)
+
+(define-method get_selection_bounds
+  (of-object "GtkTextBuffer")
+  (c-name "gtk_text_buffer_get_selection_bounds")
+  (return-type "gboolean")
+  (parameters
+    '("GtkTextIter*" "pstart")
+    '("GtkTextIter*" "pend")
+  )
+)
+
+(define-method get_serialize_formats
+  (of-object "GtkTextBuffer")
+  (c-name "gtk_text_buffer_get_serialize_formats")
+  (return-type "none")
+  (parameters
+    '("gint*" "pn_formats")
+  )
+)
+
+(define-method get_slice
+  (of-object "GtkTextBuffer")
+  (c-name "gtk_text_buffer_get_slice")
+  (return-type "gchar*")
+  (parameters
+    '("const GtkTextIter*" "pstart")
+    '("const GtkTextIter*" "pend")
+    '("gboolean" "pinclude_hidden_chars")
+  )
+)
+
+(define-method get_start_iter
+  (of-object "GtkTextBuffer")
+  (c-name "gtk_text_buffer_get_start_iter")
+  (return-type "none")
+  (parameters
+    '("GtkTextIter*" "piter")
+  )
+)
+
+(define-method get_tag_table
+  (of-object "GtkTextBuffer")
+  (c-name "gtk_text_buffer_get_tag_table")
+  (return-type "GtkTextTagTable*")
+  (parameters
+  )
+)
+
+(define-method get_text
+  (of-object "GtkTextBuffer")
+  (c-name "gtk_text_buffer_get_text")
+  (return-type "gchar*")
+  (parameters
+    '("const GtkTextIter*" "pstart")
+    '("const GtkTextIter*" "pend")
+    '("gboolean" "pinclude_hidden_chars")
+  )
+)
+
+(define-method insert
+  (of-object "GtkTextBuffer")
+  (c-name "gtk_text_buffer_insert")
+  (return-type "none")
+  (parameters
+    '("GtkTextIter*" "piter")
+    '("const gchar*" "ptext")
+    '("gint" "plen")
+  )
+)
+
+(define-method insert_at_cursor
+  (of-object "GtkTextBuffer")
+  (c-name "gtk_text_buffer_insert_at_cursor")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "ptext")
+    '("gint" "plen")
+  )
+)
+
+(define-method insert_interactive
+  (of-object "GtkTextBuffer")
+  (c-name "gtk_text_buffer_insert_interactive")
+  (return-type "gboolean")
+  (parameters
+    '("GtkTextIter*" "piter")
+    '("const gchar*" "ptext")
+    '("gint" "plen")
+    '("gboolean" "pdefault_editable")
+  )
+)
+
+(define-method insert_interactive_at_cursor
+  (of-object "GtkTextBuffer")
+  (c-name "gtk_text_buffer_insert_interactive_at_cursor")
+  (return-type "gboolean")
+  (parameters
+    '("const gchar*" "ptext")
+    '("gint" "plen")
+    '("gboolean" "pdefault_editable")
+  )
+)
+
+(define-method insert_markup
+  (of-object "GtkTextBuffer")
+  (c-name "gtk_text_buffer_insert_markup")
+  (return-type "none")
+  (parameters
+    '("GtkTextIter*" "piter")
+    '("const gchar*" "pmarkup")
+    '("gint" "plen")
+  )
+)
+
+(define-method insert_range
+  (of-object "GtkTextBuffer")
+  (c-name "gtk_text_buffer_insert_range")
+  (return-type "none")
+  (parameters
+    '("GtkTextIter*" "piter")
+    '("const GtkTextIter*" "pstart")
+    '("const GtkTextIter*" "pend")
+  )
+)
+
+(define-method insert_range_interactive
+  (of-object "GtkTextBuffer")
+  (c-name "gtk_text_buffer_insert_range_interactive")
+  (return-type "gboolean")
+  (parameters
+    '("GtkTextIter*" "piter")
+    '("const GtkTextIter*" "pstart")
+    '("const GtkTextIter*" "pend")
+    '("gboolean" "pdefault_editable")
+  )
+)
+
+(define-method insert_with_tags
+  (of-object "GtkTextBuffer")
+  (c-name "gtk_text_buffer_insert_with_tags")
+  (return-type "none")
+  (parameters
+    '("GtkTextIter*" "piter")
+    '("const gchar*" "ptext")
+    '("gint" "plen")
+    '("GtkTextTag*" "pfirst_tag")
+    '("null" "p...")
+  )
+)
+
+(define-method insert_with_tags_by_name
+  (of-object "GtkTextBuffer")
+  (c-name "gtk_text_buffer_insert_with_tags_by_name")
+  (return-type "none")
+  (parameters
+    '("GtkTextIter*" "piter")
+    '("const gchar*" "ptext")
+    '("gint" "plen")
+    '("const gchar*" "pfirst_tag_name")
+    '("null" "p...")
+  )
+)
+
+(define-method move_mark
+  (of-object "GtkTextBuffer")
+  (c-name "gtk_text_buffer_move_mark")
+  (return-type "none")
+  (parameters
+    '("GtkTextMark*" "pmark")
+    '("const GtkTextIter*" "pwhere")
+  )
+)
+
+(define-method move_mark_by_name
+  (of-object "GtkTextBuffer")
+  (c-name "gtk_text_buffer_move_mark_by_name")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pname")
+    '("const GtkTextIter*" "pwhere")
+  )
+)
+
+(define-method paste_clipboard
+  (of-object "GtkTextBuffer")
+  (c-name "gtk_text_buffer_paste_clipboard")
+  (return-type "none")
+  (parameters
+    '("GtkClipboard*" "pclipboard")
+    '("GtkTextIter*" "poverride_location")
+    '("gboolean" "pdefault_editable")
+  )
+)
+
+(define-method place_cursor
+  (of-object "GtkTextBuffer")
+  (c-name "gtk_text_buffer_place_cursor")
+  (return-type "none")
+  (parameters
+    '("const GtkTextIter*" "pwhere")
+  )
+)
+
+(define-method register_deserialize_format
+  (of-object "GtkTextBuffer")
+  (c-name "gtk_text_buffer_register_deserialize_format")
+  (return-type "GdkAtom")
+  (parameters
+    '("const gchar*" "pmime_type")
+    '("GtkTextBufferDeserializeFunc" "pfunction")
+    '("gpointer" "puser_data")
+    '("GDestroyNotify" "puser_data_destroy")
+  )
+)
+
+(define-method register_deserialize_tagset
+  (of-object "GtkTextBuffer")
+  (c-name "gtk_text_buffer_register_deserialize_tagset")
+  (return-type "GdkAtom")
+  (parameters
+    '("const gchar*" "ptagset_name")
+  )
+)
+
+(define-method register_serialize_format
+  (of-object "GtkTextBuffer")
+  (c-name "gtk_text_buffer_register_serialize_format")
+  (return-type "GdkAtom")
+  (parameters
+    '("const gchar*" "pmime_type")
+    '("GtkTextBufferSerializeFunc" "pfunction")
+    '("gpointer" "puser_data")
+    '("GDestroyNotify" "puser_data_destroy")
+  )
+)
+
+(define-method register_serialize_tagset
+  (of-object "GtkTextBuffer")
+  (c-name "gtk_text_buffer_register_serialize_tagset")
+  (return-type "GdkAtom")
+  (parameters
+    '("const gchar*" "ptagset_name")
+  )
+)
+
+(define-method remove_all_tags
+  (of-object "GtkTextBuffer")
+  (c-name "gtk_text_buffer_remove_all_tags")
+  (return-type "none")
+  (parameters
+    '("const GtkTextIter*" "pstart")
+    '("const GtkTextIter*" "pend")
+  )
+)
+
+(define-method remove_selection_clipboard
+  (of-object "GtkTextBuffer")
+  (c-name "gtk_text_buffer_remove_selection_clipboard")
+  (return-type "none")
+  (parameters
+    '("GtkClipboard*" "pclipboard")
+  )
+)
+
+(define-method remove_tag_by_name
+  (of-object "GtkTextBuffer")
+  (c-name "gtk_text_buffer_remove_tag_by_name")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pname")
+    '("const GtkTextIter*" "pstart")
+    '("const GtkTextIter*" "pend")
+  )
+)
+
+(define-method select_range
+  (of-object "GtkTextBuffer")
+  (c-name "gtk_text_buffer_select_range")
+  (return-type "none")
+  (parameters
+    '("const GtkTextIter*" "pins")
+    '("const GtkTextIter*" "pbound")
+  )
+)
+
+(define-method serialize
+  (of-object "GtkTextBuffer")
+  (c-name "gtk_text_buffer_serialize")
+  (return-type "none")
+  (parameters
+    '("GtkTextBuffer*" "pcontent_buffer")
+    '("GdkAtom" "pformat")
+    '("const GtkTextIter*" "pstart")
+    '("const GtkTextIter*" "pend")
+    '("gsize*" "plength")
+  )
+)
+
+(define-method set_modified
+  (of-object "GtkTextBuffer")
+  (c-name "gtk_text_buffer_set_modified")
+  (return-type "none")
+  (parameters
+    '("gboolean" "psetting")
+  )
+)
+
+(define-method set_text
+  (of-object "GtkTextBuffer")
+  (c-name "gtk_text_buffer_set_text")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "ptext")
+    '("gint" "plen")
+  )
+)
+
+(define-method unregister_deserialize_format
+  (of-object "GtkTextBuffer")
+  (c-name "gtk_text_buffer_unregister_deserialize_format")
+  (return-type "none")
+  (parameters
+    '("GdkAtom" "pformat")
+  )
+)
+
+(define-method unregister_serialize_format
+  (of-object "GtkTextBuffer")
+  (c-name "gtk_text_buffer_unregister_serialize_format")
+  (return-type "none")
+  (parameters
+    '("GdkAtom" "pformat")
+  )
+)
+

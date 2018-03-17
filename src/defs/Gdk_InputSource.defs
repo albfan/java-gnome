@@ -1,0 +1,16 @@
+(define-enum InputSource
+  (in-module "Gdk")
+  (c-name "GdkInputSource")
+  (values
+    '("mouse" "GDK_SOURCE_MOUSE")
+    '("pen" "GDK_SOURCE_PEN")
+    '("eraser" "GDK_SOURCE_ERASER")
+    '("cursor" "GDK_SOURCE_CURSOR")
+    '("keyboard" "GDK_SOURCE_KEYBOARD")
+    '("touchscreen" "GDK_SOURCE_TOUCHSCREEN")
+    '("touchpad" "GDK_SOURCE_TOUCHPAD")
+    '("trackpoint" "GDK_SOURCE_TRACKPOINT")
+    '("tablet_pad" "GDK_SOURCE_TABLET_PAD")
+  )
+)
+

@@ -1,0 +1,6 @@
+(define-object AppChooserButtonClass
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkAppChooserButtonClass")
+)
+

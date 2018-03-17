@@ -1,0 +1,33 @@
+(define-object DOMTextTrackCueList
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "DOMObject")
+  (c-name "WebKitDOMTextTrackCueList")
+)
+
+(define-method get_cue_by_id
+  (of-object "WebKitDOMTextTrackCueList")
+  (c-name "webkit_dom_text_track_cue_list_get_cue_by_id")
+  (return-type "WebKitDOMTextTrackCue*")
+  (parameters
+    '("const gchar*" "pid")
+  )
+)
+
+(define-method get_length
+  (of-object "WebKitDOMTextTrackCueList")
+  (c-name "webkit_dom_text_track_cue_list_get_length")
+  (return-type "gulong")
+  (parameters
+  )
+)
+
+(define-method item
+  (of-object "WebKitDOMTextTrackCueList")
+  (c-name "webkit_dom_text_track_cue_list_item")
+  (return-type "WebKitDOMTextTrackCue*")
+  (parameters
+    '("gulong" "pindex")
+  )
+)
+

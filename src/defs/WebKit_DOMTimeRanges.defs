@@ -1,0 +1,35 @@
+(define-object DOMTimeRanges
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "DOMObject")
+  (c-name "WebKitDOMTimeRanges")
+)
+
+(define-method end
+  (of-object "WebKitDOMTimeRanges")
+  (c-name "webkit_dom_time_ranges_end")
+  (return-type "gdouble")
+  (parameters
+    '("gulong" "pindex")
+    '("GError**" "error")
+  )
+)
+
+(define-method get_length
+  (of-object "WebKitDOMTimeRanges")
+  (c-name "webkit_dom_time_ranges_get_length")
+  (return-type "gulong")
+  (parameters
+  )
+)
+
+(define-method start
+  (of-object "WebKitDOMTimeRanges")
+  (c-name "webkit_dom_time_ranges_start")
+  (return-type "gdouble")
+  (parameters
+    '("gulong" "pindex")
+    '("GError**" "error")
+  )
+)
+

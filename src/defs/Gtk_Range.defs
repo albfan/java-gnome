@@ -1,0 +1,305 @@
+(define-object Range
+  (in-module "Gtk")
+  (parent "Widget")
+  (c-name "GtkRange")
+)
+
+(define-method adjust_bounds
+  (of-object "GtkRange")
+  (c-name "adjust_bounds")
+  (return-type "none")
+  (parameters
+    '("gdouble" "pnew_value")
+  )
+)
+
+(define-method change_value
+  (of-object "GtkRange")
+  (c-name "change_value")
+  (return-type "gboolean")
+  (parameters
+    '("GtkScrollType" "pscroll")
+    '("gdouble" "pnew_value")
+  )
+)
+
+(define-method get_range_border
+  (of-object "GtkRange")
+  (c-name "get_range_border")
+  (return-type "none")
+  (parameters
+    '("GtkBorder*" "pborder_")
+  )
+)
+
+(define-method get_range_size_request
+  (of-object "GtkRange")
+  (c-name "get_range_size_request")
+  (return-type "none")
+  (parameters
+    '("GtkOrientation" "porientation")
+    '("gint*" "pminimum")
+    '("gint*" "pnatural")
+  )
+)
+
+(define-method move_slider
+  (of-object "GtkRange")
+  (c-name "move_slider")
+  (return-type "none")
+  (parameters
+    '("GtkScrollType" "pscroll")
+  )
+)
+
+(define-method value_changed
+  (of-object "GtkRange")
+  (c-name "value_changed")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method get_adjustment
+  (of-object "GtkRange")
+  (c-name "gtk_range_get_adjustment")
+  (return-type "GtkAdjustment*")
+  (parameters
+  )
+)
+
+(define-method get_fill_level
+  (of-object "GtkRange")
+  (c-name "gtk_range_get_fill_level")
+  (return-type "gdouble")
+  (parameters
+  )
+)
+
+(define-method get_flippable
+  (of-object "GtkRange")
+  (c-name "gtk_range_get_flippable")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_inverted
+  (of-object "GtkRange")
+  (c-name "gtk_range_get_inverted")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_lower_stepper_sensitivity
+  (of-object "GtkRange")
+  (c-name "gtk_range_get_lower_stepper_sensitivity")
+  (return-type "GtkSensitivityType")
+  (parameters
+  )
+)
+
+(define-method get_min_slider_size
+  (of-object "GtkRange")
+  (c-name "gtk_range_get_min_slider_size")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_range_rect
+  (of-object "GtkRange")
+  (c-name "gtk_range_get_range_rect")
+  (return-type "none")
+  (parameters
+    '("GdkRectangle*" "prange_rect")
+  )
+)
+
+(define-method get_restrict_to_fill_level
+  (of-object "GtkRange")
+  (c-name "gtk_range_get_restrict_to_fill_level")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_round_digits
+  (of-object "GtkRange")
+  (c-name "gtk_range_get_round_digits")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_show_fill_level
+  (of-object "GtkRange")
+  (c-name "gtk_range_get_show_fill_level")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_slider_range
+  (of-object "GtkRange")
+  (c-name "gtk_range_get_slider_range")
+  (return-type "none")
+  (parameters
+    '("gint*" "pslider_start")
+    '("gint*" "pslider_end")
+  )
+)
+
+(define-method get_slider_size_fixed
+  (of-object "GtkRange")
+  (c-name "gtk_range_get_slider_size_fixed")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_upper_stepper_sensitivity
+  (of-object "GtkRange")
+  (c-name "gtk_range_get_upper_stepper_sensitivity")
+  (return-type "GtkSensitivityType")
+  (parameters
+  )
+)
+
+(define-method get_value
+  (of-object "GtkRange")
+  (c-name "gtk_range_get_value")
+  (return-type "gdouble")
+  (parameters
+  )
+)
+
+(define-method set_adjustment
+  (of-object "GtkRange")
+  (c-name "gtk_range_set_adjustment")
+  (return-type "none")
+  (parameters
+    '("GtkAdjustment*" "padjustment")
+  )
+)
+
+(define-method set_fill_level
+  (of-object "GtkRange")
+  (c-name "gtk_range_set_fill_level")
+  (return-type "none")
+  (parameters
+    '("gdouble" "pfill_level")
+  )
+)
+
+(define-method set_flippable
+  (of-object "GtkRange")
+  (c-name "gtk_range_set_flippable")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pflippable")
+  )
+)
+
+(define-method set_increments
+  (of-object "GtkRange")
+  (c-name "gtk_range_set_increments")
+  (return-type "none")
+  (parameters
+    '("gdouble" "pstep")
+    '("gdouble" "ppage")
+  )
+)
+
+(define-method set_inverted
+  (of-object "GtkRange")
+  (c-name "gtk_range_set_inverted")
+  (return-type "none")
+  (parameters
+    '("gboolean" "psetting")
+  )
+)
+
+(define-method set_lower_stepper_sensitivity
+  (of-object "GtkRange")
+  (c-name "gtk_range_set_lower_stepper_sensitivity")
+  (return-type "none")
+  (parameters
+    '("GtkSensitivityType" "psensitivity")
+  )
+)
+
+(define-method set_min_slider_size
+  (of-object "GtkRange")
+  (c-name "gtk_range_set_min_slider_size")
+  (return-type "none")
+  (parameters
+    '("gint" "pmin_size")
+  )
+)
+
+(define-method set_range
+  (of-object "GtkRange")
+  (c-name "gtk_range_set_range")
+  (return-type "none")
+  (parameters
+    '("gdouble" "pmin")
+    '("gdouble" "pmax")
+  )
+)
+
+(define-method set_restrict_to_fill_level
+  (of-object "GtkRange")
+  (c-name "gtk_range_set_restrict_to_fill_level")
+  (return-type "none")
+  (parameters
+    '("gboolean" "prestrict_to_fill_level")
+  )
+)
+
+(define-method set_round_digits
+  (of-object "GtkRange")
+  (c-name "gtk_range_set_round_digits")
+  (return-type "none")
+  (parameters
+    '("gint" "pround_digits")
+  )
+)
+
+(define-method set_show_fill_level
+  (of-object "GtkRange")
+  (c-name "gtk_range_set_show_fill_level")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pshow_fill_level")
+  )
+)
+
+(define-method set_slider_size_fixed
+  (of-object "GtkRange")
+  (c-name "gtk_range_set_slider_size_fixed")
+  (return-type "none")
+  (parameters
+    '("gboolean" "psize_fixed")
+  )
+)
+
+(define-method set_upper_stepper_sensitivity
+  (of-object "GtkRange")
+  (c-name "gtk_range_set_upper_stepper_sensitivity")
+  (return-type "none")
+  (parameters
+    '("GtkSensitivityType" "psensitivity")
+  )
+)
+
+(define-method set_value
+  (of-object "GtkRange")
+  (c-name "gtk_range_set_value")
+  (return-type "none")
+  (parameters
+    '("gdouble" "pvalue")
+  )
+)
+

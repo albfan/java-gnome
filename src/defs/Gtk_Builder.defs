@@ -1,0 +1,263 @@
+(define-object Builder
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkBuilder")
+)
+
+(define-function Builder_new
+  (is-constructor-of "GtkBuilder")
+  (c-name "gtk_builder_new")
+  (return-type "GtkBuilder*")
+  (parameters
+  )
+)
+
+(define-function Builder_new_from_file
+  (is-constructor-of "GtkBuilder")
+  (c-name "gtk_builder_new_from_file")
+  (return-type "GtkBuilder*")
+  (parameters
+    '("const gchar*" "pfilename")
+  )
+)
+
+(define-function Builder_new_from_resource
+  (is-constructor-of "GtkBuilder")
+  (c-name "gtk_builder_new_from_resource")
+  (return-type "GtkBuilder*")
+  (parameters
+    '("const gchar*" "presource_path")
+  )
+)
+
+(define-function Builder_new_from_string
+  (is-constructor-of "GtkBuilder")
+  (c-name "gtk_builder_new_from_string")
+  (return-type "GtkBuilder*")
+  (parameters
+    '("const gchar*" "pstring")
+    '("gssize" "plength")
+  )
+)
+
+(define-method get_type_from_name
+  (of-object "GtkBuilder")
+  (c-name "get_type_from_name")
+  (return-type "GType")
+  (parameters
+    '("const char*" "ptype_name")
+  )
+)
+
+(define-method add_callback_symbol
+  (of-object "GtkBuilder")
+  (c-name "gtk_builder_add_callback_symbol")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pcallback_name")
+    '("GCallback" "pcallback_symbol")
+  )
+)
+
+(define-method add_callback_symbols
+  (of-object "GtkBuilder")
+  (c-name "gtk_builder_add_callback_symbols")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pfirst_callback_name")
+    '("GCallback" "pfirst_callback_symbol")
+    '("null" "p...")
+  )
+)
+
+(define-method add_from_file
+  (of-object "GtkBuilder")
+  (c-name "gtk_builder_add_from_file")
+  (return-type "guint")
+  (parameters
+    '("const gchar*" "pfilename")
+    '("GError**" "error")
+  )
+)
+
+(define-method add_from_resource
+  (of-object "GtkBuilder")
+  (c-name "gtk_builder_add_from_resource")
+  (return-type "guint")
+  (parameters
+    '("const gchar*" "presource_path")
+    '("GError**" "error")
+  )
+)
+
+(define-method add_from_string
+  (of-object "GtkBuilder")
+  (c-name "gtk_builder_add_from_string")
+  (return-type "guint")
+  (parameters
+    '("const gchar*" "pbuffer")
+    '("gsize" "plength")
+    '("GError**" "error")
+  )
+)
+
+(define-method add_objects_from_file
+  (of-object "GtkBuilder")
+  (c-name "gtk_builder_add_objects_from_file")
+  (return-type "guint")
+  (parameters
+    '("const gchar*" "pfilename")
+    '("null" "pobject_ids")
+    '("GError**" "error")
+  )
+)
+
+(define-method add_objects_from_resource
+  (of-object "GtkBuilder")
+  (c-name "gtk_builder_add_objects_from_resource")
+  (return-type "guint")
+  (parameters
+    '("const gchar*" "presource_path")
+    '("null" "pobject_ids")
+    '("GError**" "error")
+  )
+)
+
+(define-method add_objects_from_string
+  (of-object "GtkBuilder")
+  (c-name "gtk_builder_add_objects_from_string")
+  (return-type "guint")
+  (parameters
+    '("const gchar*" "pbuffer")
+    '("gsize" "plength")
+    '("null" "pobject_ids")
+    '("GError**" "error")
+  )
+)
+
+(define-method connect_signals
+  (of-object "GtkBuilder")
+  (c-name "gtk_builder_connect_signals")
+  (return-type "none")
+  (parameters
+    '("gpointer" "puser_data")
+  )
+)
+
+(define-method connect_signals_full
+  (of-object "GtkBuilder")
+  (c-name "gtk_builder_connect_signals_full")
+  (return-type "none")
+  (parameters
+    '("GtkBuilderConnectFunc" "pfunc")
+    '("gpointer" "puser_data")
+  )
+)
+
+(define-method expose_object
+  (of-object "GtkBuilder")
+  (c-name "gtk_builder_expose_object")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pname")
+    '("GObject*" "pobject")
+  )
+)
+
+(define-method extend_with_template
+  (of-object "GtkBuilder")
+  (c-name "gtk_builder_extend_with_template")
+  (return-type "guint")
+  (parameters
+    '("GtkWidget*" "pwidget")
+    '("GType" "ptemplate_type")
+    '("const gchar*" "pbuffer")
+    '("gsize" "plength")
+    '("GError**" "error")
+  )
+)
+
+(define-method get_application
+  (of-object "GtkBuilder")
+  (c-name "gtk_builder_get_application")
+  (return-type "GtkApplication*")
+  (parameters
+  )
+)
+
+(define-method get_object
+  (of-object "GtkBuilder")
+  (c-name "gtk_builder_get_object")
+  (return-type "GObject*")
+  (parameters
+    '("const gchar*" "pname")
+  )
+)
+
+(define-method get_objects
+  (of-object "GtkBuilder")
+  (c-name "gtk_builder_get_objects")
+  (return-type "GSList*")
+  (parameters
+  )
+)
+
+(define-method get_translation_domain
+  (of-object "GtkBuilder")
+  (c-name "gtk_builder_get_translation_domain")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method lookup_callback_symbol
+  (of-object "GtkBuilder")
+  (c-name "gtk_builder_lookup_callback_symbol")
+  (return-type "GCallback")
+  (parameters
+    '("const gchar*" "pcallback_name")
+  )
+)
+
+(define-method set_application
+  (of-object "GtkBuilder")
+  (c-name "gtk_builder_set_application")
+  (return-type "none")
+  (parameters
+    '("GtkApplication*" "papplication")
+  )
+)
+
+(define-method set_translation_domain
+  (of-object "GtkBuilder")
+  (c-name "gtk_builder_set_translation_domain")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pdomain")
+  )
+)
+
+(define-method value_from_string
+  (of-object "GtkBuilder")
+  (c-name "gtk_builder_value_from_string")
+  (return-type "gboolean")
+  (parameters
+    '("GParamSpec*" "ppspec")
+    '("const gchar*" "pstring")
+    '("GValue*" "pvalue")
+    '("GError**" "error")
+  )
+)
+
+(define-method value_from_string_type
+  (of-object "GtkBuilder")
+  (c-name "gtk_builder_value_from_string_type")
+  (return-type "gboolean")
+  (parameters
+    '("GType" "ptype")
+    '("const gchar*" "pstring")
+    '("GValue*" "pvalue")
+    '("GError**" "error")
+  )
+)
+

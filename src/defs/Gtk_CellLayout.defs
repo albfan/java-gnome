@@ -1,0 +1,102 @@
+(define-object CellLayout
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkCellLayout")
+)
+
+(define-method add_attribute
+  (of-object "GtkCellLayout")
+  (c-name "add_attribute")
+  (return-type "none")
+  (parameters
+    '("GtkCellRenderer*" "pcell")
+    '("const gchar*" "pattribute")
+    '("gint" "pcolumn")
+  )
+)
+
+(define-method clear
+  (of-object "GtkCellLayout")
+  (c-name "clear")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method clear_attributes
+  (of-object "GtkCellLayout")
+  (c-name "clear_attributes")
+  (return-type "none")
+  (parameters
+    '("GtkCellRenderer*" "pcell")
+  )
+)
+
+(define-method get_area
+  (of-object "GtkCellLayout")
+  (c-name "get_area")
+  (return-type "GtkCellArea*")
+  (parameters
+  )
+)
+
+(define-method get_cells
+  (of-object "GtkCellLayout")
+  (c-name "get_cells")
+  (return-type "GList*")
+  (parameters
+  )
+)
+
+(define-method pack_end
+  (of-object "GtkCellLayout")
+  (c-name "pack_end")
+  (return-type "none")
+  (parameters
+    '("GtkCellRenderer*" "pcell")
+    '("gboolean" "pexpand")
+  )
+)
+
+(define-method pack_start
+  (of-object "GtkCellLayout")
+  (c-name "pack_start")
+  (return-type "none")
+  (parameters
+    '("GtkCellRenderer*" "pcell")
+    '("gboolean" "pexpand")
+  )
+)
+
+(define-method reorder
+  (of-object "GtkCellLayout")
+  (c-name "reorder")
+  (return-type "none")
+  (parameters
+    '("GtkCellRenderer*" "pcell")
+    '("gint" "pposition")
+  )
+)
+
+(define-method set_cell_data_func
+  (of-object "GtkCellLayout")
+  (c-name "set_cell_data_func")
+  (return-type "none")
+  (parameters
+    '("GtkCellRenderer*" "pcell")
+    '("GtkCellLayoutDataFunc" "pfunc")
+    '("gpointer" "pfunc_data")
+    '("GDestroyNotify" "pdestroy")
+  )
+)
+
+(define-method set_attributes
+  (of-object "GtkCellLayout")
+  (c-name "gtk_cell_layout_set_attributes")
+  (return-type "none")
+  (parameters
+    '("GtkCellRenderer*" "pcell")
+    '("null" "p...")
+  )
+)
+

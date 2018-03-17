@@ -1,0 +1,337 @@
+(define-object Table
+  (in-module "Atk")
+  (import-header "atk/atk.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "AtkTable")
+)
+
+(define-method add_column_selection
+  (of-object "AtkTable")
+  (c-name "add_column_selection")
+  (return-type "gboolean")
+  (parameters
+    '("gint" "pcolumn")
+  )
+)
+
+(define-method add_row_selection
+  (of-object "AtkTable")
+  (c-name "add_row_selection")
+  (return-type "gboolean")
+  (parameters
+    '("gint" "prow")
+  )
+)
+
+(define-method column_deleted
+  (of-object "AtkTable")
+  (c-name "column_deleted")
+  (return-type "none")
+  (parameters
+    '("gint" "pcolumn")
+    '("gint" "pnum_deleted")
+  )
+)
+
+(define-method column_inserted
+  (of-object "AtkTable")
+  (c-name "column_inserted")
+  (return-type "none")
+  (parameters
+    '("gint" "pcolumn")
+    '("gint" "pnum_inserted")
+  )
+)
+
+(define-method column_reordered
+  (of-object "AtkTable")
+  (c-name "column_reordered")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method get_caption
+  (of-object "AtkTable")
+  (c-name "get_caption")
+  (return-type "AtkObject*")
+  (parameters
+  )
+)
+
+(define-method get_column_at_index
+  (of-object "AtkTable")
+  (c-name "get_column_at_index")
+  (return-type "gint")
+  (parameters
+    '("gint" "pindex_")
+  )
+)
+
+(define-method get_column_description
+  (of-object "AtkTable")
+  (c-name "get_column_description")
+  (return-type "const gchar*")
+  (parameters
+    '("gint" "pcolumn")
+  )
+)
+
+(define-method get_column_extent_at
+  (of-object "AtkTable")
+  (c-name "get_column_extent_at")
+  (return-type "gint")
+  (parameters
+    '("gint" "prow")
+    '("gint" "pcolumn")
+  )
+)
+
+(define-method get_column_header
+  (of-object "AtkTable")
+  (c-name "get_column_header")
+  (return-type "AtkObject*")
+  (parameters
+    '("gint" "pcolumn")
+  )
+)
+
+(define-method get_index_at
+  (of-object "AtkTable")
+  (c-name "get_index_at")
+  (return-type "gint")
+  (parameters
+    '("gint" "prow")
+    '("gint" "pcolumn")
+  )
+)
+
+(define-method get_n_columns
+  (of-object "AtkTable")
+  (c-name "get_n_columns")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_n_rows
+  (of-object "AtkTable")
+  (c-name "get_n_rows")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_row_at_index
+  (of-object "AtkTable")
+  (c-name "get_row_at_index")
+  (return-type "gint")
+  (parameters
+    '("gint" "pindex_")
+  )
+)
+
+(define-method get_row_description
+  (of-object "AtkTable")
+  (c-name "get_row_description")
+  (return-type "const gchar*")
+  (parameters
+    '("gint" "prow")
+  )
+)
+
+(define-method get_row_extent_at
+  (of-object "AtkTable")
+  (c-name "get_row_extent_at")
+  (return-type "gint")
+  (parameters
+    '("gint" "prow")
+    '("gint" "pcolumn")
+  )
+)
+
+(define-method get_row_header
+  (of-object "AtkTable")
+  (c-name "get_row_header")
+  (return-type "AtkObject*")
+  (parameters
+    '("gint" "prow")
+  )
+)
+
+(define-method get_selected_columns
+  (of-object "AtkTable")
+  (c-name "get_selected_columns")
+  (return-type "gint")
+  (parameters
+    '("gint**" "pselected")
+  )
+)
+
+(define-method get_selected_rows
+  (of-object "AtkTable")
+  (c-name "get_selected_rows")
+  (return-type "gint")
+  (parameters
+    '("gint**" "pselected")
+  )
+)
+
+(define-method get_summary
+  (of-object "AtkTable")
+  (c-name "get_summary")
+  (return-type "AtkObject*")
+  (parameters
+  )
+)
+
+(define-method is_column_selected
+  (of-object "AtkTable")
+  (c-name "is_column_selected")
+  (return-type "gboolean")
+  (parameters
+    '("gint" "pcolumn")
+  )
+)
+
+(define-method is_row_selected
+  (of-object "AtkTable")
+  (c-name "is_row_selected")
+  (return-type "gboolean")
+  (parameters
+    '("gint" "prow")
+  )
+)
+
+(define-method is_selected
+  (of-object "AtkTable")
+  (c-name "is_selected")
+  (return-type "gboolean")
+  (parameters
+    '("gint" "prow")
+    '("gint" "pcolumn")
+  )
+)
+
+(define-method model_changed
+  (of-object "AtkTable")
+  (c-name "model_changed")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method ref_at
+  (of-object "AtkTable")
+  (c-name "ref_at")
+  (return-type "AtkObject*")
+  (parameters
+    '("gint" "prow")
+    '("gint" "pcolumn")
+  )
+)
+
+(define-method remove_column_selection
+  (of-object "AtkTable")
+  (c-name "remove_column_selection")
+  (return-type "gboolean")
+  (parameters
+    '("gint" "pcolumn")
+  )
+)
+
+(define-method remove_row_selection
+  (of-object "AtkTable")
+  (c-name "remove_row_selection")
+  (return-type "gboolean")
+  (parameters
+    '("gint" "prow")
+  )
+)
+
+(define-method row_deleted
+  (of-object "AtkTable")
+  (c-name "row_deleted")
+  (return-type "none")
+  (parameters
+    '("gint" "prow")
+    '("gint" "pnum_deleted")
+  )
+)
+
+(define-method row_inserted
+  (of-object "AtkTable")
+  (c-name "row_inserted")
+  (return-type "none")
+  (parameters
+    '("gint" "prow")
+    '("gint" "pnum_inserted")
+  )
+)
+
+(define-method row_reordered
+  (of-object "AtkTable")
+  (c-name "row_reordered")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method set_caption
+  (of-object "AtkTable")
+  (c-name "set_caption")
+  (return-type "none")
+  (parameters
+    '("AtkObject*" "pcaption")
+  )
+)
+
+(define-method set_column_description
+  (of-object "AtkTable")
+  (c-name "set_column_description")
+  (return-type "none")
+  (parameters
+    '("gint" "pcolumn")
+    '("const gchar*" "pdescription")
+  )
+)
+
+(define-method set_column_header
+  (of-object "AtkTable")
+  (c-name "set_column_header")
+  (return-type "none")
+  (parameters
+    '("gint" "pcolumn")
+    '("AtkObject*" "pheader")
+  )
+)
+
+(define-method set_row_description
+  (of-object "AtkTable")
+  (c-name "set_row_description")
+  (return-type "none")
+  (parameters
+    '("gint" "prow")
+    '("const gchar*" "pdescription")
+  )
+)
+
+(define-method set_row_header
+  (of-object "AtkTable")
+  (c-name "set_row_header")
+  (return-type "none")
+  (parameters
+    '("gint" "prow")
+    '("AtkObject*" "pheader")
+  )
+)
+
+(define-method set_summary
+  (of-object "AtkTable")
+  (c-name "set_summary")
+  (return-type "none")
+  (parameters
+    '("AtkObject*" "paccessible")
+  )
+)
+

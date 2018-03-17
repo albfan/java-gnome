@@ -1,0 +1,56 @@
+(define-object WebPlugin
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "WebKitWebPlugin")
+)
+
+(define-method get_description
+  (of-object "WebKitWebPlugin")
+  (c-name "webkit_web_plugin_get_description")
+  (return-type "const char*")
+  (parameters
+  )
+)
+
+(define-method get_enabled
+  (of-object "WebKitWebPlugin")
+  (c-name "webkit_web_plugin_get_enabled")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_mimetypes
+  (of-object "WebKitWebPlugin")
+  (c-name "webkit_web_plugin_get_mimetypes")
+  (return-type "GSList*")
+  (parameters
+  )
+)
+
+(define-method get_name
+  (of-object "WebKitWebPlugin")
+  (c-name "webkit_web_plugin_get_name")
+  (return-type "const char*")
+  (parameters
+  )
+)
+
+(define-method get_path
+  (of-object "WebKitWebPlugin")
+  (c-name "webkit_web_plugin_get_path")
+  (return-type "const char*")
+  (parameters
+  )
+)
+
+(define-method set_enabled
+  (of-object "WebKitWebPlugin")
+  (c-name "webkit_web_plugin_set_enabled")
+  (return-type "none")
+  (parameters
+    '("gboolean" "penabled")
+  )
+)
+

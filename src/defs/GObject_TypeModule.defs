@@ -1,0 +1,91 @@
+(define-object TypeModule
+  (in-module "GObject")
+  (import-header "glib-object.h")
+  (parent "Object")
+  (c-name "GTypeModule")
+)
+
+(define-method load
+  (of-object "GTypeModule")
+  (c-name "load")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method unload
+  (of-object "GTypeModule")
+  (c-name "unload")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method add_interface
+  (of-object "GTypeModule")
+  (c-name "g_type_module_add_interface")
+  (return-type "none")
+  (parameters
+    '("GType" "pinstance_type")
+    '("GType" "pinterface_type")
+    '("const GInterfaceInfo*" "pinterface_info")
+  )
+)
+
+(define-method register_enum
+  (of-object "GTypeModule")
+  (c-name "g_type_module_register_enum")
+  (return-type "GType")
+  (parameters
+    '("const gchar*" "pname")
+    '("const GEnumValue*" "pconst_static_values")
+  )
+)
+
+(define-method register_flags
+  (of-object "GTypeModule")
+  (c-name "g_type_module_register_flags")
+  (return-type "GType")
+  (parameters
+    '("const gchar*" "pname")
+    '("const GFlagsValue*" "pconst_static_values")
+  )
+)
+
+(define-method register_type
+  (of-object "GTypeModule")
+  (c-name "g_type_module_register_type")
+  (return-type "GType")
+  (parameters
+    '("GType" "pparent_type")
+    '("const gchar*" "ptype_name")
+    '("const GTypeInfo*" "ptype_info")
+    '("GTypeFlags" "pflags")
+  )
+)
+
+(define-method set_name
+  (of-object "GTypeModule")
+  (c-name "g_type_module_set_name")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pname")
+  )
+)
+
+(define-method unuse
+  (of-object "GTypeModule")
+  (c-name "g_type_module_unuse")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method use
+  (of-object "GTypeModule")
+  (c-name "g_type_module_use")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+

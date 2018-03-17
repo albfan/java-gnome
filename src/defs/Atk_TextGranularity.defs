@@ -1,0 +1,12 @@
+(define-enum TextGranularity
+  (in-module "Atk")
+  (c-name "AtkTextGranularity")
+  (values
+    '("char" "ATK_TEXT_GRANULARITY_CHAR")
+    '("word" "ATK_TEXT_GRANULARITY_WORD")
+    '("sentence" "ATK_TEXT_GRANULARITY_SENTENCE")
+    '("line" "ATK_TEXT_GRANULARITY_LINE")
+    '("paragraph" "ATK_TEXT_GRANULARITY_PARAGRAPH")
+  )
+)
+

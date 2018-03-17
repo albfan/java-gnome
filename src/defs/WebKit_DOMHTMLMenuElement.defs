@@ -1,0 +1,24 @@
+(define-object DOMHTMLMenuElement
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "DOMHTMLElement")
+  (c-name "WebKitDOMHTMLMenuElement")
+)
+
+(define-method get_compact
+  (of-object "WebKitDOMHTMLMenuElement")
+  (c-name "webkit_dom_html_menu_element_get_compact")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method set_compact
+  (of-object "WebKitDOMHTMLMenuElement")
+  (c-name "webkit_dom_html_menu_element_set_compact")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pvalue")
+  )
+)
+

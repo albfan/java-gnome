@@ -1,0 +1,6 @@
+(define-object StackAccessibleClass
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkStackAccessibleClass")
+)
+

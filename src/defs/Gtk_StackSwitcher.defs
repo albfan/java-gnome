@@ -1,0 +1,31 @@
+(define-object StackSwitcher
+  (in-module "Gtk")
+  (parent "Box")
+  (c-name "GtkStackSwitcher")
+)
+
+(define-function StackSwitcher_new
+  (is-constructor-of "GtkStackSwitcher")
+  (c-name "gtk_stack_switcher_new")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method get_stack
+  (of-object "GtkStackSwitcher")
+  (c-name "gtk_stack_switcher_get_stack")
+  (return-type "GtkStack*")
+  (parameters
+  )
+)
+
+(define-method set_stack
+  (of-object "GtkStackSwitcher")
+  (c-name "gtk_stack_switcher_set_stack")
+  (return-type "none")
+  (parameters
+    '("GtkStack*" "pstack")
+  )
+)
+

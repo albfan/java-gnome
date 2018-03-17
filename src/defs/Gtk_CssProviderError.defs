@@ -1,0 +1,13 @@
+(define-enum CssProviderError
+  (in-module "Gtk")
+  (c-name "GtkCssProviderError")
+  (values
+    '("failed" "GTK_CSS_PROVIDER_ERROR_FAILED")
+    '("syntax" "GTK_CSS_PROVIDER_ERROR_SYNTAX")
+    '("import" "GTK_CSS_PROVIDER_ERROR_IMPORT")
+    '("name" "GTK_CSS_PROVIDER_ERROR_NAME")
+    '("deprecated" "GTK_CSS_PROVIDER_ERROR_DEPRECATED")
+    '("unknown_value" "GTK_CSS_PROVIDER_ERROR_UNKNOWN_VALUE")
+  )
+)
+

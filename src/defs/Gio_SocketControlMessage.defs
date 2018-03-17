@@ -1,0 +1,58 @@
+(define-object SocketControlMessage
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GSocketControlMessage")
+)
+
+(define-method get_level
+  (of-object "GSocketControlMessage")
+  (c-name "get_level")
+  (return-type "int")
+  (parameters
+  )
+)
+
+(define-method get_size
+  (of-object "GSocketControlMessage")
+  (c-name "get_size")
+  (return-type "gsize")
+  (parameters
+  )
+)
+
+(define-method get_type
+  (of-object "GSocketControlMessage")
+  (c-name "get_type")
+  (return-type "int")
+  (parameters
+  )
+)
+
+(define-method serialize
+  (of-object "GSocketControlMessage")
+  (c-name "serialize")
+  (return-type "none")
+  (parameters
+    '("gpointer" "pdata")
+  )
+)
+
+(define-method get_msg_type
+  (of-object "GSocketControlMessage")
+  (c-name "g_socket_control_message_get_msg_type")
+  (return-type "int")
+  (parameters
+  )
+)
+

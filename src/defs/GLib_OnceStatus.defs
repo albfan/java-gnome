@@ -1,0 +1,10 @@
+(define-enum OnceStatus
+  (in-module "GLib")
+  (c-name "GOnceStatus")
+  (values
+    '("notcalled" "G_ONCE_STATUS_NOTCALLED")
+    '("progress" "G_ONCE_STATUS_PROGRESS")
+    '("ready" "G_ONCE_STATUS_READY")
+  )
+)
+

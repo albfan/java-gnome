@@ -1,0 +1,24 @@
+(define-object WebWindowFeatures
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "WebKitWebWindowFeatures")
+)
+
+(define-function WebWindowFeatures_new
+  (is-constructor-of "WebKitWebWindowFeatures")
+  (c-name "webkit_web_window_features_new")
+  (return-type "WebKitWebWindowFeatures*")
+  (parameters
+  )
+)
+
+(define-method equal
+  (of-object "WebKitWebWindowFeatures")
+  (c-name "webkit_web_window_features_equal")
+  (return-type "gboolean")
+  (parameters
+    '("WebKitWebWindowFeatures*" "pfeatures2")
+  )
+)
+

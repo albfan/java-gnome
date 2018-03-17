@@ -1,0 +1,24 @@
+(define-object DOMHTMLBRElement
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "DOMHTMLElement")
+  (c-name "WebKitDOMHTMLBRElement")
+)
+
+(define-method get_clear
+  (of-object "WebKitDOMHTMLBRElement")
+  (c-name "webkit_dom_htmlbr_element_get_clear")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+
+(define-method set_clear
+  (of-object "WebKitDOMHTMLBRElement")
+  (c-name "webkit_dom_htmlbr_element_set_clear")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pvalue")
+  )
+)
+

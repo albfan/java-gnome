@@ -1,0 +1,10 @@
+(define-enum ArrowPlacement
+  (in-module "Gtk")
+  (c-name "GtkArrowPlacement")
+  (values
+    '("both" "GTK_ARROWS_BOTH")
+    '("start" "GTK_ARROWS_START")
+    '("end" "GTK_ARROWS_END")
+  )
+)
+

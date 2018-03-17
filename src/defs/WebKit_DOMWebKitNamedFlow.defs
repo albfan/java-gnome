@@ -1,0 +1,91 @@
+(define-object DOMWebKitNamedFlow
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "DOMObject")
+  (c-name "WebKitDOMWebKitNamedFlow")
+)
+
+(define-method dispatch_event
+  (of-object "WebKitDOMWebKitNamedFlow")
+  (c-name "webkit_dom_webkit_named_flow_dispatch_event")
+  (return-type "gboolean")
+  (parameters
+    '("WebKitDOMEvent*" "pevent")
+    '("GError**" "error")
+  )
+)
+
+(define-method get_content
+  (of-object "WebKitDOMWebKitNamedFlow")
+  (c-name "webkit_dom_webkit_named_flow_get_content")
+  (return-type "WebKitDOMNodeList*")
+  (parameters
+  )
+)
+
+(define-method get_content_nodes
+  (of-object "WebKitDOMWebKitNamedFlow")
+  (c-name "webkit_dom_webkit_named_flow_get_content_nodes")
+  (return-type "WebKitDOMNodeList*")
+  (parameters
+  )
+)
+
+(define-method get_first_empty_region_index
+  (of-object "WebKitDOMWebKitNamedFlow")
+  (c-name "webkit_dom_webkit_named_flow_get_first_empty_region_index")
+  (return-type "glong")
+  (parameters
+  )
+)
+
+(define-method get_name
+  (of-object "WebKitDOMWebKitNamedFlow")
+  (c-name "webkit_dom_webkit_named_flow_get_name")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+
+(define-method get_overflow
+  (of-object "WebKitDOMWebKitNamedFlow")
+  (c-name "webkit_dom_webkit_named_flow_get_overflow")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_overset
+  (of-object "WebKitDOMWebKitNamedFlow")
+  (c-name "webkit_dom_webkit_named_flow_get_overset")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_regions
+  (of-object "WebKitDOMWebKitNamedFlow")
+  (c-name "webkit_dom_webkit_named_flow_get_regions")
+  (return-type "WebKitDOMNodeList*")
+  (parameters
+  )
+)
+
+(define-method get_regions_by_content
+  (of-object "WebKitDOMWebKitNamedFlow")
+  (c-name "webkit_dom_webkit_named_flow_get_regions_by_content")
+  (return-type "WebKitDOMNodeList*")
+  (parameters
+    '("WebKitDOMNode*" "pcontentNode")
+  )
+)
+
+(define-method get_regions_by_content_node
+  (of-object "WebKitDOMWebKitNamedFlow")
+  (c-name "webkit_dom_webkit_named_flow_get_regions_by_content_node")
+  (return-type "WebKitDOMNodeList*")
+  (parameters
+    '("WebKitDOMNode*" "pcontent_node")
+  )
+)
+

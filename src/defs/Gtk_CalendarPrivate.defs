@@ -1,0 +1,6 @@
+(define-object CalendarPrivate
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkCalendarPrivate")
+)
+

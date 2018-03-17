@@ -1,0 +1,103 @@
+(define-object AppChooserButton
+  (in-module "Gtk")
+  (parent "ComboBox")
+  (c-name "GtkAppChooserButton")
+)
+
+(define-function AppChooserButton_new
+  (is-constructor-of "GtkAppChooserButton")
+  (c-name "gtk_app_chooser_button_new")
+  (return-type "GtkWidget*")
+  (parameters
+    '("const gchar*" "pcontent_type")
+  )
+)
+
+(define-method custom_item_activated
+  (of-object "GtkAppChooserButton")
+  (c-name "custom_item_activated")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pitem_name")
+  )
+)
+
+(define-method append_custom_item
+  (of-object "GtkAppChooserButton")
+  (c-name "gtk_app_chooser_button_append_custom_item")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pname")
+    '("const gchar*" "plabel")
+    '("GIcon*" "picon")
+  )
+)
+
+(define-method append_separator
+  (of-object "GtkAppChooserButton")
+  (c-name "gtk_app_chooser_button_append_separator")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method get_heading
+  (of-object "GtkAppChooserButton")
+  (c-name "gtk_app_chooser_button_get_heading")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_show_default_item
+  (of-object "GtkAppChooserButton")
+  (c-name "gtk_app_chooser_button_get_show_default_item")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_show_dialog_item
+  (of-object "GtkAppChooserButton")
+  (c-name "gtk_app_chooser_button_get_show_dialog_item")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method set_active_custom_item
+  (of-object "GtkAppChooserButton")
+  (c-name "gtk_app_chooser_button_set_active_custom_item")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pname")
+  )
+)
+
+(define-method set_heading
+  (of-object "GtkAppChooserButton")
+  (c-name "gtk_app_chooser_button_set_heading")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pheading")
+  )
+)
+
+(define-method set_show_default_item
+  (of-object "GtkAppChooserButton")
+  (c-name "gtk_app_chooser_button_set_show_default_item")
+  (return-type "none")
+  (parameters
+    '("gboolean" "psetting")
+  )
+)
+
+(define-method set_show_dialog_item
+  (of-object "GtkAppChooserButton")
+  (c-name "gtk_app_chooser_button_set_show_dialog_item")
+  (return-type "none")
+  (parameters
+    '("gboolean" "psetting")
+  )
+)
+

@@ -1,0 +1,55 @@
+(define-object Socket
+  (in-module "Gtk")
+  (parent "Container")
+  (c-name "GtkSocket")
+)
+
+(define-function Socket_new
+  (is-constructor-of "GtkSocket")
+  (c-name "gtk_socket_new")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method plug_added
+  (of-object "GtkSocket")
+  (c-name "plug_added")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method plug_removed
+  (of-object "GtkSocket")
+  (c-name "plug_removed")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method add_id
+  (of-object "GtkSocket")
+  (c-name "gtk_socket_add_id")
+  (return-type "none")
+  (parameters
+    '("Window" "pwindow")
+  )
+)
+
+(define-method get_id
+  (of-object "GtkSocket")
+  (c-name "gtk_socket_get_id")
+  (return-type "Window")
+  (parameters
+  )
+)
+
+(define-method get_plug_window
+  (of-object "GtkSocket")
+  (c-name "gtk_socket_get_plug_window")
+  (return-type "GdkWindow*")
+  (parameters
+  )
+)
+

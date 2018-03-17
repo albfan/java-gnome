@@ -1,0 +1,79 @@
+(define-object FileInputStream
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "InputStream")
+  (c-name "GFileInputStream")
+)
+
+(define-method can_seek
+  (of-object "GFileInputStream")
+  (c-name "can_seek")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method query_info
+  (of-object "GFileInputStream")
+  (c-name "query_info")
+  (return-type "GFileInfo*")
+  (parameters
+    '("const char*" "pattributes")
+    '("GCancellable*" "pcancellable")
+    '("GError**" "error")
+  )
+)
+
+(define-method query_info_async
+  (of-object "GFileInputStream")
+  (c-name "query_info_async")
+  (return-type "none")
+  (parameters
+    '("const char*" "pattributes")
+    '("int" "pio_priority")
+    '("GCancellable*" "pcancellable")
+    '("GAsyncReadyCallback" "pcallback")
+    '("gpointer" "puser_data")
+  )
+)
+
+(define-method query_info_finish
+  (of-object "GFileInputStream")
+  (c-name "query_info_finish")
+  (return-type "GFileInfo*")
+  (parameters
+    '("GAsyncResult*" "presult")
+    '("GError**" "error")
+  )
+)
+
+(define-method seek
+  (of-object "GFileInputStream")
+  (c-name "seek")
+  (return-type "gboolean")
+  (parameters
+    '("goffset" "poffset")
+    '("GSeekType" "ptype")
+    '("GCancellable*" "pcancellable")
+    '("GError**" "error")
+  )
+)
+
+(define-method tell
+  (of-object "GFileInputStream")
+  (c-name "tell")
+  (return-type "goffset")
+  (parameters
+  )
+)
+

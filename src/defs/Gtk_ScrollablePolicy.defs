@@ -1,0 +1,9 @@
+(define-enum ScrollablePolicy
+  (in-module "Gtk")
+  (c-name "GtkScrollablePolicy")
+  (values
+    '("minimum" "GTK_SCROLL_MINIMUM")
+    '("natural" "GTK_SCROLL_NATURAL")
+  )
+)
+

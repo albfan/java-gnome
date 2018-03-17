@@ -1,0 +1,56 @@
+(define-object DOMVideoTrack
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "DOMObject")
+  (c-name "WebKitDOMVideoTrack")
+)
+
+(define-method get_id
+  (of-object "WebKitDOMVideoTrack")
+  (c-name "webkit_dom_video_track_get_id")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+
+(define-method get_kind
+  (of-object "WebKitDOMVideoTrack")
+  (c-name "webkit_dom_video_track_get_kind")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+
+(define-method get_label
+  (of-object "WebKitDOMVideoTrack")
+  (c-name "webkit_dom_video_track_get_label")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+
+(define-method get_language
+  (of-object "WebKitDOMVideoTrack")
+  (c-name "webkit_dom_video_track_get_language")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+
+(define-method get_selected
+  (of-object "WebKitDOMVideoTrack")
+  (c-name "webkit_dom_video_track_get_selected")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method set_selected
+  (of-object "WebKitDOMVideoTrack")
+  (c-name "webkit_dom_video_track_set_selected")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pvalue")
+  )
+)
+

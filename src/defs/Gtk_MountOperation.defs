@@ -1,0 +1,57 @@
+(define-object MountOperation
+  (in-module "Gtk")
+  (parent "Gio.MountOperation")
+  (c-name "GtkMountOperation")
+)
+
+(define-function MountOperation_new
+  (is-constructor-of "GtkMountOperation")
+  (c-name "gtk_mount_operation_new")
+  (return-type "GMountOperation*")
+  (parameters
+    '("GtkWindow*" "pparent")
+  )
+)
+
+(define-method get_parent
+  (of-object "GtkMountOperation")
+  (c-name "gtk_mount_operation_get_parent")
+  (return-type "GtkWindow*")
+  (parameters
+  )
+)
+
+(define-method get_screen
+  (of-object "GtkMountOperation")
+  (c-name "gtk_mount_operation_get_screen")
+  (return-type "GdkScreen*")
+  (parameters
+  )
+)
+
+(define-method is_showing
+  (of-object "GtkMountOperation")
+  (c-name "gtk_mount_operation_is_showing")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method set_parent
+  (of-object "GtkMountOperation")
+  (c-name "gtk_mount_operation_set_parent")
+  (return-type "none")
+  (parameters
+    '("GtkWindow*" "pparent")
+  )
+)
+
+(define-method set_screen
+  (of-object "GtkMountOperation")
+  (c-name "gtk_mount_operation_set_screen")
+  (return-type "none")
+  (parameters
+    '("GdkScreen*" "pscreen")
+  )
+)
+

@@ -1,0 +1,6 @@
+(define-object EntryIconAccessible
+  (in-module "Gtk")
+  (parent "Atk.Object")
+  (c-name "EntryIconAccessible")
+)
+

@@ -1,0 +1,9 @@
+(define-enum NumberParserError
+  (in-module "GLib")
+  (c-name "GNumberParserError")
+  (values
+    '("invalid" "G_NUMBER_PARSER_ERROR_INVALID")
+    '("out_of_bounds" "G_NUMBER_PARSER_ERROR_OUT_OF_BOUNDS")
+  )
+)
+

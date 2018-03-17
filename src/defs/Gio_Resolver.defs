@@ -1,0 +1,167 @@
+(define-object Resolver
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GResolver")
+)
+
+(define-method lookup_by_address
+  (of-object "GResolver")
+  (c-name "lookup_by_address")
+  (return-type "gchar*")
+  (parameters
+    '("GInetAddress*" "paddress")
+    '("GCancellable*" "pcancellable")
+    '("GError**" "error")
+  )
+)
+
+(define-method lookup_by_address_async
+  (of-object "GResolver")
+  (c-name "lookup_by_address_async")
+  (return-type "none")
+  (parameters
+    '("GInetAddress*" "paddress")
+    '("GCancellable*" "pcancellable")
+    '("GAsyncReadyCallback" "pcallback")
+    '("gpointer" "puser_data")
+  )
+)
+
+(define-method lookup_by_address_finish
+  (of-object "GResolver")
+  (c-name "lookup_by_address_finish")
+  (return-type "gchar*")
+  (parameters
+    '("GAsyncResult*" "presult")
+    '("GError**" "error")
+  )
+)
+
+(define-method lookup_by_name
+  (of-object "GResolver")
+  (c-name "lookup_by_name")
+  (return-type "GList*")
+  (parameters
+    '("const gchar*" "phostname")
+    '("GCancellable*" "pcancellable")
+    '("GError**" "error")
+  )
+)
+
+(define-method lookup_by_name_async
+  (of-object "GResolver")
+  (c-name "lookup_by_name_async")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "phostname")
+    '("GCancellable*" "pcancellable")
+    '("GAsyncReadyCallback" "pcallback")
+    '("gpointer" "puser_data")
+  )
+)
+
+(define-method lookup_by_name_finish
+  (of-object "GResolver")
+  (c-name "lookup_by_name_finish")
+  (return-type "GList*")
+  (parameters
+    '("GAsyncResult*" "presult")
+    '("GError**" "error")
+  )
+)
+
+(define-method lookup_records
+  (of-object "GResolver")
+  (c-name "lookup_records")
+  (return-type "GList*")
+  (parameters
+    '("const gchar*" "prrname")
+    '("GResolverRecordType" "precord_type")
+    '("GCancellable*" "pcancellable")
+    '("GError**" "error")
+  )
+)
+
+(define-method lookup_records_async
+  (of-object "GResolver")
+  (c-name "lookup_records_async")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "prrname")
+    '("GResolverRecordType" "precord_type")
+    '("GCancellable*" "pcancellable")
+    '("GAsyncReadyCallback" "pcallback")
+    '("gpointer" "puser_data")
+  )
+)
+
+(define-method lookup_records_finish
+  (of-object "GResolver")
+  (c-name "lookup_records_finish")
+  (return-type "GList*")
+  (parameters
+    '("GAsyncResult*" "presult")
+    '("GError**" "error")
+  )
+)
+
+(define-method lookup_service
+  (of-object "GResolver")
+  (c-name "lookup_service")
+  (return-type "GList*")
+  (parameters
+    '("const gchar*" "prrname")
+    '("GCancellable*" "pcancellable")
+    '("GError**" "error")
+  )
+)
+
+(define-method lookup_service_async
+  (of-object "GResolver")
+  (c-name "lookup_service_async")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "prrname")
+    '("GCancellable*" "pcancellable")
+    '("GAsyncReadyCallback" "pcallback")
+    '("gpointer" "puser_data")
+  )
+)
+
+(define-method lookup_service_finish
+  (of-object "GResolver")
+  (c-name "lookup_service_finish")
+  (return-type "GList*")
+  (parameters
+    '("GAsyncResult*" "presult")
+    '("GError**" "error")
+  )
+)
+
+(define-method reload
+  (of-object "GResolver")
+  (c-name "reload")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method set_default
+  (of-object "GResolver")
+  (c-name "g_resolver_set_default")
+  (return-type "none")
+  (parameters
+  )
+)
+

@@ -1,0 +1,58 @@
+(define-object Settings
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkSettings")
+)
+
+(define-method reset_property
+  (of-object "GtkSettings")
+  (c-name "gtk_settings_reset_property")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pname")
+  )
+)
+
+(define-method set_double_property
+  (of-object "GtkSettings")
+  (c-name "gtk_settings_set_double_property")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pname")
+    '("gdouble" "pv_double")
+    '("const gchar*" "porigin")
+  )
+)
+
+(define-method set_long_property
+  (of-object "GtkSettings")
+  (c-name "gtk_settings_set_long_property")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pname")
+    '("glong" "pv_long")
+    '("const gchar*" "porigin")
+  )
+)
+
+(define-method set_property_value
+  (of-object "GtkSettings")
+  (c-name "gtk_settings_set_property_value")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pname")
+    '("const GtkSettingsValue*" "psvalue")
+  )
+)
+
+(define-method set_string_property
+  (of-object "GtkSettings")
+  (c-name "gtk_settings_set_string_property")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pname")
+    '("const gchar*" "pv_string")
+    '("const gchar*" "porigin")
+  )
+)
+

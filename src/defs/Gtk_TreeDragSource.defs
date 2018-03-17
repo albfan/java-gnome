@@ -1,0 +1,34 @@
+(define-object TreeDragSource
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkTreeDragSource")
+)
+
+(define-method drag_data_delete
+  (of-object "GtkTreeDragSource")
+  (c-name "drag_data_delete")
+  (return-type "gboolean")
+  (parameters
+    '("GtkTreePath*" "ppath")
+  )
+)
+
+(define-method drag_data_get
+  (of-object "GtkTreeDragSource")
+  (c-name "drag_data_get")
+  (return-type "gboolean")
+  (parameters
+    '("GtkTreePath*" "ppath")
+    '("GtkSelectionData*" "pselection_data")
+  )
+)
+
+(define-method row_draggable
+  (of-object "GtkTreeDragSource")
+  (c-name "row_draggable")
+  (return-type "gboolean")
+  (parameters
+    '("GtkTreePath*" "ppath")
+  )
+)
+

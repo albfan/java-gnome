@@ -1,0 +1,6 @@
+(define-object TreeViewAccessible
+  (in-module "Gtk")
+  (parent "ContainerAccessible")
+  (c-name "GtkTreeViewAccessible")
+)
+

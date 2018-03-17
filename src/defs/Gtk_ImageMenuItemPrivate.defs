@@ -1,0 +1,6 @@
+(define-object ImageMenuItemPrivate
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkImageMenuItemPrivate")
+)
+

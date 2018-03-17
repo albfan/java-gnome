@@ -1,0 +1,123 @@
+(define-object TreeModelFilter
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkTreeModelFilter")
+)
+
+(define-method modify
+  (of-object "GtkTreeModelFilter")
+  (c-name "modify")
+  (return-type "none")
+  (parameters
+    '("GtkTreeModel*" "pchild_model")
+    '("GtkTreeIter*" "piter")
+    '("GValue*" "pvalue")
+    '("gint" "pcolumn")
+  )
+)
+
+(define-method visible
+  (of-object "GtkTreeModelFilter")
+  (c-name "visible")
+  (return-type "gboolean")
+  (parameters
+    '("GtkTreeModel*" "pchild_model")
+    '("GtkTreeIter*" "piter")
+  )
+)
+
+(define-method clear_cache
+  (of-object "GtkTreeModelFilter")
+  (c-name "gtk_tree_model_filter_clear_cache")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method convert_child_iter_to_iter
+  (of-object "GtkTreeModelFilter")
+  (c-name "gtk_tree_model_filter_convert_child_iter_to_iter")
+  (return-type "gboolean")
+  (parameters
+    '("GtkTreeIter*" "pfilter_iter")
+    '("GtkTreeIter*" "pchild_iter")
+  )
+)
+
+(define-method convert_child_path_to_path
+  (of-object "GtkTreeModelFilter")
+  (c-name "gtk_tree_model_filter_convert_child_path_to_path")
+  (return-type "GtkTreePath*")
+  (parameters
+    '("GtkTreePath*" "pchild_path")
+  )
+)
+
+(define-method convert_iter_to_child_iter
+  (of-object "GtkTreeModelFilter")
+  (c-name "gtk_tree_model_filter_convert_iter_to_child_iter")
+  (return-type "none")
+  (parameters
+    '("GtkTreeIter*" "pchild_iter")
+    '("GtkTreeIter*" "pfilter_iter")
+  )
+)
+
+(define-method convert_path_to_child_path
+  (of-object "GtkTreeModelFilter")
+  (c-name "gtk_tree_model_filter_convert_path_to_child_path")
+  (return-type "GtkTreePath*")
+  (parameters
+    '("GtkTreePath*" "pfilter_path")
+  )
+)
+
+(define-method get_model
+  (of-object "GtkTreeModelFilter")
+  (c-name "gtk_tree_model_filter_get_model")
+  (return-type "GtkTreeModel*")
+  (parameters
+  )
+)
+
+(define-method refilter
+  (of-object "GtkTreeModelFilter")
+  (c-name "gtk_tree_model_filter_refilter")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method set_modify_func
+  (of-object "GtkTreeModelFilter")
+  (c-name "gtk_tree_model_filter_set_modify_func")
+  (return-type "none")
+  (parameters
+    '("gint" "pn_columns")
+    '("null" "ptypes")
+    '("GtkTreeModelFilterModifyFunc" "pfunc")
+    '("gpointer" "pdata")
+    '("GDestroyNotify" "pdestroy")
+  )
+)
+
+(define-method set_visible_column
+  (of-object "GtkTreeModelFilter")
+  (c-name "gtk_tree_model_filter_set_visible_column")
+  (return-type "none")
+  (parameters
+    '("gint" "pcolumn")
+  )
+)
+
+(define-method set_visible_func
+  (of-object "GtkTreeModelFilter")
+  (c-name "gtk_tree_model_filter_set_visible_func")
+  (return-type "none")
+  (parameters
+    '("GtkTreeModelFilterVisibleFunc" "pfunc")
+    '("gpointer" "pdata")
+    '("GDestroyNotify" "pdestroy")
+  )
+)
+

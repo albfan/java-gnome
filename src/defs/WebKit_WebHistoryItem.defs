@@ -1,0 +1,82 @@
+(define-object WebHistoryItem
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "WebKitWebHistoryItem")
+)
+
+(define-function WebHistoryItem_new
+  (is-constructor-of "WebKitWebHistoryItem")
+  (c-name "webkit_web_history_item_new")
+  (return-type "WebKitWebHistoryItem*")
+  (parameters
+  )
+)
+
+(define-function WebHistoryItem_new_with_data
+  (is-constructor-of "WebKitWebHistoryItem")
+  (c-name "webkit_web_history_item_new_with_data")
+  (return-type "WebKitWebHistoryItem*")
+  (parameters
+    '("const gchar*" "puri")
+    '("const gchar*" "ptitle")
+  )
+)
+
+(define-method copy
+  (of-object "WebKitWebHistoryItem")
+  (c-name "webkit_web_history_item_copy")
+  (return-type "WebKitWebHistoryItem*")
+  (parameters
+  )
+)
+
+(define-method get_alternate_title
+  (of-object "WebKitWebHistoryItem")
+  (c-name "webkit_web_history_item_get_alternate_title")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_last_visited_time
+  (of-object "WebKitWebHistoryItem")
+  (c-name "webkit_web_history_item_get_last_visited_time")
+  (return-type "gdouble")
+  (parameters
+  )
+)
+
+(define-method get_original_uri
+  (of-object "WebKitWebHistoryItem")
+  (c-name "webkit_web_history_item_get_original_uri")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_title
+  (of-object "WebKitWebHistoryItem")
+  (c-name "webkit_web_history_item_get_title")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_uri
+  (of-object "WebKitWebHistoryItem")
+  (c-name "webkit_web_history_item_get_uri")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method set_alternate_title
+  (of-object "WebKitWebHistoryItem")
+  (c-name "webkit_web_history_item_set_alternate_title")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "ptitle")
+  )
+)
+

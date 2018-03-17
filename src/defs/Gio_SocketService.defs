@@ -1,0 +1,59 @@
+(define-object SocketService
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "SocketListener")
+  (c-name "GSocketService")
+)
+
+(define-function SocketService_new
+  (is-constructor-of "GSocketService")
+  (c-name "g_socket_service_new")
+  (return-type "GSocketService*")
+  (parameters
+  )
+)
+
+(define-method incoming
+  (of-object "GSocketService")
+  (c-name "incoming")
+  (return-type "gboolean")
+  (parameters
+    '("GSocketConnection*" "pconnection")
+    '("GObject*" "psource_object")
+  )
+)
+
+(define-method is_active
+  (of-object "GSocketService")
+  (c-name "g_socket_service_is_active")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method start
+  (of-object "GSocketService")
+  (c-name "g_socket_service_start")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method stop
+  (of-object "GSocketService")
+  (c-name "g_socket_service_stop")
+  (return-type "none")
+  (parameters
+  )
+)
+

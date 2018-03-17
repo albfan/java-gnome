@@ -1,0 +1,65 @@
+(define-object Switch
+  (in-module "Gtk")
+  (parent "Widget")
+  (c-name "GtkSwitch")
+)
+
+(define-function Switch_new
+  (is-constructor-of "GtkSwitch")
+  (c-name "gtk_switch_new")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method activate
+  (of-object "GtkSwitch")
+  (c-name "activate")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method state_set
+  (of-object "GtkSwitch")
+  (c-name "state_set")
+  (return-type "gboolean")
+  (parameters
+    '("gboolean" "pstate")
+  )
+)
+
+(define-method get_active
+  (of-object "GtkSwitch")
+  (c-name "gtk_switch_get_active")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_state
+  (of-object "GtkSwitch")
+  (c-name "gtk_switch_get_state")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method set_active
+  (of-object "GtkSwitch")
+  (c-name "gtk_switch_set_active")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pis_active")
+  )
+)
+
+(define-method set_state
+  (of-object "GtkSwitch")
+  (c-name "gtk_switch_set_state")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pstate")
+  )
+)
+

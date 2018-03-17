@@ -1,0 +1,70 @@
+(define-object ButtonBox
+  (in-module "Gtk")
+  (parent "Box")
+  (c-name "GtkButtonBox")
+)
+
+(define-function ButtonBox_new
+  (is-constructor-of "GtkButtonBox")
+  (c-name "gtk_button_box_new")
+  (return-type "GtkWidget*")
+  (parameters
+    '("GtkOrientation" "porientation")
+  )
+)
+
+(define-method get_child_non_homogeneous
+  (of-object "GtkButtonBox")
+  (c-name "gtk_button_box_get_child_non_homogeneous")
+  (return-type "gboolean")
+  (parameters
+    '("GtkWidget*" "pchild")
+  )
+)
+
+(define-method get_child_secondary
+  (of-object "GtkButtonBox")
+  (c-name "gtk_button_box_get_child_secondary")
+  (return-type "gboolean")
+  (parameters
+    '("GtkWidget*" "pchild")
+  )
+)
+
+(define-method get_layout
+  (of-object "GtkButtonBox")
+  (c-name "gtk_button_box_get_layout")
+  (return-type "GtkButtonBoxStyle")
+  (parameters
+  )
+)
+
+(define-method set_child_non_homogeneous
+  (of-object "GtkButtonBox")
+  (c-name "gtk_button_box_set_child_non_homogeneous")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pchild")
+    '("gboolean" "pnon_homogeneous")
+  )
+)
+
+(define-method set_child_secondary
+  (of-object "GtkButtonBox")
+  (c-name "gtk_button_box_set_child_secondary")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pchild")
+    '("gboolean" "pis_secondary")
+  )
+)
+
+(define-method set_layout
+  (of-object "GtkButtonBox")
+  (c-name "gtk_button_box_set_layout")
+  (return-type "none")
+  (parameters
+    '("GtkButtonBoxStyle" "playout_style")
+  )
+)
+

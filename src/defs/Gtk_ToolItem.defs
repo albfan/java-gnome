@@ -1,0 +1,249 @@
+(define-object ToolItem
+  (in-module "Gtk")
+  (parent "Bin")
+  (c-name "GtkToolItem")
+)
+
+(define-function ToolItem_new
+  (is-constructor-of "GtkToolItem")
+  (c-name "gtk_tool_item_new")
+  (return-type "GtkToolItem*")
+  (parameters
+  )
+)
+
+(define-method create_menu_proxy
+  (of-object "GtkToolItem")
+  (c-name "create_menu_proxy")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method toolbar_reconfigured
+  (of-object "GtkToolItem")
+  (c-name "toolbar_reconfigured")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method get_ellipsize_mode
+  (of-object "GtkToolItem")
+  (c-name "gtk_tool_item_get_ellipsize_mode")
+  (return-type "PangoEllipsizeMode")
+  (parameters
+  )
+)
+
+(define-method get_expand
+  (of-object "GtkToolItem")
+  (c-name "gtk_tool_item_get_expand")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_homogeneous
+  (of-object "GtkToolItem")
+  (c-name "gtk_tool_item_get_homogeneous")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_icon_size
+  (of-object "GtkToolItem")
+  (c-name "gtk_tool_item_get_icon_size")
+  (return-type "GtkIconSize")
+  (parameters
+  )
+)
+
+(define-method get_is_important
+  (of-object "GtkToolItem")
+  (c-name "gtk_tool_item_get_is_important")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_orientation
+  (of-object "GtkToolItem")
+  (c-name "gtk_tool_item_get_orientation")
+  (return-type "GtkOrientation")
+  (parameters
+  )
+)
+
+(define-method get_proxy_menu_item
+  (of-object "GtkToolItem")
+  (c-name "gtk_tool_item_get_proxy_menu_item")
+  (return-type "GtkWidget*")
+  (parameters
+    '("const gchar*" "pmenu_item_id")
+  )
+)
+
+(define-method get_relief_style
+  (of-object "GtkToolItem")
+  (c-name "gtk_tool_item_get_relief_style")
+  (return-type "GtkReliefStyle")
+  (parameters
+  )
+)
+
+(define-method get_text_alignment
+  (of-object "GtkToolItem")
+  (c-name "gtk_tool_item_get_text_alignment")
+  (return-type "gfloat")
+  (parameters
+  )
+)
+
+(define-method get_text_orientation
+  (of-object "GtkToolItem")
+  (c-name "gtk_tool_item_get_text_orientation")
+  (return-type "GtkOrientation")
+  (parameters
+  )
+)
+
+(define-method get_text_size_group
+  (of-object "GtkToolItem")
+  (c-name "gtk_tool_item_get_text_size_group")
+  (return-type "GtkSizeGroup*")
+  (parameters
+  )
+)
+
+(define-method get_toolbar_style
+  (of-object "GtkToolItem")
+  (c-name "gtk_tool_item_get_toolbar_style")
+  (return-type "GtkToolbarStyle")
+  (parameters
+  )
+)
+
+(define-method get_use_drag_window
+  (of-object "GtkToolItem")
+  (c-name "gtk_tool_item_get_use_drag_window")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_visible_horizontal
+  (of-object "GtkToolItem")
+  (c-name "gtk_tool_item_get_visible_horizontal")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_visible_vertical
+  (of-object "GtkToolItem")
+  (c-name "gtk_tool_item_get_visible_vertical")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method rebuild_menu
+  (of-object "GtkToolItem")
+  (c-name "gtk_tool_item_rebuild_menu")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method retrieve_proxy_menu_item
+  (of-object "GtkToolItem")
+  (c-name "gtk_tool_item_retrieve_proxy_menu_item")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method set_expand
+  (of-object "GtkToolItem")
+  (c-name "gtk_tool_item_set_expand")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pexpand")
+  )
+)
+
+(define-method set_homogeneous
+  (of-object "GtkToolItem")
+  (c-name "gtk_tool_item_set_homogeneous")
+  (return-type "none")
+  (parameters
+    '("gboolean" "phomogeneous")
+  )
+)
+
+(define-method set_is_important
+  (of-object "GtkToolItem")
+  (c-name "gtk_tool_item_set_is_important")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pis_important")
+  )
+)
+
+(define-method set_proxy_menu_item
+  (of-object "GtkToolItem")
+  (c-name "gtk_tool_item_set_proxy_menu_item")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pmenu_item_id")
+    '("GtkWidget*" "pmenu_item")
+  )
+)
+
+(define-method set_tooltip_markup
+  (of-object "GtkToolItem")
+  (c-name "gtk_tool_item_set_tooltip_markup")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pmarkup")
+  )
+)
+
+(define-method set_tooltip_text
+  (of-object "GtkToolItem")
+  (c-name "gtk_tool_item_set_tooltip_text")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "ptext")
+  )
+)
+
+(define-method set_use_drag_window
+  (of-object "GtkToolItem")
+  (c-name "gtk_tool_item_set_use_drag_window")
+  (return-type "none")
+  (parameters
+    '("gboolean" "puse_drag_window")
+  )
+)
+
+(define-method set_visible_horizontal
+  (of-object "GtkToolItem")
+  (c-name "gtk_tool_item_set_visible_horizontal")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pvisible_horizontal")
+  )
+)
+
+(define-method set_visible_vertical
+  (of-object "GtkToolItem")
+  (c-name "gtk_tool_item_set_visible_vertical")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pvisible_vertical")
+  )
+)
+

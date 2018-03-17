@@ -1,0 +1,15 @@
+(define-object DOMBarProp
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "DOMObject")
+  (c-name "WebKitDOMBarProp")
+)
+
+(define-method get_visible
+  (of-object "WebKitDOMBarProp")
+  (c-name "webkit_dom_bar_prop_get_visible")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+

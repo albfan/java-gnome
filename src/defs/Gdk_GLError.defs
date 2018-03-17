@@ -1,0 +1,10 @@
+(define-enum GLError
+  (in-module "Gdk")
+  (c-name "GdkGLError")
+  (values
+    '("not_available" "GDK_GL_ERROR_NOT_AVAILABLE")
+    '("unsupported_format" "GDK_GL_ERROR_UNSUPPORTED_FORMAT")
+    '("unsupported_profile" "GDK_GL_ERROR_UNSUPPORTED_PROFILE")
+  )
+)
+

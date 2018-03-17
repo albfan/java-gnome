@@ -1,0 +1,6 @@
+(define-object PadControllerClass
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkPadControllerClass")
+)
+

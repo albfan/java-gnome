@@ -1,0 +1,48 @@
+(define-object Color
+  (in-module "Gdk")
+  (import-header "gdk/gdk.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GdkColor")
+)
+
+(define-method copy
+  (of-object "GdkColor")
+  (c-name "gdk_color_copy")
+  (return-type "GdkColor*")
+  (parameters
+  )
+)
+
+(define-method equal
+  (of-object "GdkColor")
+  (c-name "gdk_color_equal")
+  (return-type "gboolean")
+  (parameters
+    '("const GdkColor*" "pcolorb")
+  )
+)
+
+(define-method free
+  (of-object "GdkColor")
+  (c-name "gdk_color_free")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method hash
+  (of-object "GdkColor")
+  (c-name "gdk_color_hash")
+  (return-type "guint")
+  (parameters
+  )
+)
+
+(define-method to_string
+  (of-object "GdkColor")
+  (c-name "gdk_color_to_string")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+

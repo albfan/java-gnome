@@ -1,0 +1,35 @@
+(define-object ConverterOutputStream
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "FilterOutputStream")
+  (c-name "GConverterOutputStream")
+)
+
+(define-function ConverterOutputStream_new
+  (is-constructor-of "GConverterOutputStream")
+  (c-name "g_converter_output_stream_new")
+  (return-type "GOutputStream*")
+  (parameters
+    '("GOutputStream*" "pbase_stream")
+    '("GConverter*" "pconverter")
+  )
+)
+
+(define-method get_converter
+  (of-object "GConverterOutputStream")
+  (c-name "g_converter_output_stream_get_converter")
+  (return-type "GConverter*")
+  (parameters
+  )
+)
+

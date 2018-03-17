@@ -1,0 +1,184 @@
+(define-object MenuItem
+  (in-module "Gtk")
+  (parent "Bin")
+  (c-name "GtkMenuItem")
+)
+
+(define-function MenuItem_new
+  (is-constructor-of "GtkMenuItem")
+  (c-name "gtk_menu_item_new")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-function MenuItem_new_with_label
+  (is-constructor-of "GtkMenuItem")
+  (c-name "gtk_menu_item_new_with_label")
+  (return-type "GtkWidget*")
+  (parameters
+    '("const gchar*" "plabel")
+  )
+)
+
+(define-function MenuItem_new_with_mnemonic
+  (is-constructor-of "GtkMenuItem")
+  (c-name "gtk_menu_item_new_with_mnemonic")
+  (return-type "GtkWidget*")
+  (parameters
+    '("const gchar*" "plabel")
+  )
+)
+
+(define-method activate
+  (of-object "GtkMenuItem")
+  (c-name "activate")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method activate_item
+  (of-object "GtkMenuItem")
+  (c-name "activate_item")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method deselect
+  (of-object "GtkMenuItem")
+  (c-name "deselect")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method get_label
+  (of-object "GtkMenuItem")
+  (c-name "get_label")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method select
+  (of-object "GtkMenuItem")
+  (c-name "select")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method set_label
+  (of-object "GtkMenuItem")
+  (c-name "set_label")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "plabel")
+  )
+)
+
+(define-method toggle_size_allocate
+  (of-object "GtkMenuItem")
+  (c-name "toggle_size_allocate")
+  (return-type "none")
+  (parameters
+    '("gint" "pallocation")
+  )
+)
+
+(define-method toggle_size_request
+  (of-object "GtkMenuItem")
+  (c-name "toggle_size_request")
+  (return-type "none")
+  (parameters
+    '("gint*" "prequisition")
+  )
+)
+
+(define-method get_accel_path
+  (of-object "GtkMenuItem")
+  (c-name "gtk_menu_item_get_accel_path")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_reserve_indicator
+  (of-object "GtkMenuItem")
+  (c-name "gtk_menu_item_get_reserve_indicator")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_right_justified
+  (of-object "GtkMenuItem")
+  (c-name "gtk_menu_item_get_right_justified")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_submenu
+  (of-object "GtkMenuItem")
+  (c-name "gtk_menu_item_get_submenu")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method get_use_underline
+  (of-object "GtkMenuItem")
+  (c-name "gtk_menu_item_get_use_underline")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method set_accel_path
+  (of-object "GtkMenuItem")
+  (c-name "gtk_menu_item_set_accel_path")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "paccel_path")
+  )
+)
+
+(define-method set_reserve_indicator
+  (of-object "GtkMenuItem")
+  (c-name "gtk_menu_item_set_reserve_indicator")
+  (return-type "none")
+  (parameters
+    '("gboolean" "preserve")
+  )
+)
+
+(define-method set_right_justified
+  (of-object "GtkMenuItem")
+  (c-name "gtk_menu_item_set_right_justified")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pright_justified")
+  )
+)
+
+(define-method set_submenu
+  (of-object "GtkMenuItem")
+  (c-name "gtk_menu_item_set_submenu")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "psubmenu")
+  )
+)
+
+(define-method set_use_underline
+  (of-object "GtkMenuItem")
+  (c-name "gtk_menu_item_set_use_underline")
+  (return-type "none")
+  (parameters
+    '("gboolean" "psetting")
+  )
+)
+

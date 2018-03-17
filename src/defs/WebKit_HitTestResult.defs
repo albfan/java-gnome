@@ -1,0 +1,7 @@
+(define-object HitTestResult
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "WebKitHitTestResult")
+)
+

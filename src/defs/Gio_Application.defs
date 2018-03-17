@@ -1,0 +1,410 @@
+(define-object Application
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GApplication")
+)
+
+(define-function Application_new
+  (is-constructor-of "GApplication")
+  (c-name "g_application_new")
+  (return-type "GApplication*")
+  (parameters
+    '("const gchar*" "papplication_id")
+    '("GApplicationFlags" "pflags")
+  )
+)
+
+(define-method activate
+  (of-object "GApplication")
+  (c-name "activate")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method add_platform_data
+  (of-object "GApplication")
+  (c-name "add_platform_data")
+  (return-type "none")
+  (parameters
+    '("GVariantBuilder*" "pbuilder")
+  )
+)
+
+(define-method after_emit
+  (of-object "GApplication")
+  (c-name "after_emit")
+  (return-type "none")
+  (parameters
+    '("GVariant*" "pplatform_data")
+  )
+)
+
+(define-method before_emit
+  (of-object "GApplication")
+  (c-name "before_emit")
+  (return-type "none")
+  (parameters
+    '("GVariant*" "pplatform_data")
+  )
+)
+
+(define-method command_line
+  (of-object "GApplication")
+  (c-name "command_line")
+  (return-type "int")
+  (parameters
+    '("GApplicationCommandLine*" "pcommand_line")
+  )
+)
+
+(define-method dbus_register
+  (of-object "GApplication")
+  (c-name "dbus_register")
+  (return-type "gboolean")
+  (parameters
+    '("GDBusConnection*" "pconnection")
+    '("const gchar*" "pobject_path")
+    '("GError**" "error")
+  )
+)
+
+(define-method dbus_unregister
+  (of-object "GApplication")
+  (c-name "dbus_unregister")
+  (return-type "none")
+  (parameters
+    '("GDBusConnection*" "pconnection")
+    '("const gchar*" "pobject_path")
+  )
+)
+
+(define-method handle_local_options
+  (of-object "GApplication")
+  (c-name "handle_local_options")
+  (return-type "gint")
+  (parameters
+    '("GVariantDict*" "poptions")
+  )
+)
+
+(define-method local_command_line
+  (of-object "GApplication")
+  (c-name "local_command_line")
+  (return-type "gboolean")
+  (parameters
+    '("null" "parguments")
+    '("int*" "pexit_status")
+  )
+)
+
+(define-method open
+  (of-object "GApplication")
+  (c-name "open")
+  (return-type "none")
+  (parameters
+    '("null" "pfiles")
+    '("gint" "pn_files")
+    '("const gchar*" "phint")
+  )
+)
+
+(define-method quit_mainloop
+  (of-object "GApplication")
+  (c-name "quit_mainloop")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method run_mainloop
+  (of-object "GApplication")
+  (c-name "run_mainloop")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method shutdown
+  (of-object "GApplication")
+  (c-name "shutdown")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method startup
+  (of-object "GApplication")
+  (c-name "startup")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method add_main_option
+  (of-object "GApplication")
+  (c-name "g_application_add_main_option")
+  (return-type "none")
+  (parameters
+    '("const char*" "plong_name")
+    '("char" "pshort_name")
+    '("GOptionFlags" "pflags")
+    '("GOptionArg" "parg")
+    '("const char*" "pdescription")
+    '("const char*" "parg_description")
+  )
+)
+
+(define-method add_main_option_entries
+  (of-object "GApplication")
+  (c-name "g_application_add_main_option_entries")
+  (return-type "none")
+  (parameters
+    '("null" "pentries")
+  )
+)
+
+(define-method add_option_group
+  (of-object "GApplication")
+  (c-name "g_application_add_option_group")
+  (return-type "none")
+  (parameters
+    '("GOptionGroup*" "pgroup")
+  )
+)
+
+(define-method bind_busy_property
+  (of-object "GApplication")
+  (c-name "g_application_bind_busy_property")
+  (return-type "none")
+  (parameters
+    '("gpointer" "pobject")
+    '("const gchar*" "pproperty")
+  )
+)
+
+(define-method get_application_id
+  (of-object "GApplication")
+  (c-name "g_application_get_application_id")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_dbus_connection
+  (of-object "GApplication")
+  (c-name "g_application_get_dbus_connection")
+  (return-type "GDBusConnection*")
+  (parameters
+  )
+)
+
+(define-method get_dbus_object_path
+  (of-object "GApplication")
+  (c-name "g_application_get_dbus_object_path")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_flags
+  (of-object "GApplication")
+  (c-name "g_application_get_flags")
+  (return-type "GApplicationFlags")
+  (parameters
+  )
+)
+
+(define-method get_inactivity_timeout
+  (of-object "GApplication")
+  (c-name "g_application_get_inactivity_timeout")
+  (return-type "guint")
+  (parameters
+  )
+)
+
+(define-method get_is_busy
+  (of-object "GApplication")
+  (c-name "g_application_get_is_busy")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_is_registered
+  (of-object "GApplication")
+  (c-name "g_application_get_is_registered")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_is_remote
+  (of-object "GApplication")
+  (c-name "g_application_get_is_remote")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_resource_base_path
+  (of-object "GApplication")
+  (c-name "g_application_get_resource_base_path")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method hold
+  (of-object "GApplication")
+  (c-name "g_application_hold")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method mark_busy
+  (of-object "GApplication")
+  (c-name "g_application_mark_busy")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method quit
+  (of-object "GApplication")
+  (c-name "g_application_quit")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method register
+  (of-object "GApplication")
+  (c-name "g_application_register")
+  (return-type "gboolean")
+  (parameters
+    '("GCancellable*" "pcancellable")
+    '("GError**" "error")
+  )
+)
+
+(define-method release
+  (of-object "GApplication")
+  (c-name "g_application_release")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method run
+  (of-object "GApplication")
+  (c-name "g_application_run")
+  (return-type "int")
+  (parameters
+    '("int" "pargc")
+    '("null" "pargv")
+  )
+)
+
+(define-method send_notification
+  (of-object "GApplication")
+  (c-name "g_application_send_notification")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pid")
+    '("GNotification*" "pnotification")
+  )
+)
+
+(define-method set_action_group
+  (of-object "GApplication")
+  (c-name "g_application_set_action_group")
+  (return-type "none")
+  (parameters
+    '("GActionGroup*" "paction_group")
+  )
+)
+
+(define-method set_application_id
+  (of-object "GApplication")
+  (c-name "g_application_set_application_id")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "papplication_id")
+  )
+)
+
+(define-method set_default
+  (of-object "GApplication")
+  (c-name "g_application_set_default")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method set_flags
+  (of-object "GApplication")
+  (c-name "g_application_set_flags")
+  (return-type "none")
+  (parameters
+    '("GApplicationFlags" "pflags")
+  )
+)
+
+(define-method set_inactivity_timeout
+  (of-object "GApplication")
+  (c-name "g_application_set_inactivity_timeout")
+  (return-type "none")
+  (parameters
+    '("guint" "pinactivity_timeout")
+  )
+)
+
+(define-method set_resource_base_path
+  (of-object "GApplication")
+  (c-name "g_application_set_resource_base_path")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "presource_path")
+  )
+)
+
+(define-method unbind_busy_property
+  (of-object "GApplication")
+  (c-name "g_application_unbind_busy_property")
+  (return-type "none")
+  (parameters
+    '("gpointer" "pobject")
+    '("const gchar*" "pproperty")
+  )
+)
+
+(define-method unmark_busy
+  (of-object "GApplication")
+  (c-name "g_application_unmark_busy")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method withdraw_notification
+  (of-object "GApplication")
+  (c-name "g_application_withdraw_notification")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pid")
+  )
+)
+

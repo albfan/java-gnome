@@ -1,0 +1,34 @@
+(define-object TcpConnection
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "SocketConnection")
+  (c-name "GTcpConnection")
+)
+
+(define-method get_graceful_disconnect
+  (of-object "GTcpConnection")
+  (c-name "g_tcp_connection_get_graceful_disconnect")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method set_graceful_disconnect
+  (of-object "GTcpConnection")
+  (c-name "g_tcp_connection_set_graceful_disconnect")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pgraceful_disconnect")
+  )
+)
+

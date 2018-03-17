@@ -1,0 +1,101 @@
+(define-object PrintContext
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkPrintContext")
+)
+
+(define-method create_pango_context
+  (of-object "GtkPrintContext")
+  (c-name "gtk_print_context_create_pango_context")
+  (return-type "PangoContext*")
+  (parameters
+  )
+)
+
+(define-method create_pango_layout
+  (of-object "GtkPrintContext")
+  (c-name "gtk_print_context_create_pango_layout")
+  (return-type "PangoLayout*")
+  (parameters
+  )
+)
+
+(define-method get_cairo_context
+  (of-object "GtkPrintContext")
+  (c-name "gtk_print_context_get_cairo_context")
+  (return-type "cairo_t*")
+  (parameters
+  )
+)
+
+(define-method get_dpi_x
+  (of-object "GtkPrintContext")
+  (c-name "gtk_print_context_get_dpi_x")
+  (return-type "gdouble")
+  (parameters
+  )
+)
+
+(define-method get_dpi_y
+  (of-object "GtkPrintContext")
+  (c-name "gtk_print_context_get_dpi_y")
+  (return-type "gdouble")
+  (parameters
+  )
+)
+
+(define-method get_hard_margins
+  (of-object "GtkPrintContext")
+  (c-name "gtk_print_context_get_hard_margins")
+  (return-type "gboolean")
+  (parameters
+    '("gdouble*" "ptop")
+    '("gdouble*" "pbottom")
+    '("gdouble*" "pleft")
+    '("gdouble*" "pright")
+  )
+)
+
+(define-method get_height
+  (of-object "GtkPrintContext")
+  (c-name "gtk_print_context_get_height")
+  (return-type "gdouble")
+  (parameters
+  )
+)
+
+(define-method get_page_setup
+  (of-object "GtkPrintContext")
+  (c-name "gtk_print_context_get_page_setup")
+  (return-type "GtkPageSetup*")
+  (parameters
+  )
+)
+
+(define-method get_pango_fontmap
+  (of-object "GtkPrintContext")
+  (c-name "gtk_print_context_get_pango_fontmap")
+  (return-type "PangoFontMap*")
+  (parameters
+  )
+)
+
+(define-method get_width
+  (of-object "GtkPrintContext")
+  (c-name "gtk_print_context_get_width")
+  (return-type "gdouble")
+  (parameters
+  )
+)
+
+(define-method set_cairo_context
+  (of-object "GtkPrintContext")
+  (c-name "gtk_print_context_set_cairo_context")
+  (return-type "none")
+  (parameters
+    '("cairo_t*" "pcr")
+    '("double" "pdpi_x")
+    '("double" "pdpi_y")
+  )
+)
+

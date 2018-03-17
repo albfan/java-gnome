@@ -1,0 +1,14 @@
+(define-object ModelButton
+  (in-module "Gtk")
+  (parent "Button")
+  (c-name "GtkModelButton")
+)
+
+(define-function ModelButton_new
+  (is-constructor-of "GtkModelButton")
+  (c-name "gtk_model_button_new")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+

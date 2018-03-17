@@ -1,0 +1,125 @@
+(define-object BufferedInputStream
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "FilterInputStream")
+  (c-name "GBufferedInputStream")
+)
+
+(define-function BufferedInputStream_new
+  (is-constructor-of "GBufferedInputStream")
+  (c-name "g_buffered_input_stream_new")
+  (return-type "GInputStream*")
+  (parameters
+    '("GInputStream*" "pbase_stream")
+  )
+)
+
+(define-function BufferedInputStream_new_sized
+  (is-constructor-of "GBufferedInputStream")
+  (c-name "g_buffered_input_stream_new_sized")
+  (return-type "GInputStream*")
+  (parameters
+    '("GInputStream*" "pbase_stream")
+    '("gsize" "psize")
+  )
+)
+
+(define-method fill
+  (of-object "GBufferedInputStream")
+  (c-name "fill")
+  (return-type "gssize")
+  (parameters
+    '("gssize" "pcount")
+    '("GCancellable*" "pcancellable")
+    '("GError**" "error")
+  )
+)
+
+(define-method fill_async
+  (of-object "GBufferedInputStream")
+  (c-name "fill_async")
+  (return-type "none")
+  (parameters
+    '("gssize" "pcount")
+    '("int" "pio_priority")
+    '("GCancellable*" "pcancellable")
+    '("GAsyncReadyCallback" "pcallback")
+    '("gpointer" "puser_data")
+  )
+)
+
+(define-method fill_finish
+  (of-object "GBufferedInputStream")
+  (c-name "fill_finish")
+  (return-type "gssize")
+  (parameters
+    '("GAsyncResult*" "presult")
+    '("GError**" "error")
+  )
+)
+
+(define-method get_available
+  (of-object "GBufferedInputStream")
+  (c-name "g_buffered_input_stream_get_available")
+  (return-type "gsize")
+  (parameters
+  )
+)
+
+(define-method get_buffer_size
+  (of-object "GBufferedInputStream")
+  (c-name "g_buffered_input_stream_get_buffer_size")
+  (return-type "gsize")
+  (parameters
+  )
+)
+
+(define-method peek
+  (of-object "GBufferedInputStream")
+  (c-name "g_buffered_input_stream_peek")
+  (return-type "gsize")
+  (parameters
+    '("null" "pbuffer")
+    '("gsize" "poffset")
+    '("gsize" "pcount")
+  )
+)
+
+(define-method peek_buffer
+  (of-object "GBufferedInputStream")
+  (c-name "g_buffered_input_stream_peek_buffer")
+  (return-type "none")
+  (parameters
+    '("gsize*" "pcount")
+  )
+)
+
+(define-method read_byte
+  (of-object "GBufferedInputStream")
+  (c-name "g_buffered_input_stream_read_byte")
+  (return-type "int")
+  (parameters
+    '("GCancellable*" "pcancellable")
+    '("GError**" "error")
+  )
+)
+
+(define-method set_buffer_size
+  (of-object "GBufferedInputStream")
+  (c-name "g_buffered_input_stream_set_buffer_size")
+  (return-type "none")
+  (parameters
+    '("gsize" "psize")
+  )
+)
+

@@ -1,0 +1,26 @@
+(define-object TreeDragDest
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkTreeDragDest")
+)
+
+(define-method drag_data_received
+  (of-object "GtkTreeDragDest")
+  (c-name "drag_data_received")
+  (return-type "gboolean")
+  (parameters
+    '("GtkTreePath*" "pdest")
+    '("GtkSelectionData*" "pselection_data")
+  )
+)
+
+(define-method row_drop_possible
+  (of-object "GtkTreeDragDest")
+  (c-name "row_drop_possible")
+  (return-type "gboolean")
+  (parameters
+    '("GtkTreePath*" "pdest_path")
+    '("GtkSelectionData*" "pselection_data")
+  )
+)
+

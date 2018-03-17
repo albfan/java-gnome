@@ -1,0 +1,197 @@
+(define-object Calendar
+  (in-module "Gtk")
+  (parent "Widget")
+  (c-name "GtkCalendar")
+)
+
+(define-function Calendar_new
+  (is-constructor-of "GtkCalendar")
+  (c-name "gtk_calendar_new")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method day_selected
+  (of-object "GtkCalendar")
+  (c-name "day_selected")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method day_selected_double_click
+  (of-object "GtkCalendar")
+  (c-name "day_selected_double_click")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method month_changed
+  (of-object "GtkCalendar")
+  (c-name "month_changed")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method next_month
+  (of-object "GtkCalendar")
+  (c-name "next_month")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method next_year
+  (of-object "GtkCalendar")
+  (c-name "next_year")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method prev_month
+  (of-object "GtkCalendar")
+  (c-name "prev_month")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method prev_year
+  (of-object "GtkCalendar")
+  (c-name "prev_year")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method clear_marks
+  (of-object "GtkCalendar")
+  (c-name "gtk_calendar_clear_marks")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method get_date
+  (of-object "GtkCalendar")
+  (c-name "gtk_calendar_get_date")
+  (return-type "none")
+  (parameters
+    '("guint*" "pyear")
+    '("guint*" "pmonth")
+    '("guint*" "pday")
+  )
+)
+
+(define-method get_day_is_marked
+  (of-object "GtkCalendar")
+  (c-name "gtk_calendar_get_day_is_marked")
+  (return-type "gboolean")
+  (parameters
+    '("guint" "pday")
+  )
+)
+
+(define-method get_detail_height_rows
+  (of-object "GtkCalendar")
+  (c-name "gtk_calendar_get_detail_height_rows")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_detail_width_chars
+  (of-object "GtkCalendar")
+  (c-name "gtk_calendar_get_detail_width_chars")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_display_options
+  (of-object "GtkCalendar")
+  (c-name "gtk_calendar_get_display_options")
+  (return-type "GtkCalendarDisplayOptions")
+  (parameters
+  )
+)
+
+(define-method mark_day
+  (of-object "GtkCalendar")
+  (c-name "gtk_calendar_mark_day")
+  (return-type "none")
+  (parameters
+    '("guint" "pday")
+  )
+)
+
+(define-method select_day
+  (of-object "GtkCalendar")
+  (c-name "gtk_calendar_select_day")
+  (return-type "none")
+  (parameters
+    '("guint" "pday")
+  )
+)
+
+(define-method select_month
+  (of-object "GtkCalendar")
+  (c-name "gtk_calendar_select_month")
+  (return-type "none")
+  (parameters
+    '("guint" "pmonth")
+    '("guint" "pyear")
+  )
+)
+
+(define-method set_detail_func
+  (of-object "GtkCalendar")
+  (c-name "gtk_calendar_set_detail_func")
+  (return-type "none")
+  (parameters
+    '("GtkCalendarDetailFunc" "pfunc")
+    '("gpointer" "pdata")
+    '("GDestroyNotify" "pdestroy")
+  )
+)
+
+(define-method set_detail_height_rows
+  (of-object "GtkCalendar")
+  (c-name "gtk_calendar_set_detail_height_rows")
+  (return-type "none")
+  (parameters
+    '("gint" "prows")
+  )
+)
+
+(define-method set_detail_width_chars
+  (of-object "GtkCalendar")
+  (c-name "gtk_calendar_set_detail_width_chars")
+  (return-type "none")
+  (parameters
+    '("gint" "pchars")
+  )
+)
+
+(define-method set_display_options
+  (of-object "GtkCalendar")
+  (c-name "gtk_calendar_set_display_options")
+  (return-type "none")
+  (parameters
+    '("GtkCalendarDisplayOptions" "pflags")
+  )
+)
+
+(define-method unmark_day
+  (of-object "GtkCalendar")
+  (c-name "gtk_calendar_unmark_day")
+  (return-type "none")
+  (parameters
+    '("guint" "pday")
+  )
+)
+

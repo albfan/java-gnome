@@ -1,0 +1,9 @@
+(define-enum EntryIconPosition
+  (in-module "Gtk")
+  (c-name "GtkEntryIconPosition")
+  (values
+    '("primary" "GTK_ENTRY_ICON_PRIMARY")
+    '("secondary" "GTK_ENTRY_ICON_SECONDARY")
+  )
+)
+

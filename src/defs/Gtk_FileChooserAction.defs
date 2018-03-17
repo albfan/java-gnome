@@ -1,0 +1,11 @@
+(define-enum FileChooserAction
+  (in-module "Gtk")
+  (c-name "GtkFileChooserAction")
+  (values
+    '("open" "GTK_FILE_CHOOSER_ACTION_OPEN")
+    '("save" "GTK_FILE_CHOOSER_ACTION_SAVE")
+    '("select_folder" "GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER")
+    '("create_folder" "GTK_FILE_CHOOSER_ACTION_CREATE_FOLDER")
+  )
+)
+

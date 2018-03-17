@@ -1,0 +1,9 @@
+(define-enum PackType
+  (in-module "Gtk")
+  (c-name "GtkPackType")
+  (values
+    '("start" "GTK_PACK_START")
+    '("end" "GTK_PACK_END")
+  )
+)
+

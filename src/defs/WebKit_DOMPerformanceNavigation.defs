@@ -1,0 +1,15 @@
+(define-object DOMPerformanceNavigation
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "DOMObject")
+  (c-name "WebKitDOMPerformanceNavigation")
+)
+
+(define-method get_redirect_count
+  (of-object "WebKitDOMPerformanceNavigation")
+  (c-name "webkit_dom_performance_navigation_get_redirect_count")
+  (return-type "gushort")
+  (parameters
+  )
+)
+

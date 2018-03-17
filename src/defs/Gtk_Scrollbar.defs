@@ -1,0 +1,16 @@
+(define-object Scrollbar
+  (in-module "Gtk")
+  (parent "Range")
+  (c-name "GtkScrollbar")
+)
+
+(define-function Scrollbar_new
+  (is-constructor-of "GtkScrollbar")
+  (c-name "gtk_scrollbar_new")
+  (return-type "GtkWidget*")
+  (parameters
+    '("GtkOrientation" "porientation")
+    '("GtkAdjustment*" "padjustment")
+  )
+)
+

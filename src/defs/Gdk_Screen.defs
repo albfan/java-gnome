@@ -1,0 +1,262 @@
+(define-object Screen
+  (in-module "Gdk")
+  (import-header "gdk/gdk.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GdkScreen")
+)
+
+(define-method get_active_window
+  (of-object "GdkScreen")
+  (c-name "gdk_screen_get_active_window")
+  (return-type "GdkWindow*")
+  (parameters
+  )
+)
+
+(define-method get_display
+  (of-object "GdkScreen")
+  (c-name "gdk_screen_get_display")
+  (return-type "GdkDisplay*")
+  (parameters
+  )
+)
+
+(define-method get_font_options
+  (of-object "GdkScreen")
+  (c-name "gdk_screen_get_font_options")
+  (return-type "const cairo_font_options_t*")
+  (parameters
+  )
+)
+
+(define-method get_height
+  (of-object "GdkScreen")
+  (c-name "gdk_screen_get_height")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_height_mm
+  (of-object "GdkScreen")
+  (c-name "gdk_screen_get_height_mm")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_monitor_at_point
+  (of-object "GdkScreen")
+  (c-name "gdk_screen_get_monitor_at_point")
+  (return-type "gint")
+  (parameters
+    '("gint" "px")
+    '("gint" "py")
+  )
+)
+
+(define-method get_monitor_at_window
+  (of-object "GdkScreen")
+  (c-name "gdk_screen_get_monitor_at_window")
+  (return-type "gint")
+  (parameters
+    '("GdkWindow*" "pwindow")
+  )
+)
+
+(define-method get_monitor_geometry
+  (of-object "GdkScreen")
+  (c-name "gdk_screen_get_monitor_geometry")
+  (return-type "none")
+  (parameters
+    '("gint" "pmonitor_num")
+    '("GdkRectangle*" "pdest")
+  )
+)
+
+(define-method get_monitor_height_mm
+  (of-object "GdkScreen")
+  (c-name "gdk_screen_get_monitor_height_mm")
+  (return-type "gint")
+  (parameters
+    '("gint" "pmonitor_num")
+  )
+)
+
+(define-method get_monitor_plug_name
+  (of-object "GdkScreen")
+  (c-name "gdk_screen_get_monitor_plug_name")
+  (return-type "gchar*")
+  (parameters
+    '("gint" "pmonitor_num")
+  )
+)
+
+(define-method get_monitor_scale_factor
+  (of-object "GdkScreen")
+  (c-name "gdk_screen_get_monitor_scale_factor")
+  (return-type "gint")
+  (parameters
+    '("gint" "pmonitor_num")
+  )
+)
+
+(define-method get_monitor_width_mm
+  (of-object "GdkScreen")
+  (c-name "gdk_screen_get_monitor_width_mm")
+  (return-type "gint")
+  (parameters
+    '("gint" "pmonitor_num")
+  )
+)
+
+(define-method get_monitor_workarea
+  (of-object "GdkScreen")
+  (c-name "gdk_screen_get_monitor_workarea")
+  (return-type "none")
+  (parameters
+    '("gint" "pmonitor_num")
+    '("GdkRectangle*" "pdest")
+  )
+)
+
+(define-method get_n_monitors
+  (of-object "GdkScreen")
+  (c-name "gdk_screen_get_n_monitors")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_number
+  (of-object "GdkScreen")
+  (c-name "gdk_screen_get_number")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_primary_monitor
+  (of-object "GdkScreen")
+  (c-name "gdk_screen_get_primary_monitor")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_resolution
+  (of-object "GdkScreen")
+  (c-name "gdk_screen_get_resolution")
+  (return-type "gdouble")
+  (parameters
+  )
+)
+
+(define-method get_rgba_visual
+  (of-object "GdkScreen")
+  (c-name "gdk_screen_get_rgba_visual")
+  (return-type "GdkVisual*")
+  (parameters
+  )
+)
+
+(define-method get_root_window
+  (of-object "GdkScreen")
+  (c-name "gdk_screen_get_root_window")
+  (return-type "GdkWindow*")
+  (parameters
+  )
+)
+
+(define-method get_setting
+  (of-object "GdkScreen")
+  (c-name "gdk_screen_get_setting")
+  (return-type "gboolean")
+  (parameters
+    '("const gchar*" "pname")
+    '("GValue*" "pvalue")
+  )
+)
+
+(define-method get_system_visual
+  (of-object "GdkScreen")
+  (c-name "gdk_screen_get_system_visual")
+  (return-type "GdkVisual*")
+  (parameters
+  )
+)
+
+(define-method get_toplevel_windows
+  (of-object "GdkScreen")
+  (c-name "gdk_screen_get_toplevel_windows")
+  (return-type "GList*")
+  (parameters
+  )
+)
+
+(define-method get_width
+  (of-object "GdkScreen")
+  (c-name "gdk_screen_get_width")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_width_mm
+  (of-object "GdkScreen")
+  (c-name "gdk_screen_get_width_mm")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_window_stack
+  (of-object "GdkScreen")
+  (c-name "gdk_screen_get_window_stack")
+  (return-type "GList*")
+  (parameters
+  )
+)
+
+(define-method is_composited
+  (of-object "GdkScreen")
+  (c-name "gdk_screen_is_composited")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method list_visuals
+  (of-object "GdkScreen")
+  (c-name "gdk_screen_list_visuals")
+  (return-type "GList*")
+  (parameters
+  )
+)
+
+(define-method make_display_name
+  (of-object "GdkScreen")
+  (c-name "gdk_screen_make_display_name")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+
+(define-method set_font_options
+  (of-object "GdkScreen")
+  (c-name "gdk_screen_set_font_options")
+  (return-type "none")
+  (parameters
+    '("const cairo_font_options_t*" "poptions")
+  )
+)
+
+(define-method set_resolution
+  (of-object "GdkScreen")
+  (c-name "gdk_screen_set_resolution")
+  (return-type "none")
+  (parameters
+    '("gdouble" "pdpi")
+  )
+)
+

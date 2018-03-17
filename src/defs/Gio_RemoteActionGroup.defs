@@ -1,0 +1,39 @@
+(define-object RemoteActionGroup
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GRemoteActionGroup")
+)
+
+(define-method activate_action_full
+  (of-object "GRemoteActionGroup")
+  (c-name "activate_action_full")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "paction_name")
+    '("GVariant*" "pparameter")
+    '("GVariant*" "pplatform_data")
+  )
+)
+
+(define-method change_action_state_full
+  (of-object "GRemoteActionGroup")
+  (c-name "change_action_state_full")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "paction_name")
+    '("GVariant*" "pvalue")
+    '("GVariant*" "pplatform_data")
+  )
+)
+

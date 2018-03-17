@@ -1,0 +1,11 @@
+(define-enum PropagationPhase
+  (in-module "Gtk")
+  (c-name "GtkPropagationPhase")
+  (values
+    '("none" "GTK_PHASE_NONE")
+    '("capture" "GTK_PHASE_CAPTURE")
+    '("bubble" "GTK_PHASE_BUBBLE")
+    '("target" "GTK_PHASE_TARGET")
+  )
+)
+

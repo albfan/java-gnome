@@ -1,0 +1,95 @@
+(define-object ListStore
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GListStore")
+)
+
+(define-function ListStore_new
+  (is-constructor-of "GListStore")
+  (c-name "g_list_store_new")
+  (return-type "GListStore*")
+  (parameters
+    '("GType" "pitem_type")
+  )
+)
+
+(define-method append
+  (of-object "GListStore")
+  (c-name "g_list_store_append")
+  (return-type "none")
+  (parameters
+    '("gpointer" "pitem")
+  )
+)
+
+(define-method insert
+  (of-object "GListStore")
+  (c-name "g_list_store_insert")
+  (return-type "none")
+  (parameters
+    '("guint" "pposition")
+    '("gpointer" "pitem")
+  )
+)
+
+(define-method insert_sorted
+  (of-object "GListStore")
+  (c-name "g_list_store_insert_sorted")
+  (return-type "guint")
+  (parameters
+    '("gpointer" "pitem")
+    '("GCompareDataFunc" "pcompare_func")
+    '("gpointer" "puser_data")
+  )
+)
+
+(define-method remove
+  (of-object "GListStore")
+  (c-name "g_list_store_remove")
+  (return-type "none")
+  (parameters
+    '("guint" "pposition")
+  )
+)
+
+(define-method remove_all
+  (of-object "GListStore")
+  (c-name "g_list_store_remove_all")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method sort
+  (of-object "GListStore")
+  (c-name "g_list_store_sort")
+  (return-type "none")
+  (parameters
+    '("GCompareDataFunc" "pcompare_func")
+    '("gpointer" "puser_data")
+  )
+)
+
+(define-method splice
+  (of-object "GListStore")
+  (c-name "g_list_store_splice")
+  (return-type "none")
+  (parameters
+    '("guint" "pposition")
+    '("guint" "pn_removals")
+    '("null" "padditions")
+    '("guint" "pn_additions")
+  )
+)
+

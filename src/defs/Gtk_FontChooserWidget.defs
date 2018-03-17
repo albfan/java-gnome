@@ -1,0 +1,14 @@
+(define-object FontChooserWidget
+  (in-module "Gtk")
+  (parent "Box")
+  (c-name "GtkFontChooserWidget")
+)
+
+(define-function FontChooserWidget_new
+  (is-constructor-of "GtkFontChooserWidget")
+  (c-name "gtk_font_chooser_widget_new")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+

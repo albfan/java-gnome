@@ -1,0 +1,35 @@
+(define-object TcpWrapperConnection
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "TcpConnection")
+  (c-name "GTcpWrapperConnection")
+)
+
+(define-function TcpWrapperConnection_new
+  (is-constructor-of "GTcpWrapperConnection")
+  (c-name "g_tcp_wrapper_connection_new")
+  (return-type "GSocketConnection*")
+  (parameters
+    '("GIOStream*" "pbase_io_stream")
+    '("GSocket*" "psocket")
+  )
+)
+
+(define-method get_base_io_stream
+  (of-object "GTcpWrapperConnection")
+  (c-name "g_tcp_wrapper_connection_get_base_io_stream")
+  (return-type "GIOStream*")
+  (parameters
+  )
+)
+

@@ -1,0 +1,65 @@
+(define-object TreeSortable
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkTreeSortable")
+)
+
+(define-method get_sort_column_id
+  (of-object "GtkTreeSortable")
+  (c-name "get_sort_column_id")
+  (return-type "gboolean")
+  (parameters
+    '("gint*" "psort_column_id")
+    '("GtkSortType*" "porder")
+  )
+)
+
+(define-method has_default_sort_func
+  (of-object "GtkTreeSortable")
+  (c-name "has_default_sort_func")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method set_default_sort_func
+  (of-object "GtkTreeSortable")
+  (c-name "set_default_sort_func")
+  (return-type "none")
+  (parameters
+    '("GtkTreeIterCompareFunc" "psort_func")
+    '("gpointer" "puser_data")
+    '("GDestroyNotify" "pdestroy")
+  )
+)
+
+(define-method set_sort_column_id
+  (of-object "GtkTreeSortable")
+  (c-name "set_sort_column_id")
+  (return-type "none")
+  (parameters
+    '("gint" "psort_column_id")
+    '("GtkSortType" "porder")
+  )
+)
+
+(define-method set_sort_func
+  (of-object "GtkTreeSortable")
+  (c-name "set_sort_func")
+  (return-type "none")
+  (parameters
+    '("gint" "psort_column_id")
+    '("GtkTreeIterCompareFunc" "psort_func")
+    '("gpointer" "puser_data")
+    '("GDestroyNotify" "pdestroy")
+  )
+)
+
+(define-method sort_column_changed
+  (of-object "GtkTreeSortable")
+  (c-name "sort_column_changed")
+  (return-type "none")
+  (parameters
+  )
+)
+

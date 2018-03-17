@@ -1,0 +1,22 @@
+(define-object ShortcutsWindow
+  (in-module "Gtk")
+  (parent "Window")
+  (c-name "GtkShortcutsWindow")
+)
+
+(define-method close
+  (of-object "GtkShortcutsWindow")
+  (c-name "close")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method search
+  (of-object "GtkShortcutsWindow")
+  (c-name "search")
+  (return-type "none")
+  (parameters
+  )
+)
+

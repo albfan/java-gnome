@@ -1,0 +1,11 @@
+(define-enum Unit
+  (in-module "Gtk")
+  (c-name "GtkUnit")
+  (values
+    '("none" "GTK_UNIT_NONE")
+    '("points" "GTK_UNIT_POINTS")
+    '("inch" "GTK_UNIT_INCH")
+    '("mm" "GTK_UNIT_MM")
+  )
+)
+

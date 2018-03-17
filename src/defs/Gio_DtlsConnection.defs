@@ -1,0 +1,238 @@
+(define-object DtlsConnection
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GDtlsConnection")
+)
+
+(define-method accept_certificate
+  (of-object "GDtlsConnection")
+  (c-name "accept_certificate")
+  (return-type "gboolean")
+  (parameters
+    '("GTlsCertificate*" "ppeer_cert")
+    '("GTlsCertificateFlags" "perrors")
+  )
+)
+
+(define-method handshake
+  (of-object "GDtlsConnection")
+  (c-name "handshake")
+  (return-type "gboolean")
+  (parameters
+    '("GCancellable*" "pcancellable")
+    '("GError**" "error")
+  )
+)
+
+(define-method handshake_async
+  (of-object "GDtlsConnection")
+  (c-name "handshake_async")
+  (return-type "none")
+  (parameters
+    '("int" "pio_priority")
+    '("GCancellable*" "pcancellable")
+    '("GAsyncReadyCallback" "pcallback")
+    '("gpointer" "puser_data")
+  )
+)
+
+(define-method handshake_finish
+  (of-object "GDtlsConnection")
+  (c-name "handshake_finish")
+  (return-type "gboolean")
+  (parameters
+    '("GAsyncResult*" "presult")
+    '("GError**" "error")
+  )
+)
+
+(define-method shutdown
+  (of-object "GDtlsConnection")
+  (c-name "shutdown")
+  (return-type "gboolean")
+  (parameters
+    '("gboolean" "pshutdown_read")
+    '("gboolean" "pshutdown_write")
+    '("GCancellable*" "pcancellable")
+    '("GError**" "error")
+  )
+)
+
+(define-method shutdown_async
+  (of-object "GDtlsConnection")
+  (c-name "shutdown_async")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pshutdown_read")
+    '("gboolean" "pshutdown_write")
+    '("int" "pio_priority")
+    '("GCancellable*" "pcancellable")
+    '("GAsyncReadyCallback" "pcallback")
+    '("gpointer" "puser_data")
+  )
+)
+
+(define-method shutdown_finish
+  (of-object "GDtlsConnection")
+  (c-name "shutdown_finish")
+  (return-type "gboolean")
+  (parameters
+    '("GAsyncResult*" "presult")
+    '("GError**" "error")
+  )
+)
+
+(define-method close
+  (of-object "GDtlsConnection")
+  (c-name "g_dtls_connection_close")
+  (return-type "gboolean")
+  (parameters
+    '("GCancellable*" "pcancellable")
+    '("GError**" "error")
+  )
+)
+
+(define-method close_async
+  (of-object "GDtlsConnection")
+  (c-name "g_dtls_connection_close_async")
+  (return-type "none")
+  (parameters
+    '("int" "pio_priority")
+    '("GCancellable*" "pcancellable")
+    '("GAsyncReadyCallback" "pcallback")
+    '("gpointer" "puser_data")
+  )
+)
+
+(define-method close_finish
+  (of-object "GDtlsConnection")
+  (c-name "g_dtls_connection_close_finish")
+  (return-type "gboolean")
+  (parameters
+    '("GAsyncResult*" "presult")
+    '("GError**" "error")
+  )
+)
+
+(define-method emit_accept_certificate
+  (of-object "GDtlsConnection")
+  (c-name "g_dtls_connection_emit_accept_certificate")
+  (return-type "gboolean")
+  (parameters
+    '("GTlsCertificate*" "ppeer_cert")
+    '("GTlsCertificateFlags" "perrors")
+  )
+)
+
+(define-method get_certificate
+  (of-object "GDtlsConnection")
+  (c-name "g_dtls_connection_get_certificate")
+  (return-type "GTlsCertificate*")
+  (parameters
+  )
+)
+
+(define-method get_database
+  (of-object "GDtlsConnection")
+  (c-name "g_dtls_connection_get_database")
+  (return-type "GTlsDatabase*")
+  (parameters
+  )
+)
+
+(define-method get_interaction
+  (of-object "GDtlsConnection")
+  (c-name "g_dtls_connection_get_interaction")
+  (return-type "GTlsInteraction*")
+  (parameters
+  )
+)
+
+(define-method get_peer_certificate
+  (of-object "GDtlsConnection")
+  (c-name "g_dtls_connection_get_peer_certificate")
+  (return-type "GTlsCertificate*")
+  (parameters
+  )
+)
+
+(define-method get_peer_certificate_errors
+  (of-object "GDtlsConnection")
+  (c-name "g_dtls_connection_get_peer_certificate_errors")
+  (return-type "GTlsCertificateFlags")
+  (parameters
+  )
+)
+
+(define-method get_rehandshake_mode
+  (of-object "GDtlsConnection")
+  (c-name "g_dtls_connection_get_rehandshake_mode")
+  (return-type "GTlsRehandshakeMode")
+  (parameters
+  )
+)
+
+(define-method get_require_close_notify
+  (of-object "GDtlsConnection")
+  (c-name "g_dtls_connection_get_require_close_notify")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method set_certificate
+  (of-object "GDtlsConnection")
+  (c-name "g_dtls_connection_set_certificate")
+  (return-type "none")
+  (parameters
+    '("GTlsCertificate*" "pcertificate")
+  )
+)
+
+(define-method set_database
+  (of-object "GDtlsConnection")
+  (c-name "g_dtls_connection_set_database")
+  (return-type "none")
+  (parameters
+    '("GTlsDatabase*" "pdatabase")
+  )
+)
+
+(define-method set_interaction
+  (of-object "GDtlsConnection")
+  (c-name "g_dtls_connection_set_interaction")
+  (return-type "none")
+  (parameters
+    '("GTlsInteraction*" "pinteraction")
+  )
+)
+
+(define-method set_rehandshake_mode
+  (of-object "GDtlsConnection")
+  (c-name "g_dtls_connection_set_rehandshake_mode")
+  (return-type "none")
+  (parameters
+    '("GTlsRehandshakeMode" "pmode")
+  )
+)
+
+(define-method set_require_close_notify
+  (of-object "GDtlsConnection")
+  (c-name "g_dtls_connection_set_require_close_notify")
+  (return-type "none")
+  (parameters
+    '("gboolean" "prequire_close_notify")
+  )
+)
+

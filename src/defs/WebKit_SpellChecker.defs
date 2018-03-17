@@ -1,0 +1,64 @@
+(define-object SpellChecker
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "WebKitSpellChecker")
+)
+
+(define-method check_spelling_of_string
+  (of-object "WebKitSpellChecker")
+  (c-name "check_spelling_of_string")
+  (return-type "none")
+  (parameters
+    '("const char*" "pstring")
+    '("int*" "pmisspelling_location")
+    '("int*" "pmisspelling_length")
+  )
+)
+
+(define-method get_autocorrect_suggestions_for_misspelled_word
+  (of-object "WebKitSpellChecker")
+  (c-name "get_autocorrect_suggestions_for_misspelled_word")
+  (return-type "char*")
+  (parameters
+    '("const char*" "pword")
+  )
+)
+
+(define-method get_guesses_for_word
+  (of-object "WebKitSpellChecker")
+  (c-name "get_guesses_for_word")
+  (return-type "none")
+  (parameters
+    '("const char*" "pword")
+    '("const char*" "pcontext")
+  )
+)
+
+(define-method ignore_word
+  (of-object "WebKitSpellChecker")
+  (c-name "ignore_word")
+  (return-type "none")
+  (parameters
+    '("const char*" "pword")
+  )
+)
+
+(define-method learn_word
+  (of-object "WebKitSpellChecker")
+  (c-name "learn_word")
+  (return-type "none")
+  (parameters
+    '("const char*" "pword")
+  )
+)
+
+(define-method update_spell_checking_languages
+  (of-object "WebKitSpellChecker")
+  (c-name "update_spell_checking_languages")
+  (return-type "none")
+  (parameters
+    '("const char*" "planguages")
+  )
+)
+

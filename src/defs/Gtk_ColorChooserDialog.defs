@@ -1,0 +1,16 @@
+(define-object ColorChooserDialog
+  (in-module "Gtk")
+  (parent "Dialog")
+  (c-name "GtkColorChooserDialog")
+)
+
+(define-function ColorChooserDialog_new
+  (is-constructor-of "GtkColorChooserDialog")
+  (c-name "gtk_color_chooser_dialog_new")
+  (return-type "GtkWidget*")
+  (parameters
+    '("const gchar*" "ptitle")
+    '("GtkWindow*" "pparent")
+  )
+)
+

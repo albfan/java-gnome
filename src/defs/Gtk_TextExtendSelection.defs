@@ -1,0 +1,9 @@
+(define-enum TextExtendSelection
+  (in-module "Gtk")
+  (c-name "GtkTextExtendSelection")
+  (values
+    '("word" "GTK_TEXT_EXTEND_SELECTION_WORD")
+    '("line" "GTK_TEXT_EXTEND_SELECTION_LINE")
+  )
+)
+

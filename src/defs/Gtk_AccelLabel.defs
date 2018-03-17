@@ -1,0 +1,77 @@
+(define-object AccelLabel
+  (in-module "Gtk")
+  (parent "Label")
+  (c-name "GtkAccelLabel")
+)
+
+(define-function AccelLabel_new
+  (is-constructor-of "GtkAccelLabel")
+  (c-name "gtk_accel_label_new")
+  (return-type "GtkWidget*")
+  (parameters
+    '("const gchar*" "pstring")
+  )
+)
+
+(define-method get_accel
+  (of-object "GtkAccelLabel")
+  (c-name "gtk_accel_label_get_accel")
+  (return-type "none")
+  (parameters
+    '("guint*" "paccelerator_key")
+    '("GdkModifierType*" "paccelerator_mods")
+  )
+)
+
+(define-method get_accel_widget
+  (of-object "GtkAccelLabel")
+  (c-name "gtk_accel_label_get_accel_widget")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method get_accel_width
+  (of-object "GtkAccelLabel")
+  (c-name "gtk_accel_label_get_accel_width")
+  (return-type "guint")
+  (parameters
+  )
+)
+
+(define-method refetch
+  (of-object "GtkAccelLabel")
+  (c-name "gtk_accel_label_refetch")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method set_accel
+  (of-object "GtkAccelLabel")
+  (c-name "gtk_accel_label_set_accel")
+  (return-type "none")
+  (parameters
+    '("guint" "paccelerator_key")
+    '("GdkModifierType" "paccelerator_mods")
+  )
+)
+
+(define-method set_accel_closure
+  (of-object "GtkAccelLabel")
+  (c-name "gtk_accel_label_set_accel_closure")
+  (return-type "none")
+  (parameters
+    '("GClosure*" "paccel_closure")
+  )
+)
+
+(define-method set_accel_widget
+  (of-object "GtkAccelLabel")
+  (c-name "gtk_accel_label_set_accel_widget")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "paccel_widget")
+  )
+)
+

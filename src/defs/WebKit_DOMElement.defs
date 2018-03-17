@@ -1,0 +1,532 @@
+(define-object DOMElement
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "DOMNode")
+  (c-name "WebKitDOMElement")
+)
+
+(define-method blur
+  (of-object "WebKitDOMElement")
+  (c-name "webkit_dom_element_blur")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method focus
+  (of-object "WebKitDOMElement")
+  (c-name "webkit_dom_element_focus")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method get_attribute
+  (of-object "WebKitDOMElement")
+  (c-name "webkit_dom_element_get_attribute")
+  (return-type "gchar*")
+  (parameters
+    '("const gchar*" "pname")
+  )
+)
+
+(define-method get_attribute_node
+  (of-object "WebKitDOMElement")
+  (c-name "webkit_dom_element_get_attribute_node")
+  (return-type "WebKitDOMAttr*")
+  (parameters
+    '("const gchar*" "pname")
+  )
+)
+
+(define-method get_attribute_node_ns
+  (of-object "WebKitDOMElement")
+  (c-name "webkit_dom_element_get_attribute_node_ns")
+  (return-type "WebKitDOMAttr*")
+  (parameters
+    '("const gchar*" "pnamespaceURI")
+    '("const gchar*" "plocalName")
+  )
+)
+
+(define-method get_attribute_ns
+  (of-object "WebKitDOMElement")
+  (c-name "webkit_dom_element_get_attribute_ns")
+  (return-type "gchar*")
+  (parameters
+    '("const gchar*" "pnamespaceURI")
+    '("const gchar*" "plocalName")
+  )
+)
+
+(define-method get_attributes
+  (of-object "WebKitDOMElement")
+  (c-name "webkit_dom_element_get_attributes")
+  (return-type "WebKitDOMNamedNodeMap*")
+  (parameters
+  )
+)
+
+(define-method get_child_element_count
+  (of-object "WebKitDOMElement")
+  (c-name "webkit_dom_element_get_child_element_count")
+  (return-type "gulong")
+  (parameters
+  )
+)
+
+(define-method get_class_list
+  (of-object "WebKitDOMElement")
+  (c-name "webkit_dom_element_get_class_list")
+  (return-type "WebKitDOMDOMTokenList*")
+  (parameters
+  )
+)
+
+(define-method get_class_name
+  (of-object "WebKitDOMElement")
+  (c-name "webkit_dom_element_get_class_name")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+
+(define-method get_client_height
+  (of-object "WebKitDOMElement")
+  (c-name "webkit_dom_element_get_client_height")
+  (return-type "glong")
+  (parameters
+  )
+)
+
+(define-method get_client_left
+  (of-object "WebKitDOMElement")
+  (c-name "webkit_dom_element_get_client_left")
+  (return-type "glong")
+  (parameters
+  )
+)
+
+(define-method get_client_top
+  (of-object "WebKitDOMElement")
+  (c-name "webkit_dom_element_get_client_top")
+  (return-type "glong")
+  (parameters
+  )
+)
+
+(define-method get_client_width
+  (of-object "WebKitDOMElement")
+  (c-name "webkit_dom_element_get_client_width")
+  (return-type "glong")
+  (parameters
+  )
+)
+
+(define-method get_elements_by_class_name
+  (of-object "WebKitDOMElement")
+  (c-name "webkit_dom_element_get_elements_by_class_name")
+  (return-type "WebKitDOMNodeList*")
+  (parameters
+    '("const gchar*" "pname")
+  )
+)
+
+(define-method get_elements_by_tag_name
+  (of-object "WebKitDOMElement")
+  (c-name "webkit_dom_element_get_elements_by_tag_name")
+  (return-type "WebKitDOMNodeList*")
+  (parameters
+    '("const gchar*" "pname")
+  )
+)
+
+(define-method get_elements_by_tag_name_ns
+  (of-object "WebKitDOMElement")
+  (c-name "webkit_dom_element_get_elements_by_tag_name_ns")
+  (return-type "WebKitDOMNodeList*")
+  (parameters
+    '("const gchar*" "pnamespaceURI")
+    '("const gchar*" "plocalName")
+  )
+)
+
+(define-method get_first_element_child
+  (of-object "WebKitDOMElement")
+  (c-name "webkit_dom_element_get_first_element_child")
+  (return-type "WebKitDOMElement*")
+  (parameters
+  )
+)
+
+(define-method get_id
+  (of-object "WebKitDOMElement")
+  (c-name "webkit_dom_element_get_id")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+
+(define-method get_last_element_child
+  (of-object "WebKitDOMElement")
+  (c-name "webkit_dom_element_get_last_element_child")
+  (return-type "WebKitDOMElement*")
+  (parameters
+  )
+)
+
+(define-method get_next_element_sibling
+  (of-object "WebKitDOMElement")
+  (c-name "webkit_dom_element_get_next_element_sibling")
+  (return-type "WebKitDOMElement*")
+  (parameters
+  )
+)
+
+(define-method get_offset_height
+  (of-object "WebKitDOMElement")
+  (c-name "webkit_dom_element_get_offset_height")
+  (return-type "glong")
+  (parameters
+  )
+)
+
+(define-method get_offset_left
+  (of-object "WebKitDOMElement")
+  (c-name "webkit_dom_element_get_offset_left")
+  (return-type "glong")
+  (parameters
+  )
+)
+
+(define-method get_offset_parent
+  (of-object "WebKitDOMElement")
+  (c-name "webkit_dom_element_get_offset_parent")
+  (return-type "WebKitDOMElement*")
+  (parameters
+  )
+)
+
+(define-method get_offset_top
+  (of-object "WebKitDOMElement")
+  (c-name "webkit_dom_element_get_offset_top")
+  (return-type "glong")
+  (parameters
+  )
+)
+
+(define-method get_offset_width
+  (of-object "WebKitDOMElement")
+  (c-name "webkit_dom_element_get_offset_width")
+  (return-type "glong")
+  (parameters
+  )
+)
+
+(define-method get_previous_element_sibling
+  (of-object "WebKitDOMElement")
+  (c-name "webkit_dom_element_get_previous_element_sibling")
+  (return-type "WebKitDOMElement*")
+  (parameters
+  )
+)
+
+(define-method get_scroll_height
+  (of-object "WebKitDOMElement")
+  (c-name "webkit_dom_element_get_scroll_height")
+  (return-type "glong")
+  (parameters
+  )
+)
+
+(define-method get_scroll_left
+  (of-object "WebKitDOMElement")
+  (c-name "webkit_dom_element_get_scroll_left")
+  (return-type "glong")
+  (parameters
+  )
+)
+
+(define-method get_scroll_top
+  (of-object "WebKitDOMElement")
+  (c-name "webkit_dom_element_get_scroll_top")
+  (return-type "glong")
+  (parameters
+  )
+)
+
+(define-method get_scroll_width
+  (of-object "WebKitDOMElement")
+  (c-name "webkit_dom_element_get_scroll_width")
+  (return-type "glong")
+  (parameters
+  )
+)
+
+(define-method get_style
+  (of-object "WebKitDOMElement")
+  (c-name "webkit_dom_element_get_style")
+  (return-type "WebKitDOMCSSStyleDeclaration*")
+  (parameters
+  )
+)
+
+(define-method get_tag_name
+  (of-object "WebKitDOMElement")
+  (c-name "webkit_dom_element_get_tag_name")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+
+(define-method get_webkit_region_overflow
+  (of-object "WebKitDOMElement")
+  (c-name "webkit_dom_element_get_webkit_region_overflow")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+
+(define-method get_webkit_region_overset
+  (of-object "WebKitDOMElement")
+  (c-name "webkit_dom_element_get_webkit_region_overset")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+
+(define-method has_attribute
+  (of-object "WebKitDOMElement")
+  (c-name "webkit_dom_element_has_attribute")
+  (return-type "gboolean")
+  (parameters
+    '("const gchar*" "pname")
+  )
+)
+
+(define-method has_attribute_ns
+  (of-object "WebKitDOMElement")
+  (c-name "webkit_dom_element_has_attribute_ns")
+  (return-type "gboolean")
+  (parameters
+    '("const gchar*" "pnamespaceURI")
+    '("const gchar*" "plocalName")
+  )
+)
+
+(define-method has_attributes
+  (of-object "WebKitDOMElement")
+  (c-name "webkit_dom_element_has_attributes")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method query_selector
+  (of-object "WebKitDOMElement")
+  (c-name "webkit_dom_element_query_selector")
+  (return-type "WebKitDOMElement*")
+  (parameters
+    '("const gchar*" "pselectors")
+    '("GError**" "error")
+  )
+)
+
+(define-method query_selector_all
+  (of-object "WebKitDOMElement")
+  (c-name "webkit_dom_element_query_selector_all")
+  (return-type "WebKitDOMNodeList*")
+  (parameters
+    '("const gchar*" "pselectors")
+    '("GError**" "error")
+  )
+)
+
+(define-method remove
+  (of-object "WebKitDOMElement")
+  (c-name "webkit_dom_element_remove")
+  (return-type "none")
+  (parameters
+    '("GError**" "error")
+  )
+)
+
+(define-method remove_attribute
+  (of-object "WebKitDOMElement")
+  (c-name "webkit_dom_element_remove_attribute")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pname")
+  )
+)
+
+(define-method remove_attribute_node
+  (of-object "WebKitDOMElement")
+  (c-name "webkit_dom_element_remove_attribute_node")
+  (return-type "WebKitDOMAttr*")
+  (parameters
+    '("WebKitDOMAttr*" "poldAttr")
+    '("GError**" "error")
+  )
+)
+
+(define-method remove_attribute_ns
+  (of-object "WebKitDOMElement")
+  (c-name "webkit_dom_element_remove_attribute_ns")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pnamespaceURI")
+    '("const gchar*" "plocalName")
+  )
+)
+
+(define-method scroll_by_lines
+  (of-object "WebKitDOMElement")
+  (c-name "webkit_dom_element_scroll_by_lines")
+  (return-type "none")
+  (parameters
+    '("glong" "plines")
+  )
+)
+
+(define-method scroll_by_pages
+  (of-object "WebKitDOMElement")
+  (c-name "webkit_dom_element_scroll_by_pages")
+  (return-type "none")
+  (parameters
+    '("glong" "ppages")
+  )
+)
+
+(define-method scroll_into_view
+  (of-object "WebKitDOMElement")
+  (c-name "webkit_dom_element_scroll_into_view")
+  (return-type "none")
+  (parameters
+    '("gboolean" "palignWithTop")
+  )
+)
+
+(define-method scroll_into_view_if_needed
+  (of-object "WebKitDOMElement")
+  (c-name "webkit_dom_element_scroll_into_view_if_needed")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pcenterIfNeeded")
+  )
+)
+
+(define-method set_attribute
+  (of-object "WebKitDOMElement")
+  (c-name "webkit_dom_element_set_attribute")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pname")
+    '("const gchar*" "pvalue")
+    '("GError**" "error")
+  )
+)
+
+(define-method set_attribute_node
+  (of-object "WebKitDOMElement")
+  (c-name "webkit_dom_element_set_attribute_node")
+  (return-type "WebKitDOMAttr*")
+  (parameters
+    '("WebKitDOMAttr*" "pnewAttr")
+    '("GError**" "error")
+  )
+)
+
+(define-method set_attribute_node_ns
+  (of-object "WebKitDOMElement")
+  (c-name "webkit_dom_element_set_attribute_node_ns")
+  (return-type "WebKitDOMAttr*")
+  (parameters
+    '("WebKitDOMAttr*" "pnewAttr")
+    '("GError**" "error")
+  )
+)
+
+(define-method set_attribute_ns
+  (of-object "WebKitDOMElement")
+  (c-name "webkit_dom_element_set_attribute_ns")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pnamespaceURI")
+    '("const gchar*" "pqualifiedName")
+    '("const gchar*" "pvalue")
+    '("GError**" "error")
+  )
+)
+
+(define-method set_class_name
+  (of-object "WebKitDOMElement")
+  (c-name "webkit_dom_element_set_class_name")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pvalue")
+  )
+)
+
+(define-method set_id
+  (of-object "WebKitDOMElement")
+  (c-name "webkit_dom_element_set_id")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pvalue")
+  )
+)
+
+(define-method set_scroll_left
+  (of-object "WebKitDOMElement")
+  (c-name "webkit_dom_element_set_scroll_left")
+  (return-type "none")
+  (parameters
+    '("glong" "pvalue")
+  )
+)
+
+(define-method set_scroll_top
+  (of-object "WebKitDOMElement")
+  (c-name "webkit_dom_element_set_scroll_top")
+  (return-type "none")
+  (parameters
+    '("glong" "pvalue")
+  )
+)
+
+(define-method webkit_matches_selector
+  (of-object "WebKitDOMElement")
+  (c-name "webkit_dom_element_webkit_matches_selector")
+  (return-type "gboolean")
+  (parameters
+    '("const gchar*" "pselectors")
+    '("GError**" "error")
+  )
+)
+
+(define-method webkit_request_full_screen
+  (of-object "WebKitDOMElement")
+  (c-name "webkit_dom_element_webkit_request_full_screen")
+  (return-type "none")
+  (parameters
+    '("gushort" "pflags")
+  )
+)
+
+(define-method webkit_request_fullscreen
+  (of-object "WebKitDOMElement")
+  (c-name "webkit_dom_element_webkit_request_fullscreen")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method webkit_request_pointer_lock
+  (of-object "WebKitDOMElement")
+  (c-name "webkit_dom_element_webkit_request_pointer_lock")
+  (return-type "none")
+  (parameters
+  )
+)
+

@@ -1,0 +1,36 @@
+(define-object ThreadedSocketService
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "SocketService")
+  (c-name "GThreadedSocketService")
+)
+
+(define-function ThreadedSocketService_new
+  (is-constructor-of "GThreadedSocketService")
+  (c-name "g_threaded_socket_service_new")
+  (return-type "GSocketService*")
+  (parameters
+    '("int" "pmax_threads")
+  )
+)
+
+(define-method run
+  (of-object "GThreadedSocketService")
+  (c-name "run")
+  (return-type "gboolean")
+  (parameters
+    '("GSocketConnection*" "pconnection")
+    '("GObject*" "psource_object")
+  )
+)
+

@@ -1,0 +1,83 @@
+(define-object Scrollable
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkScrollable")
+)
+
+(define-method get_border
+  (of-object "GtkScrollable")
+  (c-name "get_border")
+  (return-type "gboolean")
+  (parameters
+    '("GtkBorder*" "pborder")
+  )
+)
+
+(define-method get_hadjustment
+  (of-object "GtkScrollable")
+  (c-name "gtk_scrollable_get_hadjustment")
+  (return-type "GtkAdjustment*")
+  (parameters
+  )
+)
+
+(define-method get_hscroll_policy
+  (of-object "GtkScrollable")
+  (c-name "gtk_scrollable_get_hscroll_policy")
+  (return-type "GtkScrollablePolicy")
+  (parameters
+  )
+)
+
+(define-method get_vadjustment
+  (of-object "GtkScrollable")
+  (c-name "gtk_scrollable_get_vadjustment")
+  (return-type "GtkAdjustment*")
+  (parameters
+  )
+)
+
+(define-method get_vscroll_policy
+  (of-object "GtkScrollable")
+  (c-name "gtk_scrollable_get_vscroll_policy")
+  (return-type "GtkScrollablePolicy")
+  (parameters
+  )
+)
+
+(define-method set_hadjustment
+  (of-object "GtkScrollable")
+  (c-name "gtk_scrollable_set_hadjustment")
+  (return-type "none")
+  (parameters
+    '("GtkAdjustment*" "phadjustment")
+  )
+)
+
+(define-method set_hscroll_policy
+  (of-object "GtkScrollable")
+  (c-name "gtk_scrollable_set_hscroll_policy")
+  (return-type "none")
+  (parameters
+    '("GtkScrollablePolicy" "ppolicy")
+  )
+)
+
+(define-method set_vadjustment
+  (of-object "GtkScrollable")
+  (c-name "gtk_scrollable_set_vadjustment")
+  (return-type "none")
+  (parameters
+    '("GtkAdjustment*" "pvadjustment")
+  )
+)
+
+(define-method set_vscroll_policy
+  (of-object "GtkScrollable")
+  (c-name "gtk_scrollable_set_vscroll_policy")
+  (return-type "none")
+  (parameters
+    '("GtkScrollablePolicy" "ppolicy")
+  )
+)
+

@@ -1,0 +1,23 @@
+(define-object DOMFile
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "DOMBlob")
+  (c-name "WebKitDOMFile")
+)
+
+(define-method get_name
+  (of-object "WebKitDOMFile")
+  (c-name "webkit_dom_file_get_name")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+
+(define-method get_webkit_relative_path
+  (of-object "WebKitDOMFile")
+  (c-name "webkit_dom_file_get_webkit_relative_path")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+

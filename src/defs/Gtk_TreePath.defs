@@ -1,0 +1,177 @@
+(define-object TreePath
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkTreePath")
+)
+
+(define-function TreePath_new
+  (is-constructor-of "GtkTreePath")
+  (c-name "gtk_tree_path_new")
+  (return-type "GtkTreePath*")
+  (parameters
+  )
+)
+
+(define-function TreePath_new_first
+  (is-constructor-of "GtkTreePath")
+  (c-name "gtk_tree_path_new_first")
+  (return-type "GtkTreePath*")
+  (parameters
+  )
+)
+
+(define-function TreePath_new_from_indices
+  (is-constructor-of "GtkTreePath")
+  (c-name "gtk_tree_path_new_from_indices")
+  (return-type "GtkTreePath*")
+  (parameters
+    '("gint" "pfirst_index")
+    '("null" "p...")
+  )
+)
+
+(define-function TreePath_new_from_indicesv
+  (is-constructor-of "GtkTreePath")
+  (c-name "gtk_tree_path_new_from_indicesv")
+  (return-type "GtkTreePath*")
+  (parameters
+    '("null" "pindices")
+    '("gsize" "plength")
+  )
+)
+
+(define-function TreePath_new_from_string
+  (is-constructor-of "GtkTreePath")
+  (c-name "gtk_tree_path_new_from_string")
+  (return-type "GtkTreePath*")
+  (parameters
+    '("const gchar*" "ppath")
+  )
+)
+
+(define-method append_index
+  (of-object "GtkTreePath")
+  (c-name "gtk_tree_path_append_index")
+  (return-type "none")
+  (parameters
+    '("gint" "pindex_")
+  )
+)
+
+(define-method compare
+  (of-object "GtkTreePath")
+  (c-name "gtk_tree_path_compare")
+  (return-type "gint")
+  (parameters
+    '("const GtkTreePath*" "pb")
+  )
+)
+
+(define-method copy
+  (of-object "GtkTreePath")
+  (c-name "gtk_tree_path_copy")
+  (return-type "GtkTreePath*")
+  (parameters
+  )
+)
+
+(define-method down
+  (of-object "GtkTreePath")
+  (c-name "gtk_tree_path_down")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method free
+  (of-object "GtkTreePath")
+  (c-name "gtk_tree_path_free")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method get_depth
+  (of-object "GtkTreePath")
+  (c-name "gtk_tree_path_get_depth")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_indices
+  (of-object "GtkTreePath")
+  (c-name "gtk_tree_path_get_indices")
+  (return-type "gint*")
+  (parameters
+  )
+)
+
+(define-method get_indices_with_depth
+  (of-object "GtkTreePath")
+  (c-name "gtk_tree_path_get_indices_with_depth")
+  (return-type "none")
+  (parameters
+    '("gint*" "pdepth")
+  )
+)
+
+(define-method is_ancestor
+  (of-object "GtkTreePath")
+  (c-name "gtk_tree_path_is_ancestor")
+  (return-type "gboolean")
+  (parameters
+    '("GtkTreePath*" "pdescendant")
+  )
+)
+
+(define-method is_descendant
+  (of-object "GtkTreePath")
+  (c-name "gtk_tree_path_is_descendant")
+  (return-type "gboolean")
+  (parameters
+    '("GtkTreePath*" "pancestor")
+  )
+)
+
+(define-method next
+  (of-object "GtkTreePath")
+  (c-name "gtk_tree_path_next")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method prepend_index
+  (of-object "GtkTreePath")
+  (c-name "gtk_tree_path_prepend_index")
+  (return-type "none")
+  (parameters
+    '("gint" "pindex_")
+  )
+)
+
+(define-method prev
+  (of-object "GtkTreePath")
+  (c-name "gtk_tree_path_prev")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method to_string
+  (of-object "GtkTreePath")
+  (c-name "gtk_tree_path_to_string")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+
+(define-method up
+  (of-object "GtkTreePath")
+  (c-name "gtk_tree_path_up")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+

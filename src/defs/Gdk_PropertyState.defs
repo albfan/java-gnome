@@ -1,0 +1,9 @@
+(define-enum PropertyState
+  (in-module "Gdk")
+  (c-name "GdkPropertyState")
+  (values
+    '("new_value" "GDK_PROPERTY_NEW_VALUE")
+    '("delete" "GDK_PROPERTY_DELETE")
+  )
+)
+

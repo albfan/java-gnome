@@ -1,0 +1,49 @@
+(define-object AsyncInitable
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GAsyncInitable")
+)
+
+(define-method init_async
+  (of-object "GAsyncInitable")
+  (c-name "init_async")
+  (return-type "none")
+  (parameters
+    '("int" "pio_priority")
+    '("GCancellable*" "pcancellable")
+    '("GAsyncReadyCallback" "pcallback")
+    '("gpointer" "puser_data")
+  )
+)
+
+(define-method init_finish
+  (of-object "GAsyncInitable")
+  (c-name "init_finish")
+  (return-type "gboolean")
+  (parameters
+    '("GAsyncResult*" "pres")
+    '("GError**" "error")
+  )
+)
+
+(define-method new_finish
+  (of-object "GAsyncInitable")
+  (c-name "g_async_initable_new_finish")
+  (return-type "GObject*")
+  (parameters
+    '("GAsyncResult*" "pres")
+    '("GError**" "error")
+  )
+)
+

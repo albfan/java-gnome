@@ -1,0 +1,6 @@
+(define-object RecentChooserDialogClass
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkRecentChooserDialogClass")
+)
+

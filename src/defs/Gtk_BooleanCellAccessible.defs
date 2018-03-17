@@ -1,0 +1,6 @@
+(define-object BooleanCellAccessible
+  (in-module "Gtk")
+  (parent "RendererCellAccessible")
+  (c-name "GtkBooleanCellAccessible")
+)
+

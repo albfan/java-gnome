@@ -1,0 +1,61 @@
+(define-object WebResource
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "WebKitWebResource")
+)
+
+(define-function WebResource_new
+  (is-constructor-of "WebKitWebResource")
+  (c-name "webkit_web_resource_new")
+  (return-type "WebKitWebResource*")
+  (parameters
+    '("const gchar*" "pdata")
+    '("gssize" "psize")
+    '("const gchar*" "puri")
+    '("const gchar*" "pmime_type")
+    '("const gchar*" "pencoding")
+    '("const gchar*" "pframe_name")
+  )
+)
+
+(define-method get_data
+  (of-object "WebKitWebResource")
+  (c-name "webkit_web_resource_get_data")
+  (return-type "GString*")
+  (parameters
+  )
+)
+
+(define-method get_encoding
+  (of-object "WebKitWebResource")
+  (c-name "webkit_web_resource_get_encoding")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_frame_name
+  (of-object "WebKitWebResource")
+  (c-name "webkit_web_resource_get_frame_name")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_mime_type
+  (of-object "WebKitWebResource")
+  (c-name "webkit_web_resource_get_mime_type")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_uri
+  (of-object "WebKitWebResource")
+  (c-name "webkit_web_resource_get_uri")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+

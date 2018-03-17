@@ -1,0 +1,88 @@
+(define-object Visual
+  (in-module "Gdk")
+  (import-header "gdk/gdk.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GdkVisual")
+)
+
+(define-method get_bits_per_rgb
+  (of-object "GdkVisual")
+  (c-name "gdk_visual_get_bits_per_rgb")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_blue_pixel_details
+  (of-object "GdkVisual")
+  (c-name "gdk_visual_get_blue_pixel_details")
+  (return-type "none")
+  (parameters
+    '("guint32*" "pmask")
+    '("gint*" "pshift")
+    '("gint*" "pprecision")
+  )
+)
+
+(define-method get_byte_order
+  (of-object "GdkVisual")
+  (c-name "gdk_visual_get_byte_order")
+  (return-type "GdkByteOrder")
+  (parameters
+  )
+)
+
+(define-method get_colormap_size
+  (of-object "GdkVisual")
+  (c-name "gdk_visual_get_colormap_size")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_depth
+  (of-object "GdkVisual")
+  (c-name "gdk_visual_get_depth")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_green_pixel_details
+  (of-object "GdkVisual")
+  (c-name "gdk_visual_get_green_pixel_details")
+  (return-type "none")
+  (parameters
+    '("guint32*" "pmask")
+    '("gint*" "pshift")
+    '("gint*" "pprecision")
+  )
+)
+
+(define-method get_red_pixel_details
+  (of-object "GdkVisual")
+  (c-name "gdk_visual_get_red_pixel_details")
+  (return-type "none")
+  (parameters
+    '("guint32*" "pmask")
+    '("gint*" "pshift")
+    '("gint*" "pprecision")
+  )
+)
+
+(define-method get_screen
+  (of-object "GdkVisual")
+  (c-name "gdk_visual_get_screen")
+  (return-type "GdkScreen*")
+  (parameters
+  )
+)
+
+(define-method get_visual_type
+  (of-object "GdkVisual")
+  (c-name "gdk_visual_get_visual_type")
+  (return-type "GdkVisualType")
+  (parameters
+  )
+)
+

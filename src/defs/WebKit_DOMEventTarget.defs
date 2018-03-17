@@ -1,0 +1,61 @@
+(define-object DOMEventTarget
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "WebKitDOMEventTarget")
+)
+
+(define-method add_event_listener
+  (of-object "WebKitDOMEventTarget")
+  (c-name "add_event_listener")
+  (return-type "gboolean")
+  (parameters
+    '("const char*" "pevent_name")
+    '("GClosure*" "phandler")
+    '("gboolean" "puse_capture")
+  )
+)
+
+(define-method dispatch_event
+  (of-object "WebKitDOMEventTarget")
+  (c-name "dispatch_event")
+  (return-type "gboolean")
+  (parameters
+    '("WebKitDOMEvent*" "pevent")
+    '("GError**" "error")
+  )
+)
+
+(define-method remove_event_listener
+  (of-object "WebKitDOMEventTarget")
+  (c-name "remove_event_listener")
+  (return-type "gboolean")
+  (parameters
+    '("const char*" "pevent_name")
+    '("GClosure*" "phandler")
+    '("gboolean" "puse_capture")
+  )
+)
+
+(define-method add_event_listener_with_closure
+  (of-object "WebKitDOMEventTarget")
+  (c-name "webkit_dom_event_target_add_event_listener_with_closure")
+  (return-type "gboolean")
+  (parameters
+    '("const char*" "pevent_name")
+    '("GClosure*" "phandler")
+    '("gboolean" "puse_capture")
+  )
+)
+
+(define-method remove_event_listener_with_closure
+  (of-object "WebKitDOMEventTarget")
+  (c-name "webkit_dom_event_target_remove_event_listener_with_closure")
+  (return-type "gboolean")
+  (parameters
+    '("const char*" "pevent_name")
+    '("GClosure*" "phandler")
+    '("gboolean" "puse_capture")
+  )
+)
+

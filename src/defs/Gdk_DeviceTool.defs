@@ -1,0 +1,31 @@
+(define-object DeviceTool
+  (in-module "Gdk")
+  (import-header "gdk/gdk.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GdkDeviceTool")
+)
+
+(define-method get_hardware_id
+  (of-object "GdkDeviceTool")
+  (c-name "gdk_device_tool_get_hardware_id")
+  (return-type "guint64")
+  (parameters
+  )
+)
+
+(define-method get_serial
+  (of-object "GdkDeviceTool")
+  (c-name "gdk_device_tool_get_serial")
+  (return-type "guint64")
+  (parameters
+  )
+)
+
+(define-method get_tool_type
+  (of-object "GdkDeviceTool")
+  (c-name "gdk_device_tool_get_tool_type")
+  (return-type "GdkDeviceToolType")
+  (parameters
+  )
+)
+

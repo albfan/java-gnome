@@ -1,0 +1,14 @@
+(define-enum ConvertError
+  (in-module "GLib")
+  (c-name "GConvertError")
+  (values
+    '("no_conversion" "G_CONVERT_ERROR_NO_CONVERSION")
+    '("illegal_sequence" "G_CONVERT_ERROR_ILLEGAL_SEQUENCE")
+    '("failed" "G_CONVERT_ERROR_FAILED")
+    '("partial_input" "G_CONVERT_ERROR_PARTIAL_INPUT")
+    '("bad_uri" "G_CONVERT_ERROR_BAD_URI")
+    '("not_absolute_path" "G_CONVERT_ERROR_NOT_ABSOLUTE_PATH")
+    '("no_memory" "G_CONVERT_ERROR_NO_MEMORY")
+  )
+)
+

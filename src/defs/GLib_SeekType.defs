@@ -1,0 +1,10 @@
+(define-enum SeekType
+  (in-module "GLib")
+  (c-name "GSeekType")
+  (values
+    '("cur" "G_SEEK_CUR")
+    '("set" "G_SEEK_SET")
+    '("end" "G_SEEK_END")
+  )
+)
+

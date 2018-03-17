@@ -1,0 +1,16 @@
+(define-enum UserDirectory
+  (in-module "GLib")
+  (c-name "GUserDirectory")
+  (values
+    '("directory_desktop" "G_USER_DIRECTORY_DESKTOP")
+    '("directory_documents" "G_USER_DIRECTORY_DOCUMENTS")
+    '("directory_download" "G_USER_DIRECTORY_DOWNLOAD")
+    '("directory_music" "G_USER_DIRECTORY_MUSIC")
+    '("directory_pictures" "G_USER_DIRECTORY_PICTURES")
+    '("directory_public_share" "G_USER_DIRECTORY_PUBLIC_SHARE")
+    '("directory_templates" "G_USER_DIRECTORY_TEMPLATES")
+    '("directory_videos" "G_USER_DIRECTORY_VIDEOS")
+    '("n_directories" "G_USER_N_DIRECTORIES")
+  )
+)
+

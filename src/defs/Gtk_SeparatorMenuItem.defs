@@ -1,0 +1,14 @@
+(define-object SeparatorMenuItem
+  (in-module "Gtk")
+  (parent "MenuItem")
+  (c-name "GtkSeparatorMenuItem")
+)
+
+(define-function SeparatorMenuItem_new
+  (is-constructor-of "GtkSeparatorMenuItem")
+  (c-name "gtk_separator_menu_item_new")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+

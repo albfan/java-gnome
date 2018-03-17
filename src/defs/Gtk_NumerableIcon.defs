@@ -1,0 +1,91 @@
+(define-object NumerableIcon
+  (in-module "Gtk")
+  (parent "Gio.EmblemedIcon")
+  (c-name "GtkNumerableIcon")
+)
+
+(define-method get_background_gicon
+  (of-object "GtkNumerableIcon")
+  (c-name "gtk_numerable_icon_get_background_gicon")
+  (return-type "GIcon*")
+  (parameters
+  )
+)
+
+(define-method get_background_icon_name
+  (of-object "GtkNumerableIcon")
+  (c-name "gtk_numerable_icon_get_background_icon_name")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_count
+  (of-object "GtkNumerableIcon")
+  (c-name "gtk_numerable_icon_get_count")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_label
+  (of-object "GtkNumerableIcon")
+  (c-name "gtk_numerable_icon_get_label")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_style_context
+  (of-object "GtkNumerableIcon")
+  (c-name "gtk_numerable_icon_get_style_context")
+  (return-type "GtkStyleContext*")
+  (parameters
+  )
+)
+
+(define-method set_background_gicon
+  (of-object "GtkNumerableIcon")
+  (c-name "gtk_numerable_icon_set_background_gicon")
+  (return-type "none")
+  (parameters
+    '("GIcon*" "picon")
+  )
+)
+
+(define-method set_background_icon_name
+  (of-object "GtkNumerableIcon")
+  (c-name "gtk_numerable_icon_set_background_icon_name")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "picon_name")
+  )
+)
+
+(define-method set_count
+  (of-object "GtkNumerableIcon")
+  (c-name "gtk_numerable_icon_set_count")
+  (return-type "none")
+  (parameters
+    '("gint" "pcount")
+  )
+)
+
+(define-method set_label
+  (of-object "GtkNumerableIcon")
+  (c-name "gtk_numerable_icon_set_label")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "plabel")
+  )
+)
+
+(define-method set_style_context
+  (of-object "GtkNumerableIcon")
+  (c-name "gtk_numerable_icon_set_style_context")
+  (return-type "none")
+  (parameters
+    '("GtkStyleContext*" "pstyle")
+  )
+)
+

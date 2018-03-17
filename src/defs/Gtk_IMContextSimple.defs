@@ -1,0 +1,34 @@
+(define-object IMContextSimple
+  (in-module "Gtk")
+  (parent "IMContext")
+  (c-name "GtkIMContextSimple")
+)
+
+(define-function IMContextSimple_new
+  (is-constructor-of "GtkIMContextSimple")
+  (c-name "gtk_im_context_simple_new")
+  (return-type "GtkIMContext*")
+  (parameters
+  )
+)
+
+(define-method add_compose_file
+  (of-object "GtkIMContextSimple")
+  (c-name "gtk_im_context_simple_add_compose_file")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pcompose_file")
+  )
+)
+
+(define-method add_table
+  (of-object "GtkIMContextSimple")
+  (c-name "gtk_im_context_simple_add_table")
+  (return-type "none")
+  (parameters
+    '("null" "pdata")
+    '("gint" "pmax_seq_len")
+    '("gint" "pn_seqs")
+  )
+)
+

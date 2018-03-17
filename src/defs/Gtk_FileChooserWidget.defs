@@ -1,0 +1,15 @@
+(define-object FileChooserWidget
+  (in-module "Gtk")
+  (parent "Box")
+  (c-name "GtkFileChooserWidget")
+)
+
+(define-function FileChooserWidget_new
+  (is-constructor-of "GtkFileChooserWidget")
+  (c-name "gtk_file_chooser_widget_new")
+  (return-type "GtkWidget*")
+  (parameters
+    '("GtkFileChooserAction" "paction")
+  )
+)
+

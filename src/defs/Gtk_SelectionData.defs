@@ -1,0 +1,195 @@
+(define-object SelectionData
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkSelectionData")
+)
+
+(define-method copy
+  (of-object "GtkSelectionData")
+  (c-name "gtk_selection_data_copy")
+  (return-type "GtkSelectionData*")
+  (parameters
+  )
+)
+
+(define-method free
+  (of-object "GtkSelectionData")
+  (c-name "gtk_selection_data_free")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method get_data
+  (of-object "GtkSelectionData")
+  (c-name "gtk_selection_data_get_data")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method get_data_type
+  (of-object "GtkSelectionData")
+  (c-name "gtk_selection_data_get_data_type")
+  (return-type "GdkAtom")
+  (parameters
+  )
+)
+
+(define-method get_data_with_length
+  (of-object "GtkSelectionData")
+  (c-name "gtk_selection_data_get_data_with_length")
+  (return-type "none")
+  (parameters
+    '("gint*" "plength")
+  )
+)
+
+(define-method get_display
+  (of-object "GtkSelectionData")
+  (c-name "gtk_selection_data_get_display")
+  (return-type "GdkDisplay*")
+  (parameters
+  )
+)
+
+(define-method get_format
+  (of-object "GtkSelectionData")
+  (c-name "gtk_selection_data_get_format")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_length
+  (of-object "GtkSelectionData")
+  (c-name "gtk_selection_data_get_length")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_pixbuf
+  (of-object "GtkSelectionData")
+  (c-name "gtk_selection_data_get_pixbuf")
+  (return-type "GdkPixbuf*")
+  (parameters
+  )
+)
+
+(define-method get_selection
+  (of-object "GtkSelectionData")
+  (c-name "gtk_selection_data_get_selection")
+  (return-type "GdkAtom")
+  (parameters
+  )
+)
+
+(define-method get_target
+  (of-object "GtkSelectionData")
+  (c-name "gtk_selection_data_get_target")
+  (return-type "GdkAtom")
+  (parameters
+  )
+)
+
+(define-method get_targets
+  (of-object "GtkSelectionData")
+  (c-name "gtk_selection_data_get_targets")
+  (return-type "gboolean")
+  (parameters
+    '("null" "ptargets")
+    '("gint*" "pn_atoms")
+  )
+)
+
+(define-method get_text
+  (of-object "GtkSelectionData")
+  (c-name "gtk_selection_data_get_text")
+  (return-type "guchar*")
+  (parameters
+  )
+)
+
+(define-method get_uris
+  (of-object "GtkSelectionData")
+  (c-name "gtk_selection_data_get_uris")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method set
+  (of-object "GtkSelectionData")
+  (c-name "gtk_selection_data_set")
+  (return-type "none")
+  (parameters
+    '("GdkAtom" "ptype")
+    '("gint" "pformat")
+    '("null" "pdata")
+    '("gint" "plength")
+  )
+)
+
+(define-method set_pixbuf
+  (of-object "GtkSelectionData")
+  (c-name "gtk_selection_data_set_pixbuf")
+  (return-type "gboolean")
+  (parameters
+    '("GdkPixbuf*" "ppixbuf")
+  )
+)
+
+(define-method set_text
+  (of-object "GtkSelectionData")
+  (c-name "gtk_selection_data_set_text")
+  (return-type "gboolean")
+  (parameters
+    '("const gchar*" "pstr")
+    '("gint" "plen")
+  )
+)
+
+(define-method set_uris
+  (of-object "GtkSelectionData")
+  (c-name "gtk_selection_data_set_uris")
+  (return-type "gboolean")
+  (parameters
+    '("null" "puris")
+  )
+)
+
+(define-method targets_include_image
+  (of-object "GtkSelectionData")
+  (c-name "gtk_selection_data_targets_include_image")
+  (return-type "gboolean")
+  (parameters
+    '("gboolean" "pwritable")
+  )
+)
+
+(define-method targets_include_rich_text
+  (of-object "GtkSelectionData")
+  (c-name "gtk_selection_data_targets_include_rich_text")
+  (return-type "gboolean")
+  (parameters
+    '("GtkTextBuffer*" "pbuffer")
+  )
+)
+
+(define-method targets_include_text
+  (of-object "GtkSelectionData")
+  (c-name "gtk_selection_data_targets_include_text")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method targets_include_uri
+  (of-object "GtkSelectionData")
+  (c-name "gtk_selection_data_targets_include_uri")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+

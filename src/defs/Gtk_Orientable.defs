@@ -1,0 +1,23 @@
+(define-object Orientable
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkOrientable")
+)
+
+(define-method get_orientation
+  (of-object "GtkOrientable")
+  (c-name "gtk_orientable_get_orientation")
+  (return-type "GtkOrientation")
+  (parameters
+  )
+)
+
+(define-method set_orientation
+  (of-object "GtkOrientable")
+  (c-name "gtk_orientable_set_orientation")
+  (return-type "none")
+  (parameters
+    '("GtkOrientation" "porientation")
+  )
+)
+

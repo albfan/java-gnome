@@ -1,0 +1,34 @@
+(define-object BytesIcon
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GBytesIcon")
+)
+
+(define-function BytesIcon_new
+  (is-constructor-of "GBytesIcon")
+  (c-name "g_bytes_icon_new")
+  (return-type "GIcon*")
+  (parameters
+    '("GBytes*" "pbytes")
+  )
+)
+
+(define-method get_bytes
+  (of-object "GBytesIcon")
+  (c-name "g_bytes_icon_get_bytes")
+  (return-type "GBytes*")
+  (parameters
+  )
+)
+

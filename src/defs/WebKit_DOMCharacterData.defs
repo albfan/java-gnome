@@ -1,0 +1,97 @@
+(define-object DOMCharacterData
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "DOMNode")
+  (c-name "WebKitDOMCharacterData")
+)
+
+(define-method append_data
+  (of-object "WebKitDOMCharacterData")
+  (c-name "webkit_dom_character_data_append_data")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pdata")
+    '("GError**" "error")
+  )
+)
+
+(define-method delete_data
+  (of-object "WebKitDOMCharacterData")
+  (c-name "webkit_dom_character_data_delete_data")
+  (return-type "none")
+  (parameters
+    '("gulong" "poffset")
+    '("gulong" "plength")
+    '("GError**" "error")
+  )
+)
+
+(define-method get_data
+  (of-object "WebKitDOMCharacterData")
+  (c-name "webkit_dom_character_data_get_data")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+
+(define-method get_length
+  (of-object "WebKitDOMCharacterData")
+  (c-name "webkit_dom_character_data_get_length")
+  (return-type "gulong")
+  (parameters
+  )
+)
+
+(define-method insert_data
+  (of-object "WebKitDOMCharacterData")
+  (c-name "webkit_dom_character_data_insert_data")
+  (return-type "none")
+  (parameters
+    '("gulong" "poffset")
+    '("const gchar*" "pdata")
+    '("GError**" "error")
+  )
+)
+
+(define-method remove
+  (of-object "WebKitDOMCharacterData")
+  (c-name "webkit_dom_character_data_remove")
+  (return-type "none")
+  (parameters
+    '("GError**" "error")
+  )
+)
+
+(define-method replace_data
+  (of-object "WebKitDOMCharacterData")
+  (c-name "webkit_dom_character_data_replace_data")
+  (return-type "none")
+  (parameters
+    '("gulong" "poffset")
+    '("gulong" "plength")
+    '("const gchar*" "pdata")
+    '("GError**" "error")
+  )
+)
+
+(define-method set_data
+  (of-object "WebKitDOMCharacterData")
+  (c-name "webkit_dom_character_data_set_data")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pvalue")
+    '("GError**" "error")
+  )
+)
+
+(define-method substring_data
+  (of-object "WebKitDOMCharacterData")
+  (c-name "webkit_dom_character_data_substring_data")
+  (return-type "gchar*")
+  (parameters
+    '("gulong" "poffset")
+    '("gulong" "plength")
+    '("GError**" "error")
+  )
+)
+

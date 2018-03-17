@@ -1,0 +1,234 @@
+(define-object IconInfo
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkIconInfo")
+)
+
+(define-function IconInfo_new_for_pixbuf
+  (is-constructor-of "GtkIconInfo")
+  (c-name "gtk_icon_info_new_for_pixbuf")
+  (return-type "GtkIconInfo*")
+  (parameters
+    '("GtkIconTheme*" "picon_theme")
+    '("GdkPixbuf*" "ppixbuf")
+  )
+)
+
+(define-method copy
+  (of-object "GtkIconInfo")
+  (c-name "gtk_icon_info_copy")
+  (return-type "GtkIconInfo*")
+  (parameters
+  )
+)
+
+(define-method free
+  (of-object "GtkIconInfo")
+  (c-name "gtk_icon_info_free")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method get_attach_points
+  (of-object "GtkIconInfo")
+  (c-name "gtk_icon_info_get_attach_points")
+  (return-type "gboolean")
+  (parameters
+    '("null" "ppoints")
+    '("gint*" "pn_points")
+  )
+)
+
+(define-method get_base_scale
+  (of-object "GtkIconInfo")
+  (c-name "gtk_icon_info_get_base_scale")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_base_size
+  (of-object "GtkIconInfo")
+  (c-name "gtk_icon_info_get_base_size")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_builtin_pixbuf
+  (of-object "GtkIconInfo")
+  (c-name "gtk_icon_info_get_builtin_pixbuf")
+  (return-type "GdkPixbuf*")
+  (parameters
+  )
+)
+
+(define-method get_display_name
+  (of-object "GtkIconInfo")
+  (c-name "gtk_icon_info_get_display_name")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_embedded_rect
+  (of-object "GtkIconInfo")
+  (c-name "gtk_icon_info_get_embedded_rect")
+  (return-type "gboolean")
+  (parameters
+    '("GdkRectangle*" "prectangle")
+  )
+)
+
+(define-method get_filename
+  (of-object "GtkIconInfo")
+  (c-name "gtk_icon_info_get_filename")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+
+(define-method is_symbolic
+  (of-object "GtkIconInfo")
+  (c-name "gtk_icon_info_is_symbolic")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method load_icon
+  (of-object "GtkIconInfo")
+  (c-name "gtk_icon_info_load_icon")
+  (return-type "GdkPixbuf*")
+  (parameters
+    '("GError**" "error")
+  )
+)
+
+(define-method load_icon_async
+  (of-object "GtkIconInfo")
+  (c-name "gtk_icon_info_load_icon_async")
+  (return-type "none")
+  (parameters
+    '("GCancellable*" "pcancellable")
+    '("GAsyncReadyCallback" "pcallback")
+    '("gpointer" "puser_data")
+  )
+)
+
+(define-method load_icon_finish
+  (of-object "GtkIconInfo")
+  (c-name "gtk_icon_info_load_icon_finish")
+  (return-type "GdkPixbuf*")
+  (parameters
+    '("GAsyncResult*" "pres")
+    '("GError**" "error")
+  )
+)
+
+(define-method load_surface
+  (of-object "GtkIconInfo")
+  (c-name "gtk_icon_info_load_surface")
+  (return-type "cairo_surface_t*")
+  (parameters
+    '("GdkWindow*" "pfor_window")
+    '("GError**" "error")
+  )
+)
+
+(define-method load_symbolic
+  (of-object "GtkIconInfo")
+  (c-name "gtk_icon_info_load_symbolic")
+  (return-type "GdkPixbuf*")
+  (parameters
+    '("const GdkRGBA*" "pfg")
+    '("const GdkRGBA*" "psuccess_color")
+    '("const GdkRGBA*" "pwarning_color")
+    '("const GdkRGBA*" "perror_color")
+    '("gboolean*" "pwas_symbolic")
+    '("GError**" "error")
+  )
+)
+
+(define-method load_symbolic_async
+  (of-object "GtkIconInfo")
+  (c-name "gtk_icon_info_load_symbolic_async")
+  (return-type "none")
+  (parameters
+    '("const GdkRGBA*" "pfg")
+    '("const GdkRGBA*" "psuccess_color")
+    '("const GdkRGBA*" "pwarning_color")
+    '("const GdkRGBA*" "perror_color")
+    '("GCancellable*" "pcancellable")
+    '("GAsyncReadyCallback" "pcallback")
+    '("gpointer" "puser_data")
+  )
+)
+
+(define-method load_symbolic_finish
+  (of-object "GtkIconInfo")
+  (c-name "gtk_icon_info_load_symbolic_finish")
+  (return-type "GdkPixbuf*")
+  (parameters
+    '("GAsyncResult*" "pres")
+    '("gboolean*" "pwas_symbolic")
+    '("GError**" "error")
+  )
+)
+
+(define-method load_symbolic_for_context
+  (of-object "GtkIconInfo")
+  (c-name "gtk_icon_info_load_symbolic_for_context")
+  (return-type "GdkPixbuf*")
+  (parameters
+    '("GtkStyleContext*" "pcontext")
+    '("gboolean*" "pwas_symbolic")
+    '("GError**" "error")
+  )
+)
+
+(define-method load_symbolic_for_context_async
+  (of-object "GtkIconInfo")
+  (c-name "gtk_icon_info_load_symbolic_for_context_async")
+  (return-type "none")
+  (parameters
+    '("GtkStyleContext*" "pcontext")
+    '("GCancellable*" "pcancellable")
+    '("GAsyncReadyCallback" "pcallback")
+    '("gpointer" "puser_data")
+  )
+)
+
+(define-method load_symbolic_for_context_finish
+  (of-object "GtkIconInfo")
+  (c-name "gtk_icon_info_load_symbolic_for_context_finish")
+  (return-type "GdkPixbuf*")
+  (parameters
+    '("GAsyncResult*" "pres")
+    '("gboolean*" "pwas_symbolic")
+    '("GError**" "error")
+  )
+)
+
+(define-method load_symbolic_for_style
+  (of-object "GtkIconInfo")
+  (c-name "gtk_icon_info_load_symbolic_for_style")
+  (return-type "GdkPixbuf*")
+  (parameters
+    '("GtkStyle*" "pstyle")
+    '("GtkStateType" "pstate")
+    '("gboolean*" "pwas_symbolic")
+    '("GError**" "error")
+  )
+)
+
+(define-method set_raw_coordinates
+  (of-object "GtkIconInfo")
+  (c-name "gtk_icon_info_set_raw_coordinates")
+  (return-type "none")
+  (parameters
+    '("gboolean" "praw_coordinates")
+  )
+)
+

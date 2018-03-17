@@ -1,0 +1,9 @@
+(define-enum WidgetHelpType
+  (in-module "Gtk")
+  (c-name "GtkWidgetHelpType")
+  (values
+    '("tooltip" "GTK_WIDGET_HELP_TOOLTIP")
+    '("whats_this" "GTK_WIDGET_HELP_WHATS_THIS")
+  )
+)
+

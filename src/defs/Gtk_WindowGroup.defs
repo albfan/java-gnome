@@ -1,0 +1,57 @@
+(define-object WindowGroup
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkWindowGroup")
+)
+
+(define-function WindowGroup_new
+  (is-constructor-of "GtkWindowGroup")
+  (c-name "gtk_window_group_new")
+  (return-type "GtkWindowGroup*")
+  (parameters
+  )
+)
+
+(define-method add_window
+  (of-object "GtkWindowGroup")
+  (c-name "gtk_window_group_add_window")
+  (return-type "none")
+  (parameters
+    '("GtkWindow*" "pwindow")
+  )
+)
+
+(define-method get_current_device_grab
+  (of-object "GtkWindowGroup")
+  (c-name "gtk_window_group_get_current_device_grab")
+  (return-type "GtkWidget*")
+  (parameters
+    '("GdkDevice*" "pdevice")
+  )
+)
+
+(define-method get_current_grab
+  (of-object "GtkWindowGroup")
+  (c-name "gtk_window_group_get_current_grab")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method list_windows
+  (of-object "GtkWindowGroup")
+  (c-name "gtk_window_group_list_windows")
+  (return-type "GList*")
+  (parameters
+  )
+)
+
+(define-method remove_window
+  (of-object "GtkWindowGroup")
+  (c-name "gtk_window_group_remove_window")
+  (return-type "none")
+  (parameters
+    '("GtkWindow*" "pwindow")
+  )
+)
+

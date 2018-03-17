@@ -1,0 +1,88 @@
+(define-object MessageDialog
+  (in-module "Gtk")
+  (parent "Dialog")
+  (c-name "GtkMessageDialog")
+)
+
+(define-function MessageDialog_new
+  (is-constructor-of "GtkMessageDialog")
+  (c-name "gtk_message_dialog_new")
+  (return-type "GtkWidget*")
+  (parameters
+    '("GtkWindow*" "pparent")
+    '("GtkDialogFlags" "pflags")
+    '("GtkMessageType" "ptype")
+    '("GtkButtonsType" "pbuttons")
+    '("const gchar*" "pmessage_format")
+    '("null" "p...")
+  )
+)
+
+(define-function MessageDialog_new_with_markup
+  (is-constructor-of "GtkMessageDialog")
+  (c-name "gtk_message_dialog_new_with_markup")
+  (return-type "GtkWidget*")
+  (parameters
+    '("GtkWindow*" "pparent")
+    '("GtkDialogFlags" "pflags")
+    '("GtkMessageType" "ptype")
+    '("GtkButtonsType" "pbuttons")
+    '("const gchar*" "pmessage_format")
+    '("null" "p...")
+  )
+)
+
+(define-method format_secondary_markup
+  (of-object "GtkMessageDialog")
+  (c-name "gtk_message_dialog_format_secondary_markup")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pmessage_format")
+    '("null" "p...")
+  )
+)
+
+(define-method format_secondary_text
+  (of-object "GtkMessageDialog")
+  (c-name "gtk_message_dialog_format_secondary_text")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pmessage_format")
+    '("null" "p...")
+  )
+)
+
+(define-method get_image
+  (of-object "GtkMessageDialog")
+  (c-name "gtk_message_dialog_get_image")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method get_message_area
+  (of-object "GtkMessageDialog")
+  (c-name "gtk_message_dialog_get_message_area")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method set_image
+  (of-object "GtkMessageDialog")
+  (c-name "gtk_message_dialog_set_image")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pimage")
+  )
+)
+
+(define-method set_markup
+  (of-object "GtkMessageDialog")
+  (c-name "gtk_message_dialog_set_markup")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pstr")
+  )
+)
+

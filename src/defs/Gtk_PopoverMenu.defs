@@ -1,0 +1,23 @@
+(define-object PopoverMenu
+  (in-module "Gtk")
+  (parent "Popover")
+  (c-name "GtkPopoverMenu")
+)
+
+(define-function PopoverMenu_new
+  (is-constructor-of "GtkPopoverMenu")
+  (c-name "gtk_popover_menu_new")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method open_submenu
+  (of-object "GtkPopoverMenu")
+  (c-name "gtk_popover_menu_open_submenu")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pname")
+  )
+)
+

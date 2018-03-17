@@ -1,0 +1,124 @@
+(define-object ProgressBar
+  (in-module "Gtk")
+  (parent "Widget")
+  (c-name "GtkProgressBar")
+)
+
+(define-function ProgressBar_new
+  (is-constructor-of "GtkProgressBar")
+  (c-name "gtk_progress_bar_new")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method get_ellipsize
+  (of-object "GtkProgressBar")
+  (c-name "gtk_progress_bar_get_ellipsize")
+  (return-type "PangoEllipsizeMode")
+  (parameters
+  )
+)
+
+(define-method get_fraction
+  (of-object "GtkProgressBar")
+  (c-name "gtk_progress_bar_get_fraction")
+  (return-type "gdouble")
+  (parameters
+  )
+)
+
+(define-method get_inverted
+  (of-object "GtkProgressBar")
+  (c-name "gtk_progress_bar_get_inverted")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_pulse_step
+  (of-object "GtkProgressBar")
+  (c-name "gtk_progress_bar_get_pulse_step")
+  (return-type "gdouble")
+  (parameters
+  )
+)
+
+(define-method get_show_text
+  (of-object "GtkProgressBar")
+  (c-name "gtk_progress_bar_get_show_text")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_text
+  (of-object "GtkProgressBar")
+  (c-name "gtk_progress_bar_get_text")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method pulse
+  (of-object "GtkProgressBar")
+  (c-name "gtk_progress_bar_pulse")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method set_ellipsize
+  (of-object "GtkProgressBar")
+  (c-name "gtk_progress_bar_set_ellipsize")
+  (return-type "none")
+  (parameters
+    '("PangoEllipsizeMode" "pmode")
+  )
+)
+
+(define-method set_fraction
+  (of-object "GtkProgressBar")
+  (c-name "gtk_progress_bar_set_fraction")
+  (return-type "none")
+  (parameters
+    '("gdouble" "pfraction")
+  )
+)
+
+(define-method set_inverted
+  (of-object "GtkProgressBar")
+  (c-name "gtk_progress_bar_set_inverted")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pinverted")
+  )
+)
+
+(define-method set_pulse_step
+  (of-object "GtkProgressBar")
+  (c-name "gtk_progress_bar_set_pulse_step")
+  (return-type "none")
+  (parameters
+    '("gdouble" "pfraction")
+  )
+)
+
+(define-method set_show_text
+  (of-object "GtkProgressBar")
+  (c-name "gtk_progress_bar_set_show_text")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pshow_text")
+  )
+)
+
+(define-method set_text
+  (of-object "GtkProgressBar")
+  (c-name "gtk_progress_bar_set_text")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "ptext")
+  )
+)
+

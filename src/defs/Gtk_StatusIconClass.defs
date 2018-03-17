@@ -1,0 +1,6 @@
+(define-object StatusIconClass
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkStatusIconClass")
+)
+

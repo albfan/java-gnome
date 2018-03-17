@@ -1,0 +1,64 @@
+(define-object SecurityOrigin
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "WebKitSecurityOrigin")
+)
+
+(define-method get_all_web_databases
+  (of-object "WebKitSecurityOrigin")
+  (c-name "webkit_security_origin_get_all_web_databases")
+  (return-type "GList*")
+  (parameters
+  )
+)
+
+(define-method get_host
+  (of-object "WebKitSecurityOrigin")
+  (c-name "webkit_security_origin_get_host")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_port
+  (of-object "WebKitSecurityOrigin")
+  (c-name "webkit_security_origin_get_port")
+  (return-type "guint")
+  (parameters
+  )
+)
+
+(define-method get_protocol
+  (of-object "WebKitSecurityOrigin")
+  (c-name "webkit_security_origin_get_protocol")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_web_database_quota
+  (of-object "WebKitSecurityOrigin")
+  (c-name "webkit_security_origin_get_web_database_quota")
+  (return-type "guint64")
+  (parameters
+  )
+)
+
+(define-method get_web_database_usage
+  (of-object "WebKitSecurityOrigin")
+  (c-name "webkit_security_origin_get_web_database_usage")
+  (return-type "guint64")
+  (parameters
+  )
+)
+
+(define-method set_web_database_quota
+  (of-object "WebKitSecurityOrigin")
+  (c-name "webkit_security_origin_set_web_database_quota")
+  (return-type "none")
+  (parameters
+    '("guint64" "pquota")
+  )
+)
+

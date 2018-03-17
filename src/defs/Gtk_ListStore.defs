@@ -1,0 +1,216 @@
+(define-object ListStore
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkListStore")
+)
+
+(define-function ListStore_new
+  (is-constructor-of "GtkListStore")
+  (c-name "gtk_list_store_new")
+  (return-type "GtkListStore*")
+  (parameters
+    '("gint" "pn_columns")
+    '("null" "p...")
+  )
+)
+
+(define-function ListStore_newv
+  (is-constructor-of "GtkListStore")
+  (c-name "gtk_list_store_newv")
+  (return-type "GtkListStore*")
+  (parameters
+    '("gint" "pn_columns")
+    '("null" "ptypes")
+  )
+)
+
+(define-method append
+  (of-object "GtkListStore")
+  (c-name "gtk_list_store_append")
+  (return-type "none")
+  (parameters
+    '("GtkTreeIter*" "piter")
+  )
+)
+
+(define-method clear
+  (of-object "GtkListStore")
+  (c-name "gtk_list_store_clear")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method insert
+  (of-object "GtkListStore")
+  (c-name "gtk_list_store_insert")
+  (return-type "none")
+  (parameters
+    '("GtkTreeIter*" "piter")
+    '("gint" "pposition")
+  )
+)
+
+(define-method insert_after
+  (of-object "GtkListStore")
+  (c-name "gtk_list_store_insert_after")
+  (return-type "none")
+  (parameters
+    '("GtkTreeIter*" "piter")
+    '("GtkTreeIter*" "psibling")
+  )
+)
+
+(define-method insert_before
+  (of-object "GtkListStore")
+  (c-name "gtk_list_store_insert_before")
+  (return-type "none")
+  (parameters
+    '("GtkTreeIter*" "piter")
+    '("GtkTreeIter*" "psibling")
+  )
+)
+
+(define-method insert_with_values
+  (of-object "GtkListStore")
+  (c-name "gtk_list_store_insert_with_values")
+  (return-type "none")
+  (parameters
+    '("GtkTreeIter*" "piter")
+    '("gint" "pposition")
+    '("null" "p...")
+  )
+)
+
+(define-method insert_with_valuesv
+  (of-object "GtkListStore")
+  (c-name "gtk_list_store_insert_with_valuesv")
+  (return-type "none")
+  (parameters
+    '("GtkTreeIter*" "piter")
+    '("gint" "pposition")
+    '("null" "pcolumns")
+    '("null" "pvalues")
+    '("gint" "pn_values")
+  )
+)
+
+(define-method iter_is_valid
+  (of-object "GtkListStore")
+  (c-name "gtk_list_store_iter_is_valid")
+  (return-type "gboolean")
+  (parameters
+    '("GtkTreeIter*" "piter")
+  )
+)
+
+(define-method move_after
+  (of-object "GtkListStore")
+  (c-name "gtk_list_store_move_after")
+  (return-type "none")
+  (parameters
+    '("GtkTreeIter*" "piter")
+    '("GtkTreeIter*" "pposition")
+  )
+)
+
+(define-method move_before
+  (of-object "GtkListStore")
+  (c-name "gtk_list_store_move_before")
+  (return-type "none")
+  (parameters
+    '("GtkTreeIter*" "piter")
+    '("GtkTreeIter*" "pposition")
+  )
+)
+
+(define-method prepend
+  (of-object "GtkListStore")
+  (c-name "gtk_list_store_prepend")
+  (return-type "none")
+  (parameters
+    '("GtkTreeIter*" "piter")
+  )
+)
+
+(define-method remove
+  (of-object "GtkListStore")
+  (c-name "gtk_list_store_remove")
+  (return-type "gboolean")
+  (parameters
+    '("GtkTreeIter*" "piter")
+  )
+)
+
+(define-method reorder
+  (of-object "GtkListStore")
+  (c-name "gtk_list_store_reorder")
+  (return-type "none")
+  (parameters
+    '("null" "pnew_order")
+  )
+)
+
+(define-method set
+  (of-object "GtkListStore")
+  (c-name "gtk_list_store_set")
+  (return-type "none")
+  (parameters
+    '("GtkTreeIter*" "piter")
+    '("null" "p...")
+  )
+)
+
+(define-method set_column_types
+  (of-object "GtkListStore")
+  (c-name "gtk_list_store_set_column_types")
+  (return-type "none")
+  (parameters
+    '("gint" "pn_columns")
+    '("null" "ptypes")
+  )
+)
+
+(define-method set_valist
+  (of-object "GtkListStore")
+  (c-name "gtk_list_store_set_valist")
+  (return-type "none")
+  (parameters
+    '("GtkTreeIter*" "piter")
+    '("va_list" "pvar_args")
+  )
+)
+
+(define-method set_value
+  (of-object "GtkListStore")
+  (c-name "gtk_list_store_set_value")
+  (return-type "none")
+  (parameters
+    '("GtkTreeIter*" "piter")
+    '("gint" "pcolumn")
+    '("GValue*" "pvalue")
+  )
+)
+
+(define-method set_valuesv
+  (of-object "GtkListStore")
+  (c-name "gtk_list_store_set_valuesv")
+  (return-type "none")
+  (parameters
+    '("GtkTreeIter*" "piter")
+    '("null" "pcolumns")
+    '("null" "pvalues")
+    '("gint" "pn_values")
+  )
+)
+
+(define-method swap
+  (of-object "GtkListStore")
+  (c-name "gtk_list_store_swap")
+  (return-type "none")
+  (parameters
+    '("GtkTreeIter*" "pa")
+    '("GtkTreeIter*" "pb")
+  )
+)
+

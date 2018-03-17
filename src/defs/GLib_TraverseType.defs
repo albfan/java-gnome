@@ -1,0 +1,11 @@
+(define-enum TraverseType
+  (in-module "GLib")
+  (c-name "GTraverseType")
+  (values
+    '("in_order" "G_IN_ORDER")
+    '("pre_order" "G_PRE_ORDER")
+    '("post_order" "G_POST_ORDER")
+    '("level_order" "G_LEVEL_ORDER")
+  )
+)
+

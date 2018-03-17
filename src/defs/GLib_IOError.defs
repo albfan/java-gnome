@@ -1,0 +1,11 @@
+(define-enum IOError
+  (in-module "GLib")
+  (c-name "GIOError")
+  (values
+    '("none" "G_IO_ERROR_NONE")
+    '("again" "G_IO_ERROR_AGAIN")
+    '("inval" "G_IO_ERROR_INVAL")
+    '("unknown" "G_IO_ERROR_UNKNOWN")
+  )
+)
+

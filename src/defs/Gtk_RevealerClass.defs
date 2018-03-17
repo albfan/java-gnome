@@ -1,0 +1,6 @@
+(define-object RevealerClass
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkRevealerClass")
+)
+

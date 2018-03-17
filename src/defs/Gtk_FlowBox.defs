@@ -1,0 +1,325 @@
+(define-object FlowBox
+  (in-module "Gtk")
+  (parent "Container")
+  (c-name "GtkFlowBox")
+)
+
+(define-function FlowBox_new
+  (is-constructor-of "GtkFlowBox")
+  (c-name "gtk_flow_box_new")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method activate_cursor_child
+  (of-object "GtkFlowBox")
+  (c-name "activate_cursor_child")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method child_activated
+  (of-object "GtkFlowBox")
+  (c-name "child_activated")
+  (return-type "none")
+  (parameters
+    '("GtkFlowBoxChild*" "pchild")
+  )
+)
+
+(define-method move_cursor
+  (of-object "GtkFlowBox")
+  (c-name "move_cursor")
+  (return-type "gboolean")
+  (parameters
+    '("GtkMovementStep" "pstep")
+    '("gint" "pcount")
+  )
+)
+
+(define-method select_all
+  (of-object "GtkFlowBox")
+  (c-name "select_all")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method selected_children_changed
+  (of-object "GtkFlowBox")
+  (c-name "selected_children_changed")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method toggle_cursor_child
+  (of-object "GtkFlowBox")
+  (c-name "toggle_cursor_child")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method unselect_all
+  (of-object "GtkFlowBox")
+  (c-name "unselect_all")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method bind_model
+  (of-object "GtkFlowBox")
+  (c-name "gtk_flow_box_bind_model")
+  (return-type "none")
+  (parameters
+    '("GListModel*" "pmodel")
+    '("GtkFlowBoxCreateWidgetFunc" "pcreate_widget_func")
+    '("gpointer" "puser_data")
+    '("GDestroyNotify" "puser_data_free_func")
+  )
+)
+
+(define-method get_activate_on_single_click
+  (of-object "GtkFlowBox")
+  (c-name "gtk_flow_box_get_activate_on_single_click")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_child_at_index
+  (of-object "GtkFlowBox")
+  (c-name "gtk_flow_box_get_child_at_index")
+  (return-type "GtkFlowBoxChild*")
+  (parameters
+    '("gint" "pidx")
+  )
+)
+
+(define-method get_child_at_pos
+  (of-object "GtkFlowBox")
+  (c-name "gtk_flow_box_get_child_at_pos")
+  (return-type "GtkFlowBoxChild*")
+  (parameters
+    '("gint" "px")
+    '("gint" "py")
+  )
+)
+
+(define-method get_column_spacing
+  (of-object "GtkFlowBox")
+  (c-name "gtk_flow_box_get_column_spacing")
+  (return-type "guint")
+  (parameters
+  )
+)
+
+(define-method get_homogeneous
+  (of-object "GtkFlowBox")
+  (c-name "gtk_flow_box_get_homogeneous")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_max_children_per_line
+  (of-object "GtkFlowBox")
+  (c-name "gtk_flow_box_get_max_children_per_line")
+  (return-type "guint")
+  (parameters
+  )
+)
+
+(define-method get_min_children_per_line
+  (of-object "GtkFlowBox")
+  (c-name "gtk_flow_box_get_min_children_per_line")
+  (return-type "guint")
+  (parameters
+  )
+)
+
+(define-method get_row_spacing
+  (of-object "GtkFlowBox")
+  (c-name "gtk_flow_box_get_row_spacing")
+  (return-type "guint")
+  (parameters
+  )
+)
+
+(define-method get_selected_children
+  (of-object "GtkFlowBox")
+  (c-name "gtk_flow_box_get_selected_children")
+  (return-type "GList*")
+  (parameters
+  )
+)
+
+(define-method get_selection_mode
+  (of-object "GtkFlowBox")
+  (c-name "gtk_flow_box_get_selection_mode")
+  (return-type "GtkSelectionMode")
+  (parameters
+  )
+)
+
+(define-method insert
+  (of-object "GtkFlowBox")
+  (c-name "gtk_flow_box_insert")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pwidget")
+    '("gint" "pposition")
+  )
+)
+
+(define-method invalidate_filter
+  (of-object "GtkFlowBox")
+  (c-name "gtk_flow_box_invalidate_filter")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method invalidate_sort
+  (of-object "GtkFlowBox")
+  (c-name "gtk_flow_box_invalidate_sort")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method select_child
+  (of-object "GtkFlowBox")
+  (c-name "gtk_flow_box_select_child")
+  (return-type "none")
+  (parameters
+    '("GtkFlowBoxChild*" "pchild")
+  )
+)
+
+(define-method selected_foreach
+  (of-object "GtkFlowBox")
+  (c-name "gtk_flow_box_selected_foreach")
+  (return-type "none")
+  (parameters
+    '("GtkFlowBoxForeachFunc" "pfunc")
+    '("gpointer" "pdata")
+  )
+)
+
+(define-method set_activate_on_single_click
+  (of-object "GtkFlowBox")
+  (c-name "gtk_flow_box_set_activate_on_single_click")
+  (return-type "none")
+  (parameters
+    '("gboolean" "psingle")
+  )
+)
+
+(define-method set_column_spacing
+  (of-object "GtkFlowBox")
+  (c-name "gtk_flow_box_set_column_spacing")
+  (return-type "none")
+  (parameters
+    '("guint" "pspacing")
+  )
+)
+
+(define-method set_filter_func
+  (of-object "GtkFlowBox")
+  (c-name "gtk_flow_box_set_filter_func")
+  (return-type "none")
+  (parameters
+    '("GtkFlowBoxFilterFunc" "pfilter_func")
+    '("gpointer" "puser_data")
+    '("GDestroyNotify" "pdestroy")
+  )
+)
+
+(define-method set_hadjustment
+  (of-object "GtkFlowBox")
+  (c-name "gtk_flow_box_set_hadjustment")
+  (return-type "none")
+  (parameters
+    '("GtkAdjustment*" "padjustment")
+  )
+)
+
+(define-method set_homogeneous
+  (of-object "GtkFlowBox")
+  (c-name "gtk_flow_box_set_homogeneous")
+  (return-type "none")
+  (parameters
+    '("gboolean" "phomogeneous")
+  )
+)
+
+(define-method set_max_children_per_line
+  (of-object "GtkFlowBox")
+  (c-name "gtk_flow_box_set_max_children_per_line")
+  (return-type "none")
+  (parameters
+    '("guint" "pn_children")
+  )
+)
+
+(define-method set_min_children_per_line
+  (of-object "GtkFlowBox")
+  (c-name "gtk_flow_box_set_min_children_per_line")
+  (return-type "none")
+  (parameters
+    '("guint" "pn_children")
+  )
+)
+
+(define-method set_row_spacing
+  (of-object "GtkFlowBox")
+  (c-name "gtk_flow_box_set_row_spacing")
+  (return-type "none")
+  (parameters
+    '("guint" "pspacing")
+  )
+)
+
+(define-method set_selection_mode
+  (of-object "GtkFlowBox")
+  (c-name "gtk_flow_box_set_selection_mode")
+  (return-type "none")
+  (parameters
+    '("GtkSelectionMode" "pmode")
+  )
+)
+
+(define-method set_sort_func
+  (of-object "GtkFlowBox")
+  (c-name "gtk_flow_box_set_sort_func")
+  (return-type "none")
+  (parameters
+    '("GtkFlowBoxSortFunc" "psort_func")
+    '("gpointer" "puser_data")
+    '("GDestroyNotify" "pdestroy")
+  )
+)
+
+(define-method set_vadjustment
+  (of-object "GtkFlowBox")
+  (c-name "gtk_flow_box_set_vadjustment")
+  (return-type "none")
+  (parameters
+    '("GtkAdjustment*" "padjustment")
+  )
+)
+
+(define-method unselect_child
+  (of-object "GtkFlowBox")
+  (c-name "gtk_flow_box_unselect_child")
+  (return-type "none")
+  (parameters
+    '("GtkFlowBoxChild*" "pchild")
+  )
+)
+

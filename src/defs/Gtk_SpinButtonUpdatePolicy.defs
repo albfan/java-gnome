@@ -1,0 +1,9 @@
+(define-enum SpinButtonUpdatePolicy
+  (in-module "Gtk")
+  (c-name "GtkSpinButtonUpdatePolicy")
+  (values
+    '("always" "GTK_UPDATE_ALWAYS")
+    '("if_valid" "GTK_UPDATE_IF_VALID")
+  )
+)
+

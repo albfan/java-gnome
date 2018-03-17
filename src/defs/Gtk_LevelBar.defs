@@ -1,0 +1,147 @@
+(define-object LevelBar
+  (in-module "Gtk")
+  (parent "Widget")
+  (c-name "GtkLevelBar")
+)
+
+(define-function LevelBar_new
+  (is-constructor-of "GtkLevelBar")
+  (c-name "gtk_level_bar_new")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-function LevelBar_new_for_interval
+  (is-constructor-of "GtkLevelBar")
+  (c-name "gtk_level_bar_new_for_interval")
+  (return-type "GtkWidget*")
+  (parameters
+    '("gdouble" "pmin_value")
+    '("gdouble" "pmax_value")
+  )
+)
+
+(define-method offset_changed
+  (of-object "GtkLevelBar")
+  (c-name "offset_changed")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pname")
+  )
+)
+
+(define-method add_offset_value
+  (of-object "GtkLevelBar")
+  (c-name "gtk_level_bar_add_offset_value")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pname")
+    '("gdouble" "pvalue")
+  )
+)
+
+(define-method get_inverted
+  (of-object "GtkLevelBar")
+  (c-name "gtk_level_bar_get_inverted")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_max_value
+  (of-object "GtkLevelBar")
+  (c-name "gtk_level_bar_get_max_value")
+  (return-type "gdouble")
+  (parameters
+  )
+)
+
+(define-method get_min_value
+  (of-object "GtkLevelBar")
+  (c-name "gtk_level_bar_get_min_value")
+  (return-type "gdouble")
+  (parameters
+  )
+)
+
+(define-method get_mode
+  (of-object "GtkLevelBar")
+  (c-name "gtk_level_bar_get_mode")
+  (return-type "GtkLevelBarMode")
+  (parameters
+  )
+)
+
+(define-method get_offset_value
+  (of-object "GtkLevelBar")
+  (c-name "gtk_level_bar_get_offset_value")
+  (return-type "gboolean")
+  (parameters
+    '("const gchar*" "pname")
+    '("gdouble*" "pvalue")
+  )
+)
+
+(define-method get_value
+  (of-object "GtkLevelBar")
+  (c-name "gtk_level_bar_get_value")
+  (return-type "gdouble")
+  (parameters
+  )
+)
+
+(define-method remove_offset_value
+  (of-object "GtkLevelBar")
+  (c-name "gtk_level_bar_remove_offset_value")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pname")
+  )
+)
+
+(define-method set_inverted
+  (of-object "GtkLevelBar")
+  (c-name "gtk_level_bar_set_inverted")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pinverted")
+  )
+)
+
+(define-method set_max_value
+  (of-object "GtkLevelBar")
+  (c-name "gtk_level_bar_set_max_value")
+  (return-type "none")
+  (parameters
+    '("gdouble" "pvalue")
+  )
+)
+
+(define-method set_min_value
+  (of-object "GtkLevelBar")
+  (c-name "gtk_level_bar_set_min_value")
+  (return-type "none")
+  (parameters
+    '("gdouble" "pvalue")
+  )
+)
+
+(define-method set_mode
+  (of-object "GtkLevelBar")
+  (c-name "gtk_level_bar_set_mode")
+  (return-type "none")
+  (parameters
+    '("GtkLevelBarMode" "pmode")
+  )
+)
+
+(define-method set_value
+  (of-object "GtkLevelBar")
+  (c-name "gtk_level_bar_set_value")
+  (return-type "none")
+  (parameters
+    '("gdouble" "pvalue")
+  )
+)
+

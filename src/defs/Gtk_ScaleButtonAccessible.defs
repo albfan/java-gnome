@@ -1,0 +1,6 @@
+(define-object ScaleButtonAccessible
+  (in-module "Gtk")
+  (parent "ButtonAccessible")
+  (c-name "GtkScaleButtonAccessible")
+)
+

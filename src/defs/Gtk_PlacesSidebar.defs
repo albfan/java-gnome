@@ -1,0 +1,229 @@
+(define-object PlacesSidebar
+  (in-module "Gtk")
+  (parent "ScrolledWindow")
+  (c-name "GtkPlacesSidebar")
+)
+
+(define-function PlacesSidebar_new
+  (is-constructor-of "GtkPlacesSidebar")
+  (c-name "gtk_places_sidebar_new")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method add_shortcut
+  (of-object "GtkPlacesSidebar")
+  (c-name "gtk_places_sidebar_add_shortcut")
+  (return-type "none")
+  (parameters
+    '("GFile*" "plocation")
+  )
+)
+
+(define-method get_local_only
+  (of-object "GtkPlacesSidebar")
+  (c-name "gtk_places_sidebar_get_local_only")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_location
+  (of-object "GtkPlacesSidebar")
+  (c-name "gtk_places_sidebar_get_location")
+  (return-type "GFile*")
+  (parameters
+  )
+)
+
+(define-method get_nth_bookmark
+  (of-object "GtkPlacesSidebar")
+  (c-name "gtk_places_sidebar_get_nth_bookmark")
+  (return-type "GFile*")
+  (parameters
+    '("gint" "pn")
+  )
+)
+
+(define-method get_open_flags
+  (of-object "GtkPlacesSidebar")
+  (c-name "gtk_places_sidebar_get_open_flags")
+  (return-type "GtkPlacesOpenFlags")
+  (parameters
+  )
+)
+
+(define-method get_show_connect_to_server
+  (of-object "GtkPlacesSidebar")
+  (c-name "gtk_places_sidebar_get_show_connect_to_server")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_show_desktop
+  (of-object "GtkPlacesSidebar")
+  (c-name "gtk_places_sidebar_get_show_desktop")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_show_enter_location
+  (of-object "GtkPlacesSidebar")
+  (c-name "gtk_places_sidebar_get_show_enter_location")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_show_other_locations
+  (of-object "GtkPlacesSidebar")
+  (c-name "gtk_places_sidebar_get_show_other_locations")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_show_recent
+  (of-object "GtkPlacesSidebar")
+  (c-name "gtk_places_sidebar_get_show_recent")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_show_starred_location
+  (of-object "GtkPlacesSidebar")
+  (c-name "gtk_places_sidebar_get_show_starred_location")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_show_trash
+  (of-object "GtkPlacesSidebar")
+  (c-name "gtk_places_sidebar_get_show_trash")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method list_shortcuts
+  (of-object "GtkPlacesSidebar")
+  (c-name "gtk_places_sidebar_list_shortcuts")
+  (return-type "GSList*")
+  (parameters
+  )
+)
+
+(define-method remove_shortcut
+  (of-object "GtkPlacesSidebar")
+  (c-name "gtk_places_sidebar_remove_shortcut")
+  (return-type "none")
+  (parameters
+    '("GFile*" "plocation")
+  )
+)
+
+(define-method set_drop_targets_visible
+  (of-object "GtkPlacesSidebar")
+  (c-name "gtk_places_sidebar_set_drop_targets_visible")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pvisible")
+    '("GdkDragContext*" "pcontext")
+  )
+)
+
+(define-method set_local_only
+  (of-object "GtkPlacesSidebar")
+  (c-name "gtk_places_sidebar_set_local_only")
+  (return-type "none")
+  (parameters
+    '("gboolean" "plocal_only")
+  )
+)
+
+(define-method set_location
+  (of-object "GtkPlacesSidebar")
+  (c-name "gtk_places_sidebar_set_location")
+  (return-type "none")
+  (parameters
+    '("GFile*" "plocation")
+  )
+)
+
+(define-method set_open_flags
+  (of-object "GtkPlacesSidebar")
+  (c-name "gtk_places_sidebar_set_open_flags")
+  (return-type "none")
+  (parameters
+    '("GtkPlacesOpenFlags" "pflags")
+  )
+)
+
+(define-method set_show_connect_to_server
+  (of-object "GtkPlacesSidebar")
+  (c-name "gtk_places_sidebar_set_show_connect_to_server")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pshow_connect_to_server")
+  )
+)
+
+(define-method set_show_desktop
+  (of-object "GtkPlacesSidebar")
+  (c-name "gtk_places_sidebar_set_show_desktop")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pshow_desktop")
+  )
+)
+
+(define-method set_show_enter_location
+  (of-object "GtkPlacesSidebar")
+  (c-name "gtk_places_sidebar_set_show_enter_location")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pshow_enter_location")
+  )
+)
+
+(define-method set_show_other_locations
+  (of-object "GtkPlacesSidebar")
+  (c-name "gtk_places_sidebar_set_show_other_locations")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pshow_other_locations")
+  )
+)
+
+(define-method set_show_recent
+  (of-object "GtkPlacesSidebar")
+  (c-name "gtk_places_sidebar_set_show_recent")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pshow_recent")
+  )
+)
+
+(define-method set_show_starred_location
+  (of-object "GtkPlacesSidebar")
+  (c-name "gtk_places_sidebar_set_show_starred_location")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pshow_starred_location")
+  )
+)
+
+(define-method set_show_trash
+  (of-object "GtkPlacesSidebar")
+  (c-name "gtk_places_sidebar_set_show_trash")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pshow_trash")
+  )
+)
+

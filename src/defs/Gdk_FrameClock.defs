@@ -1,0 +1,84 @@
+(define-object FrameClock
+  (in-module "Gdk")
+  (import-header "gdk/gdk.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GdkFrameClock")
+)
+
+(define-method begin_updating
+  (of-object "GdkFrameClock")
+  (c-name "gdk_frame_clock_begin_updating")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method end_updating
+  (of-object "GdkFrameClock")
+  (c-name "gdk_frame_clock_end_updating")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method get_current_timings
+  (of-object "GdkFrameClock")
+  (c-name "gdk_frame_clock_get_current_timings")
+  (return-type "GdkFrameTimings*")
+  (parameters
+  )
+)
+
+(define-method get_frame_counter
+  (of-object "GdkFrameClock")
+  (c-name "gdk_frame_clock_get_frame_counter")
+  (return-type "gint64")
+  (parameters
+  )
+)
+
+(define-method get_frame_time
+  (of-object "GdkFrameClock")
+  (c-name "gdk_frame_clock_get_frame_time")
+  (return-type "gint64")
+  (parameters
+  )
+)
+
+(define-method get_history_start
+  (of-object "GdkFrameClock")
+  (c-name "gdk_frame_clock_get_history_start")
+  (return-type "gint64")
+  (parameters
+  )
+)
+
+(define-method get_refresh_info
+  (of-object "GdkFrameClock")
+  (c-name "gdk_frame_clock_get_refresh_info")
+  (return-type "none")
+  (parameters
+    '("gint64" "pbase_time")
+    '("gint64*" "prefresh_interval_return")
+    '("gint64*" "ppresentation_time_return")
+  )
+)
+
+(define-method get_timings
+  (of-object "GdkFrameClock")
+  (c-name "gdk_frame_clock_get_timings")
+  (return-type "GdkFrameTimings*")
+  (parameters
+    '("gint64" "pframe_counter")
+  )
+)
+
+(define-method request_phase
+  (of-object "GdkFrameClock")
+  (c-name "gdk_frame_clock_request_phase")
+  (return-type "none")
+  (parameters
+    '("GdkFrameClockPhase" "pphase")
+  )
+)
+

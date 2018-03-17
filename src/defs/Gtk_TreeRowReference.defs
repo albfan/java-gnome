@@ -1,0 +1,67 @@
+(define-object TreeRowReference
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkTreeRowReference")
+)
+
+(define-function TreeRowReference_new
+  (is-constructor-of "GtkTreeRowReference")
+  (c-name "gtk_tree_row_reference_new")
+  (return-type "GtkTreeRowReference*")
+  (parameters
+    '("GtkTreeModel*" "pmodel")
+    '("GtkTreePath*" "ppath")
+  )
+)
+
+(define-function TreeRowReference_new_proxy
+  (is-constructor-of "GtkTreeRowReference")
+  (c-name "gtk_tree_row_reference_new_proxy")
+  (return-type "GtkTreeRowReference*")
+  (parameters
+    '("GObject*" "pproxy")
+    '("GtkTreeModel*" "pmodel")
+    '("GtkTreePath*" "ppath")
+  )
+)
+
+(define-method copy
+  (of-object "GtkTreeRowReference")
+  (c-name "gtk_tree_row_reference_copy")
+  (return-type "GtkTreeRowReference*")
+  (parameters
+  )
+)
+
+(define-method free
+  (of-object "GtkTreeRowReference")
+  (c-name "gtk_tree_row_reference_free")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method get_model
+  (of-object "GtkTreeRowReference")
+  (c-name "gtk_tree_row_reference_get_model")
+  (return-type "GtkTreeModel*")
+  (parameters
+  )
+)
+
+(define-method get_path
+  (of-object "GtkTreeRowReference")
+  (c-name "gtk_tree_row_reference_get_path")
+  (return-type "GtkTreePath*")
+  (parameters
+  )
+)
+
+(define-method valid
+  (of-object "GtkTreeRowReference")
+  (c-name "gtk_tree_row_reference_valid")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+

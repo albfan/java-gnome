@@ -1,0 +1,137 @@
+(define-object GLContext
+  (in-module "Gdk")
+  (import-header "gdk/gdk.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GdkGLContext")
+)
+
+(define-method get_debug_enabled
+  (of-object "GdkGLContext")
+  (c-name "gdk_gl_context_get_debug_enabled")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_display
+  (of-object "GdkGLContext")
+  (c-name "gdk_gl_context_get_display")
+  (return-type "GdkDisplay*")
+  (parameters
+  )
+)
+
+(define-method get_forward_compatible
+  (of-object "GdkGLContext")
+  (c-name "gdk_gl_context_get_forward_compatible")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_required_version
+  (of-object "GdkGLContext")
+  (c-name "gdk_gl_context_get_required_version")
+  (return-type "none")
+  (parameters
+    '("int*" "pmajor")
+    '("int*" "pminor")
+  )
+)
+
+(define-method get_shared_context
+  (of-object "GdkGLContext")
+  (c-name "gdk_gl_context_get_shared_context")
+  (return-type "GdkGLContext*")
+  (parameters
+  )
+)
+
+(define-method get_use_es
+  (of-object "GdkGLContext")
+  (c-name "gdk_gl_context_get_use_es")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_version
+  (of-object "GdkGLContext")
+  (c-name "gdk_gl_context_get_version")
+  (return-type "none")
+  (parameters
+    '("int*" "pmajor")
+    '("int*" "pminor")
+  )
+)
+
+(define-method get_window
+  (of-object "GdkGLContext")
+  (c-name "gdk_gl_context_get_window")
+  (return-type "GdkWindow*")
+  (parameters
+  )
+)
+
+(define-method is_legacy
+  (of-object "GdkGLContext")
+  (c-name "gdk_gl_context_is_legacy")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method make_current
+  (of-object "GdkGLContext")
+  (c-name "gdk_gl_context_make_current")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method realize
+  (of-object "GdkGLContext")
+  (c-name "gdk_gl_context_realize")
+  (return-type "gboolean")
+  (parameters
+    '("GError**" "error")
+  )
+)
+
+(define-method set_debug_enabled
+  (of-object "GdkGLContext")
+  (c-name "gdk_gl_context_set_debug_enabled")
+  (return-type "none")
+  (parameters
+    '("gboolean" "penabled")
+  )
+)
+
+(define-method set_forward_compatible
+  (of-object "GdkGLContext")
+  (c-name "gdk_gl_context_set_forward_compatible")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pcompatible")
+  )
+)
+
+(define-method set_required_version
+  (of-object "GdkGLContext")
+  (c-name "gdk_gl_context_set_required_version")
+  (return-type "none")
+  (parameters
+    '("int" "pmajor")
+    '("int" "pminor")
+  )
+)
+
+(define-method set_use_es
+  (of-object "GdkGLContext")
+  (c-name "gdk_gl_context_set_use_es")
+  (return-type "none")
+  (parameters
+    '("int" "puse_es")
+  )
+)
+

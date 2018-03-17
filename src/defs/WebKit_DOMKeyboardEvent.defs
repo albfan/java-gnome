@@ -1,0 +1,91 @@
+(define-object DOMKeyboardEvent
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "DOMUIEvent")
+  (c-name "WebKitDOMKeyboardEvent")
+)
+
+(define-method get_alt_graph_key
+  (of-object "WebKitDOMKeyboardEvent")
+  (c-name "webkit_dom_keyboard_event_get_alt_graph_key")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_alt_key
+  (of-object "WebKitDOMKeyboardEvent")
+  (c-name "webkit_dom_keyboard_event_get_alt_key")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_ctrl_key
+  (of-object "WebKitDOMKeyboardEvent")
+  (c-name "webkit_dom_keyboard_event_get_ctrl_key")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_key_identifier
+  (of-object "WebKitDOMKeyboardEvent")
+  (c-name "webkit_dom_keyboard_event_get_key_identifier")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+
+(define-method get_key_location
+  (of-object "WebKitDOMKeyboardEvent")
+  (c-name "webkit_dom_keyboard_event_get_key_location")
+  (return-type "gulong")
+  (parameters
+  )
+)
+
+(define-method get_meta_key
+  (of-object "WebKitDOMKeyboardEvent")
+  (c-name "webkit_dom_keyboard_event_get_meta_key")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_modifier_state
+  (of-object "WebKitDOMKeyboardEvent")
+  (c-name "webkit_dom_keyboard_event_get_modifier_state")
+  (return-type "gboolean")
+  (parameters
+    '("const gchar*" "pkeyIdentifierArg")
+  )
+)
+
+(define-method get_shift_key
+  (of-object "WebKitDOMKeyboardEvent")
+  (c-name "webkit_dom_keyboard_event_get_shift_key")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method init_keyboard_event
+  (of-object "WebKitDOMKeyboardEvent")
+  (c-name "webkit_dom_keyboard_event_init_keyboard_event")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "ptype")
+    '("gboolean" "pcanBubble")
+    '("gboolean" "pcancelable")
+    '("WebKitDOMDOMWindow*" "pview")
+    '("const gchar*" "pkeyIdentifier")
+    '("gulong" "plocation")
+    '("gboolean" "pctrlKey")
+    '("gboolean" "paltKey")
+    '("gboolean" "pshiftKey")
+    '("gboolean" "pmetaKey")
+    '("gboolean" "paltGraphKey")
+  )
+)
+

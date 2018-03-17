@@ -1,0 +1,15 @@
+(define-object GestureLongPress
+  (in-module "Gtk")
+  (parent "GestureSingle")
+  (c-name "GtkGestureLongPress")
+)
+
+(define-function GestureLongPress_new
+  (is-constructor-of "GtkGestureLongPress")
+  (c-name "gtk_gesture_long_press_new")
+  (return-type "GtkGesture*")
+  (parameters
+    '("GtkWidget*" "pwidget")
+  )
+)
+

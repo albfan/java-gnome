@@ -1,0 +1,179 @@
+(define-object DBusMethodInvocation
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GDBusMethodInvocation")
+)
+
+(define-method get_connection
+  (of-object "GDBusMethodInvocation")
+  (c-name "g_dbus_method_invocation_get_connection")
+  (return-type "GDBusConnection*")
+  (parameters
+  )
+)
+
+(define-method get_interface_name
+  (of-object "GDBusMethodInvocation")
+  (c-name "g_dbus_method_invocation_get_interface_name")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_message
+  (of-object "GDBusMethodInvocation")
+  (c-name "g_dbus_method_invocation_get_message")
+  (return-type "GDBusMessage*")
+  (parameters
+  )
+)
+
+(define-method get_method_info
+  (of-object "GDBusMethodInvocation")
+  (c-name "g_dbus_method_invocation_get_method_info")
+  (return-type "const GDBusMethodInfo*")
+  (parameters
+  )
+)
+
+(define-method get_method_name
+  (of-object "GDBusMethodInvocation")
+  (c-name "g_dbus_method_invocation_get_method_name")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_object_path
+  (of-object "GDBusMethodInvocation")
+  (c-name "g_dbus_method_invocation_get_object_path")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_parameters
+  (of-object "GDBusMethodInvocation")
+  (c-name "g_dbus_method_invocation_get_parameters")
+  (return-type "GVariant*")
+  (parameters
+  )
+)
+
+(define-method get_property_info
+  (of-object "GDBusMethodInvocation")
+  (c-name "g_dbus_method_invocation_get_property_info")
+  (return-type "const GDBusPropertyInfo*")
+  (parameters
+  )
+)
+
+(define-method get_sender
+  (of-object "GDBusMethodInvocation")
+  (c-name "g_dbus_method_invocation_get_sender")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_user_data
+  (of-object "GDBusMethodInvocation")
+  (c-name "g_dbus_method_invocation_get_user_data")
+  (return-type "gpointer")
+  (parameters
+  )
+)
+
+(define-method return_dbus_error
+  (of-object "GDBusMethodInvocation")
+  (c-name "g_dbus_method_invocation_return_dbus_error")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "perror_name")
+    '("const gchar*" "perror_message")
+  )
+)
+
+(define-method return_error
+  (of-object "GDBusMethodInvocation")
+  (c-name "g_dbus_method_invocation_return_error")
+  (return-type "none")
+  (parameters
+    '("GQuark" "pdomain")
+    '("gint" "pcode")
+    '("const gchar*" "pformat")
+    '("null" "p...")
+  )
+)
+
+(define-method return_error_literal
+  (of-object "GDBusMethodInvocation")
+  (c-name "g_dbus_method_invocation_return_error_literal")
+  (return-type "none")
+  (parameters
+    '("GQuark" "pdomain")
+    '("gint" "pcode")
+    '("const gchar*" "pmessage")
+  )
+)
+
+(define-method return_error_valist
+  (of-object "GDBusMethodInvocation")
+  (c-name "g_dbus_method_invocation_return_error_valist")
+  (return-type "none")
+  (parameters
+    '("GQuark" "pdomain")
+    '("gint" "pcode")
+    '("const gchar*" "pformat")
+    '("va_list" "pvar_args")
+  )
+)
+
+(define-method return_gerror
+  (of-object "GDBusMethodInvocation")
+  (c-name "g_dbus_method_invocation_return_gerror")
+  (return-type "none")
+  (parameters
+    '("const GError*" "perror")
+  )
+)
+
+(define-method return_value
+  (of-object "GDBusMethodInvocation")
+  (c-name "g_dbus_method_invocation_return_value")
+  (return-type "none")
+  (parameters
+    '("GVariant*" "pparameters")
+  )
+)
+
+(define-method return_value_with_unix_fd_list
+  (of-object "GDBusMethodInvocation")
+  (c-name "g_dbus_method_invocation_return_value_with_unix_fd_list")
+  (return-type "none")
+  (parameters
+    '("GVariant*" "pparameters")
+    '("GUnixFDList*" "pfd_list")
+  )
+)
+
+(define-method take_error
+  (of-object "GDBusMethodInvocation")
+  (c-name "g_dbus_method_invocation_take_error")
+  (return-type "none")
+  (parameters
+    '("GError*" "perror")
+  )
+)
+

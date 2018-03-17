@@ -1,0 +1,34 @@
+(define-object ZlibDecompressor
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GZlibDecompressor")
+)
+
+(define-function ZlibDecompressor_new
+  (is-constructor-of "GZlibDecompressor")
+  (c-name "g_zlib_decompressor_new")
+  (return-type "GZlibDecompressor*")
+  (parameters
+    '("GZlibCompressorFormat" "pformat")
+  )
+)
+
+(define-method get_file_info
+  (of-object "GZlibDecompressor")
+  (c-name "g_zlib_decompressor_get_file_info")
+  (return-type "GFileInfo*")
+  (parameters
+  )
+)
+

@@ -1,0 +1,35 @@
+(define-object Registry
+  (in-module "Atk")
+  (import-header "atk/atk.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "AtkRegistry")
+)
+
+(define-method get_factory
+  (of-object "AtkRegistry")
+  (c-name "atk_registry_get_factory")
+  (return-type "AtkObjectFactory*")
+  (parameters
+    '("GType" "ptype")
+  )
+)
+
+(define-method get_factory_type
+  (of-object "AtkRegistry")
+  (c-name "atk_registry_get_factory_type")
+  (return-type "GType")
+  (parameters
+    '("GType" "ptype")
+  )
+)
+
+(define-method set_factory_type
+  (of-object "AtkRegistry")
+  (c-name "atk_registry_set_factory_type")
+  (return-type "none")
+  (parameters
+    '("GType" "ptype")
+    '("GType" "pfactory_type")
+  )
+)
+

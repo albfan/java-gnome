@@ -1,0 +1,514 @@
+(define-object Notebook
+  (in-module "Gtk")
+  (parent "Container")
+  (c-name "GtkNotebook")
+)
+
+(define-function Notebook_new
+  (is-constructor-of "GtkNotebook")
+  (c-name "gtk_notebook_new")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method change_current_page
+  (of-object "GtkNotebook")
+  (c-name "change_current_page")
+  (return-type "gboolean")
+  (parameters
+    '("gint" "poffset")
+  )
+)
+
+(define-method create_window
+  (of-object "GtkNotebook")
+  (c-name "create_window")
+  (return-type "GtkNotebook*")
+  (parameters
+    '("GtkWidget*" "ppage")
+    '("gint" "px")
+    '("gint" "py")
+  )
+)
+
+(define-method focus_tab
+  (of-object "GtkNotebook")
+  (c-name "focus_tab")
+  (return-type "gboolean")
+  (parameters
+    '("GtkNotebookTab" "ptype")
+  )
+)
+
+(define-method insert_page
+  (of-object "GtkNotebook")
+  (c-name "insert_page")
+  (return-type "gint")
+  (parameters
+    '("GtkWidget*" "pchild")
+    '("GtkWidget*" "ptab_label")
+    '("GtkWidget*" "pmenu_label")
+    '("gint" "pposition")
+  )
+)
+
+(define-method move_focus_out
+  (of-object "GtkNotebook")
+  (c-name "move_focus_out")
+  (return-type "none")
+  (parameters
+    '("GtkDirectionType" "pdirection")
+  )
+)
+
+(define-method page_added
+  (of-object "GtkNotebook")
+  (c-name "page_added")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pchild")
+    '("guint" "ppage_num")
+  )
+)
+
+(define-method page_removed
+  (of-object "GtkNotebook")
+  (c-name "page_removed")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pchild")
+    '("guint" "ppage_num")
+  )
+)
+
+(define-method page_reordered
+  (of-object "GtkNotebook")
+  (c-name "page_reordered")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pchild")
+    '("guint" "ppage_num")
+  )
+)
+
+(define-method reorder_tab
+  (of-object "GtkNotebook")
+  (c-name "reorder_tab")
+  (return-type "gboolean")
+  (parameters
+    '("GtkDirectionType" "pdirection")
+    '("gboolean" "pmove_to_last")
+  )
+)
+
+(define-method select_page
+  (of-object "GtkNotebook")
+  (c-name "select_page")
+  (return-type "gboolean")
+  (parameters
+    '("gboolean" "pmove_focus")
+  )
+)
+
+(define-method switch_page
+  (of-object "GtkNotebook")
+  (c-name "switch_page")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "ppage")
+    '("guint" "ppage_num")
+  )
+)
+
+(define-method append_page
+  (of-object "GtkNotebook")
+  (c-name "gtk_notebook_append_page")
+  (return-type "gint")
+  (parameters
+    '("GtkWidget*" "pchild")
+    '("GtkWidget*" "ptab_label")
+  )
+)
+
+(define-method append_page_menu
+  (of-object "GtkNotebook")
+  (c-name "gtk_notebook_append_page_menu")
+  (return-type "gint")
+  (parameters
+    '("GtkWidget*" "pchild")
+    '("GtkWidget*" "ptab_label")
+    '("GtkWidget*" "pmenu_label")
+  )
+)
+
+(define-method detach_tab
+  (of-object "GtkNotebook")
+  (c-name "gtk_notebook_detach_tab")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pchild")
+  )
+)
+
+(define-method get_action_widget
+  (of-object "GtkNotebook")
+  (c-name "gtk_notebook_get_action_widget")
+  (return-type "GtkWidget*")
+  (parameters
+    '("GtkPackType" "ppack_type")
+  )
+)
+
+(define-method get_current_page
+  (of-object "GtkNotebook")
+  (c-name "gtk_notebook_get_current_page")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_group_name
+  (of-object "GtkNotebook")
+  (c-name "gtk_notebook_get_group_name")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_menu_label
+  (of-object "GtkNotebook")
+  (c-name "gtk_notebook_get_menu_label")
+  (return-type "GtkWidget*")
+  (parameters
+    '("GtkWidget*" "pchild")
+  )
+)
+
+(define-method get_menu_label_text
+  (of-object "GtkNotebook")
+  (c-name "gtk_notebook_get_menu_label_text")
+  (return-type "const gchar*")
+  (parameters
+    '("GtkWidget*" "pchild")
+  )
+)
+
+(define-method get_n_pages
+  (of-object "GtkNotebook")
+  (c-name "gtk_notebook_get_n_pages")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_nth_page
+  (of-object "GtkNotebook")
+  (c-name "gtk_notebook_get_nth_page")
+  (return-type "GtkWidget*")
+  (parameters
+    '("gint" "ppage_num")
+  )
+)
+
+(define-method get_scrollable
+  (of-object "GtkNotebook")
+  (c-name "gtk_notebook_get_scrollable")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_show_border
+  (of-object "GtkNotebook")
+  (c-name "gtk_notebook_get_show_border")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_show_tabs
+  (of-object "GtkNotebook")
+  (c-name "gtk_notebook_get_show_tabs")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_tab_detachable
+  (of-object "GtkNotebook")
+  (c-name "gtk_notebook_get_tab_detachable")
+  (return-type "gboolean")
+  (parameters
+    '("GtkWidget*" "pchild")
+  )
+)
+
+(define-method get_tab_hborder
+  (of-object "GtkNotebook")
+  (c-name "gtk_notebook_get_tab_hborder")
+  (return-type "guint16")
+  (parameters
+  )
+)
+
+(define-method get_tab_label
+  (of-object "GtkNotebook")
+  (c-name "gtk_notebook_get_tab_label")
+  (return-type "GtkWidget*")
+  (parameters
+    '("GtkWidget*" "pchild")
+  )
+)
+
+(define-method get_tab_label_text
+  (of-object "GtkNotebook")
+  (c-name "gtk_notebook_get_tab_label_text")
+  (return-type "const gchar*")
+  (parameters
+    '("GtkWidget*" "pchild")
+  )
+)
+
+(define-method get_tab_pos
+  (of-object "GtkNotebook")
+  (c-name "gtk_notebook_get_tab_pos")
+  (return-type "GtkPositionType")
+  (parameters
+  )
+)
+
+(define-method get_tab_reorderable
+  (of-object "GtkNotebook")
+  (c-name "gtk_notebook_get_tab_reorderable")
+  (return-type "gboolean")
+  (parameters
+    '("GtkWidget*" "pchild")
+  )
+)
+
+(define-method get_tab_vborder
+  (of-object "GtkNotebook")
+  (c-name "gtk_notebook_get_tab_vborder")
+  (return-type "guint16")
+  (parameters
+  )
+)
+
+(define-method insert_page_menu
+  (of-object "GtkNotebook")
+  (c-name "gtk_notebook_insert_page_menu")
+  (return-type "gint")
+  (parameters
+    '("GtkWidget*" "pchild")
+    '("GtkWidget*" "ptab_label")
+    '("GtkWidget*" "pmenu_label")
+    '("gint" "pposition")
+  )
+)
+
+(define-method next_page
+  (of-object "GtkNotebook")
+  (c-name "gtk_notebook_next_page")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method page_num
+  (of-object "GtkNotebook")
+  (c-name "gtk_notebook_page_num")
+  (return-type "gint")
+  (parameters
+    '("GtkWidget*" "pchild")
+  )
+)
+
+(define-method popup_disable
+  (of-object "GtkNotebook")
+  (c-name "gtk_notebook_popup_disable")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method popup_enable
+  (of-object "GtkNotebook")
+  (c-name "gtk_notebook_popup_enable")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method prepend_page
+  (of-object "GtkNotebook")
+  (c-name "gtk_notebook_prepend_page")
+  (return-type "gint")
+  (parameters
+    '("GtkWidget*" "pchild")
+    '("GtkWidget*" "ptab_label")
+  )
+)
+
+(define-method prepend_page_menu
+  (of-object "GtkNotebook")
+  (c-name "gtk_notebook_prepend_page_menu")
+  (return-type "gint")
+  (parameters
+    '("GtkWidget*" "pchild")
+    '("GtkWidget*" "ptab_label")
+    '("GtkWidget*" "pmenu_label")
+  )
+)
+
+(define-method prev_page
+  (of-object "GtkNotebook")
+  (c-name "gtk_notebook_prev_page")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method remove_page
+  (of-object "GtkNotebook")
+  (c-name "gtk_notebook_remove_page")
+  (return-type "none")
+  (parameters
+    '("gint" "ppage_num")
+  )
+)
+
+(define-method reorder_child
+  (of-object "GtkNotebook")
+  (c-name "gtk_notebook_reorder_child")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pchild")
+    '("gint" "pposition")
+  )
+)
+
+(define-method set_action_widget
+  (of-object "GtkNotebook")
+  (c-name "gtk_notebook_set_action_widget")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pwidget")
+    '("GtkPackType" "ppack_type")
+  )
+)
+
+(define-method set_current_page
+  (of-object "GtkNotebook")
+  (c-name "gtk_notebook_set_current_page")
+  (return-type "none")
+  (parameters
+    '("gint" "ppage_num")
+  )
+)
+
+(define-method set_group_name
+  (of-object "GtkNotebook")
+  (c-name "gtk_notebook_set_group_name")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pgroup_name")
+  )
+)
+
+(define-method set_menu_label
+  (of-object "GtkNotebook")
+  (c-name "gtk_notebook_set_menu_label")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pchild")
+    '("GtkWidget*" "pmenu_label")
+  )
+)
+
+(define-method set_menu_label_text
+  (of-object "GtkNotebook")
+  (c-name "gtk_notebook_set_menu_label_text")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pchild")
+    '("const gchar*" "pmenu_text")
+  )
+)
+
+(define-method set_scrollable
+  (of-object "GtkNotebook")
+  (c-name "gtk_notebook_set_scrollable")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pscrollable")
+  )
+)
+
+(define-method set_show_border
+  (of-object "GtkNotebook")
+  (c-name "gtk_notebook_set_show_border")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pshow_border")
+  )
+)
+
+(define-method set_show_tabs
+  (of-object "GtkNotebook")
+  (c-name "gtk_notebook_set_show_tabs")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pshow_tabs")
+  )
+)
+
+(define-method set_tab_detachable
+  (of-object "GtkNotebook")
+  (c-name "gtk_notebook_set_tab_detachable")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pchild")
+    '("gboolean" "pdetachable")
+  )
+)
+
+(define-method set_tab_label
+  (of-object "GtkNotebook")
+  (c-name "gtk_notebook_set_tab_label")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pchild")
+    '("GtkWidget*" "ptab_label")
+  )
+)
+
+(define-method set_tab_label_text
+  (of-object "GtkNotebook")
+  (c-name "gtk_notebook_set_tab_label_text")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pchild")
+    '("const gchar*" "ptab_text")
+  )
+)
+
+(define-method set_tab_pos
+  (of-object "GtkNotebook")
+  (c-name "gtk_notebook_set_tab_pos")
+  (return-type "none")
+  (parameters
+    '("GtkPositionType" "ppos")
+  )
+)
+
+(define-method set_tab_reorderable
+  (of-object "GtkNotebook")
+  (c-name "gtk_notebook_set_tab_reorderable")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pchild")
+    '("gboolean" "preorderable")
+  )
+)
+

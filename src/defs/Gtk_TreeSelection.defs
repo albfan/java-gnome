@@ -1,0 +1,193 @@
+(define-object TreeSelection
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkTreeSelection")
+)
+
+(define-method changed
+  (of-object "GtkTreeSelection")
+  (c-name "changed")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method count_selected_rows
+  (of-object "GtkTreeSelection")
+  (c-name "gtk_tree_selection_count_selected_rows")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_mode
+  (of-object "GtkTreeSelection")
+  (c-name "gtk_tree_selection_get_mode")
+  (return-type "GtkSelectionMode")
+  (parameters
+  )
+)
+
+(define-method get_select_function
+  (of-object "GtkTreeSelection")
+  (c-name "gtk_tree_selection_get_select_function")
+  (return-type "GtkTreeSelectionFunc")
+  (parameters
+  )
+)
+
+(define-method get_selected
+  (of-object "GtkTreeSelection")
+  (c-name "gtk_tree_selection_get_selected")
+  (return-type "gboolean")
+  (parameters
+    '("GtkTreeModel**" "pmodel")
+    '("GtkTreeIter*" "piter")
+  )
+)
+
+(define-method get_selected_rows
+  (of-object "GtkTreeSelection")
+  (c-name "gtk_tree_selection_get_selected_rows")
+  (return-type "GList*")
+  (parameters
+    '("GtkTreeModel**" "pmodel")
+  )
+)
+
+(define-method get_tree_view
+  (of-object "GtkTreeSelection")
+  (c-name "gtk_tree_selection_get_tree_view")
+  (return-type "GtkTreeView*")
+  (parameters
+  )
+)
+
+(define-method get_user_data
+  (of-object "GtkTreeSelection")
+  (c-name "gtk_tree_selection_get_user_data")
+  (return-type "gpointer")
+  (parameters
+  )
+)
+
+(define-method iter_is_selected
+  (of-object "GtkTreeSelection")
+  (c-name "gtk_tree_selection_iter_is_selected")
+  (return-type "gboolean")
+  (parameters
+    '("GtkTreeIter*" "piter")
+  )
+)
+
+(define-method path_is_selected
+  (of-object "GtkTreeSelection")
+  (c-name "gtk_tree_selection_path_is_selected")
+  (return-type "gboolean")
+  (parameters
+    '("GtkTreePath*" "ppath")
+  )
+)
+
+(define-method select_all
+  (of-object "GtkTreeSelection")
+  (c-name "gtk_tree_selection_select_all")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method select_iter
+  (of-object "GtkTreeSelection")
+  (c-name "gtk_tree_selection_select_iter")
+  (return-type "none")
+  (parameters
+    '("GtkTreeIter*" "piter")
+  )
+)
+
+(define-method select_path
+  (of-object "GtkTreeSelection")
+  (c-name "gtk_tree_selection_select_path")
+  (return-type "none")
+  (parameters
+    '("GtkTreePath*" "ppath")
+  )
+)
+
+(define-method select_range
+  (of-object "GtkTreeSelection")
+  (c-name "gtk_tree_selection_select_range")
+  (return-type "none")
+  (parameters
+    '("GtkTreePath*" "pstart_path")
+    '("GtkTreePath*" "pend_path")
+  )
+)
+
+(define-method selected_foreach
+  (of-object "GtkTreeSelection")
+  (c-name "gtk_tree_selection_selected_foreach")
+  (return-type "none")
+  (parameters
+    '("GtkTreeSelectionForeachFunc" "pfunc")
+    '("gpointer" "pdata")
+  )
+)
+
+(define-method set_mode
+  (of-object "GtkTreeSelection")
+  (c-name "gtk_tree_selection_set_mode")
+  (return-type "none")
+  (parameters
+    '("GtkSelectionMode" "ptype")
+  )
+)
+
+(define-method set_select_function
+  (of-object "GtkTreeSelection")
+  (c-name "gtk_tree_selection_set_select_function")
+  (return-type "none")
+  (parameters
+    '("GtkTreeSelectionFunc" "pfunc")
+    '("gpointer" "pdata")
+    '("GDestroyNotify" "pdestroy")
+  )
+)
+
+(define-method unselect_all
+  (of-object "GtkTreeSelection")
+  (c-name "gtk_tree_selection_unselect_all")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method unselect_iter
+  (of-object "GtkTreeSelection")
+  (c-name "gtk_tree_selection_unselect_iter")
+  (return-type "none")
+  (parameters
+    '("GtkTreeIter*" "piter")
+  )
+)
+
+(define-method unselect_path
+  (of-object "GtkTreeSelection")
+  (c-name "gtk_tree_selection_unselect_path")
+  (return-type "none")
+  (parameters
+    '("GtkTreePath*" "ppath")
+  )
+)
+
+(define-method unselect_range
+  (of-object "GtkTreeSelection")
+  (c-name "gtk_tree_selection_unselect_range")
+  (return-type "none")
+  (parameters
+    '("GtkTreePath*" "pstart_path")
+    '("GtkTreePath*" "pend_path")
+  )
+)
+

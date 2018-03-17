@@ -1,0 +1,42 @@
+(define-object StreamableContent
+  (in-module "Atk")
+  (import-header "atk/atk.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "AtkStreamableContent")
+)
+
+(define-method get_mime_type
+  (of-object "AtkStreamableContent")
+  (c-name "get_mime_type")
+  (return-type "const gchar*")
+  (parameters
+    '("gint" "pi")
+  )
+)
+
+(define-method get_n_mime_types
+  (of-object "AtkStreamableContent")
+  (c-name "get_n_mime_types")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_stream
+  (of-object "AtkStreamableContent")
+  (c-name "get_stream")
+  (return-type "GIOChannel*")
+  (parameters
+    '("const gchar*" "pmime_type")
+  )
+)
+
+(define-method get_uri
+  (of-object "AtkStreamableContent")
+  (c-name "get_uri")
+  (return-type "const gchar*")
+  (parameters
+    '("const gchar*" "pmime_type")
+  )
+)
+

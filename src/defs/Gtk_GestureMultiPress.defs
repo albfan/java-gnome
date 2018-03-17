@@ -1,0 +1,33 @@
+(define-object GestureMultiPress
+  (in-module "Gtk")
+  (parent "GestureSingle")
+  (c-name "GtkGestureMultiPress")
+)
+
+(define-function GestureMultiPress_new
+  (is-constructor-of "GtkGestureMultiPress")
+  (c-name "gtk_gesture_multi_press_new")
+  (return-type "GtkGesture*")
+  (parameters
+    '("GtkWidget*" "pwidget")
+  )
+)
+
+(define-method get_area
+  (of-object "GtkGestureMultiPress")
+  (c-name "gtk_gesture_multi_press_get_area")
+  (return-type "gboolean")
+  (parameters
+    '("GdkRectangle*" "prect")
+  )
+)
+
+(define-method set_area
+  (of-object "GtkGestureMultiPress")
+  (c-name "gtk_gesture_multi_press_set_area")
+  (return-type "none")
+  (parameters
+    '("const GdkRectangle*" "prect")
+  )
+)
+

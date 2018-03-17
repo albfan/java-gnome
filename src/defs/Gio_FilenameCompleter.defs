@@ -1,0 +1,60 @@
+(define-object FilenameCompleter
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GFilenameCompleter")
+)
+
+(define-function FilenameCompleter_new
+  (is-constructor-of "GFilenameCompleter")
+  (c-name "g_filename_completer_new")
+  (return-type "GFilenameCompleter*")
+  (parameters
+  )
+)
+
+(define-method got_completion_data
+  (of-object "GFilenameCompleter")
+  (c-name "got_completion_data")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method get_completion_suffix
+  (of-object "GFilenameCompleter")
+  (c-name "g_filename_completer_get_completion_suffix")
+  (return-type "char*")
+  (parameters
+    '("const char*" "pinitial_text")
+  )
+)
+
+(define-method get_completions
+  (of-object "GFilenameCompleter")
+  (c-name "g_filename_completer_get_completions")
+  (return-type "none")
+  (parameters
+    '("const char*" "pinitial_text")
+  )
+)
+
+(define-method set_dirs_only
+  (of-object "GFilenameCompleter")
+  (c-name "g_filename_completer_set_dirs_only")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pdirs_only")
+  )
+)
+

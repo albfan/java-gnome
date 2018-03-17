@@ -1,0 +1,11 @@
+(define-enum NetworkConnectivity
+  (in-module "Gio")
+  (c-name "GNetworkConnectivity")
+  (values
+    '("local" "G_NETWORK_CONNECTIVITY_LOCAL")
+    '("limited" "G_NETWORK_CONNECTIVITY_LIMITED")
+    '("portal" "G_NETWORK_CONNECTIVITY_PORTAL")
+    '("full" "G_NETWORK_CONNECTIVITY_FULL")
+  )
+)
+

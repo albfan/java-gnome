@@ -1,0 +1,15 @@
+(define-enum BookmarkFileError
+  (in-module "GLib")
+  (c-name "GBookmarkFileError")
+  (values
+    '("invalid_uri" "G_BOOKMARK_FILE_ERROR_INVALID_URI")
+    '("invalid_value" "G_BOOKMARK_FILE_ERROR_INVALID_VALUE")
+    '("app_not_registered" "G_BOOKMARK_FILE_ERROR_APP_NOT_REGISTERED")
+    '("uri_not_found" "G_BOOKMARK_FILE_ERROR_URI_NOT_FOUND")
+    '("read" "G_BOOKMARK_FILE_ERROR_READ")
+    '("unknown_encoding" "G_BOOKMARK_FILE_ERROR_UNKNOWN_ENCODING")
+    '("write" "G_BOOKMARK_FILE_ERROR_WRITE")
+    '("file_not_found" "G_BOOKMARK_FILE_ERROR_FILE_NOT_FOUND")
+  )
+)
+

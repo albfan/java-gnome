@@ -1,0 +1,7 @@
+(define-object Util
+  (in-module "Atk")
+  (import-header "atk/atk.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "AtkUtil")
+)
+

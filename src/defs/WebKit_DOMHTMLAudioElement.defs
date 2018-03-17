@@ -1,0 +1,7 @@
+(define-object DOMHTMLAudioElement
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "DOMHTMLMediaElement")
+  (c-name "WebKitDOMHTMLAudioElement")
+)
+

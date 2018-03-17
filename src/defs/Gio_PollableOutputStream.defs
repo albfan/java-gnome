@@ -1,0 +1,53 @@
+(define-object PollableOutputStream
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GPollableOutputStream")
+)
+
+(define-method can_poll
+  (of-object "GPollableOutputStream")
+  (c-name "can_poll")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method create_source
+  (of-object "GPollableOutputStream")
+  (c-name "create_source")
+  (return-type "GSource*")
+  (parameters
+    '("GCancellable*" "pcancellable")
+  )
+)
+
+(define-method is_writable
+  (of-object "GPollableOutputStream")
+  (c-name "is_writable")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method write_nonblocking
+  (of-object "GPollableOutputStream")
+  (c-name "write_nonblocking")
+  (return-type "gssize")
+  (parameters
+    '("null" "pbuffer")
+    '("gsize" "pcount")
+    '("GError**" "error")
+  )
+)
+

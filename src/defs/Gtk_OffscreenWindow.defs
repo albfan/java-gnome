@@ -1,0 +1,30 @@
+(define-object OffscreenWindow
+  (in-module "Gtk")
+  (parent "Window")
+  (c-name "GtkOffscreenWindow")
+)
+
+(define-function OffscreenWindow_new
+  (is-constructor-of "GtkOffscreenWindow")
+  (c-name "gtk_offscreen_window_new")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method get_pixbuf
+  (of-object "GtkOffscreenWindow")
+  (c-name "gtk_offscreen_window_get_pixbuf")
+  (return-type "GdkPixbuf*")
+  (parameters
+  )
+)
+
+(define-method get_surface
+  (of-object "GtkOffscreenWindow")
+  (c-name "gtk_offscreen_window_get_surface")
+  (return-type "cairo_surface_t*")
+  (parameters
+  )
+)
+

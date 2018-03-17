@@ -1,0 +1,31 @@
+(define-object RecentChooserDialog
+  (in-module "Gtk")
+  (parent "Dialog")
+  (c-name "GtkRecentChooserDialog")
+)
+
+(define-function RecentChooserDialog_new
+  (is-constructor-of "GtkRecentChooserDialog")
+  (c-name "gtk_recent_chooser_dialog_new")
+  (return-type "GtkWidget*")
+  (parameters
+    '("const gchar*" "ptitle")
+    '("GtkWindow*" "pparent")
+    '("const gchar*" "pfirst_button_text")
+    '("null" "p...")
+  )
+)
+
+(define-function RecentChooserDialog_new_for_manager
+  (is-constructor-of "GtkRecentChooserDialog")
+  (c-name "gtk_recent_chooser_dialog_new_for_manager")
+  (return-type "GtkWidget*")
+  (parameters
+    '("const gchar*" "ptitle")
+    '("GtkWindow*" "pparent")
+    '("GtkRecentManager*" "pmanager")
+    '("const gchar*" "pfirst_button_text")
+    '("null" "p...")
+  )
+)
+

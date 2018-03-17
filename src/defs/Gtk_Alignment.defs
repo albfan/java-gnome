@@ -1,0 +1,54 @@
+(define-object Alignment
+  (in-module "Gtk")
+  (parent "Bin")
+  (c-name "GtkAlignment")
+)
+
+(define-function Alignment_new
+  (is-constructor-of "GtkAlignment")
+  (c-name "gtk_alignment_new")
+  (return-type "GtkWidget*")
+  (parameters
+    '("gfloat" "pxalign")
+    '("gfloat" "pyalign")
+    '("gfloat" "pxscale")
+    '("gfloat" "pyscale")
+  )
+)
+
+(define-method get_padding
+  (of-object "GtkAlignment")
+  (c-name "gtk_alignment_get_padding")
+  (return-type "none")
+  (parameters
+    '("guint*" "ppadding_top")
+    '("guint*" "ppadding_bottom")
+    '("guint*" "ppadding_left")
+    '("guint*" "ppadding_right")
+  )
+)
+
+(define-method set
+  (of-object "GtkAlignment")
+  (c-name "gtk_alignment_set")
+  (return-type "none")
+  (parameters
+    '("gfloat" "pxalign")
+    '("gfloat" "pyalign")
+    '("gfloat" "pxscale")
+    '("gfloat" "pyscale")
+  )
+)
+
+(define-method set_padding
+  (of-object "GtkAlignment")
+  (c-name "gtk_alignment_set_padding")
+  (return-type "none")
+  (parameters
+    '("guint" "ppadding_top")
+    '("guint" "ppadding_bottom")
+    '("guint" "ppadding_left")
+    '("guint" "ppadding_right")
+  )
+)
+

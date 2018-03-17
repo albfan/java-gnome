@@ -1,0 +1,214 @@
+(define-object Application
+  (in-module "Gtk")
+  (parent "Gio.Application")
+  (c-name "GtkApplication")
+)
+
+(define-function Application_new
+  (is-constructor-of "GtkApplication")
+  (c-name "gtk_application_new")
+  (return-type "GtkApplication*")
+  (parameters
+    '("const gchar*" "papplication_id")
+    '("GApplicationFlags" "pflags")
+  )
+)
+
+(define-method window_added
+  (of-object "GtkApplication")
+  (c-name "window_added")
+  (return-type "none")
+  (parameters
+    '("GtkWindow*" "pwindow")
+  )
+)
+
+(define-method window_removed
+  (of-object "GtkApplication")
+  (c-name "window_removed")
+  (return-type "none")
+  (parameters
+    '("GtkWindow*" "pwindow")
+  )
+)
+
+(define-method add_accelerator
+  (of-object "GtkApplication")
+  (c-name "gtk_application_add_accelerator")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "paccelerator")
+    '("const gchar*" "paction_name")
+    '("GVariant*" "pparameter")
+  )
+)
+
+(define-method add_window
+  (of-object "GtkApplication")
+  (c-name "gtk_application_add_window")
+  (return-type "none")
+  (parameters
+    '("GtkWindow*" "pwindow")
+  )
+)
+
+(define-method get_accels_for_action
+  (of-object "GtkApplication")
+  (c-name "gtk_application_get_accels_for_action")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pdetailed_action_name")
+  )
+)
+
+(define-method get_actions_for_accel
+  (of-object "GtkApplication")
+  (c-name "gtk_application_get_actions_for_accel")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "paccel")
+  )
+)
+
+(define-method get_active_window
+  (of-object "GtkApplication")
+  (c-name "gtk_application_get_active_window")
+  (return-type "GtkWindow*")
+  (parameters
+  )
+)
+
+(define-method get_app_menu
+  (of-object "GtkApplication")
+  (c-name "gtk_application_get_app_menu")
+  (return-type "GMenuModel*")
+  (parameters
+  )
+)
+
+(define-method get_menu_by_id
+  (of-object "GtkApplication")
+  (c-name "gtk_application_get_menu_by_id")
+  (return-type "GMenu*")
+  (parameters
+    '("const gchar*" "pid")
+  )
+)
+
+(define-method get_menubar
+  (of-object "GtkApplication")
+  (c-name "gtk_application_get_menubar")
+  (return-type "GMenuModel*")
+  (parameters
+  )
+)
+
+(define-method get_window_by_id
+  (of-object "GtkApplication")
+  (c-name "gtk_application_get_window_by_id")
+  (return-type "GtkWindow*")
+  (parameters
+    '("guint" "pid")
+  )
+)
+
+(define-method get_windows
+  (of-object "GtkApplication")
+  (c-name "gtk_application_get_windows")
+  (return-type "GList*")
+  (parameters
+  )
+)
+
+(define-method inhibit
+  (of-object "GtkApplication")
+  (c-name "gtk_application_inhibit")
+  (return-type "guint")
+  (parameters
+    '("GtkWindow*" "pwindow")
+    '("GtkApplicationInhibitFlags" "pflags")
+    '("const gchar*" "preason")
+  )
+)
+
+(define-method is_inhibited
+  (of-object "GtkApplication")
+  (c-name "gtk_application_is_inhibited")
+  (return-type "gboolean")
+  (parameters
+    '("GtkApplicationInhibitFlags" "pflags")
+  )
+)
+
+(define-method list_action_descriptions
+  (of-object "GtkApplication")
+  (c-name "gtk_application_list_action_descriptions")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method prefers_app_menu
+  (of-object "GtkApplication")
+  (c-name "gtk_application_prefers_app_menu")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method remove_accelerator
+  (of-object "GtkApplication")
+  (c-name "gtk_application_remove_accelerator")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "paction_name")
+    '("GVariant*" "pparameter")
+  )
+)
+
+(define-method remove_window
+  (of-object "GtkApplication")
+  (c-name "gtk_application_remove_window")
+  (return-type "none")
+  (parameters
+    '("GtkWindow*" "pwindow")
+  )
+)
+
+(define-method set_accels_for_action
+  (of-object "GtkApplication")
+  (c-name "gtk_application_set_accels_for_action")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pdetailed_action_name")
+    '("null" "paccels")
+  )
+)
+
+(define-method set_app_menu
+  (of-object "GtkApplication")
+  (c-name "gtk_application_set_app_menu")
+  (return-type "none")
+  (parameters
+    '("GMenuModel*" "papp_menu")
+  )
+)
+
+(define-method set_menubar
+  (of-object "GtkApplication")
+  (c-name "gtk_application_set_menubar")
+  (return-type "none")
+  (parameters
+    '("GMenuModel*" "pmenubar")
+  )
+)
+
+(define-method uninhibit
+  (of-object "GtkApplication")
+  (c-name "gtk_application_uninhibit")
+  (return-type "none")
+  (parameters
+    '("guint" "pcookie")
+  )
+)
+

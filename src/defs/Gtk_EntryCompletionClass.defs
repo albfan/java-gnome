@@ -1,0 +1,6 @@
+(define-object EntryCompletionClass
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkEntryCompletionClass")
+)
+

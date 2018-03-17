@@ -1,0 +1,47 @@
+(define-object Accessible
+  (in-module "Gtk")
+  (parent "Atk.Object")
+  (c-name "GtkAccessible")
+)
+
+(define-method connect_widget_destroyed
+  (of-object "GtkAccessible")
+  (c-name "connect_widget_destroyed")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method widget_set
+  (of-object "GtkAccessible")
+  (c-name "widget_set")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method widget_unset
+  (of-object "GtkAccessible")
+  (c-name "widget_unset")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method get_widget
+  (of-object "GtkAccessible")
+  (c-name "gtk_accessible_get_widget")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method set_widget
+  (of-object "GtkAccessible")
+  (c-name "gtk_accessible_set_widget")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pwidget")
+  )
+)
+

@@ -1,0 +1,6 @@
+(define-object ActionPrivate
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkActionPrivate")
+)
+

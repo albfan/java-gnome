@@ -1,0 +1,65 @@
+(define-object SimpleAction
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GSimpleAction")
+)
+
+(define-function SimpleAction_new
+  (is-constructor-of "GSimpleAction")
+  (c-name "g_simple_action_new")
+  (return-type "GSimpleAction*")
+  (parameters
+    '("const gchar*" "pname")
+    '("const GVariantType*" "pparameter_type")
+  )
+)
+
+(define-function SimpleAction_new_stateful
+  (is-constructor-of "GSimpleAction")
+  (c-name "g_simple_action_new_stateful")
+  (return-type "GSimpleAction*")
+  (parameters
+    '("const gchar*" "pname")
+    '("const GVariantType*" "pparameter_type")
+    '("GVariant*" "pstate")
+  )
+)
+
+(define-method set_enabled
+  (of-object "GSimpleAction")
+  (c-name "g_simple_action_set_enabled")
+  (return-type "none")
+  (parameters
+    '("gboolean" "penabled")
+  )
+)
+
+(define-method set_state
+  (of-object "GSimpleAction")
+  (c-name "g_simple_action_set_state")
+  (return-type "none")
+  (parameters
+    '("GVariant*" "pvalue")
+  )
+)
+
+(define-method set_state_hint
+  (of-object "GSimpleAction")
+  (c-name "g_simple_action_set_state_hint")
+  (return-type "none")
+  (parameters
+    '("GVariant*" "pstate_hint")
+  )
+)
+

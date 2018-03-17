@@ -1,0 +1,156 @@
+(define-object Component
+  (in-module "Atk")
+  (import-header "atk/atk.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "AtkComponent")
+)
+
+(define-method add_focus_handler
+  (of-object "AtkComponent")
+  (c-name "add_focus_handler")
+  (return-type "guint")
+  (parameters
+    '("AtkFocusHandler" "phandler")
+  )
+)
+
+(define-method bounds_changed
+  (of-object "AtkComponent")
+  (c-name "bounds_changed")
+  (return-type "none")
+  (parameters
+    '("AtkRectangle*" "pbounds")
+  )
+)
+
+(define-method contains
+  (of-object "AtkComponent")
+  (c-name "contains")
+  (return-type "gboolean")
+  (parameters
+    '("gint" "px")
+    '("gint" "py")
+    '("AtkCoordType" "pcoord_type")
+  )
+)
+
+(define-method get_alpha
+  (of-object "AtkComponent")
+  (c-name "get_alpha")
+  (return-type "gdouble")
+  (parameters
+  )
+)
+
+(define-method get_extents
+  (of-object "AtkComponent")
+  (c-name "get_extents")
+  (return-type "none")
+  (parameters
+    '("gint*" "px")
+    '("gint*" "py")
+    '("gint*" "pwidth")
+    '("gint*" "pheight")
+    '("AtkCoordType" "pcoord_type")
+  )
+)
+
+(define-method get_layer
+  (of-object "AtkComponent")
+  (c-name "get_layer")
+  (return-type "AtkLayer")
+  (parameters
+  )
+)
+
+(define-method get_mdi_zorder
+  (of-object "AtkComponent")
+  (c-name "get_mdi_zorder")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_position
+  (of-object "AtkComponent")
+  (c-name "get_position")
+  (return-type "none")
+  (parameters
+    '("gint*" "px")
+    '("gint*" "py")
+    '("AtkCoordType" "pcoord_type")
+  )
+)
+
+(define-method get_size
+  (of-object "AtkComponent")
+  (c-name "get_size")
+  (return-type "none")
+  (parameters
+    '("gint*" "pwidth")
+    '("gint*" "pheight")
+  )
+)
+
+(define-method grab_focus
+  (of-object "AtkComponent")
+  (c-name "grab_focus")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method ref_accessible_at_point
+  (of-object "AtkComponent")
+  (c-name "ref_accessible_at_point")
+  (return-type "AtkObject*")
+  (parameters
+    '("gint" "px")
+    '("gint" "py")
+    '("AtkCoordType" "pcoord_type")
+  )
+)
+
+(define-method remove_focus_handler
+  (of-object "AtkComponent")
+  (c-name "remove_focus_handler")
+  (return-type "none")
+  (parameters
+    '("guint" "phandler_id")
+  )
+)
+
+(define-method set_extents
+  (of-object "AtkComponent")
+  (c-name "set_extents")
+  (return-type "gboolean")
+  (parameters
+    '("gint" "px")
+    '("gint" "py")
+    '("gint" "pwidth")
+    '("gint" "pheight")
+    '("AtkCoordType" "pcoord_type")
+  )
+)
+
+(define-method set_position
+  (of-object "AtkComponent")
+  (c-name "set_position")
+  (return-type "gboolean")
+  (parameters
+    '("gint" "px")
+    '("gint" "py")
+    '("AtkCoordType" "pcoord_type")
+  )
+)
+
+(define-method set_size
+  (of-object "AtkComponent")
+  (c-name "set_size")
+  (return-type "gboolean")
+  (parameters
+    '("gint" "pwidth")
+    '("gint" "pheight")
+  )
+)
+

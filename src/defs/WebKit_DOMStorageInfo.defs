@@ -1,0 +1,7 @@
+(define-object DOMStorageInfo
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "DOMObject")
+  (c-name "WebKitDOMStorageInfo")
+)
+

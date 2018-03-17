@@ -1,0 +1,10 @@
+(define-enum SensitivityType
+  (in-module "Gtk")
+  (c-name "GtkSensitivityType")
+  (values
+    '("auto" "GTK_SENSITIVITY_AUTO")
+    '("on" "GTK_SENSITIVITY_ON")
+    '("off" "GTK_SENSITIVITY_OFF")
+  )
+)
+

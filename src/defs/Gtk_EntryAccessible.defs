@@ -1,0 +1,6 @@
+(define-object EntryAccessible
+  (in-module "Gtk")
+  (parent "WidgetAccessible")
+  (c-name "GtkEntryAccessible")
+)
+

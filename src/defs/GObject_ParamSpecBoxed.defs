@@ -1,0 +1,7 @@
+(define-object ParamSpecBoxed
+  (in-module "GObject")
+  (import-header "glib-object.h")
+  (parent "ParamSpec")
+  (c-name "GParamSpecBoxed")
+)
+

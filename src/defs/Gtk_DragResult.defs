@@ -1,0 +1,13 @@
+(define-enum DragResult
+  (in-module "Gtk")
+  (c-name "GtkDragResult")
+  (values
+    '("success" "GTK_DRAG_RESULT_SUCCESS")
+    '("no_target" "GTK_DRAG_RESULT_NO_TARGET")
+    '("user_cancelled" "GTK_DRAG_RESULT_USER_CANCELLED")
+    '("timeout_expired" "GTK_DRAG_RESULT_TIMEOUT_EXPIRED")
+    '("grab_broken" "GTK_DRAG_RESULT_GRAB_BROKEN")
+    '("error" "GTK_DRAG_RESULT_ERROR")
+  )
+)
+

@@ -1,0 +1,75 @@
+(define-object Selection
+  (in-module "Atk")
+  (import-header "atk/atk.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "AtkSelection")
+)
+
+(define-method add_selection
+  (of-object "AtkSelection")
+  (c-name "add_selection")
+  (return-type "gboolean")
+  (parameters
+    '("gint" "pi")
+  )
+)
+
+(define-method clear_selection
+  (of-object "AtkSelection")
+  (c-name "clear_selection")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_selection_count
+  (of-object "AtkSelection")
+  (c-name "get_selection_count")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method is_child_selected
+  (of-object "AtkSelection")
+  (c-name "is_child_selected")
+  (return-type "gboolean")
+  (parameters
+    '("gint" "pi")
+  )
+)
+
+(define-method ref_selection
+  (of-object "AtkSelection")
+  (c-name "ref_selection")
+  (return-type "AtkObject*")
+  (parameters
+    '("gint" "pi")
+  )
+)
+
+(define-method remove_selection
+  (of-object "AtkSelection")
+  (c-name "remove_selection")
+  (return-type "gboolean")
+  (parameters
+    '("gint" "pi")
+  )
+)
+
+(define-method select_all_selection
+  (of-object "AtkSelection")
+  (c-name "select_all_selection")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method selection_changed
+  (of-object "AtkSelection")
+  (c-name "selection_changed")
+  (return-type "none")
+  (parameters
+  )
+)
+

@@ -1,0 +1,10 @@
+(define-enum SizeRequestMode
+  (in-module "Gtk")
+  (c-name "GtkSizeRequestMode")
+  (values
+    '("height_for_width" "GTK_SIZE_REQUEST_HEIGHT_FOR_WIDTH")
+    '("width_for_height" "GTK_SIZE_REQUEST_WIDTH_FOR_HEIGHT")
+    '("constant_size" "GTK_SIZE_REQUEST_CONSTANT_SIZE")
+  )
+)
+

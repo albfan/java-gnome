@@ -1,0 +1,515 @@
+(define-object Style
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkStyle")
+)
+
+(define-function Style_new
+  (is-constructor-of "GtkStyle")
+  (c-name "gtk_style_new")
+  (return-type "GtkStyle*")
+  (parameters
+  )
+)
+
+(define-method clone
+  (of-object "GtkStyle")
+  (c-name "clone")
+  (return-type "GtkStyle*")
+  (parameters
+  )
+)
+
+(define-method copy
+  (of-object "GtkStyle")
+  (c-name "copy")
+  (return-type "none")
+  (parameters
+    '("GtkStyle*" "psrc")
+  )
+)
+
+(define-method draw_arrow
+  (of-object "GtkStyle")
+  (c-name "draw_arrow")
+  (return-type "none")
+  (parameters
+    '("cairo_t*" "pcr")
+    '("GtkStateType" "pstate_type")
+    '("GtkShadowType" "pshadow_type")
+    '("GtkWidget*" "pwidget")
+    '("const gchar*" "pdetail")
+    '("GtkArrowType" "parrow_type")
+    '("gboolean" "pfill")
+    '("gint" "px")
+    '("gint" "py")
+    '("gint" "pwidth")
+    '("gint" "pheight")
+  )
+)
+
+(define-method draw_box
+  (of-object "GtkStyle")
+  (c-name "draw_box")
+  (return-type "none")
+  (parameters
+    '("cairo_t*" "pcr")
+    '("GtkStateType" "pstate_type")
+    '("GtkShadowType" "pshadow_type")
+    '("GtkWidget*" "pwidget")
+    '("const gchar*" "pdetail")
+    '("gint" "px")
+    '("gint" "py")
+    '("gint" "pwidth")
+    '("gint" "pheight")
+  )
+)
+
+(define-method draw_box_gap
+  (of-object "GtkStyle")
+  (c-name "draw_box_gap")
+  (return-type "none")
+  (parameters
+    '("cairo_t*" "pcr")
+    '("GtkStateType" "pstate_type")
+    '("GtkShadowType" "pshadow_type")
+    '("GtkWidget*" "pwidget")
+    '("const gchar*" "pdetail")
+    '("gint" "px")
+    '("gint" "py")
+    '("gint" "pwidth")
+    '("gint" "pheight")
+    '("GtkPositionType" "pgap_side")
+    '("gint" "pgap_x")
+    '("gint" "pgap_width")
+  )
+)
+
+(define-method draw_check
+  (of-object "GtkStyle")
+  (c-name "draw_check")
+  (return-type "none")
+  (parameters
+    '("cairo_t*" "pcr")
+    '("GtkStateType" "pstate_type")
+    '("GtkShadowType" "pshadow_type")
+    '("GtkWidget*" "pwidget")
+    '("const gchar*" "pdetail")
+    '("gint" "px")
+    '("gint" "py")
+    '("gint" "pwidth")
+    '("gint" "pheight")
+  )
+)
+
+(define-method draw_diamond
+  (of-object "GtkStyle")
+  (c-name "draw_diamond")
+  (return-type "none")
+  (parameters
+    '("cairo_t*" "pcr")
+    '("GtkStateType" "pstate_type")
+    '("GtkShadowType" "pshadow_type")
+    '("GtkWidget*" "pwidget")
+    '("const gchar*" "pdetail")
+    '("gint" "px")
+    '("gint" "py")
+    '("gint" "pwidth")
+    '("gint" "pheight")
+  )
+)
+
+(define-method draw_expander
+  (of-object "GtkStyle")
+  (c-name "draw_expander")
+  (return-type "none")
+  (parameters
+    '("cairo_t*" "pcr")
+    '("GtkStateType" "pstate_type")
+    '("GtkWidget*" "pwidget")
+    '("const gchar*" "pdetail")
+    '("gint" "px")
+    '("gint" "py")
+    '("GtkExpanderStyle" "pexpander_style")
+  )
+)
+
+(define-method draw_extension
+  (of-object "GtkStyle")
+  (c-name "draw_extension")
+  (return-type "none")
+  (parameters
+    '("cairo_t*" "pcr")
+    '("GtkStateType" "pstate_type")
+    '("GtkShadowType" "pshadow_type")
+    '("GtkWidget*" "pwidget")
+    '("const gchar*" "pdetail")
+    '("gint" "px")
+    '("gint" "py")
+    '("gint" "pwidth")
+    '("gint" "pheight")
+    '("GtkPositionType" "pgap_side")
+  )
+)
+
+(define-method draw_flat_box
+  (of-object "GtkStyle")
+  (c-name "draw_flat_box")
+  (return-type "none")
+  (parameters
+    '("cairo_t*" "pcr")
+    '("GtkStateType" "pstate_type")
+    '("GtkShadowType" "pshadow_type")
+    '("GtkWidget*" "pwidget")
+    '("const gchar*" "pdetail")
+    '("gint" "px")
+    '("gint" "py")
+    '("gint" "pwidth")
+    '("gint" "pheight")
+  )
+)
+
+(define-method draw_focus
+  (of-object "GtkStyle")
+  (c-name "draw_focus")
+  (return-type "none")
+  (parameters
+    '("cairo_t*" "pcr")
+    '("GtkStateType" "pstate_type")
+    '("GtkWidget*" "pwidget")
+    '("const gchar*" "pdetail")
+    '("gint" "px")
+    '("gint" "py")
+    '("gint" "pwidth")
+    '("gint" "pheight")
+  )
+)
+
+(define-method draw_handle
+  (of-object "GtkStyle")
+  (c-name "draw_handle")
+  (return-type "none")
+  (parameters
+    '("cairo_t*" "pcr")
+    '("GtkStateType" "pstate_type")
+    '("GtkShadowType" "pshadow_type")
+    '("GtkWidget*" "pwidget")
+    '("const gchar*" "pdetail")
+    '("gint" "px")
+    '("gint" "py")
+    '("gint" "pwidth")
+    '("gint" "pheight")
+    '("GtkOrientation" "porientation")
+  )
+)
+
+(define-method draw_hline
+  (of-object "GtkStyle")
+  (c-name "draw_hline")
+  (return-type "none")
+  (parameters
+    '("cairo_t*" "pcr")
+    '("GtkStateType" "pstate_type")
+    '("GtkWidget*" "pwidget")
+    '("const gchar*" "pdetail")
+    '("gint" "px1")
+    '("gint" "px2")
+    '("gint" "py")
+  )
+)
+
+(define-method draw_layout
+  (of-object "GtkStyle")
+  (c-name "draw_layout")
+  (return-type "none")
+  (parameters
+    '("cairo_t*" "pcr")
+    '("GtkStateType" "pstate_type")
+    '("gboolean" "puse_text")
+    '("GtkWidget*" "pwidget")
+    '("const gchar*" "pdetail")
+    '("gint" "px")
+    '("gint" "py")
+    '("PangoLayout*" "playout")
+  )
+)
+
+(define-method draw_option
+  (of-object "GtkStyle")
+  (c-name "draw_option")
+  (return-type "none")
+  (parameters
+    '("cairo_t*" "pcr")
+    '("GtkStateType" "pstate_type")
+    '("GtkShadowType" "pshadow_type")
+    '("GtkWidget*" "pwidget")
+    '("const gchar*" "pdetail")
+    '("gint" "px")
+    '("gint" "py")
+    '("gint" "pwidth")
+    '("gint" "pheight")
+  )
+)
+
+(define-method draw_resize_grip
+  (of-object "GtkStyle")
+  (c-name "draw_resize_grip")
+  (return-type "none")
+  (parameters
+    '("cairo_t*" "pcr")
+    '("GtkStateType" "pstate_type")
+    '("GtkWidget*" "pwidget")
+    '("const gchar*" "pdetail")
+    '("GdkWindowEdge" "pedge")
+    '("gint" "px")
+    '("gint" "py")
+    '("gint" "pwidth")
+    '("gint" "pheight")
+  )
+)
+
+(define-method draw_shadow
+  (of-object "GtkStyle")
+  (c-name "draw_shadow")
+  (return-type "none")
+  (parameters
+    '("cairo_t*" "pcr")
+    '("GtkStateType" "pstate_type")
+    '("GtkShadowType" "pshadow_type")
+    '("GtkWidget*" "pwidget")
+    '("const gchar*" "pdetail")
+    '("gint" "px")
+    '("gint" "py")
+    '("gint" "pwidth")
+    '("gint" "pheight")
+  )
+)
+
+(define-method draw_shadow_gap
+  (of-object "GtkStyle")
+  (c-name "draw_shadow_gap")
+  (return-type "none")
+  (parameters
+    '("cairo_t*" "pcr")
+    '("GtkStateType" "pstate_type")
+    '("GtkShadowType" "pshadow_type")
+    '("GtkWidget*" "pwidget")
+    '("const gchar*" "pdetail")
+    '("gint" "px")
+    '("gint" "py")
+    '("gint" "pwidth")
+    '("gint" "pheight")
+    '("GtkPositionType" "pgap_side")
+    '("gint" "pgap_x")
+    '("gint" "pgap_width")
+  )
+)
+
+(define-method draw_slider
+  (of-object "GtkStyle")
+  (c-name "draw_slider")
+  (return-type "none")
+  (parameters
+    '("cairo_t*" "pcr")
+    '("GtkStateType" "pstate_type")
+    '("GtkShadowType" "pshadow_type")
+    '("GtkWidget*" "pwidget")
+    '("const gchar*" "pdetail")
+    '("gint" "px")
+    '("gint" "py")
+    '("gint" "pwidth")
+    '("gint" "pheight")
+    '("GtkOrientation" "porientation")
+  )
+)
+
+(define-method draw_spinner
+  (of-object "GtkStyle")
+  (c-name "draw_spinner")
+  (return-type "none")
+  (parameters
+    '("cairo_t*" "pcr")
+    '("GtkStateType" "pstate_type")
+    '("GtkWidget*" "pwidget")
+    '("const gchar*" "pdetail")
+    '("guint" "pstep")
+    '("gint" "px")
+    '("gint" "py")
+    '("gint" "pwidth")
+    '("gint" "pheight")
+  )
+)
+
+(define-method draw_tab
+  (of-object "GtkStyle")
+  (c-name "draw_tab")
+  (return-type "none")
+  (parameters
+    '("cairo_t*" "pcr")
+    '("GtkStateType" "pstate_type")
+    '("GtkShadowType" "pshadow_type")
+    '("GtkWidget*" "pwidget")
+    '("const gchar*" "pdetail")
+    '("gint" "px")
+    '("gint" "py")
+    '("gint" "pwidth")
+    '("gint" "pheight")
+  )
+)
+
+(define-method draw_vline
+  (of-object "GtkStyle")
+  (c-name "draw_vline")
+  (return-type "none")
+  (parameters
+    '("cairo_t*" "pcr")
+    '("GtkStateType" "pstate_type")
+    '("GtkWidget*" "pwidget")
+    '("const gchar*" "pdetail")
+    '("gint" "py1_")
+    '("gint" "py2_")
+    '("gint" "px")
+  )
+)
+
+(define-method init_from_rc
+  (of-object "GtkStyle")
+  (c-name "init_from_rc")
+  (return-type "none")
+  (parameters
+    '("GtkRcStyle*" "prc_style")
+  )
+)
+
+(define-method realize
+  (of-object "GtkStyle")
+  (c-name "realize")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method render_icon
+  (of-object "GtkStyle")
+  (c-name "render_icon")
+  (return-type "GdkPixbuf*")
+  (parameters
+    '("const GtkIconSource*" "psource")
+    '("GtkTextDirection" "pdirection")
+    '("GtkStateType" "pstate")
+    '("GtkIconSize" "psize")
+    '("GtkWidget*" "pwidget")
+    '("const gchar*" "pdetail")
+  )
+)
+
+(define-method set_background
+  (of-object "GtkStyle")
+  (c-name "set_background")
+  (return-type "none")
+  (parameters
+    '("GdkWindow*" "pwindow")
+    '("GtkStateType" "pstate_type")
+  )
+)
+
+(define-method unrealize
+  (of-object "GtkStyle")
+  (c-name "unrealize")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method apply_default_background
+  (of-object "GtkStyle")
+  (c-name "gtk_style_apply_default_background")
+  (return-type "none")
+  (parameters
+    '("cairo_t*" "pcr")
+    '("GdkWindow*" "pwindow")
+    '("GtkStateType" "pstate_type")
+    '("gint" "px")
+    '("gint" "py")
+    '("gint" "pwidth")
+    '("gint" "pheight")
+  )
+)
+
+(define-method attach
+  (of-object "GtkStyle")
+  (c-name "gtk_style_attach")
+  (return-type "GtkStyle*")
+  (parameters
+    '("GdkWindow*" "pwindow")
+  )
+)
+
+(define-method detach
+  (of-object "GtkStyle")
+  (c-name "gtk_style_detach")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method get
+  (of-object "GtkStyle")
+  (c-name "gtk_style_get")
+  (return-type "none")
+  (parameters
+    '("GType" "pwidget_type")
+    '("const gchar*" "pfirst_property_name")
+    '("null" "p...")
+  )
+)
+
+(define-method get_style_property
+  (of-object "GtkStyle")
+  (c-name "gtk_style_get_style_property")
+  (return-type "none")
+  (parameters
+    '("GType" "pwidget_type")
+    '("const gchar*" "pproperty_name")
+    '("GValue*" "pvalue")
+  )
+)
+
+(define-method get_valist
+  (of-object "GtkStyle")
+  (c-name "gtk_style_get_valist")
+  (return-type "none")
+  (parameters
+    '("GType" "pwidget_type")
+    '("const gchar*" "pfirst_property_name")
+    '("va_list" "pvar_args")
+  )
+)
+
+(define-method has_context
+  (of-object "GtkStyle")
+  (c-name "gtk_style_has_context")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method lookup_color
+  (of-object "GtkStyle")
+  (c-name "gtk_style_lookup_color")
+  (return-type "gboolean")
+  (parameters
+    '("const gchar*" "pcolor_name")
+    '("GdkColor*" "pcolor")
+  )
+)
+
+(define-method lookup_icon_set
+  (of-object "GtkStyle")
+  (c-name "gtk_style_lookup_icon_set")
+  (return-type "GtkIconSet*")
+  (parameters
+    '("const gchar*" "pstock_id")
+  )
+)
+

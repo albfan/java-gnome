@@ -1,0 +1,9 @@
+(define-enum NotebookTab
+  (in-module "Gtk")
+  (c-name "GtkNotebookTab")
+  (values
+    '("first" "GTK_NOTEBOOK_TAB_FIRST")
+    '("last" "GTK_NOTEBOOK_TAB_LAST")
+  )
+)
+

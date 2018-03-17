@@ -1,0 +1,165 @@
+(define-object DOMMediaController
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "DOMObject")
+  (c-name "WebKitDOMMediaController")
+)
+
+(define-method get_buffered
+  (of-object "WebKitDOMMediaController")
+  (c-name "webkit_dom_media_controller_get_buffered")
+  (return-type "WebKitDOMTimeRanges*")
+  (parameters
+  )
+)
+
+(define-method get_current_time
+  (of-object "WebKitDOMMediaController")
+  (c-name "webkit_dom_media_controller_get_current_time")
+  (return-type "gdouble")
+  (parameters
+  )
+)
+
+(define-method get_default_playback_rate
+  (of-object "WebKitDOMMediaController")
+  (c-name "webkit_dom_media_controller_get_default_playback_rate")
+  (return-type "gdouble")
+  (parameters
+  )
+)
+
+(define-method get_duration
+  (of-object "WebKitDOMMediaController")
+  (c-name "webkit_dom_media_controller_get_duration")
+  (return-type "gdouble")
+  (parameters
+  )
+)
+
+(define-method get_muted
+  (of-object "WebKitDOMMediaController")
+  (c-name "webkit_dom_media_controller_get_muted")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_paused
+  (of-object "WebKitDOMMediaController")
+  (c-name "webkit_dom_media_controller_get_paused")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_playback_rate
+  (of-object "WebKitDOMMediaController")
+  (c-name "webkit_dom_media_controller_get_playback_rate")
+  (return-type "gdouble")
+  (parameters
+  )
+)
+
+(define-method get_playback_state
+  (of-object "WebKitDOMMediaController")
+  (c-name "webkit_dom_media_controller_get_playback_state")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+
+(define-method get_played
+  (of-object "WebKitDOMMediaController")
+  (c-name "webkit_dom_media_controller_get_played")
+  (return-type "WebKitDOMTimeRanges*")
+  (parameters
+  )
+)
+
+(define-method get_seekable
+  (of-object "WebKitDOMMediaController")
+  (c-name "webkit_dom_media_controller_get_seekable")
+  (return-type "WebKitDOMTimeRanges*")
+  (parameters
+  )
+)
+
+(define-method get_volume
+  (of-object "WebKitDOMMediaController")
+  (c-name "webkit_dom_media_controller_get_volume")
+  (return-type "gdouble")
+  (parameters
+  )
+)
+
+(define-method pause
+  (of-object "WebKitDOMMediaController")
+  (c-name "webkit_dom_media_controller_pause")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method play
+  (of-object "WebKitDOMMediaController")
+  (c-name "webkit_dom_media_controller_play")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method set_current_time
+  (of-object "WebKitDOMMediaController")
+  (c-name "webkit_dom_media_controller_set_current_time")
+  (return-type "none")
+  (parameters
+    '("gdouble" "pvalue")
+  )
+)
+
+(define-method set_default_playback_rate
+  (of-object "WebKitDOMMediaController")
+  (c-name "webkit_dom_media_controller_set_default_playback_rate")
+  (return-type "none")
+  (parameters
+    '("gdouble" "pvalue")
+  )
+)
+
+(define-method set_muted
+  (of-object "WebKitDOMMediaController")
+  (c-name "webkit_dom_media_controller_set_muted")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pvalue")
+  )
+)
+
+(define-method set_playback_rate
+  (of-object "WebKitDOMMediaController")
+  (c-name "webkit_dom_media_controller_set_playback_rate")
+  (return-type "none")
+  (parameters
+    '("gdouble" "pvalue")
+  )
+)
+
+(define-method set_volume
+  (of-object "WebKitDOMMediaController")
+  (c-name "webkit_dom_media_controller_set_volume")
+  (return-type "none")
+  (parameters
+    '("gdouble" "pvalue")
+    '("GError**" "error")
+  )
+)
+
+(define-method unpause
+  (of-object "WebKitDOMMediaController")
+  (c-name "webkit_dom_media_controller_unpause")
+  (return-type "none")
+  (parameters
+  )
+)
+

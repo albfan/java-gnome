@@ -1,0 +1,6 @@
+(define-object ListBoxRowClass
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkListBoxRowClass")
+)
+

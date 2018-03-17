@@ -1,0 +1,42 @@
+(define-object IOModule
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "GObject.TypeModule")
+  (c-name "GIOModule")
+)
+
+(define-function IOModule_new
+  (is-constructor-of "GIOModule")
+  (c-name "g_io_module_new")
+  (return-type "GIOModule*")
+  (parameters
+    '("gchar*" "pfilename")
+  )
+)
+
+(define-method load
+  (of-object "GIOModule")
+  (c-name "g_io_module_load")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method unload
+  (of-object "GIOModule")
+  (c-name "g_io_module_unload")
+  (return-type "none")
+  (parameters
+  )
+)
+

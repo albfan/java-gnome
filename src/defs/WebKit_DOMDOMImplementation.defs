@@ -1,0 +1,61 @@
+(define-object DOMDOMImplementation
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "DOMObject")
+  (c-name "WebKitDOMDOMImplementation")
+)
+
+(define-method create_css_style_sheet
+  (of-object "WebKitDOMDOMImplementation")
+  (c-name "webkit_dom_dom_implementation_create_css_style_sheet")
+  (return-type "WebKitDOMCSSStyleSheet*")
+  (parameters
+    '("const gchar*" "ptitle")
+    '("const gchar*" "pmedia")
+    '("GError**" "error")
+  )
+)
+
+(define-method create_document
+  (of-object "WebKitDOMDOMImplementation")
+  (c-name "webkit_dom_dom_implementation_create_document")
+  (return-type "WebKitDOMDocument*")
+  (parameters
+    '("const gchar*" "pnamespaceURI")
+    '("const gchar*" "pqualifiedName")
+    '("WebKitDOMDocumentType*" "pdoctype")
+    '("GError**" "error")
+  )
+)
+
+(define-method create_document_type
+  (of-object "WebKitDOMDOMImplementation")
+  (c-name "webkit_dom_dom_implementation_create_document_type")
+  (return-type "WebKitDOMDocumentType*")
+  (parameters
+    '("const gchar*" "pqualifiedName")
+    '("const gchar*" "ppublicId")
+    '("const gchar*" "psystemId")
+    '("GError**" "error")
+  )
+)
+
+(define-method create_html_document
+  (of-object "WebKitDOMDOMImplementation")
+  (c-name "webkit_dom_dom_implementation_create_html_document")
+  (return-type "WebKitDOMHTMLDocument*")
+  (parameters
+    '("const gchar*" "ptitle")
+  )
+)
+
+(define-method has_feature
+  (of-object "WebKitDOMDOMImplementation")
+  (c-name "webkit_dom_dom_implementation_has_feature")
+  (return-type "gboolean")
+  (parameters
+    '("const gchar*" "pfeature")
+    '("const gchar*" "pversion")
+  )
+)
+

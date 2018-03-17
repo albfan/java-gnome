@@ -1,0 +1,14 @@
+(define-enum MarkupError
+  (in-module "GLib")
+  (c-name "GMarkupError")
+  (values
+    '("bad_utf8" "G_MARKUP_ERROR_BAD_UTF8")
+    '("empty" "G_MARKUP_ERROR_EMPTY")
+    '("parse" "G_MARKUP_ERROR_PARSE")
+    '("unknown_element" "G_MARKUP_ERROR_UNKNOWN_ELEMENT")
+    '("unknown_attribute" "G_MARKUP_ERROR_UNKNOWN_ATTRIBUTE")
+    '("invalid_content" "G_MARKUP_ERROR_INVALID_CONTENT")
+    '("missing_attribute" "G_MARKUP_ERROR_MISSING_ATTRIBUTE")
+  )
+)
+

@@ -1,0 +1,87 @@
+(define-object TextTagTable
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkTextTagTable")
+)
+
+(define-function TextTagTable_new
+  (is-constructor-of "GtkTextTagTable")
+  (c-name "gtk_text_tag_table_new")
+  (return-type "GtkTextTagTable*")
+  (parameters
+  )
+)
+
+(define-method tag_added
+  (of-object "GtkTextTagTable")
+  (c-name "tag_added")
+  (return-type "none")
+  (parameters
+    '("GtkTextTag*" "ptag")
+  )
+)
+
+(define-method tag_changed
+  (of-object "GtkTextTagTable")
+  (c-name "tag_changed")
+  (return-type "none")
+  (parameters
+    '("GtkTextTag*" "ptag")
+    '("gboolean" "psize_changed")
+  )
+)
+
+(define-method tag_removed
+  (of-object "GtkTextTagTable")
+  (c-name "tag_removed")
+  (return-type "none")
+  (parameters
+    '("GtkTextTag*" "ptag")
+  )
+)
+
+(define-method add
+  (of-object "GtkTextTagTable")
+  (c-name "gtk_text_tag_table_add")
+  (return-type "gboolean")
+  (parameters
+    '("GtkTextTag*" "ptag")
+  )
+)
+
+(define-method foreach
+  (of-object "GtkTextTagTable")
+  (c-name "gtk_text_tag_table_foreach")
+  (return-type "none")
+  (parameters
+    '("GtkTextTagTableForeach" "pfunc")
+    '("gpointer" "pdata")
+  )
+)
+
+(define-method get_size
+  (of-object "GtkTextTagTable")
+  (c-name "gtk_text_tag_table_get_size")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method lookup
+  (of-object "GtkTextTagTable")
+  (c-name "gtk_text_tag_table_lookup")
+  (return-type "GtkTextTag*")
+  (parameters
+    '("const gchar*" "pname")
+  )
+)
+
+(define-method remove
+  (of-object "GtkTextTagTable")
+  (c-name "gtk_text_tag_table_remove")
+  (return-type "none")
+  (parameters
+    '("GtkTextTag*" "ptag")
+  )
+)
+

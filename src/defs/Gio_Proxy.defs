@@ -1,0 +1,60 @@
+(define-object Proxy
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GProxy")
+)
+
+(define-method connect
+  (of-object "GProxy")
+  (c-name "connect")
+  (return-type "GIOStream*")
+  (parameters
+    '("GIOStream*" "pconnection")
+    '("GProxyAddress*" "pproxy_address")
+    '("GCancellable*" "pcancellable")
+    '("GError**" "error")
+  )
+)
+
+(define-method connect_async
+  (of-object "GProxy")
+  (c-name "connect_async")
+  (return-type "none")
+  (parameters
+    '("GIOStream*" "pconnection")
+    '("GProxyAddress*" "pproxy_address")
+    '("GCancellable*" "pcancellable")
+    '("GAsyncReadyCallback" "pcallback")
+    '("gpointer" "puser_data")
+  )
+)
+
+(define-method connect_finish
+  (of-object "GProxy")
+  (c-name "connect_finish")
+  (return-type "GIOStream*")
+  (parameters
+    '("GAsyncResult*" "presult")
+    '("GError**" "error")
+  )
+)
+
+(define-method supports_hostname
+  (of-object "GProxy")
+  (c-name "supports_hostname")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+

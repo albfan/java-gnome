@@ -1,0 +1,306 @@
+(define-object Drive
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GDrive")
+)
+
+(define-method can_eject
+  (of-object "GDrive")
+  (c-name "can_eject")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method can_poll_for_media
+  (of-object "GDrive")
+  (c-name "can_poll_for_media")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method can_start
+  (of-object "GDrive")
+  (c-name "can_start")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method can_start_degraded
+  (of-object "GDrive")
+  (c-name "can_start_degraded")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method can_stop
+  (of-object "GDrive")
+  (c-name "can_stop")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method changed
+  (of-object "GDrive")
+  (c-name "changed")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method disconnected
+  (of-object "GDrive")
+  (c-name "disconnected")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method eject
+  (of-object "GDrive")
+  (c-name "eject")
+  (return-type "none")
+  (parameters
+    '("GMountUnmountFlags" "pflags")
+    '("GCancellable*" "pcancellable")
+    '("GAsyncReadyCallback" "pcallback")
+    '("gpointer" "puser_data")
+  )
+)
+
+(define-method eject_button
+  (of-object "GDrive")
+  (c-name "eject_button")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method eject_finish
+  (of-object "GDrive")
+  (c-name "eject_finish")
+  (return-type "gboolean")
+  (parameters
+    '("GAsyncResult*" "presult")
+    '("GError**" "error")
+  )
+)
+
+(define-method eject_with_operation
+  (of-object "GDrive")
+  (c-name "eject_with_operation")
+  (return-type "none")
+  (parameters
+    '("GMountUnmountFlags" "pflags")
+    '("GMountOperation*" "pmount_operation")
+    '("GCancellable*" "pcancellable")
+    '("GAsyncReadyCallback" "pcallback")
+    '("gpointer" "puser_data")
+  )
+)
+
+(define-method eject_with_operation_finish
+  (of-object "GDrive")
+  (c-name "eject_with_operation_finish")
+  (return-type "gboolean")
+  (parameters
+    '("GAsyncResult*" "presult")
+    '("GError**" "error")
+  )
+)
+
+(define-method enumerate_identifiers
+  (of-object "GDrive")
+  (c-name "enumerate_identifiers")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method get_icon
+  (of-object "GDrive")
+  (c-name "get_icon")
+  (return-type "GIcon*")
+  (parameters
+  )
+)
+
+(define-method get_identifier
+  (of-object "GDrive")
+  (c-name "get_identifier")
+  (return-type "char*")
+  (parameters
+    '("const char*" "pkind")
+  )
+)
+
+(define-method get_name
+  (of-object "GDrive")
+  (c-name "get_name")
+  (return-type "char*")
+  (parameters
+  )
+)
+
+(define-method get_sort_key
+  (of-object "GDrive")
+  (c-name "get_sort_key")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_start_stop_type
+  (of-object "GDrive")
+  (c-name "get_start_stop_type")
+  (return-type "GDriveStartStopType")
+  (parameters
+  )
+)
+
+(define-method get_symbolic_icon
+  (of-object "GDrive")
+  (c-name "get_symbolic_icon")
+  (return-type "GIcon*")
+  (parameters
+  )
+)
+
+(define-method get_volumes
+  (of-object "GDrive")
+  (c-name "get_volumes")
+  (return-type "GList*")
+  (parameters
+  )
+)
+
+(define-method has_media
+  (of-object "GDrive")
+  (c-name "has_media")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method has_volumes
+  (of-object "GDrive")
+  (c-name "has_volumes")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method is_media_check_automatic
+  (of-object "GDrive")
+  (c-name "is_media_check_automatic")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method is_media_removable
+  (of-object "GDrive")
+  (c-name "is_media_removable")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method is_removable
+  (of-object "GDrive")
+  (c-name "is_removable")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method poll_for_media
+  (of-object "GDrive")
+  (c-name "poll_for_media")
+  (return-type "none")
+  (parameters
+    '("GCancellable*" "pcancellable")
+    '("GAsyncReadyCallback" "pcallback")
+    '("gpointer" "puser_data")
+  )
+)
+
+(define-method poll_for_media_finish
+  (of-object "GDrive")
+  (c-name "poll_for_media_finish")
+  (return-type "gboolean")
+  (parameters
+    '("GAsyncResult*" "presult")
+    '("GError**" "error")
+  )
+)
+
+(define-method start
+  (of-object "GDrive")
+  (c-name "start")
+  (return-type "none")
+  (parameters
+    '("GDriveStartFlags" "pflags")
+    '("GMountOperation*" "pmount_operation")
+    '("GCancellable*" "pcancellable")
+    '("GAsyncReadyCallback" "pcallback")
+    '("gpointer" "puser_data")
+  )
+)
+
+(define-method start_finish
+  (of-object "GDrive")
+  (c-name "start_finish")
+  (return-type "gboolean")
+  (parameters
+    '("GAsyncResult*" "presult")
+    '("GError**" "error")
+  )
+)
+
+(define-method stop
+  (of-object "GDrive")
+  (c-name "stop")
+  (return-type "none")
+  (parameters
+    '("GMountUnmountFlags" "pflags")
+    '("GMountOperation*" "pmount_operation")
+    '("GCancellable*" "pcancellable")
+    '("GAsyncReadyCallback" "pcallback")
+    '("gpointer" "puser_data")
+  )
+)
+
+(define-method stop_button
+  (of-object "GDrive")
+  (c-name "stop_button")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method stop_finish
+  (of-object "GDrive")
+  (c-name "stop_finish")
+  (return-type "gboolean")
+  (parameters
+    '("GAsyncResult*" "presult")
+    '("GError**" "error")
+  )
+)
+

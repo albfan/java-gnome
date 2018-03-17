@@ -1,0 +1,195 @@
+(define-object GLArea
+  (in-module "Gtk")
+  (parent "Widget")
+  (c-name "GtkGLArea")
+)
+
+(define-function GLArea_new
+  (is-constructor-of "GtkGLArea")
+  (c-name "gtk_gl_area_new")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method create_context
+  (of-object "GtkGLArea")
+  (c-name "create_context")
+  (return-type "GdkGLContext*")
+  (parameters
+  )
+)
+
+(define-method render
+  (of-object "GtkGLArea")
+  (c-name "render")
+  (return-type "gboolean")
+  (parameters
+    '("GdkGLContext*" "pcontext")
+  )
+)
+
+(define-method resize
+  (of-object "GtkGLArea")
+  (c-name "resize")
+  (return-type "none")
+  (parameters
+    '("int" "pwidth")
+    '("int" "pheight")
+  )
+)
+
+(define-method attach_buffers
+  (of-object "GtkGLArea")
+  (c-name "gtk_gl_area_attach_buffers")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method get_auto_render
+  (of-object "GtkGLArea")
+  (c-name "gtk_gl_area_get_auto_render")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_context
+  (of-object "GtkGLArea")
+  (c-name "gtk_gl_area_get_context")
+  (return-type "GdkGLContext*")
+  (parameters
+  )
+)
+
+(define-method get_error
+  (of-object "GtkGLArea")
+  (c-name "gtk_gl_area_get_error")
+  (return-type "GError*")
+  (parameters
+  )
+)
+
+(define-method get_has_alpha
+  (of-object "GtkGLArea")
+  (c-name "gtk_gl_area_get_has_alpha")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_has_depth_buffer
+  (of-object "GtkGLArea")
+  (c-name "gtk_gl_area_get_has_depth_buffer")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_has_stencil_buffer
+  (of-object "GtkGLArea")
+  (c-name "gtk_gl_area_get_has_stencil_buffer")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_required_version
+  (of-object "GtkGLArea")
+  (c-name "gtk_gl_area_get_required_version")
+  (return-type "none")
+  (parameters
+    '("gint*" "pmajor")
+    '("gint*" "pminor")
+  )
+)
+
+(define-method get_use_es
+  (of-object "GtkGLArea")
+  (c-name "gtk_gl_area_get_use_es")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method make_current
+  (of-object "GtkGLArea")
+  (c-name "gtk_gl_area_make_current")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method queue_render
+  (of-object "GtkGLArea")
+  (c-name "gtk_gl_area_queue_render")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method set_auto_render
+  (of-object "GtkGLArea")
+  (c-name "gtk_gl_area_set_auto_render")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pauto_render")
+  )
+)
+
+(define-method set_error
+  (of-object "GtkGLArea")
+  (c-name "gtk_gl_area_set_error")
+  (return-type "none")
+  (parameters
+    '("const GError*" "perror")
+  )
+)
+
+(define-method set_has_alpha
+  (of-object "GtkGLArea")
+  (c-name "gtk_gl_area_set_has_alpha")
+  (return-type "none")
+  (parameters
+    '("gboolean" "phas_alpha")
+  )
+)
+
+(define-method set_has_depth_buffer
+  (of-object "GtkGLArea")
+  (c-name "gtk_gl_area_set_has_depth_buffer")
+  (return-type "none")
+  (parameters
+    '("gboolean" "phas_depth_buffer")
+  )
+)
+
+(define-method set_has_stencil_buffer
+  (of-object "GtkGLArea")
+  (c-name "gtk_gl_area_set_has_stencil_buffer")
+  (return-type "none")
+  (parameters
+    '("gboolean" "phas_stencil_buffer")
+  )
+)
+
+(define-method set_required_version
+  (of-object "GtkGLArea")
+  (c-name "gtk_gl_area_set_required_version")
+  (return-type "none")
+  (parameters
+    '("gint" "pmajor")
+    '("gint" "pminor")
+  )
+)
+
+(define-method set_use_es
+  (of-object "GtkGLArea")
+  (c-name "gtk_gl_area_set_use_es")
+  (return-type "none")
+  (parameters
+    '("gboolean" "puse_es")
+  )
+)
+

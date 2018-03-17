@@ -1,0 +1,6 @@
+(define-object ImageCellAccessible
+  (in-module "Gtk")
+  (parent "RendererCellAccessible")
+  (c-name "GtkImageCellAccessible")
+)
+

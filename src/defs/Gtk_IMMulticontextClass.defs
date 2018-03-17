@@ -1,0 +1,6 @@
+(define-object IMMulticontextClass
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkIMMulticontextClass")
+)
+

@@ -1,0 +1,188 @@
+(define-object MountOperation
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GMountOperation")
+)
+
+(define-function MountOperation_new
+  (is-constructor-of "GMountOperation")
+  (c-name "g_mount_operation_new")
+  (return-type "GMountOperation*")
+  (parameters
+  )
+)
+
+(define-method aborted
+  (of-object "GMountOperation")
+  (c-name "aborted")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method ask_password
+  (of-object "GMountOperation")
+  (c-name "ask_password")
+  (return-type "none")
+  (parameters
+    '("const char*" "pmessage")
+    '("const char*" "pdefault_user")
+    '("const char*" "pdefault_domain")
+    '("GAskPasswordFlags" "pflags")
+  )
+)
+
+(define-method ask_question
+  (of-object "GMountOperation")
+  (c-name "ask_question")
+  (return-type "none")
+  (parameters
+    '("const char*" "pmessage")
+    '("const char*" "pchoices")
+  )
+)
+
+(define-method reply
+  (of-object "GMountOperation")
+  (c-name "reply")
+  (return-type "none")
+  (parameters
+    '("GMountOperationResult" "presult")
+  )
+)
+
+(define-method show_processes
+  (of-object "GMountOperation")
+  (c-name "show_processes")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pmessage")
+    '("null" "pprocesses")
+    '("const gchar*" "pchoices")
+  )
+)
+
+(define-method show_unmount_progress
+  (of-object "GMountOperation")
+  (c-name "show_unmount_progress")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pmessage")
+    '("gint64" "ptime_left")
+    '("gint64" "pbytes_left")
+  )
+)
+
+(define-method get_anonymous
+  (of-object "GMountOperation")
+  (c-name "g_mount_operation_get_anonymous")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_choice
+  (of-object "GMountOperation")
+  (c-name "g_mount_operation_get_choice")
+  (return-type "int")
+  (parameters
+  )
+)
+
+(define-method get_domain
+  (of-object "GMountOperation")
+  (c-name "g_mount_operation_get_domain")
+  (return-type "const char*")
+  (parameters
+  )
+)
+
+(define-method get_password
+  (of-object "GMountOperation")
+  (c-name "g_mount_operation_get_password")
+  (return-type "const char*")
+  (parameters
+  )
+)
+
+(define-method get_password_save
+  (of-object "GMountOperation")
+  (c-name "g_mount_operation_get_password_save")
+  (return-type "GPasswordSave")
+  (parameters
+  )
+)
+
+(define-method get_username
+  (of-object "GMountOperation")
+  (c-name "g_mount_operation_get_username")
+  (return-type "const char*")
+  (parameters
+  )
+)
+
+(define-method set_anonymous
+  (of-object "GMountOperation")
+  (c-name "g_mount_operation_set_anonymous")
+  (return-type "none")
+  (parameters
+    '("gboolean" "panonymous")
+  )
+)
+
+(define-method set_choice
+  (of-object "GMountOperation")
+  (c-name "g_mount_operation_set_choice")
+  (return-type "none")
+  (parameters
+    '("int" "pchoice")
+  )
+)
+
+(define-method set_domain
+  (of-object "GMountOperation")
+  (c-name "g_mount_operation_set_domain")
+  (return-type "none")
+  (parameters
+    '("const char*" "pdomain")
+  )
+)
+
+(define-method set_password
+  (of-object "GMountOperation")
+  (c-name "g_mount_operation_set_password")
+  (return-type "none")
+  (parameters
+    '("const char*" "ppassword")
+  )
+)
+
+(define-method set_password_save
+  (of-object "GMountOperation")
+  (c-name "g_mount_operation_set_password_save")
+  (return-type "none")
+  (parameters
+    '("GPasswordSave" "psave")
+  )
+)
+
+(define-method set_username
+  (of-object "GMountOperation")
+  (c-name "g_mount_operation_set_username")
+  (return-type "none")
+  (parameters
+    '("const char*" "pusername")
+  )
+)
+

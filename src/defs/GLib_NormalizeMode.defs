@@ -1,0 +1,15 @@
+(define-enum NormalizeMode
+  (in-module "GLib")
+  (c-name "GNormalizeMode")
+  (values
+    '("default" "G_NORMALIZE_DEFAULT")
+    '("nfd" "G_NORMALIZE_NFD")
+    '("default_compose" "G_NORMALIZE_DEFAULT_COMPOSE")
+    '("nfc" "G_NORMALIZE_NFC")
+    '("all" "G_NORMALIZE_ALL")
+    '("nfkd" "G_NORMALIZE_NFKD")
+    '("all_compose" "G_NORMALIZE_ALL_COMPOSE")
+    '("nfkc" "G_NORMALIZE_NFKC")
+  )
+)
+

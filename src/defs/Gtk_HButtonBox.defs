@@ -1,0 +1,14 @@
+(define-object HButtonBox
+  (in-module "Gtk")
+  (parent "ButtonBox")
+  (c-name "GtkHButtonBox")
+)
+
+(define-function HButtonBox_new
+  (is-constructor-of "GtkHButtonBox")
+  (c-name "gtk_hbutton_box_new")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+

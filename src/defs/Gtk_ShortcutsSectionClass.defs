@@ -1,0 +1,6 @@
+(define-object ShortcutsSectionClass
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkShortcutsSectionClass")
+)
+

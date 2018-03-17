@@ -1,0 +1,128 @@
+(define-object WidgetClass
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkWidgetClass")
+)
+
+(define-method bind_template_callback_full
+  (of-object "GtkWidgetClass")
+  (c-name "gtk_widget_class_bind_template_callback_full")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pcallback_name")
+    '("GCallback" "pcallback_symbol")
+  )
+)
+
+(define-method bind_template_child_full
+  (of-object "GtkWidgetClass")
+  (c-name "gtk_widget_class_bind_template_child_full")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pname")
+    '("gboolean" "pinternal_child")
+    '("gssize" "pstruct_offset")
+  )
+)
+
+(define-method find_style_property
+  (of-object "GtkWidgetClass")
+  (c-name "gtk_widget_class_find_style_property")
+  (return-type "GParamSpec*")
+  (parameters
+    '("const gchar*" "pproperty_name")
+  )
+)
+
+(define-method get_css_name
+  (of-object "GtkWidgetClass")
+  (c-name "gtk_widget_class_get_css_name")
+  (return-type "const char*")
+  (parameters
+  )
+)
+
+(define-method install_style_property
+  (of-object "GtkWidgetClass")
+  (c-name "gtk_widget_class_install_style_property")
+  (return-type "none")
+  (parameters
+    '("GParamSpec*" "ppspec")
+  )
+)
+
+(define-method install_style_property_parser
+  (of-object "GtkWidgetClass")
+  (c-name "gtk_widget_class_install_style_property_parser")
+  (return-type "none")
+  (parameters
+    '("GParamSpec*" "ppspec")
+    '("GtkRcPropertyParser" "pparser")
+  )
+)
+
+(define-method list_style_properties
+  (of-object "GtkWidgetClass")
+  (c-name "gtk_widget_class_list_style_properties")
+  (return-type "none")
+  (parameters
+    '("guint*" "pn_properties")
+  )
+)
+
+(define-method set_accessible_role
+  (of-object "GtkWidgetClass")
+  (c-name "gtk_widget_class_set_accessible_role")
+  (return-type "none")
+  (parameters
+    '("AtkRole" "prole")
+  )
+)
+
+(define-method set_accessible_type
+  (of-object "GtkWidgetClass")
+  (c-name "gtk_widget_class_set_accessible_type")
+  (return-type "none")
+  (parameters
+    '("GType" "ptype")
+  )
+)
+
+(define-method set_connect_func
+  (of-object "GtkWidgetClass")
+  (c-name "gtk_widget_class_set_connect_func")
+  (return-type "none")
+  (parameters
+    '("GtkBuilderConnectFunc" "pconnect_func")
+    '("gpointer" "pconnect_data")
+    '("GDestroyNotify" "pconnect_data_destroy")
+  )
+)
+
+(define-method set_css_name
+  (of-object "GtkWidgetClass")
+  (c-name "gtk_widget_class_set_css_name")
+  (return-type "none")
+  (parameters
+    '("const char*" "pname")
+  )
+)
+
+(define-method set_template
+  (of-object "GtkWidgetClass")
+  (c-name "gtk_widget_class_set_template")
+  (return-type "none")
+  (parameters
+    '("GBytes*" "ptemplate_bytes")
+  )
+)
+
+(define-method set_template_from_resource
+  (of-object "GtkWidgetClass")
+  (c-name "gtk_widget_class_set_template_from_resource")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "presource_name")
+  )
+)
+

@@ -1,0 +1,131 @@
+(define-object AccelGroup
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkAccelGroup")
+)
+
+(define-function AccelGroup_new
+  (is-constructor-of "GtkAccelGroup")
+  (c-name "gtk_accel_group_new")
+  (return-type "GtkAccelGroup*")
+  (parameters
+  )
+)
+
+(define-method accel_changed
+  (of-object "GtkAccelGroup")
+  (c-name "accel_changed")
+  (return-type "none")
+  (parameters
+    '("guint" "pkeyval")
+    '("GdkModifierType" "pmodifier")
+    '("GClosure*" "paccel_closure")
+  )
+)
+
+(define-method activate
+  (of-object "GtkAccelGroup")
+  (c-name "gtk_accel_group_activate")
+  (return-type "gboolean")
+  (parameters
+    '("GQuark" "paccel_quark")
+    '("GObject*" "pacceleratable")
+    '("guint" "paccel_key")
+    '("GdkModifierType" "paccel_mods")
+  )
+)
+
+(define-method connect
+  (of-object "GtkAccelGroup")
+  (c-name "gtk_accel_group_connect")
+  (return-type "none")
+  (parameters
+    '("guint" "paccel_key")
+    '("GdkModifierType" "paccel_mods")
+    '("GtkAccelFlags" "paccel_flags")
+    '("GClosure*" "pclosure")
+  )
+)
+
+(define-method connect_by_path
+  (of-object "GtkAccelGroup")
+  (c-name "gtk_accel_group_connect_by_path")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "paccel_path")
+    '("GClosure*" "pclosure")
+  )
+)
+
+(define-method disconnect
+  (of-object "GtkAccelGroup")
+  (c-name "gtk_accel_group_disconnect")
+  (return-type "gboolean")
+  (parameters
+    '("GClosure*" "pclosure")
+  )
+)
+
+(define-method disconnect_key
+  (of-object "GtkAccelGroup")
+  (c-name "gtk_accel_group_disconnect_key")
+  (return-type "gboolean")
+  (parameters
+    '("guint" "paccel_key")
+    '("GdkModifierType" "paccel_mods")
+  )
+)
+
+(define-method find
+  (of-object "GtkAccelGroup")
+  (c-name "gtk_accel_group_find")
+  (return-type "GtkAccelKey*")
+  (parameters
+    '("GtkAccelGroupFindFunc" "pfind_func")
+    '("gpointer" "pdata")
+  )
+)
+
+(define-method get_is_locked
+  (of-object "GtkAccelGroup")
+  (c-name "gtk_accel_group_get_is_locked")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_modifier_mask
+  (of-object "GtkAccelGroup")
+  (c-name "gtk_accel_group_get_modifier_mask")
+  (return-type "GdkModifierType")
+  (parameters
+  )
+)
+
+(define-method lock
+  (of-object "GtkAccelGroup")
+  (c-name "gtk_accel_group_lock")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method query
+  (of-object "GtkAccelGroup")
+  (c-name "gtk_accel_group_query")
+  (return-type "none")
+  (parameters
+    '("guint" "paccel_key")
+    '("GdkModifierType" "paccel_mods")
+    '("guint*" "pn_entries")
+  )
+)
+
+(define-method unlock
+  (of-object "GtkAccelGroup")
+  (c-name "gtk_accel_group_unlock")
+  (return-type "none")
+  (parameters
+  )
+)
+

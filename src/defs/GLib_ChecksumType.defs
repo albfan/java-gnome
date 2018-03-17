@@ -1,0 +1,12 @@
+(define-enum ChecksumType
+  (in-module "GLib")
+  (c-name "GChecksumType")
+  (values
+    '("md5" "G_CHECKSUM_MD5")
+    '("sha1" "G_CHECKSUM_SHA1")
+    '("sha256" "G_CHECKSUM_SHA256")
+    '("sha512" "G_CHECKSUM_SHA512")
+    '("sha384" "G_CHECKSUM_SHA384")
+  )
+)
+

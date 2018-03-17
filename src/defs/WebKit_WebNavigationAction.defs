@@ -1,0 +1,65 @@
+(define-object WebNavigationAction
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "WebKitWebNavigationAction")
+)
+
+(define-method get_button
+  (of-object "WebKitWebNavigationAction")
+  (c-name "webkit_web_navigation_action_get_button")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_modifier_state
+  (of-object "WebKitWebNavigationAction")
+  (c-name "webkit_web_navigation_action_get_modifier_state")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_original_uri
+  (of-object "WebKitWebNavigationAction")
+  (c-name "webkit_web_navigation_action_get_original_uri")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_reason
+  (of-object "WebKitWebNavigationAction")
+  (c-name "webkit_web_navigation_action_get_reason")
+  (return-type "WebKitWebNavigationReason")
+  (parameters
+  )
+)
+
+(define-method get_target_frame
+  (of-object "WebKitWebNavigationAction")
+  (c-name "webkit_web_navigation_action_get_target_frame")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method set_original_uri
+  (of-object "WebKitWebNavigationAction")
+  (c-name "webkit_web_navigation_action_set_original_uri")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "poriginalUri")
+  )
+)
+
+(define-method set_reason
+  (of-object "WebKitWebNavigationAction")
+  (c-name "webkit_web_navigation_action_set_reason")
+  (return-type "none")
+  (parameters
+    '("WebKitWebNavigationReason" "preason")
+  )
+)
+

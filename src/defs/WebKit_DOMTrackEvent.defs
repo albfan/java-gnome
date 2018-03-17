@@ -1,0 +1,7 @@
+(define-object DOMTrackEvent
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "DOMEvent")
+  (c-name "WebKitDOMTrackEvent")
+)
+

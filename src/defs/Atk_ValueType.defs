@@ -1,0 +1,23 @@
+(define-enum ValueType
+  (in-module "Atk")
+  (c-name "AtkValueType")
+  (values
+    '("very_weak" "ATK_VALUE_VERY_WEAK")
+    '("weak" "ATK_VALUE_WEAK")
+    '("acceptable" "ATK_VALUE_ACCEPTABLE")
+    '("strong" "ATK_VALUE_STRONG")
+    '("very_strong" "ATK_VALUE_VERY_STRONG")
+    '("very_low" "ATK_VALUE_VERY_LOW")
+    '("low" "ATK_VALUE_LOW")
+    '("medium" "ATK_VALUE_MEDIUM")
+    '("high" "ATK_VALUE_HIGH")
+    '("very_high" "ATK_VALUE_VERY_HIGH")
+    '("very_bad" "ATK_VALUE_VERY_BAD")
+    '("bad" "ATK_VALUE_BAD")
+    '("good" "ATK_VALUE_GOOD")
+    '("very_good" "ATK_VALUE_VERY_GOOD")
+    '("best" "ATK_VALUE_BEST")
+    '("last_defined" "ATK_VALUE_LAST_DEFINED")
+  )
+)
+

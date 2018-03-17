@@ -1,0 +1,14 @@
+(define-enum ModifierIntent
+  (in-module "Gdk")
+  (c-name "GdkModifierIntent")
+  (values
+    '("primary_accelerator" "GDK_MODIFIER_INTENT_PRIMARY_ACCELERATOR")
+    '("context_menu" "GDK_MODIFIER_INTENT_CONTEXT_MENU")
+    '("extend_selection" "GDK_MODIFIER_INTENT_EXTEND_SELECTION")
+    '("modify_selection" "GDK_MODIFIER_INTENT_MODIFY_SELECTION")
+    '("no_text_input" "GDK_MODIFIER_INTENT_NO_TEXT_INPUT")
+    '("shift_group" "GDK_MODIFIER_INTENT_SHIFT_GROUP")
+    '("default_mod_mask" "GDK_MODIFIER_INTENT_DEFAULT_MOD_MASK")
+  )
+)
+

@@ -1,0 +1,36 @@
+(define-object StyleProvider
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkStyleProvider")
+)
+
+(define-method get_icon_factory
+  (of-object "GtkStyleProvider")
+  (c-name "get_icon_factory")
+  (return-type "GtkIconFactory*")
+  (parameters
+    '("GtkWidgetPath*" "ppath")
+  )
+)
+
+(define-method get_style
+  (of-object "GtkStyleProvider")
+  (c-name "get_style")
+  (return-type "GtkStyleProperties*")
+  (parameters
+    '("GtkWidgetPath*" "ppath")
+  )
+)
+
+(define-method get_style_property
+  (of-object "GtkStyleProvider")
+  (c-name "get_style_property")
+  (return-type "gboolean")
+  (parameters
+    '("GtkWidgetPath*" "ppath")
+    '("GtkStateFlags" "pstate")
+    '("GParamSpec*" "ppspec")
+    '("GValue*" "pvalue")
+  )
+)
+

@@ -1,0 +1,41 @@
+(define-object SocketConnectable
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GSocketConnectable")
+)
+
+(define-method enumerate
+  (of-object "GSocketConnectable")
+  (c-name "enumerate")
+  (return-type "GSocketAddressEnumerator*")
+  (parameters
+  )
+)
+
+(define-method proxy_enumerate
+  (of-object "GSocketConnectable")
+  (c-name "proxy_enumerate")
+  (return-type "GSocketAddressEnumerator*")
+  (parameters
+  )
+)
+
+(define-method to_string
+  (of-object "GSocketConnectable")
+  (c-name "to_string")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+

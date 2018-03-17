@@ -1,0 +1,24 @@
+(define-object DOMNodeList
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "DOMObject")
+  (c-name "WebKitDOMNodeList")
+)
+
+(define-method get_length
+  (of-object "WebKitDOMNodeList")
+  (c-name "webkit_dom_node_list_get_length")
+  (return-type "gulong")
+  (parameters
+  )
+)
+
+(define-method item
+  (of-object "WebKitDOMNodeList")
+  (c-name "webkit_dom_node_list_item")
+  (return-type "WebKitDOMNode*")
+  (parameters
+    '("gulong" "pindex")
+  )
+)
+

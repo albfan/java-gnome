@@ -1,0 +1,48 @@
+(define-object EventBox
+  (in-module "Gtk")
+  (parent "Bin")
+  (c-name "GtkEventBox")
+)
+
+(define-function EventBox_new
+  (is-constructor-of "GtkEventBox")
+  (c-name "gtk_event_box_new")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method get_above_child
+  (of-object "GtkEventBox")
+  (c-name "gtk_event_box_get_above_child")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_visible_window
+  (of-object "GtkEventBox")
+  (c-name "gtk_event_box_get_visible_window")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method set_above_child
+  (of-object "GtkEventBox")
+  (c-name "gtk_event_box_set_above_child")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pabove_child")
+  )
+)
+
+(define-method set_visible_window
+  (of-object "GtkEventBox")
+  (c-name "gtk_event_box_set_visible_window")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pvisible_window")
+  )
+)
+

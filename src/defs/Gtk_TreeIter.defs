@@ -1,0 +1,22 @@
+(define-object TreeIter
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkTreeIter")
+)
+
+(define-method copy
+  (of-object "GtkTreeIter")
+  (c-name "gtk_tree_iter_copy")
+  (return-type "GtkTreeIter*")
+  (parameters
+  )
+)
+
+(define-method free
+  (of-object "GtkTreeIter")
+  (c-name "gtk_tree_iter_free")
+  (return-type "none")
+  (parameters
+  )
+)
+

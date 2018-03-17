@@ -1,0 +1,6 @@
+(define-object ExpanderAccessible
+  (in-module "Gtk")
+  (parent "ContainerAccessible")
+  (c-name "GtkExpanderAccessible")
+)
+

@@ -1,0 +1,77 @@
+(define-object TreeModelSort
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkTreeModelSort")
+)
+
+(define-method clear_cache
+  (of-object "GtkTreeModelSort")
+  (c-name "gtk_tree_model_sort_clear_cache")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method convert_child_iter_to_iter
+  (of-object "GtkTreeModelSort")
+  (c-name "gtk_tree_model_sort_convert_child_iter_to_iter")
+  (return-type "gboolean")
+  (parameters
+    '("GtkTreeIter*" "psort_iter")
+    '("GtkTreeIter*" "pchild_iter")
+  )
+)
+
+(define-method convert_child_path_to_path
+  (of-object "GtkTreeModelSort")
+  (c-name "gtk_tree_model_sort_convert_child_path_to_path")
+  (return-type "GtkTreePath*")
+  (parameters
+    '("GtkTreePath*" "pchild_path")
+  )
+)
+
+(define-method convert_iter_to_child_iter
+  (of-object "GtkTreeModelSort")
+  (c-name "gtk_tree_model_sort_convert_iter_to_child_iter")
+  (return-type "none")
+  (parameters
+    '("GtkTreeIter*" "pchild_iter")
+    '("GtkTreeIter*" "psorted_iter")
+  )
+)
+
+(define-method convert_path_to_child_path
+  (of-object "GtkTreeModelSort")
+  (c-name "gtk_tree_model_sort_convert_path_to_child_path")
+  (return-type "GtkTreePath*")
+  (parameters
+    '("GtkTreePath*" "psorted_path")
+  )
+)
+
+(define-method get_model
+  (of-object "GtkTreeModelSort")
+  (c-name "gtk_tree_model_sort_get_model")
+  (return-type "GtkTreeModel*")
+  (parameters
+  )
+)
+
+(define-method iter_is_valid
+  (of-object "GtkTreeModelSort")
+  (c-name "gtk_tree_model_sort_iter_is_valid")
+  (return-type "gboolean")
+  (parameters
+    '("GtkTreeIter*" "piter")
+  )
+)
+
+(define-method reset_default_sort_func
+  (of-object "GtkTreeModelSort")
+  (c-name "gtk_tree_model_sort_reset_default_sort_func")
+  (return-type "none")
+  (parameters
+  )
+)
+

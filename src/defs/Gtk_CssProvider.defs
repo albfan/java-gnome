@@ -1,0 +1,72 @@
+(define-object CssProvider
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkCssProvider")
+)
+
+(define-function CssProvider_new
+  (is-constructor-of "GtkCssProvider")
+  (c-name "gtk_css_provider_new")
+  (return-type "GtkCssProvider*")
+  (parameters
+  )
+)
+
+(define-method parsing_error
+  (of-object "GtkCssProvider")
+  (c-name "parsing_error")
+  (return-type "none")
+  (parameters
+    '("GtkCssSection*" "psection")
+    '("const GError*" "perror")
+  )
+)
+
+(define-method load_from_data
+  (of-object "GtkCssProvider")
+  (c-name "gtk_css_provider_load_from_data")
+  (return-type "gboolean")
+  (parameters
+    '("null" "pdata")
+    '("gssize" "plength")
+    '("GError**" "error")
+  )
+)
+
+(define-method load_from_file
+  (of-object "GtkCssProvider")
+  (c-name "gtk_css_provider_load_from_file")
+  (return-type "gboolean")
+  (parameters
+    '("GFile*" "pfile")
+    '("GError**" "error")
+  )
+)
+
+(define-method load_from_path
+  (of-object "GtkCssProvider")
+  (c-name "gtk_css_provider_load_from_path")
+  (return-type "gboolean")
+  (parameters
+    '("const gchar*" "ppath")
+    '("GError**" "error")
+  )
+)
+
+(define-method load_from_resource
+  (of-object "GtkCssProvider")
+  (c-name "gtk_css_provider_load_from_resource")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "presource_path")
+  )
+)
+
+(define-method to_string
+  (of-object "GtkCssProvider")
+  (c-name "gtk_css_provider_to_string")
+  (return-type "char*")
+  (parameters
+  )
+)
+

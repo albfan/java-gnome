@@ -1,0 +1,14 @@
+(define-object VolumeButton
+  (in-module "Gtk")
+  (parent "ScaleButton")
+  (c-name "GtkVolumeButton")
+)
+
+(define-function VolumeButton_new
+  (is-constructor-of "GtkVolumeButton")
+  (c-name "gtk_volume_button_new")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+

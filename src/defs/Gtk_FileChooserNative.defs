@@ -1,0 +1,53 @@
+(define-object FileChooserNative
+  (in-module "Gtk")
+  (parent "NativeDialog")
+  (c-name "GtkFileChooserNative")
+)
+
+(define-function FileChooserNative_new
+  (is-constructor-of "GtkFileChooserNative")
+  (c-name "gtk_file_chooser_native_new")
+  (return-type "GtkFileChooserNative*")
+  (parameters
+    '("const gchar*" "ptitle")
+    '("GtkWindow*" "pparent")
+    '("GtkFileChooserAction" "paction")
+    '("const gchar*" "paccept_label")
+    '("const gchar*" "pcancel_label")
+  )
+)
+
+(define-method get_accept_label
+  (of-object "GtkFileChooserNative")
+  (c-name "gtk_file_chooser_native_get_accept_label")
+  (return-type "const char*")
+  (parameters
+  )
+)
+
+(define-method get_cancel_label
+  (of-object "GtkFileChooserNative")
+  (c-name "gtk_file_chooser_native_get_cancel_label")
+  (return-type "const char*")
+  (parameters
+  )
+)
+
+(define-method set_accept_label
+  (of-object "GtkFileChooserNative")
+  (c-name "gtk_file_chooser_native_set_accept_label")
+  (return-type "none")
+  (parameters
+    '("const char*" "paccept_label")
+  )
+)
+
+(define-method set_cancel_label
+  (of-object "GtkFileChooserNative")
+  (c-name "gtk_file_chooser_native_set_cancel_label")
+  (return-type "none")
+  (parameters
+    '("const char*" "pcancel_label")
+  )
+)
+

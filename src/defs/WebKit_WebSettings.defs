@@ -1,0 +1,31 @@
+(define-object WebSettings
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "WebKitWebSettings")
+)
+
+(define-function WebSettings_new
+  (is-constructor-of "WebKitWebSettings")
+  (c-name "webkit_web_settings_new")
+  (return-type "WebKitWebSettings*")
+  (parameters
+  )
+)
+
+(define-method copy
+  (of-object "WebKitWebSettings")
+  (c-name "webkit_web_settings_copy")
+  (return-type "WebKitWebSettings*")
+  (parameters
+  )
+)
+
+(define-method get_user_agent
+  (of-object "WebKitWebSettings")
+  (c-name "webkit_web_settings_get_user_agent")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+

@@ -1,0 +1,46 @@
+(define-object FlowBoxChild
+  (in-module "Gtk")
+  (parent "Bin")
+  (c-name "GtkFlowBoxChild")
+)
+
+(define-function FlowBoxChild_new
+  (is-constructor-of "GtkFlowBoxChild")
+  (c-name "gtk_flow_box_child_new")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method activate
+  (of-object "GtkFlowBoxChild")
+  (c-name "activate")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method changed
+  (of-object "GtkFlowBoxChild")
+  (c-name "gtk_flow_box_child_changed")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method get_index
+  (of-object "GtkFlowBoxChild")
+  (c-name "gtk_flow_box_child_get_index")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method is_selected
+  (of-object "GtkFlowBoxChild")
+  (c-name "gtk_flow_box_child_is_selected")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+

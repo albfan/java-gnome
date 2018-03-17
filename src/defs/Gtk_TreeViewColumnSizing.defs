@@ -1,0 +1,10 @@
+(define-enum TreeViewColumnSizing
+  (in-module "Gtk")
+  (c-name "GtkTreeViewColumnSizing")
+  (values
+    '("grow_only" "GTK_TREE_VIEW_COLUMN_GROW_ONLY")
+    '("autosize" "GTK_TREE_VIEW_COLUMN_AUTOSIZE")
+    '("fixed" "GTK_TREE_VIEW_COLUMN_FIXED")
+  )
+)
+

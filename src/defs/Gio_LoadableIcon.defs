@@ -1,0 +1,52 @@
+(define-object LoadableIcon
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GLoadableIcon")
+)
+
+(define-method load
+  (of-object "GLoadableIcon")
+  (c-name "load")
+  (return-type "GInputStream*")
+  (parameters
+    '("int" "psize")
+    '("char**" "ptype")
+    '("GCancellable*" "pcancellable")
+    '("GError**" "error")
+  )
+)
+
+(define-method load_async
+  (of-object "GLoadableIcon")
+  (c-name "load_async")
+  (return-type "none")
+  (parameters
+    '("int" "psize")
+    '("GCancellable*" "pcancellable")
+    '("GAsyncReadyCallback" "pcallback")
+    '("gpointer" "puser_data")
+  )
+)
+
+(define-method load_finish
+  (of-object "GLoadableIcon")
+  (c-name "load_finish")
+  (return-type "GInputStream*")
+  (parameters
+    '("GAsyncResult*" "pres")
+    '("char**" "ptype")
+    '("GError**" "error")
+  )
+)
+

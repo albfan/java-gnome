@@ -1,0 +1,147 @@
+(define-object ApplicationCommandLine
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GApplicationCommandLine")
+)
+
+(define-method get_stdin
+  (of-object "GApplicationCommandLine")
+  (c-name "get_stdin")
+  (return-type "GInputStream*")
+  (parameters
+  )
+)
+
+(define-method print_literal
+  (of-object "GApplicationCommandLine")
+  (c-name "print_literal")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pmessage")
+  )
+)
+
+(define-method printerr_literal
+  (of-object "GApplicationCommandLine")
+  (c-name "printerr_literal")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pmessage")
+  )
+)
+
+(define-method create_file_for_arg
+  (of-object "GApplicationCommandLine")
+  (c-name "g_application_command_line_create_file_for_arg")
+  (return-type "GFile*")
+  (parameters
+    '("const gchar*" "parg")
+  )
+)
+
+(define-method get_arguments
+  (of-object "GApplicationCommandLine")
+  (c-name "g_application_command_line_get_arguments")
+  (return-type "none")
+  (parameters
+    '("int*" "pargc")
+  )
+)
+
+(define-method get_cwd
+  (of-object "GApplicationCommandLine")
+  (c-name "g_application_command_line_get_cwd")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+
+(define-method get_environ
+  (of-object "GApplicationCommandLine")
+  (c-name "g_application_command_line_get_environ")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method get_exit_status
+  (of-object "GApplicationCommandLine")
+  (c-name "g_application_command_line_get_exit_status")
+  (return-type "int")
+  (parameters
+  )
+)
+
+(define-method get_is_remote
+  (of-object "GApplicationCommandLine")
+  (c-name "g_application_command_line_get_is_remote")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_options_dict
+  (of-object "GApplicationCommandLine")
+  (c-name "g_application_command_line_get_options_dict")
+  (return-type "GVariantDict*")
+  (parameters
+  )
+)
+
+(define-method get_platform_data
+  (of-object "GApplicationCommandLine")
+  (c-name "g_application_command_line_get_platform_data")
+  (return-type "GVariant*")
+  (parameters
+  )
+)
+
+(define-method getenv
+  (of-object "GApplicationCommandLine")
+  (c-name "g_application_command_line_getenv")
+  (return-type "const gchar*")
+  (parameters
+    '("const gchar*" "pname")
+  )
+)
+
+(define-method print
+  (of-object "GApplicationCommandLine")
+  (c-name "g_application_command_line_print")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pformat")
+    '("null" "p...")
+  )
+)
+
+(define-method printerr
+  (of-object "GApplicationCommandLine")
+  (c-name "g_application_command_line_printerr")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pformat")
+    '("null" "p...")
+  )
+)
+
+(define-method set_exit_status
+  (of-object "GApplicationCommandLine")
+  (c-name "g_application_command_line_set_exit_status")
+  (return-type "none")
+  (parameters
+    '("int" "pexit_status")
+  )
+)
+

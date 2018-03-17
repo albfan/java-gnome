@@ -1,0 +1,66 @@
+(define-object DOMStorage
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "DOMObject")
+  (c-name "WebKitDOMStorage")
+)
+
+(define-method clear
+  (of-object "WebKitDOMStorage")
+  (c-name "webkit_dom_storage_clear")
+  (return-type "none")
+  (parameters
+    '("GError**" "error")
+  )
+)
+
+(define-method get_item
+  (of-object "WebKitDOMStorage")
+  (c-name "webkit_dom_storage_get_item")
+  (return-type "gchar*")
+  (parameters
+    '("const gchar*" "pkey")
+    '("GError**" "error")
+  )
+)
+
+(define-method get_length
+  (of-object "WebKitDOMStorage")
+  (c-name "webkit_dom_storage_get_length")
+  (return-type "gulong")
+  (parameters
+    '("GError**" "error")
+  )
+)
+
+(define-method key
+  (of-object "WebKitDOMStorage")
+  (c-name "webkit_dom_storage_key")
+  (return-type "gchar*")
+  (parameters
+    '("gulong" "pindex")
+    '("GError**" "error")
+  )
+)
+
+(define-method remove_item
+  (of-object "WebKitDOMStorage")
+  (c-name "webkit_dom_storage_remove_item")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pkey")
+    '("GError**" "error")
+  )
+)
+
+(define-method set_item
+  (of-object "WebKitDOMStorage")
+  (c-name "webkit_dom_storage_set_item")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pkey")
+    '("const gchar*" "pdata")
+    '("GError**" "error")
+  )
+)
+

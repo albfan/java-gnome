@@ -1,0 +1,801 @@
+(define-object TextIter
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkTextIter")
+)
+
+(define-method assign
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_assign")
+  (return-type "none")
+  (parameters
+    '("const GtkTextIter*" "pother")
+  )
+)
+
+(define-method backward_char
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_backward_char")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method backward_chars
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_backward_chars")
+  (return-type "gboolean")
+  (parameters
+    '("gint" "pcount")
+  )
+)
+
+(define-method backward_cursor_position
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_backward_cursor_position")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method backward_cursor_positions
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_backward_cursor_positions")
+  (return-type "gboolean")
+  (parameters
+    '("gint" "pcount")
+  )
+)
+
+(define-method backward_find_char
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_backward_find_char")
+  (return-type "gboolean")
+  (parameters
+    '("GtkTextCharPredicate" "ppred")
+    '("gpointer" "puser_data")
+    '("const GtkTextIter*" "plimit")
+  )
+)
+
+(define-method backward_line
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_backward_line")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method backward_lines
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_backward_lines")
+  (return-type "gboolean")
+  (parameters
+    '("gint" "pcount")
+  )
+)
+
+(define-method backward_search
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_backward_search")
+  (return-type "gboolean")
+  (parameters
+    '("const gchar*" "pstr")
+    '("GtkTextSearchFlags" "pflags")
+    '("GtkTextIter*" "pmatch_start")
+    '("GtkTextIter*" "pmatch_end")
+    '("const GtkTextIter*" "plimit")
+  )
+)
+
+(define-method backward_sentence_start
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_backward_sentence_start")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method backward_sentence_starts
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_backward_sentence_starts")
+  (return-type "gboolean")
+  (parameters
+    '("gint" "pcount")
+  )
+)
+
+(define-method backward_to_tag_toggle
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_backward_to_tag_toggle")
+  (return-type "gboolean")
+  (parameters
+    '("GtkTextTag*" "ptag")
+  )
+)
+
+(define-method backward_visible_cursor_position
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_backward_visible_cursor_position")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method backward_visible_cursor_positions
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_backward_visible_cursor_positions")
+  (return-type "gboolean")
+  (parameters
+    '("gint" "pcount")
+  )
+)
+
+(define-method backward_visible_line
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_backward_visible_line")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method backward_visible_lines
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_backward_visible_lines")
+  (return-type "gboolean")
+  (parameters
+    '("gint" "pcount")
+  )
+)
+
+(define-method backward_visible_word_start
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_backward_visible_word_start")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method backward_visible_word_starts
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_backward_visible_word_starts")
+  (return-type "gboolean")
+  (parameters
+    '("gint" "pcount")
+  )
+)
+
+(define-method backward_word_start
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_backward_word_start")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method backward_word_starts
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_backward_word_starts")
+  (return-type "gboolean")
+  (parameters
+    '("gint" "pcount")
+  )
+)
+
+(define-method begins_tag
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_begins_tag")
+  (return-type "gboolean")
+  (parameters
+    '("GtkTextTag*" "ptag")
+  )
+)
+
+(define-method can_insert
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_can_insert")
+  (return-type "gboolean")
+  (parameters
+    '("gboolean" "pdefault_editability")
+  )
+)
+
+(define-method compare
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_compare")
+  (return-type "gint")
+  (parameters
+    '("const GtkTextIter*" "prhs")
+  )
+)
+
+(define-method copy
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_copy")
+  (return-type "GtkTextIter*")
+  (parameters
+  )
+)
+
+(define-method editable
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_editable")
+  (return-type "gboolean")
+  (parameters
+    '("gboolean" "pdefault_setting")
+  )
+)
+
+(define-method ends_line
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_ends_line")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method ends_sentence
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_ends_sentence")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method ends_tag
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_ends_tag")
+  (return-type "gboolean")
+  (parameters
+    '("GtkTextTag*" "ptag")
+  )
+)
+
+(define-method ends_word
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_ends_word")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method equal
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_equal")
+  (return-type "gboolean")
+  (parameters
+    '("const GtkTextIter*" "prhs")
+  )
+)
+
+(define-method forward_char
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_forward_char")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method forward_chars
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_forward_chars")
+  (return-type "gboolean")
+  (parameters
+    '("gint" "pcount")
+  )
+)
+
+(define-method forward_cursor_position
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_forward_cursor_position")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method forward_cursor_positions
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_forward_cursor_positions")
+  (return-type "gboolean")
+  (parameters
+    '("gint" "pcount")
+  )
+)
+
+(define-method forward_find_char
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_forward_find_char")
+  (return-type "gboolean")
+  (parameters
+    '("GtkTextCharPredicate" "ppred")
+    '("gpointer" "puser_data")
+    '("const GtkTextIter*" "plimit")
+  )
+)
+
+(define-method forward_line
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_forward_line")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method forward_lines
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_forward_lines")
+  (return-type "gboolean")
+  (parameters
+    '("gint" "pcount")
+  )
+)
+
+(define-method forward_search
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_forward_search")
+  (return-type "gboolean")
+  (parameters
+    '("const gchar*" "pstr")
+    '("GtkTextSearchFlags" "pflags")
+    '("GtkTextIter*" "pmatch_start")
+    '("GtkTextIter*" "pmatch_end")
+    '("const GtkTextIter*" "plimit")
+  )
+)
+
+(define-method forward_sentence_end
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_forward_sentence_end")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method forward_sentence_ends
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_forward_sentence_ends")
+  (return-type "gboolean")
+  (parameters
+    '("gint" "pcount")
+  )
+)
+
+(define-method forward_to_end
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_forward_to_end")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method forward_to_line_end
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_forward_to_line_end")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method forward_to_tag_toggle
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_forward_to_tag_toggle")
+  (return-type "gboolean")
+  (parameters
+    '("GtkTextTag*" "ptag")
+  )
+)
+
+(define-method forward_visible_cursor_position
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_forward_visible_cursor_position")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method forward_visible_cursor_positions
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_forward_visible_cursor_positions")
+  (return-type "gboolean")
+  (parameters
+    '("gint" "pcount")
+  )
+)
+
+(define-method forward_visible_line
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_forward_visible_line")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method forward_visible_lines
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_forward_visible_lines")
+  (return-type "gboolean")
+  (parameters
+    '("gint" "pcount")
+  )
+)
+
+(define-method forward_visible_word_end
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_forward_visible_word_end")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method forward_visible_word_ends
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_forward_visible_word_ends")
+  (return-type "gboolean")
+  (parameters
+    '("gint" "pcount")
+  )
+)
+
+(define-method forward_word_end
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_forward_word_end")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method forward_word_ends
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_forward_word_ends")
+  (return-type "gboolean")
+  (parameters
+    '("gint" "pcount")
+  )
+)
+
+(define-method free
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_free")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method get_attributes
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_get_attributes")
+  (return-type "gboolean")
+  (parameters
+    '("GtkTextAttributes*" "pvalues")
+  )
+)
+
+(define-method get_buffer
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_get_buffer")
+  (return-type "GtkTextBuffer*")
+  (parameters
+  )
+)
+
+(define-method get_bytes_in_line
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_get_bytes_in_line")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_char
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_get_char")
+  (return-type "gunichar")
+  (parameters
+  )
+)
+
+(define-method get_chars_in_line
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_get_chars_in_line")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_child_anchor
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_get_child_anchor")
+  (return-type "GtkTextChildAnchor*")
+  (parameters
+  )
+)
+
+(define-method get_language
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_get_language")
+  (return-type "PangoLanguage*")
+  (parameters
+  )
+)
+
+(define-method get_line
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_get_line")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_line_index
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_get_line_index")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_line_offset
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_get_line_offset")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_marks
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_get_marks")
+  (return-type "GSList*")
+  (parameters
+  )
+)
+
+(define-method get_offset
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_get_offset")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_pixbuf
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_get_pixbuf")
+  (return-type "GdkPixbuf*")
+  (parameters
+  )
+)
+
+(define-method get_slice
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_get_slice")
+  (return-type "gchar*")
+  (parameters
+    '("const GtkTextIter*" "pend")
+  )
+)
+
+(define-method get_tags
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_get_tags")
+  (return-type "GSList*")
+  (parameters
+  )
+)
+
+(define-method get_text
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_get_text")
+  (return-type "gchar*")
+  (parameters
+    '("const GtkTextIter*" "pend")
+  )
+)
+
+(define-method get_toggled_tags
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_get_toggled_tags")
+  (return-type "GSList*")
+  (parameters
+    '("gboolean" "ptoggled_on")
+  )
+)
+
+(define-method get_visible_line_index
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_get_visible_line_index")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_visible_line_offset
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_get_visible_line_offset")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_visible_slice
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_get_visible_slice")
+  (return-type "gchar*")
+  (parameters
+    '("const GtkTextIter*" "pend")
+  )
+)
+
+(define-method get_visible_text
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_get_visible_text")
+  (return-type "gchar*")
+  (parameters
+    '("const GtkTextIter*" "pend")
+  )
+)
+
+(define-method has_tag
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_has_tag")
+  (return-type "gboolean")
+  (parameters
+    '("GtkTextTag*" "ptag")
+  )
+)
+
+(define-method in_range
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_in_range")
+  (return-type "gboolean")
+  (parameters
+    '("const GtkTextIter*" "pstart")
+    '("const GtkTextIter*" "pend")
+  )
+)
+
+(define-method inside_sentence
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_inside_sentence")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method inside_word
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_inside_word")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method is_cursor_position
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_is_cursor_position")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method is_end
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_is_end")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method is_start
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_is_start")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method order
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_order")
+  (return-type "none")
+  (parameters
+    '("GtkTextIter*" "psecond")
+  )
+)
+
+(define-method set_line
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_set_line")
+  (return-type "none")
+  (parameters
+    '("gint" "pline_number")
+  )
+)
+
+(define-method set_line_index
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_set_line_index")
+  (return-type "none")
+  (parameters
+    '("gint" "pbyte_on_line")
+  )
+)
+
+(define-method set_line_offset
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_set_line_offset")
+  (return-type "none")
+  (parameters
+    '("gint" "pchar_on_line")
+  )
+)
+
+(define-method set_offset
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_set_offset")
+  (return-type "none")
+  (parameters
+    '("gint" "pchar_offset")
+  )
+)
+
+(define-method set_visible_line_index
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_set_visible_line_index")
+  (return-type "none")
+  (parameters
+    '("gint" "pbyte_on_line")
+  )
+)
+
+(define-method set_visible_line_offset
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_set_visible_line_offset")
+  (return-type "none")
+  (parameters
+    '("gint" "pchar_on_line")
+  )
+)
+
+(define-method starts_line
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_starts_line")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method starts_sentence
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_starts_sentence")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method starts_tag
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_starts_tag")
+  (return-type "gboolean")
+  (parameters
+    '("GtkTextTag*" "ptag")
+  )
+)
+
+(define-method starts_word
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_starts_word")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method toggles_tag
+  (of-object "GtkTextIter")
+  (c-name "gtk_text_iter_toggles_tag")
+  (return-type "gboolean")
+  (parameters
+    '("GtkTextTag*" "ptag")
+  )
+)
+

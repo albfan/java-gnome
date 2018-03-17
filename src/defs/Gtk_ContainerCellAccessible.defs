@@ -1,0 +1,40 @@
+(define-object ContainerCellAccessible
+  (in-module "Gtk")
+  (parent "CellAccessible")
+  (c-name "GtkContainerCellAccessible")
+)
+
+(define-function ContainerCellAccessible_new
+  (is-constructor-of "GtkContainerCellAccessible")
+  (c-name "gtk_container_cell_accessible_new")
+  (return-type "GtkContainerCellAccessible*")
+  (parameters
+  )
+)
+
+(define-method add_child
+  (of-object "GtkContainerCellAccessible")
+  (c-name "gtk_container_cell_accessible_add_child")
+  (return-type "none")
+  (parameters
+    '("GtkCellAccessible*" "pchild")
+  )
+)
+
+(define-method get_children
+  (of-object "GtkContainerCellAccessible")
+  (c-name "gtk_container_cell_accessible_get_children")
+  (return-type "GList*")
+  (parameters
+  )
+)
+
+(define-method remove_child
+  (of-object "GtkContainerCellAccessible")
+  (c-name "gtk_container_cell_accessible_remove_child")
+  (return-type "none")
+  (parameters
+    '("GtkCellAccessible*" "pchild")
+  )
+)
+

@@ -1,0 +1,32 @@
+(define-object WebPluginDatabase
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "WebKitWebPluginDatabase")
+)
+
+(define-method get_plugin_for_mimetype
+  (of-object "WebKitWebPluginDatabase")
+  (c-name "webkit_web_plugin_database_get_plugin_for_mimetype")
+  (return-type "WebKitWebPlugin*")
+  (parameters
+    '("const char*" "pmime_type")
+  )
+)
+
+(define-method get_plugins
+  (of-object "WebKitWebPluginDatabase")
+  (c-name "webkit_web_plugin_database_get_plugins")
+  (return-type "GSList*")
+  (parameters
+  )
+)
+
+(define-method refresh
+  (of-object "WebKitWebPluginDatabase")
+  (c-name "webkit_web_plugin_database_refresh")
+  (return-type "none")
+  (parameters
+  )
+)
+

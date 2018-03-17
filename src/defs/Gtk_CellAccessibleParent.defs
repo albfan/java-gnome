@@ -1,0 +1,94 @@
+(define-object CellAccessibleParent
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkCellAccessibleParent")
+)
+
+(define-method activate
+  (of-object "GtkCellAccessibleParent")
+  (c-name "activate")
+  (return-type "none")
+  (parameters
+    '("GtkCellAccessible*" "pcell")
+  )
+)
+
+(define-method edit
+  (of-object "GtkCellAccessibleParent")
+  (c-name "edit")
+  (return-type "none")
+  (parameters
+    '("GtkCellAccessible*" "pcell")
+  )
+)
+
+(define-method expand_collapse
+  (of-object "GtkCellAccessibleParent")
+  (c-name "expand_collapse")
+  (return-type "none")
+  (parameters
+    '("GtkCellAccessible*" "pcell")
+  )
+)
+
+(define-method get_cell_area
+  (of-object "GtkCellAccessibleParent")
+  (c-name "get_cell_area")
+  (return-type "none")
+  (parameters
+    '("GtkCellAccessible*" "pcell")
+    '("GdkRectangle*" "pcell_rect")
+  )
+)
+
+(define-method get_cell_extents
+  (of-object "GtkCellAccessibleParent")
+  (c-name "get_cell_extents")
+  (return-type "none")
+  (parameters
+    '("GtkCellAccessible*" "pcell")
+    '("gint*" "px")
+    '("gint*" "py")
+    '("gint*" "pwidth")
+    '("gint*" "pheight")
+    '("AtkCoordType" "pcoord_type")
+  )
+)
+
+(define-method get_child_index
+  (of-object "GtkCellAccessibleParent")
+  (c-name "get_child_index")
+  (return-type "int")
+  (parameters
+    '("GtkCellAccessible*" "pcell")
+  )
+)
+
+(define-method get_renderer_state
+  (of-object "GtkCellAccessibleParent")
+  (c-name "get_renderer_state")
+  (return-type "GtkCellRendererState")
+  (parameters
+    '("GtkCellAccessible*" "pcell")
+  )
+)
+
+(define-method grab_focus
+  (of-object "GtkCellAccessibleParent")
+  (c-name "grab_focus")
+  (return-type "gboolean")
+  (parameters
+    '("GtkCellAccessible*" "pcell")
+  )
+)
+
+(define-method update_relationset
+  (of-object "GtkCellAccessibleParent")
+  (c-name "update_relationset")
+  (return-type "none")
+  (parameters
+    '("GtkCellAccessible*" "pcell")
+    '("AtkRelationSet*" "prelationset")
+  )
+)
+

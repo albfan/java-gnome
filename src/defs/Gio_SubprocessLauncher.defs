@@ -1,0 +1,178 @@
+(define-object SubprocessLauncher
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GSubprocessLauncher")
+)
+
+(define-function SubprocessLauncher_new
+  (is-constructor-of "GSubprocessLauncher")
+  (c-name "g_subprocess_launcher_new")
+  (return-type "GSubprocessLauncher*")
+  (parameters
+    '("GSubprocessFlags" "pflags")
+  )
+)
+
+(define-method getenv
+  (of-object "GSubprocessLauncher")
+  (c-name "g_subprocess_launcher_getenv")
+  (return-type "const gchar*")
+  (parameters
+    '("const gchar*" "pvariable")
+  )
+)
+
+(define-method set_child_setup
+  (of-object "GSubprocessLauncher")
+  (c-name "g_subprocess_launcher_set_child_setup")
+  (return-type "none")
+  (parameters
+    '("GSpawnChildSetupFunc" "pchild_setup")
+    '("gpointer" "puser_data")
+    '("GDestroyNotify" "pdestroy_notify")
+  )
+)
+
+(define-method set_cwd
+  (of-object "GSubprocessLauncher")
+  (c-name "g_subprocess_launcher_set_cwd")
+  (return-type "none")
+  (parameters
+    '("gchar*" "pcwd")
+  )
+)
+
+(define-method set_environ
+  (of-object "GSubprocessLauncher")
+  (c-name "g_subprocess_launcher_set_environ")
+  (return-type "none")
+  (parameters
+    '("null" "penv")
+  )
+)
+
+(define-method set_flags
+  (of-object "GSubprocessLauncher")
+  (c-name "g_subprocess_launcher_set_flags")
+  (return-type "none")
+  (parameters
+    '("GSubprocessFlags" "pflags")
+  )
+)
+
+(define-method set_stderr_file_path
+  (of-object "GSubprocessLauncher")
+  (c-name "g_subprocess_launcher_set_stderr_file_path")
+  (return-type "none")
+  (parameters
+    '("gchar*" "ppath")
+  )
+)
+
+(define-method set_stdin_file_path
+  (of-object "GSubprocessLauncher")
+  (c-name "g_subprocess_launcher_set_stdin_file_path")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "ppath")
+  )
+)
+
+(define-method set_stdout_file_path
+  (of-object "GSubprocessLauncher")
+  (c-name "g_subprocess_launcher_set_stdout_file_path")
+  (return-type "none")
+  (parameters
+    '("gchar*" "ppath")
+  )
+)
+
+(define-method setenv
+  (of-object "GSubprocessLauncher")
+  (c-name "g_subprocess_launcher_setenv")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pvariable")
+    '("const gchar*" "pvalue")
+    '("gboolean" "poverwrite")
+  )
+)
+
+(define-method spawn
+  (of-object "GSubprocessLauncher")
+  (c-name "g_subprocess_launcher_spawn")
+  (return-type "GSubprocess*")
+  (parameters
+    '("GError**" "perror")
+    '("const gchar*" "pargv0")
+    '("null" "p...")
+  )
+)
+
+(define-method spawnv
+  (of-object "GSubprocessLauncher")
+  (c-name "g_subprocess_launcher_spawnv")
+  (return-type "GSubprocess*")
+  (parameters
+    '("null" "pargv")
+    '("GError**" "error")
+  )
+)
+
+(define-method take_fd
+  (of-object "GSubprocessLauncher")
+  (c-name "g_subprocess_launcher_take_fd")
+  (return-type "none")
+  (parameters
+    '("gint" "psource_fd")
+    '("gint" "ptarget_fd")
+  )
+)
+
+(define-method take_stderr_fd
+  (of-object "GSubprocessLauncher")
+  (c-name "g_subprocess_launcher_take_stderr_fd")
+  (return-type "none")
+  (parameters
+    '("gint" "pfd")
+  )
+)
+
+(define-method take_stdin_fd
+  (of-object "GSubprocessLauncher")
+  (c-name "g_subprocess_launcher_take_stdin_fd")
+  (return-type "none")
+  (parameters
+    '("gint" "pfd")
+  )
+)
+
+(define-method take_stdout_fd
+  (of-object "GSubprocessLauncher")
+  (c-name "g_subprocess_launcher_take_stdout_fd")
+  (return-type "none")
+  (parameters
+    '("gint" "pfd")
+  )
+)
+
+(define-method unsetenv
+  (of-object "GSubprocessLauncher")
+  (c-name "g_subprocess_launcher_unsetenv")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pvariable")
+  )
+)
+

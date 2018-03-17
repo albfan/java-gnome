@@ -1,0 +1,198 @@
+(define-object Stack
+  (in-module "Gtk")
+  (parent "Container")
+  (c-name "GtkStack")
+)
+
+(define-function Stack_new
+  (is-constructor-of "GtkStack")
+  (c-name "gtk_stack_new")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method add_named
+  (of-object "GtkStack")
+  (c-name "gtk_stack_add_named")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pchild")
+    '("const gchar*" "pname")
+  )
+)
+
+(define-method add_titled
+  (of-object "GtkStack")
+  (c-name "gtk_stack_add_titled")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pchild")
+    '("const gchar*" "pname")
+    '("const gchar*" "ptitle")
+  )
+)
+
+(define-method get_child_by_name
+  (of-object "GtkStack")
+  (c-name "gtk_stack_get_child_by_name")
+  (return-type "GtkWidget*")
+  (parameters
+    '("const gchar*" "pname")
+  )
+)
+
+(define-method get_hhomogeneous
+  (of-object "GtkStack")
+  (c-name "gtk_stack_get_hhomogeneous")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_homogeneous
+  (of-object "GtkStack")
+  (c-name "gtk_stack_get_homogeneous")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_interpolate_size
+  (of-object "GtkStack")
+  (c-name "gtk_stack_get_interpolate_size")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_transition_duration
+  (of-object "GtkStack")
+  (c-name "gtk_stack_get_transition_duration")
+  (return-type "guint")
+  (parameters
+  )
+)
+
+(define-method get_transition_running
+  (of-object "GtkStack")
+  (c-name "gtk_stack_get_transition_running")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_transition_type
+  (of-object "GtkStack")
+  (c-name "gtk_stack_get_transition_type")
+  (return-type "GtkStackTransitionType")
+  (parameters
+  )
+)
+
+(define-method get_vhomogeneous
+  (of-object "GtkStack")
+  (c-name "gtk_stack_get_vhomogeneous")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_visible_child
+  (of-object "GtkStack")
+  (c-name "gtk_stack_get_visible_child")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method get_visible_child_name
+  (of-object "GtkStack")
+  (c-name "gtk_stack_get_visible_child_name")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method set_hhomogeneous
+  (of-object "GtkStack")
+  (c-name "gtk_stack_set_hhomogeneous")
+  (return-type "none")
+  (parameters
+    '("gboolean" "phhomogeneous")
+  )
+)
+
+(define-method set_homogeneous
+  (of-object "GtkStack")
+  (c-name "gtk_stack_set_homogeneous")
+  (return-type "none")
+  (parameters
+    '("gboolean" "phomogeneous")
+  )
+)
+
+(define-method set_interpolate_size
+  (of-object "GtkStack")
+  (c-name "gtk_stack_set_interpolate_size")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pinterpolate_size")
+  )
+)
+
+(define-method set_transition_duration
+  (of-object "GtkStack")
+  (c-name "gtk_stack_set_transition_duration")
+  (return-type "none")
+  (parameters
+    '("guint" "pduration")
+  )
+)
+
+(define-method set_transition_type
+  (of-object "GtkStack")
+  (c-name "gtk_stack_set_transition_type")
+  (return-type "none")
+  (parameters
+    '("GtkStackTransitionType" "ptransition")
+  )
+)
+
+(define-method set_vhomogeneous
+  (of-object "GtkStack")
+  (c-name "gtk_stack_set_vhomogeneous")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pvhomogeneous")
+  )
+)
+
+(define-method set_visible_child
+  (of-object "GtkStack")
+  (c-name "gtk_stack_set_visible_child")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pchild")
+  )
+)
+
+(define-method set_visible_child_full
+  (of-object "GtkStack")
+  (c-name "gtk_stack_set_visible_child_full")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pname")
+    '("GtkStackTransitionType" "ptransition")
+  )
+)
+
+(define-method set_visible_child_name
+  (of-object "GtkStack")
+  (c-name "gtk_stack_set_visible_child_name")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pname")
+  )
+)
+

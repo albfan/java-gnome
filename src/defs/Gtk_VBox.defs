@@ -1,0 +1,16 @@
+(define-object VBox
+  (in-module "Gtk")
+  (parent "Box")
+  (c-name "GtkVBox")
+)
+
+(define-function VBox_new
+  (is-constructor-of "GtkVBox")
+  (c-name "gtk_vbox_new")
+  (return-type "GtkWidget*")
+  (parameters
+    '("gboolean" "phomogeneous")
+    '("gint" "pspacing")
+  )
+)
+

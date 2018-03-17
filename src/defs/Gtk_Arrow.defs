@@ -1,0 +1,26 @@
+(define-object Arrow
+  (in-module "Gtk")
+  (parent "Misc")
+  (c-name "GtkArrow")
+)
+
+(define-function Arrow_new
+  (is-constructor-of "GtkArrow")
+  (c-name "gtk_arrow_new")
+  (return-type "GtkWidget*")
+  (parameters
+    '("GtkArrowType" "parrow_type")
+    '("GtkShadowType" "pshadow_type")
+  )
+)
+
+(define-method set
+  (of-object "GtkArrow")
+  (c-name "gtk_arrow_set")
+  (return-type "none")
+  (parameters
+    '("GtkArrowType" "parrow_type")
+    '("GtkShadowType" "pshadow_type")
+  )
+)
+

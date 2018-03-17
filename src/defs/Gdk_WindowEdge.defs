@@ -1,0 +1,15 @@
+(define-enum WindowEdge
+  (in-module "Gdk")
+  (c-name "GdkWindowEdge")
+  (values
+    '("north_west" "GDK_WINDOW_EDGE_NORTH_WEST")
+    '("north" "GDK_WINDOW_EDGE_NORTH")
+    '("north_east" "GDK_WINDOW_EDGE_NORTH_EAST")
+    '("west" "GDK_WINDOW_EDGE_WEST")
+    '("east" "GDK_WINDOW_EDGE_EAST")
+    '("south_west" "GDK_WINDOW_EDGE_SOUTH_WEST")
+    '("south" "GDK_WINDOW_EDGE_SOUTH")
+    '("south_east" "GDK_WINDOW_EDGE_SOUTH_EAST")
+  )
+)
+

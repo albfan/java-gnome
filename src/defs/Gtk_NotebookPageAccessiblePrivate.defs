@@ -1,0 +1,6 @@
+(define-object NotebookPageAccessiblePrivate
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkNotebookPageAccessiblePrivate")
+)
+

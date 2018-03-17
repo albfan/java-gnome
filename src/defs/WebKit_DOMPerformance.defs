@@ -1,0 +1,39 @@
+(define-object DOMPerformance
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "DOMObject")
+  (c-name "WebKitDOMPerformance")
+)
+
+(define-method get_memory
+  (of-object "WebKitDOMPerformance")
+  (c-name "webkit_dom_performance_get_memory")
+  (return-type "void*")
+  (parameters
+  )
+)
+
+(define-method get_navigation
+  (of-object "WebKitDOMPerformance")
+  (c-name "webkit_dom_performance_get_navigation")
+  (return-type "WebKitDOMPerformanceNavigation*")
+  (parameters
+  )
+)
+
+(define-method get_timing
+  (of-object "WebKitDOMPerformance")
+  (c-name "webkit_dom_performance_get_timing")
+  (return-type "WebKitDOMPerformanceTiming*")
+  (parameters
+  )
+)
+
+(define-method now
+  (of-object "WebKitDOMPerformance")
+  (c-name "webkit_dom_performance_now")
+  (return-type "gdouble")
+  (parameters
+  )
+)
+

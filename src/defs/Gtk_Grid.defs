@@ -1,0 +1,200 @@
+(define-object Grid
+  (in-module "Gtk")
+  (parent "Container")
+  (c-name "GtkGrid")
+)
+
+(define-function Grid_new
+  (is-constructor-of "GtkGrid")
+  (c-name "gtk_grid_new")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method attach
+  (of-object "GtkGrid")
+  (c-name "gtk_grid_attach")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pchild")
+    '("gint" "pleft")
+    '("gint" "ptop")
+    '("gint" "pwidth")
+    '("gint" "pheight")
+  )
+)
+
+(define-method attach_next_to
+  (of-object "GtkGrid")
+  (c-name "gtk_grid_attach_next_to")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pchild")
+    '("GtkWidget*" "psibling")
+    '("GtkPositionType" "pside")
+    '("gint" "pwidth")
+    '("gint" "pheight")
+  )
+)
+
+(define-method get_baseline_row
+  (of-object "GtkGrid")
+  (c-name "gtk_grid_get_baseline_row")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_child_at
+  (of-object "GtkGrid")
+  (c-name "gtk_grid_get_child_at")
+  (return-type "GtkWidget*")
+  (parameters
+    '("gint" "pleft")
+    '("gint" "ptop")
+  )
+)
+
+(define-method get_column_homogeneous
+  (of-object "GtkGrid")
+  (c-name "gtk_grid_get_column_homogeneous")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_column_spacing
+  (of-object "GtkGrid")
+  (c-name "gtk_grid_get_column_spacing")
+  (return-type "guint")
+  (parameters
+  )
+)
+
+(define-method get_row_baseline_position
+  (of-object "GtkGrid")
+  (c-name "gtk_grid_get_row_baseline_position")
+  (return-type "GtkBaselinePosition")
+  (parameters
+    '("gint" "prow")
+  )
+)
+
+(define-method get_row_homogeneous
+  (of-object "GtkGrid")
+  (c-name "gtk_grid_get_row_homogeneous")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_row_spacing
+  (of-object "GtkGrid")
+  (c-name "gtk_grid_get_row_spacing")
+  (return-type "guint")
+  (parameters
+  )
+)
+
+(define-method insert_column
+  (of-object "GtkGrid")
+  (c-name "gtk_grid_insert_column")
+  (return-type "none")
+  (parameters
+    '("gint" "pposition")
+  )
+)
+
+(define-method insert_next_to
+  (of-object "GtkGrid")
+  (c-name "gtk_grid_insert_next_to")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "psibling")
+    '("GtkPositionType" "pside")
+  )
+)
+
+(define-method insert_row
+  (of-object "GtkGrid")
+  (c-name "gtk_grid_insert_row")
+  (return-type "none")
+  (parameters
+    '("gint" "pposition")
+  )
+)
+
+(define-method remove_column
+  (of-object "GtkGrid")
+  (c-name "gtk_grid_remove_column")
+  (return-type "none")
+  (parameters
+    '("gint" "pposition")
+  )
+)
+
+(define-method remove_row
+  (of-object "GtkGrid")
+  (c-name "gtk_grid_remove_row")
+  (return-type "none")
+  (parameters
+    '("gint" "pposition")
+  )
+)
+
+(define-method set_baseline_row
+  (of-object "GtkGrid")
+  (c-name "gtk_grid_set_baseline_row")
+  (return-type "none")
+  (parameters
+    '("gint" "prow")
+  )
+)
+
+(define-method set_column_homogeneous
+  (of-object "GtkGrid")
+  (c-name "gtk_grid_set_column_homogeneous")
+  (return-type "none")
+  (parameters
+    '("gboolean" "phomogeneous")
+  )
+)
+
+(define-method set_column_spacing
+  (of-object "GtkGrid")
+  (c-name "gtk_grid_set_column_spacing")
+  (return-type "none")
+  (parameters
+    '("guint" "pspacing")
+  )
+)
+
+(define-method set_row_baseline_position
+  (of-object "GtkGrid")
+  (c-name "gtk_grid_set_row_baseline_position")
+  (return-type "none")
+  (parameters
+    '("gint" "prow")
+    '("GtkBaselinePosition" "ppos")
+  )
+)
+
+(define-method set_row_homogeneous
+  (of-object "GtkGrid")
+  (c-name "gtk_grid_set_row_homogeneous")
+  (return-type "none")
+  (parameters
+    '("gboolean" "phomogeneous")
+  )
+)
+
+(define-method set_row_spacing
+  (of-object "GtkGrid")
+  (c-name "gtk_grid_set_row_spacing")
+  (return-type "none")
+  (parameters
+    '("guint" "pspacing")
+  )
+)
+

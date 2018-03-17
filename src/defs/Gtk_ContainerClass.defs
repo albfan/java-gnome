@@ -1,0 +1,52 @@
+(define-object ContainerClass
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkContainerClass")
+)
+
+(define-method find_child_property
+  (of-object "GtkContainerClass")
+  (c-name "gtk_container_class_find_child_property")
+  (return-type "GParamSpec*")
+  (parameters
+    '("const gchar*" "pproperty_name")
+  )
+)
+
+(define-method handle_border_width
+  (of-object "GtkContainerClass")
+  (c-name "gtk_container_class_handle_border_width")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method install_child_properties
+  (of-object "GtkContainerClass")
+  (c-name "gtk_container_class_install_child_properties")
+  (return-type "none")
+  (parameters
+    '("guint" "pn_pspecs")
+    '("null" "ppspecs")
+  )
+)
+
+(define-method install_child_property
+  (of-object "GtkContainerClass")
+  (c-name "gtk_container_class_install_child_property")
+  (return-type "none")
+  (parameters
+    '("guint" "pproperty_id")
+    '("GParamSpec*" "ppspec")
+  )
+)
+
+(define-method list_child_properties
+  (of-object "GtkContainerClass")
+  (c-name "gtk_container_class_list_child_properties")
+  (return-type "none")
+  (parameters
+    '("guint*" "pn_properties")
+  )
+)
+

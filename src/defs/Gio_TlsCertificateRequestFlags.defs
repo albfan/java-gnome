@@ -1,0 +1,8 @@
+(define-enum TlsCertificateRequestFlags
+  (in-module "Gio")
+  (c-name "GTlsCertificateRequestFlags")
+  (values
+    '("none" "G_TLS_CERTIFICATE_REQUEST_NONE")
+  )
+)
+

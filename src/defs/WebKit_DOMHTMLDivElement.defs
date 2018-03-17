@@ -1,0 +1,24 @@
+(define-object DOMHTMLDivElement
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "DOMHTMLElement")
+  (c-name "WebKitDOMHTMLDivElement")
+)
+
+(define-method get_align
+  (of-object "WebKitDOMHTMLDivElement")
+  (c-name "webkit_dom_html_div_element_get_align")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+
+(define-method set_align
+  (of-object "WebKitDOMHTMLDivElement")
+  (c-name "webkit_dom_html_div_element_set_align")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pvalue")
+  )
+)
+

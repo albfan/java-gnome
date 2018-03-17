@@ -1,0 +1,51 @@
+(define-object MenuAttributeIter
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GMenuAttributeIter")
+)
+
+(define-method get_next
+  (of-object "GMenuAttributeIter")
+  (c-name "get_next")
+  (return-type "gboolean")
+  (parameters
+    '("const gchar**" "pout_name")
+    '("GVariant**" "pvalue")
+  )
+)
+
+(define-method get_name
+  (of-object "GMenuAttributeIter")
+  (c-name "g_menu_attribute_iter_get_name")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_value
+  (of-object "GMenuAttributeIter")
+  (c-name "g_menu_attribute_iter_get_value")
+  (return-type "GVariant*")
+  (parameters
+  )
+)
+
+(define-method next
+  (of-object "GMenuAttributeIter")
+  (c-name "g_menu_attribute_iter_next")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+

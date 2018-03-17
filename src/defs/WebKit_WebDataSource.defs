@@ -1,0 +1,96 @@
+(define-object WebDataSource
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "WebKitWebDataSource")
+)
+
+(define-function WebDataSource_new
+  (is-constructor-of "WebKitWebDataSource")
+  (c-name "webkit_web_data_source_new")
+  (return-type "WebKitWebDataSource*")
+  (parameters
+  )
+)
+
+(define-function WebDataSource_new_with_request
+  (is-constructor-of "WebKitWebDataSource")
+  (c-name "webkit_web_data_source_new_with_request")
+  (return-type "WebKitWebDataSource*")
+  (parameters
+    '("WebKitNetworkRequest*" "prequest")
+  )
+)
+
+(define-method get_data
+  (of-object "WebKitWebDataSource")
+  (c-name "webkit_web_data_source_get_data")
+  (return-type "GString*")
+  (parameters
+  )
+)
+
+(define-method get_encoding
+  (of-object "WebKitWebDataSource")
+  (c-name "webkit_web_data_source_get_encoding")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_initial_request
+  (of-object "WebKitWebDataSource")
+  (c-name "webkit_web_data_source_get_initial_request")
+  (return-type "WebKitNetworkRequest*")
+  (parameters
+  )
+)
+
+(define-method get_main_resource
+  (of-object "WebKitWebDataSource")
+  (c-name "webkit_web_data_source_get_main_resource")
+  (return-type "WebKitWebResource*")
+  (parameters
+  )
+)
+
+(define-method get_request
+  (of-object "WebKitWebDataSource")
+  (c-name "webkit_web_data_source_get_request")
+  (return-type "WebKitNetworkRequest*")
+  (parameters
+  )
+)
+
+(define-method get_subresources
+  (of-object "WebKitWebDataSource")
+  (c-name "webkit_web_data_source_get_subresources")
+  (return-type "GList*")
+  (parameters
+  )
+)
+
+(define-method get_unreachable_uri
+  (of-object "WebKitWebDataSource")
+  (c-name "webkit_web_data_source_get_unreachable_uri")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_web_frame
+  (of-object "WebKitWebDataSource")
+  (c-name "webkit_web_data_source_get_web_frame")
+  (return-type "WebKitWebFrame*")
+  (parameters
+  )
+)
+
+(define-method is_loading
+  (of-object "WebKitWebDataSource")
+  (c-name "webkit_web_data_source_is_loading")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+

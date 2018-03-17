@@ -1,0 +1,88 @@
+(define-object ProxyAddress
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "InetSocketAddress")
+  (c-name "GProxyAddress")
+)
+
+(define-function ProxyAddress_new
+  (is-constructor-of "GProxyAddress")
+  (c-name "g_proxy_address_new")
+  (return-type "GSocketAddress*")
+  (parameters
+    '("GInetAddress*" "pinetaddr")
+    '("guint16" "pport")
+    '("const gchar*" "pprotocol")
+    '("const gchar*" "pdest_hostname")
+    '("guint16" "pdest_port")
+    '("const gchar*" "pusername")
+    '("const gchar*" "ppassword")
+  )
+)
+
+(define-method get_destination_hostname
+  (of-object "GProxyAddress")
+  (c-name "g_proxy_address_get_destination_hostname")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_destination_port
+  (of-object "GProxyAddress")
+  (c-name "g_proxy_address_get_destination_port")
+  (return-type "guint16")
+  (parameters
+  )
+)
+
+(define-method get_destination_protocol
+  (of-object "GProxyAddress")
+  (c-name "g_proxy_address_get_destination_protocol")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_password
+  (of-object "GProxyAddress")
+  (c-name "g_proxy_address_get_password")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_protocol
+  (of-object "GProxyAddress")
+  (c-name "g_proxy_address_get_protocol")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_uri
+  (of-object "GProxyAddress")
+  (c-name "g_proxy_address_get_uri")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_username
+  (of-object "GProxyAddress")
+  (c-name "g_proxy_address_get_username")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+

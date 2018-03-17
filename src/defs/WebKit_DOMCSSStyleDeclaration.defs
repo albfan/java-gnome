@@ -1,0 +1,117 @@
+(define-object DOMCSSStyleDeclaration
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "DOMObject")
+  (c-name "WebKitDOMCSSStyleDeclaration")
+)
+
+(define-method get_css_text
+  (of-object "WebKitDOMCSSStyleDeclaration")
+  (c-name "webkit_dom_css_style_declaration_get_css_text")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+
+(define-method get_length
+  (of-object "WebKitDOMCSSStyleDeclaration")
+  (c-name "webkit_dom_css_style_declaration_get_length")
+  (return-type "gulong")
+  (parameters
+  )
+)
+
+(define-method get_parent_rule
+  (of-object "WebKitDOMCSSStyleDeclaration")
+  (c-name "webkit_dom_css_style_declaration_get_parent_rule")
+  (return-type "WebKitDOMCSSRule*")
+  (parameters
+  )
+)
+
+(define-method get_property_css_value
+  (of-object "WebKitDOMCSSStyleDeclaration")
+  (c-name "webkit_dom_css_style_declaration_get_property_css_value")
+  (return-type "WebKitDOMCSSValue*")
+  (parameters
+    '("const gchar*" "ppropertyName")
+  )
+)
+
+(define-method get_property_priority
+  (of-object "WebKitDOMCSSStyleDeclaration")
+  (c-name "webkit_dom_css_style_declaration_get_property_priority")
+  (return-type "gchar*")
+  (parameters
+    '("const gchar*" "ppropertyName")
+  )
+)
+
+(define-method get_property_shorthand
+  (of-object "WebKitDOMCSSStyleDeclaration")
+  (c-name "webkit_dom_css_style_declaration_get_property_shorthand")
+  (return-type "gchar*")
+  (parameters
+    '("const gchar*" "ppropertyName")
+  )
+)
+
+(define-method get_property_value
+  (of-object "WebKitDOMCSSStyleDeclaration")
+  (c-name "webkit_dom_css_style_declaration_get_property_value")
+  (return-type "gchar*")
+  (parameters
+    '("const gchar*" "ppropertyName")
+  )
+)
+
+(define-method is_property_implicit
+  (of-object "WebKitDOMCSSStyleDeclaration")
+  (c-name "webkit_dom_css_style_declaration_is_property_implicit")
+  (return-type "gboolean")
+  (parameters
+    '("const gchar*" "ppropertyName")
+  )
+)
+
+(define-method item
+  (of-object "WebKitDOMCSSStyleDeclaration")
+  (c-name "webkit_dom_css_style_declaration_item")
+  (return-type "gchar*")
+  (parameters
+    '("gulong" "pindex")
+  )
+)
+
+(define-method remove_property
+  (of-object "WebKitDOMCSSStyleDeclaration")
+  (c-name "webkit_dom_css_style_declaration_remove_property")
+  (return-type "gchar*")
+  (parameters
+    '("const gchar*" "ppropertyName")
+    '("GError**" "error")
+  )
+)
+
+(define-method set_css_text
+  (of-object "WebKitDOMCSSStyleDeclaration")
+  (c-name "webkit_dom_css_style_declaration_set_css_text")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pvalue")
+    '("GError**" "error")
+  )
+)
+
+(define-method set_property
+  (of-object "WebKitDOMCSSStyleDeclaration")
+  (c-name "webkit_dom_css_style_declaration_set_property")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "ppropertyName")
+    '("const gchar*" "pvalue")
+    '("const gchar*" "ppriority")
+    '("GError**" "error")
+  )
+)
+

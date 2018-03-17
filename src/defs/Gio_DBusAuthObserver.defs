@@ -1,0 +1,44 @@
+(define-object DBusAuthObserver
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GDBusAuthObserver")
+)
+
+(define-function DBusAuthObserver_new
+  (is-constructor-of "GDBusAuthObserver")
+  (c-name "g_dbus_auth_observer_new")
+  (return-type "GDBusAuthObserver*")
+  (parameters
+  )
+)
+
+(define-method allow_mechanism
+  (of-object "GDBusAuthObserver")
+  (c-name "g_dbus_auth_observer_allow_mechanism")
+  (return-type "gboolean")
+  (parameters
+    '("const gchar*" "pmechanism")
+  )
+)
+
+(define-method authorize_authenticated_peer
+  (of-object "GDBusAuthObserver")
+  (c-name "g_dbus_auth_observer_authorize_authenticated_peer")
+  (return-type "gboolean")
+  (parameters
+    '("GIOStream*" "pstream")
+    '("GCredentials*" "pcredentials")
+  )
+)
+

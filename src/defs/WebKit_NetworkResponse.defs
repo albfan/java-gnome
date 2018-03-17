@@ -1,0 +1,49 @@
+(define-object NetworkResponse
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "WebKitNetworkResponse")
+)
+
+(define-function NetworkResponse_new
+  (is-constructor-of "WebKitNetworkResponse")
+  (c-name "webkit_network_response_new")
+  (return-type "WebKitNetworkResponse*")
+  (parameters
+    '("const gchar*" "puri")
+  )
+)
+
+(define-method get_message
+  (of-object "WebKitNetworkResponse")
+  (c-name "webkit_network_response_get_message")
+  (return-type "SoupMessage*")
+  (parameters
+  )
+)
+
+(define-method get_suggested_filename
+  (of-object "WebKitNetworkResponse")
+  (c-name "webkit_network_response_get_suggested_filename")
+  (return-type "const char*")
+  (parameters
+  )
+)
+
+(define-method get_uri
+  (of-object "WebKitNetworkResponse")
+  (c-name "webkit_network_response_get_uri")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method set_uri
+  (of-object "WebKitNetworkResponse")
+  (c-name "webkit_network_response_set_uri")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "puri")
+  )
+)
+

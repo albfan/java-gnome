@@ -1,0 +1,15 @@
+(define-object Atom
+  (in-module "Gdk")
+  (import-header "gdk/gdk.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GdkAtom")
+)
+
+(define-method name
+  (of-object "GdkAtom")
+  (c-name "gdk_atom_name")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+

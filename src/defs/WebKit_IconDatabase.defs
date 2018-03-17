@@ -1,0 +1,50 @@
+(define-object IconDatabase
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "WebKitIconDatabase")
+)
+
+(define-method clear
+  (of-object "WebKitIconDatabase")
+  (c-name "webkit_icon_database_clear")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method get_icon_pixbuf
+  (of-object "WebKitIconDatabase")
+  (c-name "webkit_icon_database_get_icon_pixbuf")
+  (return-type "GdkPixbuf*")
+  (parameters
+    '("const gchar*" "ppage_uri")
+  )
+)
+
+(define-method get_icon_uri
+  (of-object "WebKitIconDatabase")
+  (c-name "webkit_icon_database_get_icon_uri")
+  (return-type "gchar*")
+  (parameters
+    '("const gchar*" "ppage_uri")
+  )
+)
+
+(define-method get_path
+  (of-object "WebKitIconDatabase")
+  (c-name "webkit_icon_database_get_path")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method set_path
+  (of-object "WebKitIconDatabase")
+  (c-name "webkit_icon_database_set_path")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "ppath")
+  )
+)
+

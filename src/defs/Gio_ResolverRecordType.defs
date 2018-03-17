@@ -1,0 +1,12 @@
+(define-enum ResolverRecordType
+  (in-module "Gio")
+  (c-name "GResolverRecordType")
+  (values
+    '("srv" "G_RESOLVER_RECORD_SRV")
+    '("mx" "G_RESOLVER_RECORD_MX")
+    '("txt" "G_RESOLVER_RECORD_TXT")
+    '("soa" "G_RESOLVER_RECORD_SOA")
+    '("ns" "G_RESOLVER_RECORD_NS")
+  )
+)
+

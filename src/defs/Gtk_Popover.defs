@@ -1,0 +1,179 @@
+(define-object Popover
+  (in-module "Gtk")
+  (parent "Bin")
+  (c-name "GtkPopover")
+)
+
+(define-function Popover_new
+  (is-constructor-of "GtkPopover")
+  (c-name "gtk_popover_new")
+  (return-type "GtkWidget*")
+  (parameters
+    '("GtkWidget*" "prelative_to")
+  )
+)
+
+(define-function Popover_new_from_model
+  (is-constructor-of "GtkPopover")
+  (c-name "gtk_popover_new_from_model")
+  (return-type "GtkWidget*")
+  (parameters
+    '("GtkWidget*" "prelative_to")
+    '("GMenuModel*" "pmodel")
+  )
+)
+
+(define-method closed
+  (of-object "GtkPopover")
+  (c-name "closed")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method bind_model
+  (of-object "GtkPopover")
+  (c-name "gtk_popover_bind_model")
+  (return-type "none")
+  (parameters
+    '("GMenuModel*" "pmodel")
+    '("const gchar*" "paction_namespace")
+  )
+)
+
+(define-method get_constrain_to
+  (of-object "GtkPopover")
+  (c-name "gtk_popover_get_constrain_to")
+  (return-type "GtkPopoverConstraint")
+  (parameters
+  )
+)
+
+(define-method get_default_widget
+  (of-object "GtkPopover")
+  (c-name "gtk_popover_get_default_widget")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method get_modal
+  (of-object "GtkPopover")
+  (c-name "gtk_popover_get_modal")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_pointing_to
+  (of-object "GtkPopover")
+  (c-name "gtk_popover_get_pointing_to")
+  (return-type "gboolean")
+  (parameters
+    '("GdkRectangle*" "prect")
+  )
+)
+
+(define-method get_position
+  (of-object "GtkPopover")
+  (c-name "gtk_popover_get_position")
+  (return-type "GtkPositionType")
+  (parameters
+  )
+)
+
+(define-method get_relative_to
+  (of-object "GtkPopover")
+  (c-name "gtk_popover_get_relative_to")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method get_transitions_enabled
+  (of-object "GtkPopover")
+  (c-name "gtk_popover_get_transitions_enabled")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method popdown
+  (of-object "GtkPopover")
+  (c-name "gtk_popover_popdown")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method popup
+  (of-object "GtkPopover")
+  (c-name "gtk_popover_popup")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method set_constrain_to
+  (of-object "GtkPopover")
+  (c-name "gtk_popover_set_constrain_to")
+  (return-type "none")
+  (parameters
+    '("GtkPopoverConstraint" "pconstraint")
+  )
+)
+
+(define-method set_default_widget
+  (of-object "GtkPopover")
+  (c-name "gtk_popover_set_default_widget")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pwidget")
+  )
+)
+
+(define-method set_modal
+  (of-object "GtkPopover")
+  (c-name "gtk_popover_set_modal")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pmodal")
+  )
+)
+
+(define-method set_pointing_to
+  (of-object "GtkPopover")
+  (c-name "gtk_popover_set_pointing_to")
+  (return-type "none")
+  (parameters
+    '("const GdkRectangle*" "prect")
+  )
+)
+
+(define-method set_position
+  (of-object "GtkPopover")
+  (c-name "gtk_popover_set_position")
+  (return-type "none")
+  (parameters
+    '("GtkPositionType" "pposition")
+  )
+)
+
+(define-method set_relative_to
+  (of-object "GtkPopover")
+  (c-name "gtk_popover_set_relative_to")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "prelative_to")
+  )
+)
+
+(define-method set_transitions_enabled
+  (of-object "GtkPopover")
+  (c-name "gtk_popover_set_transitions_enabled")
+  (return-type "none")
+  (parameters
+    '("gboolean" "ptransitions_enabled")
+  )
+)
+

@@ -1,0 +1,43 @@
+(define-object DOMAudioTrackList
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "DOMObject")
+  (c-name "WebKitDOMAudioTrackList")
+)
+
+(define-method dispatch_event
+  (of-object "WebKitDOMAudioTrackList")
+  (c-name "webkit_dom_audio_track_list_dispatch_event")
+  (return-type "gboolean")
+  (parameters
+    '("WebKitDOMEvent*" "pevt")
+    '("GError**" "error")
+  )
+)
+
+(define-method get_length
+  (of-object "WebKitDOMAudioTrackList")
+  (c-name "webkit_dom_audio_track_list_get_length")
+  (return-type "gulong")
+  (parameters
+  )
+)
+
+(define-method get_track_by_id
+  (of-object "WebKitDOMAudioTrackList")
+  (c-name "webkit_dom_audio_track_list_get_track_by_id")
+  (return-type "WebKitDOMAudioTrack*")
+  (parameters
+    '("const gchar*" "pid")
+  )
+)
+
+(define-method item
+  (of-object "WebKitDOMAudioTrackList")
+  (c-name "webkit_dom_audio_track_list_item")
+  (return-type "WebKitDOMAudioTrack*")
+  (parameters
+    '("gulong" "pindex")
+  )
+)
+

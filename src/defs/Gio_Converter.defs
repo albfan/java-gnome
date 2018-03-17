@@ -1,0 +1,41 @@
+(define-object Converter
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GConverter")
+)
+
+(define-method convert
+  (of-object "GConverter")
+  (c-name "convert")
+  (return-type "GConverterResult")
+  (parameters
+    '("null" "pinbuf")
+    '("gsize" "pinbuf_size")
+    '("null" "poutbuf")
+    '("gsize" "poutbuf_size")
+    '("GConverterFlags" "pflags")
+    '("gsize*" "pbytes_read")
+    '("gsize*" "pbytes_written")
+    '("GError**" "error")
+  )
+)
+
+(define-method reset
+  (of-object "GConverter")
+  (c-name "reset")
+  (return-type "none")
+  (parameters
+  )
+)
+

@@ -1,0 +1,7 @@
+(define-object DOMEntityReference
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "DOMNode")
+  (c-name "WebKitDOMEntityReference")
+)
+

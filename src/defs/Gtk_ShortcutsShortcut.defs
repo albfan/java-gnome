@@ -1,0 +1,6 @@
+(define-object ShortcutsShortcut
+  (in-module "Gtk")
+  (parent "Box")
+  (c-name "GtkShortcutsShortcut")
+)
+

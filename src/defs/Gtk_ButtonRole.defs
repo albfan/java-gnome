@@ -1,0 +1,10 @@
+(define-enum ButtonRole
+  (in-module "Gtk")
+  (c-name "GtkButtonRole")
+  (values
+    '("normal" "GTK_BUTTON_ROLE_NORMAL")
+    '("check" "GTK_BUTTON_ROLE_CHECK")
+    '("radio" "GTK_BUTTON_ROLE_RADIO")
+  )
+)
+

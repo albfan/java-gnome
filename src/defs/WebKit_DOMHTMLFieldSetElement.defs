@@ -1,0 +1,98 @@
+(define-object DOMHTMLFieldSetElement
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "DOMHTMLElement")
+  (c-name "WebKitDOMHTMLFieldSetElement")
+)
+
+(define-method check_validity
+  (of-object "WebKitDOMHTMLFieldSetElement")
+  (c-name "webkit_dom_html_field_set_element_check_validity")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_disabled
+  (of-object "WebKitDOMHTMLFieldSetElement")
+  (c-name "webkit_dom_html_field_set_element_get_disabled")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_elements
+  (of-object "WebKitDOMHTMLFieldSetElement")
+  (c-name "webkit_dom_html_field_set_element_get_elements")
+  (return-type "WebKitDOMHTMLCollection*")
+  (parameters
+  )
+)
+
+(define-method get_form
+  (of-object "WebKitDOMHTMLFieldSetElement")
+  (c-name "webkit_dom_html_field_set_element_get_form")
+  (return-type "WebKitDOMHTMLFormElement*")
+  (parameters
+  )
+)
+
+(define-method get_name
+  (of-object "WebKitDOMHTMLFieldSetElement")
+  (c-name "webkit_dom_html_field_set_element_get_name")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+
+(define-method get_validation_message
+  (of-object "WebKitDOMHTMLFieldSetElement")
+  (c-name "webkit_dom_html_field_set_element_get_validation_message")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+
+(define-method get_validity
+  (of-object "WebKitDOMHTMLFieldSetElement")
+  (c-name "webkit_dom_html_field_set_element_get_validity")
+  (return-type "WebKitDOMValidityState*")
+  (parameters
+  )
+)
+
+(define-method get_will_validate
+  (of-object "WebKitDOMHTMLFieldSetElement")
+  (c-name "webkit_dom_html_field_set_element_get_will_validate")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method set_custom_validity
+  (of-object "WebKitDOMHTMLFieldSetElement")
+  (c-name "webkit_dom_html_field_set_element_set_custom_validity")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "perror")
+  )
+)
+
+(define-method set_disabled
+  (of-object "WebKitDOMHTMLFieldSetElement")
+  (c-name "webkit_dom_html_field_set_element_set_disabled")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pvalue")
+  )
+)
+
+(define-method set_name
+  (of-object "WebKitDOMHTMLFieldSetElement")
+  (c-name "webkit_dom_html_field_set_element_set_name")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pvalue")
+  )
+)
+

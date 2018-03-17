@@ -1,0 +1,31 @@
+(define-object CellEditable
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkCellEditable")
+)
+
+(define-method editing_done
+  (of-object "GtkCellEditable")
+  (c-name "editing_done")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method remove_widget
+  (of-object "GtkCellEditable")
+  (c-name "remove_widget")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method start_editing
+  (of-object "GtkCellEditable")
+  (c-name "start_editing")
+  (return-type "none")
+  (parameters
+    '("GdkEvent*" "pevent")
+  )
+)
+

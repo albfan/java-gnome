@@ -1,0 +1,69 @@
+(define-object TableCell
+  (in-module "Atk")
+  (import-header "atk/atk.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "AtkTableCell")
+)
+
+(define-method get_column_header_cells
+  (of-object "AtkTableCell")
+  (c-name "get_column_header_cells")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method get_column_span
+  (of-object "AtkTableCell")
+  (c-name "get_column_span")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_position
+  (of-object "AtkTableCell")
+  (c-name "get_position")
+  (return-type "gboolean")
+  (parameters
+    '("gint*" "prow")
+    '("gint*" "pcolumn")
+  )
+)
+
+(define-method get_row_column_span
+  (of-object "AtkTableCell")
+  (c-name "get_row_column_span")
+  (return-type "gboolean")
+  (parameters
+    '("gint*" "prow")
+    '("gint*" "pcolumn")
+    '("gint*" "prow_span")
+    '("gint*" "pcolumn_span")
+  )
+)
+
+(define-method get_row_header_cells
+  (of-object "AtkTableCell")
+  (c-name "get_row_header_cells")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method get_row_span
+  (of-object "AtkTableCell")
+  (c-name "get_row_span")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_table
+  (of-object "AtkTableCell")
+  (c-name "get_table")
+  (return-type "AtkObject*")
+  (parameters
+  )
+)
+

@@ -1,0 +1,6 @@
+(define-object LevelBarAccessible
+  (in-module "Gtk")
+  (parent "WidgetAccessible")
+  (c-name "GtkLevelBarAccessible")
+)
+

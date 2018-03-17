@@ -1,0 +1,23 @@
+(define-object GestureZoom
+  (in-module "Gtk")
+  (parent "Gesture")
+  (c-name "GtkGestureZoom")
+)
+
+(define-function GestureZoom_new
+  (is-constructor-of "GtkGestureZoom")
+  (c-name "gtk_gesture_zoom_new")
+  (return-type "GtkGesture*")
+  (parameters
+    '("GtkWidget*" "pwidget")
+  )
+)
+
+(define-method get_scale_delta
+  (of-object "GtkGestureZoom")
+  (c-name "gtk_gesture_zoom_get_scale_delta")
+  (return-type "gdouble")
+  (parameters
+  )
+)
+

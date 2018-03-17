@@ -1,0 +1,42 @@
+(define-object FilterOutputStream
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "OutputStream")
+  (c-name "GFilterOutputStream")
+)
+
+(define-method get_base_stream
+  (of-object "GFilterOutputStream")
+  (c-name "g_filter_output_stream_get_base_stream")
+  (return-type "GOutputStream*")
+  (parameters
+  )
+)
+
+(define-method get_close_base_stream
+  (of-object "GFilterOutputStream")
+  (c-name "g_filter_output_stream_get_close_base_stream")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method set_close_base_stream
+  (of-object "GFilterOutputStream")
+  (c-name "g_filter_output_stream_set_close_base_stream")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pclose_base")
+  )
+)
+

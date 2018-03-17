@@ -1,0 +1,95 @@
+(define-object ScaleButton
+  (in-module "Gtk")
+  (parent "Button")
+  (c-name "GtkScaleButton")
+)
+
+(define-function ScaleButton_new
+  (is-constructor-of "GtkScaleButton")
+  (c-name "gtk_scale_button_new")
+  (return-type "GtkWidget*")
+  (parameters
+    '("GtkIconSize" "psize")
+    '("gdouble" "pmin")
+    '("gdouble" "pmax")
+    '("gdouble" "pstep")
+    '("null" "picons")
+  )
+)
+
+(define-method value_changed
+  (of-object "GtkScaleButton")
+  (c-name "value_changed")
+  (return-type "none")
+  (parameters
+    '("gdouble" "pvalue")
+  )
+)
+
+(define-method get_adjustment
+  (of-object "GtkScaleButton")
+  (c-name "gtk_scale_button_get_adjustment")
+  (return-type "GtkAdjustment*")
+  (parameters
+  )
+)
+
+(define-method get_minus_button
+  (of-object "GtkScaleButton")
+  (c-name "gtk_scale_button_get_minus_button")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method get_plus_button
+  (of-object "GtkScaleButton")
+  (c-name "gtk_scale_button_get_plus_button")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method get_popup
+  (of-object "GtkScaleButton")
+  (c-name "gtk_scale_button_get_popup")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method get_value
+  (of-object "GtkScaleButton")
+  (c-name "gtk_scale_button_get_value")
+  (return-type "gdouble")
+  (parameters
+  )
+)
+
+(define-method set_adjustment
+  (of-object "GtkScaleButton")
+  (c-name "gtk_scale_button_set_adjustment")
+  (return-type "none")
+  (parameters
+    '("GtkAdjustment*" "padjustment")
+  )
+)
+
+(define-method set_icons
+  (of-object "GtkScaleButton")
+  (c-name "gtk_scale_button_set_icons")
+  (return-type "none")
+  (parameters
+    '("null" "picons")
+  )
+)
+
+(define-method set_value
+  (of-object "GtkScaleButton")
+  (c-name "gtk_scale_button_set_value")
+  (return-type "none")
+  (parameters
+    '("gdouble" "pvalue")
+  )
+)
+

@@ -1,0 +1,24 @@
+(define-object DOMCSSRuleList
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "DOMObject")
+  (c-name "WebKitDOMCSSRuleList")
+)
+
+(define-method get_length
+  (of-object "WebKitDOMCSSRuleList")
+  (c-name "webkit_dom_css_rule_list_get_length")
+  (return-type "gulong")
+  (parameters
+  )
+)
+
+(define-method item
+  (of-object "WebKitDOMCSSRuleList")
+  (c-name "webkit_dom_css_rule_list_item")
+  (return-type "WebKitDOMCSSRule*")
+  (parameters
+    '("gulong" "pindex")
+  )
+)
+

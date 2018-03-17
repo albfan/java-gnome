@@ -1,0 +1,6 @@
+(define-object RecentChooserMenuPrivate
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkRecentChooserMenuPrivate")
+)
+

@@ -1,0 +1,146 @@
+(define-object FileEnumerator
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GFileEnumerator")
+)
+
+(define-method close_async
+  (of-object "GFileEnumerator")
+  (c-name "close_async")
+  (return-type "none")
+  (parameters
+    '("int" "pio_priority")
+    '("GCancellable*" "pcancellable")
+    '("GAsyncReadyCallback" "pcallback")
+    '("gpointer" "puser_data")
+  )
+)
+
+(define-method close_finish
+  (of-object "GFileEnumerator")
+  (c-name "close_finish")
+  (return-type "gboolean")
+  (parameters
+    '("GAsyncResult*" "presult")
+    '("GError**" "error")
+  )
+)
+
+(define-method close_fn
+  (of-object "GFileEnumerator")
+  (c-name "close_fn")
+  (return-type "gboolean")
+  (parameters
+    '("GCancellable*" "pcancellable")
+    '("GError**" "error")
+  )
+)
+
+(define-method next_file
+  (of-object "GFileEnumerator")
+  (c-name "next_file")
+  (return-type "GFileInfo*")
+  (parameters
+    '("GCancellable*" "pcancellable")
+    '("GError**" "error")
+  )
+)
+
+(define-method next_files_async
+  (of-object "GFileEnumerator")
+  (c-name "next_files_async")
+  (return-type "none")
+  (parameters
+    '("int" "pnum_files")
+    '("int" "pio_priority")
+    '("GCancellable*" "pcancellable")
+    '("GAsyncReadyCallback" "pcallback")
+    '("gpointer" "puser_data")
+  )
+)
+
+(define-method next_files_finish
+  (of-object "GFileEnumerator")
+  (c-name "next_files_finish")
+  (return-type "GList*")
+  (parameters
+    '("GAsyncResult*" "presult")
+    '("GError**" "error")
+  )
+)
+
+(define-method close
+  (of-object "GFileEnumerator")
+  (c-name "g_file_enumerator_close")
+  (return-type "gboolean")
+  (parameters
+    '("GCancellable*" "pcancellable")
+    '("GError**" "error")
+  )
+)
+
+(define-method get_child
+  (of-object "GFileEnumerator")
+  (c-name "g_file_enumerator_get_child")
+  (return-type "GFile*")
+  (parameters
+    '("GFileInfo*" "pinfo")
+  )
+)
+
+(define-method get_container
+  (of-object "GFileEnumerator")
+  (c-name "g_file_enumerator_get_container")
+  (return-type "GFile*")
+  (parameters
+  )
+)
+
+(define-method has_pending
+  (of-object "GFileEnumerator")
+  (c-name "g_file_enumerator_has_pending")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method is_closed
+  (of-object "GFileEnumerator")
+  (c-name "g_file_enumerator_is_closed")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method iterate
+  (of-object "GFileEnumerator")
+  (c-name "g_file_enumerator_iterate")
+  (return-type "gboolean")
+  (parameters
+    '("GFileInfo**" "pout_info")
+    '("GFile**" "pout_child")
+    '("GCancellable*" "pcancellable")
+    '("GError**" "error")
+  )
+)
+
+(define-method set_pending
+  (of-object "GFileEnumerator")
+  (c-name "g_file_enumerator_set_pending")
+  (return-type "none")
+  (parameters
+    '("gboolean" "ppending")
+  )
+)
+

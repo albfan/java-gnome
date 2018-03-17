@@ -1,0 +1,6 @@
+(define-object ProgressBarAccessible
+  (in-module "Gtk")
+  (parent "WidgetAccessible")
+  (c-name "GtkProgressBarAccessible")
+)
+

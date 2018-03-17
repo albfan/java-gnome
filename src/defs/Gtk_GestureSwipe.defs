@@ -1,0 +1,25 @@
+(define-object GestureSwipe
+  (in-module "Gtk")
+  (parent "GestureSingle")
+  (c-name "GtkGestureSwipe")
+)
+
+(define-function GestureSwipe_new
+  (is-constructor-of "GtkGestureSwipe")
+  (c-name "gtk_gesture_swipe_new")
+  (return-type "GtkGesture*")
+  (parameters
+    '("GtkWidget*" "pwidget")
+  )
+)
+
+(define-method get_velocity
+  (of-object "GtkGestureSwipe")
+  (c-name "gtk_gesture_swipe_get_velocity")
+  (return-type "gboolean")
+  (parameters
+    '("gdouble*" "pvelocity_x")
+    '("gdouble*" "pvelocity_y")
+  )
+)
+

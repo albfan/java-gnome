@@ -1,0 +1,395 @@
+(define-object Display
+  (in-module "Gdk")
+  (import-header "gdk/gdk.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GdkDisplay")
+)
+
+(define-method beep
+  (of-object "GdkDisplay")
+  (c-name "gdk_display_beep")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method close
+  (of-object "GdkDisplay")
+  (c-name "gdk_display_close")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method device_is_grabbed
+  (of-object "GdkDisplay")
+  (c-name "gdk_display_device_is_grabbed")
+  (return-type "gboolean")
+  (parameters
+    '("GdkDevice*" "pdevice")
+  )
+)
+
+(define-method flush
+  (of-object "GdkDisplay")
+  (c-name "gdk_display_flush")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method get_app_launch_context
+  (of-object "GdkDisplay")
+  (c-name "gdk_display_get_app_launch_context")
+  (return-type "GdkAppLaunchContext*")
+  (parameters
+  )
+)
+
+(define-method get_default_cursor_size
+  (of-object "GdkDisplay")
+  (c-name "gdk_display_get_default_cursor_size")
+  (return-type "guint")
+  (parameters
+  )
+)
+
+(define-method get_default_group
+  (of-object "GdkDisplay")
+  (c-name "gdk_display_get_default_group")
+  (return-type "GdkWindow*")
+  (parameters
+  )
+)
+
+(define-method get_default_screen
+  (of-object "GdkDisplay")
+  (c-name "gdk_display_get_default_screen")
+  (return-type "GdkScreen*")
+  (parameters
+  )
+)
+
+(define-method get_default_seat
+  (of-object "GdkDisplay")
+  (c-name "gdk_display_get_default_seat")
+  (return-type "GdkSeat*")
+  (parameters
+  )
+)
+
+(define-method get_device_manager
+  (of-object "GdkDisplay")
+  (c-name "gdk_display_get_device_manager")
+  (return-type "GdkDeviceManager*")
+  (parameters
+  )
+)
+
+(define-method get_event
+  (of-object "GdkDisplay")
+  (c-name "gdk_display_get_event")
+  (return-type "GdkEvent*")
+  (parameters
+  )
+)
+
+(define-method get_maximal_cursor_size
+  (of-object "GdkDisplay")
+  (c-name "gdk_display_get_maximal_cursor_size")
+  (return-type "none")
+  (parameters
+    '("guint*" "pwidth")
+    '("guint*" "pheight")
+  )
+)
+
+(define-method get_monitor
+  (of-object "GdkDisplay")
+  (c-name "gdk_display_get_monitor")
+  (return-type "GdkMonitor*")
+  (parameters
+    '("int" "pmonitor_num")
+  )
+)
+
+(define-method get_monitor_at_point
+  (of-object "GdkDisplay")
+  (c-name "gdk_display_get_monitor_at_point")
+  (return-type "GdkMonitor*")
+  (parameters
+    '("int" "px")
+    '("int" "py")
+  )
+)
+
+(define-method get_monitor_at_window
+  (of-object "GdkDisplay")
+  (c-name "gdk_display_get_monitor_at_window")
+  (return-type "GdkMonitor*")
+  (parameters
+    '("GdkWindow*" "pwindow")
+  )
+)
+
+(define-method get_n_monitors
+  (of-object "GdkDisplay")
+  (c-name "gdk_display_get_n_monitors")
+  (return-type "int")
+  (parameters
+  )
+)
+
+(define-method get_n_screens
+  (of-object "GdkDisplay")
+  (c-name "gdk_display_get_n_screens")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_name
+  (of-object "GdkDisplay")
+  (c-name "gdk_display_get_name")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_pointer
+  (of-object "GdkDisplay")
+  (c-name "gdk_display_get_pointer")
+  (return-type "none")
+  (parameters
+    '("GdkScreen**" "pscreen")
+    '("gint*" "px")
+    '("gint*" "py")
+    '("GdkModifierType*" "pmask")
+  )
+)
+
+(define-method get_primary_monitor
+  (of-object "GdkDisplay")
+  (c-name "gdk_display_get_primary_monitor")
+  (return-type "GdkMonitor*")
+  (parameters
+  )
+)
+
+(define-method get_screen
+  (of-object "GdkDisplay")
+  (c-name "gdk_display_get_screen")
+  (return-type "GdkScreen*")
+  (parameters
+    '("gint" "pscreen_num")
+  )
+)
+
+(define-method get_window_at_pointer
+  (of-object "GdkDisplay")
+  (c-name "gdk_display_get_window_at_pointer")
+  (return-type "GdkWindow*")
+  (parameters
+    '("gint*" "pwin_x")
+    '("gint*" "pwin_y")
+  )
+)
+
+(define-method has_pending
+  (of-object "GdkDisplay")
+  (c-name "gdk_display_has_pending")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method is_closed
+  (of-object "GdkDisplay")
+  (c-name "gdk_display_is_closed")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method keyboard_ungrab
+  (of-object "GdkDisplay")
+  (c-name "gdk_display_keyboard_ungrab")
+  (return-type "none")
+  (parameters
+    '("guint32" "ptime_")
+  )
+)
+
+(define-method list_devices
+  (of-object "GdkDisplay")
+  (c-name "gdk_display_list_devices")
+  (return-type "GList*")
+  (parameters
+  )
+)
+
+(define-method list_seats
+  (of-object "GdkDisplay")
+  (c-name "gdk_display_list_seats")
+  (return-type "GList*")
+  (parameters
+  )
+)
+
+(define-method notify_startup_complete
+  (of-object "GdkDisplay")
+  (c-name "gdk_display_notify_startup_complete")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pstartup_id")
+  )
+)
+
+(define-method peek_event
+  (of-object "GdkDisplay")
+  (c-name "gdk_display_peek_event")
+  (return-type "GdkEvent*")
+  (parameters
+  )
+)
+
+(define-method pointer_is_grabbed
+  (of-object "GdkDisplay")
+  (c-name "gdk_display_pointer_is_grabbed")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method pointer_ungrab
+  (of-object "GdkDisplay")
+  (c-name "gdk_display_pointer_ungrab")
+  (return-type "none")
+  (parameters
+    '("guint32" "ptime_")
+  )
+)
+
+(define-method put_event
+  (of-object "GdkDisplay")
+  (c-name "gdk_display_put_event")
+  (return-type "none")
+  (parameters
+    '("const GdkEvent*" "pevent")
+  )
+)
+
+(define-method request_selection_notification
+  (of-object "GdkDisplay")
+  (c-name "gdk_display_request_selection_notification")
+  (return-type "gboolean")
+  (parameters
+    '("GdkAtom" "pselection")
+  )
+)
+
+(define-method set_double_click_distance
+  (of-object "GdkDisplay")
+  (c-name "gdk_display_set_double_click_distance")
+  (return-type "none")
+  (parameters
+    '("guint" "pdistance")
+  )
+)
+
+(define-method set_double_click_time
+  (of-object "GdkDisplay")
+  (c-name "gdk_display_set_double_click_time")
+  (return-type "none")
+  (parameters
+    '("guint" "pmsec")
+  )
+)
+
+(define-method store_clipboard
+  (of-object "GdkDisplay")
+  (c-name "gdk_display_store_clipboard")
+  (return-type "none")
+  (parameters
+    '("GdkWindow*" "pclipboard_window")
+    '("guint32" "ptime_")
+    '("null" "ptargets")
+    '("gint" "pn_targets")
+  )
+)
+
+(define-method supports_clipboard_persistence
+  (of-object "GdkDisplay")
+  (c-name "gdk_display_supports_clipboard_persistence")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method supports_composite
+  (of-object "GdkDisplay")
+  (c-name "gdk_display_supports_composite")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method supports_cursor_alpha
+  (of-object "GdkDisplay")
+  (c-name "gdk_display_supports_cursor_alpha")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method supports_cursor_color
+  (of-object "GdkDisplay")
+  (c-name "gdk_display_supports_cursor_color")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method supports_input_shapes
+  (of-object "GdkDisplay")
+  (c-name "gdk_display_supports_input_shapes")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method supports_selection_notification
+  (of-object "GdkDisplay")
+  (c-name "gdk_display_supports_selection_notification")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method supports_shapes
+  (of-object "GdkDisplay")
+  (c-name "gdk_display_supports_shapes")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method sync
+  (of-object "GdkDisplay")
+  (c-name "gdk_display_sync")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method warp_pointer
+  (of-object "GdkDisplay")
+  (c-name "gdk_display_warp_pointer")
+  (return-type "none")
+  (parameters
+    '("GdkScreen*" "pscreen")
+    '("gint" "px")
+    '("gint" "py")
+  )
+)
+

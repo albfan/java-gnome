@@ -1,0 +1,84 @@
+(define-object FileChooserButton
+  (in-module "Gtk")
+  (parent "Box")
+  (c-name "GtkFileChooserButton")
+)
+
+(define-function FileChooserButton_new
+  (is-constructor-of "GtkFileChooserButton")
+  (c-name "gtk_file_chooser_button_new")
+  (return-type "GtkWidget*")
+  (parameters
+    '("const gchar*" "ptitle")
+    '("GtkFileChooserAction" "paction")
+  )
+)
+
+(define-function FileChooserButton_new_with_dialog
+  (is-constructor-of "GtkFileChooserButton")
+  (c-name "gtk_file_chooser_button_new_with_dialog")
+  (return-type "GtkWidget*")
+  (parameters
+    '("GtkWidget*" "pdialog")
+  )
+)
+
+(define-method file_set
+  (of-object "GtkFileChooserButton")
+  (c-name "file_set")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method get_focus_on_click
+  (of-object "GtkFileChooserButton")
+  (c-name "gtk_file_chooser_button_get_focus_on_click")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_title
+  (of-object "GtkFileChooserButton")
+  (c-name "gtk_file_chooser_button_get_title")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_width_chars
+  (of-object "GtkFileChooserButton")
+  (c-name "gtk_file_chooser_button_get_width_chars")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method set_focus_on_click
+  (of-object "GtkFileChooserButton")
+  (c-name "gtk_file_chooser_button_set_focus_on_click")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pfocus_on_click")
+  )
+)
+
+(define-method set_title
+  (of-object "GtkFileChooserButton")
+  (c-name "gtk_file_chooser_button_set_title")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "ptitle")
+  )
+)
+
+(define-method set_width_chars
+  (of-object "GtkFileChooserButton")
+  (c-name "gtk_file_chooser_button_set_width_chars")
+  (return-type "none")
+  (parameters
+    '("gint" "pn_chars")
+  )
+)
+

@@ -1,0 +1,129 @@
+(define-object Keymap
+  (in-module "Gdk")
+  (import-header "gdk/gdk.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GdkKeymap")
+)
+
+(define-method add_virtual_modifiers
+  (of-object "GdkKeymap")
+  (c-name "gdk_keymap_add_virtual_modifiers")
+  (return-type "none")
+  (parameters
+    '("GdkModifierType*" "pstate")
+  )
+)
+
+(define-method get_caps_lock_state
+  (of-object "GdkKeymap")
+  (c-name "gdk_keymap_get_caps_lock_state")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_direction
+  (of-object "GdkKeymap")
+  (c-name "gdk_keymap_get_direction")
+  (return-type "PangoDirection")
+  (parameters
+  )
+)
+
+(define-method get_entries_for_keycode
+  (of-object "GdkKeymap")
+  (c-name "gdk_keymap_get_entries_for_keycode")
+  (return-type "gboolean")
+  (parameters
+    '("guint" "phardware_keycode")
+    '("null" "pkeys")
+    '("null" "pkeyvals")
+    '("gint*" "pn_entries")
+  )
+)
+
+(define-method get_entries_for_keyval
+  (of-object "GdkKeymap")
+  (c-name "gdk_keymap_get_entries_for_keyval")
+  (return-type "gboolean")
+  (parameters
+    '("guint" "pkeyval")
+    '("null" "pkeys")
+    '("gint*" "pn_keys")
+  )
+)
+
+(define-method get_modifier_mask
+  (of-object "GdkKeymap")
+  (c-name "gdk_keymap_get_modifier_mask")
+  (return-type "GdkModifierType")
+  (parameters
+    '("GdkModifierIntent" "pintent")
+  )
+)
+
+(define-method get_modifier_state
+  (of-object "GdkKeymap")
+  (c-name "gdk_keymap_get_modifier_state")
+  (return-type "guint")
+  (parameters
+  )
+)
+
+(define-method get_num_lock_state
+  (of-object "GdkKeymap")
+  (c-name "gdk_keymap_get_num_lock_state")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_scroll_lock_state
+  (of-object "GdkKeymap")
+  (c-name "gdk_keymap_get_scroll_lock_state")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method have_bidi_layouts
+  (of-object "GdkKeymap")
+  (c-name "gdk_keymap_have_bidi_layouts")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method lookup_key
+  (of-object "GdkKeymap")
+  (c-name "gdk_keymap_lookup_key")
+  (return-type "guint")
+  (parameters
+    '("const GdkKeymapKey*" "pkey")
+  )
+)
+
+(define-method map_virtual_modifiers
+  (of-object "GdkKeymap")
+  (c-name "gdk_keymap_map_virtual_modifiers")
+  (return-type "gboolean")
+  (parameters
+    '("GdkModifierType*" "pstate")
+  )
+)
+
+(define-method translate_keyboard_state
+  (of-object "GdkKeymap")
+  (c-name "gdk_keymap_translate_keyboard_state")
+  (return-type "gboolean")
+  (parameters
+    '("guint" "phardware_keycode")
+    '("GdkModifierType" "pstate")
+    '("gint" "pgroup")
+    '("guint*" "pkeyval")
+    '("gint*" "peffective_group")
+    '("gint*" "plevel")
+    '("GdkModifierType*" "pconsumed_modifiers")
+  )
+)
+

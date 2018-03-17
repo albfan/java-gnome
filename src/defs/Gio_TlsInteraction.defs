@@ -1,0 +1,108 @@
+(define-object TlsInteraction
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GTlsInteraction")
+)
+
+(define-method ask_password
+  (of-object "GTlsInteraction")
+  (c-name "ask_password")
+  (return-type "GTlsInteractionResult")
+  (parameters
+    '("GTlsPassword*" "ppassword")
+    '("GCancellable*" "pcancellable")
+    '("GError**" "error")
+  )
+)
+
+(define-method ask_password_async
+  (of-object "GTlsInteraction")
+  (c-name "ask_password_async")
+  (return-type "none")
+  (parameters
+    '("GTlsPassword*" "ppassword")
+    '("GCancellable*" "pcancellable")
+    '("GAsyncReadyCallback" "pcallback")
+    '("gpointer" "puser_data")
+  )
+)
+
+(define-method ask_password_finish
+  (of-object "GTlsInteraction")
+  (c-name "ask_password_finish")
+  (return-type "GTlsInteractionResult")
+  (parameters
+    '("GAsyncResult*" "presult")
+    '("GError**" "error")
+  )
+)
+
+(define-method request_certificate
+  (of-object "GTlsInteraction")
+  (c-name "request_certificate")
+  (return-type "GTlsInteractionResult")
+  (parameters
+    '("GTlsConnection*" "pconnection")
+    '("GTlsCertificateRequestFlags" "pflags")
+    '("GCancellable*" "pcancellable")
+    '("GError**" "error")
+  )
+)
+
+(define-method request_certificate_async
+  (of-object "GTlsInteraction")
+  (c-name "request_certificate_async")
+  (return-type "none")
+  (parameters
+    '("GTlsConnection*" "pconnection")
+    '("GTlsCertificateRequestFlags" "pflags")
+    '("GCancellable*" "pcancellable")
+    '("GAsyncReadyCallback" "pcallback")
+    '("gpointer" "puser_data")
+  )
+)
+
+(define-method request_certificate_finish
+  (of-object "GTlsInteraction")
+  (c-name "request_certificate_finish")
+  (return-type "GTlsInteractionResult")
+  (parameters
+    '("GAsyncResult*" "presult")
+    '("GError**" "error")
+  )
+)
+
+(define-method invoke_ask_password
+  (of-object "GTlsInteraction")
+  (c-name "g_tls_interaction_invoke_ask_password")
+  (return-type "GTlsInteractionResult")
+  (parameters
+    '("GTlsPassword*" "ppassword")
+    '("GCancellable*" "pcancellable")
+    '("GError**" "error")
+  )
+)
+
+(define-method invoke_request_certificate
+  (of-object "GTlsInteraction")
+  (c-name "g_tls_interaction_invoke_request_certificate")
+  (return-type "GTlsInteractionResult")
+  (parameters
+    '("GTlsConnection*" "pconnection")
+    '("GTlsCertificateRequestFlags" "pflags")
+    '("GCancellable*" "pcancellable")
+    '("GError**" "error")
+  )
+)
+

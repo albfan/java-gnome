@@ -1,0 +1,15 @@
+(define-enum ShortcutType
+  (in-module "Gtk")
+  (c-name "GtkShortcutType")
+  (values
+    '("accelerator" "GTK_SHORTCUT_ACCELERATOR")
+    '("gesture_pinch" "GTK_SHORTCUT_GESTURE_PINCH")
+    '("gesture_stretch" "GTK_SHORTCUT_GESTURE_STRETCH")
+    '("gesture_rotate_clockwise" "GTK_SHORTCUT_GESTURE_ROTATE_CLOCKWISE")
+    '("gesture_rotate_counterclockwise" "GTK_SHORTCUT_GESTURE_ROTATE_COUNTERCLOCKWISE")
+    '("gesture_two_finger_swipe_left" "GTK_SHORTCUT_GESTURE_TWO_FINGER_SWIPE_LEFT")
+    '("gesture_two_finger_swipe_right" "GTK_SHORTCUT_GESTURE_TWO_FINGER_SWIPE_RIGHT")
+    '("gesture" "GTK_SHORTCUT_GESTURE")
+  )
+)
+

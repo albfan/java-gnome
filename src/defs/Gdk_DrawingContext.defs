@@ -1,0 +1,39 @@
+(define-object DrawingContext
+  (in-module "Gdk")
+  (import-header "gdk/gdk.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GdkDrawingContext")
+)
+
+(define-method get_cairo_context
+  (of-object "GdkDrawingContext")
+  (c-name "gdk_drawing_context_get_cairo_context")
+  (return-type "cairo_t*")
+  (parameters
+  )
+)
+
+(define-method get_clip
+  (of-object "GdkDrawingContext")
+  (c-name "gdk_drawing_context_get_clip")
+  (return-type "cairo_region_t*")
+  (parameters
+  )
+)
+
+(define-method get_window
+  (of-object "GdkDrawingContext")
+  (c-name "gdk_drawing_context_get_window")
+  (return-type "GdkWindow*")
+  (parameters
+  )
+)
+
+(define-method is_valid
+  (of-object "GdkDrawingContext")
+  (c-name "gdk_drawing_context_is_valid")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+

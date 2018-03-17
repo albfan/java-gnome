@@ -1,0 +1,62 @@
+(define-object DOMMediaList
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "DOMObject")
+  (c-name "WebKitDOMMediaList")
+)
+
+(define-method append_medium
+  (of-object "WebKitDOMMediaList")
+  (c-name "webkit_dom_media_list_append_medium")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pnewMedium")
+    '("GError**" "error")
+  )
+)
+
+(define-method delete_medium
+  (of-object "WebKitDOMMediaList")
+  (c-name "webkit_dom_media_list_delete_medium")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "poldMedium")
+    '("GError**" "error")
+  )
+)
+
+(define-method get_length
+  (of-object "WebKitDOMMediaList")
+  (c-name "webkit_dom_media_list_get_length")
+  (return-type "gulong")
+  (parameters
+  )
+)
+
+(define-method get_media_text
+  (of-object "WebKitDOMMediaList")
+  (c-name "webkit_dom_media_list_get_media_text")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+
+(define-method item
+  (of-object "WebKitDOMMediaList")
+  (c-name "webkit_dom_media_list_item")
+  (return-type "gchar*")
+  (parameters
+    '("gulong" "pindex")
+  )
+)
+
+(define-method set_media_text
+  (of-object "WebKitDOMMediaList")
+  (c-name "webkit_dom_media_list_set_media_text")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pvalue")
+    '("GError**" "error")
+  )
+)
+

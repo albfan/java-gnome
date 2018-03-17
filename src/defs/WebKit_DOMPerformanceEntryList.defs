@@ -1,0 +1,24 @@
+(define-object DOMPerformanceEntryList
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "DOMObject")
+  (c-name "WebKitDOMPerformanceEntryList")
+)
+
+(define-method get_length
+  (of-object "WebKitDOMPerformanceEntryList")
+  (c-name "webkit_dom_performance_entry_list_get_length")
+  (return-type "gulong")
+  (parameters
+  )
+)
+
+(define-method item
+  (of-object "WebKitDOMPerformanceEntryList")
+  (c-name "webkit_dom_performance_entry_list_item")
+  (return-type "WebKitDOMPerformanceEntry*")
+  (parameters
+    '("gulong" "pindex")
+  )
+)
+

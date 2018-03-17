@@ -1,0 +1,12 @@
+(define-enum ShadowType
+  (in-module "Gtk")
+  (c-name "GtkShadowType")
+  (values
+    '("none" "GTK_SHADOW_NONE")
+    '("in" "GTK_SHADOW_IN")
+    '("out" "GTK_SHADOW_OUT")
+    '("etched_in" "GTK_SHADOW_ETCHED_IN")
+    '("etched_out" "GTK_SHADOW_ETCHED_OUT")
+  )
+)
+

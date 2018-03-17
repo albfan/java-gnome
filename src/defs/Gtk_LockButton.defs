@@ -1,0 +1,32 @@
+(define-object LockButton
+  (in-module "Gtk")
+  (parent "Button")
+  (c-name "GtkLockButton")
+)
+
+(define-function LockButton_new
+  (is-constructor-of "GtkLockButton")
+  (c-name "gtk_lock_button_new")
+  (return-type "GtkWidget*")
+  (parameters
+    '("GPermission*" "ppermission")
+  )
+)
+
+(define-method get_permission
+  (of-object "GtkLockButton")
+  (c-name "gtk_lock_button_get_permission")
+  (return-type "GPermission*")
+  (parameters
+  )
+)
+
+(define-method set_permission
+  (of-object "GtkLockButton")
+  (c-name "gtk_lock_button_set_permission")
+  (return-type "none")
+  (parameters
+    '("GPermission*" "ppermission")
+  )
+)
+

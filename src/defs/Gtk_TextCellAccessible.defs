@@ -1,0 +1,6 @@
+(define-object TextCellAccessible
+  (in-module "Gtk")
+  (parent "RendererCellAccessible")
+  (c-name "GtkTextCellAccessible")
+)
+

@@ -1,0 +1,127 @@
+(define-object ColorButton
+  (in-module "Gtk")
+  (parent "Button")
+  (c-name "GtkColorButton")
+)
+
+(define-function ColorButton_new
+  (is-constructor-of "GtkColorButton")
+  (c-name "gtk_color_button_new")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-function ColorButton_new_with_color
+  (is-constructor-of "GtkColorButton")
+  (c-name "gtk_color_button_new_with_color")
+  (return-type "GtkWidget*")
+  (parameters
+    '("const GdkColor*" "pcolor")
+  )
+)
+
+(define-function ColorButton_new_with_rgba
+  (is-constructor-of "GtkColorButton")
+  (c-name "gtk_color_button_new_with_rgba")
+  (return-type "GtkWidget*")
+  (parameters
+    '("const GdkRGBA*" "prgba")
+  )
+)
+
+(define-method color_set
+  (of-object "GtkColorButton")
+  (c-name "color_set")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method get_alpha
+  (of-object "GtkColorButton")
+  (c-name "gtk_color_button_get_alpha")
+  (return-type "guint16")
+  (parameters
+  )
+)
+
+(define-method get_color
+  (of-object "GtkColorButton")
+  (c-name "gtk_color_button_get_color")
+  (return-type "none")
+  (parameters
+    '("GdkColor*" "pcolor")
+  )
+)
+
+(define-method get_rgba
+  (of-object "GtkColorButton")
+  (c-name "gtk_color_button_get_rgba")
+  (return-type "none")
+  (parameters
+    '("GdkRGBA*" "prgba")
+  )
+)
+
+(define-method get_title
+  (of-object "GtkColorButton")
+  (c-name "gtk_color_button_get_title")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_use_alpha
+  (of-object "GtkColorButton")
+  (c-name "gtk_color_button_get_use_alpha")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method set_alpha
+  (of-object "GtkColorButton")
+  (c-name "gtk_color_button_set_alpha")
+  (return-type "none")
+  (parameters
+    '("guint16" "palpha")
+  )
+)
+
+(define-method set_color
+  (of-object "GtkColorButton")
+  (c-name "gtk_color_button_set_color")
+  (return-type "none")
+  (parameters
+    '("const GdkColor*" "pcolor")
+  )
+)
+
+(define-method set_rgba
+  (of-object "GtkColorButton")
+  (c-name "gtk_color_button_set_rgba")
+  (return-type "none")
+  (parameters
+    '("const GdkRGBA*" "prgba")
+  )
+)
+
+(define-method set_title
+  (of-object "GtkColorButton")
+  (c-name "gtk_color_button_set_title")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "ptitle")
+  )
+)
+
+(define-method set_use_alpha
+  (of-object "GtkColorButton")
+  (c-name "gtk_color_button_set_use_alpha")
+  (return-type "none")
+  (parameters
+    '("gboolean" "puse_alpha")
+  )
+)
+

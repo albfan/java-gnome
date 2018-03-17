@@ -1,0 +1,33 @@
+(define-object DOMDOMMimeTypeArray
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "DOMObject")
+  (c-name "WebKitDOMDOMMimeTypeArray")
+)
+
+(define-method get_length
+  (of-object "WebKitDOMDOMMimeTypeArray")
+  (c-name "webkit_dom_dom_mime_type_array_get_length")
+  (return-type "gulong")
+  (parameters
+  )
+)
+
+(define-method item
+  (of-object "WebKitDOMDOMMimeTypeArray")
+  (c-name "webkit_dom_dom_mime_type_array_item")
+  (return-type "WebKitDOMDOMMimeType*")
+  (parameters
+    '("gulong" "pindex")
+  )
+)
+
+(define-method named_item
+  (of-object "WebKitDOMDOMMimeTypeArray")
+  (c-name "webkit_dom_dom_mime_type_array_named_item")
+  (return-type "WebKitDOMDOMMimeType*")
+  (parameters
+    '("const gchar*" "pname")
+  )
+)
+

@@ -1,0 +1,6 @@
+(define-object CellAccessiblePrivate
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkCellAccessiblePrivate")
+)
+

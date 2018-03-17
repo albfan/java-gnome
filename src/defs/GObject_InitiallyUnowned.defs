@@ -1,0 +1,7 @@
+(define-object InitiallyUnowned
+  (in-module "GObject")
+  (import-header "glib-object.h")
+  (parent "Object")
+  (c-name "GInitiallyUnowned")
+)
+

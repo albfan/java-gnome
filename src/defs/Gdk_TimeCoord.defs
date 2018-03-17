@@ -1,0 +1,7 @@
+(define-object TimeCoord
+  (in-module "Gdk")
+  (import-header "gdk/gdk.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GdkTimeCoord")
+)
+

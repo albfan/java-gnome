@@ -1,0 +1,293 @@
+(define-object Assistant
+  (in-module "Gtk")
+  (parent "Window")
+  (c-name "GtkAssistant")
+)
+
+(define-function Assistant_new
+  (is-constructor-of "GtkAssistant")
+  (c-name "gtk_assistant_new")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method apply
+  (of-object "GtkAssistant")
+  (c-name "apply")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method cancel
+  (of-object "GtkAssistant")
+  (c-name "cancel")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method close
+  (of-object "GtkAssistant")
+  (c-name "close")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method prepare
+  (of-object "GtkAssistant")
+  (c-name "prepare")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "ppage")
+  )
+)
+
+(define-method add_action_widget
+  (of-object "GtkAssistant")
+  (c-name "gtk_assistant_add_action_widget")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pchild")
+  )
+)
+
+(define-method append_page
+  (of-object "GtkAssistant")
+  (c-name "gtk_assistant_append_page")
+  (return-type "gint")
+  (parameters
+    '("GtkWidget*" "ppage")
+  )
+)
+
+(define-method commit
+  (of-object "GtkAssistant")
+  (c-name "gtk_assistant_commit")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method get_current_page
+  (of-object "GtkAssistant")
+  (c-name "gtk_assistant_get_current_page")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_n_pages
+  (of-object "GtkAssistant")
+  (c-name "gtk_assistant_get_n_pages")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_nth_page
+  (of-object "GtkAssistant")
+  (c-name "gtk_assistant_get_nth_page")
+  (return-type "GtkWidget*")
+  (parameters
+    '("gint" "ppage_num")
+  )
+)
+
+(define-method get_page_complete
+  (of-object "GtkAssistant")
+  (c-name "gtk_assistant_get_page_complete")
+  (return-type "gboolean")
+  (parameters
+    '("GtkWidget*" "ppage")
+  )
+)
+
+(define-method get_page_has_padding
+  (of-object "GtkAssistant")
+  (c-name "gtk_assistant_get_page_has_padding")
+  (return-type "gboolean")
+  (parameters
+    '("GtkWidget*" "ppage")
+  )
+)
+
+(define-method get_page_header_image
+  (of-object "GtkAssistant")
+  (c-name "gtk_assistant_get_page_header_image")
+  (return-type "GdkPixbuf*")
+  (parameters
+    '("GtkWidget*" "ppage")
+  )
+)
+
+(define-method get_page_side_image
+  (of-object "GtkAssistant")
+  (c-name "gtk_assistant_get_page_side_image")
+  (return-type "GdkPixbuf*")
+  (parameters
+    '("GtkWidget*" "ppage")
+  )
+)
+
+(define-method get_page_title
+  (of-object "GtkAssistant")
+  (c-name "gtk_assistant_get_page_title")
+  (return-type "const gchar*")
+  (parameters
+    '("GtkWidget*" "ppage")
+  )
+)
+
+(define-method get_page_type
+  (of-object "GtkAssistant")
+  (c-name "gtk_assistant_get_page_type")
+  (return-type "GtkAssistantPageType")
+  (parameters
+    '("GtkWidget*" "ppage")
+  )
+)
+
+(define-method insert_page
+  (of-object "GtkAssistant")
+  (c-name "gtk_assistant_insert_page")
+  (return-type "gint")
+  (parameters
+    '("GtkWidget*" "ppage")
+    '("gint" "pposition")
+  )
+)
+
+(define-method next_page
+  (of-object "GtkAssistant")
+  (c-name "gtk_assistant_next_page")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method prepend_page
+  (of-object "GtkAssistant")
+  (c-name "gtk_assistant_prepend_page")
+  (return-type "gint")
+  (parameters
+    '("GtkWidget*" "ppage")
+  )
+)
+
+(define-method previous_page
+  (of-object "GtkAssistant")
+  (c-name "gtk_assistant_previous_page")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method remove_action_widget
+  (of-object "GtkAssistant")
+  (c-name "gtk_assistant_remove_action_widget")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pchild")
+  )
+)
+
+(define-method remove_page
+  (of-object "GtkAssistant")
+  (c-name "gtk_assistant_remove_page")
+  (return-type "none")
+  (parameters
+    '("gint" "ppage_num")
+  )
+)
+
+(define-method set_current_page
+  (of-object "GtkAssistant")
+  (c-name "gtk_assistant_set_current_page")
+  (return-type "none")
+  (parameters
+    '("gint" "ppage_num")
+  )
+)
+
+(define-method set_forward_page_func
+  (of-object "GtkAssistant")
+  (c-name "gtk_assistant_set_forward_page_func")
+  (return-type "none")
+  (parameters
+    '("GtkAssistantPageFunc" "ppage_func")
+    '("gpointer" "pdata")
+    '("GDestroyNotify" "pdestroy")
+  )
+)
+
+(define-method set_page_complete
+  (of-object "GtkAssistant")
+  (c-name "gtk_assistant_set_page_complete")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "ppage")
+    '("gboolean" "pcomplete")
+  )
+)
+
+(define-method set_page_has_padding
+  (of-object "GtkAssistant")
+  (c-name "gtk_assistant_set_page_has_padding")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "ppage")
+    '("gboolean" "phas_padding")
+  )
+)
+
+(define-method set_page_header_image
+  (of-object "GtkAssistant")
+  (c-name "gtk_assistant_set_page_header_image")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "ppage")
+    '("GdkPixbuf*" "ppixbuf")
+  )
+)
+
+(define-method set_page_side_image
+  (of-object "GtkAssistant")
+  (c-name "gtk_assistant_set_page_side_image")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "ppage")
+    '("GdkPixbuf*" "ppixbuf")
+  )
+)
+
+(define-method set_page_title
+  (of-object "GtkAssistant")
+  (c-name "gtk_assistant_set_page_title")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "ppage")
+    '("const gchar*" "ptitle")
+  )
+)
+
+(define-method set_page_type
+  (of-object "GtkAssistant")
+  (c-name "gtk_assistant_set_page_type")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "ppage")
+    '("GtkAssistantPageType" "ptype")
+  )
+)
+
+(define-method update_buttons_state
+  (of-object "GtkAssistant")
+  (c-name "gtk_assistant_update_buttons_state")
+  (return-type "none")
+  (parameters
+  )
+)
+

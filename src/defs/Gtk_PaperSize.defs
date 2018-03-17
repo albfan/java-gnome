@@ -1,0 +1,219 @@
+(define-object PaperSize
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkPaperSize")
+)
+
+(define-function PaperSize_new
+  (is-constructor-of "GtkPaperSize")
+  (c-name "gtk_paper_size_new")
+  (return-type "GtkPaperSize*")
+  (parameters
+    '("const gchar*" "pname")
+  )
+)
+
+(define-function PaperSize_new_custom
+  (is-constructor-of "GtkPaperSize")
+  (c-name "gtk_paper_size_new_custom")
+  (return-type "GtkPaperSize*")
+  (parameters
+    '("const gchar*" "pname")
+    '("const gchar*" "pdisplay_name")
+    '("gdouble" "pwidth")
+    '("gdouble" "pheight")
+    '("GtkUnit" "punit")
+  )
+)
+
+(define-function PaperSize_new_from_gvariant
+  (is-constructor-of "GtkPaperSize")
+  (c-name "gtk_paper_size_new_from_gvariant")
+  (return-type "GtkPaperSize*")
+  (parameters
+    '("GVariant*" "pvariant")
+  )
+)
+
+(define-function PaperSize_new_from_ipp
+  (is-constructor-of "GtkPaperSize")
+  (c-name "gtk_paper_size_new_from_ipp")
+  (return-type "GtkPaperSize*")
+  (parameters
+    '("const gchar*" "pipp_name")
+    '("gdouble" "pwidth")
+    '("gdouble" "pheight")
+  )
+)
+
+(define-function PaperSize_new_from_key_file
+  (is-constructor-of "GtkPaperSize")
+  (c-name "gtk_paper_size_new_from_key_file")
+  (return-type "GtkPaperSize*")
+  (parameters
+    '("GKeyFile*" "pkey_file")
+    '("const gchar*" "pgroup_name")
+    '("GError**" "error")
+  )
+)
+
+(define-function PaperSize_new_from_ppd
+  (is-constructor-of "GtkPaperSize")
+  (c-name "gtk_paper_size_new_from_ppd")
+  (return-type "GtkPaperSize*")
+  (parameters
+    '("const gchar*" "pppd_name")
+    '("const gchar*" "pppd_display_name")
+    '("gdouble" "pwidth")
+    '("gdouble" "pheight")
+  )
+)
+
+(define-method copy
+  (of-object "GtkPaperSize")
+  (c-name "gtk_paper_size_copy")
+  (return-type "GtkPaperSize*")
+  (parameters
+  )
+)
+
+(define-method free
+  (of-object "GtkPaperSize")
+  (c-name "gtk_paper_size_free")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method get_default_bottom_margin
+  (of-object "GtkPaperSize")
+  (c-name "gtk_paper_size_get_default_bottom_margin")
+  (return-type "gdouble")
+  (parameters
+    '("GtkUnit" "punit")
+  )
+)
+
+(define-method get_default_left_margin
+  (of-object "GtkPaperSize")
+  (c-name "gtk_paper_size_get_default_left_margin")
+  (return-type "gdouble")
+  (parameters
+    '("GtkUnit" "punit")
+  )
+)
+
+(define-method get_default_right_margin
+  (of-object "GtkPaperSize")
+  (c-name "gtk_paper_size_get_default_right_margin")
+  (return-type "gdouble")
+  (parameters
+    '("GtkUnit" "punit")
+  )
+)
+
+(define-method get_default_top_margin
+  (of-object "GtkPaperSize")
+  (c-name "gtk_paper_size_get_default_top_margin")
+  (return-type "gdouble")
+  (parameters
+    '("GtkUnit" "punit")
+  )
+)
+
+(define-method get_display_name
+  (of-object "GtkPaperSize")
+  (c-name "gtk_paper_size_get_display_name")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_height
+  (of-object "GtkPaperSize")
+  (c-name "gtk_paper_size_get_height")
+  (return-type "gdouble")
+  (parameters
+    '("GtkUnit" "punit")
+  )
+)
+
+(define-method get_name
+  (of-object "GtkPaperSize")
+  (c-name "gtk_paper_size_get_name")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_ppd_name
+  (of-object "GtkPaperSize")
+  (c-name "gtk_paper_size_get_ppd_name")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_width
+  (of-object "GtkPaperSize")
+  (c-name "gtk_paper_size_get_width")
+  (return-type "gdouble")
+  (parameters
+    '("GtkUnit" "punit")
+  )
+)
+
+(define-method is_custom
+  (of-object "GtkPaperSize")
+  (c-name "gtk_paper_size_is_custom")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method is_equal
+  (of-object "GtkPaperSize")
+  (c-name "gtk_paper_size_is_equal")
+  (return-type "gboolean")
+  (parameters
+    '("GtkPaperSize*" "psize2")
+  )
+)
+
+(define-method is_ipp
+  (of-object "GtkPaperSize")
+  (c-name "gtk_paper_size_is_ipp")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method set_size
+  (of-object "GtkPaperSize")
+  (c-name "gtk_paper_size_set_size")
+  (return-type "none")
+  (parameters
+    '("gdouble" "pwidth")
+    '("gdouble" "pheight")
+    '("GtkUnit" "punit")
+  )
+)
+
+(define-method to_gvariant
+  (of-object "GtkPaperSize")
+  (c-name "gtk_paper_size_to_gvariant")
+  (return-type "GVariant*")
+  (parameters
+  )
+)
+
+(define-method to_key_file
+  (of-object "GtkPaperSize")
+  (c-name "gtk_paper_size_to_key_file")
+  (return-type "none")
+  (parameters
+    '("GKeyFile*" "pkey_file")
+    '("const gchar*" "pgroup_name")
+  )
+)
+

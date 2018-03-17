@@ -1,0 +1,76 @@
+(define-object TlsCertificate
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GTlsCertificate")
+)
+
+(define-function TlsCertificate_new_from_file
+  (is-constructor-of "GTlsCertificate")
+  (c-name "g_tls_certificate_new_from_file")
+  (return-type "GTlsCertificate*")
+  (parameters
+    '("gchar*" "pfile")
+    '("GError**" "error")
+  )
+)
+
+(define-function TlsCertificate_new_from_files
+  (is-constructor-of "GTlsCertificate")
+  (c-name "g_tls_certificate_new_from_files")
+  (return-type "GTlsCertificate*")
+  (parameters
+    '("gchar*" "pcert_file")
+    '("gchar*" "pkey_file")
+    '("GError**" "error")
+  )
+)
+
+(define-function TlsCertificate_new_from_pem
+  (is-constructor-of "GTlsCertificate")
+  (c-name "g_tls_certificate_new_from_pem")
+  (return-type "GTlsCertificate*")
+  (parameters
+    '("const gchar*" "pdata")
+    '("gssize" "plength")
+    '("GError**" "error")
+  )
+)
+
+(define-method verify
+  (of-object "GTlsCertificate")
+  (c-name "verify")
+  (return-type "GTlsCertificateFlags")
+  (parameters
+    '("GSocketConnectable*" "pidentity")
+    '("GTlsCertificate*" "ptrusted_ca")
+  )
+)
+
+(define-method get_issuer
+  (of-object "GTlsCertificate")
+  (c-name "g_tls_certificate_get_issuer")
+  (return-type "GTlsCertificate*")
+  (parameters
+  )
+)
+
+(define-method is_same
+  (of-object "GTlsCertificate")
+  (c-name "g_tls_certificate_is_same")
+  (return-type "gboolean")
+  (parameters
+    '("GTlsCertificate*" "pcert_two")
+  )
+)
+

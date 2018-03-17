@@ -1,0 +1,122 @@
+(define-object DOMShadowRoot
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "DOMDocumentFragment")
+  (c-name "WebKitDOMShadowRoot")
+)
+
+(define-method element_from_point
+  (of-object "WebKitDOMShadowRoot")
+  (c-name "webkit_dom_shadow_root_element_from_point")
+  (return-type "WebKitDOMElement*")
+  (parameters
+    '("glong" "px")
+    '("glong" "py")
+  )
+)
+
+(define-method get_active_element
+  (of-object "WebKitDOMShadowRoot")
+  (c-name "webkit_dom_shadow_root_get_active_element")
+  (return-type "WebKitDOMElement*")
+  (parameters
+  )
+)
+
+(define-method get_apply_author_styles
+  (of-object "WebKitDOMShadowRoot")
+  (c-name "webkit_dom_shadow_root_get_apply_author_styles")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_element_by_id
+  (of-object "WebKitDOMShadowRoot")
+  (c-name "webkit_dom_shadow_root_get_element_by_id")
+  (return-type "WebKitDOMElement*")
+  (parameters
+    '("const gchar*" "pelementId")
+  )
+)
+
+(define-method get_elements_by_class_name
+  (of-object "WebKitDOMShadowRoot")
+  (c-name "webkit_dom_shadow_root_get_elements_by_class_name")
+  (return-type "WebKitDOMNodeList*")
+  (parameters
+    '("const gchar*" "pclassName")
+  )
+)
+
+(define-method get_elements_by_tag_name
+  (of-object "WebKitDOMShadowRoot")
+  (c-name "webkit_dom_shadow_root_get_elements_by_tag_name")
+  (return-type "WebKitDOMNodeList*")
+  (parameters
+    '("const gchar*" "ptagName")
+  )
+)
+
+(define-method get_elements_by_tag_name_ns
+  (of-object "WebKitDOMShadowRoot")
+  (c-name "webkit_dom_shadow_root_get_elements_by_tag_name_ns")
+  (return-type "WebKitDOMNodeList*")
+  (parameters
+    '("const gchar*" "pnamespaceURI")
+    '("const gchar*" "plocalName")
+  )
+)
+
+(define-method get_inner_html
+  (of-object "WebKitDOMShadowRoot")
+  (c-name "webkit_dom_shadow_root_get_inner_html")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+
+(define-method get_reset_style_inheritance
+  (of-object "WebKitDOMShadowRoot")
+  (c-name "webkit_dom_shadow_root_get_reset_style_inheritance")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_selection
+  (of-object "WebKitDOMShadowRoot")
+  (c-name "webkit_dom_shadow_root_get_selection")
+  (return-type "WebKitDOMDOMSelection*")
+  (parameters
+  )
+)
+
+(define-method set_apply_author_styles
+  (of-object "WebKitDOMShadowRoot")
+  (c-name "webkit_dom_shadow_root_set_apply_author_styles")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pvalue")
+  )
+)
+
+(define-method set_inner_html
+  (of-object "WebKitDOMShadowRoot")
+  (c-name "webkit_dom_shadow_root_set_inner_html")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pvalue")
+    '("GError**" "error")
+  )
+)
+
+(define-method set_reset_style_inheritance
+  (of-object "WebKitDOMShadowRoot")
+  (c-name "webkit_dom_shadow_root_set_reset_style_inheritance")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pvalue")
+  )
+)
+

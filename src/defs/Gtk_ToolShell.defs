@@ -1,0 +1,78 @@
+(define-object ToolShell
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkToolShell")
+)
+
+(define-method get_ellipsize_mode
+  (of-object "GtkToolShell")
+  (c-name "get_ellipsize_mode")
+  (return-type "PangoEllipsizeMode")
+  (parameters
+  )
+)
+
+(define-method get_icon_size
+  (of-object "GtkToolShell")
+  (c-name "get_icon_size")
+  (return-type "GtkIconSize")
+  (parameters
+  )
+)
+
+(define-method get_orientation
+  (of-object "GtkToolShell")
+  (c-name "get_orientation")
+  (return-type "GtkOrientation")
+  (parameters
+  )
+)
+
+(define-method get_relief_style
+  (of-object "GtkToolShell")
+  (c-name "get_relief_style")
+  (return-type "GtkReliefStyle")
+  (parameters
+  )
+)
+
+(define-method get_style
+  (of-object "GtkToolShell")
+  (c-name "get_style")
+  (return-type "GtkToolbarStyle")
+  (parameters
+  )
+)
+
+(define-method get_text_alignment
+  (of-object "GtkToolShell")
+  (c-name "get_text_alignment")
+  (return-type "gfloat")
+  (parameters
+  )
+)
+
+(define-method get_text_orientation
+  (of-object "GtkToolShell")
+  (c-name "get_text_orientation")
+  (return-type "GtkOrientation")
+  (parameters
+  )
+)
+
+(define-method get_text_size_group
+  (of-object "GtkToolShell")
+  (c-name "get_text_size_group")
+  (return-type "GtkSizeGroup*")
+  (parameters
+  )
+)
+
+(define-method rebuild_menu
+  (of-object "GtkToolShell")
+  (c-name "rebuild_menu")
+  (return-type "none")
+  (parameters
+  )
+)
+

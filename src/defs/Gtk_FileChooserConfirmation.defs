@@ -1,0 +1,10 @@
+(define-enum FileChooserConfirmation
+  (in-module "Gtk")
+  (c-name "GtkFileChooserConfirmation")
+  (values
+    '("confirm" "GTK_FILE_CHOOSER_CONFIRMATION_CONFIRM")
+    '("accept_filename" "GTK_FILE_CHOOSER_CONFIRMATION_ACCEPT_FILENAME")
+    '("select_again" "GTK_FILE_CHOOSER_CONFIRMATION_SELECT_AGAIN")
+  )
+)
+

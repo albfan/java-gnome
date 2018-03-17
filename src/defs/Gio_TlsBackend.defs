@@ -1,0 +1,89 @@
+(define-object TlsBackend
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GTlsBackend")
+)
+
+(define-method get_default_database
+  (of-object "GTlsBackend")
+  (c-name "get_default_database")
+  (return-type "GTlsDatabase*")
+  (parameters
+  )
+)
+
+(define-method supports_dtls
+  (of-object "GTlsBackend")
+  (c-name "supports_dtls")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method supports_tls
+  (of-object "GTlsBackend")
+  (c-name "supports_tls")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_certificate_type
+  (of-object "GTlsBackend")
+  (c-name "g_tls_backend_get_certificate_type")
+  (return-type "GType")
+  (parameters
+  )
+)
+
+(define-method get_client_connection_type
+  (of-object "GTlsBackend")
+  (c-name "g_tls_backend_get_client_connection_type")
+  (return-type "GType")
+  (parameters
+  )
+)
+
+(define-method get_dtls_client_connection_type
+  (of-object "GTlsBackend")
+  (c-name "g_tls_backend_get_dtls_client_connection_type")
+  (return-type "GType")
+  (parameters
+  )
+)
+
+(define-method get_dtls_server_connection_type
+  (of-object "GTlsBackend")
+  (c-name "g_tls_backend_get_dtls_server_connection_type")
+  (return-type "GType")
+  (parameters
+  )
+)
+
+(define-method get_file_database_type
+  (of-object "GTlsBackend")
+  (c-name "g_tls_backend_get_file_database_type")
+  (return-type "GType")
+  (parameters
+  )
+)
+
+(define-method get_server_connection_type
+  (of-object "GTlsBackend")
+  (c-name "g_tls_backend_get_server_connection_type")
+  (return-type "GType")
+  (parameters
+  )
+)
+

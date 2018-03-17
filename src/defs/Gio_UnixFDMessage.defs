@@ -1,0 +1,61 @@
+(define-object UnixFDMessage
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "SocketControlMessage")
+  (c-name "GUnixFDMessage")
+)
+
+(define-function UnixFDMessage_new
+  (is-constructor-of "GUnixFDMessage")
+  (c-name "g_unix_fd_message_new")
+  (return-type "GSocketControlMessage*")
+  (parameters
+  )
+)
+
+(define-function UnixFDMessage_new_with_fd_list
+  (is-constructor-of "GUnixFDMessage")
+  (c-name "g_unix_fd_message_new_with_fd_list")
+  (return-type "GSocketControlMessage*")
+  (parameters
+    '("GUnixFDList*" "pfd_list")
+  )
+)
+
+(define-method append_fd
+  (of-object "GUnixFDMessage")
+  (c-name "g_unix_fd_message_append_fd")
+  (return-type "gboolean")
+  (parameters
+    '("gint" "pfd")
+    '("GError**" "error")
+  )
+)
+
+(define-method get_fd_list
+  (of-object "GUnixFDMessage")
+  (c-name "g_unix_fd_message_get_fd_list")
+  (return-type "GUnixFDList*")
+  (parameters
+  )
+)
+
+(define-method steal_fds
+  (of-object "GUnixFDMessage")
+  (c-name "g_unix_fd_message_steal_fds")
+  (return-type "none")
+  (parameters
+    '("gint*" "plength")
+  )
+)
+

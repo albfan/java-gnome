@@ -1,0 +1,122 @@
+(define-object IOStream
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GIOStream")
+)
+
+(define-method close_async
+  (of-object "GIOStream")
+  (c-name "close_async")
+  (return-type "none")
+  (parameters
+    '("int" "pio_priority")
+    '("GCancellable*" "pcancellable")
+    '("GAsyncReadyCallback" "pcallback")
+    '("gpointer" "puser_data")
+  )
+)
+
+(define-method close_finish
+  (of-object "GIOStream")
+  (c-name "close_finish")
+  (return-type "gboolean")
+  (parameters
+    '("GAsyncResult*" "presult")
+    '("GError**" "error")
+  )
+)
+
+(define-method close_fn
+  (of-object "GIOStream")
+  (c-name "close_fn")
+  (return-type "gboolean")
+  (parameters
+    '("GCancellable*" "pcancellable")
+    '("GError**" "error")
+  )
+)
+
+(define-method get_input_stream
+  (of-object "GIOStream")
+  (c-name "get_input_stream")
+  (return-type "GInputStream*")
+  (parameters
+  )
+)
+
+(define-method get_output_stream
+  (of-object "GIOStream")
+  (c-name "get_output_stream")
+  (return-type "GOutputStream*")
+  (parameters
+  )
+)
+
+(define-method clear_pending
+  (of-object "GIOStream")
+  (c-name "g_io_stream_clear_pending")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method close
+  (of-object "GIOStream")
+  (c-name "g_io_stream_close")
+  (return-type "gboolean")
+  (parameters
+    '("GCancellable*" "pcancellable")
+    '("GError**" "error")
+  )
+)
+
+(define-method has_pending
+  (of-object "GIOStream")
+  (c-name "g_io_stream_has_pending")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method is_closed
+  (of-object "GIOStream")
+  (c-name "g_io_stream_is_closed")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method set_pending
+  (of-object "GIOStream")
+  (c-name "g_io_stream_set_pending")
+  (return-type "gboolean")
+  (parameters
+    '("GError**" "error")
+  )
+)
+
+(define-method splice_async
+  (of-object "GIOStream")
+  (c-name "g_io_stream_splice_async")
+  (return-type "none")
+  (parameters
+    '("GIOStream*" "pstream2")
+    '("GIOStreamSpliceFlags" "pflags")
+    '("int" "pio_priority")
+    '("GCancellable*" "pcancellable")
+    '("GAsyncReadyCallback" "pcallback")
+    '("gpointer" "puser_data")
+  )
+)
+

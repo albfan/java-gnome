@@ -1,0 +1,31 @@
+(define-object DOMGamepad
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "DOMObject")
+  (c-name "WebKitDOMGamepad")
+)
+
+(define-method get_id
+  (of-object "WebKitDOMGamepad")
+  (c-name "webkit_dom_gamepad_get_id")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+
+(define-method get_index
+  (of-object "WebKitDOMGamepad")
+  (c-name "webkit_dom_gamepad_get_index")
+  (return-type "gulong")
+  (parameters
+  )
+)
+
+(define-method get_timestamp
+  (of-object "WebKitDOMGamepad")
+  (c-name "webkit_dom_gamepad_get_timestamp")
+  (return-type "guint64")
+  (parameters
+  )
+)
+

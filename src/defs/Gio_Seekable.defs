@@ -1,0 +1,75 @@
+(define-object Seekable
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GSeekable")
+)
+
+(define-method can_seek
+  (of-object "GSeekable")
+  (c-name "can_seek")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method can_truncate
+  (of-object "GSeekable")
+  (c-name "can_truncate")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method seek
+  (of-object "GSeekable")
+  (c-name "seek")
+  (return-type "gboolean")
+  (parameters
+    '("goffset" "poffset")
+    '("GSeekType" "ptype")
+    '("GCancellable*" "pcancellable")
+    '("GError**" "error")
+  )
+)
+
+(define-method tell
+  (of-object "GSeekable")
+  (c-name "tell")
+  (return-type "goffset")
+  (parameters
+  )
+)
+
+(define-method truncate_fn
+  (of-object "GSeekable")
+  (c-name "truncate_fn")
+  (return-type "gboolean")
+  (parameters
+    '("goffset" "poffset")
+    '("GCancellable*" "pcancellable")
+    '("GError**" "error")
+  )
+)
+
+(define-method truncate
+  (of-object "GSeekable")
+  (c-name "g_seekable_truncate")
+  (return-type "gboolean")
+  (parameters
+    '("goffset" "poffset")
+    '("GCancellable*" "pcancellable")
+    '("GError**" "error")
+  )
+)
+

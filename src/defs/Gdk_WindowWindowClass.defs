@@ -1,0 +1,9 @@
+(define-enum WindowWindowClass
+  (in-module "Gdk")
+  (c-name "GdkWindowWindowClass")
+  (values
+    '("input_output" "GDK_INPUT_OUTPUT")
+    '("input_only" "GDK_INPUT_ONLY")
+  )
+)
+

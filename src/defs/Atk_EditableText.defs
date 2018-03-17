@@ -1,0 +1,77 @@
+(define-object EditableText
+  (in-module "Atk")
+  (import-header "atk/atk.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "AtkEditableText")
+)
+
+(define-method copy_text
+  (of-object "AtkEditableText")
+  (c-name "copy_text")
+  (return-type "none")
+  (parameters
+    '("gint" "pstart_pos")
+    '("gint" "pend_pos")
+  )
+)
+
+(define-method cut_text
+  (of-object "AtkEditableText")
+  (c-name "cut_text")
+  (return-type "none")
+  (parameters
+    '("gint" "pstart_pos")
+    '("gint" "pend_pos")
+  )
+)
+
+(define-method delete_text
+  (of-object "AtkEditableText")
+  (c-name "delete_text")
+  (return-type "none")
+  (parameters
+    '("gint" "pstart_pos")
+    '("gint" "pend_pos")
+  )
+)
+
+(define-method insert_text
+  (of-object "AtkEditableText")
+  (c-name "insert_text")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pstring")
+    '("gint" "plength")
+    '("gint*" "pposition")
+  )
+)
+
+(define-method paste_text
+  (of-object "AtkEditableText")
+  (c-name "paste_text")
+  (return-type "none")
+  (parameters
+    '("gint" "pposition")
+  )
+)
+
+(define-method set_run_attributes
+  (of-object "AtkEditableText")
+  (c-name "set_run_attributes")
+  (return-type "gboolean")
+  (parameters
+    '("AtkAttributeSet*" "pattrib_set")
+    '("gint" "pstart_offset")
+    '("gint" "pend_offset")
+  )
+)
+
+(define-method set_text_contents
+  (of-object "AtkEditableText")
+  (c-name "set_text_contents")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pstring")
+  )
+)
+

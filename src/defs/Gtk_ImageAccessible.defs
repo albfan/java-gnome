@@ -1,0 +1,6 @@
+(define-object ImageAccessible
+  (in-module "Gtk")
+  (parent "WidgetAccessible")
+  (c-name "GtkImageAccessible")
+)
+

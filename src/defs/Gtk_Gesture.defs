@@ -1,0 +1,173 @@
+(define-object Gesture
+  (in-module "Gtk")
+  (parent "EventController")
+  (c-name "GtkGesture")
+)
+
+(define-method get_bounding_box
+  (of-object "GtkGesture")
+  (c-name "gtk_gesture_get_bounding_box")
+  (return-type "gboolean")
+  (parameters
+    '("GdkRectangle*" "prect")
+  )
+)
+
+(define-method get_bounding_box_center
+  (of-object "GtkGesture")
+  (c-name "gtk_gesture_get_bounding_box_center")
+  (return-type "gboolean")
+  (parameters
+    '("gdouble*" "px")
+    '("gdouble*" "py")
+  )
+)
+
+(define-method get_device
+  (of-object "GtkGesture")
+  (c-name "gtk_gesture_get_device")
+  (return-type "GdkDevice*")
+  (parameters
+  )
+)
+
+(define-method get_group
+  (of-object "GtkGesture")
+  (c-name "gtk_gesture_get_group")
+  (return-type "GList*")
+  (parameters
+  )
+)
+
+(define-method get_last_event
+  (of-object "GtkGesture")
+  (c-name "gtk_gesture_get_last_event")
+  (return-type "const GdkEvent*")
+  (parameters
+    '("GdkEventSequence*" "psequence")
+  )
+)
+
+(define-method get_last_updated_sequence
+  (of-object "GtkGesture")
+  (c-name "gtk_gesture_get_last_updated_sequence")
+  (return-type "GdkEventSequence*")
+  (parameters
+  )
+)
+
+(define-method get_point
+  (of-object "GtkGesture")
+  (c-name "gtk_gesture_get_point")
+  (return-type "gboolean")
+  (parameters
+    '("GdkEventSequence*" "psequence")
+    '("gdouble*" "px")
+    '("gdouble*" "py")
+  )
+)
+
+(define-method get_sequence_state
+  (of-object "GtkGesture")
+  (c-name "gtk_gesture_get_sequence_state")
+  (return-type "GtkEventSequenceState")
+  (parameters
+    '("GdkEventSequence*" "psequence")
+  )
+)
+
+(define-method get_sequences
+  (of-object "GtkGesture")
+  (c-name "gtk_gesture_get_sequences")
+  (return-type "GList*")
+  (parameters
+  )
+)
+
+(define-method get_window
+  (of-object "GtkGesture")
+  (c-name "gtk_gesture_get_window")
+  (return-type "GdkWindow*")
+  (parameters
+  )
+)
+
+(define-method group
+  (of-object "GtkGesture")
+  (c-name "gtk_gesture_group")
+  (return-type "none")
+  (parameters
+    '("GtkGesture*" "pgesture")
+  )
+)
+
+(define-method handles_sequence
+  (of-object "GtkGesture")
+  (c-name "gtk_gesture_handles_sequence")
+  (return-type "gboolean")
+  (parameters
+    '("GdkEventSequence*" "psequence")
+  )
+)
+
+(define-method is_active
+  (of-object "GtkGesture")
+  (c-name "gtk_gesture_is_active")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method is_grouped_with
+  (of-object "GtkGesture")
+  (c-name "gtk_gesture_is_grouped_with")
+  (return-type "gboolean")
+  (parameters
+    '("GtkGesture*" "pother")
+  )
+)
+
+(define-method is_recognized
+  (of-object "GtkGesture")
+  (c-name "gtk_gesture_is_recognized")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method set_sequence_state
+  (of-object "GtkGesture")
+  (c-name "gtk_gesture_set_sequence_state")
+  (return-type "gboolean")
+  (parameters
+    '("GdkEventSequence*" "psequence")
+    '("GtkEventSequenceState" "pstate")
+  )
+)
+
+(define-method set_state
+  (of-object "GtkGesture")
+  (c-name "gtk_gesture_set_state")
+  (return-type "gboolean")
+  (parameters
+    '("GtkEventSequenceState" "pstate")
+  )
+)
+
+(define-method set_window
+  (of-object "GtkGesture")
+  (c-name "gtk_gesture_set_window")
+  (return-type "none")
+  (parameters
+    '("GdkWindow*" "pwindow")
+  )
+)
+
+(define-method ungroup
+  (of-object "GtkGesture")
+  (c-name "gtk_gesture_ungroup")
+  (return-type "none")
+  (parameters
+  )
+)
+

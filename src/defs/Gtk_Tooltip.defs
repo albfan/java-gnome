@@ -1,0 +1,81 @@
+(define-object Tooltip
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkTooltip")
+)
+
+(define-method set_custom
+  (of-object "GtkTooltip")
+  (c-name "gtk_tooltip_set_custom")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pcustom_widget")
+  )
+)
+
+(define-method set_icon
+  (of-object "GtkTooltip")
+  (c-name "gtk_tooltip_set_icon")
+  (return-type "none")
+  (parameters
+    '("GdkPixbuf*" "ppixbuf")
+  )
+)
+
+(define-method set_icon_from_gicon
+  (of-object "GtkTooltip")
+  (c-name "gtk_tooltip_set_icon_from_gicon")
+  (return-type "none")
+  (parameters
+    '("GIcon*" "pgicon")
+    '("GtkIconSize" "psize")
+  )
+)
+
+(define-method set_icon_from_icon_name
+  (of-object "GtkTooltip")
+  (c-name "gtk_tooltip_set_icon_from_icon_name")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "picon_name")
+    '("GtkIconSize" "psize")
+  )
+)
+
+(define-method set_icon_from_stock
+  (of-object "GtkTooltip")
+  (c-name "gtk_tooltip_set_icon_from_stock")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pstock_id")
+    '("GtkIconSize" "psize")
+  )
+)
+
+(define-method set_markup
+  (of-object "GtkTooltip")
+  (c-name "gtk_tooltip_set_markup")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pmarkup")
+  )
+)
+
+(define-method set_text
+  (of-object "GtkTooltip")
+  (c-name "gtk_tooltip_set_text")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "ptext")
+  )
+)
+
+(define-method set_tip_area
+  (of-object "GtkTooltip")
+  (c-name "gtk_tooltip_set_tip_area")
+  (return-type "none")
+  (parameters
+    '("const GdkRectangle*" "prect")
+  )
+)
+

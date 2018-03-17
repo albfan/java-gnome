@@ -1,0 +1,23 @@
+(define-object RecentChooserWidget
+  (in-module "Gtk")
+  (parent "Box")
+  (c-name "GtkRecentChooserWidget")
+)
+
+(define-function RecentChooserWidget_new
+  (is-constructor-of "GtkRecentChooserWidget")
+  (c-name "gtk_recent_chooser_widget_new")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-function RecentChooserWidget_new_for_manager
+  (is-constructor-of "GtkRecentChooserWidget")
+  (c-name "gtk_recent_chooser_widget_new_for_manager")
+  (return-type "GtkWidget*")
+  (parameters
+    '("GtkRecentManager*" "pmanager")
+  )
+)
+

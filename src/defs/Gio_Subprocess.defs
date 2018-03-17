@@ -1,0 +1,273 @@
+(define-object Subprocess
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GSubprocess")
+)
+
+(define-function Subprocess_new
+  (is-constructor-of "GSubprocess")
+  (c-name "g_subprocess_new")
+  (return-type "GSubprocess*")
+  (parameters
+    '("GSubprocessFlags" "pflags")
+    '("GError**" "perror")
+    '("const gchar*" "pargv0")
+    '("null" "p...")
+  )
+)
+
+(define-function Subprocess_newv
+  (is-constructor-of "GSubprocess")
+  (c-name "g_subprocess_newv")
+  (return-type "GSubprocess*")
+  (parameters
+    '("null" "pargv")
+    '("GSubprocessFlags" "pflags")
+    '("GError**" "error")
+  )
+)
+
+(define-method communicate
+  (of-object "GSubprocess")
+  (c-name "g_subprocess_communicate")
+  (return-type "gboolean")
+  (parameters
+    '("GBytes*" "pstdin_buf")
+    '("GCancellable*" "pcancellable")
+    '("GBytes**" "pstdout_buf")
+    '("GBytes**" "pstderr_buf")
+    '("GError**" "error")
+  )
+)
+
+(define-method communicate_async
+  (of-object "GSubprocess")
+  (c-name "g_subprocess_communicate_async")
+  (return-type "none")
+  (parameters
+    '("GBytes*" "pstdin_buf")
+    '("GCancellable*" "pcancellable")
+    '("GAsyncReadyCallback" "pcallback")
+    '("gpointer" "puser_data")
+  )
+)
+
+(define-method communicate_finish
+  (of-object "GSubprocess")
+  (c-name "g_subprocess_communicate_finish")
+  (return-type "gboolean")
+  (parameters
+    '("GAsyncResult*" "presult")
+    '("GBytes**" "pstdout_buf")
+    '("GBytes**" "pstderr_buf")
+    '("GError**" "error")
+  )
+)
+
+(define-method communicate_utf8
+  (of-object "GSubprocess")
+  (c-name "g_subprocess_communicate_utf8")
+  (return-type "gboolean")
+  (parameters
+    '("const char*" "pstdin_buf")
+    '("GCancellable*" "pcancellable")
+    '("char**" "pstdout_buf")
+    '("char**" "pstderr_buf")
+    '("GError**" "error")
+  )
+)
+
+(define-method communicate_utf8_async
+  (of-object "GSubprocess")
+  (c-name "g_subprocess_communicate_utf8_async")
+  (return-type "none")
+  (parameters
+    '("const char*" "pstdin_buf")
+    '("GCancellable*" "pcancellable")
+    '("GAsyncReadyCallback" "pcallback")
+    '("gpointer" "puser_data")
+  )
+)
+
+(define-method communicate_utf8_finish
+  (of-object "GSubprocess")
+  (c-name "g_subprocess_communicate_utf8_finish")
+  (return-type "gboolean")
+  (parameters
+    '("GAsyncResult*" "presult")
+    '("char**" "pstdout_buf")
+    '("char**" "pstderr_buf")
+    '("GError**" "error")
+  )
+)
+
+(define-method force_exit
+  (of-object "GSubprocess")
+  (c-name "g_subprocess_force_exit")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method get_exit_status
+  (of-object "GSubprocess")
+  (c-name "g_subprocess_get_exit_status")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_identifier
+  (of-object "GSubprocess")
+  (c-name "g_subprocess_get_identifier")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_if_exited
+  (of-object "GSubprocess")
+  (c-name "g_subprocess_get_if_exited")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_if_signaled
+  (of-object "GSubprocess")
+  (c-name "g_subprocess_get_if_signaled")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_status
+  (of-object "GSubprocess")
+  (c-name "g_subprocess_get_status")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_stderr_pipe
+  (of-object "GSubprocess")
+  (c-name "g_subprocess_get_stderr_pipe")
+  (return-type "GInputStream*")
+  (parameters
+  )
+)
+
+(define-method get_stdin_pipe
+  (of-object "GSubprocess")
+  (c-name "g_subprocess_get_stdin_pipe")
+  (return-type "GOutputStream*")
+  (parameters
+  )
+)
+
+(define-method get_stdout_pipe
+  (of-object "GSubprocess")
+  (c-name "g_subprocess_get_stdout_pipe")
+  (return-type "GInputStream*")
+  (parameters
+  )
+)
+
+(define-method get_successful
+  (of-object "GSubprocess")
+  (c-name "g_subprocess_get_successful")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_term_sig
+  (of-object "GSubprocess")
+  (c-name "g_subprocess_get_term_sig")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method send_signal
+  (of-object "GSubprocess")
+  (c-name "g_subprocess_send_signal")
+  (return-type "none")
+  (parameters
+    '("gint" "psignal_num")
+  )
+)
+
+(define-method wait
+  (of-object "GSubprocess")
+  (c-name "g_subprocess_wait")
+  (return-type "gboolean")
+  (parameters
+    '("GCancellable*" "pcancellable")
+    '("GError**" "error")
+  )
+)
+
+(define-method wait_async
+  (of-object "GSubprocess")
+  (c-name "g_subprocess_wait_async")
+  (return-type "none")
+  (parameters
+    '("GCancellable*" "pcancellable")
+    '("GAsyncReadyCallback" "pcallback")
+    '("gpointer" "puser_data")
+  )
+)
+
+(define-method wait_check
+  (of-object "GSubprocess")
+  (c-name "g_subprocess_wait_check")
+  (return-type "gboolean")
+  (parameters
+    '("GCancellable*" "pcancellable")
+    '("GError**" "error")
+  )
+)
+
+(define-method wait_check_async
+  (of-object "GSubprocess")
+  (c-name "g_subprocess_wait_check_async")
+  (return-type "none")
+  (parameters
+    '("GCancellable*" "pcancellable")
+    '("GAsyncReadyCallback" "pcallback")
+    '("gpointer" "puser_data")
+  )
+)
+
+(define-method wait_check_finish
+  (of-object "GSubprocess")
+  (c-name "g_subprocess_wait_check_finish")
+  (return-type "gboolean")
+  (parameters
+    '("GAsyncResult*" "presult")
+    '("GError**" "error")
+  )
+)
+
+(define-method wait_finish
+  (of-object "GSubprocess")
+  (c-name "g_subprocess_wait_finish")
+  (return-type "gboolean")
+  (parameters
+    '("GAsyncResult*" "presult")
+    '("GError**" "error")
+  )
+)
+

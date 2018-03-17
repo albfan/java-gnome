@@ -1,0 +1,17 @@
+(define-enum BorderStyle
+  (in-module "Gtk")
+  (c-name "GtkBorderStyle")
+  (values
+    '("none" "GTK_BORDER_STYLE_NONE")
+    '("solid" "GTK_BORDER_STYLE_SOLID")
+    '("inset" "GTK_BORDER_STYLE_INSET")
+    '("outset" "GTK_BORDER_STYLE_OUTSET")
+    '("hidden" "GTK_BORDER_STYLE_HIDDEN")
+    '("dotted" "GTK_BORDER_STYLE_DOTTED")
+    '("dashed" "GTK_BORDER_STYLE_DASHED")
+    '("double" "GTK_BORDER_STYLE_DOUBLE")
+    '("groove" "GTK_BORDER_STYLE_GROOVE")
+    '("ridge" "GTK_BORDER_STYLE_RIDGE")
+  )
+)
+

@@ -1,0 +1,64 @@
+(define-object FileMonitor
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GFileMonitor")
+)
+
+(define-method cancel
+  (of-object "GFileMonitor")
+  (c-name "cancel")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method changed
+  (of-object "GFileMonitor")
+  (c-name "changed")
+  (return-type "none")
+  (parameters
+    '("GFile*" "pfile")
+    '("GFile*" "pother_file")
+    '("GFileMonitorEvent" "pevent_type")
+  )
+)
+
+(define-method emit_event
+  (of-object "GFileMonitor")
+  (c-name "g_file_monitor_emit_event")
+  (return-type "none")
+  (parameters
+    '("GFile*" "pchild")
+    '("GFile*" "pother_file")
+    '("GFileMonitorEvent" "pevent_type")
+  )
+)
+
+(define-method is_cancelled
+  (of-object "GFileMonitor")
+  (c-name "g_file_monitor_is_cancelled")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method set_rate_limit
+  (of-object "GFileMonitor")
+  (c-name "g_file_monitor_set_rate_limit")
+  (return-type "none")
+  (parameters
+    '("gint" "plimit_msecs")
+  )
+)
+

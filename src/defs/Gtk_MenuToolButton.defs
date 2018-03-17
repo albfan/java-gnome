@@ -1,0 +1,68 @@
+(define-object MenuToolButton
+  (in-module "Gtk")
+  (parent "ToolButton")
+  (c-name "GtkMenuToolButton")
+)
+
+(define-function MenuToolButton_new
+  (is-constructor-of "GtkMenuToolButton")
+  (c-name "gtk_menu_tool_button_new")
+  (return-type "GtkToolItem*")
+  (parameters
+    '("GtkWidget*" "picon_widget")
+    '("const gchar*" "plabel")
+  )
+)
+
+(define-function MenuToolButton_new_from_stock
+  (is-constructor-of "GtkMenuToolButton")
+  (c-name "gtk_menu_tool_button_new_from_stock")
+  (return-type "GtkToolItem*")
+  (parameters
+    '("const gchar*" "pstock_id")
+  )
+)
+
+(define-method show_menu
+  (of-object "GtkMenuToolButton")
+  (c-name "show_menu")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method get_menu
+  (of-object "GtkMenuToolButton")
+  (c-name "gtk_menu_tool_button_get_menu")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method set_arrow_tooltip_markup
+  (of-object "GtkMenuToolButton")
+  (c-name "gtk_menu_tool_button_set_arrow_tooltip_markup")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pmarkup")
+  )
+)
+
+(define-method set_arrow_tooltip_text
+  (of-object "GtkMenuToolButton")
+  (c-name "gtk_menu_tool_button_set_arrow_tooltip_text")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "ptext")
+  )
+)
+
+(define-method set_menu
+  (of-object "GtkMenuToolButton")
+  (c-name "gtk_menu_tool_button_set_menu")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pmenu")
+  )
+)
+

@@ -1,0 +1,6 @@
+(define-object ArrowAccessible
+  (in-module "Gtk")
+  (parent "WidgetAccessible")
+  (c-name "GtkArrowAccessible")
+)
+

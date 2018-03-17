@@ -1,0 +1,71 @@
+(define-object ThemedIcon
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GThemedIcon")
+)
+
+(define-function ThemedIcon_new
+  (is-constructor-of "GThemedIcon")
+  (c-name "g_themed_icon_new")
+  (return-type "GIcon*")
+  (parameters
+    '("const char*" "piconname")
+  )
+)
+
+(define-function ThemedIcon_new_from_names
+  (is-constructor-of "GThemedIcon")
+  (c-name "g_themed_icon_new_from_names")
+  (return-type "GIcon*")
+  (parameters
+    '("null" "piconnames")
+    '("int" "plen")
+  )
+)
+
+(define-function ThemedIcon_new_with_default_fallbacks
+  (is-constructor-of "GThemedIcon")
+  (c-name "g_themed_icon_new_with_default_fallbacks")
+  (return-type "GIcon*")
+  (parameters
+    '("const char*" "piconname")
+  )
+)
+
+(define-method append_name
+  (of-object "GThemedIcon")
+  (c-name "g_themed_icon_append_name")
+  (return-type "none")
+  (parameters
+    '("const char*" "piconname")
+  )
+)
+
+(define-method get_names
+  (of-object "GThemedIcon")
+  (c-name "g_themed_icon_get_names")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method prepend_name
+  (of-object "GThemedIcon")
+  (c-name "g_themed_icon_prepend_name")
+  (return-type "none")
+  (parameters
+    '("const char*" "piconname")
+  )
+)
+

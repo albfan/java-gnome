@@ -1,0 +1,24 @@
+(define-object DOMHTMLHeadElement
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "DOMHTMLElement")
+  (c-name "WebKitDOMHTMLHeadElement")
+)
+
+(define-method get_profile
+  (of-object "WebKitDOMHTMLHeadElement")
+  (c-name "webkit_dom_html_head_element_get_profile")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+
+(define-method set_profile
+  (of-object "WebKitDOMHTMLHeadElement")
+  (c-name "webkit_dom_html_head_element_set_profile")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pvalue")
+  )
+)
+

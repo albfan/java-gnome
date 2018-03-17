@@ -1,0 +1,15 @@
+(define-object NoOpObjectFactory
+  (in-module "Atk")
+  (import-header "atk/atk.h")
+  (parent "ObjectFactory")
+  (c-name "AtkNoOpObjectFactory")
+)
+
+(define-function NoOpObjectFactory_new
+  (is-constructor-of "AtkNoOpObjectFactory")
+  (c-name "atk_no_op_object_factory_new")
+  (return-type "AtkObjectFactory*")
+  (parameters
+  )
+)
+

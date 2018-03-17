@@ -1,0 +1,110 @@
+(define-object Cursor
+  (in-module "Gdk")
+  (import-header "gdk/gdk.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GdkCursor")
+)
+
+(define-function Cursor_new
+  (is-constructor-of "GdkCursor")
+  (c-name "gdk_cursor_new")
+  (return-type "GdkCursor*")
+  (parameters
+    '("GdkCursorType" "pcursor_type")
+  )
+)
+
+(define-function Cursor_new_for_display
+  (is-constructor-of "GdkCursor")
+  (c-name "gdk_cursor_new_for_display")
+  (return-type "GdkCursor*")
+  (parameters
+    '("GdkDisplay*" "pdisplay")
+    '("GdkCursorType" "pcursor_type")
+  )
+)
+
+(define-function Cursor_new_from_name
+  (is-constructor-of "GdkCursor")
+  (c-name "gdk_cursor_new_from_name")
+  (return-type "GdkCursor*")
+  (parameters
+    '("GdkDisplay*" "pdisplay")
+    '("const gchar*" "pname")
+  )
+)
+
+(define-function Cursor_new_from_pixbuf
+  (is-constructor-of "GdkCursor")
+  (c-name "gdk_cursor_new_from_pixbuf")
+  (return-type "GdkCursor*")
+  (parameters
+    '("GdkDisplay*" "pdisplay")
+    '("GdkPixbuf*" "ppixbuf")
+    '("gint" "px")
+    '("gint" "py")
+  )
+)
+
+(define-function Cursor_new_from_surface
+  (is-constructor-of "GdkCursor")
+  (c-name "gdk_cursor_new_from_surface")
+  (return-type "GdkCursor*")
+  (parameters
+    '("GdkDisplay*" "pdisplay")
+    '("cairo_surface_t*" "psurface")
+    '("gdouble" "px")
+    '("gdouble" "py")
+  )
+)
+
+(define-method get_cursor_type
+  (of-object "GdkCursor")
+  (c-name "gdk_cursor_get_cursor_type")
+  (return-type "GdkCursorType")
+  (parameters
+  )
+)
+
+(define-method get_display
+  (of-object "GdkCursor")
+  (c-name "gdk_cursor_get_display")
+  (return-type "GdkDisplay*")
+  (parameters
+  )
+)
+
+(define-method get_image
+  (of-object "GdkCursor")
+  (c-name "gdk_cursor_get_image")
+  (return-type "GdkPixbuf*")
+  (parameters
+  )
+)
+
+(define-method get_surface
+  (of-object "GdkCursor")
+  (c-name "gdk_cursor_get_surface")
+  (return-type "cairo_surface_t*")
+  (parameters
+    '("gdouble*" "px_hot")
+    '("gdouble*" "py_hot")
+  )
+)
+
+(define-method ref
+  (of-object "GdkCursor")
+  (c-name "gdk_cursor_ref")
+  (return-type "GdkCursor*")
+  (parameters
+  )
+)
+
+(define-method unref
+  (of-object "GdkCursor")
+  (c-name "gdk_cursor_unref")
+  (return-type "none")
+  (parameters
+  )
+)
+

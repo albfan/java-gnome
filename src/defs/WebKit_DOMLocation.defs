@@ -1,0 +1,87 @@
+(define-object DOMLocation
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "DOMObject")
+  (c-name "WebKitDOMLocation")
+)
+
+(define-method get_ancestor_origins
+  (of-object "WebKitDOMLocation")
+  (c-name "webkit_dom_location_get_ancestor_origins")
+  (return-type "WebKitDOMDOMStringList*")
+  (parameters
+  )
+)
+
+(define-method get_hash
+  (of-object "WebKitDOMLocation")
+  (c-name "webkit_dom_location_get_hash")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+
+(define-method get_host
+  (of-object "WebKitDOMLocation")
+  (c-name "webkit_dom_location_get_host")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+
+(define-method get_hostname
+  (of-object "WebKitDOMLocation")
+  (c-name "webkit_dom_location_get_hostname")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+
+(define-method get_href
+  (of-object "WebKitDOMLocation")
+  (c-name "webkit_dom_location_get_href")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+
+(define-method get_origin
+  (of-object "WebKitDOMLocation")
+  (c-name "webkit_dom_location_get_origin")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+
+(define-method get_pathname
+  (of-object "WebKitDOMLocation")
+  (c-name "webkit_dom_location_get_pathname")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+
+(define-method get_port
+  (of-object "WebKitDOMLocation")
+  (c-name "webkit_dom_location_get_port")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+
+(define-method get_protocol
+  (of-object "WebKitDOMLocation")
+  (c-name "webkit_dom_location_get_protocol")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+
+(define-method get_search
+  (of-object "WebKitDOMLocation")
+  (c-name "webkit_dom_location_get_search")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+

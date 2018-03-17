@@ -1,0 +1,6 @@
+(define-object CellAreaContextPrivate
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkCellAreaContextPrivate")
+)
+

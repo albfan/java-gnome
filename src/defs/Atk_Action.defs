@@ -1,0 +1,70 @@
+(define-object Action
+  (in-module "Atk")
+  (import-header "atk/atk.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "AtkAction")
+)
+
+(define-method do_action
+  (of-object "AtkAction")
+  (c-name "do_action")
+  (return-type "gboolean")
+  (parameters
+    '("gint" "pi")
+  )
+)
+
+(define-method get_description
+  (of-object "AtkAction")
+  (c-name "get_description")
+  (return-type "const gchar*")
+  (parameters
+    '("gint" "pi")
+  )
+)
+
+(define-method get_keybinding
+  (of-object "AtkAction")
+  (c-name "get_keybinding")
+  (return-type "const gchar*")
+  (parameters
+    '("gint" "pi")
+  )
+)
+
+(define-method get_localized_name
+  (of-object "AtkAction")
+  (c-name "get_localized_name")
+  (return-type "const gchar*")
+  (parameters
+    '("gint" "pi")
+  )
+)
+
+(define-method get_n_actions
+  (of-object "AtkAction")
+  (c-name "get_n_actions")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_name
+  (of-object "AtkAction")
+  (c-name "get_name")
+  (return-type "const gchar*")
+  (parameters
+    '("gint" "pi")
+  )
+)
+
+(define-method set_description
+  (of-object "AtkAction")
+  (c-name "set_description")
+  (return-type "gboolean")
+  (parameters
+    '("gint" "pi")
+    '("const gchar*" "pdesc")
+  )
+)
+

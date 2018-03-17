@@ -1,0 +1,13 @@
+(define-enum IconViewDropPosition
+  (in-module "Gtk")
+  (c-name "GtkIconViewDropPosition")
+  (values
+    '("no_drop" "GTK_ICON_VIEW_NO_DROP")
+    '("drop_into" "GTK_ICON_VIEW_DROP_INTO")
+    '("drop_left" "GTK_ICON_VIEW_DROP_LEFT")
+    '("drop_right" "GTK_ICON_VIEW_DROP_RIGHT")
+    '("drop_above" "GTK_ICON_VIEW_DROP_ABOVE")
+    '("drop_below" "GTK_ICON_VIEW_DROP_BELOW")
+  )
+)
+

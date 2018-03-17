@@ -1,0 +1,41 @@
+(define-object NetworkRequest
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "WebKitNetworkRequest")
+)
+
+(define-function NetworkRequest_new
+  (is-constructor-of "WebKitNetworkRequest")
+  (c-name "webkit_network_request_new")
+  (return-type "WebKitNetworkRequest*")
+  (parameters
+    '("const gchar*" "puri")
+  )
+)
+
+(define-method get_message
+  (of-object "WebKitNetworkRequest")
+  (c-name "webkit_network_request_get_message")
+  (return-type "SoupMessage*")
+  (parameters
+  )
+)
+
+(define-method get_uri
+  (of-object "WebKitNetworkRequest")
+  (c-name "webkit_network_request_get_uri")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method set_uri
+  (of-object "WebKitNetworkRequest")
+  (c-name "webkit_network_request_set_uri")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "puri")
+  )
+)
+

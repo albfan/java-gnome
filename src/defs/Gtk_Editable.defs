@@ -1,0 +1,162 @@
+(define-object Editable
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkEditable")
+)
+
+(define-method changed
+  (of-object "GtkEditable")
+  (c-name "changed")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method delete_text
+  (of-object "GtkEditable")
+  (c-name "delete_text")
+  (return-type "none")
+  (parameters
+    '("gint" "pstart_pos")
+    '("gint" "pend_pos")
+  )
+)
+
+(define-method do_delete_text
+  (of-object "GtkEditable")
+  (c-name "do_delete_text")
+  (return-type "none")
+  (parameters
+    '("gint" "pstart_pos")
+    '("gint" "pend_pos")
+  )
+)
+
+(define-method do_insert_text
+  (of-object "GtkEditable")
+  (c-name "do_insert_text")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pnew_text")
+    '("gint" "pnew_text_length")
+    '("gint*" "pposition")
+  )
+)
+
+(define-method get_chars
+  (of-object "GtkEditable")
+  (c-name "get_chars")
+  (return-type "gchar*")
+  (parameters
+    '("gint" "pstart_pos")
+    '("gint" "pend_pos")
+  )
+)
+
+(define-method get_position
+  (of-object "GtkEditable")
+  (c-name "get_position")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_selection_bounds
+  (of-object "GtkEditable")
+  (c-name "get_selection_bounds")
+  (return-type "gboolean")
+  (parameters
+    '("gint*" "pstart_pos")
+    '("gint*" "pend_pos")
+  )
+)
+
+(define-method insert_text
+  (of-object "GtkEditable")
+  (c-name "insert_text")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pnew_text")
+    '("gint" "pnew_text_length")
+    '("gint*" "pposition")
+  )
+)
+
+(define-method set_position
+  (of-object "GtkEditable")
+  (c-name "set_position")
+  (return-type "none")
+  (parameters
+    '("gint" "pposition")
+  )
+)
+
+(define-method set_selection_bounds
+  (of-object "GtkEditable")
+  (c-name "set_selection_bounds")
+  (return-type "none")
+  (parameters
+    '("gint" "pstart_pos")
+    '("gint" "pend_pos")
+  )
+)
+
+(define-method copy_clipboard
+  (of-object "GtkEditable")
+  (c-name "gtk_editable_copy_clipboard")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method cut_clipboard
+  (of-object "GtkEditable")
+  (c-name "gtk_editable_cut_clipboard")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method delete_selection
+  (of-object "GtkEditable")
+  (c-name "gtk_editable_delete_selection")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method get_editable
+  (of-object "GtkEditable")
+  (c-name "gtk_editable_get_editable")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method paste_clipboard
+  (of-object "GtkEditable")
+  (c-name "gtk_editable_paste_clipboard")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method select_region
+  (of-object "GtkEditable")
+  (c-name "gtk_editable_select_region")
+  (return-type "none")
+  (parameters
+    '("gint" "pstart_pos")
+    '("gint" "pend_pos")
+  )
+)
+
+(define-method set_editable
+  (of-object "GtkEditable")
+  (c-name "gtk_editable_set_editable")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pis_editable")
+  )
+)
+

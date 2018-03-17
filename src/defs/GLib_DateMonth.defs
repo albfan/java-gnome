@@ -1,0 +1,20 @@
+(define-enum DateMonth
+  (in-module "GLib")
+  (c-name "GDateMonth")
+  (values
+    '("bad_month" "G_DATE_BAD_MONTH")
+    '("january" "G_DATE_JANUARY")
+    '("february" "G_DATE_FEBRUARY")
+    '("march" "G_DATE_MARCH")
+    '("april" "G_DATE_APRIL")
+    '("may" "G_DATE_MAY")
+    '("june" "G_DATE_JUNE")
+    '("july" "G_DATE_JULY")
+    '("august" "G_DATE_AUGUST")
+    '("september" "G_DATE_SEPTEMBER")
+    '("october" "G_DATE_OCTOBER")
+    '("november" "G_DATE_NOVEMBER")
+    '("december" "G_DATE_DECEMBER")
+  )
+)
+

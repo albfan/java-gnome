@@ -1,0 +1,41 @@
+(define-object DOMProcessingInstruction
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "DOMCharacterData")
+  (c-name "WebKitDOMProcessingInstruction")
+)
+
+(define-method get_data
+  (of-object "WebKitDOMProcessingInstruction")
+  (c-name "webkit_dom_processing_instruction_get_data")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+
+(define-method get_sheet
+  (of-object "WebKitDOMProcessingInstruction")
+  (c-name "webkit_dom_processing_instruction_get_sheet")
+  (return-type "WebKitDOMStyleSheet*")
+  (parameters
+  )
+)
+
+(define-method get_target
+  (of-object "WebKitDOMProcessingInstruction")
+  (c-name "webkit_dom_processing_instruction_get_target")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+
+(define-method set_data
+  (of-object "WebKitDOMProcessingInstruction")
+  (c-name "webkit_dom_processing_instruction_set_data")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pvalue")
+    '("GError**" "error")
+  )
+)
+

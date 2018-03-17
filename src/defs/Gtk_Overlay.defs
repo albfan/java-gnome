@@ -1,0 +1,62 @@
+(define-object Overlay
+  (in-module "Gtk")
+  (parent "Bin")
+  (c-name "GtkOverlay")
+)
+
+(define-function Overlay_new
+  (is-constructor-of "GtkOverlay")
+  (c-name "gtk_overlay_new")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method get_child_position
+  (of-object "GtkOverlay")
+  (c-name "get_child_position")
+  (return-type "gboolean")
+  (parameters
+    '("GtkWidget*" "pwidget")
+    '("GtkAllocation*" "pallocation")
+  )
+)
+
+(define-method add_overlay
+  (of-object "GtkOverlay")
+  (c-name "gtk_overlay_add_overlay")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pwidget")
+  )
+)
+
+(define-method get_overlay_pass_through
+  (of-object "GtkOverlay")
+  (c-name "gtk_overlay_get_overlay_pass_through")
+  (return-type "gboolean")
+  (parameters
+    '("GtkWidget*" "pwidget")
+  )
+)
+
+(define-method reorder_overlay
+  (of-object "GtkOverlay")
+  (c-name "gtk_overlay_reorder_overlay")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pchild")
+    '("gint" "pposition")
+  )
+)
+
+(define-method set_overlay_pass_through
+  (of-object "GtkOverlay")
+  (c-name "gtk_overlay_set_overlay_pass_through")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pwidget")
+    '("gboolean" "ppass_through")
+  )
+)
+

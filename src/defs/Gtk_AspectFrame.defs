@@ -1,0 +1,31 @@
+(define-object AspectFrame
+  (in-module "Gtk")
+  (parent "Frame")
+  (c-name "GtkAspectFrame")
+)
+
+(define-function AspectFrame_new
+  (is-constructor-of "GtkAspectFrame")
+  (c-name "gtk_aspect_frame_new")
+  (return-type "GtkWidget*")
+  (parameters
+    '("const gchar*" "plabel")
+    '("gfloat" "pxalign")
+    '("gfloat" "pyalign")
+    '("gfloat" "pratio")
+    '("gboolean" "pobey_child")
+  )
+)
+
+(define-method set
+  (of-object "GtkAspectFrame")
+  (c-name "gtk_aspect_frame_set")
+  (return-type "none")
+  (parameters
+    '("gfloat" "pxalign")
+    '("gfloat" "pyalign")
+    '("gfloat" "pratio")
+    '("gboolean" "pobey_child")
+  )
+)
+

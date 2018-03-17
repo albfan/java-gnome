@@ -1,0 +1,14 @@
+(define-enum WindowType
+  (in-module "Gdk")
+  (c-name "GdkWindowType")
+  (values
+    '("root" "GDK_WINDOW_ROOT")
+    '("toplevel" "GDK_WINDOW_TOPLEVEL")
+    '("child" "GDK_WINDOW_CHILD")
+    '("temp" "GDK_WINDOW_TEMP")
+    '("foreign" "GDK_WINDOW_FOREIGN")
+    '("offscreen" "GDK_WINDOW_OFFSCREEN")
+    '("subsurface" "GDK_WINDOW_SUBSURFACE")
+  )
+)
+

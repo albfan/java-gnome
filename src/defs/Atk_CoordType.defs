@@ -1,0 +1,9 @@
+(define-enum CoordType
+  (in-module "Atk")
+  (c-name "AtkCoordType")
+  (values
+    '("screen" "ATK_XY_SCREEN")
+    '("window" "ATK_XY_WINDOW")
+  )
+)
+

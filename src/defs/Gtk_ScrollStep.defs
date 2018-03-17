@@ -1,0 +1,13 @@
+(define-enum ScrollStep
+  (in-module "Gtk")
+  (c-name "GtkScrollStep")
+  (values
+    '("steps" "GTK_SCROLL_STEPS")
+    '("pages" "GTK_SCROLL_PAGES")
+    '("ends" "GTK_SCROLL_ENDS")
+    '("horizontal_steps" "GTK_SCROLL_HORIZONTAL_STEPS")
+    '("horizontal_pages" "GTK_SCROLL_HORIZONTAL_PAGES")
+    '("horizontal_ends" "GTK_SCROLL_HORIZONTAL_ENDS")
+  )
+)
+

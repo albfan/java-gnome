@@ -1,0 +1,6 @@
+(define-object IconViewAccessibleClass
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkIconViewAccessibleClass")
+)
+

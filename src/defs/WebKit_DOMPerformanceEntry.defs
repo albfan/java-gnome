@@ -1,0 +1,39 @@
+(define-object DOMPerformanceEntry
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "DOMObject")
+  (c-name "WebKitDOMPerformanceEntry")
+)
+
+(define-method get_duration
+  (of-object "WebKitDOMPerformanceEntry")
+  (c-name "webkit_dom_performance_entry_get_duration")
+  (return-type "gdouble")
+  (parameters
+  )
+)
+
+(define-method get_entry_type
+  (of-object "WebKitDOMPerformanceEntry")
+  (c-name "webkit_dom_performance_entry_get_entry_type")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+
+(define-method get_name
+  (of-object "WebKitDOMPerformanceEntry")
+  (c-name "webkit_dom_performance_entry_get_name")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+
+(define-method get_start_time
+  (of-object "WebKitDOMPerformanceEntry")
+  (c-name "webkit_dom_performance_entry_get_start_time")
+  (return-type "gdouble")
+  (parameters
+  )
+)
+

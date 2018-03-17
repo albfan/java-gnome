@@ -1,0 +1,104 @@
+(define-object CellAreaContext
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkCellAreaContext")
+)
+
+(define-method allocate
+  (of-object "GtkCellAreaContext")
+  (c-name "allocate")
+  (return-type "none")
+  (parameters
+    '("gint" "pwidth")
+    '("gint" "pheight")
+  )
+)
+
+(define-method get_preferred_height_for_width
+  (of-object "GtkCellAreaContext")
+  (c-name "get_preferred_height_for_width")
+  (return-type "none")
+  (parameters
+    '("gint" "pwidth")
+    '("gint*" "pminimum_height")
+    '("gint*" "pnatural_height")
+  )
+)
+
+(define-method get_preferred_width_for_height
+  (of-object "GtkCellAreaContext")
+  (c-name "get_preferred_width_for_height")
+  (return-type "none")
+  (parameters
+    '("gint" "pheight")
+    '("gint*" "pminimum_width")
+    '("gint*" "pnatural_width")
+  )
+)
+
+(define-method reset
+  (of-object "GtkCellAreaContext")
+  (c-name "reset")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method get_allocation
+  (of-object "GtkCellAreaContext")
+  (c-name "gtk_cell_area_context_get_allocation")
+  (return-type "none")
+  (parameters
+    '("gint*" "pwidth")
+    '("gint*" "pheight")
+  )
+)
+
+(define-method get_area
+  (of-object "GtkCellAreaContext")
+  (c-name "gtk_cell_area_context_get_area")
+  (return-type "GtkCellArea*")
+  (parameters
+  )
+)
+
+(define-method get_preferred_height
+  (of-object "GtkCellAreaContext")
+  (c-name "gtk_cell_area_context_get_preferred_height")
+  (return-type "none")
+  (parameters
+    '("gint*" "pminimum_height")
+    '("gint*" "pnatural_height")
+  )
+)
+
+(define-method get_preferred_width
+  (of-object "GtkCellAreaContext")
+  (c-name "gtk_cell_area_context_get_preferred_width")
+  (return-type "none")
+  (parameters
+    '("gint*" "pminimum_width")
+    '("gint*" "pnatural_width")
+  )
+)
+
+(define-method push_preferred_height
+  (of-object "GtkCellAreaContext")
+  (c-name "gtk_cell_area_context_push_preferred_height")
+  (return-type "none")
+  (parameters
+    '("gint" "pminimum_height")
+    '("gint" "pnatural_height")
+  )
+)
+
+(define-method push_preferred_width
+  (of-object "GtkCellAreaContext")
+  (c-name "gtk_cell_area_context_push_preferred_width")
+  (return-type "none")
+  (parameters
+    '("gint" "pminimum_width")
+    '("gint" "pnatural_width")
+  )
+)
+

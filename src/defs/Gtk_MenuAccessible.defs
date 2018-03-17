@@ -1,0 +1,6 @@
+(define-object MenuAccessible
+  (in-module "Gtk")
+  (parent "MenuShellAccessible")
+  (c-name "GtkMenuAccessible")
+)
+

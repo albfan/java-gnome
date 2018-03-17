@@ -1,0 +1,506 @@
+(define-object StyleContext
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkStyleContext")
+)
+
+(define-function StyleContext_new
+  (is-constructor-of "GtkStyleContext")
+  (c-name "gtk_style_context_new")
+  (return-type "GtkStyleContext*")
+  (parameters
+  )
+)
+
+(define-method changed
+  (of-object "GtkStyleContext")
+  (c-name "changed")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method add_class
+  (of-object "GtkStyleContext")
+  (c-name "gtk_style_context_add_class")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pclass_name")
+  )
+)
+
+(define-method add_provider
+  (of-object "GtkStyleContext")
+  (c-name "gtk_style_context_add_provider")
+  (return-type "none")
+  (parameters
+    '("GtkStyleProvider*" "pprovider")
+    '("guint" "ppriority")
+  )
+)
+
+(define-method add_region
+  (of-object "GtkStyleContext")
+  (c-name "gtk_style_context_add_region")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pregion_name")
+    '("GtkRegionFlags" "pflags")
+  )
+)
+
+(define-method cancel_animations
+  (of-object "GtkStyleContext")
+  (c-name "gtk_style_context_cancel_animations")
+  (return-type "none")
+  (parameters
+    '("gpointer" "pregion_id")
+  )
+)
+
+(define-method get
+  (of-object "GtkStyleContext")
+  (c-name "gtk_style_context_get")
+  (return-type "none")
+  (parameters
+    '("GtkStateFlags" "pstate")
+    '("null" "p...")
+  )
+)
+
+(define-method get_background_color
+  (of-object "GtkStyleContext")
+  (c-name "gtk_style_context_get_background_color")
+  (return-type "none")
+  (parameters
+    '("GtkStateFlags" "pstate")
+    '("GdkRGBA*" "pcolor")
+  )
+)
+
+(define-method get_border
+  (of-object "GtkStyleContext")
+  (c-name "gtk_style_context_get_border")
+  (return-type "none")
+  (parameters
+    '("GtkStateFlags" "pstate")
+    '("GtkBorder*" "pborder")
+  )
+)
+
+(define-method get_border_color
+  (of-object "GtkStyleContext")
+  (c-name "gtk_style_context_get_border_color")
+  (return-type "none")
+  (parameters
+    '("GtkStateFlags" "pstate")
+    '("GdkRGBA*" "pcolor")
+  )
+)
+
+(define-method get_color
+  (of-object "GtkStyleContext")
+  (c-name "gtk_style_context_get_color")
+  (return-type "none")
+  (parameters
+    '("GtkStateFlags" "pstate")
+    '("GdkRGBA*" "pcolor")
+  )
+)
+
+(define-method get_direction
+  (of-object "GtkStyleContext")
+  (c-name "gtk_style_context_get_direction")
+  (return-type "GtkTextDirection")
+  (parameters
+  )
+)
+
+(define-method get_font
+  (of-object "GtkStyleContext")
+  (c-name "gtk_style_context_get_font")
+  (return-type "const PangoFontDescription*")
+  (parameters
+    '("GtkStateFlags" "pstate")
+  )
+)
+
+(define-method get_frame_clock
+  (of-object "GtkStyleContext")
+  (c-name "gtk_style_context_get_frame_clock")
+  (return-type "GdkFrameClock*")
+  (parameters
+  )
+)
+
+(define-method get_junction_sides
+  (of-object "GtkStyleContext")
+  (c-name "gtk_style_context_get_junction_sides")
+  (return-type "GtkJunctionSides")
+  (parameters
+  )
+)
+
+(define-method get_margin
+  (of-object "GtkStyleContext")
+  (c-name "gtk_style_context_get_margin")
+  (return-type "none")
+  (parameters
+    '("GtkStateFlags" "pstate")
+    '("GtkBorder*" "pmargin")
+  )
+)
+
+(define-method get_padding
+  (of-object "GtkStyleContext")
+  (c-name "gtk_style_context_get_padding")
+  (return-type "none")
+  (parameters
+    '("GtkStateFlags" "pstate")
+    '("GtkBorder*" "ppadding")
+  )
+)
+
+(define-method get_parent
+  (of-object "GtkStyleContext")
+  (c-name "gtk_style_context_get_parent")
+  (return-type "GtkStyleContext*")
+  (parameters
+  )
+)
+
+(define-method get_path
+  (of-object "GtkStyleContext")
+  (c-name "gtk_style_context_get_path")
+  (return-type "const GtkWidgetPath*")
+  (parameters
+  )
+)
+
+(define-method get_property
+  (of-object "GtkStyleContext")
+  (c-name "gtk_style_context_get_property")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pproperty")
+    '("GtkStateFlags" "pstate")
+    '("GValue*" "pvalue")
+  )
+)
+
+(define-method get_scale
+  (of-object "GtkStyleContext")
+  (c-name "gtk_style_context_get_scale")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_screen
+  (of-object "GtkStyleContext")
+  (c-name "gtk_style_context_get_screen")
+  (return-type "GdkScreen*")
+  (parameters
+  )
+)
+
+(define-method get_section
+  (of-object "GtkStyleContext")
+  (c-name "gtk_style_context_get_section")
+  (return-type "GtkCssSection*")
+  (parameters
+    '("const gchar*" "pproperty")
+  )
+)
+
+(define-method get_state
+  (of-object "GtkStyleContext")
+  (c-name "gtk_style_context_get_state")
+  (return-type "GtkStateFlags")
+  (parameters
+  )
+)
+
+(define-method get_style
+  (of-object "GtkStyleContext")
+  (c-name "gtk_style_context_get_style")
+  (return-type "none")
+  (parameters
+    '("null" "p...")
+  )
+)
+
+(define-method get_style_property
+  (of-object "GtkStyleContext")
+  (c-name "gtk_style_context_get_style_property")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pproperty_name")
+    '("GValue*" "pvalue")
+  )
+)
+
+(define-method get_style_valist
+  (of-object "GtkStyleContext")
+  (c-name "gtk_style_context_get_style_valist")
+  (return-type "none")
+  (parameters
+    '("va_list" "pargs")
+  )
+)
+
+(define-method get_valist
+  (of-object "GtkStyleContext")
+  (c-name "gtk_style_context_get_valist")
+  (return-type "none")
+  (parameters
+    '("GtkStateFlags" "pstate")
+    '("va_list" "pargs")
+  )
+)
+
+(define-method has_class
+  (of-object "GtkStyleContext")
+  (c-name "gtk_style_context_has_class")
+  (return-type "gboolean")
+  (parameters
+    '("const gchar*" "pclass_name")
+  )
+)
+
+(define-method has_region
+  (of-object "GtkStyleContext")
+  (c-name "gtk_style_context_has_region")
+  (return-type "gboolean")
+  (parameters
+    '("const gchar*" "pregion_name")
+    '("GtkRegionFlags*" "pflags_return")
+  )
+)
+
+(define-method invalidate
+  (of-object "GtkStyleContext")
+  (c-name "gtk_style_context_invalidate")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method list_classes
+  (of-object "GtkStyleContext")
+  (c-name "gtk_style_context_list_classes")
+  (return-type "GList*")
+  (parameters
+  )
+)
+
+(define-method list_regions
+  (of-object "GtkStyleContext")
+  (c-name "gtk_style_context_list_regions")
+  (return-type "GList*")
+  (parameters
+  )
+)
+
+(define-method lookup_color
+  (of-object "GtkStyleContext")
+  (c-name "gtk_style_context_lookup_color")
+  (return-type "gboolean")
+  (parameters
+    '("const gchar*" "pcolor_name")
+    '("GdkRGBA*" "pcolor")
+  )
+)
+
+(define-method lookup_icon_set
+  (of-object "GtkStyleContext")
+  (c-name "gtk_style_context_lookup_icon_set")
+  (return-type "GtkIconSet*")
+  (parameters
+    '("const gchar*" "pstock_id")
+  )
+)
+
+(define-method notify_state_change
+  (of-object "GtkStyleContext")
+  (c-name "gtk_style_context_notify_state_change")
+  (return-type "none")
+  (parameters
+    '("GdkWindow*" "pwindow")
+    '("gpointer" "pregion_id")
+    '("GtkStateType" "pstate")
+    '("gboolean" "pstate_value")
+  )
+)
+
+(define-method pop_animatable_region
+  (of-object "GtkStyleContext")
+  (c-name "gtk_style_context_pop_animatable_region")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method push_animatable_region
+  (of-object "GtkStyleContext")
+  (c-name "gtk_style_context_push_animatable_region")
+  (return-type "none")
+  (parameters
+    '("gpointer" "pregion_id")
+  )
+)
+
+(define-method remove_class
+  (of-object "GtkStyleContext")
+  (c-name "gtk_style_context_remove_class")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pclass_name")
+  )
+)
+
+(define-method remove_provider
+  (of-object "GtkStyleContext")
+  (c-name "gtk_style_context_remove_provider")
+  (return-type "none")
+  (parameters
+    '("GtkStyleProvider*" "pprovider")
+  )
+)
+
+(define-method remove_region
+  (of-object "GtkStyleContext")
+  (c-name "gtk_style_context_remove_region")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pregion_name")
+  )
+)
+
+(define-method restore
+  (of-object "GtkStyleContext")
+  (c-name "gtk_style_context_restore")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method save
+  (of-object "GtkStyleContext")
+  (c-name "gtk_style_context_save")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method scroll_animations
+  (of-object "GtkStyleContext")
+  (c-name "gtk_style_context_scroll_animations")
+  (return-type "none")
+  (parameters
+    '("GdkWindow*" "pwindow")
+    '("gint" "pdx")
+    '("gint" "pdy")
+  )
+)
+
+(define-method set_background
+  (of-object "GtkStyleContext")
+  (c-name "gtk_style_context_set_background")
+  (return-type "none")
+  (parameters
+    '("GdkWindow*" "pwindow")
+  )
+)
+
+(define-method set_direction
+  (of-object "GtkStyleContext")
+  (c-name "gtk_style_context_set_direction")
+  (return-type "none")
+  (parameters
+    '("GtkTextDirection" "pdirection")
+  )
+)
+
+(define-method set_frame_clock
+  (of-object "GtkStyleContext")
+  (c-name "gtk_style_context_set_frame_clock")
+  (return-type "none")
+  (parameters
+    '("GdkFrameClock*" "pframe_clock")
+  )
+)
+
+(define-method set_junction_sides
+  (of-object "GtkStyleContext")
+  (c-name "gtk_style_context_set_junction_sides")
+  (return-type "none")
+  (parameters
+    '("GtkJunctionSides" "psides")
+  )
+)
+
+(define-method set_parent
+  (of-object "GtkStyleContext")
+  (c-name "gtk_style_context_set_parent")
+  (return-type "none")
+  (parameters
+    '("GtkStyleContext*" "pparent")
+  )
+)
+
+(define-method set_path
+  (of-object "GtkStyleContext")
+  (c-name "gtk_style_context_set_path")
+  (return-type "none")
+  (parameters
+    '("GtkWidgetPath*" "ppath")
+  )
+)
+
+(define-method set_scale
+  (of-object "GtkStyleContext")
+  (c-name "gtk_style_context_set_scale")
+  (return-type "none")
+  (parameters
+    '("gint" "pscale")
+  )
+)
+
+(define-method set_screen
+  (of-object "GtkStyleContext")
+  (c-name "gtk_style_context_set_screen")
+  (return-type "none")
+  (parameters
+    '("GdkScreen*" "pscreen")
+  )
+)
+
+(define-method set_state
+  (of-object "GtkStyleContext")
+  (c-name "gtk_style_context_set_state")
+  (return-type "none")
+  (parameters
+    '("GtkStateFlags" "pflags")
+  )
+)
+
+(define-method state_is_running
+  (of-object "GtkStyleContext")
+  (c-name "gtk_style_context_state_is_running")
+  (return-type "gboolean")
+  (parameters
+    '("GtkStateType" "pstate")
+    '("gdouble*" "pprogress")
+  )
+)
+
+(define-method to_string
+  (of-object "GtkStyleContext")
+  (c-name "gtk_style_context_to_string")
+  (return-type "char*")
+  (parameters
+    '("GtkStyleContextPrintFlags" "pflags")
+  )
+)
+

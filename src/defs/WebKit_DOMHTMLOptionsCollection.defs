@@ -1,0 +1,41 @@
+(define-object DOMHTMLOptionsCollection
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "DOMHTMLCollection")
+  (c-name "WebKitDOMHTMLOptionsCollection")
+)
+
+(define-method get_length
+  (of-object "WebKitDOMHTMLOptionsCollection")
+  (c-name "webkit_dom_html_options_collection_get_length")
+  (return-type "gulong")
+  (parameters
+  )
+)
+
+(define-method get_selected_index
+  (of-object "WebKitDOMHTMLOptionsCollection")
+  (c-name "webkit_dom_html_options_collection_get_selected_index")
+  (return-type "glong")
+  (parameters
+  )
+)
+
+(define-method named_item
+  (of-object "WebKitDOMHTMLOptionsCollection")
+  (c-name "webkit_dom_html_options_collection_named_item")
+  (return-type "WebKitDOMNode*")
+  (parameters
+    '("const gchar*" "pname")
+  )
+)
+
+(define-method set_selected_index
+  (of-object "WebKitDOMHTMLOptionsCollection")
+  (c-name "webkit_dom_html_options_collection_set_selected_index")
+  (return-type "none")
+  (parameters
+    '("glong" "pvalue")
+  )
+)
+

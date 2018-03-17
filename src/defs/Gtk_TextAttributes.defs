@@ -1,0 +1,47 @@
+(define-object TextAttributes
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkTextAttributes")
+)
+
+(define-function TextAttributes_new
+  (is-constructor-of "GtkTextAttributes")
+  (c-name "gtk_text_attributes_new")
+  (return-type "GtkTextAttributes*")
+  (parameters
+  )
+)
+
+(define-method copy
+  (of-object "GtkTextAttributes")
+  (c-name "gtk_text_attributes_copy")
+  (return-type "GtkTextAttributes*")
+  (parameters
+  )
+)
+
+(define-method copy_values
+  (of-object "GtkTextAttributes")
+  (c-name "gtk_text_attributes_copy_values")
+  (return-type "none")
+  (parameters
+    '("GtkTextAttributes*" "pdest")
+  )
+)
+
+(define-method ref
+  (of-object "GtkTextAttributes")
+  (c-name "gtk_text_attributes_ref")
+  (return-type "GtkTextAttributes*")
+  (parameters
+  )
+)
+
+(define-method unref
+  (of-object "GtkTextAttributes")
+  (c-name "gtk_text_attributes_unref")
+  (return-type "none")
+  (parameters
+  )
+)
+

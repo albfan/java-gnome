@@ -1,0 +1,6 @@
+(define-object BindingArg
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkBindingArg")
+)
+

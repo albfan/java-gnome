@@ -1,0 +1,6 @@
+(define-object EntryBufferPrivate
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkEntryBufferPrivate")
+)
+

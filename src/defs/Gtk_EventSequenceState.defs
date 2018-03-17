@@ -1,0 +1,10 @@
+(define-enum EventSequenceState
+  (in-module "Gtk")
+  (c-name "GtkEventSequenceState")
+  (values
+    '("none" "GTK_EVENT_SEQUENCE_NONE")
+    '("claimed" "GTK_EVENT_SEQUENCE_CLAIMED")
+    '("denied" "GTK_EVENT_SEQUENCE_DENIED")
+  )
+)
+

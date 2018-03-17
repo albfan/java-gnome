@@ -1,0 +1,40 @@
+(define-object PadController
+  (in-module "Gtk")
+  (parent "EventController")
+  (c-name "GtkPadController")
+)
+
+(define-function PadController_new
+  (is-constructor-of "GtkPadController")
+  (c-name "gtk_pad_controller_new")
+  (return-type "GtkPadController*")
+  (parameters
+    '("GtkWindow*" "pwindow")
+    '("GActionGroup*" "pgroup")
+    '("GdkDevice*" "ppad")
+  )
+)
+
+(define-method set_action
+  (of-object "GtkPadController")
+  (c-name "gtk_pad_controller_set_action")
+  (return-type "none")
+  (parameters
+    '("GtkPadActionType" "ptype")
+    '("gint" "pindex")
+    '("gint" "pmode")
+    '("const gchar*" "plabel")
+    '("const gchar*" "paction_name")
+  )
+)
+
+(define-method set_action_entries
+  (of-object "GtkPadController")
+  (c-name "gtk_pad_controller_set_action_entries")
+  (return-type "none")
+  (parameters
+    '("null" "pentries")
+    '("gint" "pn_entries")
+  )
+)
+

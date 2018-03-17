@@ -1,0 +1,15 @@
+(define-object CellRendererClass
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkCellRendererClass")
+)
+
+(define-method set_accessible_type
+  (of-object "GtkCellRendererClass")
+  (c-name "gtk_cell_renderer_class_set_accessible_type")
+  (return-type "none")
+  (parameters
+    '("GType" "ptype")
+  )
+)
+

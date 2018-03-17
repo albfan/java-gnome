@@ -1,0 +1,55 @@
+(define-object Binding
+  (in-module "GObject")
+  (import-header "glib-object.h")
+  (parent "Object")
+  (c-name "GBinding")
+)
+
+(define-method get_flags
+  (of-object "GBinding")
+  (c-name "g_binding_get_flags")
+  (return-type "GBindingFlags")
+  (parameters
+  )
+)
+
+(define-method get_source
+  (of-object "GBinding")
+  (c-name "g_binding_get_source")
+  (return-type "GObject*")
+  (parameters
+  )
+)
+
+(define-method get_source_property
+  (of-object "GBinding")
+  (c-name "g_binding_get_source_property")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_target
+  (of-object "GBinding")
+  (c-name "g_binding_get_target")
+  (return-type "GObject*")
+  (parameters
+  )
+)
+
+(define-method get_target_property
+  (of-object "GBinding")
+  (c-name "g_binding_get_target_property")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method unbind
+  (of-object "GBinding")
+  (c-name "g_binding_unbind")
+  (return-type "none")
+  (parameters
+  )
+)
+

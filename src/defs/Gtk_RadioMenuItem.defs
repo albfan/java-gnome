@@ -1,0 +1,98 @@
+(define-object RadioMenuItem
+  (in-module "Gtk")
+  (parent "CheckMenuItem")
+  (c-name "GtkRadioMenuItem")
+)
+
+(define-function RadioMenuItem_new
+  (is-constructor-of "GtkRadioMenuItem")
+  (c-name "gtk_radio_menu_item_new")
+  (return-type "GtkWidget*")
+  (parameters
+    '("GSList*" "pgroup")
+  )
+)
+
+(define-function RadioMenuItem_new_from_widget
+  (is-constructor-of "GtkRadioMenuItem")
+  (c-name "gtk_radio_menu_item_new_from_widget")
+  (return-type "GtkWidget*")
+  (parameters
+    '("GtkRadioMenuItem*" "pgroup")
+  )
+)
+
+(define-function RadioMenuItem_new_with_label
+  (is-constructor-of "GtkRadioMenuItem")
+  (c-name "gtk_radio_menu_item_new_with_label")
+  (return-type "GtkWidget*")
+  (parameters
+    '("GSList*" "pgroup")
+    '("const gchar*" "plabel")
+  )
+)
+
+(define-function RadioMenuItem_new_with_label_from_widget
+  (is-constructor-of "GtkRadioMenuItem")
+  (c-name "gtk_radio_menu_item_new_with_label_from_widget")
+  (return-type "GtkWidget*")
+  (parameters
+    '("GtkRadioMenuItem*" "pgroup")
+    '("const gchar*" "plabel")
+  )
+)
+
+(define-function RadioMenuItem_new_with_mnemonic
+  (is-constructor-of "GtkRadioMenuItem")
+  (c-name "gtk_radio_menu_item_new_with_mnemonic")
+  (return-type "GtkWidget*")
+  (parameters
+    '("GSList*" "pgroup")
+    '("const gchar*" "plabel")
+  )
+)
+
+(define-function RadioMenuItem_new_with_mnemonic_from_widget
+  (is-constructor-of "GtkRadioMenuItem")
+  (c-name "gtk_radio_menu_item_new_with_mnemonic_from_widget")
+  (return-type "GtkWidget*")
+  (parameters
+    '("GtkRadioMenuItem*" "pgroup")
+    '("const gchar*" "plabel")
+  )
+)
+
+(define-method group_changed
+  (of-object "GtkRadioMenuItem")
+  (c-name "group_changed")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method get_group
+  (of-object "GtkRadioMenuItem")
+  (c-name "gtk_radio_menu_item_get_group")
+  (return-type "GSList*")
+  (parameters
+  )
+)
+
+(define-method join_group
+  (of-object "GtkRadioMenuItem")
+  (c-name "gtk_radio_menu_item_join_group")
+  (return-type "none")
+  (parameters
+    '("GtkRadioMenuItem*" "pgroup_source")
+  )
+)
+
+(define-method set_group
+  (of-object "GtkRadioMenuItem")
+  (c-name "gtk_radio_menu_item_set_group")
+  (return-type "none")
+  (parameters
+    '("GSList*" "pgroup")
+  )
+)
+

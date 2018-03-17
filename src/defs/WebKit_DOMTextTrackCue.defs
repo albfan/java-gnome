@@ -1,0 +1,227 @@
+(define-object DOMTextTrackCue
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "DOMObject")
+  (c-name "WebKitDOMTextTrackCue")
+)
+
+(define-method dispatch_event
+  (of-object "WebKitDOMTextTrackCue")
+  (c-name "webkit_dom_text_track_cue_dispatch_event")
+  (return-type "gboolean")
+  (parameters
+    '("WebKitDOMEvent*" "pevt")
+    '("GError**" "error")
+  )
+)
+
+(define-method get_align
+  (of-object "WebKitDOMTextTrackCue")
+  (c-name "webkit_dom_text_track_cue_get_align")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+
+(define-method get_cue_as_html
+  (of-object "WebKitDOMTextTrackCue")
+  (c-name "webkit_dom_text_track_cue_get_cue_as_html")
+  (return-type "WebKitDOMDocumentFragment*")
+  (parameters
+  )
+)
+
+(define-method get_end_time
+  (of-object "WebKitDOMTextTrackCue")
+  (c-name "webkit_dom_text_track_cue_get_end_time")
+  (return-type "gdouble")
+  (parameters
+  )
+)
+
+(define-method get_id
+  (of-object "WebKitDOMTextTrackCue")
+  (c-name "webkit_dom_text_track_cue_get_id")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+
+(define-method get_line
+  (of-object "WebKitDOMTextTrackCue")
+  (c-name "webkit_dom_text_track_cue_get_line")
+  (return-type "glong")
+  (parameters
+  )
+)
+
+(define-method get_pause_on_exit
+  (of-object "WebKitDOMTextTrackCue")
+  (c-name "webkit_dom_text_track_cue_get_pause_on_exit")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_position
+  (of-object "WebKitDOMTextTrackCue")
+  (c-name "webkit_dom_text_track_cue_get_position")
+  (return-type "glong")
+  (parameters
+  )
+)
+
+(define-method get_size
+  (of-object "WebKitDOMTextTrackCue")
+  (c-name "webkit_dom_text_track_cue_get_size")
+  (return-type "glong")
+  (parameters
+  )
+)
+
+(define-method get_snap_to_lines
+  (of-object "WebKitDOMTextTrackCue")
+  (c-name "webkit_dom_text_track_cue_get_snap_to_lines")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_start_time
+  (of-object "WebKitDOMTextTrackCue")
+  (c-name "webkit_dom_text_track_cue_get_start_time")
+  (return-type "gdouble")
+  (parameters
+  )
+)
+
+(define-method get_text
+  (of-object "WebKitDOMTextTrackCue")
+  (c-name "webkit_dom_text_track_cue_get_text")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+
+(define-method get_track
+  (of-object "WebKitDOMTextTrackCue")
+  (c-name "webkit_dom_text_track_cue_get_track")
+  (return-type "WebKitDOMTextTrack*")
+  (parameters
+  )
+)
+
+(define-method get_vertical
+  (of-object "WebKitDOMTextTrackCue")
+  (c-name "webkit_dom_text_track_cue_get_vertical")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+
+(define-method set_align
+  (of-object "WebKitDOMTextTrackCue")
+  (c-name "webkit_dom_text_track_cue_set_align")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pvalue")
+    '("GError**" "error")
+  )
+)
+
+(define-method set_end_time
+  (of-object "WebKitDOMTextTrackCue")
+  (c-name "webkit_dom_text_track_cue_set_end_time")
+  (return-type "none")
+  (parameters
+    '("gdouble" "pvalue")
+    '("GError**" "error")
+  )
+)
+
+(define-method set_id
+  (of-object "WebKitDOMTextTrackCue")
+  (c-name "webkit_dom_text_track_cue_set_id")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pvalue")
+  )
+)
+
+(define-method set_line
+  (of-object "WebKitDOMTextTrackCue")
+  (c-name "webkit_dom_text_track_cue_set_line")
+  (return-type "none")
+  (parameters
+    '("glong" "pvalue")
+    '("GError**" "error")
+  )
+)
+
+(define-method set_pause_on_exit
+  (of-object "WebKitDOMTextTrackCue")
+  (c-name "webkit_dom_text_track_cue_set_pause_on_exit")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pvalue")
+  )
+)
+
+(define-method set_position
+  (of-object "WebKitDOMTextTrackCue")
+  (c-name "webkit_dom_text_track_cue_set_position")
+  (return-type "none")
+  (parameters
+    '("glong" "pvalue")
+    '("GError**" "error")
+  )
+)
+
+(define-method set_size
+  (of-object "WebKitDOMTextTrackCue")
+  (c-name "webkit_dom_text_track_cue_set_size")
+  (return-type "none")
+  (parameters
+    '("glong" "pvalue")
+    '("GError**" "error")
+  )
+)
+
+(define-method set_snap_to_lines
+  (of-object "WebKitDOMTextTrackCue")
+  (c-name "webkit_dom_text_track_cue_set_snap_to_lines")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pvalue")
+  )
+)
+
+(define-method set_start_time
+  (of-object "WebKitDOMTextTrackCue")
+  (c-name "webkit_dom_text_track_cue_set_start_time")
+  (return-type "none")
+  (parameters
+    '("gdouble" "pvalue")
+    '("GError**" "error")
+  )
+)
+
+(define-method set_text
+  (of-object "WebKitDOMTextTrackCue")
+  (c-name "webkit_dom_text_track_cue_set_text")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pvalue")
+  )
+)
+
+(define-method set_vertical
+  (of-object "WebKitDOMTextTrackCue")
+  (c-name "webkit_dom_text_track_cue_set_vertical")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pvalue")
+    '("GError**" "error")
+  )
+)
+

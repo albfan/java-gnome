@@ -1,0 +1,52 @@
+(define-object Emblem
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GEmblem")
+)
+
+(define-function Emblem_new
+  (is-constructor-of "GEmblem")
+  (c-name "g_emblem_new")
+  (return-type "GEmblem*")
+  (parameters
+    '("GIcon*" "picon")
+  )
+)
+
+(define-function Emblem_new_with_origin
+  (is-constructor-of "GEmblem")
+  (c-name "g_emblem_new_with_origin")
+  (return-type "GEmblem*")
+  (parameters
+    '("GIcon*" "picon")
+    '("GEmblemOrigin" "porigin")
+  )
+)
+
+(define-method get_icon
+  (of-object "GEmblem")
+  (c-name "g_emblem_get_icon")
+  (return-type "GIcon*")
+  (parameters
+  )
+)
+
+(define-method get_origin
+  (of-object "GEmblem")
+  (c-name "g_emblem_get_origin")
+  (return-type "GEmblemOrigin")
+  (parameters
+  )
+)
+

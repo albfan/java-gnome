@@ -1,0 +1,16 @@
+(define-object HBox
+  (in-module "Gtk")
+  (parent "Box")
+  (c-name "GtkHBox")
+)
+
+(define-function HBox_new
+  (is-constructor-of "GtkHBox")
+  (c-name "gtk_hbox_new")
+  (return-type "GtkWidget*")
+  (parameters
+    '("gboolean" "phomogeneous")
+    '("gint" "pspacing")
+  )
+)
+

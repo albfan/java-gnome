@@ -1,0 +1,798 @@
+(define-object TextView
+  (in-module "Gtk")
+  (parent "Container")
+  (c-name "GtkTextView")
+)
+
+(define-function TextView_new
+  (is-constructor-of "GtkTextView")
+  (c-name "gtk_text_view_new")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-function TextView_new_with_buffer
+  (is-constructor-of "GtkTextView")
+  (c-name "gtk_text_view_new_with_buffer")
+  (return-type "GtkWidget*")
+  (parameters
+    '("GtkTextBuffer*" "pbuffer")
+  )
+)
+
+(define-method backspace
+  (of-object "GtkTextView")
+  (c-name "backspace")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method copy_clipboard
+  (of-object "GtkTextView")
+  (c-name "copy_clipboard")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method create_buffer
+  (of-object "GtkTextView")
+  (c-name "create_buffer")
+  (return-type "GtkTextBuffer*")
+  (parameters
+  )
+)
+
+(define-method cut_clipboard
+  (of-object "GtkTextView")
+  (c-name "cut_clipboard")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method delete_from_cursor
+  (of-object "GtkTextView")
+  (c-name "delete_from_cursor")
+  (return-type "none")
+  (parameters
+    '("GtkDeleteType" "ptype")
+    '("gint" "pcount")
+  )
+)
+
+(define-method draw_layer
+  (of-object "GtkTextView")
+  (c-name "draw_layer")
+  (return-type "none")
+  (parameters
+    '("GtkTextViewLayer" "player")
+    '("cairo_t*" "pcr")
+  )
+)
+
+(define-method extend_selection
+  (of-object "GtkTextView")
+  (c-name "extend_selection")
+  (return-type "gboolean")
+  (parameters
+    '("GtkTextExtendSelection" "pgranularity")
+    '("const GtkTextIter*" "plocation")
+    '("GtkTextIter*" "pstart")
+    '("GtkTextIter*" "pend")
+  )
+)
+
+(define-method insert_at_cursor
+  (of-object "GtkTextView")
+  (c-name "insert_at_cursor")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pstr")
+  )
+)
+
+(define-method insert_emoji
+  (of-object "GtkTextView")
+  (c-name "insert_emoji")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method move_cursor
+  (of-object "GtkTextView")
+  (c-name "move_cursor")
+  (return-type "none")
+  (parameters
+    '("GtkMovementStep" "pstep")
+    '("gint" "pcount")
+    '("gboolean" "pextend_selection")
+  )
+)
+
+(define-method paste_clipboard
+  (of-object "GtkTextView")
+  (c-name "paste_clipboard")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method populate_popup
+  (of-object "GtkTextView")
+  (c-name "populate_popup")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "ppopup")
+  )
+)
+
+(define-method set_anchor
+  (of-object "GtkTextView")
+  (c-name "set_anchor")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method toggle_overwrite
+  (of-object "GtkTextView")
+  (c-name "toggle_overwrite")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method add_child_at_anchor
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_add_child_at_anchor")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pchild")
+    '("GtkTextChildAnchor*" "panchor")
+  )
+)
+
+(define-method add_child_in_window
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_add_child_in_window")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pchild")
+    '("GtkTextWindowType" "pwhich_window")
+    '("gint" "pxpos")
+    '("gint" "pypos")
+  )
+)
+
+(define-method backward_display_line
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_backward_display_line")
+  (return-type "gboolean")
+  (parameters
+    '("GtkTextIter*" "piter")
+  )
+)
+
+(define-method backward_display_line_start
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_backward_display_line_start")
+  (return-type "gboolean")
+  (parameters
+    '("GtkTextIter*" "piter")
+  )
+)
+
+(define-method buffer_to_window_coords
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_buffer_to_window_coords")
+  (return-type "none")
+  (parameters
+    '("GtkTextWindowType" "pwin")
+    '("gint" "pbuffer_x")
+    '("gint" "pbuffer_y")
+    '("gint*" "pwindow_x")
+    '("gint*" "pwindow_y")
+  )
+)
+
+(define-method forward_display_line
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_forward_display_line")
+  (return-type "gboolean")
+  (parameters
+    '("GtkTextIter*" "piter")
+  )
+)
+
+(define-method forward_display_line_end
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_forward_display_line_end")
+  (return-type "gboolean")
+  (parameters
+    '("GtkTextIter*" "piter")
+  )
+)
+
+(define-method get_accepts_tab
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_get_accepts_tab")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_border_window_size
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_get_border_window_size")
+  (return-type "gint")
+  (parameters
+    '("GtkTextWindowType" "ptype")
+  )
+)
+
+(define-method get_bottom_margin
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_get_bottom_margin")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_buffer
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_get_buffer")
+  (return-type "GtkTextBuffer*")
+  (parameters
+  )
+)
+
+(define-method get_cursor_locations
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_get_cursor_locations")
+  (return-type "none")
+  (parameters
+    '("const GtkTextIter*" "piter")
+    '("GdkRectangle*" "pstrong")
+    '("GdkRectangle*" "pweak")
+  )
+)
+
+(define-method get_cursor_visible
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_get_cursor_visible")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_default_attributes
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_get_default_attributes")
+  (return-type "GtkTextAttributes*")
+  (parameters
+  )
+)
+
+(define-method get_editable
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_get_editable")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_hadjustment
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_get_hadjustment")
+  (return-type "GtkAdjustment*")
+  (parameters
+  )
+)
+
+(define-method get_indent
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_get_indent")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_input_hints
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_get_input_hints")
+  (return-type "GtkInputHints")
+  (parameters
+  )
+)
+
+(define-method get_input_purpose
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_get_input_purpose")
+  (return-type "GtkInputPurpose")
+  (parameters
+  )
+)
+
+(define-method get_iter_at_location
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_get_iter_at_location")
+  (return-type "gboolean")
+  (parameters
+    '("GtkTextIter*" "piter")
+    '("gint" "px")
+    '("gint" "py")
+  )
+)
+
+(define-method get_iter_at_position
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_get_iter_at_position")
+  (return-type "gboolean")
+  (parameters
+    '("GtkTextIter*" "piter")
+    '("gint*" "ptrailing")
+    '("gint" "px")
+    '("gint" "py")
+  )
+)
+
+(define-method get_iter_location
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_get_iter_location")
+  (return-type "none")
+  (parameters
+    '("const GtkTextIter*" "piter")
+    '("GdkRectangle*" "plocation")
+  )
+)
+
+(define-method get_justification
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_get_justification")
+  (return-type "GtkJustification")
+  (parameters
+  )
+)
+
+(define-method get_left_margin
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_get_left_margin")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_line_at_y
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_get_line_at_y")
+  (return-type "none")
+  (parameters
+    '("GtkTextIter*" "ptarget_iter")
+    '("gint" "py")
+    '("gint*" "pline_top")
+  )
+)
+
+(define-method get_line_yrange
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_get_line_yrange")
+  (return-type "none")
+  (parameters
+    '("const GtkTextIter*" "piter")
+    '("gint*" "py")
+    '("gint*" "pheight")
+  )
+)
+
+(define-method get_monospace
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_get_monospace")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_overwrite
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_get_overwrite")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_pixels_above_lines
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_get_pixels_above_lines")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_pixels_below_lines
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_get_pixels_below_lines")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_pixels_inside_wrap
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_get_pixels_inside_wrap")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_right_margin
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_get_right_margin")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_tabs
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_get_tabs")
+  (return-type "PangoTabArray*")
+  (parameters
+  )
+)
+
+(define-method get_top_margin
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_get_top_margin")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_vadjustment
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_get_vadjustment")
+  (return-type "GtkAdjustment*")
+  (parameters
+  )
+)
+
+(define-method get_visible_rect
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_get_visible_rect")
+  (return-type "none")
+  (parameters
+    '("GdkRectangle*" "pvisible_rect")
+  )
+)
+
+(define-method get_window
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_get_window")
+  (return-type "GdkWindow*")
+  (parameters
+    '("GtkTextWindowType" "pwin")
+  )
+)
+
+(define-method get_window_type
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_get_window_type")
+  (return-type "GtkTextWindowType")
+  (parameters
+    '("GdkWindow*" "pwindow")
+  )
+)
+
+(define-method get_wrap_mode
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_get_wrap_mode")
+  (return-type "GtkWrapMode")
+  (parameters
+  )
+)
+
+(define-method im_context_filter_keypress
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_im_context_filter_keypress")
+  (return-type "gboolean")
+  (parameters
+    '("GdkEventKey*" "pevent")
+  )
+)
+
+(define-method move_child
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_move_child")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pchild")
+    '("gint" "pxpos")
+    '("gint" "pypos")
+  )
+)
+
+(define-method move_mark_onscreen
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_move_mark_onscreen")
+  (return-type "gboolean")
+  (parameters
+    '("GtkTextMark*" "pmark")
+  )
+)
+
+(define-method move_visually
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_move_visually")
+  (return-type "gboolean")
+  (parameters
+    '("GtkTextIter*" "piter")
+    '("gint" "pcount")
+  )
+)
+
+(define-method place_cursor_onscreen
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_place_cursor_onscreen")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method reset_cursor_blink
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_reset_cursor_blink")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method reset_im_context
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_reset_im_context")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method scroll_mark_onscreen
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_scroll_mark_onscreen")
+  (return-type "none")
+  (parameters
+    '("GtkTextMark*" "pmark")
+  )
+)
+
+(define-method scroll_to_iter
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_scroll_to_iter")
+  (return-type "gboolean")
+  (parameters
+    '("GtkTextIter*" "piter")
+    '("gdouble" "pwithin_margin")
+    '("gboolean" "puse_align")
+    '("gdouble" "pxalign")
+    '("gdouble" "pyalign")
+  )
+)
+
+(define-method scroll_to_mark
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_scroll_to_mark")
+  (return-type "none")
+  (parameters
+    '("GtkTextMark*" "pmark")
+    '("gdouble" "pwithin_margin")
+    '("gboolean" "puse_align")
+    '("gdouble" "pxalign")
+    '("gdouble" "pyalign")
+  )
+)
+
+(define-method set_accepts_tab
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_set_accepts_tab")
+  (return-type "none")
+  (parameters
+    '("gboolean" "paccepts_tab")
+  )
+)
+
+(define-method set_border_window_size
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_set_border_window_size")
+  (return-type "none")
+  (parameters
+    '("GtkTextWindowType" "ptype")
+    '("gint" "psize")
+  )
+)
+
+(define-method set_bottom_margin
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_set_bottom_margin")
+  (return-type "none")
+  (parameters
+    '("gint" "pbottom_margin")
+  )
+)
+
+(define-method set_buffer
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_set_buffer")
+  (return-type "none")
+  (parameters
+    '("GtkTextBuffer*" "pbuffer")
+  )
+)
+
+(define-method set_cursor_visible
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_set_cursor_visible")
+  (return-type "none")
+  (parameters
+    '("gboolean" "psetting")
+  )
+)
+
+(define-method set_editable
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_set_editable")
+  (return-type "none")
+  (parameters
+    '("gboolean" "psetting")
+  )
+)
+
+(define-method set_indent
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_set_indent")
+  (return-type "none")
+  (parameters
+    '("gint" "pindent")
+  )
+)
+
+(define-method set_input_hints
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_set_input_hints")
+  (return-type "none")
+  (parameters
+    '("GtkInputHints" "phints")
+  )
+)
+
+(define-method set_input_purpose
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_set_input_purpose")
+  (return-type "none")
+  (parameters
+    '("GtkInputPurpose" "ppurpose")
+  )
+)
+
+(define-method set_justification
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_set_justification")
+  (return-type "none")
+  (parameters
+    '("GtkJustification" "pjustification")
+  )
+)
+
+(define-method set_left_margin
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_set_left_margin")
+  (return-type "none")
+  (parameters
+    '("gint" "pleft_margin")
+  )
+)
+
+(define-method set_monospace
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_set_monospace")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pmonospace")
+  )
+)
+
+(define-method set_overwrite
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_set_overwrite")
+  (return-type "none")
+  (parameters
+    '("gboolean" "poverwrite")
+  )
+)
+
+(define-method set_pixels_above_lines
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_set_pixels_above_lines")
+  (return-type "none")
+  (parameters
+    '("gint" "ppixels_above_lines")
+  )
+)
+
+(define-method set_pixels_below_lines
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_set_pixels_below_lines")
+  (return-type "none")
+  (parameters
+    '("gint" "ppixels_below_lines")
+  )
+)
+
+(define-method set_pixels_inside_wrap
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_set_pixels_inside_wrap")
+  (return-type "none")
+  (parameters
+    '("gint" "ppixels_inside_wrap")
+  )
+)
+
+(define-method set_right_margin
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_set_right_margin")
+  (return-type "none")
+  (parameters
+    '("gint" "pright_margin")
+  )
+)
+
+(define-method set_tabs
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_set_tabs")
+  (return-type "none")
+  (parameters
+    '("PangoTabArray*" "ptabs")
+  )
+)
+
+(define-method set_top_margin
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_set_top_margin")
+  (return-type "none")
+  (parameters
+    '("gint" "ptop_margin")
+  )
+)
+
+(define-method set_wrap_mode
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_set_wrap_mode")
+  (return-type "none")
+  (parameters
+    '("GtkWrapMode" "pwrap_mode")
+  )
+)
+
+(define-method starts_display_line
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_starts_display_line")
+  (return-type "gboolean")
+  (parameters
+    '("const GtkTextIter*" "piter")
+  )
+)
+
+(define-method window_to_buffer_coords
+  (of-object "GtkTextView")
+  (c-name "gtk_text_view_window_to_buffer_coords")
+  (return-type "none")
+  (parameters
+    '("GtkTextWindowType" "pwin")
+    '("gint" "pwindow_x")
+    '("gint" "pwindow_y")
+    '("gint*" "pbuffer_x")
+    '("gint*" "pbuffer_y")
+  )
+)
+

@@ -1,0 +1,379 @@
+(define-object Action
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkAction")
+)
+
+(define-function Action_new
+  (is-constructor-of "GtkAction")
+  (c-name "gtk_action_new")
+  (return-type "GtkAction*")
+  (parameters
+    '("const gchar*" "pname")
+    '("const gchar*" "plabel")
+    '("const gchar*" "ptooltip")
+    '("const gchar*" "pstock_id")
+  )
+)
+
+(define-method activate
+  (of-object "GtkAction")
+  (c-name "activate")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method connect_proxy
+  (of-object "GtkAction")
+  (c-name "connect_proxy")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pproxy")
+  )
+)
+
+(define-method create_menu
+  (of-object "GtkAction")
+  (c-name "create_menu")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method create_menu_item
+  (of-object "GtkAction")
+  (c-name "create_menu_item")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method create_tool_item
+  (of-object "GtkAction")
+  (c-name "create_tool_item")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method disconnect_proxy
+  (of-object "GtkAction")
+  (c-name "disconnect_proxy")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pproxy")
+  )
+)
+
+(define-method block_activate
+  (of-object "GtkAction")
+  (c-name "gtk_action_block_activate")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method connect_accelerator
+  (of-object "GtkAction")
+  (c-name "gtk_action_connect_accelerator")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method create_icon
+  (of-object "GtkAction")
+  (c-name "gtk_action_create_icon")
+  (return-type "GtkWidget*")
+  (parameters
+    '("GtkIconSize" "picon_size")
+  )
+)
+
+(define-method disconnect_accelerator
+  (of-object "GtkAction")
+  (c-name "gtk_action_disconnect_accelerator")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method get_accel_closure
+  (of-object "GtkAction")
+  (c-name "gtk_action_get_accel_closure")
+  (return-type "GClosure*")
+  (parameters
+  )
+)
+
+(define-method get_accel_path
+  (of-object "GtkAction")
+  (c-name "gtk_action_get_accel_path")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_always_show_image
+  (of-object "GtkAction")
+  (c-name "gtk_action_get_always_show_image")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_gicon
+  (of-object "GtkAction")
+  (c-name "gtk_action_get_gicon")
+  (return-type "GIcon*")
+  (parameters
+  )
+)
+
+(define-method get_icon_name
+  (of-object "GtkAction")
+  (c-name "gtk_action_get_icon_name")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_is_important
+  (of-object "GtkAction")
+  (c-name "gtk_action_get_is_important")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_label
+  (of-object "GtkAction")
+  (c-name "gtk_action_get_label")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_name
+  (of-object "GtkAction")
+  (c-name "gtk_action_get_name")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_proxies
+  (of-object "GtkAction")
+  (c-name "gtk_action_get_proxies")
+  (return-type "GSList*")
+  (parameters
+  )
+)
+
+(define-method get_sensitive
+  (of-object "GtkAction")
+  (c-name "gtk_action_get_sensitive")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_short_label
+  (of-object "GtkAction")
+  (c-name "gtk_action_get_short_label")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_stock_id
+  (of-object "GtkAction")
+  (c-name "gtk_action_get_stock_id")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_tooltip
+  (of-object "GtkAction")
+  (c-name "gtk_action_get_tooltip")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_visible
+  (of-object "GtkAction")
+  (c-name "gtk_action_get_visible")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_visible_horizontal
+  (of-object "GtkAction")
+  (c-name "gtk_action_get_visible_horizontal")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_visible_vertical
+  (of-object "GtkAction")
+  (c-name "gtk_action_get_visible_vertical")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method is_sensitive
+  (of-object "GtkAction")
+  (c-name "gtk_action_is_sensitive")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method is_visible
+  (of-object "GtkAction")
+  (c-name "gtk_action_is_visible")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method set_accel_group
+  (of-object "GtkAction")
+  (c-name "gtk_action_set_accel_group")
+  (return-type "none")
+  (parameters
+    '("GtkAccelGroup*" "paccel_group")
+  )
+)
+
+(define-method set_accel_path
+  (of-object "GtkAction")
+  (c-name "gtk_action_set_accel_path")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "paccel_path")
+  )
+)
+
+(define-method set_always_show_image
+  (of-object "GtkAction")
+  (c-name "gtk_action_set_always_show_image")
+  (return-type "none")
+  (parameters
+    '("gboolean" "palways_show")
+  )
+)
+
+(define-method set_gicon
+  (of-object "GtkAction")
+  (c-name "gtk_action_set_gicon")
+  (return-type "none")
+  (parameters
+    '("GIcon*" "picon")
+  )
+)
+
+(define-method set_icon_name
+  (of-object "GtkAction")
+  (c-name "gtk_action_set_icon_name")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "picon_name")
+  )
+)
+
+(define-method set_is_important
+  (of-object "GtkAction")
+  (c-name "gtk_action_set_is_important")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pis_important")
+  )
+)
+
+(define-method set_label
+  (of-object "GtkAction")
+  (c-name "gtk_action_set_label")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "plabel")
+  )
+)
+
+(define-method set_sensitive
+  (of-object "GtkAction")
+  (c-name "gtk_action_set_sensitive")
+  (return-type "none")
+  (parameters
+    '("gboolean" "psensitive")
+  )
+)
+
+(define-method set_short_label
+  (of-object "GtkAction")
+  (c-name "gtk_action_set_short_label")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pshort_label")
+  )
+)
+
+(define-method set_stock_id
+  (of-object "GtkAction")
+  (c-name "gtk_action_set_stock_id")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pstock_id")
+  )
+)
+
+(define-method set_tooltip
+  (of-object "GtkAction")
+  (c-name "gtk_action_set_tooltip")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "ptooltip")
+  )
+)
+
+(define-method set_visible
+  (of-object "GtkAction")
+  (c-name "gtk_action_set_visible")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pvisible")
+  )
+)
+
+(define-method set_visible_horizontal
+  (of-object "GtkAction")
+  (c-name "gtk_action_set_visible_horizontal")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pvisible_horizontal")
+  )
+)
+
+(define-method set_visible_vertical
+  (of-object "GtkAction")
+  (c-name "gtk_action_set_visible_vertical")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pvisible_vertical")
+  )
+)
+
+(define-method unblock_activate
+  (of-object "GtkAction")
+  (c-name "gtk_action_unblock_activate")
+  (return-type "none")
+  (parameters
+  )
+)
+

@@ -1,0 +1,175 @@
+(define-object DOMPerformanceTiming
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "DOMObject")
+  (c-name "WebKitDOMPerformanceTiming")
+)
+
+(define-method get_connect_end
+  (of-object "WebKitDOMPerformanceTiming")
+  (c-name "webkit_dom_performance_timing_get_connect_end")
+  (return-type "guint64")
+  (parameters
+  )
+)
+
+(define-method get_connect_start
+  (of-object "WebKitDOMPerformanceTiming")
+  (c-name "webkit_dom_performance_timing_get_connect_start")
+  (return-type "guint64")
+  (parameters
+  )
+)
+
+(define-method get_dom_complete
+  (of-object "WebKitDOMPerformanceTiming")
+  (c-name "webkit_dom_performance_timing_get_dom_complete")
+  (return-type "guint64")
+  (parameters
+  )
+)
+
+(define-method get_dom_content_loaded_event_end
+  (of-object "WebKitDOMPerformanceTiming")
+  (c-name "webkit_dom_performance_timing_get_dom_content_loaded_event_end")
+  (return-type "guint64")
+  (parameters
+  )
+)
+
+(define-method get_dom_content_loaded_event_start
+  (of-object "WebKitDOMPerformanceTiming")
+  (c-name "webkit_dom_performance_timing_get_dom_content_loaded_event_start")
+  (return-type "guint64")
+  (parameters
+  )
+)
+
+(define-method get_dom_interactive
+  (of-object "WebKitDOMPerformanceTiming")
+  (c-name "webkit_dom_performance_timing_get_dom_interactive")
+  (return-type "guint64")
+  (parameters
+  )
+)
+
+(define-method get_dom_loading
+  (of-object "WebKitDOMPerformanceTiming")
+  (c-name "webkit_dom_performance_timing_get_dom_loading")
+  (return-type "guint64")
+  (parameters
+  )
+)
+
+(define-method get_domain_lookup_end
+  (of-object "WebKitDOMPerformanceTiming")
+  (c-name "webkit_dom_performance_timing_get_domain_lookup_end")
+  (return-type "guint64")
+  (parameters
+  )
+)
+
+(define-method get_domain_lookup_start
+  (of-object "WebKitDOMPerformanceTiming")
+  (c-name "webkit_dom_performance_timing_get_domain_lookup_start")
+  (return-type "guint64")
+  (parameters
+  )
+)
+
+(define-method get_fetch_start
+  (of-object "WebKitDOMPerformanceTiming")
+  (c-name "webkit_dom_performance_timing_get_fetch_start")
+  (return-type "guint64")
+  (parameters
+  )
+)
+
+(define-method get_load_event_end
+  (of-object "WebKitDOMPerformanceTiming")
+  (c-name "webkit_dom_performance_timing_get_load_event_end")
+  (return-type "guint64")
+  (parameters
+  )
+)
+
+(define-method get_load_event_start
+  (of-object "WebKitDOMPerformanceTiming")
+  (c-name "webkit_dom_performance_timing_get_load_event_start")
+  (return-type "guint64")
+  (parameters
+  )
+)
+
+(define-method get_navigation_start
+  (of-object "WebKitDOMPerformanceTiming")
+  (c-name "webkit_dom_performance_timing_get_navigation_start")
+  (return-type "guint64")
+  (parameters
+  )
+)
+
+(define-method get_redirect_end
+  (of-object "WebKitDOMPerformanceTiming")
+  (c-name "webkit_dom_performance_timing_get_redirect_end")
+  (return-type "guint64")
+  (parameters
+  )
+)
+
+(define-method get_redirect_start
+  (of-object "WebKitDOMPerformanceTiming")
+  (c-name "webkit_dom_performance_timing_get_redirect_start")
+  (return-type "guint64")
+  (parameters
+  )
+)
+
+(define-method get_request_start
+  (of-object "WebKitDOMPerformanceTiming")
+  (c-name "webkit_dom_performance_timing_get_request_start")
+  (return-type "guint64")
+  (parameters
+  )
+)
+
+(define-method get_response_end
+  (of-object "WebKitDOMPerformanceTiming")
+  (c-name "webkit_dom_performance_timing_get_response_end")
+  (return-type "guint64")
+  (parameters
+  )
+)
+
+(define-method get_response_start
+  (of-object "WebKitDOMPerformanceTiming")
+  (c-name "webkit_dom_performance_timing_get_response_start")
+  (return-type "guint64")
+  (parameters
+  )
+)
+
+(define-method get_secure_connection_start
+  (of-object "WebKitDOMPerformanceTiming")
+  (c-name "webkit_dom_performance_timing_get_secure_connection_start")
+  (return-type "guint64")
+  (parameters
+  )
+)
+
+(define-method get_unload_event_end
+  (of-object "WebKitDOMPerformanceTiming")
+  (c-name "webkit_dom_performance_timing_get_unload_event_end")
+  (return-type "guint64")
+  (parameters
+  )
+)
+
+(define-method get_unload_event_start
+  (of-object "WebKitDOMPerformanceTiming")
+  (c-name "webkit_dom_performance_timing_get_unload_event_start")
+  (return-type "guint64")
+  (parameters
+  )
+)
+

@@ -1,0 +1,62 @@
+(define-object ListModel
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GListModel")
+)
+
+(define-method get_item
+  (of-object "GListModel")
+  (c-name "get_item")
+  (return-type "gpointer")
+  (parameters
+    '("guint" "pposition")
+  )
+)
+
+(define-method get_item_type
+  (of-object "GListModel")
+  (c-name "get_item_type")
+  (return-type "GType")
+  (parameters
+  )
+)
+
+(define-method get_n_items
+  (of-object "GListModel")
+  (c-name "get_n_items")
+  (return-type "guint")
+  (parameters
+  )
+)
+
+(define-method get_object
+  (of-object "GListModel")
+  (c-name "g_list_model_get_object")
+  (return-type "GObject*")
+  (parameters
+    '("guint" "pposition")
+  )
+)
+
+(define-method items_changed
+  (of-object "GListModel")
+  (c-name "g_list_model_items_changed")
+  (return-type "none")
+  (parameters
+    '("guint" "pposition")
+    '("guint" "premoved")
+    '("guint" "padded")
+  )
+)
+

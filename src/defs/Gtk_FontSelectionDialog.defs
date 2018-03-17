@@ -1,0 +1,73 @@
+(define-object FontSelectionDialog
+  (in-module "Gtk")
+  (parent "Dialog")
+  (c-name "GtkFontSelectionDialog")
+)
+
+(define-function FontSelectionDialog_new
+  (is-constructor-of "GtkFontSelectionDialog")
+  (c-name "gtk_font_selection_dialog_new")
+  (return-type "GtkWidget*")
+  (parameters
+    '("const gchar*" "ptitle")
+  )
+)
+
+(define-method get_cancel_button
+  (of-object "GtkFontSelectionDialog")
+  (c-name "gtk_font_selection_dialog_get_cancel_button")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method get_font_name
+  (of-object "GtkFontSelectionDialog")
+  (c-name "gtk_font_selection_dialog_get_font_name")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+
+(define-method get_font_selection
+  (of-object "GtkFontSelectionDialog")
+  (c-name "gtk_font_selection_dialog_get_font_selection")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method get_ok_button
+  (of-object "GtkFontSelectionDialog")
+  (c-name "gtk_font_selection_dialog_get_ok_button")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method get_preview_text
+  (of-object "GtkFontSelectionDialog")
+  (c-name "gtk_font_selection_dialog_get_preview_text")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method set_font_name
+  (of-object "GtkFontSelectionDialog")
+  (c-name "gtk_font_selection_dialog_set_font_name")
+  (return-type "gboolean")
+  (parameters
+    '("const gchar*" "pfontname")
+  )
+)
+
+(define-method set_preview_text
+  (of-object "GtkFontSelectionDialog")
+  (c-name "gtk_font_selection_dialog_set_preview_text")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "ptext")
+  )
+)
+

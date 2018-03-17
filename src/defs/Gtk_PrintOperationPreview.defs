@@ -1,0 +1,51 @@
+(define-object PrintOperationPreview
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkPrintOperationPreview")
+)
+
+(define-method end_preview
+  (of-object "GtkPrintOperationPreview")
+  (c-name "end_preview")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method got_page_size
+  (of-object "GtkPrintOperationPreview")
+  (c-name "got_page_size")
+  (return-type "none")
+  (parameters
+    '("GtkPrintContext*" "pcontext")
+    '("GtkPageSetup*" "ppage_setup")
+  )
+)
+
+(define-method is_selected
+  (of-object "GtkPrintOperationPreview")
+  (c-name "is_selected")
+  (return-type "gboolean")
+  (parameters
+    '("gint" "ppage_nr")
+  )
+)
+
+(define-method ready
+  (of-object "GtkPrintOperationPreview")
+  (c-name "ready")
+  (return-type "none")
+  (parameters
+    '("GtkPrintContext*" "pcontext")
+  )
+)
+
+(define-method render_page
+  (of-object "GtkPrintOperationPreview")
+  (c-name "render_page")
+  (return-type "none")
+  (parameters
+    '("gint" "ppage_nr")
+  )
+)
+

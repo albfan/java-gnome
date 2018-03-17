@@ -1,0 +1,48 @@
+(define-object EventController
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkEventController")
+)
+
+(define-method get_propagation_phase
+  (of-object "GtkEventController")
+  (c-name "gtk_event_controller_get_propagation_phase")
+  (return-type "GtkPropagationPhase")
+  (parameters
+  )
+)
+
+(define-method get_widget
+  (of-object "GtkEventController")
+  (c-name "gtk_event_controller_get_widget")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method handle_event
+  (of-object "GtkEventController")
+  (c-name "gtk_event_controller_handle_event")
+  (return-type "gboolean")
+  (parameters
+    '("const GdkEvent*" "pevent")
+  )
+)
+
+(define-method reset
+  (of-object "GtkEventController")
+  (c-name "gtk_event_controller_reset")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method set_propagation_phase
+  (of-object "GtkEventController")
+  (c-name "gtk_event_controller_set_propagation_phase")
+  (return-type "none")
+  (parameters
+    '("GtkPropagationPhase" "pphase")
+  )
+)
+

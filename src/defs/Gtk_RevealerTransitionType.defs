@@ -1,0 +1,13 @@
+(define-enum RevealerTransitionType
+  (in-module "Gtk")
+  (c-name "GtkRevealerTransitionType")
+  (values
+    '("none" "GTK_REVEALER_TRANSITION_TYPE_NONE")
+    '("crossfade" "GTK_REVEALER_TRANSITION_TYPE_CROSSFADE")
+    '("slide_right" "GTK_REVEALER_TRANSITION_TYPE_SLIDE_RIGHT")
+    '("slide_left" "GTK_REVEALER_TRANSITION_TYPE_SLIDE_LEFT")
+    '("slide_up" "GTK_REVEALER_TRANSITION_TYPE_SLIDE_UP")
+    '("slide_down" "GTK_REVEALER_TRANSITION_TYPE_SLIDE_DOWN")
+  )
+)
+

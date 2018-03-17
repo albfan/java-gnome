@@ -1,0 +1,42 @@
+(define-object Hypertext
+  (in-module "Atk")
+  (import-header "atk/atk.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "AtkHypertext")
+)
+
+(define-method get_link
+  (of-object "AtkHypertext")
+  (c-name "get_link")
+  (return-type "AtkHyperlink*")
+  (parameters
+    '("gint" "plink_index")
+  )
+)
+
+(define-method get_link_index
+  (of-object "AtkHypertext")
+  (c-name "get_link_index")
+  (return-type "gint")
+  (parameters
+    '("gint" "pchar_index")
+  )
+)
+
+(define-method get_n_links
+  (of-object "AtkHypertext")
+  (c-name "get_n_links")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method link_selected
+  (of-object "AtkHypertext")
+  (c-name "link_selected")
+  (return-type "none")
+  (parameters
+    '("gint" "plink_index")
+  )
+)
+

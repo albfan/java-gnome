@@ -1,0 +1,53 @@
+(define-object AppChooserDialog
+  (in-module "Gtk")
+  (parent "Dialog")
+  (c-name "GtkAppChooserDialog")
+)
+
+(define-function AppChooserDialog_new
+  (is-constructor-of "GtkAppChooserDialog")
+  (c-name "gtk_app_chooser_dialog_new")
+  (return-type "GtkWidget*")
+  (parameters
+    '("GtkWindow*" "pparent")
+    '("GtkDialogFlags" "pflags")
+    '("GFile*" "pfile")
+  )
+)
+
+(define-function AppChooserDialog_new_for_content_type
+  (is-constructor-of "GtkAppChooserDialog")
+  (c-name "gtk_app_chooser_dialog_new_for_content_type")
+  (return-type "GtkWidget*")
+  (parameters
+    '("GtkWindow*" "pparent")
+    '("GtkDialogFlags" "pflags")
+    '("const gchar*" "pcontent_type")
+  )
+)
+
+(define-method get_heading
+  (of-object "GtkAppChooserDialog")
+  (c-name "gtk_app_chooser_dialog_get_heading")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_widget
+  (of-object "GtkAppChooserDialog")
+  (c-name "gtk_app_chooser_dialog_get_widget")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method set_heading
+  (of-object "GtkAppChooserDialog")
+  (c-name "gtk_app_chooser_dialog_set_heading")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pheading")
+  )
+)
+

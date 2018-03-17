@@ -1,0 +1,22 @@
+(define-enum License
+  (in-module "Gtk")
+  (c-name "GtkLicense")
+  (values
+    '("unknown" "GTK_LICENSE_UNKNOWN")
+    '("custom" "GTK_LICENSE_CUSTOM")
+    '("gpl_2_0" "GTK_LICENSE_GPL_2_0")
+    '("gpl_3_0" "GTK_LICENSE_GPL_3_0")
+    '("lgpl_2_1" "GTK_LICENSE_LGPL_2_1")
+    '("lgpl_3_0" "GTK_LICENSE_LGPL_3_0")
+    '("bsd" "GTK_LICENSE_BSD")
+    '("mit_x11" "GTK_LICENSE_MIT_X11")
+    '("artistic" "GTK_LICENSE_ARTISTIC")
+    '("gpl_2_0_only" "GTK_LICENSE_GPL_2_0_ONLY")
+    '("gpl_3_0_only" "GTK_LICENSE_GPL_3_0_ONLY")
+    '("lgpl_2_1_only" "GTK_LICENSE_LGPL_2_1_ONLY")
+    '("lgpl_3_0_only" "GTK_LICENSE_LGPL_3_0_ONLY")
+    '("agpl_3_0" "GTK_LICENSE_AGPL_3_0")
+    '("agpl_3_0_only" "GTK_LICENSE_AGPL_3_0_ONLY")
+  )
+)
+

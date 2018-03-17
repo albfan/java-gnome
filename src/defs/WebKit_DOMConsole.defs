@@ -1,0 +1,32 @@
+(define-object DOMConsole
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "DOMObject")
+  (c-name "WebKitDOMConsole")
+)
+
+(define-method get_memory
+  (of-object "WebKitDOMConsole")
+  (c-name "webkit_dom_console_get_memory")
+  (return-type "void*")
+  (parameters
+  )
+)
+
+(define-method group_end
+  (of-object "WebKitDOMConsole")
+  (c-name "webkit_dom_console_group_end")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method time
+  (of-object "WebKitDOMConsole")
+  (c-name "webkit_dom_console_time")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "ptitle")
+  )
+)
+

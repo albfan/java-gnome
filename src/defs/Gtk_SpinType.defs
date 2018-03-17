@@ -1,0 +1,14 @@
+(define-enum SpinType
+  (in-module "Gtk")
+  (c-name "GtkSpinType")
+  (values
+    '("step_forward" "GTK_SPIN_STEP_FORWARD")
+    '("step_backward" "GTK_SPIN_STEP_BACKWARD")
+    '("page_forward" "GTK_SPIN_PAGE_FORWARD")
+    '("page_backward" "GTK_SPIN_PAGE_BACKWARD")
+    '("home" "GTK_SPIN_HOME")
+    '("end" "GTK_SPIN_END")
+    '("user_defined" "GTK_SPIN_USER_DEFINED")
+  )
+)
+

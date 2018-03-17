@@ -1,0 +1,53 @@
+(define-object Image
+  (in-module "Atk")
+  (import-header "atk/atk.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "AtkImage")
+)
+
+(define-method get_image_description
+  (of-object "AtkImage")
+  (c-name "get_image_description")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_image_locale
+  (of-object "AtkImage")
+  (c-name "get_image_locale")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_image_position
+  (of-object "AtkImage")
+  (c-name "get_image_position")
+  (return-type "none")
+  (parameters
+    '("gint*" "px")
+    '("gint*" "py")
+    '("AtkCoordType" "pcoord_type")
+  )
+)
+
+(define-method get_image_size
+  (of-object "AtkImage")
+  (c-name "get_image_size")
+  (return-type "none")
+  (parameters
+    '("gint*" "pwidth")
+    '("gint*" "pheight")
+  )
+)
+
+(define-method set_image_description
+  (of-object "AtkImage")
+  (c-name "set_image_description")
+  (return-type "gboolean")
+  (parameters
+    '("const gchar*" "pdescription")
+  )
+)
+

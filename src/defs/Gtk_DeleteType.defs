@@ -1,0 +1,15 @@
+(define-enum DeleteType
+  (in-module "Gtk")
+  (c-name "GtkDeleteType")
+  (values
+    '("chars" "GTK_DELETE_CHARS")
+    '("word_ends" "GTK_DELETE_WORD_ENDS")
+    '("words" "GTK_DELETE_WORDS")
+    '("display_lines" "GTK_DELETE_DISPLAY_LINES")
+    '("display_line_ends" "GTK_DELETE_DISPLAY_LINE_ENDS")
+    '("paragraph_ends" "GTK_DELETE_PARAGRAPH_ENDS")
+    '("paragraphs" "GTK_DELETE_PARAGRAPHS")
+    '("whitespace" "GTK_DELETE_WHITESPACE")
+  )
+)
+

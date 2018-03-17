@@ -1,0 +1,230 @@
+(define-object WebFrame
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "WebKitWebFrame")
+)
+
+(define-function WebFrame_new
+  (is-constructor-of "WebKitWebFrame")
+  (c-name "webkit_web_frame_new")
+  (return-type "WebKitWebFrame*")
+  (parameters
+    '("WebKitWebView*" "pweb_view")
+  )
+)
+
+(define-method find_frame
+  (of-object "WebKitWebFrame")
+  (c-name "webkit_web_frame_find_frame")
+  (return-type "WebKitWebFrame*")
+  (parameters
+    '("const gchar*" "pname")
+  )
+)
+
+(define-method get_data_source
+  (of-object "WebKitWebFrame")
+  (c-name "webkit_web_frame_get_data_source")
+  (return-type "WebKitWebDataSource*")
+  (parameters
+  )
+)
+
+(define-method get_dom_document
+  (of-object "WebKitWebFrame")
+  (c-name "webkit_web_frame_get_dom_document")
+  (return-type "WebKitDOMDocument*")
+  (parameters
+  )
+)
+
+(define-method get_global_context
+  (of-object "WebKitWebFrame")
+  (c-name "webkit_web_frame_get_global_context")
+  (return-type "JSGlobalContextRef")
+  (parameters
+  )
+)
+
+(define-method get_horizontal_scrollbar_policy
+  (of-object "WebKitWebFrame")
+  (c-name "webkit_web_frame_get_horizontal_scrollbar_policy")
+  (return-type "GtkPolicyType")
+  (parameters
+  )
+)
+
+(define-method get_load_status
+  (of-object "WebKitWebFrame")
+  (c-name "webkit_web_frame_get_load_status")
+  (return-type "WebKitLoadStatus")
+  (parameters
+  )
+)
+
+(define-method get_name
+  (of-object "WebKitWebFrame")
+  (c-name "webkit_web_frame_get_name")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_network_response
+  (of-object "WebKitWebFrame")
+  (c-name "webkit_web_frame_get_network_response")
+  (return-type "WebKitNetworkResponse*")
+  (parameters
+  )
+)
+
+(define-method get_parent
+  (of-object "WebKitWebFrame")
+  (c-name "webkit_web_frame_get_parent")
+  (return-type "WebKitWebFrame*")
+  (parameters
+  )
+)
+
+(define-method get_provisional_data_source
+  (of-object "WebKitWebFrame")
+  (c-name "webkit_web_frame_get_provisional_data_source")
+  (return-type "WebKitWebDataSource*")
+  (parameters
+  )
+)
+
+(define-method get_range_for_word_around_caret
+  (of-object "WebKitWebFrame")
+  (c-name "webkit_web_frame_get_range_for_word_around_caret")
+  (return-type "WebKitDOMRange*")
+  (parameters
+  )
+)
+
+(define-method get_security_origin
+  (of-object "WebKitWebFrame")
+  (c-name "webkit_web_frame_get_security_origin")
+  (return-type "WebKitSecurityOrigin*")
+  (parameters
+  )
+)
+
+(define-method get_title
+  (of-object "WebKitWebFrame")
+  (c-name "webkit_web_frame_get_title")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_uri
+  (of-object "WebKitWebFrame")
+  (c-name "webkit_web_frame_get_uri")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_vertical_scrollbar_policy
+  (of-object "WebKitWebFrame")
+  (c-name "webkit_web_frame_get_vertical_scrollbar_policy")
+  (return-type "GtkPolicyType")
+  (parameters
+  )
+)
+
+(define-method get_web_view
+  (of-object "WebKitWebFrame")
+  (c-name "webkit_web_frame_get_web_view")
+  (return-type "WebKitWebView*")
+  (parameters
+  )
+)
+
+(define-method load_alternate_string
+  (of-object "WebKitWebFrame")
+  (c-name "webkit_web_frame_load_alternate_string")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pcontent")
+    '("const gchar*" "pbase_url")
+    '("const gchar*" "punreachable_url")
+  )
+)
+
+(define-method load_request
+  (of-object "WebKitWebFrame")
+  (c-name "webkit_web_frame_load_request")
+  (return-type "none")
+  (parameters
+    '("WebKitNetworkRequest*" "prequest")
+  )
+)
+
+(define-method load_string
+  (of-object "WebKitWebFrame")
+  (c-name "webkit_web_frame_load_string")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pcontent")
+    '("const gchar*" "pmime_type")
+    '("const gchar*" "pencoding")
+    '("const gchar*" "pbase_uri")
+  )
+)
+
+(define-method load_uri
+  (of-object "WebKitWebFrame")
+  (c-name "webkit_web_frame_load_uri")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "puri")
+  )
+)
+
+(define-method print
+  (of-object "WebKitWebFrame")
+  (c-name "webkit_web_frame_print")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method print_full
+  (of-object "WebKitWebFrame")
+  (c-name "webkit_web_frame_print_full")
+  (return-type "GtkPrintOperationResult")
+  (parameters
+    '("GtkPrintOperation*" "poperation")
+    '("GtkPrintOperationAction" "paction")
+    '("GError**" "error")
+  )
+)
+
+(define-method reload
+  (of-object "WebKitWebFrame")
+  (c-name "webkit_web_frame_reload")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method replace_selection
+  (of-object "WebKitWebFrame")
+  (c-name "webkit_web_frame_replace_selection")
+  (return-type "none")
+  (parameters
+    '("const char*" "ptext")
+  )
+)
+
+(define-method stop_loading
+  (of-object "WebKitWebFrame")
+  (c-name "webkit_web_frame_stop_loading")
+  (return-type "none")
+  (parameters
+  )
+)
+

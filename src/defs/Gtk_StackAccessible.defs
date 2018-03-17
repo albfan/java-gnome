@@ -1,0 +1,6 @@
+(define-object StackAccessible
+  (in-module "Gtk")
+  (parent "ContainerAccessible")
+  (c-name "GtkStackAccessible")
+)
+

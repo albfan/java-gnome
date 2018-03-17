@@ -1,0 +1,30 @@
+(define-object TextChildAnchor
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkTextChildAnchor")
+)
+
+(define-function TextChildAnchor_new
+  (is-constructor-of "GtkTextChildAnchor")
+  (c-name "gtk_text_child_anchor_new")
+  (return-type "GtkTextChildAnchor*")
+  (parameters
+  )
+)
+
+(define-method get_deleted
+  (of-object "GtkTextChildAnchor")
+  (c-name "gtk_text_child_anchor_get_deleted")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_widgets
+  (of-object "GtkTextChildAnchor")
+  (c-name "gtk_text_child_anchor_get_widgets")
+  (return-type "GList*")
+  (parameters
+  )
+)
+

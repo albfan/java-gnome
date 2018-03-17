@@ -1,0 +1,23 @@
+(define-object Misc
+  (in-module "Atk")
+  (import-header "atk/atk.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "AtkMisc")
+)
+
+(define-method threads_enter
+  (of-object "AtkMisc")
+  (c-name "threads_enter")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method threads_leave
+  (of-object "AtkMisc")
+  (c-name "threads_leave")
+  (return-type "none")
+  (parameters
+  )
+)
+

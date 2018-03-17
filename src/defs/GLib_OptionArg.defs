@@ -1,0 +1,16 @@
+(define-enum OptionArg
+  (in-module "GLib")
+  (c-name "GOptionArg")
+  (values
+    '("none" "G_OPTION_ARG_NONE")
+    '("string" "G_OPTION_ARG_STRING")
+    '("int" "G_OPTION_ARG_INT")
+    '("callback" "G_OPTION_ARG_CALLBACK")
+    '("filename" "G_OPTION_ARG_FILENAME")
+    '("string_array" "G_OPTION_ARG_STRING_ARRAY")
+    '("filename_array" "G_OPTION_ARG_FILENAME_ARRAY")
+    '("double" "G_OPTION_ARG_DOUBLE")
+    '("int64" "G_OPTION_ARG_INT64")
+  )
+)
+

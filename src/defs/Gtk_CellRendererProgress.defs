@@ -1,0 +1,14 @@
+(define-object CellRendererProgress
+  (in-module "Gtk")
+  (parent "CellRenderer")
+  (c-name "GtkCellRendererProgress")
+)
+
+(define-function CellRendererProgress_new
+  (is-constructor-of "GtkCellRendererProgress")
+  (c-name "gtk_cell_renderer_progress_new")
+  (return-type "GtkCellRenderer*")
+  (parameters
+  )
+)
+

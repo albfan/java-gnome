@@ -1,0 +1,60 @@
+(define-object Icon
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GIcon")
+)
+
+(define-method equal
+  (of-object "GIcon")
+  (c-name "equal")
+  (return-type "gboolean")
+  (parameters
+    '("GIcon*" "picon2")
+  )
+)
+
+(define-method hash
+  (of-object "GIcon")
+  (c-name "hash")
+  (return-type "guint")
+  (parameters
+  )
+)
+
+(define-method serialize
+  (of-object "GIcon")
+  (c-name "serialize")
+  (return-type "GVariant*")
+  (parameters
+  )
+)
+
+(define-method to_tokens
+  (of-object "GIcon")
+  (c-name "to_tokens")
+  (return-type "gboolean")
+  (parameters
+    '("null" "ptokens")
+    '("gint*" "pout_version")
+  )
+)
+
+(define-method to_string
+  (of-object "GIcon")
+  (c-name "g_icon_to_string")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+

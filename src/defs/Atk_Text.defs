@@ -1,0 +1,251 @@
+(define-object Text
+  (in-module "Atk")
+  (import-header "atk/atk.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "AtkText")
+)
+
+(define-method add_selection
+  (of-object "AtkText")
+  (c-name "add_selection")
+  (return-type "gboolean")
+  (parameters
+    '("gint" "pstart_offset")
+    '("gint" "pend_offset")
+  )
+)
+
+(define-method get_bounded_ranges
+  (of-object "AtkText")
+  (c-name "get_bounded_ranges")
+  (return-type "AtkTextRange**")
+  (parameters
+    '("AtkTextRectangle*" "prect")
+    '("AtkCoordType" "pcoord_type")
+    '("AtkTextClipType" "px_clip_type")
+    '("AtkTextClipType" "py_clip_type")
+  )
+)
+
+(define-method get_caret_offset
+  (of-object "AtkText")
+  (c-name "get_caret_offset")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_character_at_offset
+  (of-object "AtkText")
+  (c-name "get_character_at_offset")
+  (return-type "gunichar")
+  (parameters
+    '("gint" "poffset")
+  )
+)
+
+(define-method get_character_count
+  (of-object "AtkText")
+  (c-name "get_character_count")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_character_extents
+  (of-object "AtkText")
+  (c-name "get_character_extents")
+  (return-type "none")
+  (parameters
+    '("gint" "poffset")
+    '("gint*" "px")
+    '("gint*" "py")
+    '("gint*" "pwidth")
+    '("gint*" "pheight")
+    '("AtkCoordType" "pcoords")
+  )
+)
+
+(define-method get_default_attributes
+  (of-object "AtkText")
+  (c-name "get_default_attributes")
+  (return-type "AtkAttributeSet*")
+  (parameters
+  )
+)
+
+(define-method get_n_selections
+  (of-object "AtkText")
+  (c-name "get_n_selections")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_offset_at_point
+  (of-object "AtkText")
+  (c-name "get_offset_at_point")
+  (return-type "gint")
+  (parameters
+    '("gint" "px")
+    '("gint" "py")
+    '("AtkCoordType" "pcoords")
+  )
+)
+
+(define-method get_range_extents
+  (of-object "AtkText")
+  (c-name "get_range_extents")
+  (return-type "none")
+  (parameters
+    '("gint" "pstart_offset")
+    '("gint" "pend_offset")
+    '("AtkCoordType" "pcoord_type")
+    '("AtkTextRectangle*" "prect")
+  )
+)
+
+(define-method get_run_attributes
+  (of-object "AtkText")
+  (c-name "get_run_attributes")
+  (return-type "AtkAttributeSet*")
+  (parameters
+    '("gint" "poffset")
+    '("gint*" "pstart_offset")
+    '("gint*" "pend_offset")
+  )
+)
+
+(define-method get_selection
+  (of-object "AtkText")
+  (c-name "get_selection")
+  (return-type "gchar*")
+  (parameters
+    '("gint" "pselection_num")
+    '("gint*" "pstart_offset")
+    '("gint*" "pend_offset")
+  )
+)
+
+(define-method get_string_at_offset
+  (of-object "AtkText")
+  (c-name "get_string_at_offset")
+  (return-type "gchar*")
+  (parameters
+    '("gint" "poffset")
+    '("AtkTextGranularity" "pgranularity")
+    '("gint*" "pstart_offset")
+    '("gint*" "pend_offset")
+  )
+)
+
+(define-method get_text
+  (of-object "AtkText")
+  (c-name "get_text")
+  (return-type "gchar*")
+  (parameters
+    '("gint" "pstart_offset")
+    '("gint" "pend_offset")
+  )
+)
+
+(define-method get_text_after_offset
+  (of-object "AtkText")
+  (c-name "get_text_after_offset")
+  (return-type "gchar*")
+  (parameters
+    '("gint" "poffset")
+    '("AtkTextBoundary" "pboundary_type")
+    '("gint*" "pstart_offset")
+    '("gint*" "pend_offset")
+  )
+)
+
+(define-method get_text_at_offset
+  (of-object "AtkText")
+  (c-name "get_text_at_offset")
+  (return-type "gchar*")
+  (parameters
+    '("gint" "poffset")
+    '("AtkTextBoundary" "pboundary_type")
+    '("gint*" "pstart_offset")
+    '("gint*" "pend_offset")
+  )
+)
+
+(define-method get_text_before_offset
+  (of-object "AtkText")
+  (c-name "get_text_before_offset")
+  (return-type "gchar*")
+  (parameters
+    '("gint" "poffset")
+    '("AtkTextBoundary" "pboundary_type")
+    '("gint*" "pstart_offset")
+    '("gint*" "pend_offset")
+  )
+)
+
+(define-method remove_selection
+  (of-object "AtkText")
+  (c-name "remove_selection")
+  (return-type "gboolean")
+  (parameters
+    '("gint" "pselection_num")
+  )
+)
+
+(define-method set_caret_offset
+  (of-object "AtkText")
+  (c-name "set_caret_offset")
+  (return-type "gboolean")
+  (parameters
+    '("gint" "poffset")
+  )
+)
+
+(define-method set_selection
+  (of-object "AtkText")
+  (c-name "set_selection")
+  (return-type "gboolean")
+  (parameters
+    '("gint" "pselection_num")
+    '("gint" "pstart_offset")
+    '("gint" "pend_offset")
+  )
+)
+
+(define-method text_attributes_changed
+  (of-object "AtkText")
+  (c-name "text_attributes_changed")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method text_caret_moved
+  (of-object "AtkText")
+  (c-name "text_caret_moved")
+  (return-type "none")
+  (parameters
+    '("gint" "plocation")
+  )
+)
+
+(define-method text_changed
+  (of-object "AtkText")
+  (c-name "text_changed")
+  (return-type "none")
+  (parameters
+    '("gint" "pposition")
+    '("gint" "plength")
+  )
+)
+
+(define-method text_selection_changed
+  (of-object "AtkText")
+  (c-name "text_selection_changed")
+  (return-type "none")
+  (parameters
+  )
+)
+

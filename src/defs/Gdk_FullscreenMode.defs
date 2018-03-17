@@ -1,0 +1,9 @@
+(define-enum FullscreenMode
+  (in-module "Gdk")
+  (c-name "GdkFullscreenMode")
+  (values
+    '("current_monitor" "GDK_FULLSCREEN_ON_CURRENT_MONITOR")
+    '("all_monitors" "GDK_FULLSCREEN_ON_ALL_MONITORS")
+  )
+)
+

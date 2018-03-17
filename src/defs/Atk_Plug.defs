@@ -1,0 +1,31 @@
+(define-object Plug
+  (in-module "Atk")
+  (import-header "atk/atk.h")
+  (parent "Object")
+  (c-name "AtkPlug")
+)
+
+(define-function Plug_new
+  (is-constructor-of "AtkPlug")
+  (c-name "atk_plug_new")
+  (return-type "AtkObject*")
+  (parameters
+  )
+)
+
+(define-method get_object_id
+  (of-object "AtkPlug")
+  (c-name "get_object_id")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+
+(define-method get_id
+  (of-object "AtkPlug")
+  (c-name "atk_plug_get_id")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+

@@ -1,0 +1,474 @@
+(define-object Label
+  (in-module "Gtk")
+  (parent "Misc")
+  (c-name "GtkLabel")
+)
+
+(define-function Label_new
+  (is-constructor-of "GtkLabel")
+  (c-name "gtk_label_new")
+  (return-type "GtkWidget*")
+  (parameters
+    '("const gchar*" "pstr")
+  )
+)
+
+(define-function Label_new_with_mnemonic
+  (is-constructor-of "GtkLabel")
+  (c-name "gtk_label_new_with_mnemonic")
+  (return-type "GtkWidget*")
+  (parameters
+    '("const gchar*" "pstr")
+  )
+)
+
+(define-method activate_link
+  (of-object "GtkLabel")
+  (c-name "activate_link")
+  (return-type "gboolean")
+  (parameters
+    '("const gchar*" "puri")
+  )
+)
+
+(define-method copy_clipboard
+  (of-object "GtkLabel")
+  (c-name "copy_clipboard")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method move_cursor
+  (of-object "GtkLabel")
+  (c-name "move_cursor")
+  (return-type "none")
+  (parameters
+    '("GtkMovementStep" "pstep")
+    '("gint" "pcount")
+    '("gboolean" "pextend_selection")
+  )
+)
+
+(define-method populate_popup
+  (of-object "GtkLabel")
+  (c-name "populate_popup")
+  (return-type "none")
+  (parameters
+    '("GtkMenu*" "pmenu")
+  )
+)
+
+(define-method get_angle
+  (of-object "GtkLabel")
+  (c-name "gtk_label_get_angle")
+  (return-type "gdouble")
+  (parameters
+  )
+)
+
+(define-method get_attributes
+  (of-object "GtkLabel")
+  (c-name "gtk_label_get_attributes")
+  (return-type "PangoAttrList*")
+  (parameters
+  )
+)
+
+(define-method get_current_uri
+  (of-object "GtkLabel")
+  (c-name "gtk_label_get_current_uri")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_ellipsize
+  (of-object "GtkLabel")
+  (c-name "gtk_label_get_ellipsize")
+  (return-type "PangoEllipsizeMode")
+  (parameters
+  )
+)
+
+(define-method get_justify
+  (of-object "GtkLabel")
+  (c-name "gtk_label_get_justify")
+  (return-type "GtkJustification")
+  (parameters
+  )
+)
+
+(define-method get_label
+  (of-object "GtkLabel")
+  (c-name "gtk_label_get_label")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_layout
+  (of-object "GtkLabel")
+  (c-name "gtk_label_get_layout")
+  (return-type "PangoLayout*")
+  (parameters
+  )
+)
+
+(define-method get_layout_offsets
+  (of-object "GtkLabel")
+  (c-name "gtk_label_get_layout_offsets")
+  (return-type "none")
+  (parameters
+    '("gint*" "px")
+    '("gint*" "py")
+  )
+)
+
+(define-method get_line_wrap
+  (of-object "GtkLabel")
+  (c-name "gtk_label_get_line_wrap")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_line_wrap_mode
+  (of-object "GtkLabel")
+  (c-name "gtk_label_get_line_wrap_mode")
+  (return-type "PangoWrapMode")
+  (parameters
+  )
+)
+
+(define-method get_lines
+  (of-object "GtkLabel")
+  (c-name "gtk_label_get_lines")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_max_width_chars
+  (of-object "GtkLabel")
+  (c-name "gtk_label_get_max_width_chars")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_mnemonic_keyval
+  (of-object "GtkLabel")
+  (c-name "gtk_label_get_mnemonic_keyval")
+  (return-type "guint")
+  (parameters
+  )
+)
+
+(define-method get_mnemonic_widget
+  (of-object "GtkLabel")
+  (c-name "gtk_label_get_mnemonic_widget")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method get_selectable
+  (of-object "GtkLabel")
+  (c-name "gtk_label_get_selectable")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_selection_bounds
+  (of-object "GtkLabel")
+  (c-name "gtk_label_get_selection_bounds")
+  (return-type "gboolean")
+  (parameters
+    '("gint*" "pstart")
+    '("gint*" "pend")
+  )
+)
+
+(define-method get_single_line_mode
+  (of-object "GtkLabel")
+  (c-name "gtk_label_get_single_line_mode")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_text
+  (of-object "GtkLabel")
+  (c-name "gtk_label_get_text")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_track_visited_links
+  (of-object "GtkLabel")
+  (c-name "gtk_label_get_track_visited_links")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_use_markup
+  (of-object "GtkLabel")
+  (c-name "gtk_label_get_use_markup")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_use_underline
+  (of-object "GtkLabel")
+  (c-name "gtk_label_get_use_underline")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_width_chars
+  (of-object "GtkLabel")
+  (c-name "gtk_label_get_width_chars")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_xalign
+  (of-object "GtkLabel")
+  (c-name "gtk_label_get_xalign")
+  (return-type "gfloat")
+  (parameters
+  )
+)
+
+(define-method get_yalign
+  (of-object "GtkLabel")
+  (c-name "gtk_label_get_yalign")
+  (return-type "gfloat")
+  (parameters
+  )
+)
+
+(define-method select_region
+  (of-object "GtkLabel")
+  (c-name "gtk_label_select_region")
+  (return-type "none")
+  (parameters
+    '("gint" "pstart_offset")
+    '("gint" "pend_offset")
+  )
+)
+
+(define-method set_angle
+  (of-object "GtkLabel")
+  (c-name "gtk_label_set_angle")
+  (return-type "none")
+  (parameters
+    '("gdouble" "pangle")
+  )
+)
+
+(define-method set_attributes
+  (of-object "GtkLabel")
+  (c-name "gtk_label_set_attributes")
+  (return-type "none")
+  (parameters
+    '("PangoAttrList*" "pattrs")
+  )
+)
+
+(define-method set_ellipsize
+  (of-object "GtkLabel")
+  (c-name "gtk_label_set_ellipsize")
+  (return-type "none")
+  (parameters
+    '("PangoEllipsizeMode" "pmode")
+  )
+)
+
+(define-method set_justify
+  (of-object "GtkLabel")
+  (c-name "gtk_label_set_justify")
+  (return-type "none")
+  (parameters
+    '("GtkJustification" "pjtype")
+  )
+)
+
+(define-method set_label
+  (of-object "GtkLabel")
+  (c-name "gtk_label_set_label")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pstr")
+  )
+)
+
+(define-method set_line_wrap
+  (of-object "GtkLabel")
+  (c-name "gtk_label_set_line_wrap")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pwrap")
+  )
+)
+
+(define-method set_line_wrap_mode
+  (of-object "GtkLabel")
+  (c-name "gtk_label_set_line_wrap_mode")
+  (return-type "none")
+  (parameters
+    '("PangoWrapMode" "pwrap_mode")
+  )
+)
+
+(define-method set_lines
+  (of-object "GtkLabel")
+  (c-name "gtk_label_set_lines")
+  (return-type "none")
+  (parameters
+    '("gint" "plines")
+  )
+)
+
+(define-method set_markup
+  (of-object "GtkLabel")
+  (c-name "gtk_label_set_markup")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pstr")
+  )
+)
+
+(define-method set_markup_with_mnemonic
+  (of-object "GtkLabel")
+  (c-name "gtk_label_set_markup_with_mnemonic")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pstr")
+  )
+)
+
+(define-method set_max_width_chars
+  (of-object "GtkLabel")
+  (c-name "gtk_label_set_max_width_chars")
+  (return-type "none")
+  (parameters
+    '("gint" "pn_chars")
+  )
+)
+
+(define-method set_mnemonic_widget
+  (of-object "GtkLabel")
+  (c-name "gtk_label_set_mnemonic_widget")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pwidget")
+  )
+)
+
+(define-method set_pattern
+  (of-object "GtkLabel")
+  (c-name "gtk_label_set_pattern")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "ppattern")
+  )
+)
+
+(define-method set_selectable
+  (of-object "GtkLabel")
+  (c-name "gtk_label_set_selectable")
+  (return-type "none")
+  (parameters
+    '("gboolean" "psetting")
+  )
+)
+
+(define-method set_single_line_mode
+  (of-object "GtkLabel")
+  (c-name "gtk_label_set_single_line_mode")
+  (return-type "none")
+  (parameters
+    '("gboolean" "psingle_line_mode")
+  )
+)
+
+(define-method set_text
+  (of-object "GtkLabel")
+  (c-name "gtk_label_set_text")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pstr")
+  )
+)
+
+(define-method set_text_with_mnemonic
+  (of-object "GtkLabel")
+  (c-name "gtk_label_set_text_with_mnemonic")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pstr")
+  )
+)
+
+(define-method set_track_visited_links
+  (of-object "GtkLabel")
+  (c-name "gtk_label_set_track_visited_links")
+  (return-type "none")
+  (parameters
+    '("gboolean" "ptrack_links")
+  )
+)
+
+(define-method set_use_markup
+  (of-object "GtkLabel")
+  (c-name "gtk_label_set_use_markup")
+  (return-type "none")
+  (parameters
+    '("gboolean" "psetting")
+  )
+)
+
+(define-method set_use_underline
+  (of-object "GtkLabel")
+  (c-name "gtk_label_set_use_underline")
+  (return-type "none")
+  (parameters
+    '("gboolean" "psetting")
+  )
+)
+
+(define-method set_width_chars
+  (of-object "GtkLabel")
+  (c-name "gtk_label_set_width_chars")
+  (return-type "none")
+  (parameters
+    '("gint" "pn_chars")
+  )
+)
+
+(define-method set_xalign
+  (of-object "GtkLabel")
+  (c-name "gtk_label_set_xalign")
+  (return-type "none")
+  (parameters
+    '("gfloat" "pxalign")
+  )
+)
+
+(define-method set_yalign
+  (of-object "GtkLabel")
+  (c-name "gtk_label_set_yalign")
+  (return-type "none")
+  (parameters
+    '("gfloat" "pyalign")
+  )
+)
+

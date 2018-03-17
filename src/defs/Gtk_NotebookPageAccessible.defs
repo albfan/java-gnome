@@ -1,0 +1,24 @@
+(define-object NotebookPageAccessible
+  (in-module "Gtk")
+  (parent "Atk.Object")
+  (c-name "GtkNotebookPageAccessible")
+)
+
+(define-function NotebookPageAccessible_new
+  (is-constructor-of "GtkNotebookPageAccessible")
+  (c-name "gtk_notebook_page_accessible_new")
+  (return-type "AtkObject*")
+  (parameters
+    '("GtkNotebookAccessible*" "pnotebook")
+    '("GtkWidget*" "pchild")
+  )
+)
+
+(define-method invalidate
+  (of-object "GtkNotebookPageAccessible")
+  (c-name "gtk_notebook_page_accessible_invalidate")
+  (return-type "none")
+  (parameters
+  )
+)
+

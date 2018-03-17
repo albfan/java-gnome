@@ -1,0 +1,60 @@
+(define-object ToggleAction
+  (in-module "Gtk")
+  (parent "Action")
+  (c-name "GtkToggleAction")
+)
+
+(define-function ToggleAction_new
+  (is-constructor-of "GtkToggleAction")
+  (c-name "gtk_toggle_action_new")
+  (return-type "GtkToggleAction*")
+  (parameters
+    '("const gchar*" "pname")
+    '("const gchar*" "plabel")
+    '("const gchar*" "ptooltip")
+    '("const gchar*" "pstock_id")
+  )
+)
+
+(define-method toggled
+  (of-object "GtkToggleAction")
+  (c-name "toggled")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method get_active
+  (of-object "GtkToggleAction")
+  (c-name "gtk_toggle_action_get_active")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_draw_as_radio
+  (of-object "GtkToggleAction")
+  (c-name "gtk_toggle_action_get_draw_as_radio")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method set_active
+  (of-object "GtkToggleAction")
+  (c-name "gtk_toggle_action_set_active")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pis_active")
+  )
+)
+
+(define-method set_draw_as_radio
+  (of-object "GtkToggleAction")
+  (c-name "gtk_toggle_action_set_draw_as_radio")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pdraw_as_radio")
+  )
+)
+

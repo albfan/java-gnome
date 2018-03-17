@@ -1,0 +1,19 @@
+(define-enum TestLogType
+  (in-module "GLib")
+  (c-name "GTestLogType")
+  (values
+    '("none" "G_TEST_LOG_NONE")
+    '("error" "G_TEST_LOG_ERROR")
+    '("start_binary" "G_TEST_LOG_START_BINARY")
+    '("list_case" "G_TEST_LOG_LIST_CASE")
+    '("skip_case" "G_TEST_LOG_SKIP_CASE")
+    '("start_case" "G_TEST_LOG_START_CASE")
+    '("stop_case" "G_TEST_LOG_STOP_CASE")
+    '("min_result" "G_TEST_LOG_MIN_RESULT")
+    '("max_result" "G_TEST_LOG_MAX_RESULT")
+    '("message" "G_TEST_LOG_MESSAGE")
+    '("start_suite" "G_TEST_LOG_START_SUITE")
+    '("stop_suite" "G_TEST_LOG_STOP_SUITE")
+  )
+)
+

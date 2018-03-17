@@ -1,0 +1,10 @@
+(define-enum KeyEventType
+  (in-module "Atk")
+  (c-name "AtkKeyEventType")
+  (values
+    '("press" "ATK_KEY_EVENT_PRESS")
+    '("release" "ATK_KEY_EVENT_RELEASE")
+    '("last_defined" "ATK_KEY_EVENT_LAST_DEFINED")
+  )
+)
+

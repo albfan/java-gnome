@@ -1,0 +1,50 @@
+(define-object DBusInterface
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GDBusInterface")
+)
+
+(define-method dup_object
+  (of-object "GDBusInterface")
+  (c-name "dup_object")
+  (return-type "GDBusObject*")
+  (parameters
+  )
+)
+
+(define-method get_info
+  (of-object "GDBusInterface")
+  (c-name "get_info")
+  (return-type "GDBusInterfaceInfo*")
+  (parameters
+  )
+)
+
+(define-method get_object
+  (of-object "GDBusInterface")
+  (c-name "get_object")
+  (return-type "GDBusObject*")
+  (parameters
+  )
+)
+
+(define-method set_object
+  (of-object "GDBusInterface")
+  (c-name "set_object")
+  (return-type "none")
+  (parameters
+    '("GDBusObject*" "pobject")
+  )
+)
+

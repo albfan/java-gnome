@@ -1,0 +1,69 @@
+(define-object AppLaunchContext
+  (in-module "Gdk")
+  (import-header "gdk/gdk.h")
+  (parent "Gio.AppLaunchContext")
+  (c-name "GdkAppLaunchContext")
+)
+
+(define-function AppLaunchContext_new
+  (is-constructor-of "GdkAppLaunchContext")
+  (c-name "gdk_app_launch_context_new")
+  (return-type "GdkAppLaunchContext*")
+  (parameters
+  )
+)
+
+(define-method set_desktop
+  (of-object "GdkAppLaunchContext")
+  (c-name "gdk_app_launch_context_set_desktop")
+  (return-type "none")
+  (parameters
+    '("gint" "pdesktop")
+  )
+)
+
+(define-method set_display
+  (of-object "GdkAppLaunchContext")
+  (c-name "gdk_app_launch_context_set_display")
+  (return-type "none")
+  (parameters
+    '("GdkDisplay*" "pdisplay")
+  )
+)
+
+(define-method set_icon
+  (of-object "GdkAppLaunchContext")
+  (c-name "gdk_app_launch_context_set_icon")
+  (return-type "none")
+  (parameters
+    '("GIcon*" "picon")
+  )
+)
+
+(define-method set_icon_name
+  (of-object "GdkAppLaunchContext")
+  (c-name "gdk_app_launch_context_set_icon_name")
+  (return-type "none")
+  (parameters
+    '("const char*" "picon_name")
+  )
+)
+
+(define-method set_screen
+  (of-object "GdkAppLaunchContext")
+  (c-name "gdk_app_launch_context_set_screen")
+  (return-type "none")
+  (parameters
+    '("GdkScreen*" "pscreen")
+  )
+)
+
+(define-method set_timestamp
+  (of-object "GdkAppLaunchContext")
+  (c-name "gdk_app_launch_context_set_timestamp")
+  (return-type "none")
+  (parameters
+    '("guint32" "ptimestamp")
+  )
+)
+

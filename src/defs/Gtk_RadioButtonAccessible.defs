@@ -1,0 +1,6 @@
+(define-object RadioButtonAccessible
+  (in-module "Gtk")
+  (parent "ToggleButtonAccessible")
+  (c-name "GtkRadioButtonAccessible")
+)
+

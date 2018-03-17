@@ -1,0 +1,42 @@
+(define-object DOMDOMPluginArray
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "DOMObject")
+  (c-name "WebKitDOMDOMPluginArray")
+)
+
+(define-method get_length
+  (of-object "WebKitDOMDOMPluginArray")
+  (c-name "webkit_dom_dom_plugin_array_get_length")
+  (return-type "gulong")
+  (parameters
+  )
+)
+
+(define-method item
+  (of-object "WebKitDOMDOMPluginArray")
+  (c-name "webkit_dom_dom_plugin_array_item")
+  (return-type "WebKitDOMDOMPlugin*")
+  (parameters
+    '("gulong" "pindex")
+  )
+)
+
+(define-method named_item
+  (of-object "WebKitDOMDOMPluginArray")
+  (c-name "webkit_dom_dom_plugin_array_named_item")
+  (return-type "WebKitDOMDOMPlugin*")
+  (parameters
+    '("const gchar*" "pname")
+  )
+)
+
+(define-method refresh
+  (of-object "WebKitDOMDOMPluginArray")
+  (c-name "webkit_dom_dom_plugin_array_refresh")
+  (return-type "none")
+  (parameters
+    '("gboolean" "preload")
+  )
+)
+

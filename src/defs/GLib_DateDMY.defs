@@ -1,0 +1,10 @@
+(define-enum DateDMY
+  (in-module "GLib")
+  (c-name "GDateDMY")
+  (values
+    '("day" "G_DATE_DAY")
+    '("month" "G_DATE_MONTH")
+    '("year" "G_DATE_YEAR")
+  )
+)
+

@@ -1,0 +1,7 @@
+(define-object DOMPropertyNodeList
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "DOMNodeList")
+  (c-name "DOMPropertyNodeList")
+)
+

@@ -1,0 +1,507 @@
+(define-object Object
+  (in-module "GObject")
+  (import-header "glib-object.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GObject")
+)
+
+(define-function Object_new
+  (is-constructor-of "GObject")
+  (c-name "g_object_new")
+  (return-type "gpointer")
+  (parameters
+    '("GType" "pobject_type")
+    '("const gchar*" "pfirst_property_name")
+    '("null" "p...")
+  )
+)
+
+(define-function Object_new_valist
+  (is-constructor-of "GObject")
+  (c-name "g_object_new_valist")
+  (return-type "GObject*")
+  (parameters
+    '("GType" "pobject_type")
+    '("const gchar*" "pfirst_property_name")
+    '("va_list" "pvar_args")
+  )
+)
+
+(define-function Object_new_with_properties
+  (is-constructor-of "GObject")
+  (c-name "g_object_new_with_properties")
+  (return-type "GObject*")
+  (parameters
+    '("GType" "pobject_type")
+    '("guint" "pn_properties")
+    '("null" "pnames")
+    '("null" "pvalues")
+  )
+)
+
+(define-function Object_newv
+  (is-constructor-of "GObject")
+  (c-name "g_object_newv")
+  (return-type "gpointer")
+  (parameters
+    '("GType" "pobject_type")
+    '("guint" "pn_parameters")
+    '("null" "pparameters")
+  )
+)
+
+(define-method constructed
+  (of-object "GObject")
+  (c-name "constructed")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method dispatch_properties_changed
+  (of-object "GObject")
+  (c-name "dispatch_properties_changed")
+  (return-type "none")
+  (parameters
+    '("guint" "pn_pspecs")
+    '("GParamSpec**" "ppspecs")
+  )
+)
+
+(define-method dispose
+  (of-object "GObject")
+  (c-name "dispose")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method finalize
+  (of-object "GObject")
+  (c-name "finalize")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method get_property
+  (of-object "GObject")
+  (c-name "get_property")
+  (return-type "none")
+  (parameters
+    '("guint" "pproperty_id")
+    '("GValue*" "pvalue")
+    '("GParamSpec*" "ppspec")
+  )
+)
+
+(define-method notify
+  (of-object "GObject")
+  (c-name "notify")
+  (return-type "none")
+  (parameters
+    '("GParamSpec*" "ppspec")
+  )
+)
+
+(define-method set_property
+  (of-object "GObject")
+  (c-name "set_property")
+  (return-type "none")
+  (parameters
+    '("guint" "pproperty_id")
+    '("const GValue*" "pvalue")
+    '("GParamSpec*" "ppspec")
+  )
+)
+
+(define-method add_toggle_ref
+  (of-object "GObject")
+  (c-name "g_object_add_toggle_ref")
+  (return-type "none")
+  (parameters
+    '("GToggleNotify" "pnotify")
+    '("gpointer" "pdata")
+  )
+)
+
+(define-method add_weak_pointer
+  (of-object "GObject")
+  (c-name "g_object_add_weak_pointer")
+  (return-type "none")
+  (parameters
+    '("gpointer*" "pweak_pointer_location")
+  )
+)
+
+(define-method bind_property
+  (of-object "GObject")
+  (c-name "g_object_bind_property")
+  (return-type "GBinding*")
+  (parameters
+    '("const gchar*" "psource_property")
+    '("gpointer" "ptarget")
+    '("const gchar*" "ptarget_property")
+    '("GBindingFlags" "pflags")
+  )
+)
+
+(define-method bind_property_full
+  (of-object "GObject")
+  (c-name "g_object_bind_property_full")
+  (return-type "GBinding*")
+  (parameters
+    '("const gchar*" "psource_property")
+    '("gpointer" "ptarget")
+    '("const gchar*" "ptarget_property")
+    '("GBindingFlags" "pflags")
+    '("GBindingTransformFunc" "ptransform_to")
+    '("GBindingTransformFunc" "ptransform_from")
+    '("gpointer" "puser_data")
+    '("GDestroyNotify" "pnotify")
+  )
+)
+
+(define-method bind_property_with_closures
+  (of-object "GObject")
+  (c-name "g_object_bind_property_with_closures")
+  (return-type "GBinding*")
+  (parameters
+    '("const gchar*" "psource_property")
+    '("gpointer" "ptarget")
+    '("const gchar*" "ptarget_property")
+    '("GBindingFlags" "pflags")
+    '("GClosure*" "ptransform_to")
+    '("GClosure*" "ptransform_from")
+  )
+)
+
+(define-method connect
+  (of-object "GObject")
+  (c-name "g_object_connect")
+  (return-type "gpointer")
+  (parameters
+    '("const gchar*" "psignal_spec")
+    '("null" "p...")
+  )
+)
+
+(define-method disconnect
+  (of-object "GObject")
+  (c-name "g_object_disconnect")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "psignal_spec")
+    '("null" "p...")
+  )
+)
+
+(define-method dup_data
+  (of-object "GObject")
+  (c-name "g_object_dup_data")
+  (return-type "gpointer")
+  (parameters
+    '("const gchar*" "pkey")
+    '("GDuplicateFunc" "pdup_func")
+    '("gpointer" "puser_data")
+  )
+)
+
+(define-method dup_qdata
+  (of-object "GObject")
+  (c-name "g_object_dup_qdata")
+  (return-type "gpointer")
+  (parameters
+    '("GQuark" "pquark")
+    '("GDuplicateFunc" "pdup_func")
+    '("gpointer" "puser_data")
+  )
+)
+
+(define-method force_floating
+  (of-object "GObject")
+  (c-name "g_object_force_floating")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method freeze_notify
+  (of-object "GObject")
+  (c-name "g_object_freeze_notify")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method get
+  (of-object "GObject")
+  (c-name "g_object_get")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pfirst_property_name")
+    '("null" "p...")
+  )
+)
+
+(define-method get_data
+  (of-object "GObject")
+  (c-name "g_object_get_data")
+  (return-type "gpointer")
+  (parameters
+    '("const gchar*" "pkey")
+  )
+)
+
+(define-method get_qdata
+  (of-object "GObject")
+  (c-name "g_object_get_qdata")
+  (return-type "gpointer")
+  (parameters
+    '("GQuark" "pquark")
+  )
+)
+
+(define-method get_valist
+  (of-object "GObject")
+  (c-name "g_object_get_valist")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pfirst_property_name")
+    '("va_list" "pvar_args")
+  )
+)
+
+(define-method getv
+  (of-object "GObject")
+  (c-name "g_object_getv")
+  (return-type "none")
+  (parameters
+    '("guint" "pn_properties")
+    '("null" "pnames")
+    '("null" "pvalues")
+  )
+)
+
+(define-method is_floating
+  (of-object "GObject")
+  (c-name "g_object_is_floating")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method notify_by_pspec
+  (of-object "GObject")
+  (c-name "g_object_notify_by_pspec")
+  (return-type "none")
+  (parameters
+    '("GParamSpec*" "ppspec")
+  )
+)
+
+(define-method ref
+  (of-object "GObject")
+  (c-name "g_object_ref")
+  (return-type "gpointer")
+  (parameters
+  )
+)
+
+(define-method ref_sink
+  (of-object "GObject")
+  (c-name "g_object_ref_sink")
+  (return-type "gpointer")
+  (parameters
+  )
+)
+
+(define-method remove_toggle_ref
+  (of-object "GObject")
+  (c-name "g_object_remove_toggle_ref")
+  (return-type "none")
+  (parameters
+    '("GToggleNotify" "pnotify")
+    '("gpointer" "pdata")
+  )
+)
+
+(define-method remove_weak_pointer
+  (of-object "GObject")
+  (c-name "g_object_remove_weak_pointer")
+  (return-type "none")
+  (parameters
+    '("gpointer*" "pweak_pointer_location")
+  )
+)
+
+(define-method replace_data
+  (of-object "GObject")
+  (c-name "g_object_replace_data")
+  (return-type "gboolean")
+  (parameters
+    '("const gchar*" "pkey")
+    '("gpointer" "poldval")
+    '("gpointer" "pnewval")
+    '("GDestroyNotify" "pdestroy")
+    '("GDestroyNotify*" "pold_destroy")
+  )
+)
+
+(define-method replace_qdata
+  (of-object "GObject")
+  (c-name "g_object_replace_qdata")
+  (return-type "gboolean")
+  (parameters
+    '("GQuark" "pquark")
+    '("gpointer" "poldval")
+    '("gpointer" "pnewval")
+    '("GDestroyNotify" "pdestroy")
+    '("GDestroyNotify*" "pold_destroy")
+  )
+)
+
+(define-method run_dispose
+  (of-object "GObject")
+  (c-name "g_object_run_dispose")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method set
+  (of-object "GObject")
+  (c-name "g_object_set")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pfirst_property_name")
+    '("null" "p...")
+  )
+)
+
+(define-method set_data
+  (of-object "GObject")
+  (c-name "g_object_set_data")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pkey")
+    '("gpointer" "pdata")
+  )
+)
+
+(define-method set_data_full
+  (of-object "GObject")
+  (c-name "g_object_set_data_full")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pkey")
+    '("gpointer" "pdata")
+    '("GDestroyNotify" "pdestroy")
+  )
+)
+
+(define-method set_qdata
+  (of-object "GObject")
+  (c-name "g_object_set_qdata")
+  (return-type "none")
+  (parameters
+    '("GQuark" "pquark")
+    '("gpointer" "pdata")
+  )
+)
+
+(define-method set_qdata_full
+  (of-object "GObject")
+  (c-name "g_object_set_qdata_full")
+  (return-type "none")
+  (parameters
+    '("GQuark" "pquark")
+    '("gpointer" "pdata")
+    '("GDestroyNotify" "pdestroy")
+  )
+)
+
+(define-method set_valist
+  (of-object "GObject")
+  (c-name "g_object_set_valist")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pfirst_property_name")
+    '("va_list" "pvar_args")
+  )
+)
+
+(define-method setv
+  (of-object "GObject")
+  (c-name "g_object_setv")
+  (return-type "none")
+  (parameters
+    '("guint" "pn_properties")
+    '("null" "pnames")
+    '("null" "pvalues")
+  )
+)
+
+(define-method steal_data
+  (of-object "GObject")
+  (c-name "g_object_steal_data")
+  (return-type "gpointer")
+  (parameters
+    '("const gchar*" "pkey")
+  )
+)
+
+(define-method steal_qdata
+  (of-object "GObject")
+  (c-name "g_object_steal_qdata")
+  (return-type "gpointer")
+  (parameters
+    '("GQuark" "pquark")
+  )
+)
+
+(define-method thaw_notify
+  (of-object "GObject")
+  (c-name "g_object_thaw_notify")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method unref
+  (of-object "GObject")
+  (c-name "g_object_unref")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method watch_closure
+  (of-object "GObject")
+  (c-name "g_object_watch_closure")
+  (return-type "none")
+  (parameters
+    '("GClosure*" "pclosure")
+  )
+)
+
+(define-method weak_ref
+  (of-object "GObject")
+  (c-name "g_object_weak_ref")
+  (return-type "none")
+  (parameters
+    '("GWeakNotify" "pnotify")
+    '("gpointer" "pdata")
+  )
+)
+
+(define-method weak_unref
+  (of-object "GObject")
+  (c-name "g_object_weak_unref")
+  (return-type "none")
+  (parameters
+    '("GWeakNotify" "pnotify")
+    '("gpointer" "pdata")
+  )
+)
+

@@ -1,0 +1,6 @@
+(define-object EntryBufferClass
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkEntryBufferClass")
+)
+

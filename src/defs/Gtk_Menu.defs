@@ -1,0 +1,289 @@
+(define-object Menu
+  (in-module "Gtk")
+  (parent "MenuShell")
+  (c-name "GtkMenu")
+)
+
+(define-function Menu_new
+  (is-constructor-of "GtkMenu")
+  (c-name "gtk_menu_new")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-function Menu_new_from_model
+  (is-constructor-of "GtkMenu")
+  (c-name "gtk_menu_new_from_model")
+  (return-type "GtkWidget*")
+  (parameters
+    '("GMenuModel*" "pmodel")
+  )
+)
+
+(define-method attach
+  (of-object "GtkMenu")
+  (c-name "gtk_menu_attach")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pchild")
+    '("guint" "pleft_attach")
+    '("guint" "pright_attach")
+    '("guint" "ptop_attach")
+    '("guint" "pbottom_attach")
+  )
+)
+
+(define-method attach_to_widget
+  (of-object "GtkMenu")
+  (c-name "gtk_menu_attach_to_widget")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pattach_widget")
+    '("GtkMenuDetachFunc" "pdetacher")
+  )
+)
+
+(define-method detach
+  (of-object "GtkMenu")
+  (c-name "gtk_menu_detach")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method get_accel_group
+  (of-object "GtkMenu")
+  (c-name "gtk_menu_get_accel_group")
+  (return-type "GtkAccelGroup*")
+  (parameters
+  )
+)
+
+(define-method get_accel_path
+  (of-object "GtkMenu")
+  (c-name "gtk_menu_get_accel_path")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_active
+  (of-object "GtkMenu")
+  (c-name "gtk_menu_get_active")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method get_attach_widget
+  (of-object "GtkMenu")
+  (c-name "gtk_menu_get_attach_widget")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method get_monitor
+  (of-object "GtkMenu")
+  (c-name "gtk_menu_get_monitor")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_reserve_toggle_size
+  (of-object "GtkMenu")
+  (c-name "gtk_menu_get_reserve_toggle_size")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_tearoff_state
+  (of-object "GtkMenu")
+  (c-name "gtk_menu_get_tearoff_state")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_title
+  (of-object "GtkMenu")
+  (c-name "gtk_menu_get_title")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method place_on_monitor
+  (of-object "GtkMenu")
+  (c-name "gtk_menu_place_on_monitor")
+  (return-type "none")
+  (parameters
+    '("GdkMonitor*" "pmonitor")
+  )
+)
+
+(define-method popdown
+  (of-object "GtkMenu")
+  (c-name "gtk_menu_popdown")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method popup
+  (of-object "GtkMenu")
+  (c-name "gtk_menu_popup")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pparent_menu_shell")
+    '("GtkWidget*" "pparent_menu_item")
+    '("GtkMenuPositionFunc" "pfunc")
+    '("gpointer" "pdata")
+    '("guint" "pbutton")
+    '("guint32" "pactivate_time")
+  )
+)
+
+(define-method popup_at_pointer
+  (of-object "GtkMenu")
+  (c-name "gtk_menu_popup_at_pointer")
+  (return-type "none")
+  (parameters
+    '("const GdkEvent*" "ptrigger_event")
+  )
+)
+
+(define-method popup_at_rect
+  (of-object "GtkMenu")
+  (c-name "gtk_menu_popup_at_rect")
+  (return-type "none")
+  (parameters
+    '("GdkWindow*" "prect_window")
+    '("const GdkRectangle*" "prect")
+    '("GdkGravity" "prect_anchor")
+    '("GdkGravity" "pmenu_anchor")
+    '("const GdkEvent*" "ptrigger_event")
+  )
+)
+
+(define-method popup_at_widget
+  (of-object "GtkMenu")
+  (c-name "gtk_menu_popup_at_widget")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pwidget")
+    '("GdkGravity" "pwidget_anchor")
+    '("GdkGravity" "pmenu_anchor")
+    '("const GdkEvent*" "ptrigger_event")
+  )
+)
+
+(define-method popup_for_device
+  (of-object "GtkMenu")
+  (c-name "gtk_menu_popup_for_device")
+  (return-type "none")
+  (parameters
+    '("GdkDevice*" "pdevice")
+    '("GtkWidget*" "pparent_menu_shell")
+    '("GtkWidget*" "pparent_menu_item")
+    '("GtkMenuPositionFunc" "pfunc")
+    '("gpointer" "pdata")
+    '("GDestroyNotify" "pdestroy")
+    '("guint" "pbutton")
+    '("guint32" "pactivate_time")
+  )
+)
+
+(define-method reorder_child
+  (of-object "GtkMenu")
+  (c-name "gtk_menu_reorder_child")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pchild")
+    '("gint" "pposition")
+  )
+)
+
+(define-method reposition
+  (of-object "GtkMenu")
+  (c-name "gtk_menu_reposition")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method set_accel_group
+  (of-object "GtkMenu")
+  (c-name "gtk_menu_set_accel_group")
+  (return-type "none")
+  (parameters
+    '("GtkAccelGroup*" "paccel_group")
+  )
+)
+
+(define-method set_accel_path
+  (of-object "GtkMenu")
+  (c-name "gtk_menu_set_accel_path")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "paccel_path")
+  )
+)
+
+(define-method set_active
+  (of-object "GtkMenu")
+  (c-name "gtk_menu_set_active")
+  (return-type "none")
+  (parameters
+    '("guint" "pindex")
+  )
+)
+
+(define-method set_monitor
+  (of-object "GtkMenu")
+  (c-name "gtk_menu_set_monitor")
+  (return-type "none")
+  (parameters
+    '("gint" "pmonitor_num")
+  )
+)
+
+(define-method set_reserve_toggle_size
+  (of-object "GtkMenu")
+  (c-name "gtk_menu_set_reserve_toggle_size")
+  (return-type "none")
+  (parameters
+    '("gboolean" "preserve_toggle_size")
+  )
+)
+
+(define-method set_screen
+  (of-object "GtkMenu")
+  (c-name "gtk_menu_set_screen")
+  (return-type "none")
+  (parameters
+    '("GdkScreen*" "pscreen")
+  )
+)
+
+(define-method set_tearoff_state
+  (of-object "GtkMenu")
+  (c-name "gtk_menu_set_tearoff_state")
+  (return-type "none")
+  (parameters
+    '("gboolean" "ptorn_off")
+  )
+)
+
+(define-method set_title
+  (of-object "GtkMenu")
+  (c-name "gtk_menu_set_title")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "ptitle")
+  )
+)
+

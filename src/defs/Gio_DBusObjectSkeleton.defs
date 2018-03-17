@@ -1,0 +1,80 @@
+(define-object DBusObjectSkeleton
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GDBusObjectSkeleton")
+)
+
+(define-function DBusObjectSkeleton_new
+  (is-constructor-of "GDBusObjectSkeleton")
+  (c-name "g_dbus_object_skeleton_new")
+  (return-type "GDBusObjectSkeleton*")
+  (parameters
+    '("const gchar*" "pobject_path")
+  )
+)
+
+(define-method authorize_method
+  (of-object "GDBusObjectSkeleton")
+  (c-name "authorize_method")
+  (return-type "gboolean")
+  (parameters
+    '("GDBusInterfaceSkeleton*" "pinterface_")
+    '("GDBusMethodInvocation*" "pinvocation")
+  )
+)
+
+(define-method add_interface
+  (of-object "GDBusObjectSkeleton")
+  (c-name "g_dbus_object_skeleton_add_interface")
+  (return-type "none")
+  (parameters
+    '("GDBusInterfaceSkeleton*" "pinterface_")
+  )
+)
+
+(define-method flush
+  (of-object "GDBusObjectSkeleton")
+  (c-name "g_dbus_object_skeleton_flush")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method remove_interface
+  (of-object "GDBusObjectSkeleton")
+  (c-name "g_dbus_object_skeleton_remove_interface")
+  (return-type "none")
+  (parameters
+    '("GDBusInterfaceSkeleton*" "pinterface_")
+  )
+)
+
+(define-method remove_interface_by_name
+  (of-object "GDBusObjectSkeleton")
+  (c-name "g_dbus_object_skeleton_remove_interface_by_name")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pinterface_name")
+  )
+)
+
+(define-method set_object_path
+  (of-object "GDBusObjectSkeleton")
+  (c-name "g_dbus_object_skeleton_set_object_path")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pobject_path")
+  )
+)
+

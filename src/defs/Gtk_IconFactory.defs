@@ -1,0 +1,49 @@
+(define-object IconFactory
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkIconFactory")
+)
+
+(define-function IconFactory_new
+  (is-constructor-of "GtkIconFactory")
+  (c-name "gtk_icon_factory_new")
+  (return-type "GtkIconFactory*")
+  (parameters
+  )
+)
+
+(define-method add
+  (of-object "GtkIconFactory")
+  (c-name "gtk_icon_factory_add")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pstock_id")
+    '("GtkIconSet*" "picon_set")
+  )
+)
+
+(define-method add_default
+  (of-object "GtkIconFactory")
+  (c-name "gtk_icon_factory_add_default")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method lookup
+  (of-object "GtkIconFactory")
+  (c-name "gtk_icon_factory_lookup")
+  (return-type "GtkIconSet*")
+  (parameters
+    '("const gchar*" "pstock_id")
+  )
+)
+
+(define-method remove_default
+  (of-object "GtkIconFactory")
+  (c-name "gtk_icon_factory_remove_default")
+  (return-type "none")
+  (parameters
+  )
+)
+

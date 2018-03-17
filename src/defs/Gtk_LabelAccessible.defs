@@ -1,0 +1,6 @@
+(define-object LabelAccessible
+  (in-module "Gtk")
+  (parent "WidgetAccessible")
+  (c-name "GtkLabelAccessible")
+)
+

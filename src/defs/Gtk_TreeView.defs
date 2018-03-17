@@ -1,0 +1,1083 @@
+(define-object TreeView
+  (in-module "Gtk")
+  (parent "Container")
+  (c-name "GtkTreeView")
+)
+
+(define-function TreeView_new
+  (is-constructor-of "GtkTreeView")
+  (c-name "gtk_tree_view_new")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-function TreeView_new_with_model
+  (is-constructor-of "GtkTreeView")
+  (c-name "gtk_tree_view_new_with_model")
+  (return-type "GtkWidget*")
+  (parameters
+    '("GtkTreeModel*" "pmodel")
+  )
+)
+
+(define-method columns_changed
+  (of-object "GtkTreeView")
+  (c-name "columns_changed")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method cursor_changed
+  (of-object "GtkTreeView")
+  (c-name "cursor_changed")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method expand_collapse_cursor_row
+  (of-object "GtkTreeView")
+  (c-name "expand_collapse_cursor_row")
+  (return-type "gboolean")
+  (parameters
+    '("gboolean" "plogical")
+    '("gboolean" "pexpand")
+    '("gboolean" "popen_all")
+  )
+)
+
+(define-method move_cursor
+  (of-object "GtkTreeView")
+  (c-name "move_cursor")
+  (return-type "gboolean")
+  (parameters
+    '("GtkMovementStep" "pstep")
+    '("gint" "pcount")
+  )
+)
+
+(define-method row_activated
+  (of-object "GtkTreeView")
+  (c-name "row_activated")
+  (return-type "none")
+  (parameters
+    '("GtkTreePath*" "ppath")
+    '("GtkTreeViewColumn*" "pcolumn")
+  )
+)
+
+(define-method row_collapsed
+  (of-object "GtkTreeView")
+  (c-name "row_collapsed")
+  (return-type "none")
+  (parameters
+    '("GtkTreeIter*" "piter")
+    '("GtkTreePath*" "ppath")
+  )
+)
+
+(define-method row_expanded
+  (of-object "GtkTreeView")
+  (c-name "row_expanded")
+  (return-type "none")
+  (parameters
+    '("GtkTreeIter*" "piter")
+    '("GtkTreePath*" "ppath")
+  )
+)
+
+(define-method select_all
+  (of-object "GtkTreeView")
+  (c-name "select_all")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method select_cursor_parent
+  (of-object "GtkTreeView")
+  (c-name "select_cursor_parent")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method select_cursor_row
+  (of-object "GtkTreeView")
+  (c-name "select_cursor_row")
+  (return-type "gboolean")
+  (parameters
+    '("gboolean" "pstart_editing")
+  )
+)
+
+(define-method start_interactive_search
+  (of-object "GtkTreeView")
+  (c-name "start_interactive_search")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method test_collapse_row
+  (of-object "GtkTreeView")
+  (c-name "test_collapse_row")
+  (return-type "gboolean")
+  (parameters
+    '("GtkTreeIter*" "piter")
+    '("GtkTreePath*" "ppath")
+  )
+)
+
+(define-method test_expand_row
+  (of-object "GtkTreeView")
+  (c-name "test_expand_row")
+  (return-type "gboolean")
+  (parameters
+    '("GtkTreeIter*" "piter")
+    '("GtkTreePath*" "ppath")
+  )
+)
+
+(define-method toggle_cursor_row
+  (of-object "GtkTreeView")
+  (c-name "toggle_cursor_row")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method unselect_all
+  (of-object "GtkTreeView")
+  (c-name "unselect_all")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method append_column
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_append_column")
+  (return-type "gint")
+  (parameters
+    '("GtkTreeViewColumn*" "pcolumn")
+  )
+)
+
+(define-method collapse_all
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_collapse_all")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method collapse_row
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_collapse_row")
+  (return-type "gboolean")
+  (parameters
+    '("GtkTreePath*" "ppath")
+  )
+)
+
+(define-method columns_autosize
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_columns_autosize")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method convert_bin_window_to_tree_coords
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_convert_bin_window_to_tree_coords")
+  (return-type "none")
+  (parameters
+    '("gint" "pbx")
+    '("gint" "pby")
+    '("gint*" "ptx")
+    '("gint*" "pty")
+  )
+)
+
+(define-method convert_bin_window_to_widget_coords
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_convert_bin_window_to_widget_coords")
+  (return-type "none")
+  (parameters
+    '("gint" "pbx")
+    '("gint" "pby")
+    '("gint*" "pwx")
+    '("gint*" "pwy")
+  )
+)
+
+(define-method convert_tree_to_bin_window_coords
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_convert_tree_to_bin_window_coords")
+  (return-type "none")
+  (parameters
+    '("gint" "ptx")
+    '("gint" "pty")
+    '("gint*" "pbx")
+    '("gint*" "pby")
+  )
+)
+
+(define-method convert_tree_to_widget_coords
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_convert_tree_to_widget_coords")
+  (return-type "none")
+  (parameters
+    '("gint" "ptx")
+    '("gint" "pty")
+    '("gint*" "pwx")
+    '("gint*" "pwy")
+  )
+)
+
+(define-method convert_widget_to_bin_window_coords
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_convert_widget_to_bin_window_coords")
+  (return-type "none")
+  (parameters
+    '("gint" "pwx")
+    '("gint" "pwy")
+    '("gint*" "pbx")
+    '("gint*" "pby")
+  )
+)
+
+(define-method convert_widget_to_tree_coords
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_convert_widget_to_tree_coords")
+  (return-type "none")
+  (parameters
+    '("gint" "pwx")
+    '("gint" "pwy")
+    '("gint*" "ptx")
+    '("gint*" "pty")
+  )
+)
+
+(define-method create_row_drag_icon
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_create_row_drag_icon")
+  (return-type "cairo_surface_t*")
+  (parameters
+    '("GtkTreePath*" "ppath")
+  )
+)
+
+(define-method enable_model_drag_dest
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_enable_model_drag_dest")
+  (return-type "none")
+  (parameters
+    '("null" "ptargets")
+    '("gint" "pn_targets")
+    '("GdkDragAction" "pactions")
+  )
+)
+
+(define-method enable_model_drag_source
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_enable_model_drag_source")
+  (return-type "none")
+  (parameters
+    '("GdkModifierType" "pstart_button_mask")
+    '("null" "ptargets")
+    '("gint" "pn_targets")
+    '("GdkDragAction" "pactions")
+  )
+)
+
+(define-method expand_all
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_expand_all")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method expand_row
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_expand_row")
+  (return-type "gboolean")
+  (parameters
+    '("GtkTreePath*" "ppath")
+    '("gboolean" "popen_all")
+  )
+)
+
+(define-method expand_to_path
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_expand_to_path")
+  (return-type "none")
+  (parameters
+    '("GtkTreePath*" "ppath")
+  )
+)
+
+(define-method get_activate_on_single_click
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_get_activate_on_single_click")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_background_area
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_get_background_area")
+  (return-type "none")
+  (parameters
+    '("GtkTreePath*" "ppath")
+    '("GtkTreeViewColumn*" "pcolumn")
+    '("GdkRectangle*" "prect")
+  )
+)
+
+(define-method get_bin_window
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_get_bin_window")
+  (return-type "GdkWindow*")
+  (parameters
+  )
+)
+
+(define-method get_cell_area
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_get_cell_area")
+  (return-type "none")
+  (parameters
+    '("GtkTreePath*" "ppath")
+    '("GtkTreeViewColumn*" "pcolumn")
+    '("GdkRectangle*" "prect")
+  )
+)
+
+(define-method get_column
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_get_column")
+  (return-type "GtkTreeViewColumn*")
+  (parameters
+    '("gint" "pn")
+  )
+)
+
+(define-method get_columns
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_get_columns")
+  (return-type "GList*")
+  (parameters
+  )
+)
+
+(define-method get_cursor
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_get_cursor")
+  (return-type "none")
+  (parameters
+    '("GtkTreePath**" "ppath")
+    '("GtkTreeViewColumn**" "pfocus_column")
+  )
+)
+
+(define-method get_dest_row_at_pos
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_get_dest_row_at_pos")
+  (return-type "gboolean")
+  (parameters
+    '("gint" "pdrag_x")
+    '("gint" "pdrag_y")
+    '("GtkTreePath**" "ppath")
+    '("GtkTreeViewDropPosition*" "ppos")
+  )
+)
+
+(define-method get_drag_dest_row
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_get_drag_dest_row")
+  (return-type "none")
+  (parameters
+    '("GtkTreePath**" "ppath")
+    '("GtkTreeViewDropPosition*" "ppos")
+  )
+)
+
+(define-method get_enable_search
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_get_enable_search")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_enable_tree_lines
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_get_enable_tree_lines")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_expander_column
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_get_expander_column")
+  (return-type "GtkTreeViewColumn*")
+  (parameters
+  )
+)
+
+(define-method get_fixed_height_mode
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_get_fixed_height_mode")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_grid_lines
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_get_grid_lines")
+  (return-type "GtkTreeViewGridLines")
+  (parameters
+  )
+)
+
+(define-method get_hadjustment
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_get_hadjustment")
+  (return-type "GtkAdjustment*")
+  (parameters
+  )
+)
+
+(define-method get_headers_clickable
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_get_headers_clickable")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_headers_visible
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_get_headers_visible")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_hover_expand
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_get_hover_expand")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_hover_selection
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_get_hover_selection")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_level_indentation
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_get_level_indentation")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_model
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_get_model")
+  (return-type "GtkTreeModel*")
+  (parameters
+  )
+)
+
+(define-method get_n_columns
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_get_n_columns")
+  (return-type "guint")
+  (parameters
+  )
+)
+
+(define-method get_path_at_pos
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_get_path_at_pos")
+  (return-type "gboolean")
+  (parameters
+    '("gint" "px")
+    '("gint" "py")
+    '("GtkTreePath**" "ppath")
+    '("GtkTreeViewColumn**" "pcolumn")
+    '("gint*" "pcell_x")
+    '("gint*" "pcell_y")
+  )
+)
+
+(define-method get_reorderable
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_get_reorderable")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_row_separator_func
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_get_row_separator_func")
+  (return-type "GtkTreeViewRowSeparatorFunc")
+  (parameters
+  )
+)
+
+(define-method get_rubber_banding
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_get_rubber_banding")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_rules_hint
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_get_rules_hint")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_search_column
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_get_search_column")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_search_entry
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_get_search_entry")
+  (return-type "GtkEntry*")
+  (parameters
+  )
+)
+
+(define-method get_search_equal_func
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_get_search_equal_func")
+  (return-type "GtkTreeViewSearchEqualFunc")
+  (parameters
+  )
+)
+
+(define-method get_search_position_func
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_get_search_position_func")
+  (return-type "GtkTreeViewSearchPositionFunc")
+  (parameters
+  )
+)
+
+(define-method get_selection
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_get_selection")
+  (return-type "GtkTreeSelection*")
+  (parameters
+  )
+)
+
+(define-method get_show_expanders
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_get_show_expanders")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_tooltip_column
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_get_tooltip_column")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_tooltip_context
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_get_tooltip_context")
+  (return-type "gboolean")
+  (parameters
+    '("gint*" "px")
+    '("gint*" "py")
+    '("gboolean" "pkeyboard_tip")
+    '("GtkTreeModel**" "pmodel")
+    '("GtkTreePath**" "ppath")
+    '("GtkTreeIter*" "piter")
+  )
+)
+
+(define-method get_vadjustment
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_get_vadjustment")
+  (return-type "GtkAdjustment*")
+  (parameters
+  )
+)
+
+(define-method get_visible_range
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_get_visible_range")
+  (return-type "gboolean")
+  (parameters
+    '("GtkTreePath**" "pstart_path")
+    '("GtkTreePath**" "pend_path")
+  )
+)
+
+(define-method get_visible_rect
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_get_visible_rect")
+  (return-type "none")
+  (parameters
+    '("GdkRectangle*" "pvisible_rect")
+  )
+)
+
+(define-method insert_column
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_insert_column")
+  (return-type "gint")
+  (parameters
+    '("GtkTreeViewColumn*" "pcolumn")
+    '("gint" "pposition")
+  )
+)
+
+(define-method insert_column_with_attributes
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_insert_column_with_attributes")
+  (return-type "gint")
+  (parameters
+    '("gint" "pposition")
+    '("const gchar*" "ptitle")
+    '("GtkCellRenderer*" "pcell")
+    '("null" "p...")
+  )
+)
+
+(define-method insert_column_with_data_func
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_insert_column_with_data_func")
+  (return-type "gint")
+  (parameters
+    '("gint" "pposition")
+    '("const gchar*" "ptitle")
+    '("GtkCellRenderer*" "pcell")
+    '("GtkTreeCellDataFunc" "pfunc")
+    '("gpointer" "pdata")
+    '("GDestroyNotify" "pdnotify")
+  )
+)
+
+(define-method is_blank_at_pos
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_is_blank_at_pos")
+  (return-type "gboolean")
+  (parameters
+    '("gint" "px")
+    '("gint" "py")
+    '("GtkTreePath**" "ppath")
+    '("GtkTreeViewColumn**" "pcolumn")
+    '("gint*" "pcell_x")
+    '("gint*" "pcell_y")
+  )
+)
+
+(define-method is_rubber_banding_active
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_is_rubber_banding_active")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method map_expanded_rows
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_map_expanded_rows")
+  (return-type "none")
+  (parameters
+    '("GtkTreeViewMappingFunc" "pfunc")
+    '("gpointer" "pdata")
+  )
+)
+
+(define-method move_column_after
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_move_column_after")
+  (return-type "none")
+  (parameters
+    '("GtkTreeViewColumn*" "pcolumn")
+    '("GtkTreeViewColumn*" "pbase_column")
+  )
+)
+
+(define-method remove_column
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_remove_column")
+  (return-type "gint")
+  (parameters
+    '("GtkTreeViewColumn*" "pcolumn")
+  )
+)
+
+(define-method scroll_to_cell
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_scroll_to_cell")
+  (return-type "none")
+  (parameters
+    '("GtkTreePath*" "ppath")
+    '("GtkTreeViewColumn*" "pcolumn")
+    '("gboolean" "puse_align")
+    '("gfloat" "prow_align")
+    '("gfloat" "pcol_align")
+  )
+)
+
+(define-method scroll_to_point
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_scroll_to_point")
+  (return-type "none")
+  (parameters
+    '("gint" "ptree_x")
+    '("gint" "ptree_y")
+  )
+)
+
+(define-method set_activate_on_single_click
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_set_activate_on_single_click")
+  (return-type "none")
+  (parameters
+    '("gboolean" "psingle")
+  )
+)
+
+(define-method set_column_drag_function
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_set_column_drag_function")
+  (return-type "none")
+  (parameters
+    '("GtkTreeViewColumnDropFunc" "pfunc")
+    '("gpointer" "puser_data")
+    '("GDestroyNotify" "pdestroy")
+  )
+)
+
+(define-method set_cursor
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_set_cursor")
+  (return-type "none")
+  (parameters
+    '("GtkTreePath*" "ppath")
+    '("GtkTreeViewColumn*" "pfocus_column")
+    '("gboolean" "pstart_editing")
+  )
+)
+
+(define-method set_cursor_on_cell
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_set_cursor_on_cell")
+  (return-type "none")
+  (parameters
+    '("GtkTreePath*" "ppath")
+    '("GtkTreeViewColumn*" "pfocus_column")
+    '("GtkCellRenderer*" "pfocus_cell")
+    '("gboolean" "pstart_editing")
+  )
+)
+
+(define-method set_destroy_count_func
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_set_destroy_count_func")
+  (return-type "none")
+  (parameters
+    '("GtkTreeDestroyCountFunc" "pfunc")
+    '("gpointer" "pdata")
+    '("GDestroyNotify" "pdestroy")
+  )
+)
+
+(define-method set_drag_dest_row
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_set_drag_dest_row")
+  (return-type "none")
+  (parameters
+    '("GtkTreePath*" "ppath")
+    '("GtkTreeViewDropPosition" "ppos")
+  )
+)
+
+(define-method set_enable_search
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_set_enable_search")
+  (return-type "none")
+  (parameters
+    '("gboolean" "penable_search")
+  )
+)
+
+(define-method set_enable_tree_lines
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_set_enable_tree_lines")
+  (return-type "none")
+  (parameters
+    '("gboolean" "penabled")
+  )
+)
+
+(define-method set_expander_column
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_set_expander_column")
+  (return-type "none")
+  (parameters
+    '("GtkTreeViewColumn*" "pcolumn")
+  )
+)
+
+(define-method set_fixed_height_mode
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_set_fixed_height_mode")
+  (return-type "none")
+  (parameters
+    '("gboolean" "penable")
+  )
+)
+
+(define-method set_grid_lines
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_set_grid_lines")
+  (return-type "none")
+  (parameters
+    '("GtkTreeViewGridLines" "pgrid_lines")
+  )
+)
+
+(define-method set_hadjustment
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_set_hadjustment")
+  (return-type "none")
+  (parameters
+    '("GtkAdjustment*" "padjustment")
+  )
+)
+
+(define-method set_headers_clickable
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_set_headers_clickable")
+  (return-type "none")
+  (parameters
+    '("gboolean" "psetting")
+  )
+)
+
+(define-method set_headers_visible
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_set_headers_visible")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pheaders_visible")
+  )
+)
+
+(define-method set_hover_expand
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_set_hover_expand")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pexpand")
+  )
+)
+
+(define-method set_hover_selection
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_set_hover_selection")
+  (return-type "none")
+  (parameters
+    '("gboolean" "phover")
+  )
+)
+
+(define-method set_level_indentation
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_set_level_indentation")
+  (return-type "none")
+  (parameters
+    '("gint" "pindentation")
+  )
+)
+
+(define-method set_model
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_set_model")
+  (return-type "none")
+  (parameters
+    '("GtkTreeModel*" "pmodel")
+  )
+)
+
+(define-method set_reorderable
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_set_reorderable")
+  (return-type "none")
+  (parameters
+    '("gboolean" "preorderable")
+  )
+)
+
+(define-method set_row_separator_func
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_set_row_separator_func")
+  (return-type "none")
+  (parameters
+    '("GtkTreeViewRowSeparatorFunc" "pfunc")
+    '("gpointer" "pdata")
+    '("GDestroyNotify" "pdestroy")
+  )
+)
+
+(define-method set_rubber_banding
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_set_rubber_banding")
+  (return-type "none")
+  (parameters
+    '("gboolean" "penable")
+  )
+)
+
+(define-method set_rules_hint
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_set_rules_hint")
+  (return-type "none")
+  (parameters
+    '("gboolean" "psetting")
+  )
+)
+
+(define-method set_search_column
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_set_search_column")
+  (return-type "none")
+  (parameters
+    '("gint" "pcolumn")
+  )
+)
+
+(define-method set_search_entry
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_set_search_entry")
+  (return-type "none")
+  (parameters
+    '("GtkEntry*" "pentry")
+  )
+)
+
+(define-method set_search_equal_func
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_set_search_equal_func")
+  (return-type "none")
+  (parameters
+    '("GtkTreeViewSearchEqualFunc" "psearch_equal_func")
+    '("gpointer" "psearch_user_data")
+    '("GDestroyNotify" "psearch_destroy")
+  )
+)
+
+(define-method set_search_position_func
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_set_search_position_func")
+  (return-type "none")
+  (parameters
+    '("GtkTreeViewSearchPositionFunc" "pfunc")
+    '("gpointer" "pdata")
+    '("GDestroyNotify" "pdestroy")
+  )
+)
+
+(define-method set_show_expanders
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_set_show_expanders")
+  (return-type "none")
+  (parameters
+    '("gboolean" "penabled")
+  )
+)
+
+(define-method set_tooltip_cell
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_set_tooltip_cell")
+  (return-type "none")
+  (parameters
+    '("GtkTooltip*" "ptooltip")
+    '("GtkTreePath*" "ppath")
+    '("GtkTreeViewColumn*" "pcolumn")
+    '("GtkCellRenderer*" "pcell")
+  )
+)
+
+(define-method set_tooltip_column
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_set_tooltip_column")
+  (return-type "none")
+  (parameters
+    '("gint" "pcolumn")
+  )
+)
+
+(define-method set_tooltip_row
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_set_tooltip_row")
+  (return-type "none")
+  (parameters
+    '("GtkTooltip*" "ptooltip")
+    '("GtkTreePath*" "ppath")
+  )
+)
+
+(define-method set_vadjustment
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_set_vadjustment")
+  (return-type "none")
+  (parameters
+    '("GtkAdjustment*" "padjustment")
+  )
+)
+
+(define-method unset_rows_drag_dest
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_unset_rows_drag_dest")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method unset_rows_drag_source
+  (of-object "GtkTreeView")
+  (c-name "gtk_tree_view_unset_rows_drag_source")
+  (return-type "none")
+  (parameters
+  )
+)
+

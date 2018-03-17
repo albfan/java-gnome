@@ -1,0 +1,259 @@
+(define-object Clipboard
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkClipboard")
+)
+
+(define-method clear
+  (of-object "GtkClipboard")
+  (c-name "gtk_clipboard_clear")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method get_display
+  (of-object "GtkClipboard")
+  (c-name "gtk_clipboard_get_display")
+  (return-type "GdkDisplay*")
+  (parameters
+  )
+)
+
+(define-method get_owner
+  (of-object "GtkClipboard")
+  (c-name "gtk_clipboard_get_owner")
+  (return-type "GObject*")
+  (parameters
+  )
+)
+
+(define-method get_selection
+  (of-object "GtkClipboard")
+  (c-name "gtk_clipboard_get_selection")
+  (return-type "GdkAtom")
+  (parameters
+  )
+)
+
+(define-method request_contents
+  (of-object "GtkClipboard")
+  (c-name "gtk_clipboard_request_contents")
+  (return-type "none")
+  (parameters
+    '("GdkAtom" "ptarget")
+    '("GtkClipboardReceivedFunc" "pcallback")
+    '("gpointer" "puser_data")
+  )
+)
+
+(define-method request_image
+  (of-object "GtkClipboard")
+  (c-name "gtk_clipboard_request_image")
+  (return-type "none")
+  (parameters
+    '("GtkClipboardImageReceivedFunc" "pcallback")
+    '("gpointer" "puser_data")
+  )
+)
+
+(define-method request_rich_text
+  (of-object "GtkClipboard")
+  (c-name "gtk_clipboard_request_rich_text")
+  (return-type "none")
+  (parameters
+    '("GtkTextBuffer*" "pbuffer")
+    '("GtkClipboardRichTextReceivedFunc" "pcallback")
+    '("gpointer" "puser_data")
+  )
+)
+
+(define-method request_targets
+  (of-object "GtkClipboard")
+  (c-name "gtk_clipboard_request_targets")
+  (return-type "none")
+  (parameters
+    '("GtkClipboardTargetsReceivedFunc" "pcallback")
+    '("gpointer" "puser_data")
+  )
+)
+
+(define-method request_text
+  (of-object "GtkClipboard")
+  (c-name "gtk_clipboard_request_text")
+  (return-type "none")
+  (parameters
+    '("GtkClipboardTextReceivedFunc" "pcallback")
+    '("gpointer" "puser_data")
+  )
+)
+
+(define-method request_uris
+  (of-object "GtkClipboard")
+  (c-name "gtk_clipboard_request_uris")
+  (return-type "none")
+  (parameters
+    '("GtkClipboardURIReceivedFunc" "pcallback")
+    '("gpointer" "puser_data")
+  )
+)
+
+(define-method set_can_store
+  (of-object "GtkClipboard")
+  (c-name "gtk_clipboard_set_can_store")
+  (return-type "none")
+  (parameters
+    '("null" "ptargets")
+    '("gint" "pn_targets")
+  )
+)
+
+(define-method set_image
+  (of-object "GtkClipboard")
+  (c-name "gtk_clipboard_set_image")
+  (return-type "none")
+  (parameters
+    '("GdkPixbuf*" "ppixbuf")
+  )
+)
+
+(define-method set_text
+  (of-object "GtkClipboard")
+  (c-name "gtk_clipboard_set_text")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "ptext")
+    '("gint" "plen")
+  )
+)
+
+(define-method set_with_data
+  (of-object "GtkClipboard")
+  (c-name "gtk_clipboard_set_with_data")
+  (return-type "gboolean")
+  (parameters
+    '("null" "ptargets")
+    '("guint" "pn_targets")
+    '("GtkClipboardGetFunc" "pget_func")
+    '("GtkClipboardClearFunc" "pclear_func")
+    '("gpointer" "puser_data")
+  )
+)
+
+(define-method set_with_owner
+  (of-object "GtkClipboard")
+  (c-name "gtk_clipboard_set_with_owner")
+  (return-type "gboolean")
+  (parameters
+    '("null" "ptargets")
+    '("guint" "pn_targets")
+    '("GtkClipboardGetFunc" "pget_func")
+    '("GtkClipboardClearFunc" "pclear_func")
+    '("GObject*" "powner")
+  )
+)
+
+(define-method store
+  (of-object "GtkClipboard")
+  (c-name "gtk_clipboard_store")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method wait_for_contents
+  (of-object "GtkClipboard")
+  (c-name "gtk_clipboard_wait_for_contents")
+  (return-type "GtkSelectionData*")
+  (parameters
+    '("GdkAtom" "ptarget")
+  )
+)
+
+(define-method wait_for_image
+  (of-object "GtkClipboard")
+  (c-name "gtk_clipboard_wait_for_image")
+  (return-type "GdkPixbuf*")
+  (parameters
+  )
+)
+
+(define-method wait_for_rich_text
+  (of-object "GtkClipboard")
+  (c-name "gtk_clipboard_wait_for_rich_text")
+  (return-type "none")
+  (parameters
+    '("GtkTextBuffer*" "pbuffer")
+    '("GdkAtom*" "pformat")
+    '("gsize*" "plength")
+  )
+)
+
+(define-method wait_for_targets
+  (of-object "GtkClipboard")
+  (c-name "gtk_clipboard_wait_for_targets")
+  (return-type "gboolean")
+  (parameters
+    '("null" "ptargets")
+    '("gint*" "pn_targets")
+  )
+)
+
+(define-method wait_for_text
+  (of-object "GtkClipboard")
+  (c-name "gtk_clipboard_wait_for_text")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+
+(define-method wait_for_uris
+  (of-object "GtkClipboard")
+  (c-name "gtk_clipboard_wait_for_uris")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method wait_is_image_available
+  (of-object "GtkClipboard")
+  (c-name "gtk_clipboard_wait_is_image_available")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method wait_is_rich_text_available
+  (of-object "GtkClipboard")
+  (c-name "gtk_clipboard_wait_is_rich_text_available")
+  (return-type "gboolean")
+  (parameters
+    '("GtkTextBuffer*" "pbuffer")
+  )
+)
+
+(define-method wait_is_target_available
+  (of-object "GtkClipboard")
+  (c-name "gtk_clipboard_wait_is_target_available")
+  (return-type "gboolean")
+  (parameters
+    '("GdkAtom" "ptarget")
+  )
+)
+
+(define-method wait_is_text_available
+  (of-object "GtkClipboard")
+  (c-name "gtk_clipboard_wait_is_text_available")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method wait_is_uris_available
+  (of-object "GtkClipboard")
+  (c-name "gtk_clipboard_wait_is_uris_available")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+

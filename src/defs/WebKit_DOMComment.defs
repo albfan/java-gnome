@@ -1,0 +1,7 @@
+(define-object DOMComment
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "DOMCharacterData")
+  (c-name "WebKitDOMComment")
+)
+

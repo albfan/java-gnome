@@ -1,0 +1,17 @@
+(define-enum InputPurpose
+  (in-module "Gtk")
+  (c-name "GtkInputPurpose")
+  (values
+    '("free_form" "GTK_INPUT_PURPOSE_FREE_FORM")
+    '("alpha" "GTK_INPUT_PURPOSE_ALPHA")
+    '("digits" "GTK_INPUT_PURPOSE_DIGITS")
+    '("number" "GTK_INPUT_PURPOSE_NUMBER")
+    '("phone" "GTK_INPUT_PURPOSE_PHONE")
+    '("url" "GTK_INPUT_PURPOSE_URL")
+    '("email" "GTK_INPUT_PURPOSE_EMAIL")
+    '("name" "GTK_INPUT_PURPOSE_NAME")
+    '("password" "GTK_INPUT_PURPOSE_PASSWORD")
+    '("pin" "GTK_INPUT_PURPOSE_PIN")
+  )
+)
+

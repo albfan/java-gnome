@@ -1,0 +1,45 @@
+(define-object SimpleProxyResolver
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GSimpleProxyResolver")
+)
+
+(define-method set_default_proxy
+  (of-object "GSimpleProxyResolver")
+  (c-name "g_simple_proxy_resolver_set_default_proxy")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pdefault_proxy")
+  )
+)
+
+(define-method set_ignore_hosts
+  (of-object "GSimpleProxyResolver")
+  (c-name "g_simple_proxy_resolver_set_ignore_hosts")
+  (return-type "none")
+  (parameters
+    '("gchar**" "pignore_hosts")
+  )
+)
+
+(define-method set_uri_proxy
+  (of-object "GSimpleProxyResolver")
+  (c-name "g_simple_proxy_resolver_set_uri_proxy")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "puri_scheme")
+    '("const gchar*" "pproxy")
+  )
+)
+

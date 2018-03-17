@@ -1,0 +1,6 @@
+(define-object ComboBoxAccessible
+  (in-module "Gtk")
+  (parent "ContainerAccessible")
+  (c-name "GtkComboBoxAccessible")
+)
+

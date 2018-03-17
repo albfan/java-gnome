@@ -1,0 +1,183 @@
+(define-object IconSource
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkIconSource")
+)
+
+(define-function IconSource_new
+  (is-constructor-of "GtkIconSource")
+  (c-name "gtk_icon_source_new")
+  (return-type "GtkIconSource*")
+  (parameters
+  )
+)
+
+(define-method copy
+  (of-object "GtkIconSource")
+  (c-name "gtk_icon_source_copy")
+  (return-type "GtkIconSource*")
+  (parameters
+  )
+)
+
+(define-method free
+  (of-object "GtkIconSource")
+  (c-name "gtk_icon_source_free")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method get_direction
+  (of-object "GtkIconSource")
+  (c-name "gtk_icon_source_get_direction")
+  (return-type "GtkTextDirection")
+  (parameters
+  )
+)
+
+(define-method get_direction_wildcarded
+  (of-object "GtkIconSource")
+  (c-name "gtk_icon_source_get_direction_wildcarded")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_filename
+  (of-object "GtkIconSource")
+  (c-name "gtk_icon_source_get_filename")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+
+(define-method get_icon_name
+  (of-object "GtkIconSource")
+  (c-name "gtk_icon_source_get_icon_name")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_pixbuf
+  (of-object "GtkIconSource")
+  (c-name "gtk_icon_source_get_pixbuf")
+  (return-type "GdkPixbuf*")
+  (parameters
+  )
+)
+
+(define-method get_size
+  (of-object "GtkIconSource")
+  (c-name "gtk_icon_source_get_size")
+  (return-type "GtkIconSize")
+  (parameters
+  )
+)
+
+(define-method get_size_wildcarded
+  (of-object "GtkIconSource")
+  (c-name "gtk_icon_source_get_size_wildcarded")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_state
+  (of-object "GtkIconSource")
+  (c-name "gtk_icon_source_get_state")
+  (return-type "GtkStateType")
+  (parameters
+  )
+)
+
+(define-method get_state_wildcarded
+  (of-object "GtkIconSource")
+  (c-name "gtk_icon_source_get_state_wildcarded")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method set_direction
+  (of-object "GtkIconSource")
+  (c-name "gtk_icon_source_set_direction")
+  (return-type "none")
+  (parameters
+    '("GtkTextDirection" "pdirection")
+  )
+)
+
+(define-method set_direction_wildcarded
+  (of-object "GtkIconSource")
+  (c-name "gtk_icon_source_set_direction_wildcarded")
+  (return-type "none")
+  (parameters
+    '("gboolean" "psetting")
+  )
+)
+
+(define-method set_filename
+  (of-object "GtkIconSource")
+  (c-name "gtk_icon_source_set_filename")
+  (return-type "none")
+  (parameters
+    '("gchar*" "pfilename")
+  )
+)
+
+(define-method set_icon_name
+  (of-object "GtkIconSource")
+  (c-name "gtk_icon_source_set_icon_name")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "picon_name")
+  )
+)
+
+(define-method set_pixbuf
+  (of-object "GtkIconSource")
+  (c-name "gtk_icon_source_set_pixbuf")
+  (return-type "none")
+  (parameters
+    '("GdkPixbuf*" "ppixbuf")
+  )
+)
+
+(define-method set_size
+  (of-object "GtkIconSource")
+  (c-name "gtk_icon_source_set_size")
+  (return-type "none")
+  (parameters
+    '("GtkIconSize" "psize")
+  )
+)
+
+(define-method set_size_wildcarded
+  (of-object "GtkIconSource")
+  (c-name "gtk_icon_source_set_size_wildcarded")
+  (return-type "none")
+  (parameters
+    '("gboolean" "psetting")
+  )
+)
+
+(define-method set_state
+  (of-object "GtkIconSource")
+  (c-name "gtk_icon_source_set_state")
+  (return-type "none")
+  (parameters
+    '("GtkStateType" "pstate")
+  )
+)
+
+(define-method set_state_wildcarded
+  (of-object "GtkIconSource")
+  (c-name "gtk_icon_source_set_state_wildcarded")
+  (return-type "none")
+  (parameters
+    '("gboolean" "psetting")
+  )
+)
+

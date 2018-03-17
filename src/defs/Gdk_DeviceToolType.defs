@@ -1,0 +1,15 @@
+(define-enum DeviceToolType
+  (in-module "Gdk")
+  (c-name "GdkDeviceToolType")
+  (values
+    '("unknown" "GDK_DEVICE_TOOL_TYPE_UNKNOWN")
+    '("pen" "GDK_DEVICE_TOOL_TYPE_PEN")
+    '("eraser" "GDK_DEVICE_TOOL_TYPE_ERASER")
+    '("brush" "GDK_DEVICE_TOOL_TYPE_BRUSH")
+    '("pencil" "GDK_DEVICE_TOOL_TYPE_PENCIL")
+    '("airbrush" "GDK_DEVICE_TOOL_TYPE_AIRBRUSH")
+    '("mouse" "GDK_DEVICE_TOOL_TYPE_MOUSE")
+    '("lens" "GDK_DEVICE_TOOL_TYPE_LENS")
+  )
+)
+

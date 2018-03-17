@@ -1,0 +1,40 @@
+(define-object IMMulticontext
+  (in-module "Gtk")
+  (parent "IMContext")
+  (c-name "GtkIMMulticontext")
+)
+
+(define-function IMMulticontext_new
+  (is-constructor-of "GtkIMMulticontext")
+  (c-name "gtk_im_multicontext_new")
+  (return-type "GtkIMContext*")
+  (parameters
+  )
+)
+
+(define-method append_menuitems
+  (of-object "GtkIMMulticontext")
+  (c-name "gtk_im_multicontext_append_menuitems")
+  (return-type "none")
+  (parameters
+    '("GtkMenuShell*" "pmenushell")
+  )
+)
+
+(define-method get_context_id
+  (of-object "GtkIMMulticontext")
+  (c-name "gtk_im_multicontext_get_context_id")
+  (return-type "const char*")
+  (parameters
+  )
+)
+
+(define-method set_context_id
+  (of-object "GtkIMMulticontext")
+  (c-name "gtk_im_multicontext_set_context_id")
+  (return-type "none")
+  (parameters
+    '("const char*" "pcontext_id")
+  )
+)
+

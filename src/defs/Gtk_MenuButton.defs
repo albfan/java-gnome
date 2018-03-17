@@ -1,0 +1,116 @@
+(define-object MenuButton
+  (in-module "Gtk")
+  (parent "ToggleButton")
+  (c-name "GtkMenuButton")
+)
+
+(define-function MenuButton_new
+  (is-constructor-of "GtkMenuButton")
+  (c-name "gtk_menu_button_new")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method get_align_widget
+  (of-object "GtkMenuButton")
+  (c-name "gtk_menu_button_get_align_widget")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method get_direction
+  (of-object "GtkMenuButton")
+  (c-name "gtk_menu_button_get_direction")
+  (return-type "GtkArrowType")
+  (parameters
+  )
+)
+
+(define-method get_menu_model
+  (of-object "GtkMenuButton")
+  (c-name "gtk_menu_button_get_menu_model")
+  (return-type "GMenuModel*")
+  (parameters
+  )
+)
+
+(define-method get_popover
+  (of-object "GtkMenuButton")
+  (c-name "gtk_menu_button_get_popover")
+  (return-type "GtkPopover*")
+  (parameters
+  )
+)
+
+(define-method get_popup
+  (of-object "GtkMenuButton")
+  (c-name "gtk_menu_button_get_popup")
+  (return-type "GtkMenu*")
+  (parameters
+  )
+)
+
+(define-method get_use_popover
+  (of-object "GtkMenuButton")
+  (c-name "gtk_menu_button_get_use_popover")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method set_align_widget
+  (of-object "GtkMenuButton")
+  (c-name "gtk_menu_button_set_align_widget")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "palign_widget")
+  )
+)
+
+(define-method set_direction
+  (of-object "GtkMenuButton")
+  (c-name "gtk_menu_button_set_direction")
+  (return-type "none")
+  (parameters
+    '("GtkArrowType" "pdirection")
+  )
+)
+
+(define-method set_menu_model
+  (of-object "GtkMenuButton")
+  (c-name "gtk_menu_button_set_menu_model")
+  (return-type "none")
+  (parameters
+    '("GMenuModel*" "pmenu_model")
+  )
+)
+
+(define-method set_popover
+  (of-object "GtkMenuButton")
+  (c-name "gtk_menu_button_set_popover")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "ppopover")
+  )
+)
+
+(define-method set_popup
+  (of-object "GtkMenuButton")
+  (c-name "gtk_menu_button_set_popup")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pmenu")
+  )
+)
+
+(define-method set_use_popover
+  (of-object "GtkMenuButton")
+  (c-name "gtk_menu_button_set_use_popover")
+  (return-type "none")
+  (parameters
+    '("gboolean" "puse_popover")
+  )
+)
+

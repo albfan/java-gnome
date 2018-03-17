@@ -1,0 +1,83 @@
+(define-object NetworkMonitor
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GNetworkMonitor")
+)
+
+(define-method can_reach
+  (of-object "GNetworkMonitor")
+  (c-name "can_reach")
+  (return-type "gboolean")
+  (parameters
+    '("GSocketConnectable*" "pconnectable")
+    '("GCancellable*" "pcancellable")
+    '("GError**" "error")
+  )
+)
+
+(define-method can_reach_async
+  (of-object "GNetworkMonitor")
+  (c-name "can_reach_async")
+  (return-type "none")
+  (parameters
+    '("GSocketConnectable*" "pconnectable")
+    '("GCancellable*" "pcancellable")
+    '("GAsyncReadyCallback" "pcallback")
+    '("gpointer" "puser_data")
+  )
+)
+
+(define-method can_reach_finish
+  (of-object "GNetworkMonitor")
+  (c-name "can_reach_finish")
+  (return-type "gboolean")
+  (parameters
+    '("GAsyncResult*" "presult")
+    '("GError**" "error")
+  )
+)
+
+(define-method network_changed
+  (of-object "GNetworkMonitor")
+  (c-name "network_changed")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pavailable")
+  )
+)
+
+(define-method get_connectivity
+  (of-object "GNetworkMonitor")
+  (c-name "g_network_monitor_get_connectivity")
+  (return-type "GNetworkConnectivity")
+  (parameters
+  )
+)
+
+(define-method get_network_available
+  (of-object "GNetworkMonitor")
+  (c-name "g_network_monitor_get_network_available")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_network_metered
+  (of-object "GNetworkMonitor")
+  (c-name "g_network_monitor_get_network_metered")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+

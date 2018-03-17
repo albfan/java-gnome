@@ -1,0 +1,6 @@
+(define-object ToolItemGroupPrivate
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkToolItemGroupPrivate")
+)
+

@@ -1,0 +1,56 @@
+(define-object DOMAudioTrack
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "DOMObject")
+  (c-name "WebKitDOMAudioTrack")
+)
+
+(define-method get_enabled
+  (of-object "WebKitDOMAudioTrack")
+  (c-name "webkit_dom_audio_track_get_enabled")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_id
+  (of-object "WebKitDOMAudioTrack")
+  (c-name "webkit_dom_audio_track_get_id")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+
+(define-method get_kind
+  (of-object "WebKitDOMAudioTrack")
+  (c-name "webkit_dom_audio_track_get_kind")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+
+(define-method get_label
+  (of-object "WebKitDOMAudioTrack")
+  (c-name "webkit_dom_audio_track_get_label")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+
+(define-method get_language
+  (of-object "WebKitDOMAudioTrack")
+  (c-name "webkit_dom_audio_track_get_language")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+
+(define-method set_enabled
+  (of-object "WebKitDOMAudioTrack")
+  (c-name "webkit_dom_audio_track_set_enabled")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pvalue")
+  )
+)
+

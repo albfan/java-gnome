@@ -1,0 +1,164 @@
+(define-object Paned
+  (in-module "Gtk")
+  (parent "Container")
+  (c-name "GtkPaned")
+)
+
+(define-function Paned_new
+  (is-constructor-of "GtkPaned")
+  (c-name "gtk_paned_new")
+  (return-type "GtkWidget*")
+  (parameters
+    '("GtkOrientation" "porientation")
+  )
+)
+
+(define-method accept_position
+  (of-object "GtkPaned")
+  (c-name "accept_position")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method cancel_position
+  (of-object "GtkPaned")
+  (c-name "cancel_position")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method cycle_child_focus
+  (of-object "GtkPaned")
+  (c-name "cycle_child_focus")
+  (return-type "gboolean")
+  (parameters
+    '("gboolean" "preverse")
+  )
+)
+
+(define-method cycle_handle_focus
+  (of-object "GtkPaned")
+  (c-name "cycle_handle_focus")
+  (return-type "gboolean")
+  (parameters
+    '("gboolean" "preverse")
+  )
+)
+
+(define-method move_handle
+  (of-object "GtkPaned")
+  (c-name "move_handle")
+  (return-type "gboolean")
+  (parameters
+    '("GtkScrollType" "pscroll")
+  )
+)
+
+(define-method toggle_handle_focus
+  (of-object "GtkPaned")
+  (c-name "toggle_handle_focus")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method add1
+  (of-object "GtkPaned")
+  (c-name "gtk_paned_add1")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pchild")
+  )
+)
+
+(define-method add2
+  (of-object "GtkPaned")
+  (c-name "gtk_paned_add2")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pchild")
+  )
+)
+
+(define-method get_child1
+  (of-object "GtkPaned")
+  (c-name "gtk_paned_get_child1")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method get_child2
+  (of-object "GtkPaned")
+  (c-name "gtk_paned_get_child2")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method get_handle_window
+  (of-object "GtkPaned")
+  (c-name "gtk_paned_get_handle_window")
+  (return-type "GdkWindow*")
+  (parameters
+  )
+)
+
+(define-method get_position
+  (of-object "GtkPaned")
+  (c-name "gtk_paned_get_position")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_wide_handle
+  (of-object "GtkPaned")
+  (c-name "gtk_paned_get_wide_handle")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method pack1
+  (of-object "GtkPaned")
+  (c-name "gtk_paned_pack1")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pchild")
+    '("gboolean" "presize")
+    '("gboolean" "pshrink")
+  )
+)
+
+(define-method pack2
+  (of-object "GtkPaned")
+  (c-name "gtk_paned_pack2")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "pchild")
+    '("gboolean" "presize")
+    '("gboolean" "pshrink")
+  )
+)
+
+(define-method set_position
+  (of-object "GtkPaned")
+  (c-name "gtk_paned_set_position")
+  (return-type "none")
+  (parameters
+    '("gint" "pposition")
+  )
+)
+
+(define-method set_wide_handle
+  (of-object "GtkPaned")
+  (c-name "gtk_paned_set_wide_handle")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pwide")
+  )
+)
+

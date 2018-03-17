@@ -1,0 +1,16 @@
+(define-enum CrossingMode
+  (in-module "Gdk")
+  (c-name "GdkCrossingMode")
+  (values
+    '("normal" "GDK_CROSSING_NORMAL")
+    '("grab" "GDK_CROSSING_GRAB")
+    '("ungrab" "GDK_CROSSING_UNGRAB")
+    '("gtk_grab" "GDK_CROSSING_GTK_GRAB")
+    '("gtk_ungrab" "GDK_CROSSING_GTK_UNGRAB")
+    '("state_changed" "GDK_CROSSING_STATE_CHANGED")
+    '("touch_begin" "GDK_CROSSING_TOUCH_BEGIN")
+    '("touch_end" "GDK_CROSSING_TOUCH_END")
+    '("device_switch" "GDK_CROSSING_DEVICE_SWITCH")
+  )
+)
+

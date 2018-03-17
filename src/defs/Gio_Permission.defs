@@ -1,0 +1,114 @@
+(define-object Permission
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GPermission")
+)
+
+(define-method acquire
+  (of-object "GPermission")
+  (c-name "acquire")
+  (return-type "gboolean")
+  (parameters
+    '("GCancellable*" "pcancellable")
+    '("GError**" "error")
+  )
+)
+
+(define-method acquire_async
+  (of-object "GPermission")
+  (c-name "acquire_async")
+  (return-type "none")
+  (parameters
+    '("GCancellable*" "pcancellable")
+    '("GAsyncReadyCallback" "pcallback")
+    '("gpointer" "puser_data")
+  )
+)
+
+(define-method acquire_finish
+  (of-object "GPermission")
+  (c-name "acquire_finish")
+  (return-type "gboolean")
+  (parameters
+    '("GAsyncResult*" "presult")
+    '("GError**" "error")
+  )
+)
+
+(define-method release
+  (of-object "GPermission")
+  (c-name "release")
+  (return-type "gboolean")
+  (parameters
+    '("GCancellable*" "pcancellable")
+    '("GError**" "error")
+  )
+)
+
+(define-method release_async
+  (of-object "GPermission")
+  (c-name "release_async")
+  (return-type "none")
+  (parameters
+    '("GCancellable*" "pcancellable")
+    '("GAsyncReadyCallback" "pcallback")
+    '("gpointer" "puser_data")
+  )
+)
+
+(define-method release_finish
+  (of-object "GPermission")
+  (c-name "release_finish")
+  (return-type "gboolean")
+  (parameters
+    '("GAsyncResult*" "presult")
+    '("GError**" "error")
+  )
+)
+
+(define-method get_allowed
+  (of-object "GPermission")
+  (c-name "g_permission_get_allowed")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_can_acquire
+  (of-object "GPermission")
+  (c-name "g_permission_get_can_acquire")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_can_release
+  (of-object "GPermission")
+  (c-name "g_permission_get_can_release")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method impl_update
+  (of-object "GPermission")
+  (c-name "g_permission_impl_update")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pallowed")
+    '("gboolean" "pcan_acquire")
+    '("gboolean" "pcan_release")
+  )
+)
+

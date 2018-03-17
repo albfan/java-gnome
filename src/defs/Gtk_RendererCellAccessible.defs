@@ -1,0 +1,15 @@
+(define-object RendererCellAccessible
+  (in-module "Gtk")
+  (parent "CellAccessible")
+  (c-name "GtkRendererCellAccessible")
+)
+
+(define-function RendererCellAccessible_new
+  (is-constructor-of "GtkRendererCellAccessible")
+  (c-name "gtk_renderer_cell_accessible_new")
+  (return-type "AtkObject*")
+  (parameters
+    '("GtkCellRenderer*" "prenderer")
+  )
+)
+

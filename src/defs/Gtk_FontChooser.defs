@@ -1,0 +1,135 @@
+(define-object FontChooser
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkFontChooser")
+)
+
+(define-method font_activated
+  (of-object "GtkFontChooser")
+  (c-name "font_activated")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pfontname")
+  )
+)
+
+(define-method get_font_face
+  (of-object "GtkFontChooser")
+  (c-name "get_font_face")
+  (return-type "PangoFontFace*")
+  (parameters
+  )
+)
+
+(define-method get_font_family
+  (of-object "GtkFontChooser")
+  (c-name "get_font_family")
+  (return-type "PangoFontFamily*")
+  (parameters
+  )
+)
+
+(define-method get_font_map
+  (of-object "GtkFontChooser")
+  (c-name "get_font_map")
+  (return-type "PangoFontMap*")
+  (parameters
+  )
+)
+
+(define-method get_font_size
+  (of-object "GtkFontChooser")
+  (c-name "get_font_size")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method set_filter_func
+  (of-object "GtkFontChooser")
+  (c-name "set_filter_func")
+  (return-type "none")
+  (parameters
+    '("GtkFontFilterFunc" "pfilter")
+    '("gpointer" "puser_data")
+    '("GDestroyNotify" "pdestroy")
+  )
+)
+
+(define-method set_font_map
+  (of-object "GtkFontChooser")
+  (c-name "set_font_map")
+  (return-type "none")
+  (parameters
+    '("PangoFontMap*" "pfontmap")
+  )
+)
+
+(define-method get_font
+  (of-object "GtkFontChooser")
+  (c-name "gtk_font_chooser_get_font")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+
+(define-method get_font_desc
+  (of-object "GtkFontChooser")
+  (c-name "gtk_font_chooser_get_font_desc")
+  (return-type "PangoFontDescription*")
+  (parameters
+  )
+)
+
+(define-method get_preview_text
+  (of-object "GtkFontChooser")
+  (c-name "gtk_font_chooser_get_preview_text")
+  (return-type "gchar*")
+  (parameters
+  )
+)
+
+(define-method get_show_preview_entry
+  (of-object "GtkFontChooser")
+  (c-name "gtk_font_chooser_get_show_preview_entry")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method set_font
+  (of-object "GtkFontChooser")
+  (c-name "gtk_font_chooser_set_font")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pfontname")
+  )
+)
+
+(define-method set_font_desc
+  (of-object "GtkFontChooser")
+  (c-name "gtk_font_chooser_set_font_desc")
+  (return-type "none")
+  (parameters
+    '("const PangoFontDescription*" "pfont_desc")
+  )
+)
+
+(define-method set_preview_text
+  (of-object "GtkFontChooser")
+  (c-name "gtk_font_chooser_set_preview_text")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "ptext")
+  )
+)
+
+(define-method set_show_preview_entry
+  (of-object "GtkFontChooser")
+  (c-name "gtk_font_chooser_set_show_preview_entry")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pshow_preview_entry")
+  )
+)
+

@@ -1,0 +1,11 @@
+(define-enum PrintOperationAction
+  (in-module "Gtk")
+  (c-name "GtkPrintOperationAction")
+  (values
+    '("print_dialog" "GTK_PRINT_OPERATION_ACTION_PRINT_DIALOG")
+    '("print" "GTK_PRINT_OPERATION_ACTION_PRINT")
+    '("preview" "GTK_PRINT_OPERATION_ACTION_PREVIEW")
+    '("export" "GTK_PRINT_OPERATION_ACTION_EXPORT")
+  )
+)
+

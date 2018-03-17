@@ -1,0 +1,103 @@
+(define-object DOMTouch
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "DOMObject")
+  (c-name "WebKitDOMTouch")
+)
+
+(define-method get_client_x
+  (of-object "WebKitDOMTouch")
+  (c-name "webkit_dom_touch_get_client_x")
+  (return-type "glong")
+  (parameters
+  )
+)
+
+(define-method get_client_y
+  (of-object "WebKitDOMTouch")
+  (c-name "webkit_dom_touch_get_client_y")
+  (return-type "glong")
+  (parameters
+  )
+)
+
+(define-method get_identifier
+  (of-object "WebKitDOMTouch")
+  (c-name "webkit_dom_touch_get_identifier")
+  (return-type "gulong")
+  (parameters
+  )
+)
+
+(define-method get_page_x
+  (of-object "WebKitDOMTouch")
+  (c-name "webkit_dom_touch_get_page_x")
+  (return-type "glong")
+  (parameters
+  )
+)
+
+(define-method get_page_y
+  (of-object "WebKitDOMTouch")
+  (c-name "webkit_dom_touch_get_page_y")
+  (return-type "glong")
+  (parameters
+  )
+)
+
+(define-method get_screen_x
+  (of-object "WebKitDOMTouch")
+  (c-name "webkit_dom_touch_get_screen_x")
+  (return-type "glong")
+  (parameters
+  )
+)
+
+(define-method get_screen_y
+  (of-object "WebKitDOMTouch")
+  (c-name "webkit_dom_touch_get_screen_y")
+  (return-type "glong")
+  (parameters
+  )
+)
+
+(define-method get_target
+  (of-object "WebKitDOMTouch")
+  (c-name "webkit_dom_touch_get_target")
+  (return-type "WebKitDOMEventTarget*")
+  (parameters
+  )
+)
+
+(define-method get_webkit_force
+  (of-object "WebKitDOMTouch")
+  (c-name "webkit_dom_touch_get_webkit_force")
+  (return-type "gfloat")
+  (parameters
+  )
+)
+
+(define-method get_webkit_radius_x
+  (of-object "WebKitDOMTouch")
+  (c-name "webkit_dom_touch_get_webkit_radius_x")
+  (return-type "glong")
+  (parameters
+  )
+)
+
+(define-method get_webkit_radius_y
+  (of-object "WebKitDOMTouch")
+  (c-name "webkit_dom_touch_get_webkit_radius_y")
+  (return-type "glong")
+  (parameters
+  )
+)
+
+(define-method get_webkit_rotation_angle
+  (of-object "WebKitDOMTouch")
+  (c-name "webkit_dom_touch_get_webkit_rotation_angle")
+  (return-type "gfloat")
+  (parameters
+  )
+)
+

@@ -1,0 +1,162 @@
+(define-object ParamSpec
+  (in-module "GObject")
+  (import-header "glib-object.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GParamSpec")
+)
+
+(define-method finalize
+  (of-object "GParamSpec")
+  (c-name "finalize")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method value_set_default
+  (of-object "GParamSpec")
+  (c-name "value_set_default")
+  (return-type "none")
+  (parameters
+    '("GValue*" "pvalue")
+  )
+)
+
+(define-method value_validate
+  (of-object "GParamSpec")
+  (c-name "value_validate")
+  (return-type "gboolean")
+  (parameters
+    '("GValue*" "pvalue")
+  )
+)
+
+(define-method values_cmp
+  (of-object "GParamSpec")
+  (c-name "values_cmp")
+  (return-type "gint")
+  (parameters
+    '("const GValue*" "pvalue1")
+    '("const GValue*" "pvalue2")
+  )
+)
+
+(define-method get_blurb
+  (of-object "GParamSpec")
+  (c-name "g_param_spec_get_blurb")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_default_value
+  (of-object "GParamSpec")
+  (c-name "g_param_spec_get_default_value")
+  (return-type "const GValue*")
+  (parameters
+  )
+)
+
+(define-method get_name
+  (of-object "GParamSpec")
+  (c-name "g_param_spec_get_name")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_name_quark
+  (of-object "GParamSpec")
+  (c-name "g_param_spec_get_name_quark")
+  (return-type "GQuark")
+  (parameters
+  )
+)
+
+(define-method get_nick
+  (of-object "GParamSpec")
+  (c-name "g_param_spec_get_nick")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_qdata
+  (of-object "GParamSpec")
+  (c-name "g_param_spec_get_qdata")
+  (return-type "gpointer")
+  (parameters
+    '("GQuark" "pquark")
+  )
+)
+
+(define-method get_redirect_target
+  (of-object "GParamSpec")
+  (c-name "g_param_spec_get_redirect_target")
+  (return-type "GParamSpec*")
+  (parameters
+  )
+)
+
+(define-method ref
+  (of-object "GParamSpec")
+  (c-name "g_param_spec_ref")
+  (return-type "GParamSpec*")
+  (parameters
+  )
+)
+
+(define-method ref_sink
+  (of-object "GParamSpec")
+  (c-name "g_param_spec_ref_sink")
+  (return-type "GParamSpec*")
+  (parameters
+  )
+)
+
+(define-method set_qdata
+  (of-object "GParamSpec")
+  (c-name "g_param_spec_set_qdata")
+  (return-type "none")
+  (parameters
+    '("GQuark" "pquark")
+    '("gpointer" "pdata")
+  )
+)
+
+(define-method set_qdata_full
+  (of-object "GParamSpec")
+  (c-name "g_param_spec_set_qdata_full")
+  (return-type "none")
+  (parameters
+    '("GQuark" "pquark")
+    '("gpointer" "pdata")
+    '("GDestroyNotify" "pdestroy")
+  )
+)
+
+(define-method sink
+  (of-object "GParamSpec")
+  (c-name "g_param_spec_sink")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method steal_qdata
+  (of-object "GParamSpec")
+  (c-name "g_param_spec_steal_qdata")
+  (return-type "gpointer")
+  (parameters
+    '("GQuark" "pquark")
+  )
+)
+
+(define-method unref
+  (of-object "GParamSpec")
+  (c-name "g_param_spec_unref")
+  (return-type "none")
+  (parameters
+  )
+)
+

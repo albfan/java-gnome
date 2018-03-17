@@ -1,0 +1,30 @@
+(define-object Border
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkBorder")
+)
+
+(define-function Border_new
+  (is-constructor-of "GtkBorder")
+  (c-name "gtk_border_new")
+  (return-type "GtkBorder*")
+  (parameters
+  )
+)
+
+(define-method copy
+  (of-object "GtkBorder")
+  (c-name "gtk_border_copy")
+  (return-type "GtkBorder*")
+  (parameters
+  )
+)
+
+(define-method free
+  (of-object "GtkBorder")
+  (c-name "gtk_border_free")
+  (return-type "none")
+  (parameters
+  )
+)
+

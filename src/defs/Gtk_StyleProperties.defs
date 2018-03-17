@@ -1,0 +1,123 @@
+(define-object StyleProperties
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkStyleProperties")
+)
+
+(define-function StyleProperties_new
+  (is-constructor-of "GtkStyleProperties")
+  (c-name "gtk_style_properties_new")
+  (return-type "GtkStyleProperties*")
+  (parameters
+  )
+)
+
+(define-method clear
+  (of-object "GtkStyleProperties")
+  (c-name "gtk_style_properties_clear")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method get
+  (of-object "GtkStyleProperties")
+  (c-name "gtk_style_properties_get")
+  (return-type "none")
+  (parameters
+    '("GtkStateFlags" "pstate")
+    '("null" "p...")
+  )
+)
+
+(define-method get_property
+  (of-object "GtkStyleProperties")
+  (c-name "gtk_style_properties_get_property")
+  (return-type "gboolean")
+  (parameters
+    '("const gchar*" "pproperty")
+    '("GtkStateFlags" "pstate")
+    '("GValue*" "pvalue")
+  )
+)
+
+(define-method get_valist
+  (of-object "GtkStyleProperties")
+  (c-name "gtk_style_properties_get_valist")
+  (return-type "none")
+  (parameters
+    '("GtkStateFlags" "pstate")
+    '("va_list" "pargs")
+  )
+)
+
+(define-method lookup_color
+  (of-object "GtkStyleProperties")
+  (c-name "gtk_style_properties_lookup_color")
+  (return-type "GtkSymbolicColor*")
+  (parameters
+    '("const gchar*" "pname")
+  )
+)
+
+(define-method map_color
+  (of-object "GtkStyleProperties")
+  (c-name "gtk_style_properties_map_color")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pname")
+    '("GtkSymbolicColor*" "pcolor")
+  )
+)
+
+(define-method merge
+  (of-object "GtkStyleProperties")
+  (c-name "gtk_style_properties_merge")
+  (return-type "none")
+  (parameters
+    '("const GtkStyleProperties*" "pprops_to_merge")
+    '("gboolean" "preplace")
+  )
+)
+
+(define-method set
+  (of-object "GtkStyleProperties")
+  (c-name "gtk_style_properties_set")
+  (return-type "none")
+  (parameters
+    '("GtkStateFlags" "pstate")
+    '("null" "p...")
+  )
+)
+
+(define-method set_property
+  (of-object "GtkStyleProperties")
+  (c-name "gtk_style_properties_set_property")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pproperty")
+    '("GtkStateFlags" "pstate")
+    '("const GValue*" "pvalue")
+  )
+)
+
+(define-method set_valist
+  (of-object "GtkStyleProperties")
+  (c-name "gtk_style_properties_set_valist")
+  (return-type "none")
+  (parameters
+    '("GtkStateFlags" "pstate")
+    '("va_list" "pargs")
+  )
+)
+
+(define-method unset_property
+  (of-object "GtkStyleProperties")
+  (c-name "gtk_style_properties_unset_property")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pproperty")
+    '("GtkStateFlags" "pstate")
+  )
+)
+

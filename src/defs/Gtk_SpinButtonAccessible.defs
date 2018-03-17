@@ -1,0 +1,6 @@
+(define-object SpinButtonAccessible
+  (in-module "Gtk")
+  (parent "EntryAccessible")
+  (c-name "GtkSpinButtonAccessible")
+)
+

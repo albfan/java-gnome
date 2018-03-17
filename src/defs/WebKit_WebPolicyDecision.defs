@@ -1,0 +1,31 @@
+(define-object WebPolicyDecision
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "WebKitWebPolicyDecision")
+)
+
+(define-method download
+  (of-object "WebKitWebPolicyDecision")
+  (c-name "webkit_web_policy_decision_download")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method ignore
+  (of-object "WebKitWebPolicyDecision")
+  (c-name "webkit_web_policy_decision_ignore")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method use
+  (of-object "WebKitWebPolicyDecision")
+  (c-name "webkit_web_policy_decision_use")
+  (return-type "none")
+  (parameters
+  )
+)
+

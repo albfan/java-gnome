@@ -1,0 +1,10 @@
+(define-enum ShellError
+  (in-module "GLib")
+  (c-name "GShellError")
+  (values
+    '("bad_quoting" "G_SHELL_ERROR_BAD_QUOTING")
+    '("empty_string" "G_SHELL_ERROR_EMPTY_STRING")
+    '("failed" "G_SHELL_ERROR_FAILED")
+  )
+)
+

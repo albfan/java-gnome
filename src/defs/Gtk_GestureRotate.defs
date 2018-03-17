@@ -1,0 +1,23 @@
+(define-object GestureRotate
+  (in-module "Gtk")
+  (parent "Gesture")
+  (c-name "GtkGestureRotate")
+)
+
+(define-function GestureRotate_new
+  (is-constructor-of "GtkGestureRotate")
+  (c-name "gtk_gesture_rotate_new")
+  (return-type "GtkGesture*")
+  (parameters
+    '("GtkWidget*" "pwidget")
+  )
+)
+
+(define-method get_angle_delta
+  (of-object "GtkGestureRotate")
+  (c-name "gtk_gesture_rotate_get_angle_delta")
+  (return-type "gdouble")
+  (parameters
+  )
+)
+

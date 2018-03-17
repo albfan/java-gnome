@@ -1,0 +1,57 @@
+(define-object RcStyle
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkRcStyle")
+)
+
+(define-function RcStyle_new
+  (is-constructor-of "GtkRcStyle")
+  (c-name "gtk_rc_style_new")
+  (return-type "GtkRcStyle*")
+  (parameters
+  )
+)
+
+(define-method create_rc_style
+  (of-object "GtkRcStyle")
+  (c-name "create_rc_style")
+  (return-type "GtkRcStyle*")
+  (parameters
+  )
+)
+
+(define-method create_style
+  (of-object "GtkRcStyle")
+  (c-name "create_style")
+  (return-type "GtkStyle*")
+  (parameters
+  )
+)
+
+(define-method merge
+  (of-object "GtkRcStyle")
+  (c-name "merge")
+  (return-type "none")
+  (parameters
+    '("GtkRcStyle*" "psrc")
+  )
+)
+
+(define-method parse
+  (of-object "GtkRcStyle")
+  (c-name "parse")
+  (return-type "guint")
+  (parameters
+    '("GtkSettings*" "psettings")
+    '("GScanner*" "pscanner")
+  )
+)
+
+(define-method copy
+  (of-object "GtkRcStyle")
+  (c-name "gtk_rc_style_copy")
+  (return-type "GtkRcStyle*")
+  (parameters
+  )
+)
+

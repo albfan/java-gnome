@@ -1,0 +1,33 @@
+(define-object TargetEntry
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkTargetEntry")
+)
+
+(define-function TargetEntry_new
+  (is-constructor-of "GtkTargetEntry")
+  (c-name "gtk_target_entry_new")
+  (return-type "GtkTargetEntry*")
+  (parameters
+    '("const gchar*" "ptarget")
+    '("guint" "pflags")
+    '("guint" "pinfo")
+  )
+)
+
+(define-method copy
+  (of-object "GtkTargetEntry")
+  (c-name "gtk_target_entry_copy")
+  (return-type "GtkTargetEntry*")
+  (parameters
+  )
+)
+
+(define-method free
+  (of-object "GtkTargetEntry")
+  (c-name "gtk_target_entry_free")
+  (return-type "none")
+  (parameters
+  )
+)
+

@@ -1,0 +1,6 @@
+(define-object AccessiblePrivate
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkAccessiblePrivate")
+)
+

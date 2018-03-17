@@ -1,0 +1,137 @@
+(define-object DOMDOMSecurityPolicy
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "DOMObject")
+  (c-name "WebKitDOMDOMSecurityPolicy")
+)
+
+(define-method allows_connection_to
+  (of-object "WebKitDOMDOMSecurityPolicy")
+  (c-name "webkit_dom_dom_security_policy_allows_connection_to")
+  (return-type "gboolean")
+  (parameters
+    '("const gchar*" "purl")
+  )
+)
+
+(define-method allows_font_from
+  (of-object "WebKitDOMDOMSecurityPolicy")
+  (c-name "webkit_dom_dom_security_policy_allows_font_from")
+  (return-type "gboolean")
+  (parameters
+    '("const gchar*" "purl")
+  )
+)
+
+(define-method allows_form_action
+  (of-object "WebKitDOMDOMSecurityPolicy")
+  (c-name "webkit_dom_dom_security_policy_allows_form_action")
+  (return-type "gboolean")
+  (parameters
+    '("const gchar*" "purl")
+  )
+)
+
+(define-method allows_frame_from
+  (of-object "WebKitDOMDOMSecurityPolicy")
+  (c-name "webkit_dom_dom_security_policy_allows_frame_from")
+  (return-type "gboolean")
+  (parameters
+    '("const gchar*" "purl")
+  )
+)
+
+(define-method allows_image_from
+  (of-object "WebKitDOMDOMSecurityPolicy")
+  (c-name "webkit_dom_dom_security_policy_allows_image_from")
+  (return-type "gboolean")
+  (parameters
+    '("const gchar*" "purl")
+  )
+)
+
+(define-method allows_media_from
+  (of-object "WebKitDOMDOMSecurityPolicy")
+  (c-name "webkit_dom_dom_security_policy_allows_media_from")
+  (return-type "gboolean")
+  (parameters
+    '("const gchar*" "purl")
+  )
+)
+
+(define-method allows_object_from
+  (of-object "WebKitDOMDOMSecurityPolicy")
+  (c-name "webkit_dom_dom_security_policy_allows_object_from")
+  (return-type "gboolean")
+  (parameters
+    '("const gchar*" "purl")
+  )
+)
+
+(define-method allows_plugin_type
+  (of-object "WebKitDOMDOMSecurityPolicy")
+  (c-name "webkit_dom_dom_security_policy_allows_plugin_type")
+  (return-type "gboolean")
+  (parameters
+    '("const gchar*" "ptype")
+  )
+)
+
+(define-method allows_script_from
+  (of-object "WebKitDOMDOMSecurityPolicy")
+  (c-name "webkit_dom_dom_security_policy_allows_script_from")
+  (return-type "gboolean")
+  (parameters
+    '("const gchar*" "purl")
+  )
+)
+
+(define-method allows_style_from
+  (of-object "WebKitDOMDOMSecurityPolicy")
+  (c-name "webkit_dom_dom_security_policy_allows_style_from")
+  (return-type "gboolean")
+  (parameters
+    '("const gchar*" "purl")
+  )
+)
+
+(define-method get_allows_eval
+  (of-object "WebKitDOMDOMSecurityPolicy")
+  (c-name "webkit_dom_dom_security_policy_get_allows_eval")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_allows_inline_script
+  (of-object "WebKitDOMDOMSecurityPolicy")
+  (c-name "webkit_dom_dom_security_policy_get_allows_inline_script")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_allows_inline_style
+  (of-object "WebKitDOMDOMSecurityPolicy")
+  (c-name "webkit_dom_dom_security_policy_get_allows_inline_style")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_is_active
+  (of-object "WebKitDOMDOMSecurityPolicy")
+  (c-name "webkit_dom_dom_security_policy_get_is_active")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_report_ur_is
+  (of-object "WebKitDOMDOMSecurityPolicy")
+  (c-name "webkit_dom_dom_security_policy_get_report_ur_is")
+  (return-type "WebKitDOMDOMStringList*")
+  (parameters
+  )
+)
+

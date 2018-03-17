@@ -1,0 +1,11 @@
+(define-enum PanDirection
+  (in-module "Gtk")
+  (c-name "GtkPanDirection")
+  (values
+    '("left" "GTK_PAN_DIRECTION_LEFT")
+    '("right" "GTK_PAN_DIRECTION_RIGHT")
+    '("up" "GTK_PAN_DIRECTION_UP")
+    '("down" "GTK_PAN_DIRECTION_DOWN")
+  )
+)
+

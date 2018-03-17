@@ -1,0 +1,6 @@
+(define-object TextTagClass
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkTextTagClass")
+)
+

@@ -1,0 +1,10 @@
+(define-enum PadActionType
+  (in-module "Gtk")
+  (c-name "GtkPadActionType")
+  (values
+    '("button" "GTK_PAD_ACTION_BUTTON")
+    '("ring" "GTK_PAD_ACTION_RING")
+    '("strip" "GTK_PAD_ACTION_STRIP")
+  )
+)
+

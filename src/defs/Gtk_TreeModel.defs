@@ -1,0 +1,283 @@
+(define-object TreeModel
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkTreeModel")
+)
+
+(define-method get_column_type
+  (of-object "GtkTreeModel")
+  (c-name "get_column_type")
+  (return-type "GType")
+  (parameters
+    '("gint" "pindex_")
+  )
+)
+
+(define-method get_flags
+  (of-object "GtkTreeModel")
+  (c-name "get_flags")
+  (return-type "GtkTreeModelFlags")
+  (parameters
+  )
+)
+
+(define-method get_iter
+  (of-object "GtkTreeModel")
+  (c-name "get_iter")
+  (return-type "gboolean")
+  (parameters
+    '("GtkTreeIter*" "piter")
+    '("GtkTreePath*" "ppath")
+  )
+)
+
+(define-method get_n_columns
+  (of-object "GtkTreeModel")
+  (c-name "get_n_columns")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_path
+  (of-object "GtkTreeModel")
+  (c-name "get_path")
+  (return-type "GtkTreePath*")
+  (parameters
+    '("GtkTreeIter*" "piter")
+  )
+)
+
+(define-method get_value
+  (of-object "GtkTreeModel")
+  (c-name "get_value")
+  (return-type "none")
+  (parameters
+    '("GtkTreeIter*" "piter")
+    '("gint" "pcolumn")
+    '("GValue*" "pvalue")
+  )
+)
+
+(define-method iter_children
+  (of-object "GtkTreeModel")
+  (c-name "iter_children")
+  (return-type "gboolean")
+  (parameters
+    '("GtkTreeIter*" "piter")
+    '("GtkTreeIter*" "pparent")
+  )
+)
+
+(define-method iter_has_child
+  (of-object "GtkTreeModel")
+  (c-name "iter_has_child")
+  (return-type "gboolean")
+  (parameters
+    '("GtkTreeIter*" "piter")
+  )
+)
+
+(define-method iter_n_children
+  (of-object "GtkTreeModel")
+  (c-name "iter_n_children")
+  (return-type "gint")
+  (parameters
+    '("GtkTreeIter*" "piter")
+  )
+)
+
+(define-method iter_next
+  (of-object "GtkTreeModel")
+  (c-name "iter_next")
+  (return-type "gboolean")
+  (parameters
+    '("GtkTreeIter*" "piter")
+  )
+)
+
+(define-method iter_nth_child
+  (of-object "GtkTreeModel")
+  (c-name "iter_nth_child")
+  (return-type "gboolean")
+  (parameters
+    '("GtkTreeIter*" "piter")
+    '("GtkTreeIter*" "pparent")
+    '("gint" "pn")
+  )
+)
+
+(define-method iter_parent
+  (of-object "GtkTreeModel")
+  (c-name "iter_parent")
+  (return-type "gboolean")
+  (parameters
+    '("GtkTreeIter*" "piter")
+    '("GtkTreeIter*" "pchild")
+  )
+)
+
+(define-method iter_previous
+  (of-object "GtkTreeModel")
+  (c-name "iter_previous")
+  (return-type "gboolean")
+  (parameters
+    '("GtkTreeIter*" "piter")
+  )
+)
+
+(define-method ref_node
+  (of-object "GtkTreeModel")
+  (c-name "ref_node")
+  (return-type "none")
+  (parameters
+    '("GtkTreeIter*" "piter")
+  )
+)
+
+(define-method row_changed
+  (of-object "GtkTreeModel")
+  (c-name "row_changed")
+  (return-type "none")
+  (parameters
+    '("GtkTreePath*" "ppath")
+    '("GtkTreeIter*" "piter")
+  )
+)
+
+(define-method row_deleted
+  (of-object "GtkTreeModel")
+  (c-name "row_deleted")
+  (return-type "none")
+  (parameters
+    '("GtkTreePath*" "ppath")
+  )
+)
+
+(define-method row_has_child_toggled
+  (of-object "GtkTreeModel")
+  (c-name "row_has_child_toggled")
+  (return-type "none")
+  (parameters
+    '("GtkTreePath*" "ppath")
+    '("GtkTreeIter*" "piter")
+  )
+)
+
+(define-method row_inserted
+  (of-object "GtkTreeModel")
+  (c-name "row_inserted")
+  (return-type "none")
+  (parameters
+    '("GtkTreePath*" "ppath")
+    '("GtkTreeIter*" "piter")
+  )
+)
+
+(define-method rows_reordered
+  (of-object "GtkTreeModel")
+  (c-name "rows_reordered")
+  (return-type "none")
+  (parameters
+    '("GtkTreePath*" "ppath")
+    '("GtkTreeIter*" "piter")
+    '("gint*" "pnew_order")
+  )
+)
+
+(define-method unref_node
+  (of-object "GtkTreeModel")
+  (c-name "unref_node")
+  (return-type "none")
+  (parameters
+    '("GtkTreeIter*" "piter")
+  )
+)
+
+(define-method filter_new
+  (of-object "GtkTreeModel")
+  (c-name "gtk_tree_model_filter_new")
+  (return-type "GtkTreeModel*")
+  (parameters
+    '("GtkTreePath*" "proot")
+  )
+)
+
+(define-method foreach
+  (of-object "GtkTreeModel")
+  (c-name "gtk_tree_model_foreach")
+  (return-type "none")
+  (parameters
+    '("GtkTreeModelForeachFunc" "pfunc")
+    '("gpointer" "puser_data")
+  )
+)
+
+(define-method get
+  (of-object "GtkTreeModel")
+  (c-name "gtk_tree_model_get")
+  (return-type "none")
+  (parameters
+    '("GtkTreeIter*" "piter")
+    '("null" "p...")
+  )
+)
+
+(define-method get_iter_first
+  (of-object "GtkTreeModel")
+  (c-name "gtk_tree_model_get_iter_first")
+  (return-type "gboolean")
+  (parameters
+    '("GtkTreeIter*" "piter")
+  )
+)
+
+(define-method get_iter_from_string
+  (of-object "GtkTreeModel")
+  (c-name "gtk_tree_model_get_iter_from_string")
+  (return-type "gboolean")
+  (parameters
+    '("GtkTreeIter*" "piter")
+    '("const gchar*" "ppath_string")
+  )
+)
+
+(define-method get_string_from_iter
+  (of-object "GtkTreeModel")
+  (c-name "gtk_tree_model_get_string_from_iter")
+  (return-type "gchar*")
+  (parameters
+    '("GtkTreeIter*" "piter")
+  )
+)
+
+(define-method get_valist
+  (of-object "GtkTreeModel")
+  (c-name "gtk_tree_model_get_valist")
+  (return-type "none")
+  (parameters
+    '("GtkTreeIter*" "piter")
+    '("va_list" "pvar_args")
+  )
+)
+
+(define-method rows_reordered_with_length
+  (of-object "GtkTreeModel")
+  (c-name "gtk_tree_model_rows_reordered_with_length")
+  (return-type "none")
+  (parameters
+    '("GtkTreePath*" "ppath")
+    '("GtkTreeIter*" "piter")
+    '("null" "pnew_order")
+    '("gint" "plength")
+  )
+)
+
+(define-method sort_new_with_model
+  (of-object "GtkTreeModel")
+  (c-name "gtk_tree_model_sort_new_with_model")
+  (return-type "GtkTreeModel*")
+  (parameters
+  )
+)
+

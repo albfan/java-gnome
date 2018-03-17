@@ -1,0 +1,37 @@
+(define-object DOMBlob
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "DOMObject")
+  (c-name "WebKitDOMBlob")
+)
+
+(define-method get_size
+  (of-object "WebKitDOMBlob")
+  (c-name "webkit_dom_blob_get_size")
+  (return-type "guint64")
+  (parameters
+  )
+)
+
+(define-method slice
+  (of-object "WebKitDOMBlob")
+  (c-name "webkit_dom_blob_slice")
+  (return-type "WebKitDOMBlob*")
+  (parameters
+    '("gint64" "pstart")
+    '("gint64" "pend")
+    '("const gchar*" "pcontentType")
+  )
+)
+
+(define-method webkit_slice
+  (of-object "WebKitDOMBlob")
+  (c-name "webkit_dom_blob_webkit_slice")
+  (return-type "WebKitDOMBlob*")
+  (parameters
+    '("gint64" "pstart")
+    '("gint64" "pend")
+    '("const gchar*" "pcontent_type")
+  )
+)
+

@@ -1,0 +1,508 @@
+(define-object Settings
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GSettings")
+)
+
+(define-function Settings_new
+  (is-constructor-of "GSettings")
+  (c-name "g_settings_new")
+  (return-type "GSettings*")
+  (parameters
+    '("const gchar*" "pschema_id")
+  )
+)
+
+(define-function Settings_new_full
+  (is-constructor-of "GSettings")
+  (c-name "g_settings_new_full")
+  (return-type "GSettings*")
+  (parameters
+    '("GSettingsSchema*" "pschema")
+    '("GSettingsBackend*" "pbackend")
+    '("const gchar*" "ppath")
+  )
+)
+
+(define-function Settings_new_with_backend
+  (is-constructor-of "GSettings")
+  (c-name "g_settings_new_with_backend")
+  (return-type "GSettings*")
+  (parameters
+    '("const gchar*" "pschema_id")
+    '("GSettingsBackend*" "pbackend")
+  )
+)
+
+(define-function Settings_new_with_backend_and_path
+  (is-constructor-of "GSettings")
+  (c-name "g_settings_new_with_backend_and_path")
+  (return-type "GSettings*")
+  (parameters
+    '("const gchar*" "pschema_id")
+    '("GSettingsBackend*" "pbackend")
+    '("const gchar*" "ppath")
+  )
+)
+
+(define-function Settings_new_with_path
+  (is-constructor-of "GSettings")
+  (c-name "g_settings_new_with_path")
+  (return-type "GSettings*")
+  (parameters
+    '("const gchar*" "pschema_id")
+    '("const gchar*" "ppath")
+  )
+)
+
+(define-method change_event
+  (of-object "GSettings")
+  (c-name "change_event")
+  (return-type "gboolean")
+  (parameters
+    '("const GQuark*" "pkeys")
+    '("gint" "pn_keys")
+  )
+)
+
+(define-method changed
+  (of-object "GSettings")
+  (c-name "changed")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pkey")
+  )
+)
+
+(define-method writable_change_event
+  (of-object "GSettings")
+  (c-name "writable_change_event")
+  (return-type "gboolean")
+  (parameters
+    '("GQuark" "pkey")
+  )
+)
+
+(define-method writable_changed
+  (of-object "GSettings")
+  (c-name "writable_changed")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pkey")
+  )
+)
+
+(define-method apply
+  (of-object "GSettings")
+  (c-name "g_settings_apply")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method bind
+  (of-object "GSettings")
+  (c-name "g_settings_bind")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pkey")
+    '("gpointer" "pobject")
+    '("const gchar*" "pproperty")
+    '("GSettingsBindFlags" "pflags")
+  )
+)
+
+(define-method bind_with_mapping
+  (of-object "GSettings")
+  (c-name "g_settings_bind_with_mapping")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pkey")
+    '("gpointer" "pobject")
+    '("const gchar*" "pproperty")
+    '("GSettingsBindFlags" "pflags")
+    '("GSettingsBindGetMapping" "pget_mapping")
+    '("GSettingsBindSetMapping" "pset_mapping")
+    '("gpointer" "puser_data")
+    '("GDestroyNotify" "pdestroy")
+  )
+)
+
+(define-method bind_writable
+  (of-object "GSettings")
+  (c-name "g_settings_bind_writable")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pkey")
+    '("gpointer" "pobject")
+    '("const gchar*" "pproperty")
+    '("gboolean" "pinverted")
+  )
+)
+
+(define-method create_action
+  (of-object "GSettings")
+  (c-name "g_settings_create_action")
+  (return-type "GAction*")
+  (parameters
+    '("const gchar*" "pkey")
+  )
+)
+
+(define-method delay
+  (of-object "GSettings")
+  (c-name "g_settings_delay")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method get
+  (of-object "GSettings")
+  (c-name "g_settings_get")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pkey")
+    '("const gchar*" "pformat")
+    '("null" "p...")
+  )
+)
+
+(define-method get_boolean
+  (of-object "GSettings")
+  (c-name "g_settings_get_boolean")
+  (return-type "gboolean")
+  (parameters
+    '("const gchar*" "pkey")
+  )
+)
+
+(define-method get_child
+  (of-object "GSettings")
+  (c-name "g_settings_get_child")
+  (return-type "GSettings*")
+  (parameters
+    '("const gchar*" "pname")
+  )
+)
+
+(define-method get_default_value
+  (of-object "GSettings")
+  (c-name "g_settings_get_default_value")
+  (return-type "GVariant*")
+  (parameters
+    '("const gchar*" "pkey")
+  )
+)
+
+(define-method get_double
+  (of-object "GSettings")
+  (c-name "g_settings_get_double")
+  (return-type "gdouble")
+  (parameters
+    '("const gchar*" "pkey")
+  )
+)
+
+(define-method get_enum
+  (of-object "GSettings")
+  (c-name "g_settings_get_enum")
+  (return-type "gint")
+  (parameters
+    '("const gchar*" "pkey")
+  )
+)
+
+(define-method get_flags
+  (of-object "GSettings")
+  (c-name "g_settings_get_flags")
+  (return-type "guint")
+  (parameters
+    '("const gchar*" "pkey")
+  )
+)
+
+(define-method get_has_unapplied
+  (of-object "GSettings")
+  (c-name "g_settings_get_has_unapplied")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_int
+  (of-object "GSettings")
+  (c-name "g_settings_get_int")
+  (return-type "gint")
+  (parameters
+    '("const gchar*" "pkey")
+  )
+)
+
+(define-method get_int64
+  (of-object "GSettings")
+  (c-name "g_settings_get_int64")
+  (return-type "gint64")
+  (parameters
+    '("const gchar*" "pkey")
+  )
+)
+
+(define-method get_mapped
+  (of-object "GSettings")
+  (c-name "g_settings_get_mapped")
+  (return-type "gpointer")
+  (parameters
+    '("const gchar*" "pkey")
+    '("GSettingsGetMapping" "pmapping")
+    '("gpointer" "puser_data")
+  )
+)
+
+(define-method get_range
+  (of-object "GSettings")
+  (c-name "g_settings_get_range")
+  (return-type "GVariant*")
+  (parameters
+    '("const gchar*" "pkey")
+  )
+)
+
+(define-method get_string
+  (of-object "GSettings")
+  (c-name "g_settings_get_string")
+  (return-type "gchar*")
+  (parameters
+    '("const gchar*" "pkey")
+  )
+)
+
+(define-method get_strv
+  (of-object "GSettings")
+  (c-name "g_settings_get_strv")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pkey")
+  )
+)
+
+(define-method get_uint
+  (of-object "GSettings")
+  (c-name "g_settings_get_uint")
+  (return-type "guint")
+  (parameters
+    '("const gchar*" "pkey")
+  )
+)
+
+(define-method get_uint64
+  (of-object "GSettings")
+  (c-name "g_settings_get_uint64")
+  (return-type "guint64")
+  (parameters
+    '("const gchar*" "pkey")
+  )
+)
+
+(define-method get_user_value
+  (of-object "GSettings")
+  (c-name "g_settings_get_user_value")
+  (return-type "GVariant*")
+  (parameters
+    '("const gchar*" "pkey")
+  )
+)
+
+(define-method get_value
+  (of-object "GSettings")
+  (c-name "g_settings_get_value")
+  (return-type "GVariant*")
+  (parameters
+    '("const gchar*" "pkey")
+  )
+)
+
+(define-method is_writable
+  (of-object "GSettings")
+  (c-name "g_settings_is_writable")
+  (return-type "gboolean")
+  (parameters
+    '("const gchar*" "pname")
+  )
+)
+
+(define-method list_children
+  (of-object "GSettings")
+  (c-name "g_settings_list_children")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method list_keys
+  (of-object "GSettings")
+  (c-name "g_settings_list_keys")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method range_check
+  (of-object "GSettings")
+  (c-name "g_settings_range_check")
+  (return-type "gboolean")
+  (parameters
+    '("const gchar*" "pkey")
+    '("GVariant*" "pvalue")
+  )
+)
+
+(define-method reset
+  (of-object "GSettings")
+  (c-name "g_settings_reset")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pkey")
+  )
+)
+
+(define-method revert
+  (of-object "GSettings")
+  (c-name "g_settings_revert")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method set
+  (of-object "GSettings")
+  (c-name "g_settings_set")
+  (return-type "gboolean")
+  (parameters
+    '("const gchar*" "pkey")
+    '("const gchar*" "pformat")
+    '("null" "p...")
+  )
+)
+
+(define-method set_boolean
+  (of-object "GSettings")
+  (c-name "g_settings_set_boolean")
+  (return-type "gboolean")
+  (parameters
+    '("const gchar*" "pkey")
+    '("gboolean" "pvalue")
+  )
+)
+
+(define-method set_double
+  (of-object "GSettings")
+  (c-name "g_settings_set_double")
+  (return-type "gboolean")
+  (parameters
+    '("const gchar*" "pkey")
+    '("gdouble" "pvalue")
+  )
+)
+
+(define-method set_enum
+  (of-object "GSettings")
+  (c-name "g_settings_set_enum")
+  (return-type "gboolean")
+  (parameters
+    '("const gchar*" "pkey")
+    '("gint" "pvalue")
+  )
+)
+
+(define-method set_flags
+  (of-object "GSettings")
+  (c-name "g_settings_set_flags")
+  (return-type "gboolean")
+  (parameters
+    '("const gchar*" "pkey")
+    '("guint" "pvalue")
+  )
+)
+
+(define-method set_int
+  (of-object "GSettings")
+  (c-name "g_settings_set_int")
+  (return-type "gboolean")
+  (parameters
+    '("const gchar*" "pkey")
+    '("gint" "pvalue")
+  )
+)
+
+(define-method set_int64
+  (of-object "GSettings")
+  (c-name "g_settings_set_int64")
+  (return-type "gboolean")
+  (parameters
+    '("const gchar*" "pkey")
+    '("gint64" "pvalue")
+  )
+)
+
+(define-method set_string
+  (of-object "GSettings")
+  (c-name "g_settings_set_string")
+  (return-type "gboolean")
+  (parameters
+    '("const gchar*" "pkey")
+    '("const gchar*" "pvalue")
+  )
+)
+
+(define-method set_strv
+  (of-object "GSettings")
+  (c-name "g_settings_set_strv")
+  (return-type "gboolean")
+  (parameters
+    '("const gchar*" "pkey")
+    '("null" "pvalue")
+  )
+)
+
+(define-method set_uint
+  (of-object "GSettings")
+  (c-name "g_settings_set_uint")
+  (return-type "gboolean")
+  (parameters
+    '("const gchar*" "pkey")
+    '("guint" "pvalue")
+  )
+)
+
+(define-method set_uint64
+  (of-object "GSettings")
+  (c-name "g_settings_set_uint64")
+  (return-type "gboolean")
+  (parameters
+    '("const gchar*" "pkey")
+    '("guint64" "pvalue")
+  )
+)
+
+(define-method set_value
+  (of-object "GSettings")
+  (c-name "g_settings_set_value")
+  (return-type "gboolean")
+  (parameters
+    '("const gchar*" "pkey")
+    '("GVariant*" "pvalue")
+  )
+)
+

@@ -1,0 +1,32 @@
+(define-object Socket
+  (in-module "Atk")
+  (import-header "atk/atk.h")
+  (parent "Object")
+  (c-name "AtkSocket")
+)
+
+(define-function Socket_new
+  (is-constructor-of "AtkSocket")
+  (c-name "atk_socket_new")
+  (return-type "AtkObject*")
+  (parameters
+  )
+)
+
+(define-method embed
+  (of-object "AtkSocket")
+  (c-name "embed")
+  (return-type "none")
+  (parameters
+    '("gchar*" "pplug_id")
+  )
+)
+
+(define-method is_occupied
+  (of-object "AtkSocket")
+  (c-name "atk_socket_is_occupied")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+

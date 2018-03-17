@@ -1,0 +1,97 @@
+(define-object Monitor
+  (in-module "Gdk")
+  (import-header "gdk/gdk.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GdkMonitor")
+)
+
+(define-method get_display
+  (of-object "GdkMonitor")
+  (c-name "gdk_monitor_get_display")
+  (return-type "GdkDisplay*")
+  (parameters
+  )
+)
+
+(define-method get_geometry
+  (of-object "GdkMonitor")
+  (c-name "gdk_monitor_get_geometry")
+  (return-type "none")
+  (parameters
+    '("GdkRectangle*" "pgeometry")
+  )
+)
+
+(define-method get_height_mm
+  (of-object "GdkMonitor")
+  (c-name "gdk_monitor_get_height_mm")
+  (return-type "int")
+  (parameters
+  )
+)
+
+(define-method get_manufacturer
+  (of-object "GdkMonitor")
+  (c-name "gdk_monitor_get_manufacturer")
+  (return-type "const char*")
+  (parameters
+  )
+)
+
+(define-method get_model
+  (of-object "GdkMonitor")
+  (c-name "gdk_monitor_get_model")
+  (return-type "const char*")
+  (parameters
+  )
+)
+
+(define-method get_refresh_rate
+  (of-object "GdkMonitor")
+  (c-name "gdk_monitor_get_refresh_rate")
+  (return-type "int")
+  (parameters
+  )
+)
+
+(define-method get_scale_factor
+  (of-object "GdkMonitor")
+  (c-name "gdk_monitor_get_scale_factor")
+  (return-type "int")
+  (parameters
+  )
+)
+
+(define-method get_subpixel_layout
+  (of-object "GdkMonitor")
+  (c-name "gdk_monitor_get_subpixel_layout")
+  (return-type "GdkSubpixelLayout")
+  (parameters
+  )
+)
+
+(define-method get_width_mm
+  (of-object "GdkMonitor")
+  (c-name "gdk_monitor_get_width_mm")
+  (return-type "int")
+  (parameters
+  )
+)
+
+(define-method get_workarea
+  (of-object "GdkMonitor")
+  (c-name "gdk_monitor_get_workarea")
+  (return-type "none")
+  (parameters
+    '("GdkRectangle*" "pworkarea")
+  )
+)
+
+(define-method is_primary
+  (of-object "GdkMonitor")
+  (c-name "gdk_monitor_is_primary")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+

@@ -1,0 +1,219 @@
+(define-object Volume
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GVolume")
+)
+
+(define-method can_eject
+  (of-object "GVolume")
+  (c-name "can_eject")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method can_mount
+  (of-object "GVolume")
+  (c-name "can_mount")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method changed
+  (of-object "GVolume")
+  (c-name "changed")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method eject
+  (of-object "GVolume")
+  (c-name "eject")
+  (return-type "none")
+  (parameters
+    '("GMountUnmountFlags" "pflags")
+    '("GCancellable*" "pcancellable")
+    '("GAsyncReadyCallback" "pcallback")
+    '("gpointer" "puser_data")
+  )
+)
+
+(define-method eject_finish
+  (of-object "GVolume")
+  (c-name "eject_finish")
+  (return-type "gboolean")
+  (parameters
+    '("GAsyncResult*" "presult")
+    '("GError**" "error")
+  )
+)
+
+(define-method eject_with_operation
+  (of-object "GVolume")
+  (c-name "eject_with_operation")
+  (return-type "none")
+  (parameters
+    '("GMountUnmountFlags" "pflags")
+    '("GMountOperation*" "pmount_operation")
+    '("GCancellable*" "pcancellable")
+    '("GAsyncReadyCallback" "pcallback")
+    '("gpointer" "puser_data")
+  )
+)
+
+(define-method eject_with_operation_finish
+  (of-object "GVolume")
+  (c-name "eject_with_operation_finish")
+  (return-type "gboolean")
+  (parameters
+    '("GAsyncResult*" "presult")
+    '("GError**" "error")
+  )
+)
+
+(define-method enumerate_identifiers
+  (of-object "GVolume")
+  (c-name "enumerate_identifiers")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method get_activation_root
+  (of-object "GVolume")
+  (c-name "get_activation_root")
+  (return-type "GFile*")
+  (parameters
+  )
+)
+
+(define-method get_drive
+  (of-object "GVolume")
+  (c-name "get_drive")
+  (return-type "GDrive*")
+  (parameters
+  )
+)
+
+(define-method get_icon
+  (of-object "GVolume")
+  (c-name "get_icon")
+  (return-type "GIcon*")
+  (parameters
+  )
+)
+
+(define-method get_identifier
+  (of-object "GVolume")
+  (c-name "get_identifier")
+  (return-type "char*")
+  (parameters
+    '("const char*" "pkind")
+  )
+)
+
+(define-method get_mount
+  (of-object "GVolume")
+  (c-name "get_mount")
+  (return-type "GMount*")
+  (parameters
+  )
+)
+
+(define-method get_name
+  (of-object "GVolume")
+  (c-name "get_name")
+  (return-type "char*")
+  (parameters
+  )
+)
+
+(define-method get_sort_key
+  (of-object "GVolume")
+  (c-name "get_sort_key")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_symbolic_icon
+  (of-object "GVolume")
+  (c-name "get_symbolic_icon")
+  (return-type "GIcon*")
+  (parameters
+  )
+)
+
+(define-method get_uuid
+  (of-object "GVolume")
+  (c-name "get_uuid")
+  (return-type "char*")
+  (parameters
+  )
+)
+
+(define-method mount_finish
+  (of-object "GVolume")
+  (c-name "mount_finish")
+  (return-type "gboolean")
+  (parameters
+    '("GAsyncResult*" "presult")
+    '("GError**" "error")
+  )
+)
+
+(define-method mount_fn
+  (of-object "GVolume")
+  (c-name "mount_fn")
+  (return-type "none")
+  (parameters
+    '("GMountMountFlags" "pflags")
+    '("GMountOperation*" "pmount_operation")
+    '("GCancellable*" "pcancellable")
+    '("GAsyncReadyCallback" "pcallback")
+    '("gpointer" "puser_data")
+  )
+)
+
+(define-method removed
+  (of-object "GVolume")
+  (c-name "removed")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method should_automount
+  (of-object "GVolume")
+  (c-name "should_automount")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method mount
+  (of-object "GVolume")
+  (c-name "g_volume_mount")
+  (return-type "none")
+  (parameters
+    '("GMountMountFlags" "pflags")
+    '("GMountOperation*" "pmount_operation")
+    '("GCancellable*" "pcancellable")
+    '("GAsyncReadyCallback" "pcallback")
+    '("gpointer" "puser_data")
+  )
+)
+

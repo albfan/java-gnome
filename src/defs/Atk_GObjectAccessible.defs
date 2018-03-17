@@ -1,0 +1,15 @@
+(define-object GObjectAccessible
+  (in-module "Atk")
+  (import-header "atk/atk.h")
+  (parent "Object")
+  (c-name "AtkGObjectAccessible")
+)
+
+(define-method get_object
+  (of-object "AtkGObjectAccessible")
+  (c-name "atk_gobject_accessible_get_object")
+  (return-type "GObject*")
+  (parameters
+  )
+)
+

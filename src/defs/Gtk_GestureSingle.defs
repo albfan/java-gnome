@@ -1,0 +1,73 @@
+(define-object GestureSingle
+  (in-module "Gtk")
+  (parent "Gesture")
+  (c-name "GtkGestureSingle")
+)
+
+(define-method get_button
+  (of-object "GtkGestureSingle")
+  (c-name "gtk_gesture_single_get_button")
+  (return-type "guint")
+  (parameters
+  )
+)
+
+(define-method get_current_button
+  (of-object "GtkGestureSingle")
+  (c-name "gtk_gesture_single_get_current_button")
+  (return-type "guint")
+  (parameters
+  )
+)
+
+(define-method get_current_sequence
+  (of-object "GtkGestureSingle")
+  (c-name "gtk_gesture_single_get_current_sequence")
+  (return-type "GdkEventSequence*")
+  (parameters
+  )
+)
+
+(define-method get_exclusive
+  (of-object "GtkGestureSingle")
+  (c-name "gtk_gesture_single_get_exclusive")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_touch_only
+  (of-object "GtkGestureSingle")
+  (c-name "gtk_gesture_single_get_touch_only")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method set_button
+  (of-object "GtkGestureSingle")
+  (c-name "gtk_gesture_single_set_button")
+  (return-type "none")
+  (parameters
+    '("guint" "pbutton")
+  )
+)
+
+(define-method set_exclusive
+  (of-object "GtkGestureSingle")
+  (c-name "gtk_gesture_single_set_exclusive")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pexclusive")
+  )
+)
+
+(define-method set_touch_only
+  (of-object "GtkGestureSingle")
+  (c-name "gtk_gesture_single_set_touch_only")
+  (return-type "none")
+  (parameters
+    '("gboolean" "ptouch_only")
+  )
+)
+

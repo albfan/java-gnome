@@ -1,0 +1,285 @@
+(define-object Object
+  (in-module "Atk")
+  (import-header "atk/atk.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "AtkObject")
+)
+
+(define-method active_descendant_changed
+  (of-object "AtkObject")
+  (c-name "active_descendant_changed")
+  (return-type "none")
+  (parameters
+    '("gpointer*" "pchild")
+  )
+)
+
+(define-method children_changed
+  (of-object "AtkObject")
+  (c-name "children_changed")
+  (return-type "none")
+  (parameters
+    '("guint" "pchange_index")
+    '("gpointer" "pchanged_child")
+  )
+)
+
+(define-method connect_property_change_handler
+  (of-object "AtkObject")
+  (c-name "connect_property_change_handler")
+  (return-type "guint")
+  (parameters
+    '("AtkPropertyChangeHandler*" "phandler")
+  )
+)
+
+(define-method focus_event
+  (of-object "AtkObject")
+  (c-name "focus_event")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pfocus_in")
+  )
+)
+
+(define-method get_attributes
+  (of-object "AtkObject")
+  (c-name "get_attributes")
+  (return-type "AtkAttributeSet*")
+  (parameters
+  )
+)
+
+(define-method get_description
+  (of-object "AtkObject")
+  (c-name "get_description")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_index_in_parent
+  (of-object "AtkObject")
+  (c-name "get_index_in_parent")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_layer
+  (of-object "AtkObject")
+  (c-name "get_layer")
+  (return-type "AtkLayer")
+  (parameters
+  )
+)
+
+(define-method get_mdi_zorder
+  (of-object "AtkObject")
+  (c-name "get_mdi_zorder")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_n_children
+  (of-object "AtkObject")
+  (c-name "get_n_children")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_name
+  (of-object "AtkObject")
+  (c-name "get_name")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_object_locale
+  (of-object "AtkObject")
+  (c-name "get_object_locale")
+  (return-type "const gchar*")
+  (parameters
+  )
+)
+
+(define-method get_parent
+  (of-object "AtkObject")
+  (c-name "get_parent")
+  (return-type "AtkObject*")
+  (parameters
+  )
+)
+
+(define-method get_role
+  (of-object "AtkObject")
+  (c-name "get_role")
+  (return-type "AtkRole")
+  (parameters
+  )
+)
+
+(define-method initialize
+  (of-object "AtkObject")
+  (c-name "initialize")
+  (return-type "none")
+  (parameters
+    '("gpointer" "pdata")
+  )
+)
+
+(define-method property_change
+  (of-object "AtkObject")
+  (c-name "property_change")
+  (return-type "none")
+  (parameters
+    '("AtkPropertyValues*" "pvalues")
+  )
+)
+
+(define-method ref_child
+  (of-object "AtkObject")
+  (c-name "ref_child")
+  (return-type "AtkObject*")
+  (parameters
+    '("gint" "pi")
+  )
+)
+
+(define-method ref_relation_set
+  (of-object "AtkObject")
+  (c-name "ref_relation_set")
+  (return-type "AtkRelationSet*")
+  (parameters
+  )
+)
+
+(define-method ref_state_set
+  (of-object "AtkObject")
+  (c-name "ref_state_set")
+  (return-type "AtkStateSet*")
+  (parameters
+  )
+)
+
+(define-method remove_property_change_handler
+  (of-object "AtkObject")
+  (c-name "remove_property_change_handler")
+  (return-type "none")
+  (parameters
+    '("guint" "phandler_id")
+  )
+)
+
+(define-method set_description
+  (of-object "AtkObject")
+  (c-name "set_description")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pdescription")
+  )
+)
+
+(define-method set_name
+  (of-object "AtkObject")
+  (c-name "set_name")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pname")
+  )
+)
+
+(define-method set_parent
+  (of-object "AtkObject")
+  (c-name "set_parent")
+  (return-type "none")
+  (parameters
+    '("AtkObject*" "pparent")
+  )
+)
+
+(define-method set_role
+  (of-object "AtkObject")
+  (c-name "set_role")
+  (return-type "none")
+  (parameters
+    '("AtkRole" "prole")
+  )
+)
+
+(define-method state_change
+  (of-object "AtkObject")
+  (c-name "state_change")
+  (return-type "none")
+  (parameters
+    '("const gchar*" "pname")
+    '("gboolean" "pstate_set")
+  )
+)
+
+(define-method visible_data_changed
+  (of-object "AtkObject")
+  (c-name "visible_data_changed")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method add_relationship
+  (of-object "AtkObject")
+  (c-name "atk_object_add_relationship")
+  (return-type "gboolean")
+  (parameters
+    '("AtkRelationType" "prelationship")
+    '("AtkObject*" "ptarget")
+  )
+)
+
+(define-method get_n_accessible_children
+  (of-object "AtkObject")
+  (c-name "atk_object_get_n_accessible_children")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method notify_state_change
+  (of-object "AtkObject")
+  (c-name "atk_object_notify_state_change")
+  (return-type "none")
+  (parameters
+    '("AtkState" "pstate")
+    '("gboolean" "pvalue")
+  )
+)
+
+(define-method peek_parent
+  (of-object "AtkObject")
+  (c-name "atk_object_peek_parent")
+  (return-type "AtkObject*")
+  (parameters
+  )
+)
+
+(define-method ref_accessible_child
+  (of-object "AtkObject")
+  (c-name "atk_object_ref_accessible_child")
+  (return-type "AtkObject*")
+  (parameters
+    '("gint" "pi")
+  )
+)
+
+(define-method remove_relationship
+  (of-object "AtkObject")
+  (c-name "atk_object_remove_relationship")
+  (return-type "gboolean")
+  (parameters
+    '("AtkRelationType" "prelationship")
+    '("AtkObject*" "ptarget")
+  )
+)
+

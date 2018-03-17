@@ -1,0 +1,9 @@
+(define-enum WindowType
+  (in-module "Gtk")
+  (c-name "GtkWindowType")
+  (values
+    '("toplevel" "GTK_WINDOW_TOPLEVEL")
+    '("popup" "GTK_WINDOW_POPUP")
+  )
+)
+

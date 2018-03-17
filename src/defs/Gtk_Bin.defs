@@ -1,0 +1,14 @@
+(define-object Bin
+  (in-module "Gtk")
+  (parent "Container")
+  (c-name "GtkBin")
+)
+
+(define-method get_child
+  (of-object "GtkBin")
+  (c-name "gtk_bin_get_child")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+

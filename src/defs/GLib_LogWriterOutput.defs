@@ -1,0 +1,9 @@
+(define-enum LogWriterOutput
+  (in-module "GLib")
+  (c-name "GLogWriterOutput")
+  (values
+    '("handled" "G_LOG_WRITER_HANDLED")
+    '("unhandled" "G_LOG_WRITER_UNHANDLED")
+  )
+)
+

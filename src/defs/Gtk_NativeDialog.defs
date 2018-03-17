@@ -1,0 +1,106 @@
+(define-object NativeDialog
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkNativeDialog")
+)
+
+(define-method hide
+  (of-object "GtkNativeDialog")
+  (c-name "hide")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method response
+  (of-object "GtkNativeDialog")
+  (c-name "response")
+  (return-type "none")
+  (parameters
+    '("gint" "presponse_id")
+  )
+)
+
+(define-method show
+  (of-object "GtkNativeDialog")
+  (c-name "show")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method destroy
+  (of-object "GtkNativeDialog")
+  (c-name "gtk_native_dialog_destroy")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method get_modal
+  (of-object "GtkNativeDialog")
+  (c-name "gtk_native_dialog_get_modal")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_title
+  (of-object "GtkNativeDialog")
+  (c-name "gtk_native_dialog_get_title")
+  (return-type "const char*")
+  (parameters
+  )
+)
+
+(define-method get_transient_for
+  (of-object "GtkNativeDialog")
+  (c-name "gtk_native_dialog_get_transient_for")
+  (return-type "GtkWindow*")
+  (parameters
+  )
+)
+
+(define-method get_visible
+  (of-object "GtkNativeDialog")
+  (c-name "gtk_native_dialog_get_visible")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method run
+  (of-object "GtkNativeDialog")
+  (c-name "gtk_native_dialog_run")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method set_modal
+  (of-object "GtkNativeDialog")
+  (c-name "gtk_native_dialog_set_modal")
+  (return-type "none")
+  (parameters
+    '("gboolean" "pmodal")
+  )
+)
+
+(define-method set_title
+  (of-object "GtkNativeDialog")
+  (c-name "gtk_native_dialog_set_title")
+  (return-type "none")
+  (parameters
+    '("const char*" "ptitle")
+  )
+)
+
+(define-method set_transient_for
+  (of-object "GtkNativeDialog")
+  (c-name "gtk_native_dialog_set_transient_for")
+  (return-type "none")
+  (parameters
+    '("GtkWindow*" "pparent")
+  )
+)
+

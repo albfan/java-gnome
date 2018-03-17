@@ -1,0 +1,62 @@
+(define-object ColorChooser
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkColorChooser")
+)
+
+(define-method add_palette
+  (of-object "GtkColorChooser")
+  (c-name "add_palette")
+  (return-type "none")
+  (parameters
+    '("GtkOrientation" "porientation")
+    '("gint" "pcolors_per_line")
+    '("gint" "pn_colors")
+    '("null" "pcolors")
+  )
+)
+
+(define-method color_activated
+  (of-object "GtkColorChooser")
+  (c-name "color_activated")
+  (return-type "none")
+  (parameters
+    '("const GdkRGBA*" "pcolor")
+  )
+)
+
+(define-method get_rgba
+  (of-object "GtkColorChooser")
+  (c-name "get_rgba")
+  (return-type "none")
+  (parameters
+    '("GdkRGBA*" "pcolor")
+  )
+)
+
+(define-method set_rgba
+  (of-object "GtkColorChooser")
+  (c-name "set_rgba")
+  (return-type "none")
+  (parameters
+    '("const GdkRGBA*" "pcolor")
+  )
+)
+
+(define-method get_use_alpha
+  (of-object "GtkColorChooser")
+  (c-name "gtk_color_chooser_get_use_alpha")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method set_use_alpha
+  (of-object "GtkColorChooser")
+  (c-name "gtk_color_chooser_set_use_alpha")
+  (return-type "none")
+  (parameters
+    '("gboolean" "puse_alpha")
+  )
+)
+

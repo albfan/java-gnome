@@ -1,0 +1,9 @@
+(define-enum ToolbarSpaceStyle
+  (in-module "Gtk")
+  (c-name "GtkToolbarSpaceStyle")
+  (values
+    '("empty" "GTK_TOOLBAR_SPACE_EMPTY")
+    '("line" "GTK_TOOLBAR_SPACE_LINE")
+  )
+)
+

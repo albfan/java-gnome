@@ -1,0 +1,16 @@
+(define-enum CssSectionType
+  (in-module "Gtk")
+  (c-name "GtkCssSectionType")
+  (values
+    '("document" "GTK_CSS_SECTION_DOCUMENT")
+    '("import" "GTK_CSS_SECTION_IMPORT")
+    '("color_definition" "GTK_CSS_SECTION_COLOR_DEFINITION")
+    '("binding_set" "GTK_CSS_SECTION_BINDING_SET")
+    '("ruleset" "GTK_CSS_SECTION_RULESET")
+    '("selector" "GTK_CSS_SECTION_SELECTOR")
+    '("declaration" "GTK_CSS_SECTION_DECLARATION")
+    '("value" "GTK_CSS_SECTION_VALUE")
+    '("keyframes" "GTK_CSS_SECTION_KEYFRAMES")
+  )
+)
+

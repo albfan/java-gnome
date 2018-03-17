@@ -1,0 +1,6 @@
+(define-object LockButtonAccessibleClass
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkLockButtonAccessibleClass")
+)
+

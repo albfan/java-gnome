@@ -1,0 +1,65 @@
+(define-object MemoryInputStream
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "InputStream")
+  (c-name "GMemoryInputStream")
+)
+
+(define-function MemoryInputStream_new
+  (is-constructor-of "GMemoryInputStream")
+  (c-name "g_memory_input_stream_new")
+  (return-type "GInputStream*")
+  (parameters
+  )
+)
+
+(define-function MemoryInputStream_new_from_bytes
+  (is-constructor-of "GMemoryInputStream")
+  (c-name "g_memory_input_stream_new_from_bytes")
+  (return-type "GInputStream*")
+  (parameters
+    '("GBytes*" "pbytes")
+  )
+)
+
+(define-function MemoryInputStream_new_from_data
+  (is-constructor-of "GMemoryInputStream")
+  (c-name "g_memory_input_stream_new_from_data")
+  (return-type "GInputStream*")
+  (parameters
+    '("null" "pdata")
+    '("gssize" "plen")
+    '("GDestroyNotify" "pdestroy")
+  )
+)
+
+(define-method add_bytes
+  (of-object "GMemoryInputStream")
+  (c-name "g_memory_input_stream_add_bytes")
+  (return-type "none")
+  (parameters
+    '("GBytes*" "pbytes")
+  )
+)
+
+(define-method add_data
+  (of-object "GMemoryInputStream")
+  (c-name "g_memory_input_stream_add_data")
+  (return-type "none")
+  (parameters
+    '("null" "pdata")
+    '("gssize" "plen")
+    '("GDestroyNotify" "pdestroy")
+  )
+)
+

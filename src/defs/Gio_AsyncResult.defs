@@ -1,0 +1,51 @@
+(define-object AsyncResult
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GAsyncResult")
+)
+
+(define-method get_source_object
+  (of-object "GAsyncResult")
+  (c-name "get_source_object")
+  (return-type "GObject*")
+  (parameters
+  )
+)
+
+(define-method get_user_data
+  (of-object "GAsyncResult")
+  (c-name "get_user_data")
+  (return-type "gpointer")
+  (parameters
+  )
+)
+
+(define-method is_tagged
+  (of-object "GAsyncResult")
+  (c-name "is_tagged")
+  (return-type "gboolean")
+  (parameters
+    '("gpointer" "psource_tag")
+  )
+)
+
+(define-method legacy_propagate_error
+  (of-object "GAsyncResult")
+  (c-name "g_async_result_legacy_propagate_error")
+  (return-type "gboolean")
+  (parameters
+    '("GError**" "error")
+  )
+)
+

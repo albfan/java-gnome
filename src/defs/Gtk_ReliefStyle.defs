@@ -1,0 +1,10 @@
+(define-enum ReliefStyle
+  (in-module "Gtk")
+  (c-name "GtkReliefStyle")
+  (values
+    '("normal" "GTK_RELIEF_NORMAL")
+    '("half" "GTK_RELIEF_HALF")
+    '("none" "GTK_RELIEF_NONE")
+  )
+)
+

@@ -1,0 +1,6 @@
+(define-object ScaleAccessiblePrivate
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkScaleAccessiblePrivate")
+)
+

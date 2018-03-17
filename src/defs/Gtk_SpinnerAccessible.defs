@@ -1,0 +1,6 @@
+(define-object SpinnerAccessible
+  (in-module "Gtk")
+  (parent "WidgetAccessible")
+  (c-name "GtkSpinnerAccessible")
+)
+

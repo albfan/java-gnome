@@ -1,0 +1,10 @@
+(define-enum InputMode
+  (in-module "Gdk")
+  (c-name "GdkInputMode")
+  (values
+    '("disabled" "GDK_MODE_DISABLED")
+    '("screen" "GDK_MODE_SCREEN")
+    '("window" "GDK_MODE_WINDOW")
+  )
+)
+

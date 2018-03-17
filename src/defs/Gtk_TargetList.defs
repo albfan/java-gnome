@@ -1,0 +1,111 @@
+(define-object TargetList
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkTargetList")
+)
+
+(define-function TargetList_new
+  (is-constructor-of "GtkTargetList")
+  (c-name "gtk_target_list_new")
+  (return-type "GtkTargetList*")
+  (parameters
+    '("null" "ptargets")
+    '("guint" "pntargets")
+  )
+)
+
+(define-method add
+  (of-object "GtkTargetList")
+  (c-name "gtk_target_list_add")
+  (return-type "none")
+  (parameters
+    '("GdkAtom" "ptarget")
+    '("guint" "pflags")
+    '("guint" "pinfo")
+  )
+)
+
+(define-method add_image_targets
+  (of-object "GtkTargetList")
+  (c-name "gtk_target_list_add_image_targets")
+  (return-type "none")
+  (parameters
+    '("guint" "pinfo")
+    '("gboolean" "pwritable")
+  )
+)
+
+(define-method add_rich_text_targets
+  (of-object "GtkTargetList")
+  (c-name "gtk_target_list_add_rich_text_targets")
+  (return-type "none")
+  (parameters
+    '("guint" "pinfo")
+    '("gboolean" "pdeserializable")
+    '("GtkTextBuffer*" "pbuffer")
+  )
+)
+
+(define-method add_table
+  (of-object "GtkTargetList")
+  (c-name "gtk_target_list_add_table")
+  (return-type "none")
+  (parameters
+    '("null" "ptargets")
+    '("guint" "pntargets")
+  )
+)
+
+(define-method add_text_targets
+  (of-object "GtkTargetList")
+  (c-name "gtk_target_list_add_text_targets")
+  (return-type "none")
+  (parameters
+    '("guint" "pinfo")
+  )
+)
+
+(define-method add_uri_targets
+  (of-object "GtkTargetList")
+  (c-name "gtk_target_list_add_uri_targets")
+  (return-type "none")
+  (parameters
+    '("guint" "pinfo")
+  )
+)
+
+(define-method find
+  (of-object "GtkTargetList")
+  (c-name "gtk_target_list_find")
+  (return-type "gboolean")
+  (parameters
+    '("GdkAtom" "ptarget")
+    '("guint*" "pinfo")
+  )
+)
+
+(define-method ref
+  (of-object "GtkTargetList")
+  (c-name "gtk_target_list_ref")
+  (return-type "GtkTargetList*")
+  (parameters
+  )
+)
+
+(define-method remove
+  (of-object "GtkTargetList")
+  (c-name "gtk_target_list_remove")
+  (return-type "none")
+  (parameters
+    '("GdkAtom" "ptarget")
+  )
+)
+
+(define-method unref
+  (of-object "GtkTargetList")
+  (c-name "gtk_target_list_unref")
+  (return-type "none")
+  (parameters
+  )
+)
+

@@ -1,0 +1,6 @@
+(define-object TableClass
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkTableClass")
+)
+

@@ -1,0 +1,6 @@
+(define-object TreeViewPrivate
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkTreeViewPrivate")
+)
+

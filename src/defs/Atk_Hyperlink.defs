@@ -1,0 +1,89 @@
+(define-object Hyperlink
+  (in-module "Atk")
+  (import-header "atk/atk.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "AtkHyperlink")
+)
+
+(define-method get_end_index
+  (of-object "AtkHyperlink")
+  (c-name "get_end_index")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_n_anchors
+  (of-object "AtkHyperlink")
+  (c-name "get_n_anchors")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_object
+  (of-object "AtkHyperlink")
+  (c-name "get_object")
+  (return-type "AtkObject*")
+  (parameters
+    '("gint" "pi")
+  )
+)
+
+(define-method get_start_index
+  (of-object "AtkHyperlink")
+  (c-name "get_start_index")
+  (return-type "gint")
+  (parameters
+  )
+)
+
+(define-method get_uri
+  (of-object "AtkHyperlink")
+  (c-name "get_uri")
+  (return-type "gchar*")
+  (parameters
+    '("gint" "pi")
+  )
+)
+
+(define-method is_selected_link
+  (of-object "AtkHyperlink")
+  (c-name "is_selected_link")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method is_valid
+  (of-object "AtkHyperlink")
+  (c-name "is_valid")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method link_activated
+  (of-object "AtkHyperlink")
+  (c-name "link_activated")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method link_state
+  (of-object "AtkHyperlink")
+  (c-name "link_state")
+  (return-type "guint")
+  (parameters
+  )
+)
+
+(define-method is_inline
+  (of-object "AtkHyperlink")
+  (c-name "atk_hyperlink_is_inline")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+

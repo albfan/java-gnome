@@ -1,0 +1,47 @@
+(define-object DOMVideoPlaybackQuality
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "DOMObject")
+  (c-name "WebKitDOMVideoPlaybackQuality")
+)
+
+(define-method get_corrupted_video_frames
+  (of-object "WebKitDOMVideoPlaybackQuality")
+  (c-name "webkit_dom_video_playback_quality_get_corrupted_video_frames")
+  (return-type "gulong")
+  (parameters
+  )
+)
+
+(define-method get_creation_time
+  (of-object "WebKitDOMVideoPlaybackQuality")
+  (c-name "webkit_dom_video_playback_quality_get_creation_time")
+  (return-type "gdouble")
+  (parameters
+  )
+)
+
+(define-method get_dropped_video_frames
+  (of-object "WebKitDOMVideoPlaybackQuality")
+  (c-name "webkit_dom_video_playback_quality_get_dropped_video_frames")
+  (return-type "gulong")
+  (parameters
+  )
+)
+
+(define-method get_total_frame_delay
+  (of-object "WebKitDOMVideoPlaybackQuality")
+  (c-name "webkit_dom_video_playback_quality_get_total_frame_delay")
+  (return-type "gdouble")
+  (parameters
+  )
+)
+
+(define-method get_total_video_frames
+  (of-object "WebKitDOMVideoPlaybackQuality")
+  (c-name "webkit_dom_video_playback_quality_get_total_video_frames")
+  (return-type "gulong")
+  (parameters
+  )
+)
+

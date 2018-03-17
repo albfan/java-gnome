@@ -1,0 +1,30 @@
+(define-object Spinner
+  (in-module "Gtk")
+  (parent "Widget")
+  (c-name "GtkSpinner")
+)
+
+(define-function Spinner_new
+  (is-constructor-of "GtkSpinner")
+  (c-name "gtk_spinner_new")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method start
+  (of-object "GtkSpinner")
+  (c-name "gtk_spinner_start")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method stop
+  (of-object "GtkSpinner")
+  (c-name "gtk_spinner_stop")
+  (return-type "none")
+  (parameters
+  )
+)
+

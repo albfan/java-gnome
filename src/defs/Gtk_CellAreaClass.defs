@@ -1,0 +1,34 @@
+(define-object CellAreaClass
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkCellAreaClass")
+)
+
+(define-method find_cell_property
+  (of-object "GtkCellAreaClass")
+  (c-name "gtk_cell_area_class_find_cell_property")
+  (return-type "GParamSpec*")
+  (parameters
+    '("const gchar*" "pproperty_name")
+  )
+)
+
+(define-method install_cell_property
+  (of-object "GtkCellAreaClass")
+  (c-name "gtk_cell_area_class_install_cell_property")
+  (return-type "none")
+  (parameters
+    '("guint" "pproperty_id")
+    '("GParamSpec*" "ppspec")
+  )
+)
+
+(define-method list_cell_properties
+  (of-object "GtkCellAreaClass")
+  (c-name "gtk_cell_area_class_list_cell_properties")
+  (return-type "none")
+  (parameters
+    '("guint*" "pn_properties")
+  )
+)
+

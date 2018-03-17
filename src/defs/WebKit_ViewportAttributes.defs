@@ -1,0 +1,15 @@
+(define-object ViewportAttributes
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "WebKitViewportAttributes")
+)
+
+(define-method recompute
+  (of-object "WebKitViewportAttributes")
+  (c-name "webkit_viewport_attributes_recompute")
+  (return-type "none")
+  (parameters
+  )
+)
+

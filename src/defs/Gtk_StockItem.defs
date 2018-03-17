@@ -1,0 +1,22 @@
+(define-object StockItem
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkStockItem")
+)
+
+(define-method copy
+  (of-object "GtkStockItem")
+  (c-name "gtk_stock_item_copy")
+  (return-type "GtkStockItem*")
+  (parameters
+  )
+)
+
+(define-method free
+  (of-object "GtkStockItem")
+  (c-name "gtk_stock_item_free")
+  (return-type "none")
+  (parameters
+  )
+)
+

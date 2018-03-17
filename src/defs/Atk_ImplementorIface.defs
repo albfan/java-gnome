@@ -1,0 +1,7 @@
+(define-object ImplementorIface
+  (in-module "Atk")
+  (import-header "atk/atk.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "AtkImplementorIface")
+)
+

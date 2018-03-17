@@ -1,0 +1,48 @@
+(define-object FileChooserRequest
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "WebKitFileChooserRequest")
+)
+
+(define-method get_mime_types
+  (of-object "WebKitFileChooserRequest")
+  (c-name "webkit_file_chooser_request_get_mime_types")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method get_mime_types_filter
+  (of-object "WebKitFileChooserRequest")
+  (c-name "webkit_file_chooser_request_get_mime_types_filter")
+  (return-type "GtkFileFilter*")
+  (parameters
+  )
+)
+
+(define-method get_select_multiple
+  (of-object "WebKitFileChooserRequest")
+  (c-name "webkit_file_chooser_request_get_select_multiple")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_selected_files
+  (of-object "WebKitFileChooserRequest")
+  (c-name "webkit_file_chooser_request_get_selected_files")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method select_files
+  (of-object "WebKitFileChooserRequest")
+  (c-name "webkit_file_chooser_request_select_files")
+  (return-type "none")
+  (parameters
+    '("null" "pfiles")
+  )
+)
+

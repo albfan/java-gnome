@@ -1,0 +1,55 @@
+(define-object SearchEntry
+  (in-module "Gtk")
+  (parent "Entry")
+  (c-name "GtkSearchEntry")
+)
+
+(define-function SearchEntry_new
+  (is-constructor-of "GtkSearchEntry")
+  (c-name "gtk_search_entry_new")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-method next_match
+  (of-object "GtkSearchEntry")
+  (c-name "next_match")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method previous_match
+  (of-object "GtkSearchEntry")
+  (c-name "previous_match")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method search_changed
+  (of-object "GtkSearchEntry")
+  (c-name "search_changed")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method stop_search
+  (of-object "GtkSearchEntry")
+  (c-name "stop_search")
+  (return-type "none")
+  (parameters
+  )
+)
+
+(define-method handle_event
+  (of-object "GtkSearchEntry")
+  (c-name "gtk_search_entry_handle_event")
+  (return-type "gboolean")
+  (parameters
+    '("GdkEvent*" "pevent")
+  )
+)
+

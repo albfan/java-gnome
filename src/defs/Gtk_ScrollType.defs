@@ -1,0 +1,23 @@
+(define-enum ScrollType
+  (in-module "Gtk")
+  (c-name "GtkScrollType")
+  (values
+    '("none" "GTK_SCROLL_NONE")
+    '("jump" "GTK_SCROLL_JUMP")
+    '("step_backward" "GTK_SCROLL_STEP_BACKWARD")
+    '("step_forward" "GTK_SCROLL_STEP_FORWARD")
+    '("page_backward" "GTK_SCROLL_PAGE_BACKWARD")
+    '("page_forward" "GTK_SCROLL_PAGE_FORWARD")
+    '("step_up" "GTK_SCROLL_STEP_UP")
+    '("step_down" "GTK_SCROLL_STEP_DOWN")
+    '("page_up" "GTK_SCROLL_PAGE_UP")
+    '("page_down" "GTK_SCROLL_PAGE_DOWN")
+    '("step_left" "GTK_SCROLL_STEP_LEFT")
+    '("step_right" "GTK_SCROLL_STEP_RIGHT")
+    '("page_left" "GTK_SCROLL_PAGE_LEFT")
+    '("page_right" "GTK_SCROLL_PAGE_RIGHT")
+    '("start" "GTK_SCROLL_START")
+    '("end" "GTK_SCROLL_END")
+  )
+)
+

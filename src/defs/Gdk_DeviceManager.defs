@@ -1,0 +1,32 @@
+(define-object DeviceManager
+  (in-module "Gdk")
+  (import-header "gdk/gdk.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GdkDeviceManager")
+)
+
+(define-method get_client_pointer
+  (of-object "GdkDeviceManager")
+  (c-name "gdk_device_manager_get_client_pointer")
+  (return-type "GdkDevice*")
+  (parameters
+  )
+)
+
+(define-method get_display
+  (of-object "GdkDeviceManager")
+  (c-name "gdk_device_manager_get_display")
+  (return-type "GdkDisplay*")
+  (parameters
+  )
+)
+
+(define-method list_devices
+  (of-object "GdkDeviceManager")
+  (c-name "gdk_device_manager_list_devices")
+  (return-type "GList*")
+  (parameters
+    '("GdkDeviceType" "ptype")
+  )
+)
+

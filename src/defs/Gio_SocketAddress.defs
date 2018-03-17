@@ -1,0 +1,54 @@
+(define-object SocketAddress
+  (in-module "Gio")
+  (import-header "gio/gdesktopappinfo.h")
+  (import-header "gio/gfiledescriptorbased.h")
+  (import-header "gio/gio.h")
+  (import-header "gio/gunixconnection.h")
+  (import-header "gio/gunixcredentialsmessage.h")
+  (import-header "gio/gunixfdlist.h")
+  (import-header "gio/gunixfdmessage.h")
+  (import-header "gio/gunixinputstream.h")
+  (import-header "gio/gunixmounts.h")
+  (import-header "gio/gunixoutputstream.h")
+  (import-header "gio/gunixsocketaddress.h")
+  (parent "org.gnome.glib.Object")
+  (c-name "GSocketAddress")
+)
+
+(define-function SocketAddress_new_from_native
+  (is-constructor-of "GSocketAddress")
+  (c-name "g_socket_address_new_from_native")
+  (return-type "GSocketAddress*")
+  (parameters
+    '("gpointer" "pnative")
+    '("gsize" "plen")
+  )
+)
+
+(define-method get_family
+  (of-object "GSocketAddress")
+  (c-name "get_family")
+  (return-type "GSocketFamily")
+  (parameters
+  )
+)
+
+(define-method get_native_size
+  (of-object "GSocketAddress")
+  (c-name "get_native_size")
+  (return-type "gssize")
+  (parameters
+  )
+)
+
+(define-method to_native
+  (of-object "GSocketAddress")
+  (c-name "to_native")
+  (return-type "gboolean")
+  (parameters
+    '("gpointer" "pdest")
+    '("gsize" "pdestlen")
+    '("GError**" "error")
+  )
+)
+

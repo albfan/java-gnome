@@ -1,0 +1,90 @@
+(define-object DOMWheelEvent
+  (in-module "WebKit")
+  (import-header "webkit/webkit.h")
+  (parent "DOMMouseEvent")
+  (c-name "WebKitDOMWheelEvent")
+)
+
+(define-method get_delta_mode
+  (of-object "WebKitDOMWheelEvent")
+  (c-name "webkit_dom_wheel_event_get_delta_mode")
+  (return-type "gulong")
+  (parameters
+  )
+)
+
+(define-method get_delta_x
+  (of-object "WebKitDOMWheelEvent")
+  (c-name "webkit_dom_wheel_event_get_delta_x")
+  (return-type "gdouble")
+  (parameters
+  )
+)
+
+(define-method get_delta_y
+  (of-object "WebKitDOMWheelEvent")
+  (c-name "webkit_dom_wheel_event_get_delta_y")
+  (return-type "gdouble")
+  (parameters
+  )
+)
+
+(define-method get_delta_z
+  (of-object "WebKitDOMWheelEvent")
+  (c-name "webkit_dom_wheel_event_get_delta_z")
+  (return-type "gdouble")
+  (parameters
+  )
+)
+
+(define-method get_webkit_direction_inverted_from_device
+  (of-object "WebKitDOMWheelEvent")
+  (c-name "webkit_dom_wheel_event_get_webkit_direction_inverted_from_device")
+  (return-type "gboolean")
+  (parameters
+  )
+)
+
+(define-method get_wheel_delta
+  (of-object "WebKitDOMWheelEvent")
+  (c-name "webkit_dom_wheel_event_get_wheel_delta")
+  (return-type "glong")
+  (parameters
+  )
+)
+
+(define-method get_wheel_delta_x
+  (of-object "WebKitDOMWheelEvent")
+  (c-name "webkit_dom_wheel_event_get_wheel_delta_x")
+  (return-type "glong")
+  (parameters
+  )
+)
+
+(define-method get_wheel_delta_y
+  (of-object "WebKitDOMWheelEvent")
+  (c-name "webkit_dom_wheel_event_get_wheel_delta_y")
+  (return-type "glong")
+  (parameters
+  )
+)
+
+(define-method init_wheel_event
+  (of-object "WebKitDOMWheelEvent")
+  (c-name "webkit_dom_wheel_event_init_wheel_event")
+  (return-type "none")
+  (parameters
+    '("glong" "pwheelDeltaX")
+    '("glong" "pwheelDeltaY")
+    '("WebKitDOMDOMWindow*" "pview")
+    '("glong" "pscreenX")
+    '("glong" "pscreenY")
+    '("glong" "pclientX")
+    '("glong" "pclientY")
+    '("gboolean" "pctrlKey")
+    '("gboolean" "paltKey")
+    '("gboolean" "pshiftKey")
+    '("gboolean" "pmetaKey")
+  )
+)
+

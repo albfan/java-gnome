@@ -1,0 +1,28 @@
+(define-object BindingSet
+  (in-module "Gtk")
+  (parent "org.gnome.glib.Object")
+  (c-name "GtkBindingSet")
+)
+
+(define-method activate
+  (of-object "GtkBindingSet")
+  (c-name "gtk_binding_set_activate")
+  (return-type "gboolean")
+  (parameters
+    '("guint" "pkeyval")
+    '("GdkModifierType" "pmodifiers")
+    '("GObject*" "pobject")
+  )
+)
+
+(define-method add_path
+  (of-object "GtkBindingSet")
+  (c-name "gtk_binding_set_add_path")
+  (return-type "none")
+  (parameters
+    '("GtkPathType" "ppath_type")
+    '("const gchar*" "ppath_pattern")
+    '("GtkPathPriorityType" "ppriority")
+  )
+)
+

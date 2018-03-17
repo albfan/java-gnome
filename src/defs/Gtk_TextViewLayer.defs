@@ -1,0 +1,11 @@
+(define-enum TextViewLayer
+  (in-module "Gtk")
+  (c-name "GtkTextViewLayer")
+  (values
+    '("below" "GTK_TEXT_VIEW_LAYER_BELOW")
+    '("above" "GTK_TEXT_VIEW_LAYER_ABOVE")
+    '("below_text" "GTK_TEXT_VIEW_LAYER_BELOW_TEXT")
+    '("above_text" "GTK_TEXT_VIEW_LAYER_ABOVE_TEXT")
+  )
+)
+
