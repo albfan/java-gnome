@@ -1,5 +1,0 @@
-(define-boxed Analysis
-  (in-module "Pango")
-  (c-name "PangoAnalysis")
-)
-
