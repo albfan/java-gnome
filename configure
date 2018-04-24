@@ -790,6 +790,16 @@ if ($os eq "gentoo") {
 		"junit",
 		"/usr/share/java/junit.jar");
 
+	check_prereq(@xom_jars,
+		"XOM XML API",
+		"libxom-java",
+		"/usr/share/java/xom.jar");
+
+	check_prereq(@jaxen_jars,
+		"Jaxen XPath library",
+		"libjaxen-java",
+		"/usr/share/java/jaxen.jar");
+	
 } elsif ($os eq "mandriva") {
 
 	check_prereq(@junit_jars,
