@@ -44,7 +44,7 @@
 #include <jni.h>
 #include <gtk/gtk.h>
 #include <libgweather/gweather.h>
-#include <libgweather/timezone-menu.h>
+#include <libgweather/gweather-timezone-menu.h>
 #include "bindings_java.h"
 #include "org_gnome_weather_GWeatherTimezoneMenu.h"
 

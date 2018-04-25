@@ -109,11 +109,7 @@ public class ExamplePressMe
          * find out what Button was clicked.
          */
 
-        b.connect(new Button.Clicked() {
-            public void onClicked(Button source) {
-                System.out.println("I was clicked: " + b.getLabel());
-            }
-        });
+        b.connect((Button.Clicked) source -> System.out.println("I was clicked: " + b.getLabel()));
 
         /*
          * Now we pack the VBox into our Window, set the Window's title, and
@@ -133,11 +129,9 @@ public class ExamplePressMe
          * Again, the method here implements the interface.
          */
 
-        w.connect(new Window.DeleteEvent() {
-            public boolean onDeleteEvent(Widget source, Event event) {
-                Gtk.mainQuit();
-                return false;
-            }
+        w.connect((Window.DeleteEvent) (source, event) -> {
+            Gtk.mainQuit();
+            return false;
         });
 
         /*

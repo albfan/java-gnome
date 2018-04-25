@@ -504,6 +504,7 @@ def compileCSourceToObject(source, target):
 	cmd += config['CC'] + " "
 	cmd += "-Isrc/jni -Itmp/include "
 	cmd += config['GNOME_CCFLAGS'] + " "
+	cmd += "-DPANGO_ENABLE_BACKEND "
 	if os.getenv("CFLAGS"):
 		cmd += os.getenv("CFLAGS") + " "
 	cmd += "-o " + target + " -c " + source

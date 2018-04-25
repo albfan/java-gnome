@@ -42,6 +42,8 @@
 #include <jni.h>
 #include <gtk/gtk.h>
 #include <pango/pango.h>
+#include <pango/pango-font.h>
+#include <pango/pango-fontset.h>
 #include "bindings_java.h"
 #include "org_gnome_pango_PangoFontMetrics.h"
 
@@ -143,33 +145,6 @@ Java_org_gnome_pango_PangoFontMetrics_pango_1font_1metrics_1get_1approximate_1ch
 
 	// get field value
 	result = self->approximate_char_width;
-
-	// cleanup parameter self
-
-	// translate return value to JNI type
-	_result = (jint) result;
-
-	// and finally
-	return _result;
-}
-
-JNIEXPORT jint JNICALL
-Java_org_gnome_pango_PangoFontMetrics_pango_1font_1metrics_1get_1approximate_1digit_1width
-(
-	JNIEnv* env,
-	jclass cls,
-	jlong _self
-)
-{
-	int result;
-	jint _result;
-	PangoFontMetrics* self;
-
-	// convert parameter self
-	self = (PangoFontMetrics*) _self;
-
-	// get field value
-	result = self->approximate_digit_width;
 
 	// cleanup parameter self
 
@@ -309,33 +284,6 @@ Java_org_gnome_pango_PangoFontMetrics_pango_1font_1metrics_1new
 }
 
 JNIEXPORT jint JNICALL
-Java_org_gnome_pango_PangoFontMetrics_pango_1font_1metrics_1get_1approximate_1char_1width
-(
-	JNIEnv* env,
-	jclass cls,
-	jlong _self
-)
-{
-	int result;
-	jint _result;
-	PangoFontMetrics* self;
-
-	// convert parameter self
-	self = (PangoFontMetrics*) _self;
-
-	// call function
-	result = pango_font_metrics_get_approximate_char_width(self);
-
-	// cleanup parameter self
-
-	// translate return value to JNI type
-	_result = (jint) result;
-
-	// and finally
-	return _result;
-}
-
-JNIEXPORT jint JNICALL
 Java_org_gnome_pango_PangoFontMetrics_pango_1font_1metrics_1get_1approximate_1digit_1width
 (
 	JNIEnv* env,
@@ -352,168 +300,6 @@ Java_org_gnome_pango_PangoFontMetrics_pango_1font_1metrics_1get_1approximate_1di
 
 	// call function
 	result = pango_font_metrics_get_approximate_digit_width(self);
-
-	// cleanup parameter self
-
-	// translate return value to JNI type
-	_result = (jint) result;
-
-	// and finally
-	return _result;
-}
-
-JNIEXPORT jint JNICALL
-Java_org_gnome_pango_PangoFontMetrics_pango_1font_1metrics_1get_1ascent
-(
-	JNIEnv* env,
-	jclass cls,
-	jlong _self
-)
-{
-	int result;
-	jint _result;
-	PangoFontMetrics* self;
-
-	// convert parameter self
-	self = (PangoFontMetrics*) _self;
-
-	// call function
-	result = pango_font_metrics_get_ascent(self);
-
-	// cleanup parameter self
-
-	// translate return value to JNI type
-	_result = (jint) result;
-
-	// and finally
-	return _result;
-}
-
-JNIEXPORT jint JNICALL
-Java_org_gnome_pango_PangoFontMetrics_pango_1font_1metrics_1get_1descent
-(
-	JNIEnv* env,
-	jclass cls,
-	jlong _self
-)
-{
-	int result;
-	jint _result;
-	PangoFontMetrics* self;
-
-	// convert parameter self
-	self = (PangoFontMetrics*) _self;
-
-	// call function
-	result = pango_font_metrics_get_descent(self);
-
-	// cleanup parameter self
-
-	// translate return value to JNI type
-	_result = (jint) result;
-
-	// and finally
-	return _result;
-}
-
-JNIEXPORT jint JNICALL
-Java_org_gnome_pango_PangoFontMetrics_pango_1font_1metrics_1get_1strikethrough_1position
-(
-	JNIEnv* env,
-	jclass cls,
-	jlong _self
-)
-{
-	int result;
-	jint _result;
-	PangoFontMetrics* self;
-
-	// convert parameter self
-	self = (PangoFontMetrics*) _self;
-
-	// call function
-	result = pango_font_metrics_get_strikethrough_position(self);
-
-	// cleanup parameter self
-
-	// translate return value to JNI type
-	_result = (jint) result;
-
-	// and finally
-	return _result;
-}
-
-JNIEXPORT jint JNICALL
-Java_org_gnome_pango_PangoFontMetrics_pango_1font_1metrics_1get_1strikethrough_1thickness
-(
-	JNIEnv* env,
-	jclass cls,
-	jlong _self
-)
-{
-	int result;
-	jint _result;
-	PangoFontMetrics* self;
-
-	// convert parameter self
-	self = (PangoFontMetrics*) _self;
-
-	// call function
-	result = pango_font_metrics_get_strikethrough_thickness(self);
-
-	// cleanup parameter self
-
-	// translate return value to JNI type
-	_result = (jint) result;
-
-	// and finally
-	return _result;
-}
-
-JNIEXPORT jint JNICALL
-Java_org_gnome_pango_PangoFontMetrics_pango_1font_1metrics_1get_1underline_1position
-(
-	JNIEnv* env,
-	jclass cls,
-	jlong _self
-)
-{
-	int result;
-	jint _result;
-	PangoFontMetrics* self;
-
-	// convert parameter self
-	self = (PangoFontMetrics*) _self;
-
-	// call function
-	result = pango_font_metrics_get_underline_position(self);
-
-	// cleanup parameter self
-
-	// translate return value to JNI type
-	_result = (jint) result;
-
-	// and finally
-	return _result;
-}
-
-JNIEXPORT jint JNICALL
-Java_org_gnome_pango_PangoFontMetrics_pango_1font_1metrics_1get_1underline_1thickness
-(
-	JNIEnv* env,
-	jclass cls,
-	jlong _self
-)
-{
-	int result;
-	jint _result;
-	PangoFontMetrics* self;
-
-	// convert parameter self
-	self = (PangoFontMetrics*) _self;
-
-	// call function
-	result = pango_font_metrics_get_underline_thickness(self);
 
 	// cleanup parameter self
 

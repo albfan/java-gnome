@@ -272,7 +272,7 @@ Java_org_gnome_atk_AtkValue_atk_1value_1set_1value
 )
 {
 	AtkValue* self;
-	const gdouble newValue;
+	gdouble newValue;
 
 	// convert parameter self
 	self = (AtkValue*) _self;

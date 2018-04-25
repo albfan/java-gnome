@@ -139,7 +139,7 @@ Java_org_gnome_pango_PangoFontMap_pango_1font_1map_1get_1shape_1engine_1type
 	self = (PangoFontMap*) _self;
 
 	// call function
-	result = pango_font_map_get_shape_engine_type(self);
+	//result = pango_font_map_get_shape_engine_type(self);
 
 	// cleanup parameter self
 

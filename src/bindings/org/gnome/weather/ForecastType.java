@@ -47,9 +47,9 @@ public class ForecastType extends Constant
         super(ordinal, nickname);
     }
 
-    public static final ForecastType STATE = new ForecastType(GWeatherForecastType.STATE, "STATE");
+    public static final ForecastType STATE = new ForecastType(GWeatherForecastType.STATE.ordinal(), "STATE");
 
-    public static final ForecastType ZONE = new ForecastType(GWeatherForecastType.ZONE, "ZONE");
+    public static final ForecastType ZONE = new ForecastType(GWeatherForecastType.ZONE.ordinal(), "ZONE");
 
-    public static final ForecastType LIST = new ForecastType(GWeatherForecastType.LIST, "LIST");
+    public static final ForecastType LIST = new ForecastType(GWeatherForecastType.LIST.ordinal(), "LIST");
 }

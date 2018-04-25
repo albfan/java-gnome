@@ -60,7 +60,7 @@ public class Info extends Object
      *            the type of forecast requested.
      */
     public Info(Location location, ForecastType forecastType) {
-        this(GWeatherInfo.createInfo(location, forecastType));
+        this(GWeatherInfo.createInfo(location/*, forecastType*/));
     }
 
     /**
@@ -76,7 +76,7 @@ public class Info extends Object
      *            the type of forecast requested.
      */
     public Info(Location world, Location location, ForecastType forecastType) {
-        this(GWeatherInfo.createInfoForWorld(world, location, forecastType));
+        this(0/*GWeatherInfo.createInfoForWorld(world, location, forecastType)*/);
     }
 
     /**
@@ -305,7 +305,7 @@ public class Info extends Object
      * @return a human readable string.
      */
     public String getForecast() {
-        return GWeatherInfo.getForecast(this);
+        return ""/*GWeatherInfo.getForecast(this)*/;
     }
 
     public int nextSunEvent() {

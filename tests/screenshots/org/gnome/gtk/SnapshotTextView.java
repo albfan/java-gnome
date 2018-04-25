@@ -23,7 +23,7 @@ import org.gnome.pango.Style;
 import static org.gnome.gtk.PolicyType.ALWAYS;
 import static org.gnome.gtk.PolicyType.NEVER;
 import static org.gnome.gtk.WrapMode.WORD;
-import static textview.LoremIpsum.text;
+//import static textview.LoremIpsum.text;
 
 /**
  * @author Andrew Cowie
@@ -50,7 +50,7 @@ public class SnapshotTextView extends Snapshot
         italic.setStyle(Style.ITALIC);
 
         start = buffer.getIterStart();
-        buffer.insert(start, text, italic);
+        buffer.insert(start, "fdasdf adfasdf asdf ad", italic);
 
         view.setPaddingBelowParagraph(15);
 

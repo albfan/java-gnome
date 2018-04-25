@@ -42,6 +42,7 @@
 #include <jni.h>
 #include <gtk/gtk.h>
 #include <pango/pango.h>
+#include <pango/pango-fontset.h>
 #include "bindings_java.h"
 #include "org_gnome_pango_PangoFontsetSimple.h"
 
@@ -53,7 +54,7 @@ Java_org_gnome_pango_PangoFontsetSimple_pango_1fontset_1simple_1new
 	jlong _language
 )
 {
-	PangoFontsetSimple* result;
+	//PangoFontsetSimple* result;
 	jlong _result;
 	PangoLanguage* language;
 
@@ -61,17 +62,17 @@ Java_org_gnome_pango_PangoFontsetSimple_pango_1fontset_1simple_1new
 	language = (PangoLanguage*) _language;
 
 	// call function
-	result = pango_fontset_simple_new(language);
+	//result = pango_fontset_simple_new(language);
 
 	// cleanup parameter language
 
 	// translate return value to JNI type
-	_result = (jlong) result;
+	//_result = (jlong) result;
 
 	// cleanup return value
-	if (result != NULL) {
-		bindings_java_memory_cleanup((GObject*)result, TRUE);
-	}
+//	if (result != NULL) {
+//		bindings_java_memory_cleanup((GObject*)result, TRUE);
+//	}
 
 	// and finally
 	return _result;
@@ -86,17 +87,17 @@ Java_org_gnome_pango_PangoFontsetSimple_pango_1fontset_1simple_1append
 	jlong _font
 )
 {
-	PangoFontsetSimple* self;
+	//PangoFontsetSimple* self;
 	PangoFont* font;
 
 	// convert parameter self
-	self = (PangoFontsetSimple*) _self;
+	//self = (PangoFontsetSimple*) _self;
 
 	// convert parameter font
 	font = (PangoFont*) _font;
 
 	// call function
-	pango_fontset_simple_append(self, font);
+	//pango_fontset_simple_append(self, font);
 
 	// cleanup parameter self
 
@@ -113,19 +114,20 @@ Java_org_gnome_pango_PangoFontsetSimple_pango_1fontset_1simple_1size
 {
 	int result;
 	jint _result;
-	PangoFontsetSimple* self;
+	//PangoFontsetSimple* self;
 
 	// convert parameter self
-	self = (PangoFontsetSimple*) _self;
+	//self = (PangoFontsetSimple*) _self;
 
 	// call function
-	result = pango_fontset_simple_size(self);
+	//result = pango_fontset_simple_size(self);
 
 	// cleanup parameter self
 
 	// translate return value to JNI type
-	_result = (jint) result;
+	//_result = (jint) result;
 
 	// and finally
-	return _result;
+	//return _result;
+	return NULL;
 }

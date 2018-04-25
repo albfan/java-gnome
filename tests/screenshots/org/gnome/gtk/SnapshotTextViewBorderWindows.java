@@ -24,7 +24,7 @@ import static org.gnome.gtk.TextWindowType.LEFT;
 import static org.gnome.gtk.TextWindowType.RIGHT;
 import static org.gnome.gtk.TextWindowType.TOP;
 import static org.gnome.gtk.WrapMode.WORD;
-import static textview.LoremIpsum.text;
+//import static textview.LoremIpsum.text;
 
 /**
  * @author Andrew Cowie
@@ -69,7 +69,7 @@ public class SnapshotTextViewBorderWindows extends Snapshot
         scroll.setPolicy(ALWAYS, ALWAYS);
         scroll.add(view);
 
-        buffer.insertAtCursor(text);
+        buffer.insertAtCursor(/*text*/"dfasdfa asdf asdf as");
 
         window = new Window();
         window.add(scroll);

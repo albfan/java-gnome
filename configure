@@ -1040,6 +1040,21 @@ if ($os eq "gentoo") {
 			"GtkSpell",
 			"gtkspell3");
 
+	check_multi_prereq(@gir_files,
+		"GObject Introspection files",
+		"libgirepository1.0-dev",
+		"/usr/share/gir-1.0/Atk-1.0.gir",
+		"/usr/share/gir-1.0/cairo-1.0.gir",
+		"/usr/share/gir-1.0/Gdk-3.0.gir",
+		"/usr/share/gir-1.0/GdkPixbuf-2.0.gir",
+		"/usr/share/gir-1.0/Gio-2.0.gir",
+		"/usr/share/gir-1.0/GLib-2.0.gir",
+		"/usr/share/gir-1.0/Gtk-3.0.gir",
+		"/usr/share/gir-1.0/GtkSource-3.0.gir",
+		"/usr/share/gir-1.0/Notify-0.7.gir",
+		"/usr/share/gir-1.0/Pango-1.0.gir",
+		"/usr/share/gir-1.0/Rsvg-2.0.gir",
+		"/usr/share/gir-1.0/GWeather-3.0.gir");
 
 } elsif ($os eq "suse") {
 	check_system_library(@gnomedev_libs,

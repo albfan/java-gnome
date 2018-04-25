@@ -64,7 +64,7 @@ public class Location extends Boxed
      *            whether or not to divide the world into regions
      */
     public Location(boolean useRegions) {
-        this(GWeatherLocation.createLocationWorld(useRegions));
+        this(0/*GWeatherLocation.createLocationWorld(useRegions)*/);
     }
 
     @Override
