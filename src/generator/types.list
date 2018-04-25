@@ -574,22 +574,22 @@
   </type>
   <type name="RsvgMain" />
   <type name="GWeatherLocation">
-    <header name="libgweather/gweather-weather.h" />
+    <header name="libgweather/gweather.h" />
   </type>
   <type name="GWeatherTimezone">
-    <header name="libgweather/gweather-weather.h" />
+    <header name="libgweather/gweather.h" />
   </type>
   <type name="GWeatherInfo">
-    <header name="libgweather/gweather-weather.h" />
+    <header name="libgweather/gweather.h" />
   </type>
   <type name="GWeatherLocationEntry">
-    <header name="libgweather/location-entry.h" />
+    <header name="libgweather/gweather-location-entry.h" />
   </type>
   <type name="GWeatherTimezoneMenu">
-    <header name="libgweather/timezone-menu.h" />
+    <header name="libgweather/gweather-timezone-menu.h" />
   </type>
   <type name="GWeatherConditions">
-    <header name="libgweather/gweather-weather.h" />
+    <header name="libgweather/gweather.h" />
   </type>
   <type name="GWeatherDistanceUnit" />
   <type name="GWeatherConditionPhenomenon" />

@@ -1,7 +1,7 @@
 (define-boxed Misc
   (in-module "GWeather")
   (c-name "GWeatherMisc")
-  (import-header "libgweather/gweather-weather.h")
+  (import-header "libgweather/gweather.h")
 )
 
 (define-function get_utc
