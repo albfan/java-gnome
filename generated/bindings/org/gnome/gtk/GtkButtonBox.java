@@ -1,0 +1,173 @@
+/*
+ * java-gnome, a UI library for writing GTK and GNOME programs from Java!
+ *
+ * Copyright © 2006-2012 Operational Dynamics Consulting, Pty Ltd and Others
+ *
+ * The code in this file, and the program it is a part of, is made available
+ * to you by its authors as open source software: you can redistribute it
+ * and/or modify it under the terms of the GNU General Public License version
+ * 2 ("GPL") as published by the Free Software Foundation.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+ * FITNESS FOR A PARTICULAR PURPOSE. See the GPL for more details.
+ *
+ * You should have received a copy of the GPL along with this program. If not,
+ * see http://www.gnu.org/licenses/. The authors of this program may be
+ * contacted through http://java-gnome.sourceforge.net/.
+ *
+ * Linking this library statically or dynamically with other modules is making
+ * a combined work based on this library. Thus, the terms and conditions of
+ * the GPL cover the whole combination. As a special exception (the
+ * "Classpath Exception"), the copyright holders of this library give you
+ * permission to link this library with independent modules to produce an
+ * executable, regardless of the license terms of these independent modules,
+ * and to copy and distribute the resulting executable under terms of your
+ * choice, provided that you also meet, for each linked independent module,
+ * the terms and conditions of the license of that module. An independent
+ * module is a module which is not derived from or based on this library. If
+ * you modify this library, you may extend the Classpath Exception to your
+ * version of the library, but you are not obligated to do so. If you do not
+ * wish to do so, delete this exception statement from your version.
+ */
+package org.gnome.gtk;
+
+/*
+ * THIS FILE IS GENERATED CODE!
+ *
+ * To modify its contents or behaviour, either update the generation program,
+ * change the information in the source defs file, or implement an override for
+ * this class.
+ */
+
+import org.gnome.gtk.ButtonBox;
+import org.gnome.gtk.ButtonBoxStyle;
+import org.gnome.gtk.Orientation;
+import org.gnome.gtk.Plumbing;
+import org.gnome.gtk.Widget;
+
+final class GtkButtonBox extends Plumbing
+{
+    private GtkButtonBox() {}
+
+    static final long createButtonBox(Orientation orientation) {
+        long result;
+
+        if (orientation == null) {
+            throw new IllegalArgumentException("orientation can't be null");
+        }
+
+        synchronized (lock) {
+            result = gtk_button_box_new(numOf(orientation));
+
+            return result;
+        }
+    }
+
+    private static native final long gtk_button_box_new(int orientation);
+
+    static final boolean getChildNonHomogeneous(ButtonBox self, Widget child) {
+        boolean result;
+
+        if (self == null) {
+            throw new IllegalArgumentException("self can't be null");
+        }
+
+        if (child == null) {
+            throw new IllegalArgumentException("child can't be null");
+        }
+
+        synchronized (lock) {
+            result = gtk_button_box_get_child_non_homogeneous(pointerOf(self), pointerOf(child));
+
+            return result;
+        }
+    }
+
+    private static native final boolean gtk_button_box_get_child_non_homogeneous(long self, long child);
+
+    static final boolean getChildSecondary(ButtonBox self, Widget child) {
+        boolean result;
+
+        if (self == null) {
+            throw new IllegalArgumentException("self can't be null");
+        }
+
+        if (child == null) {
+            throw new IllegalArgumentException("child can't be null");
+        }
+
+        synchronized (lock) {
+            result = gtk_button_box_get_child_secondary(pointerOf(self), pointerOf(child));
+
+            return result;
+        }
+    }
+
+    private static native final boolean gtk_button_box_get_child_secondary(long self, long child);
+
+    static final ButtonBoxStyle getLayout(ButtonBox self) {
+        int result;
+
+        if (self == null) {
+            throw new IllegalArgumentException("self can't be null");
+        }
+
+        synchronized (lock) {
+            result = gtk_button_box_get_layout(pointerOf(self));
+
+            return (ButtonBoxStyle) enumFor(ButtonBoxStyle.class, result);
+        }
+    }
+
+    private static native final int gtk_button_box_get_layout(long self);
+
+    static final void setChildNonHomogeneous(ButtonBox self, Widget child, boolean nonHomogeneous) {
+        if (self == null) {
+            throw new IllegalArgumentException("self can't be null");
+        }
+
+        if (child == null) {
+            throw new IllegalArgumentException("child can't be null");
+        }
+
+        synchronized (lock) {
+            gtk_button_box_set_child_non_homogeneous(pointerOf(self), pointerOf(child), nonHomogeneous);
+        }
+    }
+
+    private static native final void gtk_button_box_set_child_non_homogeneous(long self, long child, boolean nonHomogeneous);
+
+    static final void setChildSecondary(ButtonBox self, Widget child, boolean isSecondary) {
+        if (self == null) {
+            throw new IllegalArgumentException("self can't be null");
+        }
+
+        if (child == null) {
+            throw new IllegalArgumentException("child can't be null");
+        }
+
+        synchronized (lock) {
+            gtk_button_box_set_child_secondary(pointerOf(self), pointerOf(child), isSecondary);
+        }
+    }
+
+    private static native final void gtk_button_box_set_child_secondary(long self, long child, boolean isSecondary);
+
+    static final void setLayout(ButtonBox self, ButtonBoxStyle layoutStyle) {
+        if (self == null) {
+            throw new IllegalArgumentException("self can't be null");
+        }
+
+        if (layoutStyle == null) {
+            throw new IllegalArgumentException("layoutStyle can't be null");
+        }
+
+        synchronized (lock) {
+            gtk_button_box_set_layout(pointerOf(self), numOf(layoutStyle));
+        }
+    }
+
+    private static native final void gtk_button_box_set_layout(long self, int layoutStyle);
+}
+
