@@ -71,6 +71,10 @@ public class VirtualGenerator extends FunctionGenerator
         this.interfaceMethodName = toCamel("on_" + blockName);
     }
 
+    public String getJavaSignalClass() {
+        return javaSignalClass;
+    }
+
     /*
      * Ripoff override of FunctionGenerator's method by this name.
      */

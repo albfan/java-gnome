@@ -19,14 +19,9 @@
 package com.operationaldynamics.driver;
 
 import java.io.PrintWriter;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
-import com.operationaldynamics.codegen.FundamentalThing;
-import com.operationaldynamics.codegen.Generator;
-import com.operationaldynamics.codegen.Thing;
+import com.operationaldynamics.codegen.*;
 import com.operationaldynamics.parser.Block;
 import com.operationaldynamics.parser.TypeBlock;
 
@@ -244,10 +239,19 @@ public final class DefsFile
 
         calculateImportsAndConflicts();
 
+        ArrayList<String> createdFunctions = new ArrayList<>();
         for (int i = 0; i < blocks.length; i++) {
             gen = blocks[i].createGenerator(this);
+            if (gen instanceof FunctionGenerator) {
+                String methodAndParamsName = ((FunctionGenerator) gen).getMethodAndParamsName();
+                if (!createdFunctions.contains(methodAndParamsName)) {
+                    createdFunctions.add(methodAndParamsName);
+                } else {
+                    System.out.println(">>>>>>>>>>>>>>>>>>"+methodAndParamsName);
+                    continue;
+                }
+            }
             gen.writeTranslationCode(out);
-
             out.flush(); // FIXME hmm
         }
         out.println("}\n");

@@ -342,6 +342,9 @@ public class BindingsGenerator
             transTarget = new File(outputDir, packageAndClassName + ".java");
             jniTarget = new File(outputDir, packageAndClassName + ".c");
 
+
+            System.out.println("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<"+packageAndClassName);
+
             if (!transTarget.getParentFile().isDirectory()) {
                 transTarget.getParentFile().mkdirs();
             }

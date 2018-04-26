@@ -20,6 +20,10 @@
 package com.operationaldynamics.codegen;
 
 import java.io.PrintWriter;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import com.operationaldynamics.driver.DefsFile;
 
@@ -146,6 +150,43 @@ public class FunctionGenerator extends Generator
         }
 
         blacklistedType = null;
+    }
+
+    public String getMethodAndParamsName() {
+
+        String methodName;
+        if (this instanceof VirtualGenerator) {
+            methodName ="static final void ";
+            methodName +=translationMethodName;
+            methodName +="(";
+            methodName +=proxyType.javaTypeInContext(data);
+            methodName +=" self, ";
+            methodName +=proxyType.bindingsClass;
+            methodName +=".";
+            methodName +=((VirtualGenerator)this).getJavaSignalClass();
+            methodName +=" handlerInstance, boolean after)";
+        }else {
+            methodName = translationMethodName + ":";
+
+            for (int i = 0; i < parameterTypes.length; i++) {
+                if (parameterTypes[i] instanceof GErrorThing) {
+                    continue;
+                }
+                String parameter = parameterTypes[i].translationToJava(parameterNames[i], data);
+                methodName+=parameter;
+                if (i < parameterTypes.length -1) {
+                    methodName+=",";
+                }
+            }
+
+        }
+
+        return methodName;
+    }
+
+    public static void main(String[] args) {
+        List<String> strings = Arrays.asList("1", "2", "3");
+        strings.stream().collect( Collectors.joining( "," ) );;
     }
 
     protected void translationMethodDeclaration(PrintWriter out) {
