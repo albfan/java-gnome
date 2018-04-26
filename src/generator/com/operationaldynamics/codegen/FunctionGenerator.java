@@ -400,7 +400,9 @@ public class FunctionGenerator extends Generator
         for (int i = 0; i < parameterTypes.length; i++) {
             out.print("\t");
 
-            out.print(parameterTypes[i].cType);
+            String cType = parameterTypes[i].cType;
+            cType = cType.replaceAll("^const ", "");
+            out.print(cType);
             out.print(" ");
             out.print(parameterNames[i]);
             if (parameterTypes[i] instanceof GErrorThing) {
